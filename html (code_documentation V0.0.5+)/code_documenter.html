@@ -1,0 +1,3176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>code_documenter API documentation</title>
+<meta name="description" content="Created on: Fri, 2023-12-29 (00:45:39) …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>code_documenter</code></h1>
+</header>
+<section id="section-intro">
+<p>Created on: Fri, 2023-12-29 (00:45:39)</p>
+<p>@author: Matthias Kader</p>
+<p>Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html</p>
+<h3 id="todo-groere-todos">TODO: Größere TODOS:</h3>
+<p>• Implementierung Inhaltsverzeichnis / Index</p>
+<p>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections</p>
+<p>• Einbindung vom Programmkopf-Docstring</p>
+<p>• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren</p>
+<p>• Implementierung von References-Durchsuchungen</p>
+<p>• Implementierung eines Exportes zu HTML</p>
+<h3 id="ausblick-fur-spater-und-in-schon">AUSBLICK für später und in schön:</h3>
+<p>• Index an der Seite wie eine NavBar zum einzelnd scrollen</p>
+<p>• Call Sequenz / Calling Sequence:
+Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.
+Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden&hellip; also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw&hellip; Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># -*- coding: utf-8 -*-
+&#39;&#39;&#39;
+Created on: Fri, 2023-12-29 (00:45:39)
+
+@author: Matthias Kader
+
+
+Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html
+
+
+### TODO: Größere TODOS:
+
+• Implementierung Inhaltsverzeichnis / Index
+
+• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections
+
+• Einbindung vom Programmkopf-Docstring
+
+• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren
+
+• Implementierung von References-Durchsuchungen
+
+• Implementierung eines Exportes zu HTML
+
+
+### AUSBLICK für später und in schön:
+
+• Index an der Seite wie eine NavBar zum einzelnd scrollen
+
+
+
+• Call Sequenz / Calling Sequence:
+Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.
+Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....
+
+
+&#39;&#39;&#39;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import os
+import re
+
+
+
+
+# =============================================================================
+#### GLOBALS: ####
+# =============================================================================
+
+DEBUG = True
+# DEBUG = False
+
+
+
+
+
+
+
+# =============================================================================
+#### CLASSES: ####
+# =============================================================================
+
+
+class Procedure():
+    &#34;&#34;&#34;
+    Allgemeine Klasse zur Bereitstellung von Inhalten, die fuer alle Prozeduren (Subs und Functions) erforderlich sind. Dazu gehoert:
+        
+        • Definition des Dateipfades fuer Template, in die der extrahierte Text übernommen wird
+        
+        • Flag-Variable, ob nach Beginn oder Ende der Prozedur gesucht wird
+        
+        • Regex-Muster als String für den Beginn und das Ende einer Prozedur - wobei innerhalb dieses Strings der Platzhalter für die Prozedurart in den Subklassen noch ersetzt werden muss. Ebenfalls
+    &#34;&#34;&#34;
+
+    TEMPLATE = &#34;templates/prozedur.md&#34;
+
+
+    search_for_begin = True # initialer wErt
+
+
+
+
+    # TODO: Das wäre eig. schöner wenn sie private vars sind...
+
+    # Das folgenden Regex-Muster berücksichtigt nicht das Auskommentieren dieser Zeile
+    regex_begin_pattern = r&#34;&#34;&#34;.*     # Start mit beliebigen Zeichen
+                        (?:Private|Public|Friend)?
+                        (?:PLACEHOLDER_PROCEDURE_TYPE)    # Beinhaltet das KEyword
+                        \s+        # mind. 1 bis n Leerzeichen
+                        (\w+)        # mind. 1 bis n Wortzeichen
+                        \(         # Geöffnete Klammer
+                        &#34;&#34;&#34;
+
+
+
+
+    regex_end_pattern = r&#34;&#34;&#34;.*?     # Start mit beliebigen Zeichen
+                        (?:End)    # Beinhaltet das KEyword
+                        \s+        # mind. 1 bis n Leerzeichen
+                        (?:PLACEHOLDER_PROCEDURE_TYPE)?    # Beinhaltet das KEyword
+                        .*&#34;&#34;&#34;
+
+
+    # Zum späteren Prüfen bzgl. Auskommentierung extra Regex:
+    __regex_ausschlus_kommentar_pattern = r&#34;&#34;&#34;&#39;    # KommentarApostroph
+                                        .?       # Beliebiges Zeichen
+                                        &#34;&#34;&#34;
+
+    # Hier ist keine weitere Konkretisierung durch Subklassen erforderlich, daher direkt kompiliert:
+    regex_ausschlus_kommentar = re.compile(__regex_ausschlus_kommentar_pattern, re.VERBOSE | re.IGNORECASE)
+
+
+
+    @classmethod
+    def initialize_input_code(cls, input_path:str):
+        &#34;&#34;&#34;
+        Liesst den zu analysierenden und zu dokumentierenden Input-Quellcode ein und speichert ihn innerhalb dder Superklasse als immer verfuegbare Liste einzelner Zeileninhalte ab.
+        ### TODO: Später sollte hier auch noch eine einfache GUI erstellt werden zur Auswahl!
+        ggf. sollte diese GUI aber losgelöst von dieser Klasse sein (Wiederholfunktion!). Daher als Kapselung mit übergebenen input-path!
+        &#34;&#34;&#34;
+
+        with open(input_path, &#34;r&#34;) as file:
+            cls.raw_source_code = file.readlines()
+
+
+
+
+
+
+    @classmethod
+    def detail_analyse_procedures(cls):
+        &#34;&#34;&#34;
+        Detail-Auswertung aller zuvor identifizierten Prozeduren (unabhängig ihrer Art).
+        Die einzelnen Komponenten werden dabei in Objekte der Subklassen gespeichert
+        &#34;&#34;&#34;
+
+        for procedure_type_cls in [Sub, Function]:
+
+            for line_begin, line_end in procedure_type_cls.matches_line_ixs:
+
+                # db(line_begin, line_end)
+                
+                lines = cls.raw_source_code[line_begin:line_end + 1]
+
+                sub = procedure_type_cls(tuple(lines))
+
+
+
+    @classmethod
+    # def identify_procedures(cls, list_of_code_lines:list[str]):
+    def identify_procedures(cls):
+        &#34;&#34;&#34;
+        Identifizieren  aller Prozeduren (Methoden und Funktione) auf Klassenebene und Speichern der Zeilennummern der Deklarations- und End-Zeilen innerhalb der jeweiligen Klassenvariablen.
+
+        Durchsucht werden die einzelnen Strings der als Liste übergebenen Zeileninhalte des Quellcodes.
+
+        Args:
+            raws (list[str]): Liste mit einem Eintrag pro Zeile des Quellcodes
+
+        &#34;&#34;&#34;
+
+        for ix, text in enumerate(cls.raw_source_code):
+
+            # db(text)
+
+            if cls.search_for_begin:
+
+                if Sub.check_and_get_match(text, ix):
+                    current_procedure_type_cls = Sub
+                    continue
+
+                if Function.check_and_get_match(text, ix):
+                    current_procedure_type_cls = Function
+
+
+            else:
+                # Suche nach dem entsprechend passenden Ende
+                current_procedure_type_cls.search_end_of_procedure(text, ix)
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @classmethod
+    def check_and_get_match(cls, text:str, line_no:int) -&gt; bool:
+        &#34;&#34;&#34;
+        Prüft eine einzelne Zeile eines Codes (den übergebenen text), ob es sich um ein Match einer Deklarationszeile handelt, und auch, ob diese NICHT-auskommentiert ist. Sofern dies der Fall ist, wird dieses MAtch in die Liste der MAtsches aufgenommen.
+
+        Args:
+            text (str): Zu prüfender Text ausschnitt
+            line_no (int) : Zeilennummer der Liste an gesamt zu untersuchenden Zeilen
+
+        Returns:
+            bool: True falls das match aufgenommen wurde
+        &#34;&#34;&#34;
+
+        if cls.regex_begin.match(text):
+            if not cls.regex_ausschlus_kommentar.match(text):
+                # Dann aufnehmen in die Liste der MAtches! inkl. Platzhalter für Endzeilennummer:
+                cls.matches_line_ixs.append([line_no, None])
+                Procedure.search_for_begin = False
+
+                return True
+        
+        return False
+
+
+
+
+
+
+    @classmethod
+    def search_end_of_procedure(cls, text:str, line_no:int) -&gt; bool:
+        &#34;&#34;&#34;
+        Prüft eine einzelne Zeile eines Codes (den übergebenen text), ob es sich um ein Match einer Deklarations-END-zeile handelt, und auch, ob diese NICHT-auskommentiert ist. Sofern dies der Fall ist, wird dieses MAtch in die Liste der MAtsches aufgenommen.
+
+        Args:
+            text (str): Zu prüfender Text ausschnitt
+            line_no (int) : Zeilennummer der Liste an gesamt zu untersuchenden Zeilen
+
+        Returns:
+            bool: True falls das match aufgenommen wurde
+        &#34;&#34;&#34;
+
+        
+        # BUG: Durch die Regex wird aber auch etwas wie End sub  gefunden obwohl es um end function geht! Daher wurde der PRogrammablauf im main angepasst, um sicherzustellen, dass immer nach der richtigen Klassen-Beendigung gesucht wird... Falls Langeweile: Später mal schauen warum...
+        if cls.regex_end.match(text):
+            if not cls.regex_ausschlus_kommentar.match(text):
+                # Dann aufnehmen in die Liste der MAtches!
+                cls.matches_line_ixs[-1][-1] = line_no
+
+                Procedure.search_for_begin = True
+
+                return True
+        
+        return False
+
+
+    
+
+
+    @classmethod
+    def initialize_toc(cls):
+        &#34;&#34;&#34;
+        DEBUG: 2023-12-30 - 02:18:54 OK BIS HIER! (1. Durchlauf)
+        Initialisiert den Text für den Markdown-Text des  Table of content und speichert es in der Klassenvariable cls.toc. Zugriff erfolgt über die Superklasse Procedure. 
+        Innerhalb des resultierenden Textes sind weiterhin jeweils 1 Platzhalter fuer jede Prozedur-Art vorhanden. Diese werden spaeter gesondert ersetzt.
+        &#34;&#34;&#34;
+
+        toc = cls.__read_template(&#34;templates/sec_toc.md&#34;)
+
+        # Gesamtanzahl an verfügbaren prozeduren je Art einsetzen:
+        placeholder_replacer = {
+            &#34;@PLACEHOLDER_SUBS_COUNTS@&#34; : len(Sub.instances),
+            &#34;@PLACEHOLDER_FUNCTIONS_COUNTS@&#34; : len(Function.instances),
+        }
+
+
+        for placeholder, replacer in placeholder_replacer.items():
+            toc = toc.replace(placeholder, str(replacer))
+
+        cls.toc = toc
+        
+
+
+
+
+
+
+    @classmethod
+    def generate_toc_entries(cls, subklasse):
+        &#34;&#34;&#34;
+        
+        Generiert die Einzelnen Eintraege aller Prozeduren der uebergebenen subklasse und fuegt diese in die Klassenvariable cls.toc ein, indem Platzhalter verwendet werden.
+        
+        Zugriff auf Superklassen-Ebene
+
+
+        Args:
+            subklasse (Sub | Function): Klasse, die aktuell gelistet werden soll
+        &#34;&#34;&#34;
+
+
+        toc = cls.toc # shortcut
+
+        keyword_type = subklasse.KEYWORD_TYPE.upper()
+        platzhalter = f&#34;@PLACEHOLDER_ENTRIES_{keyword_type}S@&#34;
+        
+
+        for (prozedur_obj, prozedur_name) in subklasse.all_procedures_final:
+
+            # Iterieren ueber jede Instanz:
+
+            # TODO: Vorgehen wenn es KEINE instanz gibt???! - sollte kein Problem sein, dadurch dass nach jedem Einfügen immer wieder der Ausgangszustand bzgl. des Platzhalters wiederhergestellt wird un dieser am Ende gelöscht wird??!
+
+            # Aufbau des Markdown.-Codes fuer diesen TOC-Eintrag:
+            new_entry = &#34;* [```{temp_prozedur_name}```](#{temp_prozedur_name})&#34;.format(temp_prozedur_name=prozedur_name)
+
+            # Append the placeholder to have this flag for insert further entries:
+            new_entry = new_entry + &#34;\n  &#34; + platzhalter
+            # ACHTUNG: Leerzeichen vorweg sind relevant fuer korrekte Einrueckung im MArkdown!
+
+
+            toc = toc.replace(platzhalter, new_entry)
+
+
+        # After all procedures of 1 type: Delete the leaving placeholder in the toc for this type of procedures.
+        toc = toc.replace(platzhalter, &#34;&#34;)
+
+        # store into class-variable:
+        cls.toc = toc
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @classmethod
+    def finilize(cls, output_file_path:str):
+        &#34;&#34;&#34;
+        ### TODO: Ob wirklich alles hier in die Klasse gehört ist fraglich! 
+        
+        Zugriff erfolgt über die Superklasse Procedure. Innerhalb der MEthode wird wiederum in Schleifen itteriert ueber die Subklassen.
+        
+        Bereitet die finale Ausgabe vor und ruft weitere MEthoden zum Schreiben dieser Ausgabe / der Markdown-Datei auf.
+        Zu dieser Vorbereitung gehört:
+         
+            • Sortierung der einzelnen Prozeduren innerhalb der verschiedenen Prozedur-Arten gemaess der alphabetischen Reihenfolge ihrer Bezeichner (Namen)
+            
+            • Konfigurieren / Initilalisierung der Zwischenüberschriften / Header-Texte unterhalb der einzelnen Section-Überschriften (gespeichert in Klassenvariable cls.header)
+
+
+        Args:
+            output_file_path (str): Dateipfad der zu erstellenden Markdown-Datei
+        &#34;&#34;&#34;
+
+
+        cls.initialize_toc()
+
+        for procedure_type_cls in [Sub, Function]: 
+
+
+
+            # Initialisieren des Headers unterhalb der Section-Überschrift  (aus gesonderter Template) und in Klassenvariable speichern:
+            content = cls.__read_template(procedure_type_cls.TEMPLATE_SECTION_HEAD)
+
+            cls.header = content
+
+
+
+
+
+            # Instanzen der Prozeduren  Alphabetisch  sortieren nach den Namen! und in Klassenvariable speichern:
+            procedure_type_cls.sort_procedures_by_names()
+
+
+            # Inhaltsverzeichnis generrieren ud MD-Text intern als Klassenvariable speichern:
+            # procedure_type_cls.generate_toc()
+
+            #DEBUG: 2023-12-30 - 02:20:35 OK
+
+            # TODO: Ergänze einen einzigen Eintrag für eine Methode! und haenge sie dem TOC an
+            # WICHTIG: Auf Superklassen-Ebene!
+            cls.generate_toc_entries(procedure_type_cls)
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # Aufruf der Methode zum tatsächlichen Schreiben der Textdatei:
+        cls.write_to_file(output_file_path)
+
+
+
+    &#39;&#39;&#39;
+    @classmethod
+    def generate_toc(cls):
+        &#34;&#34;&#34;
+        Erstellt den Markdown-Code des TOC (Table of Content) zum spaeteren Schreiben in die Output-Datei. Hierbei werden alle Bezeichner der Prozeduren (innerhalb einer Prozedur-Art) aufgelistet. Die Auflistung erfolgt nach bereits erfolgter Initialisierung und alphabetischer Sortierung der Klassenvariable cls.all_procedures_final.
+        
+        Das Ergebnis wird in der Klassenvariable cls.toc gespeichert.
+
+        # ACHTUNG: Stark Angelehnt / kopiert aus cls.generate_documentation - ggf. duplizierung unnötig!
+        &#34;&#34;&#34;
+
+
+
+        &#34;&#34;&#34;
+        cls.counts = len(cls.instances) # Gesamtanzahl an Prozeduren innerhalb dieser Prozedur-Art
+        &#34;&#34;&#34;
+
+        toc = cls.__read_template(&#34;templates/sec_toc_head.md&#34;)
+
+    
+        db(cls.counts)
+
+        placeholder_replacer = {
+            &#34;@PLACEHOLDER_PROCEDURES_COUNTS@&#34; : cls.counts,
+        }
+
+
+        for placeholder, replacer in placeholder_replacer.items():
+            toc = toc.replace(placeholder, str(replacer))
+
+
+        cls.toc = toc
+
+
+    &#39;&#39;&#39;
+
+
+    
+    
+    @classmethod
+    def write_to_file(cls, output_file_path:str):
+        &#34;&#34;&#34;
+        Schreibt die Dokumentation aller Prozeduren (aller Art) in die als Dateipfad übergebene Zieldatei(pfad).
+        &#34;&#34;&#34;
+
+        with open(output_file_path, &#34;w&#34;, ) as file:
+
+
+            ## TODO: Dies gehört eigentlich nicht mehr in die Klasse Procedure, aber aktuell trotzdem hierher, um alles zusammen zu haben. Ggf.s später refactoring...
+            # Initialisiere die Seite mit Titel und organisatorischen Hinweisen:
+            content = cls.__read_template(&#34;templates/sec_head.md&#34;)
+            file.write(content)
+
+
+
+
+            #Einfügen des Index / TOCs /  Inhaltsverzeichnis:
+            # cls.generate_toc()
+            &#34;&#34;&#34;
+            file.write(Sub.toc)
+            file.write(Function.toc)
+            &#34;&#34;&#34;
+            file.write(Procedure.toc)
+            &#34;&#34;&#34;
+            #Einfügen des Index / TOCs /  Inhaltsverzeichnis:
+            content = cls.__read_template(&#34;templates/sec_toc.md&#34;)
+            file.write(content)
+            &#34;&#34;&#34;
+
+            # Einfügen der Modulinfos / Modulkopfes: (bislang statisch)
+            # TODO: Bislang statisch!
+            content = cls.__read_template(&#34;templates/sec_modulinfos.md&#34;)
+            file.write(content)
+
+
+
+
+
+
+            for procedure_type_cls in [Sub, Function]: # Reihenfolge wichtig fuer die Reihenfolge der Dokumentierten Sections!
+                
+
+
+                # Überschrift der Section einfügen (aus gesonderter Template):
+                &#34;&#34;&#34;
+                # content = cls.__read_template(procedure_type_cls.TEMPLATE_SECTION_HEAD)
+                # file.write(content)
+                &#34;&#34;&#34;
+                file.write(procedure_type_cls.header)
+
+                &#34;&#34;&#34;
+                # TODO: Instanzen  Alphabetisch  sortieren nach den Namen! ggfs. schon vorher vorbereiten??! 
+                procedure_type_cls.sort_procedures_by_names()
+                &#34;&#34;&#34;
+
+
+                # Dokumentieren aller einzelnen Prozeduren:
+                for (procedure_obj, procedure_name) in procedure_type_cls.all_procedures_final:
+
+                    file.write(procedure_obj.documentation)
+
+
+
+                &#34;&#34;&#34;
+                # Dokumentieren aller einzelnen Prozeduren:
+                for procedure in procedure_type_cls.instances:
+
+                    file.write(procedure.documentation)
+                    
+                &#34;&#34;&#34;
+                
+                # Ausgabe der Zusammenfassung pro Section:
+                print(&#34;Es wurden {} {}s identifiziert und dokumentiert.&#34;.format(len(procedure_type_cls.instances), procedure_type_cls.KEYWORD_TYPE))
+
+
+
+
+
+
+            ## TODO: Dies gehört eigentlich nicht mehr in die Klasse Procedure, aber aktuell trotzdem hierher, um alles zusammen zu haben. Ggf.s später refactoring...
+            # Finalisiere die Seite mit Schlusbemerkungen:
+            content = cls.__read_template(&#34;templates/sec_tail.md&#34;)
+            file.write(content)
+
+
+
+
+
+
+    @classmethod
+    def sort_procedures_by_names(cls):
+        &#34;&#34;&#34;
+        Füllen der Klassenvariable cls.all_procedures_final mit einem Tupel pro Prozedur, in dem sowohl das einzelne Objekt, als auch seine Bezeichnung enthalten ist in der Form [(object:Procedure, object.name:str)]. 
+        Diese Liste wird nach Fertigstellung sortiert basierend auf den alphabetischen Bezeichnern, sodass der Zusammenhang zwischen den Objekten und den Namen weiterhin gegeben ist, gleichzeitig aber die Objekte in der alphabetischen Reihenfolge ihrer Namen dokumentiert werden können.
+
+        &#34;&#34;&#34;
+
+        all_procedures = [] 
+
+
+        for procedure_obj in cls.instances:
+            
+            all_procedures.append((procedure_obj, procedure_obj.name))
+
+            # db(all_procedures)
+
+
+        # Nach dem Füllen: Sortieren basierend auf den Bezeichner-Namen:
+        cls.all_procedures_final = sorted(all_procedures, key=lambda stored_tuple: stored_tuple[1])
+
+
+        # db(cls.all_procedures_final)
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @staticmethod
+    def __read_template(template_file_path) -&gt; str:
+        &#34;&#34;&#34;
+        Ließt die uebergebene Template-MArkdown Datei ein und gibt den Inhalt als String zurück.
+        
+        Args:
+            template (str) : Dateipfad zur Template
+
+        Return:
+            str : Textinhalt der Template
+        &#34;&#34;&#34;
+        with open(template_file_path, &#34;r&#34;) as file:
+            content = file.read()
+            return content
+
+
+
+
+
+    def read_template(self, template=&#34;einzelprozedur&#34;) -&gt; str:
+        &#34;&#34;&#34;
+        # TODOC: ...
+
+        Ließt die relevante Template-MArkdown Datei ein und gibt den Inhalt als String zurück. Sofern es sich um die Default-Template für eine beliebige Prozedur handelt wird außerdem auch das Attribut self.documentation mit diesem Text initialisiert.
+
+        Args:
+            template (str) : Dateipfad zur Template - Ausnahme: Falls die in der Klasse gespeicherte Standardtemplate self.TEMPLATE fuer eine Prozedur verwendet werden soll, dann muss das Stichwort &#34;einzelprozedur&#34; übergeben werden. Dies ist default der Fall --&gt; keine Angabe erforderlich.
+
+        Return:
+            str : Inhalt der Template
+        &#34;&#34;&#34;
+
+
+        if template == &#34;einzelprozedur&#34;:
+        
+            # Auslesen und Speichern in Objektvariable
+            self.documentation = self.__read_template(self.TEMPLATE)
+            return self.documentation
+
+
+        # Bei NICHT-Standard-Prozedur-Template: Auslesen dieser Template und Rückgabe des Textinhaltes:
+        content = self.__read_template(template)
+        return content
+
+
+
+
+
+    def generate_documentation(self):
+        &#34;&#34;&#34;
+        Dokumentiert die gefundenen Parameter unter Nutzung einer Template-Markdown-Textdatei und speichert den zu schreibenden Text im Attribut self.documentation
+        &#34;&#34;&#34;
+
+        self.read_template()
+
+        placeholder_replacer = {
+            &#34;@PLACEHOLDER_PROCEDURE_TYPE@&#34; : self.KEYWORD_TYPE,
+            &#34;@PLACEHOLDER_PROCEDURE_MODIFIER@&#34; : self.modifier,
+            &#34;@PLACEHOLDER_PROCEDURE_NAME@&#34; : self.name,
+            &#34;@PLACEHOLDER_PROCEDURE_LINE_BEGIN@&#34; : self.line_begin,
+            &#34;@PLACEHOLDER_PROCEDURE_DOCSTRING@&#34; : self.docstring,
+            &#34;@PLACEHOLDER_PROCEDURE_SOURCE_CODE@&#34; : self.source_code,
+
+            # TODO:  Kommen die References extra??!
+            &#34;@PLACEHOLDER_PROCEDURE_REFERENCES@&#34; : self.references,
+            &#34;@PLACEHOLDER_PROCEDURE_COUNT_OF_REFERENCES@&#34; : self.count_of_references,
+        }
+
+
+        for placeholder, replacer in placeholder_replacer.items():
+            self.documentation = self.documentation.replace(placeholder, str(replacer))
+
+
+
+
+
+
+
+
+
+
+
+
+
+    def extract_source_code(self):
+        &#34;&#34;&#34;
+        Ließt den source_code aus und speichert diesen im Attribut self.source_code
+        &#34;&#34;&#34;
+
+        source_code = &#34;&#34;
+        for line in self.lines:
+            source_code = source_code + line
+
+        self.source_code = source_code
+
+
+
+
+
+    def extract_modifier(self):
+        &#34;&#34;&#34;
+        Ließt den Modifier aus und speichert diesen im Attribut self.modifier
+        &#34;&#34;&#34;
+        # Wiederverwendung der Deklarationszeilen-Regex:
+        match = self.regex_begin.match(self.lines[0])
+
+        # Entnehme den String bis vor den NAmen:
+        pos_name = match.string.find(self.name + &#34;(&#34;)
+        potentieller_modifier = match.string[0:pos_name]
+
+        # Identifiziere hieraus den modifier:
+        
+        # # Eigentlich sollte es schon auf Grundlage der eigentlichen regex gehen, funktioniert aber nicht! Es wird immer was leres zurückgegeben, daher, neue regex! (Bei Zeit mal schauen warum!)
+        # # Extraktion der Gruppe mit dem Name: (eigentlicher Ansatz)
+        # db(match.groups())
+        # modifier = match.group(1)
+        
+        
+        regex_modifier = re.compile(r&#34;((?:Private|Public|Friend)?)&#34;)
+        match = regex_modifier.match(potentieller_modifier)
+        modifier = match.group(1)
+
+
+        if modifier == &#34;&#34;:
+            modifier = &#34;Public&#34;
+
+        # db(modifier)
+
+        self.modifier = modifier
+
+
+
+
+    def extract_name(self):
+        &#34;&#34;&#34;
+        Ließt den Bezeichnungsnamen aus und speichert diesen im Attribut self.name
+        &#34;&#34;&#34;
+        # Wiederverwendung der Deklarationszeilen-Regex:
+        
+        
+        match = self.regex_begin.match(self.lines[0])
+
+        # db(match.groups())
+        # Extraktion der Gruppe mit dem Name:
+        name = match.group(1)
+
+        # db(name)
+
+        self.name = name
+
+
+
+    def extract_line_numbers(self):
+        &#34;&#34;&#34;
+        Ließt die relevanten Start- und End-Zeilennummern aus und speichert diesen im Attribut self.line_begin und self.line_end
+        &#34;&#34;&#34;
+        # Hole Index der Instanzenliste, dieser ist gleich dem Index der matches_line_ixs Liste:
+        ix = self.instances.index(self) 
+
+        match_lines_ix = self.matches_line_ixs[ix]
+        
+        self.line_begin = match_lines_ix[0] + 1
+        self.line_end = match_lines_ix[1] + 1
+
+
+
+    def extract_docstring(self):
+        &#34;&#34;&#34;
+        Ließt den docstring aus und speichert diesen im Attribut self.docstring
+        Sofern kein Docstring im Code identifiziert wurde, wird eine entsprechende Info in den Text geschrieben.
+
+        Als Docstring wird jede Kommentarzeile gewertet, die DIREKT UND OHNE VORHERIGE LEERZEEILE UNTERHALB DER DEKLARIERUNGSZEILE der Prozedur steht. Sobald eine Leerzeile folgt, wird der Docstring als beendet angesehen.
+
+        Beispiel:
+            Private Sub beispielProgramm() &#39; Deklarationszeile
+                &#39; Dies ist ein Kommentar direkt unter der Deklarationszeile. Somit wird es als Docstring gewertet.
+                &#39; Dies auch
+                &#39;
+                &#39; Da die vorherige Zeile AUCH einen Kommentar (einen leeren) enthält, ist dies hier immer noch Bestandteil des Docstrings.
+
+                &#39; Vor dieser Zeile war ein NICHT-Kommentar, daher gehört das hier nicht mehr zum Docstring
+                MsgBox(&#34;Das gehört zum Programm&#34;)
+            End Sub
+        &#34;&#34;&#34;
+
+        docstring  = &#34;&#34;
+
+
+        for line in self.lines[1:]:
+            # line:str
+            content = line.lstrip(&#34; &#34;)
+
+            if(content[0]) == &#34;&#39;&#34;:
+               
+               # gehört zum Docstring
+                docstring = docstring + content.lstrip(&#34;&#39;&#34;)
+            
+            else:
+                break
+
+        if docstring == &#34;&#34;:
+            docstring = &#34;*No information availible. For more information expand source code.*&#34; #  Die Sternchen bewirken im MArkdown ein Kursivdruck
+
+        
+        self.docstring = docstring
+
+
+
+
+
+
+
+    def extract_references(self):
+        &#34;&#34;&#34;
+        Durchsucht den gesamten Quelltext nach Referenzierungen (Aufrufen) dieser Prozedur und speichert diese im Attribut self.references
+        # TODO ALLES
+        &#34;&#34;&#34;
+        self.references = &#34; # TODO ...&#34;
+        self.count_of_references = &#34; # TODO ...&#34;
+
+
+
+    def __init__(self, text_lines:tuple[str]) -&gt; None:
+        super().__init__()
+
+        # Merken der instanc zum späteren Iterieren: Klassenzuweisung dynamisch!
+        type(self).instances.append(self)
+        
+        # Speichern aller Textzeilen:
+        self.lines = text_lines
+
+        # HErausfiltern einzelner KOmponenten:
+        self.extract_line_numbers()
+        self.extract_source_code()
+        self.extract_name()
+        self.extract_modifier()
+        # TODO:
+        self.extract_docstring()
+
+
+
+
+        # TODO:
+        self.extract_references()
+
+
+
+        # TODO: Wohin der Aufruf?
+        self.generate_documentation()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Sub(Procedure):
+    &#34;&#34;&#34;
+    Subklasse für eine VBA-Sub-Prozedur.
+    U.a. wird hier auch der von der Superklasse vor-initialisierte Regex-Ausdruck konkretisiert und kompiliert, der im VBA-Syntax für den Beginn und das Ende der Prozedurart erforderlich ist.
+
+    Die meisten Methoden sind in der übergeordneten Superklasse gelagert, da sie vom Ablauf fuer VBA-Subs und VBA-Methoden identisch sind.
+
+    &#34;&#34;&#34;
+
+    matches_line_ixs = []
+    instances = []
+
+    all_procedures_final = [] # Liste wird erst nach Identifizierung aller Prozeduren erstellt. Sie dient der Sortierung  der Instanzen basierend auf der alphabetischen Reihenfolge ihrer Prozedur-Bezeichnungen
+
+    
+    KEYWORD_TYPE = &#34;Sub&#34; 
+
+    TEMPLATE_SECTION_HEAD = &#34;templates/sec_subs.md&#34;
+    
+
+    # Konkretisierung und Kompilierung der Regex-Ausdrücke:
+
+    regex_begin = re.compile(Procedure.regex_begin_pattern.replace(&#34;PLACEHOLDER_PROCEDURE_TYPE&#34;, KEYWORD_TYPE), re.VERBOSE | re.IGNORECASE)
+
+
+    regex_end = re.compile(Procedure.regex_end_pattern.replace(&#34;PLACEHOLDER_PROCEDURE_TYPE&#34;, KEYWORD_TYPE), re.VERBOSE | re.IGNORECASE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Function(Procedure):
+    &#34;&#34;&#34;
+    Subklasse für eine VBA-Sub-Prozedur.
+    U.a. wird hier auch der von der Superklasse vor-initialisierte Regex-Ausdruck konkretisiert und kompiliert, der im VBA-Syntax für den Beginn und das Ende der Prozedurart erforderlich ist.
+
+    Die meisten Methoden sind in der übergeordneten Superklasse gelagert, da sie vom Ablauf fuer VBA-Subs und VBA-Methoden identisch sind.
+
+    &#34;&#34;&#34;
+
+    matches_line_ixs = []
+    instances = []
+    
+    all_procedures_final = [] # Liste wird erst nach Identifizierung aller Prozeduren erstellt. Sie dient der Sortierung  der Instanzen basierend auf der alphabetischen Reihenfolge ihrer Prozedur-Bezeichnungen
+    
+    KEYWORD_TYPE = &#34;Function&#34; 
+    
+    TEMPLATE_SECTION_HEAD = &#34;templates/sec_functions.md&#34;
+    
+    
+    # Konkretisierung und Kompilierung der Regex-Ausdrücke:
+
+    regex_begin = re.compile(Procedure.regex_begin_pattern.replace(&#34;PLACEHOLDER_PROCEDURE_TYPE&#34;, KEYWORD_TYPE), re.VERBOSE | re.IGNORECASE)
+
+
+    regex_end = re.compile(Procedure.regex_end_pattern.replace(&#34;PLACEHOLDER_PROCEDURE_TYPE&#34;, KEYWORD_TYPE), re.VERBOSE | re.IGNORECASE)
+
+
+
+
+
+
+
+
+
+# =============================================================================
+#### FUNCTIONS: ####
+# =============================================================================
+
+
+
+def db(*args):
+    &#34;&#34;&#34;
+    Schleust zum printen durch - nur zum Debuggen
+    &#34;&#34;&#34;
+    if DEBUG == False:
+        return
+    
+    print(&#34;__DEBUG_PRINT__\n&#34;)
+    for _ in args:
+        print(_)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# =============================================================================
+#### MAIN: 
+# =============================================================================
+def main():
+    &#34;&#34;&#34;
+    ### TODOC: ...
+    &#34;&#34;&#34;
+
+    # HACK: path for Source-vba-code
+    input_file_path = &#34;input_data/beispiel_modul.bas&#34;
+
+    # initialize the class including reading the input file:
+    Procedure.initialize_input_code(input_file_path)
+
+
+
+    #  Identifizieren und Speichern der Deklarationszeilen von Prozeduren:
+    Procedure.identify_procedures()
+
+
+    &#39;&#39;&#39;
+
+    &#34;&#34;&#34;
+    # ALT: Funktionierte in der folgenden Form!
+    # OBSOLET: Ab Version 0.0.4 ausgelagert und funktional in Klasse.
+    # # =============================================================================
+    # #### Identifizieren und Speichern der Deklarationszeilen von Prozeduren: ####
+    # # =============================================================================
+
+
+    # for ix, text in enumerate(raws):
+
+    #     db(text)
+
+    #     if Procedure.search_for_begin:
+
+    #         if Sub.check_and_get_match(text, ix):
+    #             current_procedure_type_cls = Sub
+    #             continue
+
+    #         if Function.check_and_get_match(text, ix):
+    #             current_procedure_type_cls = Function
+
+
+
+    #     else:
+    #         # Suche nach dem entsprechend passenden Ende
+    #         current_procedure_type_cls.search_end_of_procedure(text, ix)
+
+    &#34;&#34;&#34;
+
+        
+
+
+
+
+
+
+
+
+    &#34;&#34;&#34;
+    # ALT: So ging es im main.:
+
+    # =============================================================================
+    #### Detail-Auswertung aller Prozeduren innerhalb der Klassen als Objekte speichern: ####
+    # =============================================================================
+        
+
+    for cls in [Sub, Function]:
+
+        for line_begin, line_end in cls.matches_line_ixs:
+
+            db(line_begin, line_end)
+            
+            lines = raws[line_begin:line_end + 1]
+
+            sub = cls(tuple(lines))
+
+    &#34;&#34;&#34;
+
+        &#39;&#39;&#39;
+
+
+
+
+
+
+    # Detail-Analyse und Speicherung einzelner Bestandteile in Objekten:
+    Procedure.detail_analyse_procedures()
+
+
+
+
+
+
+
+    # Schreibe die Datei erst in eine Markdown-Datei:
+    output_file_path = &#34;output_data/demo_output.md&#34;
+    Procedure.finilize(output_file_path)
+    # Procedure.write_to_file(output_file_path)
+
+
+
+    &#34;&#34;&#34;
+    # OBSOLET: ALT: im Main: Funktioneiert
+
+    with open(output_file_path, &#34;w&#34;, ) as file:
+    
+        for cls in [Sub, Function]:
+
+            for procedure in cls.instances:
+
+                file.write(procedure.documentation)
+            
+            print(&#34;Es wurden {} {}s identifiziert und dokumentiert.&#34;.format(len(cls.instances), cls.KEYWORD_TYPE))
+
+    &#34;&#34;&#34;
+        
+
+    # db(&#34;Gefundene MAtches:&#34;, len(Sub.instances))
+
+
+
+
+
+
+
+    print(chr(13), &#39;&gt;&gt;&gt;&gt;&gt;&gt;&gt; ENDE.&#39;)
+
+
+
+
+
+
+
+
+
+if __name__ == &#39;__main__&#39;:
+    main()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="code_documenter.db"><code class="name flex">
+<span>def <span class="ident">db</span></span>(<span>*args)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Schleust zum printen durch - nur zum Debuggen</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def db(*args):
+    &#34;&#34;&#34;
+    Schleust zum printen durch - nur zum Debuggen
+    &#34;&#34;&#34;
+    if DEBUG == False:
+        return
+    
+    print(&#34;__DEBUG_PRINT__\n&#34;)
+    for _ in args:
+        print(_)</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><h3 id="todoc">TODOC: &hellip;</h3></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def main():
+    &#34;&#34;&#34;
+    ### TODOC: ...
+    &#34;&#34;&#34;
+
+    # HACK: path for Source-vba-code
+    input_file_path = &#34;input_data/beispiel_modul.bas&#34;
+
+    # initialize the class including reading the input file:
+    Procedure.initialize_input_code(input_file_path)
+
+
+
+    #  Identifizieren und Speichern der Deklarationszeilen von Prozeduren:
+    Procedure.identify_procedures()
+
+
+    &#39;&#39;&#39;
+
+    &#34;&#34;&#34;
+    # ALT: Funktionierte in der folgenden Form!
+    # OBSOLET: Ab Version 0.0.4 ausgelagert und funktional in Klasse.
+    # # =============================================================================
+    # #### Identifizieren und Speichern der Deklarationszeilen von Prozeduren: ####
+    # # =============================================================================
+
+
+    # for ix, text in enumerate(raws):
+
+    #     db(text)
+
+    #     if Procedure.search_for_begin:
+
+    #         if Sub.check_and_get_match(text, ix):
+    #             current_procedure_type_cls = Sub
+    #             continue
+
+    #         if Function.check_and_get_match(text, ix):
+    #             current_procedure_type_cls = Function
+
+
+
+    #     else:
+    #         # Suche nach dem entsprechend passenden Ende
+    #         current_procedure_type_cls.search_end_of_procedure(text, ix)
+
+    &#34;&#34;&#34;
+
+        
+
+
+
+
+
+
+
+
+    &#34;&#34;&#34;
+    # ALT: So ging es im main.:
+
+    # =============================================================================
+    #### Detail-Auswertung aller Prozeduren innerhalb der Klassen als Objekte speichern: ####
+    # =============================================================================
+        
+
+    for cls in [Sub, Function]:
+
+        for line_begin, line_end in cls.matches_line_ixs:
+
+            db(line_begin, line_end)
+            
+            lines = raws[line_begin:line_end + 1]
+
+            sub = cls(tuple(lines))
+
+    &#34;&#34;&#34;
+
+        &#39;&#39;&#39;
+
+
+
+
+
+
+    # Detail-Analyse und Speicherung einzelner Bestandteile in Objekten:
+    Procedure.detail_analyse_procedures()
+
+
+
+
+
+
+
+    # Schreibe die Datei erst in eine Markdown-Datei:
+    output_file_path = &#34;output_data/demo_output.md&#34;
+    Procedure.finilize(output_file_path)
+    # Procedure.write_to_file(output_file_path)
+
+
+
+    &#34;&#34;&#34;
+    # OBSOLET: ALT: im Main: Funktioneiert
+
+    with open(output_file_path, &#34;w&#34;, ) as file:
+    
+        for cls in [Sub, Function]:
+
+            for procedure in cls.instances:
+
+                file.write(procedure.documentation)
+            
+            print(&#34;Es wurden {} {}s identifiziert und dokumentiert.&#34;.format(len(cls.instances), cls.KEYWORD_TYPE))
+
+    &#34;&#34;&#34;
+        
+
+    # db(&#34;Gefundene MAtches:&#34;, len(Sub.instances))
+
+
+
+
+
+
+
+    print(chr(13), &#39;&gt;&gt;&gt;&gt;&gt;&gt;&gt; ENDE.&#39;)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="code_documenter.Function"><code class="flex name class">
+<span>class <span class="ident">Function</span></span>
+<span>(</span><span>text_lines: tuple[str])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Subklasse für eine VBA-Sub-Prozedur.
+U.a. wird hier auch der von der Superklasse vor-initialisierte Regex-Ausdruck konkretisiert und kompiliert, der im VBA-Syntax für den Beginn und das Ende der Prozedurart erforderlich ist.</p>
+<p>Die meisten Methoden sind in der übergeordneten Superklasse gelagert, da sie vom Ablauf fuer VBA-Subs und VBA-Methoden identisch sind.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Function(Procedure):
+    &#34;&#34;&#34;
+    Subklasse für eine VBA-Sub-Prozedur.
+    U.a. wird hier auch der von der Superklasse vor-initialisierte Regex-Ausdruck konkretisiert und kompiliert, der im VBA-Syntax für den Beginn und das Ende der Prozedurart erforderlich ist.
+
+    Die meisten Methoden sind in der übergeordneten Superklasse gelagert, da sie vom Ablauf fuer VBA-Subs und VBA-Methoden identisch sind.
+
+    &#34;&#34;&#34;
+
+    matches_line_ixs = []
+    instances = []
+    
+    all_procedures_final = [] # Liste wird erst nach Identifizierung aller Prozeduren erstellt. Sie dient der Sortierung  der Instanzen basierend auf der alphabetischen Reihenfolge ihrer Prozedur-Bezeichnungen
+    
+    KEYWORD_TYPE = &#34;Function&#34; 
+    
+    TEMPLATE_SECTION_HEAD = &#34;templates/sec_functions.md&#34;
+    
+    
+    # Konkretisierung und Kompilierung der Regex-Ausdrücke:
+
+    regex_begin = re.compile(Procedure.regex_begin_pattern.replace(&#34;PLACEHOLDER_PROCEDURE_TYPE&#34;, KEYWORD_TYPE), re.VERBOSE | re.IGNORECASE)
+
+
+    regex_end = re.compile(Procedure.regex_end_pattern.replace(&#34;PLACEHOLDER_PROCEDURE_TYPE&#34;, KEYWORD_TYPE), re.VERBOSE | re.IGNORECASE)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="code_documenter.Procedure" href="#code_documenter.Procedure">Procedure</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="code_documenter.Function.KEYWORD_TYPE"><code class="name">var <span class="ident">KEYWORD_TYPE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Function.TEMPLATE_SECTION_HEAD"><code class="name">var <span class="ident">TEMPLATE_SECTION_HEAD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Function.all_procedures_final"><code class="name">var <span class="ident">all_procedures_final</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Function.instances"><code class="name">var <span class="ident">instances</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Function.matches_line_ixs"><code class="name">var <span class="ident">matches_line_ixs</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Function.regex_begin"><code class="name">var <span class="ident">regex_begin</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Function.regex_end"><code class="name">var <span class="ident">regex_end</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="code_documenter.Procedure" href="#code_documenter.Procedure">Procedure</a></b></code>:
+<ul class="hlist">
+<li><code><a title="code_documenter.Procedure.check_and_get_match" href="#code_documenter.Procedure.check_and_get_match">check_and_get_match</a></code></li>
+<li><code><a title="code_documenter.Procedure.detail_analyse_procedures" href="#code_documenter.Procedure.detail_analyse_procedures">detail_analyse_procedures</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_docstring" href="#code_documenter.Procedure.extract_docstring">extract_docstring</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_line_numbers" href="#code_documenter.Procedure.extract_line_numbers">extract_line_numbers</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_modifier" href="#code_documenter.Procedure.extract_modifier">extract_modifier</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_name" href="#code_documenter.Procedure.extract_name">extract_name</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_references" href="#code_documenter.Procedure.extract_references">extract_references</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_source_code" href="#code_documenter.Procedure.extract_source_code">extract_source_code</a></code></li>
+<li><code><a title="code_documenter.Procedure.finilize" href="#code_documenter.Procedure.finilize">finilize</a></code></li>
+<li><code><a title="code_documenter.Procedure.generate_documentation" href="#code_documenter.Procedure.generate_documentation">generate_documentation</a></code></li>
+<li><code><a title="code_documenter.Procedure.generate_toc_entries" href="#code_documenter.Procedure.generate_toc_entries">generate_toc_entries</a></code></li>
+<li><code><a title="code_documenter.Procedure.identify_procedures" href="#code_documenter.Procedure.identify_procedures">identify_procedures</a></code></li>
+<li><code><a title="code_documenter.Procedure.initialize_input_code" href="#code_documenter.Procedure.initialize_input_code">initialize_input_code</a></code></li>
+<li><code><a title="code_documenter.Procedure.initialize_toc" href="#code_documenter.Procedure.initialize_toc">initialize_toc</a></code></li>
+<li><code><a title="code_documenter.Procedure.read_template" href="#code_documenter.Procedure.read_template">read_template</a></code></li>
+<li><code><a title="code_documenter.Procedure.search_end_of_procedure" href="#code_documenter.Procedure.search_end_of_procedure">search_end_of_procedure</a></code></li>
+<li><code><a title="code_documenter.Procedure.sort_procedures_by_names" href="#code_documenter.Procedure.sort_procedures_by_names">sort_procedures_by_names</a></code></li>
+<li><code><a title="code_documenter.Procedure.write_to_file" href="#code_documenter.Procedure.write_to_file">write_to_file</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="code_documenter.Procedure"><code class="flex name class">
+<span>class <span class="ident">Procedure</span></span>
+<span>(</span><span>text_lines: tuple[str])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Allgemeine Klasse zur Bereitstellung von Inhalten, die fuer alle Prozeduren (Subs und Functions) erforderlich sind. Dazu gehoert:</p>
+<pre><code>• Definition des Dateipfades fuer Template, in die der extrahierte Text übernommen wird
+
+• Flag-Variable, ob nach Beginn oder Ende der Prozedur gesucht wird
+
+• Regex-Muster als String für den Beginn und das Ende einer Prozedur - wobei innerhalb dieses Strings der Platzhalter für die Prozedurart in den Subklassen noch ersetzt werden muss. Ebenfalls
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Procedure():
+    &#34;&#34;&#34;
+    Allgemeine Klasse zur Bereitstellung von Inhalten, die fuer alle Prozeduren (Subs und Functions) erforderlich sind. Dazu gehoert:
+        
+        • Definition des Dateipfades fuer Template, in die der extrahierte Text übernommen wird
+        
+        • Flag-Variable, ob nach Beginn oder Ende der Prozedur gesucht wird
+        
+        • Regex-Muster als String für den Beginn und das Ende einer Prozedur - wobei innerhalb dieses Strings der Platzhalter für die Prozedurart in den Subklassen noch ersetzt werden muss. Ebenfalls
+    &#34;&#34;&#34;
+
+    TEMPLATE = &#34;templates/prozedur.md&#34;
+
+
+    search_for_begin = True # initialer wErt
+
+
+
+
+    # TODO: Das wäre eig. schöner wenn sie private vars sind...
+
+    # Das folgenden Regex-Muster berücksichtigt nicht das Auskommentieren dieser Zeile
+    regex_begin_pattern = r&#34;&#34;&#34;.*     # Start mit beliebigen Zeichen
+                        (?:Private|Public|Friend)?
+                        (?:PLACEHOLDER_PROCEDURE_TYPE)    # Beinhaltet das KEyword
+                        \s+        # mind. 1 bis n Leerzeichen
+                        (\w+)        # mind. 1 bis n Wortzeichen
+                        \(         # Geöffnete Klammer
+                        &#34;&#34;&#34;
+
+
+
+
+    regex_end_pattern = r&#34;&#34;&#34;.*?     # Start mit beliebigen Zeichen
+                        (?:End)    # Beinhaltet das KEyword
+                        \s+        # mind. 1 bis n Leerzeichen
+                        (?:PLACEHOLDER_PROCEDURE_TYPE)?    # Beinhaltet das KEyword
+                        .*&#34;&#34;&#34;
+
+
+    # Zum späteren Prüfen bzgl. Auskommentierung extra Regex:
+    __regex_ausschlus_kommentar_pattern = r&#34;&#34;&#34;&#39;    # KommentarApostroph
+                                        .?       # Beliebiges Zeichen
+                                        &#34;&#34;&#34;
+
+    # Hier ist keine weitere Konkretisierung durch Subklassen erforderlich, daher direkt kompiliert:
+    regex_ausschlus_kommentar = re.compile(__regex_ausschlus_kommentar_pattern, re.VERBOSE | re.IGNORECASE)
+
+
+
+    @classmethod
+    def initialize_input_code(cls, input_path:str):
+        &#34;&#34;&#34;
+        Liesst den zu analysierenden und zu dokumentierenden Input-Quellcode ein und speichert ihn innerhalb dder Superklasse als immer verfuegbare Liste einzelner Zeileninhalte ab.
+        ### TODO: Später sollte hier auch noch eine einfache GUI erstellt werden zur Auswahl!
+        ggf. sollte diese GUI aber losgelöst von dieser Klasse sein (Wiederholfunktion!). Daher als Kapselung mit übergebenen input-path!
+        &#34;&#34;&#34;
+
+        with open(input_path, &#34;r&#34;) as file:
+            cls.raw_source_code = file.readlines()
+
+
+
+
+
+
+    @classmethod
+    def detail_analyse_procedures(cls):
+        &#34;&#34;&#34;
+        Detail-Auswertung aller zuvor identifizierten Prozeduren (unabhängig ihrer Art).
+        Die einzelnen Komponenten werden dabei in Objekte der Subklassen gespeichert
+        &#34;&#34;&#34;
+
+        for procedure_type_cls in [Sub, Function]:
+
+            for line_begin, line_end in procedure_type_cls.matches_line_ixs:
+
+                # db(line_begin, line_end)
+                
+                lines = cls.raw_source_code[line_begin:line_end + 1]
+
+                sub = procedure_type_cls(tuple(lines))
+
+
+
+    @classmethod
+    # def identify_procedures(cls, list_of_code_lines:list[str]):
+    def identify_procedures(cls):
+        &#34;&#34;&#34;
+        Identifizieren  aller Prozeduren (Methoden und Funktione) auf Klassenebene und Speichern der Zeilennummern der Deklarations- und End-Zeilen innerhalb der jeweiligen Klassenvariablen.
+
+        Durchsucht werden die einzelnen Strings der als Liste übergebenen Zeileninhalte des Quellcodes.
+
+        Args:
+            raws (list[str]): Liste mit einem Eintrag pro Zeile des Quellcodes
+
+        &#34;&#34;&#34;
+
+        for ix, text in enumerate(cls.raw_source_code):
+
+            # db(text)
+
+            if cls.search_for_begin:
+
+                if Sub.check_and_get_match(text, ix):
+                    current_procedure_type_cls = Sub
+                    continue
+
+                if Function.check_and_get_match(text, ix):
+                    current_procedure_type_cls = Function
+
+
+            else:
+                # Suche nach dem entsprechend passenden Ende
+                current_procedure_type_cls.search_end_of_procedure(text, ix)
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @classmethod
+    def check_and_get_match(cls, text:str, line_no:int) -&gt; bool:
+        &#34;&#34;&#34;
+        Prüft eine einzelne Zeile eines Codes (den übergebenen text), ob es sich um ein Match einer Deklarationszeile handelt, und auch, ob diese NICHT-auskommentiert ist. Sofern dies der Fall ist, wird dieses MAtch in die Liste der MAtsches aufgenommen.
+
+        Args:
+            text (str): Zu prüfender Text ausschnitt
+            line_no (int) : Zeilennummer der Liste an gesamt zu untersuchenden Zeilen
+
+        Returns:
+            bool: True falls das match aufgenommen wurde
+        &#34;&#34;&#34;
+
+        if cls.regex_begin.match(text):
+            if not cls.regex_ausschlus_kommentar.match(text):
+                # Dann aufnehmen in die Liste der MAtches! inkl. Platzhalter für Endzeilennummer:
+                cls.matches_line_ixs.append([line_no, None])
+                Procedure.search_for_begin = False
+
+                return True
+        
+        return False
+
+
+
+
+
+
+    @classmethod
+    def search_end_of_procedure(cls, text:str, line_no:int) -&gt; bool:
+        &#34;&#34;&#34;
+        Prüft eine einzelne Zeile eines Codes (den übergebenen text), ob es sich um ein Match einer Deklarations-END-zeile handelt, und auch, ob diese NICHT-auskommentiert ist. Sofern dies der Fall ist, wird dieses MAtch in die Liste der MAtsches aufgenommen.
+
+        Args:
+            text (str): Zu prüfender Text ausschnitt
+            line_no (int) : Zeilennummer der Liste an gesamt zu untersuchenden Zeilen
+
+        Returns:
+            bool: True falls das match aufgenommen wurde
+        &#34;&#34;&#34;
+
+        
+        # BUG: Durch die Regex wird aber auch etwas wie End sub  gefunden obwohl es um end function geht! Daher wurde der PRogrammablauf im main angepasst, um sicherzustellen, dass immer nach der richtigen Klassen-Beendigung gesucht wird... Falls Langeweile: Später mal schauen warum...
+        if cls.regex_end.match(text):
+            if not cls.regex_ausschlus_kommentar.match(text):
+                # Dann aufnehmen in die Liste der MAtches!
+                cls.matches_line_ixs[-1][-1] = line_no
+
+                Procedure.search_for_begin = True
+
+                return True
+        
+        return False
+
+
+    
+
+
+    @classmethod
+    def initialize_toc(cls):
+        &#34;&#34;&#34;
+        DEBUG: 2023-12-30 - 02:18:54 OK BIS HIER! (1. Durchlauf)
+        Initialisiert den Text für den Markdown-Text des  Table of content und speichert es in der Klassenvariable cls.toc. Zugriff erfolgt über die Superklasse Procedure. 
+        Innerhalb des resultierenden Textes sind weiterhin jeweils 1 Platzhalter fuer jede Prozedur-Art vorhanden. Diese werden spaeter gesondert ersetzt.
+        &#34;&#34;&#34;
+
+        toc = cls.__read_template(&#34;templates/sec_toc.md&#34;)
+
+        # Gesamtanzahl an verfügbaren prozeduren je Art einsetzen:
+        placeholder_replacer = {
+            &#34;@PLACEHOLDER_SUBS_COUNTS@&#34; : len(Sub.instances),
+            &#34;@PLACEHOLDER_FUNCTIONS_COUNTS@&#34; : len(Function.instances),
+        }
+
+
+        for placeholder, replacer in placeholder_replacer.items():
+            toc = toc.replace(placeholder, str(replacer))
+
+        cls.toc = toc
+        
+
+
+
+
+
+
+    @classmethod
+    def generate_toc_entries(cls, subklasse):
+        &#34;&#34;&#34;
+        
+        Generiert die Einzelnen Eintraege aller Prozeduren der uebergebenen subklasse und fuegt diese in die Klassenvariable cls.toc ein, indem Platzhalter verwendet werden.
+        
+        Zugriff auf Superklassen-Ebene
+
+
+        Args:
+            subklasse (Sub | Function): Klasse, die aktuell gelistet werden soll
+        &#34;&#34;&#34;
+
+
+        toc = cls.toc # shortcut
+
+        keyword_type = subklasse.KEYWORD_TYPE.upper()
+        platzhalter = f&#34;@PLACEHOLDER_ENTRIES_{keyword_type}S@&#34;
+        
+
+        for (prozedur_obj, prozedur_name) in subklasse.all_procedures_final:
+
+            # Iterieren ueber jede Instanz:
+
+            # TODO: Vorgehen wenn es KEINE instanz gibt???! - sollte kein Problem sein, dadurch dass nach jedem Einfügen immer wieder der Ausgangszustand bzgl. des Platzhalters wiederhergestellt wird un dieser am Ende gelöscht wird??!
+
+            # Aufbau des Markdown.-Codes fuer diesen TOC-Eintrag:
+            new_entry = &#34;* [```{temp_prozedur_name}```](#{temp_prozedur_name})&#34;.format(temp_prozedur_name=prozedur_name)
+
+            # Append the placeholder to have this flag for insert further entries:
+            new_entry = new_entry + &#34;\n  &#34; + platzhalter
+            # ACHTUNG: Leerzeichen vorweg sind relevant fuer korrekte Einrueckung im MArkdown!
+
+
+            toc = toc.replace(platzhalter, new_entry)
+
+
+        # After all procedures of 1 type: Delete the leaving placeholder in the toc for this type of procedures.
+        toc = toc.replace(platzhalter, &#34;&#34;)
+
+        # store into class-variable:
+        cls.toc = toc
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @classmethod
+    def finilize(cls, output_file_path:str):
+        &#34;&#34;&#34;
+        ### TODO: Ob wirklich alles hier in die Klasse gehört ist fraglich! 
+        
+        Zugriff erfolgt über die Superklasse Procedure. Innerhalb der MEthode wird wiederum in Schleifen itteriert ueber die Subklassen.
+        
+        Bereitet die finale Ausgabe vor und ruft weitere MEthoden zum Schreiben dieser Ausgabe / der Markdown-Datei auf.
+        Zu dieser Vorbereitung gehört:
+         
+            • Sortierung der einzelnen Prozeduren innerhalb der verschiedenen Prozedur-Arten gemaess der alphabetischen Reihenfolge ihrer Bezeichner (Namen)
+            
+            • Konfigurieren / Initilalisierung der Zwischenüberschriften / Header-Texte unterhalb der einzelnen Section-Überschriften (gespeichert in Klassenvariable cls.header)
+
+
+        Args:
+            output_file_path (str): Dateipfad der zu erstellenden Markdown-Datei
+        &#34;&#34;&#34;
+
+
+        cls.initialize_toc()
+
+        for procedure_type_cls in [Sub, Function]: 
+
+
+
+            # Initialisieren des Headers unterhalb der Section-Überschrift  (aus gesonderter Template) und in Klassenvariable speichern:
+            content = cls.__read_template(procedure_type_cls.TEMPLATE_SECTION_HEAD)
+
+            cls.header = content
+
+
+
+
+
+            # Instanzen der Prozeduren  Alphabetisch  sortieren nach den Namen! und in Klassenvariable speichern:
+            procedure_type_cls.sort_procedures_by_names()
+
+
+            # Inhaltsverzeichnis generrieren ud MD-Text intern als Klassenvariable speichern:
+            # procedure_type_cls.generate_toc()
+
+            #DEBUG: 2023-12-30 - 02:20:35 OK
+
+            # TODO: Ergänze einen einzigen Eintrag für eine Methode! und haenge sie dem TOC an
+            # WICHTIG: Auf Superklassen-Ebene!
+            cls.generate_toc_entries(procedure_type_cls)
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # Aufruf der Methode zum tatsächlichen Schreiben der Textdatei:
+        cls.write_to_file(output_file_path)
+
+
+
+    &#39;&#39;&#39;
+    @classmethod
+    def generate_toc(cls):
+        &#34;&#34;&#34;
+        Erstellt den Markdown-Code des TOC (Table of Content) zum spaeteren Schreiben in die Output-Datei. Hierbei werden alle Bezeichner der Prozeduren (innerhalb einer Prozedur-Art) aufgelistet. Die Auflistung erfolgt nach bereits erfolgter Initialisierung und alphabetischer Sortierung der Klassenvariable cls.all_procedures_final.
+        
+        Das Ergebnis wird in der Klassenvariable cls.toc gespeichert.
+
+        # ACHTUNG: Stark Angelehnt / kopiert aus cls.generate_documentation - ggf. duplizierung unnötig!
+        &#34;&#34;&#34;
+
+
+
+        &#34;&#34;&#34;
+        cls.counts = len(cls.instances) # Gesamtanzahl an Prozeduren innerhalb dieser Prozedur-Art
+        &#34;&#34;&#34;
+
+        toc = cls.__read_template(&#34;templates/sec_toc_head.md&#34;)
+
+    
+        db(cls.counts)
+
+        placeholder_replacer = {
+            &#34;@PLACEHOLDER_PROCEDURES_COUNTS@&#34; : cls.counts,
+        }
+
+
+        for placeholder, replacer in placeholder_replacer.items():
+            toc = toc.replace(placeholder, str(replacer))
+
+
+        cls.toc = toc
+
+
+    &#39;&#39;&#39;
+
+
+    
+    
+    @classmethod
+    def write_to_file(cls, output_file_path:str):
+        &#34;&#34;&#34;
+        Schreibt die Dokumentation aller Prozeduren (aller Art) in die als Dateipfad übergebene Zieldatei(pfad).
+        &#34;&#34;&#34;
+
+        with open(output_file_path, &#34;w&#34;, ) as file:
+
+
+            ## TODO: Dies gehört eigentlich nicht mehr in die Klasse Procedure, aber aktuell trotzdem hierher, um alles zusammen zu haben. Ggf.s später refactoring...
+            # Initialisiere die Seite mit Titel und organisatorischen Hinweisen:
+            content = cls.__read_template(&#34;templates/sec_head.md&#34;)
+            file.write(content)
+
+
+
+
+            #Einfügen des Index / TOCs /  Inhaltsverzeichnis:
+            # cls.generate_toc()
+            &#34;&#34;&#34;
+            file.write(Sub.toc)
+            file.write(Function.toc)
+            &#34;&#34;&#34;
+            file.write(Procedure.toc)
+            &#34;&#34;&#34;
+            #Einfügen des Index / TOCs /  Inhaltsverzeichnis:
+            content = cls.__read_template(&#34;templates/sec_toc.md&#34;)
+            file.write(content)
+            &#34;&#34;&#34;
+
+            # Einfügen der Modulinfos / Modulkopfes: (bislang statisch)
+            # TODO: Bislang statisch!
+            content = cls.__read_template(&#34;templates/sec_modulinfos.md&#34;)
+            file.write(content)
+
+
+
+
+
+
+            for procedure_type_cls in [Sub, Function]: # Reihenfolge wichtig fuer die Reihenfolge der Dokumentierten Sections!
+                
+
+
+                # Überschrift der Section einfügen (aus gesonderter Template):
+                &#34;&#34;&#34;
+                # content = cls.__read_template(procedure_type_cls.TEMPLATE_SECTION_HEAD)
+                # file.write(content)
+                &#34;&#34;&#34;
+                file.write(procedure_type_cls.header)
+
+                &#34;&#34;&#34;
+                # TODO: Instanzen  Alphabetisch  sortieren nach den Namen! ggfs. schon vorher vorbereiten??! 
+                procedure_type_cls.sort_procedures_by_names()
+                &#34;&#34;&#34;
+
+
+                # Dokumentieren aller einzelnen Prozeduren:
+                for (procedure_obj, procedure_name) in procedure_type_cls.all_procedures_final:
+
+                    file.write(procedure_obj.documentation)
+
+
+
+                &#34;&#34;&#34;
+                # Dokumentieren aller einzelnen Prozeduren:
+                for procedure in procedure_type_cls.instances:
+
+                    file.write(procedure.documentation)
+                    
+                &#34;&#34;&#34;
+                
+                # Ausgabe der Zusammenfassung pro Section:
+                print(&#34;Es wurden {} {}s identifiziert und dokumentiert.&#34;.format(len(procedure_type_cls.instances), procedure_type_cls.KEYWORD_TYPE))
+
+
+
+
+
+
+            ## TODO: Dies gehört eigentlich nicht mehr in die Klasse Procedure, aber aktuell trotzdem hierher, um alles zusammen zu haben. Ggf.s später refactoring...
+            # Finalisiere die Seite mit Schlusbemerkungen:
+            content = cls.__read_template(&#34;templates/sec_tail.md&#34;)
+            file.write(content)
+
+
+
+
+
+
+    @classmethod
+    def sort_procedures_by_names(cls):
+        &#34;&#34;&#34;
+        Füllen der Klassenvariable cls.all_procedures_final mit einem Tupel pro Prozedur, in dem sowohl das einzelne Objekt, als auch seine Bezeichnung enthalten ist in der Form [(object:Procedure, object.name:str)]. 
+        Diese Liste wird nach Fertigstellung sortiert basierend auf den alphabetischen Bezeichnern, sodass der Zusammenhang zwischen den Objekten und den Namen weiterhin gegeben ist, gleichzeitig aber die Objekte in der alphabetischen Reihenfolge ihrer Namen dokumentiert werden können.
+
+        &#34;&#34;&#34;
+
+        all_procedures = [] 
+
+
+        for procedure_obj in cls.instances:
+            
+            all_procedures.append((procedure_obj, procedure_obj.name))
+
+            # db(all_procedures)
+
+
+        # Nach dem Füllen: Sortieren basierend auf den Bezeichner-Namen:
+        cls.all_procedures_final = sorted(all_procedures, key=lambda stored_tuple: stored_tuple[1])
+
+
+        # db(cls.all_procedures_final)
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @staticmethod
+    def __read_template(template_file_path) -&gt; str:
+        &#34;&#34;&#34;
+        Ließt die uebergebene Template-MArkdown Datei ein und gibt den Inhalt als String zurück.
+        
+        Args:
+            template (str) : Dateipfad zur Template
+
+        Return:
+            str : Textinhalt der Template
+        &#34;&#34;&#34;
+        with open(template_file_path, &#34;r&#34;) as file:
+            content = file.read()
+            return content
+
+
+
+
+
+    def read_template(self, template=&#34;einzelprozedur&#34;) -&gt; str:
+        &#34;&#34;&#34;
+        # TODOC: ...
+
+        Ließt die relevante Template-MArkdown Datei ein und gibt den Inhalt als String zurück. Sofern es sich um die Default-Template für eine beliebige Prozedur handelt wird außerdem auch das Attribut self.documentation mit diesem Text initialisiert.
+
+        Args:
+            template (str) : Dateipfad zur Template - Ausnahme: Falls die in der Klasse gespeicherte Standardtemplate self.TEMPLATE fuer eine Prozedur verwendet werden soll, dann muss das Stichwort &#34;einzelprozedur&#34; übergeben werden. Dies ist default der Fall --&gt; keine Angabe erforderlich.
+
+        Return:
+            str : Inhalt der Template
+        &#34;&#34;&#34;
+
+
+        if template == &#34;einzelprozedur&#34;:
+        
+            # Auslesen und Speichern in Objektvariable
+            self.documentation = self.__read_template(self.TEMPLATE)
+            return self.documentation
+
+
+        # Bei NICHT-Standard-Prozedur-Template: Auslesen dieser Template und Rückgabe des Textinhaltes:
+        content = self.__read_template(template)
+        return content
+
+
+
+
+
+    def generate_documentation(self):
+        &#34;&#34;&#34;
+        Dokumentiert die gefundenen Parameter unter Nutzung einer Template-Markdown-Textdatei und speichert den zu schreibenden Text im Attribut self.documentation
+        &#34;&#34;&#34;
+
+        self.read_template()
+
+        placeholder_replacer = {
+            &#34;@PLACEHOLDER_PROCEDURE_TYPE@&#34; : self.KEYWORD_TYPE,
+            &#34;@PLACEHOLDER_PROCEDURE_MODIFIER@&#34; : self.modifier,
+            &#34;@PLACEHOLDER_PROCEDURE_NAME@&#34; : self.name,
+            &#34;@PLACEHOLDER_PROCEDURE_LINE_BEGIN@&#34; : self.line_begin,
+            &#34;@PLACEHOLDER_PROCEDURE_DOCSTRING@&#34; : self.docstring,
+            &#34;@PLACEHOLDER_PROCEDURE_SOURCE_CODE@&#34; : self.source_code,
+
+            # TODO:  Kommen die References extra??!
+            &#34;@PLACEHOLDER_PROCEDURE_REFERENCES@&#34; : self.references,
+            &#34;@PLACEHOLDER_PROCEDURE_COUNT_OF_REFERENCES@&#34; : self.count_of_references,
+        }
+
+
+        for placeholder, replacer in placeholder_replacer.items():
+            self.documentation = self.documentation.replace(placeholder, str(replacer))
+
+
+
+
+
+
+
+
+
+
+
+
+
+    def extract_source_code(self):
+        &#34;&#34;&#34;
+        Ließt den source_code aus und speichert diesen im Attribut self.source_code
+        &#34;&#34;&#34;
+
+        source_code = &#34;&#34;
+        for line in self.lines:
+            source_code = source_code + line
+
+        self.source_code = source_code
+
+
+
+
+
+    def extract_modifier(self):
+        &#34;&#34;&#34;
+        Ließt den Modifier aus und speichert diesen im Attribut self.modifier
+        &#34;&#34;&#34;
+        # Wiederverwendung der Deklarationszeilen-Regex:
+        match = self.regex_begin.match(self.lines[0])
+
+        # Entnehme den String bis vor den NAmen:
+        pos_name = match.string.find(self.name + &#34;(&#34;)
+        potentieller_modifier = match.string[0:pos_name]
+
+        # Identifiziere hieraus den modifier:
+        
+        # # Eigentlich sollte es schon auf Grundlage der eigentlichen regex gehen, funktioniert aber nicht! Es wird immer was leres zurückgegeben, daher, neue regex! (Bei Zeit mal schauen warum!)
+        # # Extraktion der Gruppe mit dem Name: (eigentlicher Ansatz)
+        # db(match.groups())
+        # modifier = match.group(1)
+        
+        
+        regex_modifier = re.compile(r&#34;((?:Private|Public|Friend)?)&#34;)
+        match = regex_modifier.match(potentieller_modifier)
+        modifier = match.group(1)
+
+
+        if modifier == &#34;&#34;:
+            modifier = &#34;Public&#34;
+
+        # db(modifier)
+
+        self.modifier = modifier
+
+
+
+
+    def extract_name(self):
+        &#34;&#34;&#34;
+        Ließt den Bezeichnungsnamen aus und speichert diesen im Attribut self.name
+        &#34;&#34;&#34;
+        # Wiederverwendung der Deklarationszeilen-Regex:
+        
+        
+        match = self.regex_begin.match(self.lines[0])
+
+        # db(match.groups())
+        # Extraktion der Gruppe mit dem Name:
+        name = match.group(1)
+
+        # db(name)
+
+        self.name = name
+
+
+
+    def extract_line_numbers(self):
+        &#34;&#34;&#34;
+        Ließt die relevanten Start- und End-Zeilennummern aus und speichert diesen im Attribut self.line_begin und self.line_end
+        &#34;&#34;&#34;
+        # Hole Index der Instanzenliste, dieser ist gleich dem Index der matches_line_ixs Liste:
+        ix = self.instances.index(self) 
+
+        match_lines_ix = self.matches_line_ixs[ix]
+        
+        self.line_begin = match_lines_ix[0] + 1
+        self.line_end = match_lines_ix[1] + 1
+
+
+
+    def extract_docstring(self):
+        &#34;&#34;&#34;
+        Ließt den docstring aus und speichert diesen im Attribut self.docstring
+        Sofern kein Docstring im Code identifiziert wurde, wird eine entsprechende Info in den Text geschrieben.
+
+        Als Docstring wird jede Kommentarzeile gewertet, die DIREKT UND OHNE VORHERIGE LEERZEEILE UNTERHALB DER DEKLARIERUNGSZEILE der Prozedur steht. Sobald eine Leerzeile folgt, wird der Docstring als beendet angesehen.
+
+        Beispiel:
+            Private Sub beispielProgramm() &#39; Deklarationszeile
+                &#39; Dies ist ein Kommentar direkt unter der Deklarationszeile. Somit wird es als Docstring gewertet.
+                &#39; Dies auch
+                &#39;
+                &#39; Da die vorherige Zeile AUCH einen Kommentar (einen leeren) enthält, ist dies hier immer noch Bestandteil des Docstrings.
+
+                &#39; Vor dieser Zeile war ein NICHT-Kommentar, daher gehört das hier nicht mehr zum Docstring
+                MsgBox(&#34;Das gehört zum Programm&#34;)
+            End Sub
+        &#34;&#34;&#34;
+
+        docstring  = &#34;&#34;
+
+
+        for line in self.lines[1:]:
+            # line:str
+            content = line.lstrip(&#34; &#34;)
+
+            if(content[0]) == &#34;&#39;&#34;:
+               
+               # gehört zum Docstring
+                docstring = docstring + content.lstrip(&#34;&#39;&#34;)
+            
+            else:
+                break
+
+        if docstring == &#34;&#34;:
+            docstring = &#34;*No information availible. For more information expand source code.*&#34; #  Die Sternchen bewirken im MArkdown ein Kursivdruck
+
+        
+        self.docstring = docstring
+
+
+
+
+
+
+
+    def extract_references(self):
+        &#34;&#34;&#34;
+        Durchsucht den gesamten Quelltext nach Referenzierungen (Aufrufen) dieser Prozedur und speichert diese im Attribut self.references
+        # TODO ALLES
+        &#34;&#34;&#34;
+        self.references = &#34; # TODO ...&#34;
+        self.count_of_references = &#34; # TODO ...&#34;
+
+
+
+    def __init__(self, text_lines:tuple[str]) -&gt; None:
+        super().__init__()
+
+        # Merken der instanc zum späteren Iterieren: Klassenzuweisung dynamisch!
+        type(self).instances.append(self)
+        
+        # Speichern aller Textzeilen:
+        self.lines = text_lines
+
+        # HErausfiltern einzelner KOmponenten:
+        self.extract_line_numbers()
+        self.extract_source_code()
+        self.extract_name()
+        self.extract_modifier()
+        # TODO:
+        self.extract_docstring()
+
+
+
+
+        # TODO:
+        self.extract_references()
+
+
+
+        # TODO: Wohin der Aufruf?
+        self.generate_documentation()</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="code_documenter.Function" href="#code_documenter.Function">Function</a></li>
+<li><a title="code_documenter.Sub" href="#code_documenter.Sub">Sub</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="code_documenter.Procedure.TEMPLATE"><code class="name">var <span class="ident">TEMPLATE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Procedure.regex_ausschlus_kommentar"><code class="name">var <span class="ident">regex_ausschlus_kommentar</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Procedure.regex_begin_pattern"><code class="name">var <span class="ident">regex_begin_pattern</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Procedure.regex_end_pattern"><code class="name">var <span class="ident">regex_end_pattern</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Procedure.search_for_begin"><code class="name">var <span class="ident">search_for_begin</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Static methods</h3>
+<dl>
+<dt id="code_documenter.Procedure.check_and_get_match"><code class="name flex">
+<span>def <span class="ident">check_and_get_match</span></span>(<span>text: str, line_no: int) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Prüft eine einzelne Zeile eines Codes (den übergebenen text), ob es sich um ein Match einer Deklarationszeile handelt, und auch, ob diese NICHT-auskommentiert ist. Sofern dies der Fall ist, wird dieses MAtch in die Liste der MAtsches aufgenommen.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>text</code></strong> :&ensp;<code>str</code></dt>
+<dd>Zu prüfender Text ausschnitt</dd>
+</dl>
+<p>line_no (int) : Zeilennummer der Liste an gesamt zu untersuchenden Zeilen</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>True falls das match aufgenommen wurde</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def check_and_get_match(cls, text:str, line_no:int) -&gt; bool:
+    &#34;&#34;&#34;
+    Prüft eine einzelne Zeile eines Codes (den übergebenen text), ob es sich um ein Match einer Deklarationszeile handelt, und auch, ob diese NICHT-auskommentiert ist. Sofern dies der Fall ist, wird dieses MAtch in die Liste der MAtsches aufgenommen.
+
+    Args:
+        text (str): Zu prüfender Text ausschnitt
+        line_no (int) : Zeilennummer der Liste an gesamt zu untersuchenden Zeilen
+
+    Returns:
+        bool: True falls das match aufgenommen wurde
+    &#34;&#34;&#34;
+
+    if cls.regex_begin.match(text):
+        if not cls.regex_ausschlus_kommentar.match(text):
+            # Dann aufnehmen in die Liste der MAtches! inkl. Platzhalter für Endzeilennummer:
+            cls.matches_line_ixs.append([line_no, None])
+            Procedure.search_for_begin = False
+
+            return True
+    
+    return False</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.detail_analyse_procedures"><code class="name flex">
+<span>def <span class="ident">detail_analyse_procedures</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Detail-Auswertung aller zuvor identifizierten Prozeduren (unabhängig ihrer Art).
+Die einzelnen Komponenten werden dabei in Objekte der Subklassen gespeichert</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def detail_analyse_procedures(cls):
+    &#34;&#34;&#34;
+    Detail-Auswertung aller zuvor identifizierten Prozeduren (unabhängig ihrer Art).
+    Die einzelnen Komponenten werden dabei in Objekte der Subklassen gespeichert
+    &#34;&#34;&#34;
+
+    for procedure_type_cls in [Sub, Function]:
+
+        for line_begin, line_end in procedure_type_cls.matches_line_ixs:
+
+            # db(line_begin, line_end)
+            
+            lines = cls.raw_source_code[line_begin:line_end + 1]
+
+            sub = procedure_type_cls(tuple(lines))</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.finilize"><code class="name flex">
+<span>def <span class="ident">finilize</span></span>(<span>output_file_path: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><h3 id="todo-ob-wirklich-alles-hier-in-die-klasse-gehort-ist-fraglich">TODO: Ob wirklich alles hier in die Klasse gehört ist fraglich!</h3>
+<p>Zugriff erfolgt über die Superklasse Procedure. Innerhalb der MEthode wird wiederum in Schleifen itteriert ueber die Subklassen.</p>
+<p>Bereitet die finale Ausgabe vor und ruft weitere MEthoden zum Schreiben dieser Ausgabe / der Markdown-Datei auf.
+Zu dieser Vorbereitung gehört:</p>
+<pre><code>• Sortierung der einzelnen Prozeduren innerhalb der verschiedenen Prozedur-Arten gemaess der alphabetischen Reihenfolge ihrer Bezeichner (Namen)
+
+• Konfigurieren / Initilalisierung der Zwischenüberschriften / Header-Texte unterhalb der einzelnen Section-Überschriften (gespeichert in Klassenvariable cls.header)
+</code></pre>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>output_file_path</code></strong> :&ensp;<code>str</code></dt>
+<dd>Dateipfad der zu erstellenden Markdown-Datei</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def finilize(cls, output_file_path:str):
+    &#34;&#34;&#34;
+    ### TODO: Ob wirklich alles hier in die Klasse gehört ist fraglich! 
+    
+    Zugriff erfolgt über die Superklasse Procedure. Innerhalb der MEthode wird wiederum in Schleifen itteriert ueber die Subklassen.
+    
+    Bereitet die finale Ausgabe vor und ruft weitere MEthoden zum Schreiben dieser Ausgabe / der Markdown-Datei auf.
+    Zu dieser Vorbereitung gehört:
+     
+        • Sortierung der einzelnen Prozeduren innerhalb der verschiedenen Prozedur-Arten gemaess der alphabetischen Reihenfolge ihrer Bezeichner (Namen)
+        
+        • Konfigurieren / Initilalisierung der Zwischenüberschriften / Header-Texte unterhalb der einzelnen Section-Überschriften (gespeichert in Klassenvariable cls.header)
+
+
+    Args:
+        output_file_path (str): Dateipfad der zu erstellenden Markdown-Datei
+    &#34;&#34;&#34;
+
+
+    cls.initialize_toc()
+
+    for procedure_type_cls in [Sub, Function]: 
+
+
+
+        # Initialisieren des Headers unterhalb der Section-Überschrift  (aus gesonderter Template) und in Klassenvariable speichern:
+        content = cls.__read_template(procedure_type_cls.TEMPLATE_SECTION_HEAD)
+
+        cls.header = content
+
+
+
+
+
+        # Instanzen der Prozeduren  Alphabetisch  sortieren nach den Namen! und in Klassenvariable speichern:
+        procedure_type_cls.sort_procedures_by_names()
+
+
+        # Inhaltsverzeichnis generrieren ud MD-Text intern als Klassenvariable speichern:
+        # procedure_type_cls.generate_toc()
+
+        #DEBUG: 2023-12-30 - 02:20:35 OK
+
+        # TODO: Ergänze einen einzigen Eintrag für eine Methode! und haenge sie dem TOC an
+        # WICHTIG: Auf Superklassen-Ebene!
+        cls.generate_toc_entries(procedure_type_cls)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # Aufruf der Methode zum tatsächlichen Schreiben der Textdatei:
+    cls.write_to_file(output_file_path)</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.generate_toc_entries"><code class="name flex">
+<span>def <span class="ident">generate_toc_entries</span></span>(<span>subklasse)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Generiert die Einzelnen Eintraege aller Prozeduren der uebergebenen subklasse und fuegt diese in die Klassenvariable cls.toc ein, indem Platzhalter verwendet werden.</p>
+<p>Zugriff auf Superklassen-Ebene</p>
+<h2 id="args">Args</h2>
+<p>subklasse (Sub | Function): Klasse, die aktuell gelistet werden soll</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def generate_toc_entries(cls, subklasse):
+    &#34;&#34;&#34;
+    
+    Generiert die Einzelnen Eintraege aller Prozeduren der uebergebenen subklasse und fuegt diese in die Klassenvariable cls.toc ein, indem Platzhalter verwendet werden.
+    
+    Zugriff auf Superklassen-Ebene
+
+
+    Args:
+        subklasse (Sub | Function): Klasse, die aktuell gelistet werden soll
+    &#34;&#34;&#34;
+
+
+    toc = cls.toc # shortcut
+
+    keyword_type = subklasse.KEYWORD_TYPE.upper()
+    platzhalter = f&#34;@PLACEHOLDER_ENTRIES_{keyword_type}S@&#34;
+    
+
+    for (prozedur_obj, prozedur_name) in subklasse.all_procedures_final:
+
+        # Iterieren ueber jede Instanz:
+
+        # TODO: Vorgehen wenn es KEINE instanz gibt???! - sollte kein Problem sein, dadurch dass nach jedem Einfügen immer wieder der Ausgangszustand bzgl. des Platzhalters wiederhergestellt wird un dieser am Ende gelöscht wird??!
+
+        # Aufbau des Markdown.-Codes fuer diesen TOC-Eintrag:
+        new_entry = &#34;* [```{temp_prozedur_name}```](#{temp_prozedur_name})&#34;.format(temp_prozedur_name=prozedur_name)
+
+        # Append the placeholder to have this flag for insert further entries:
+        new_entry = new_entry + &#34;\n  &#34; + platzhalter
+        # ACHTUNG: Leerzeichen vorweg sind relevant fuer korrekte Einrueckung im MArkdown!
+
+
+        toc = toc.replace(platzhalter, new_entry)
+
+
+    # After all procedures of 1 type: Delete the leaving placeholder in the toc for this type of procedures.
+    toc = toc.replace(platzhalter, &#34;&#34;)
+
+    # store into class-variable:
+    cls.toc = toc</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.identify_procedures"><code class="name flex">
+<span>def <span class="ident">identify_procedures</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Identifizieren
+aller Prozeduren (Methoden und Funktione) auf Klassenebene und Speichern der Zeilennummern der Deklarations- und End-Zeilen innerhalb der jeweiligen Klassenvariablen.</p>
+<p>Durchsucht werden die einzelnen Strings der als Liste übergebenen Zeileninhalte des Quellcodes.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>raws</code></strong> :&ensp;<code>list[str]</code></dt>
+<dd>Liste mit einem Eintrag pro Zeile des Quellcodes</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+# def identify_procedures(cls, list_of_code_lines:list[str]):
+def identify_procedures(cls):
+    &#34;&#34;&#34;
+    Identifizieren  aller Prozeduren (Methoden und Funktione) auf Klassenebene und Speichern der Zeilennummern der Deklarations- und End-Zeilen innerhalb der jeweiligen Klassenvariablen.
+
+    Durchsucht werden die einzelnen Strings der als Liste übergebenen Zeileninhalte des Quellcodes.
+
+    Args:
+        raws (list[str]): Liste mit einem Eintrag pro Zeile des Quellcodes
+
+    &#34;&#34;&#34;
+
+    for ix, text in enumerate(cls.raw_source_code):
+
+        # db(text)
+
+        if cls.search_for_begin:
+
+            if Sub.check_and_get_match(text, ix):
+                current_procedure_type_cls = Sub
+                continue
+
+            if Function.check_and_get_match(text, ix):
+                current_procedure_type_cls = Function
+
+
+        else:
+            # Suche nach dem entsprechend passenden Ende
+            current_procedure_type_cls.search_end_of_procedure(text, ix)</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.initialize_input_code"><code class="name flex">
+<span>def <span class="ident">initialize_input_code</span></span>(<span>input_path: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Liesst den zu analysierenden und zu dokumentierenden Input-Quellcode ein und speichert ihn innerhalb dder Superklasse als immer verfuegbare Liste einzelner Zeileninhalte ab.</p>
+<h3 id="todo-spater-sollte-hier-auch-noch-eine-einfache-gui-erstellt-werden-zur-auswahl">TODO: Später sollte hier auch noch eine einfache GUI erstellt werden zur Auswahl!</h3>
+<p>ggf. sollte diese GUI aber losgelöst von dieser Klasse sein (Wiederholfunktion!). Daher als Kapselung mit übergebenen input-path!</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def initialize_input_code(cls, input_path:str):
+    &#34;&#34;&#34;
+    Liesst den zu analysierenden und zu dokumentierenden Input-Quellcode ein und speichert ihn innerhalb dder Superklasse als immer verfuegbare Liste einzelner Zeileninhalte ab.
+    ### TODO: Später sollte hier auch noch eine einfache GUI erstellt werden zur Auswahl!
+    ggf. sollte diese GUI aber losgelöst von dieser Klasse sein (Wiederholfunktion!). Daher als Kapselung mit übergebenen input-path!
+    &#34;&#34;&#34;
+
+    with open(input_path, &#34;r&#34;) as file:
+        cls.raw_source_code = file.readlines()</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.initialize_toc"><code class="name flex">
+<span>def <span class="ident">initialize_toc</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>DEBUG: 2023-12-30 - 02:18:54 OK BIS HIER! (1. Durchlauf)
+Initialisiert den Text für den Markdown-Text des
+Table of content und speichert es in der Klassenvariable cls.toc. Zugriff erfolgt über die Superklasse Procedure.
+Innerhalb des resultierenden Textes sind weiterhin jeweils 1 Platzhalter fuer jede Prozedur-Art vorhanden. Diese werden spaeter gesondert ersetzt.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def initialize_toc(cls):
+    &#34;&#34;&#34;
+    DEBUG: 2023-12-30 - 02:18:54 OK BIS HIER! (1. Durchlauf)
+    Initialisiert den Text für den Markdown-Text des  Table of content und speichert es in der Klassenvariable cls.toc. Zugriff erfolgt über die Superklasse Procedure. 
+    Innerhalb des resultierenden Textes sind weiterhin jeweils 1 Platzhalter fuer jede Prozedur-Art vorhanden. Diese werden spaeter gesondert ersetzt.
+    &#34;&#34;&#34;
+
+    toc = cls.__read_template(&#34;templates/sec_toc.md&#34;)
+
+    # Gesamtanzahl an verfügbaren prozeduren je Art einsetzen:
+    placeholder_replacer = {
+        &#34;@PLACEHOLDER_SUBS_COUNTS@&#34; : len(Sub.instances),
+        &#34;@PLACEHOLDER_FUNCTIONS_COUNTS@&#34; : len(Function.instances),
+    }
+
+
+    for placeholder, replacer in placeholder_replacer.items():
+        toc = toc.replace(placeholder, str(replacer))
+
+    cls.toc = toc</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.search_end_of_procedure"><code class="name flex">
+<span>def <span class="ident">search_end_of_procedure</span></span>(<span>text: str, line_no: int) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Prüft eine einzelne Zeile eines Codes (den übergebenen text), ob es sich um ein Match einer Deklarations-END-zeile handelt, und auch, ob diese NICHT-auskommentiert ist. Sofern dies der Fall ist, wird dieses MAtch in die Liste der MAtsches aufgenommen.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>text</code></strong> :&ensp;<code>str</code></dt>
+<dd>Zu prüfender Text ausschnitt</dd>
+</dl>
+<p>line_no (int) : Zeilennummer der Liste an gesamt zu untersuchenden Zeilen</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>True falls das match aufgenommen wurde</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def search_end_of_procedure(cls, text:str, line_no:int) -&gt; bool:
+    &#34;&#34;&#34;
+    Prüft eine einzelne Zeile eines Codes (den übergebenen text), ob es sich um ein Match einer Deklarations-END-zeile handelt, und auch, ob diese NICHT-auskommentiert ist. Sofern dies der Fall ist, wird dieses MAtch in die Liste der MAtsches aufgenommen.
+
+    Args:
+        text (str): Zu prüfender Text ausschnitt
+        line_no (int) : Zeilennummer der Liste an gesamt zu untersuchenden Zeilen
+
+    Returns:
+        bool: True falls das match aufgenommen wurde
+    &#34;&#34;&#34;
+
+    
+    # BUG: Durch die Regex wird aber auch etwas wie End sub  gefunden obwohl es um end function geht! Daher wurde der PRogrammablauf im main angepasst, um sicherzustellen, dass immer nach der richtigen Klassen-Beendigung gesucht wird... Falls Langeweile: Später mal schauen warum...
+    if cls.regex_end.match(text):
+        if not cls.regex_ausschlus_kommentar.match(text):
+            # Dann aufnehmen in die Liste der MAtches!
+            cls.matches_line_ixs[-1][-1] = line_no
+
+            Procedure.search_for_begin = True
+
+            return True
+    
+    return False</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.sort_procedures_by_names"><code class="name flex">
+<span>def <span class="ident">sort_procedures_by_names</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Füllen der Klassenvariable cls.all_procedures_final mit einem Tupel pro Prozedur, in dem sowohl das einzelne Objekt, als auch seine Bezeichnung enthalten ist in der Form [(object:Procedure, object.name:str)].
+Diese Liste wird nach Fertigstellung sortiert basierend auf den alphabetischen Bezeichnern, sodass der Zusammenhang zwischen den Objekten und den Namen weiterhin gegeben ist, gleichzeitig aber die Objekte in der alphabetischen Reihenfolge ihrer Namen dokumentiert werden können.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def sort_procedures_by_names(cls):
+    &#34;&#34;&#34;
+    Füllen der Klassenvariable cls.all_procedures_final mit einem Tupel pro Prozedur, in dem sowohl das einzelne Objekt, als auch seine Bezeichnung enthalten ist in der Form [(object:Procedure, object.name:str)]. 
+    Diese Liste wird nach Fertigstellung sortiert basierend auf den alphabetischen Bezeichnern, sodass der Zusammenhang zwischen den Objekten und den Namen weiterhin gegeben ist, gleichzeitig aber die Objekte in der alphabetischen Reihenfolge ihrer Namen dokumentiert werden können.
+
+    &#34;&#34;&#34;
+
+    all_procedures = [] 
+
+
+    for procedure_obj in cls.instances:
+        
+        all_procedures.append((procedure_obj, procedure_obj.name))
+
+        # db(all_procedures)
+
+
+    # Nach dem Füllen: Sortieren basierend auf den Bezeichner-Namen:
+    cls.all_procedures_final = sorted(all_procedures, key=lambda stored_tuple: stored_tuple[1])
+
+
+    # db(cls.all_procedures_final)</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.write_to_file"><code class="name flex">
+<span>def <span class="ident">write_to_file</span></span>(<span>output_file_path: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Schreibt die Dokumentation aller Prozeduren (aller Art) in die als Dateipfad übergebene Zieldatei(pfad).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def write_to_file(cls, output_file_path:str):
+    &#34;&#34;&#34;
+    Schreibt die Dokumentation aller Prozeduren (aller Art) in die als Dateipfad übergebene Zieldatei(pfad).
+    &#34;&#34;&#34;
+
+    with open(output_file_path, &#34;w&#34;, ) as file:
+
+
+        ## TODO: Dies gehört eigentlich nicht mehr in die Klasse Procedure, aber aktuell trotzdem hierher, um alles zusammen zu haben. Ggf.s später refactoring...
+        # Initialisiere die Seite mit Titel und organisatorischen Hinweisen:
+        content = cls.__read_template(&#34;templates/sec_head.md&#34;)
+        file.write(content)
+
+
+
+
+        #Einfügen des Index / TOCs /  Inhaltsverzeichnis:
+        # cls.generate_toc()
+        &#34;&#34;&#34;
+        file.write(Sub.toc)
+        file.write(Function.toc)
+        &#34;&#34;&#34;
+        file.write(Procedure.toc)
+        &#34;&#34;&#34;
+        #Einfügen des Index / TOCs /  Inhaltsverzeichnis:
+        content = cls.__read_template(&#34;templates/sec_toc.md&#34;)
+        file.write(content)
+        &#34;&#34;&#34;
+
+        # Einfügen der Modulinfos / Modulkopfes: (bislang statisch)
+        # TODO: Bislang statisch!
+        content = cls.__read_template(&#34;templates/sec_modulinfos.md&#34;)
+        file.write(content)
+
+
+
+
+
+
+        for procedure_type_cls in [Sub, Function]: # Reihenfolge wichtig fuer die Reihenfolge der Dokumentierten Sections!
+            
+
+
+            # Überschrift der Section einfügen (aus gesonderter Template):
+            &#34;&#34;&#34;
+            # content = cls.__read_template(procedure_type_cls.TEMPLATE_SECTION_HEAD)
+            # file.write(content)
+            &#34;&#34;&#34;
+            file.write(procedure_type_cls.header)
+
+            &#34;&#34;&#34;
+            # TODO: Instanzen  Alphabetisch  sortieren nach den Namen! ggfs. schon vorher vorbereiten??! 
+            procedure_type_cls.sort_procedures_by_names()
+            &#34;&#34;&#34;
+
+
+            # Dokumentieren aller einzelnen Prozeduren:
+            for (procedure_obj, procedure_name) in procedure_type_cls.all_procedures_final:
+
+                file.write(procedure_obj.documentation)
+
+
+
+            &#34;&#34;&#34;
+            # Dokumentieren aller einzelnen Prozeduren:
+            for procedure in procedure_type_cls.instances:
+
+                file.write(procedure.documentation)
+                
+            &#34;&#34;&#34;
+            
+            # Ausgabe der Zusammenfassung pro Section:
+            print(&#34;Es wurden {} {}s identifiziert und dokumentiert.&#34;.format(len(procedure_type_cls.instances), procedure_type_cls.KEYWORD_TYPE))
+
+
+
+
+
+
+        ## TODO: Dies gehört eigentlich nicht mehr in die Klasse Procedure, aber aktuell trotzdem hierher, um alles zusammen zu haben. Ggf.s später refactoring...
+        # Finalisiere die Seite mit Schlusbemerkungen:
+        content = cls.__read_template(&#34;templates/sec_tail.md&#34;)
+        file.write(content)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="code_documenter.Procedure.extract_docstring"><code class="name flex">
+<span>def <span class="ident">extract_docstring</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ließt den docstring aus und speichert diesen im Attribut self.docstring
+Sofern kein Docstring im Code identifiziert wurde, wird eine entsprechende Info in den Text geschrieben.</p>
+<p>Als Docstring wird jede Kommentarzeile gewertet, die DIREKT UND OHNE VORHERIGE LEERZEEILE UNTERHALB DER DEKLARIERUNGSZEILE der Prozedur steht. Sobald eine Leerzeile folgt, wird der Docstring als beendet angesehen.</p>
+<h2 id="beispiel">Beispiel</h2>
+<p>Private Sub beispielProgramm() ' Deklarationszeile
+' Dies ist ein Kommentar direkt unter der Deklarationszeile. Somit wird es als Docstring gewertet.
+' Dies auch
+'
+' Da die vorherige Zeile AUCH einen Kommentar (einen leeren) enthält, ist dies hier immer noch Bestandteil des Docstrings.</p>
+<pre><code>' Vor dieser Zeile war ein NICHT-Kommentar, daher gehört das hier nicht mehr zum Docstring
+MsgBox("Das gehört zum Programm")
+</code></pre>
+<p>End Sub</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def extract_docstring(self):
+    &#34;&#34;&#34;
+    Ließt den docstring aus und speichert diesen im Attribut self.docstring
+    Sofern kein Docstring im Code identifiziert wurde, wird eine entsprechende Info in den Text geschrieben.
+
+    Als Docstring wird jede Kommentarzeile gewertet, die DIREKT UND OHNE VORHERIGE LEERZEEILE UNTERHALB DER DEKLARIERUNGSZEILE der Prozedur steht. Sobald eine Leerzeile folgt, wird der Docstring als beendet angesehen.
+
+    Beispiel:
+        Private Sub beispielProgramm() &#39; Deklarationszeile
+            &#39; Dies ist ein Kommentar direkt unter der Deklarationszeile. Somit wird es als Docstring gewertet.
+            &#39; Dies auch
+            &#39;
+            &#39; Da die vorherige Zeile AUCH einen Kommentar (einen leeren) enthält, ist dies hier immer noch Bestandteil des Docstrings.
+
+            &#39; Vor dieser Zeile war ein NICHT-Kommentar, daher gehört das hier nicht mehr zum Docstring
+            MsgBox(&#34;Das gehört zum Programm&#34;)
+        End Sub
+    &#34;&#34;&#34;
+
+    docstring  = &#34;&#34;
+
+
+    for line in self.lines[1:]:
+        # line:str
+        content = line.lstrip(&#34; &#34;)
+
+        if(content[0]) == &#34;&#39;&#34;:
+           
+           # gehört zum Docstring
+            docstring = docstring + content.lstrip(&#34;&#39;&#34;)
+        
+        else:
+            break
+
+    if docstring == &#34;&#34;:
+        docstring = &#34;*No information availible. For more information expand source code.*&#34; #  Die Sternchen bewirken im MArkdown ein Kursivdruck
+
+    
+    self.docstring = docstring</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.extract_line_numbers"><code class="name flex">
+<span>def <span class="ident">extract_line_numbers</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ließt die relevanten Start- und End-Zeilennummern aus und speichert diesen im Attribut self.line_begin und self.line_end</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def extract_line_numbers(self):
+    &#34;&#34;&#34;
+    Ließt die relevanten Start- und End-Zeilennummern aus und speichert diesen im Attribut self.line_begin und self.line_end
+    &#34;&#34;&#34;
+    # Hole Index der Instanzenliste, dieser ist gleich dem Index der matches_line_ixs Liste:
+    ix = self.instances.index(self) 
+
+    match_lines_ix = self.matches_line_ixs[ix]
+    
+    self.line_begin = match_lines_ix[0] + 1
+    self.line_end = match_lines_ix[1] + 1</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.extract_modifier"><code class="name flex">
+<span>def <span class="ident">extract_modifier</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ließt den Modifier aus und speichert diesen im Attribut self.modifier</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def extract_modifier(self):
+    &#34;&#34;&#34;
+    Ließt den Modifier aus und speichert diesen im Attribut self.modifier
+    &#34;&#34;&#34;
+    # Wiederverwendung der Deklarationszeilen-Regex:
+    match = self.regex_begin.match(self.lines[0])
+
+    # Entnehme den String bis vor den NAmen:
+    pos_name = match.string.find(self.name + &#34;(&#34;)
+    potentieller_modifier = match.string[0:pos_name]
+
+    # Identifiziere hieraus den modifier:
+    
+    # # Eigentlich sollte es schon auf Grundlage der eigentlichen regex gehen, funktioniert aber nicht! Es wird immer was leres zurückgegeben, daher, neue regex! (Bei Zeit mal schauen warum!)
+    # # Extraktion der Gruppe mit dem Name: (eigentlicher Ansatz)
+    # db(match.groups())
+    # modifier = match.group(1)
+    
+    
+    regex_modifier = re.compile(r&#34;((?:Private|Public|Friend)?)&#34;)
+    match = regex_modifier.match(potentieller_modifier)
+    modifier = match.group(1)
+
+
+    if modifier == &#34;&#34;:
+        modifier = &#34;Public&#34;
+
+    # db(modifier)
+
+    self.modifier = modifier</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.extract_name"><code class="name flex">
+<span>def <span class="ident">extract_name</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ließt den Bezeichnungsnamen aus und speichert diesen im Attribut self.name</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def extract_name(self):
+    &#34;&#34;&#34;
+    Ließt den Bezeichnungsnamen aus und speichert diesen im Attribut self.name
+    &#34;&#34;&#34;
+    # Wiederverwendung der Deklarationszeilen-Regex:
+    
+    
+    match = self.regex_begin.match(self.lines[0])
+
+    # db(match.groups())
+    # Extraktion der Gruppe mit dem Name:
+    name = match.group(1)
+
+    # db(name)
+
+    self.name = name</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.extract_references"><code class="name flex">
+<span>def <span class="ident">extract_references</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Durchsucht den gesamten Quelltext nach Referenzierungen (Aufrufen) dieser Prozedur und speichert diese im Attribut self.references</p>
+<h1 id="todo-alles">TODO ALLES</h1></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def extract_references(self):
+    &#34;&#34;&#34;
+    Durchsucht den gesamten Quelltext nach Referenzierungen (Aufrufen) dieser Prozedur und speichert diese im Attribut self.references
+    # TODO ALLES
+    &#34;&#34;&#34;
+    self.references = &#34; # TODO ...&#34;
+    self.count_of_references = &#34; # TODO ...&#34;</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.extract_source_code"><code class="name flex">
+<span>def <span class="ident">extract_source_code</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ließt den source_code aus und speichert diesen im Attribut self.source_code</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def extract_source_code(self):
+    &#34;&#34;&#34;
+    Ließt den source_code aus und speichert diesen im Attribut self.source_code
+    &#34;&#34;&#34;
+
+    source_code = &#34;&#34;
+    for line in self.lines:
+        source_code = source_code + line
+
+    self.source_code = source_code</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.generate_documentation"><code class="name flex">
+<span>def <span class="ident">generate_documentation</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Dokumentiert die gefundenen Parameter unter Nutzung einer Template-Markdown-Textdatei und speichert den zu schreibenden Text im Attribut self.documentation</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_documentation(self):
+    &#34;&#34;&#34;
+    Dokumentiert die gefundenen Parameter unter Nutzung einer Template-Markdown-Textdatei und speichert den zu schreibenden Text im Attribut self.documentation
+    &#34;&#34;&#34;
+
+    self.read_template()
+
+    placeholder_replacer = {
+        &#34;@PLACEHOLDER_PROCEDURE_TYPE@&#34; : self.KEYWORD_TYPE,
+        &#34;@PLACEHOLDER_PROCEDURE_MODIFIER@&#34; : self.modifier,
+        &#34;@PLACEHOLDER_PROCEDURE_NAME@&#34; : self.name,
+        &#34;@PLACEHOLDER_PROCEDURE_LINE_BEGIN@&#34; : self.line_begin,
+        &#34;@PLACEHOLDER_PROCEDURE_DOCSTRING@&#34; : self.docstring,
+        &#34;@PLACEHOLDER_PROCEDURE_SOURCE_CODE@&#34; : self.source_code,
+
+        # TODO:  Kommen die References extra??!
+        &#34;@PLACEHOLDER_PROCEDURE_REFERENCES@&#34; : self.references,
+        &#34;@PLACEHOLDER_PROCEDURE_COUNT_OF_REFERENCES@&#34; : self.count_of_references,
+    }
+
+
+    for placeholder, replacer in placeholder_replacer.items():
+        self.documentation = self.documentation.replace(placeholder, str(replacer))</code></pre>
+</details>
+</dd>
+<dt id="code_documenter.Procedure.read_template"><code class="name flex">
+<span>def <span class="ident">read_template</span></span>(<span>self, template='einzelprozedur') ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><h1 id="todoc">TODOC: &hellip;</h1>
+<p>Ließt die relevante Template-MArkdown Datei ein und gibt den Inhalt als String zurück. Sofern es sich um die Default-Template für eine beliebige Prozedur handelt wird außerdem auch das Attribut self.documentation mit diesem Text initialisiert.</p>
+<h2 id="args">Args</h2>
+<p>template (str) : Dateipfad zur Template - Ausnahme: Falls die in der Klasse gespeicherte Standardtemplate self.TEMPLATE fuer eine Prozedur verwendet werden soll, dann muss das Stichwort "einzelprozedur" übergeben werden. Dies ist default der Fall &ndash;&gt; keine Angabe erforderlich.</p>
+<h2 id="return">Return</h2>
+<p>str : Inhalt der Template</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_template(self, template=&#34;einzelprozedur&#34;) -&gt; str:
+    &#34;&#34;&#34;
+    # TODOC: ...
+
+    Ließt die relevante Template-MArkdown Datei ein und gibt den Inhalt als String zurück. Sofern es sich um die Default-Template für eine beliebige Prozedur handelt wird außerdem auch das Attribut self.documentation mit diesem Text initialisiert.
+
+    Args:
+        template (str) : Dateipfad zur Template - Ausnahme: Falls die in der Klasse gespeicherte Standardtemplate self.TEMPLATE fuer eine Prozedur verwendet werden soll, dann muss das Stichwort &#34;einzelprozedur&#34; übergeben werden. Dies ist default der Fall --&gt; keine Angabe erforderlich.
+
+    Return:
+        str : Inhalt der Template
+    &#34;&#34;&#34;
+
+
+    if template == &#34;einzelprozedur&#34;:
+    
+        # Auslesen und Speichern in Objektvariable
+        self.documentation = self.__read_template(self.TEMPLATE)
+        return self.documentation
+
+
+    # Bei NICHT-Standard-Prozedur-Template: Auslesen dieser Template und Rückgabe des Textinhaltes:
+    content = self.__read_template(template)
+    return content</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="code_documenter.Sub"><code class="flex name class">
+<span>class <span class="ident">Sub</span></span>
+<span>(</span><span>text_lines: tuple[str])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Subklasse für eine VBA-Sub-Prozedur.
+U.a. wird hier auch der von der Superklasse vor-initialisierte Regex-Ausdruck konkretisiert und kompiliert, der im VBA-Syntax für den Beginn und das Ende der Prozedurart erforderlich ist.</p>
+<p>Die meisten Methoden sind in der übergeordneten Superklasse gelagert, da sie vom Ablauf fuer VBA-Subs und VBA-Methoden identisch sind.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Sub(Procedure):
+    &#34;&#34;&#34;
+    Subklasse für eine VBA-Sub-Prozedur.
+    U.a. wird hier auch der von der Superklasse vor-initialisierte Regex-Ausdruck konkretisiert und kompiliert, der im VBA-Syntax für den Beginn und das Ende der Prozedurart erforderlich ist.
+
+    Die meisten Methoden sind in der übergeordneten Superklasse gelagert, da sie vom Ablauf fuer VBA-Subs und VBA-Methoden identisch sind.
+
+    &#34;&#34;&#34;
+
+    matches_line_ixs = []
+    instances = []
+
+    all_procedures_final = [] # Liste wird erst nach Identifizierung aller Prozeduren erstellt. Sie dient der Sortierung  der Instanzen basierend auf der alphabetischen Reihenfolge ihrer Prozedur-Bezeichnungen
+
+    
+    KEYWORD_TYPE = &#34;Sub&#34; 
+
+    TEMPLATE_SECTION_HEAD = &#34;templates/sec_subs.md&#34;
+    
+
+    # Konkretisierung und Kompilierung der Regex-Ausdrücke:
+
+    regex_begin = re.compile(Procedure.regex_begin_pattern.replace(&#34;PLACEHOLDER_PROCEDURE_TYPE&#34;, KEYWORD_TYPE), re.VERBOSE | re.IGNORECASE)
+
+
+    regex_end = re.compile(Procedure.regex_end_pattern.replace(&#34;PLACEHOLDER_PROCEDURE_TYPE&#34;, KEYWORD_TYPE), re.VERBOSE | re.IGNORECASE)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="code_documenter.Procedure" href="#code_documenter.Procedure">Procedure</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="code_documenter.Sub.KEYWORD_TYPE"><code class="name">var <span class="ident">KEYWORD_TYPE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Sub.TEMPLATE_SECTION_HEAD"><code class="name">var <span class="ident">TEMPLATE_SECTION_HEAD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Sub.all_procedures_final"><code class="name">var <span class="ident">all_procedures_final</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Sub.instances"><code class="name">var <span class="ident">instances</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Sub.matches_line_ixs"><code class="name">var <span class="ident">matches_line_ixs</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Sub.regex_begin"><code class="name">var <span class="ident">regex_begin</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="code_documenter.Sub.regex_end"><code class="name">var <span class="ident">regex_end</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="code_documenter.Procedure" href="#code_documenter.Procedure">Procedure</a></b></code>:
+<ul class="hlist">
+<li><code><a title="code_documenter.Procedure.check_and_get_match" href="#code_documenter.Procedure.check_and_get_match">check_and_get_match</a></code></li>
+<li><code><a title="code_documenter.Procedure.detail_analyse_procedures" href="#code_documenter.Procedure.detail_analyse_procedures">detail_analyse_procedures</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_docstring" href="#code_documenter.Procedure.extract_docstring">extract_docstring</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_line_numbers" href="#code_documenter.Procedure.extract_line_numbers">extract_line_numbers</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_modifier" href="#code_documenter.Procedure.extract_modifier">extract_modifier</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_name" href="#code_documenter.Procedure.extract_name">extract_name</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_references" href="#code_documenter.Procedure.extract_references">extract_references</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_source_code" href="#code_documenter.Procedure.extract_source_code">extract_source_code</a></code></li>
+<li><code><a title="code_documenter.Procedure.finilize" href="#code_documenter.Procedure.finilize">finilize</a></code></li>
+<li><code><a title="code_documenter.Procedure.generate_documentation" href="#code_documenter.Procedure.generate_documentation">generate_documentation</a></code></li>
+<li><code><a title="code_documenter.Procedure.generate_toc_entries" href="#code_documenter.Procedure.generate_toc_entries">generate_toc_entries</a></code></li>
+<li><code><a title="code_documenter.Procedure.identify_procedures" href="#code_documenter.Procedure.identify_procedures">identify_procedures</a></code></li>
+<li><code><a title="code_documenter.Procedure.initialize_input_code" href="#code_documenter.Procedure.initialize_input_code">initialize_input_code</a></code></li>
+<li><code><a title="code_documenter.Procedure.initialize_toc" href="#code_documenter.Procedure.initialize_toc">initialize_toc</a></code></li>
+<li><code><a title="code_documenter.Procedure.read_template" href="#code_documenter.Procedure.read_template">read_template</a></code></li>
+<li><code><a title="code_documenter.Procedure.search_end_of_procedure" href="#code_documenter.Procedure.search_end_of_procedure">search_end_of_procedure</a></code></li>
+<li><code><a title="code_documenter.Procedure.sort_procedures_by_names" href="#code_documenter.Procedure.sort_procedures_by_names">sort_procedures_by_names</a></code></li>
+<li><code><a title="code_documenter.Procedure.write_to_file" href="#code_documenter.Procedure.write_to_file">write_to_file</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul>
+<li><a href="#todo-groere-todos">TODO: Größere TODOS:</a></li>
+<li><a href="#ausblick-fur-spater-und-in-schon">AUSBLICK für später und in schön:</a></li>
+</ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="code_documenter.db" href="#code_documenter.db">db</a></code></li>
+<li><code><a title="code_documenter.main" href="#code_documenter.main">main</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="code_documenter.Function" href="#code_documenter.Function">Function</a></code></h4>
+<ul class="">
+<li><code><a title="code_documenter.Function.KEYWORD_TYPE" href="#code_documenter.Function.KEYWORD_TYPE">KEYWORD_TYPE</a></code></li>
+<li><code><a title="code_documenter.Function.TEMPLATE_SECTION_HEAD" href="#code_documenter.Function.TEMPLATE_SECTION_HEAD">TEMPLATE_SECTION_HEAD</a></code></li>
+<li><code><a title="code_documenter.Function.all_procedures_final" href="#code_documenter.Function.all_procedures_final">all_procedures_final</a></code></li>
+<li><code><a title="code_documenter.Function.instances" href="#code_documenter.Function.instances">instances</a></code></li>
+<li><code><a title="code_documenter.Function.matches_line_ixs" href="#code_documenter.Function.matches_line_ixs">matches_line_ixs</a></code></li>
+<li><code><a title="code_documenter.Function.regex_begin" href="#code_documenter.Function.regex_begin">regex_begin</a></code></li>
+<li><code><a title="code_documenter.Function.regex_end" href="#code_documenter.Function.regex_end">regex_end</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="code_documenter.Procedure" href="#code_documenter.Procedure">Procedure</a></code></h4>
+<ul class="">
+<li><code><a title="code_documenter.Procedure.TEMPLATE" href="#code_documenter.Procedure.TEMPLATE">TEMPLATE</a></code></li>
+<li><code><a title="code_documenter.Procedure.check_and_get_match" href="#code_documenter.Procedure.check_and_get_match">check_and_get_match</a></code></li>
+<li><code><a title="code_documenter.Procedure.detail_analyse_procedures" href="#code_documenter.Procedure.detail_analyse_procedures">detail_analyse_procedures</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_docstring" href="#code_documenter.Procedure.extract_docstring">extract_docstring</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_line_numbers" href="#code_documenter.Procedure.extract_line_numbers">extract_line_numbers</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_modifier" href="#code_documenter.Procedure.extract_modifier">extract_modifier</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_name" href="#code_documenter.Procedure.extract_name">extract_name</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_references" href="#code_documenter.Procedure.extract_references">extract_references</a></code></li>
+<li><code><a title="code_documenter.Procedure.extract_source_code" href="#code_documenter.Procedure.extract_source_code">extract_source_code</a></code></li>
+<li><code><a title="code_documenter.Procedure.finilize" href="#code_documenter.Procedure.finilize">finilize</a></code></li>
+<li><code><a title="code_documenter.Procedure.generate_documentation" href="#code_documenter.Procedure.generate_documentation">generate_documentation</a></code></li>
+<li><code><a title="code_documenter.Procedure.generate_toc_entries" href="#code_documenter.Procedure.generate_toc_entries">generate_toc_entries</a></code></li>
+<li><code><a title="code_documenter.Procedure.identify_procedures" href="#code_documenter.Procedure.identify_procedures">identify_procedures</a></code></li>
+<li><code><a title="code_documenter.Procedure.initialize_input_code" href="#code_documenter.Procedure.initialize_input_code">initialize_input_code</a></code></li>
+<li><code><a title="code_documenter.Procedure.initialize_toc" href="#code_documenter.Procedure.initialize_toc">initialize_toc</a></code></li>
+<li><code><a title="code_documenter.Procedure.read_template" href="#code_documenter.Procedure.read_template">read_template</a></code></li>
+<li><code><a title="code_documenter.Procedure.regex_ausschlus_kommentar" href="#code_documenter.Procedure.regex_ausschlus_kommentar">regex_ausschlus_kommentar</a></code></li>
+<li><code><a title="code_documenter.Procedure.regex_begin_pattern" href="#code_documenter.Procedure.regex_begin_pattern">regex_begin_pattern</a></code></li>
+<li><code><a title="code_documenter.Procedure.regex_end_pattern" href="#code_documenter.Procedure.regex_end_pattern">regex_end_pattern</a></code></li>
+<li><code><a title="code_documenter.Procedure.search_end_of_procedure" href="#code_documenter.Procedure.search_end_of_procedure">search_end_of_procedure</a></code></li>
+<li><code><a title="code_documenter.Procedure.search_for_begin" href="#code_documenter.Procedure.search_for_begin">search_for_begin</a></code></li>
+<li><code><a title="code_documenter.Procedure.sort_procedures_by_names" href="#code_documenter.Procedure.sort_procedures_by_names">sort_procedures_by_names</a></code></li>
+<li><code><a title="code_documenter.Procedure.write_to_file" href="#code_documenter.Procedure.write_to_file">write_to_file</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="code_documenter.Sub" href="#code_documenter.Sub">Sub</a></code></h4>
+<ul class="">
+<li><code><a title="code_documenter.Sub.KEYWORD_TYPE" href="#code_documenter.Sub.KEYWORD_TYPE">KEYWORD_TYPE</a></code></li>
+<li><code><a title="code_documenter.Sub.TEMPLATE_SECTION_HEAD" href="#code_documenter.Sub.TEMPLATE_SECTION_HEAD">TEMPLATE_SECTION_HEAD</a></code></li>
+<li><code><a title="code_documenter.Sub.all_procedures_final" href="#code_documenter.Sub.all_procedures_final">all_procedures_final</a></code></li>
+<li><code><a title="code_documenter.Sub.instances" href="#code_documenter.Sub.instances">instances</a></code></li>
+<li><code><a title="code_documenter.Sub.matches_line_ixs" href="#code_documenter.Sub.matches_line_ixs">matches_line_ixs</a></code></li>
+<li><code><a title="code_documenter.Sub.regex_begin" href="#code_documenter.Sub.regex_begin">regex_begin</a></code></li>
+<li><code><a title="code_documenter.Sub.regex_end" href="#code_documenter.Sub.regex_end">regex_end</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

@@ -1314,6 +1314,7 @@ Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Program
 
 • Implementierung von References-Durchsuchungen
 
+• Implementierung eines Exportes zu HTML
 
 
 ### TODO: Größere TODOS:
@@ -1321,7 +1322,6 @@ Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Program
 • Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren
 
 
-• Implementierung eines Exportes zu HTML
 
 
 ### AUSBLICK für später und in schön:

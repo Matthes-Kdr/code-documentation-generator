@@ -20,6 +20,7 @@ Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Program
 
 • Implementierung von References-Durchsuchungen
 
+• Implementierung eines Exportes zu HTML
 
 
 ### TODO: Größere TODOS:
@@ -27,7 +28,6 @@ Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Program
 • Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren
 
 
-• Implementierung eines Exportes zu HTML
 
 
 ### AUSBLICK für später und in schön:
@@ -59,6 +59,8 @@ Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.
 import os
 import re
 
+import markdown
+
 
 
 
@@ -68,6 +70,7 @@ import re
 
 DEBUG = 1
 
+CONVERT_TO_HTML = 1
 
 
 
@@ -1524,6 +1527,12 @@ def main():
     Procedure.finilize(output_file_path)
 
 
+
+    if CONVERT_TO_HTML:
+        markdown.markdownFromFile(input=output_file_path,output=output_file_path.replace(".md", ".html"), encoding="utf8")
+
+        print("HTML-Datei wurde aus MD-Datei generiert.")
+        
     print(chr(13), '>>>>>>> ENDE.')
 
 

@@ -870,7 +870,7 @@ class Procedure():
             content = cls.__read_template("templates/sec_head.md")
 
                                 
-            # TEST
+            # TEST                                                                                                              
             # Extrahiere Daten von der Version DIESES DOKUMENTIER-TOOLS:
             content = str(Development.gitinfo) + "\n\nAnzahl der Commits = " + Development.count_of_commits
 

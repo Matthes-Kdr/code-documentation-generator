@@ -61,6 +61,11 @@ import re
 
 import markdown
 
+import subprocess
+import gitinfo
+
+
+
 
 
 
@@ -72,6 +77,28 @@ DEBUG = 1
 
 CONVERT_TO_HTML = 1
 
+
+
+
+
+class Development:
+
+    @staticmethod
+    def get_count_of_commits():
+    
+        cmd = "git rev-list --count HEAD"
+        return_ =  subprocess.run(cmd)
+        
+        db(return_)
+
+        db(str(return_).split(" ")[0])
+        
+        return str(return_).split(" ")[0]
+    
+
+
+    gitinfo = gitinfo.get_git_info()
+    count_of_commits = get_count_of_commits()
 
 
 
@@ -842,6 +869,12 @@ class Procedure():
             # Initialisiere die Seite mit Titel und organisatorischen Hinweisen:
             content = cls.__read_template("templates/sec_head.md")
 
+                                
+            # TEST
+            # Extrahiere Daten von der Version DIESES DOKUMENTIER-TOOLS:
+            content = str(Development.gitinfo) + "\n\nAnzahl der Commits = " + Development.count_of_commits
+
+
             # TODO: Hier muss noch Placeholders ersetzt werden!!'
             file.write(content)
 
@@ -1522,12 +1555,16 @@ def main():
     Procedure.detail_analyse_procedures()
 
 
+
+
     # Schreibe die Datei erst in eine Markdown-Datei:
     output_file_path = "output_data/demo_output.md"
     Procedure.finilize(output_file_path)
 
 
 
+
+    # Generiere HTML Datei from Markdown:
     if CONVERT_TO_HTML:
         markdown.markdownFromFile(input=output_file_path,output=output_file_path.replace(".md", ".html"), encoding="utf8")
 

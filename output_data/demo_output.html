@@ -147,7 +147,8 @@ Für weitere Infos: Siehe Schlussbemerkungen!</p>
 </ul>
 </li>
 </ul>
-<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@</p>
 </details>
 <!-- </div> -->
 <details>
@@ -211,7 +212,8 @@ end sub
 </ul>
 </li>
 </ul>
-<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@</p>
 </details>
 <!-- </div> -->
 <details>
@@ -276,7 +278,8 @@ end sub
 </ul>
 </li>
 </ul>
-<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@</p>
 </details>
 <!-- </div> -->
 <details>
@@ -336,7 +339,8 @@ end sub
 </ul>
 </li>
 </ul>
-<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@</p>
 </details>
 <!-- </div> -->
 <details>
@@ -403,7 +407,8 @@ end sub
 </ul>
 </li>
 </ul>
-<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@</p>
 </details>
 <!-- </div> -->
 <details>
@@ -466,7 +471,8 @@ end sub
 </ul>
 </li>
 </ul>
-<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@</p>
 </details>
 <!-- </div> -->
 <details>
@@ -530,100 +536,34 @@ end sub
 </ul>
 </li>
 </ul>
-<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<p><small>  Zeile 21 </small> : ```    call wiederholungsfunktion()</p>
-<pre><code class="language-ODER:">&lt;small&gt;  Zeile 65 &lt;/small&gt; : ```    call wiederholungsfunktion
-``` ODER: main
-
-
-
-&lt;/details&gt;
-
-
-&lt;!-- &lt;/div&gt; --&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;details&gt;
-    &lt;summary&gt;      Source Code&lt;/summary&gt;
-
----
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@</p>
+</details>
+<!-- </div> -->
+<details>
+    <summary>      Source Code</summary>
+<hr>
+<pre><code>Sub wiederholungsfunktion()
+    ' Func für standard-aufgaben
+    msgbox(&quot;Standardfunktion&quot;)
+end sub
 
 </code></pre>
-<p>Sub wiederholungsfunktion()
-' Func für standard-aufgaben
-msgbox(&quot;Standardfunktion&quot;)
-end sub</p>
-<pre><code>
-&lt;/details&gt;
-
-
-&lt;/div&gt;
-
-
----
-
-
-&lt;!-- --------------------------------------------------------------- --&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-﻿
-&lt;!-- -------------------------------------------------- --&gt;
-&lt;!-- SECTION-START : FUNCTIONS --&gt;
-&lt;!-- -------------------------------------------------- --&gt;
-
-&lt;a name=&quot;sec_functions&quot;&gt;&lt;/a&gt;
-
-## Functions
-
-
-﻿
-
-
-
----
-
-&lt;a name=&quot;sec_tail&quot;&gt;&lt;/a&gt;
-
-## Schlussbemerkungen
-
-
-
-&lt;!-- 
+</details>
+</div>
+<hr>
+<!-- --------------------------------------------------------------- -->
+<p></p>
+<!-- -------------------------------------------------- -->
+<!-- SECTION-START : FUNCTIONS -->
+<!-- -------------------------------------------------- -->
+<p><a name="sec_functions"></a></p>
+<h2 id="functions-1">Functions</h2>
+<p></p>
+<hr>
+<p><a name="sec_tail"></a></p>
+<h2 id="schlussbemerkungen">Schlussbemerkungen</h2>
+<!-- 
 **Notice:**
 
 *To generate a docstring from the VBA-Source, make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.*
@@ -642,73 +582,37 @@ end sub</p>
 
 
 
-**ODER:** --&gt;
-
-&gt; Diese Dokumentation wurde automatisch generiert durch ein Programm, welches sich noch im Entwicklungsstadium befindet. Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.
-
-&lt;details&gt;
-
-&lt;summary&gt; Modulinformationen anzeigen/verbergen.
-&lt;/summary&gt;
-
-  @
-Created on: Fri, 2023-12-29 (00:45:39)
-
-@author: Matthias Kader
-
-
-Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html
-
-
-
-
-### Fertig implementiert:
-
-• Implementierung Inhaltsverzeichnis / Index
-
-• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections
-
-• Einbindung vom Programmkopf-Docstring
-
-• Implementierung von References-Durchsuchungen
-
-
-
-### TODO: Größere TODOS:
-
-• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren
-
-
-• Implementierung eines Exportes zu HTML
-
-
-### AUSBLICK für später und in schön:
-
-• Index an der Seite wie eine NavBar zum einzelnd scrollen
-
-
-
-• Call Sequenz / Calling Sequence:
+**ODER:** -->
+<blockquote>
+<p>Diese Dokumentation wurde automatisch generiert durch ein Programm, welches sich noch im Entwicklungsstadium befindet. Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.</p>
+</blockquote>
+<details>
+<summary> Modulinformationen anzeigen/verbergen.
+</summary>
+<p>@
+Created on: Fri, 2023-12-29 (00:45:39)</p>
+<p>@author: Matthias Kader</p>
+<p>Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html</p>
+<h3 id="fertig-implementiert">Fertig implementiert:</h3>
+<p>• Implementierung Inhaltsverzeichnis / Index</p>
+<p>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections</p>
+<p>• Einbindung vom Programmkopf-Docstring</p>
+<p>• Implementierung von References-Durchsuchungen</p>
+<h3 id="todo-größere-todos">TODO: Größere TODOS:</h3>
+<p>• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren</p>
+<p>• Implementierung eines Exportes zu HTML</p>
+<h3 id="ausblick-für-später-und-in-schön">AUSBLICK für später und in schön:</h3>
+<p>• Index an der Seite wie eine NavBar zum einzelnd scrollen</p>
+<p>• Call Sequenz / Calling Sequence:
 Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.
-Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....
-
-
-@
-
-&lt;/details&gt;
-
-
-
-&lt;small&gt;
-
-**Notice:**
-
-*To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.*
-
-&lt;/small&gt; 
-
-&lt;small&gt; **TODO:** Erstellt am (Datum) durch das  automatisierte Code-Dokumentationstool von .... in der Version ....&lt;/small&gt; 
-</code></pre>
+Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....</p>
+<p>@</p>
+</details>
+<small>
+<p><strong>Notice:</strong></p>
+<p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
+</small> 
+<p><small> <strong>TODO:</strong> Erstellt am (Datum) durch das  automatisierte Code-Dokumentationstool von .... in der Version ....</small></p>
 
         
         

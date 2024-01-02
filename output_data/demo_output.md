@@ -189,13 +189,13 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
 
-
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
 </details>
@@ -352,13 +352,13 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
 
-
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
 </details>
@@ -516,13 +516,13 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
 
-
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
 </details>
@@ -677,13 +677,13 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
 
-
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
 </details>
@@ -843,13 +843,13 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
 
-
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
 </details>
@@ -1005,13 +1005,13 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
 
-
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
 </details>
@@ -1168,17 +1168,13 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
 
-<small>  Zeile 21 </small> : ```    call wiederholungsfunktion()
-``` ODER: main
-<small>  Zeile 65 </small> : ```    call wiederholungsfunktion
-``` ODER: main
-
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
 </details>

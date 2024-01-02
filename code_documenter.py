@@ -870,7 +870,7 @@ class Procedure():
                 for procedur_infos in procedure_type_cls.all_procedures_final:
                 # for (procedure_obj, procedure_name, procedure_line) in procedure_type_cls.all_procedures_final:
 
-                    procedure_obj = procedur_infos[0]
+                    procedure_obj:Procedure = procedur_infos[0]
 
 
 
@@ -939,8 +939,8 @@ class Procedure():
                     """
 
 
-
-                    procedure_obj.generate_calling_entries()
+                    # JULIA: Versuche Wiederherstollung des Tails!!!!
+                    # procedure_obj.generate_calling_entries()
 
                     file.write(procedure_obj.documentation)
 

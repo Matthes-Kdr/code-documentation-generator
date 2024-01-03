@@ -167,7 +167,67 @@ class MetaData(metaclass=AutoCallMeta):
     """
 
 
+    __input_path:str = None
+    __output_dir:str = None
 
+
+    @classmethod
+    def get_input_path(cls) -> str:
+        return cls.__input_path
+    
+    
+
+    @classmethod
+    def set_input_path(cls, input_path:str=None):
+        """
+        Prüft den optional übergebenen Pfad, ob er existiert und dort eine .bas Datei vorliegt.
+        Ist dies nicht der Fall, oder wird kein Pfad übergeben, wird per Input ein neuer Pfad abgefragt. 
+        Bis zu einem gültigen Pfad wird die Methode rekursiv aufgerufen.
+        Bislang gibt es noch keine Möglichkeit für den Nutzer, die Eingabe abzubrechen (außer Programmabbruch...)
+
+        Args:
+            input_path (str, optional): Dateipfad zur .bas-Datei, die dokumenteirt werden soll - als Foreward-Slash und ohne Anführungszeichen. Defaults to None.
+
+        """
+
+        if input_path != None:
+            if os.path.isfile(input_path):
+                if input_path.endswith(".bas"):
+                    cls.__input_path = input_path
+        else:
+            neuer_input = input("!!! FEHLER !!! Die Angegebene Datei ist keine .bas Datei! Bitte einen gueltigen Pfad zur entsprechenden Datei eingeben (Foreward-Slashes! ohne Anfuehrungszeichen)\n> Ihre Eingabe: ")
+
+            cls.set_input_path(neuer_input)
+
+
+    @classmethod
+    def set_output_dir(cls, output_dir:str=None):
+        """
+        Prüft den optional übergebenen Pfad, ob er existiert und ob dies ein Verzeichnis ist
+        Ist dies nicht der Fall, oder wird kein Pfad übergeben, wird per Input ein neuer Pfad abgefragt. 
+        Bis zu einem gültigen Pfad wird die Methode rekursiv aufgerufen.
+        Bislang gibt es noch keine Möglichkeit für den Nutzer, die Eingabe abzubrechen (außer Programmabbruch...)
+
+        Args:
+            output_dir (str, optional): Dateipfad zum Ordner, in dem die generierten Output-Dateien exportiert werden sollen - als Foreward-Slash und ohne Anführungszeichen. Defaults to None.
+
+        """
+
+        if output_dir != None:
+            if os.path.isdir(output_dir):
+                cls.__output_dir = output_dir
+        else:
+            neuer_input = input("!!! FEHLER !!! Der  angegebene Pfad ist kein gueltiges Verzeichnis. Bitte einen gueltigen Pfad fuer den Export der Output-Dateien  eingeben (Foreward-Slashes! ohne Anfuehrungszeichen)\n> Ihre Eingabe: ")
+
+            cls.set_output_dir(neuer_input)
+
+
+
+    @classmethod
+    def get_output_dir(cls) -> str:
+        return cls.__output_dir
+    
+    
 
 
     @staticmethod
@@ -209,7 +269,7 @@ class MetaData(metaclass=AutoCallMeta):
 
 
     @classmethod
-    def current_timestamp(cls):
+    def save_current_timestamp(cls):
 
         # Aktuelles Datum und Uhrzeit
         current_datetime = datetime.now()
@@ -242,7 +302,7 @@ class MetaData(metaclass=AutoCallMeta):
         cls.git_info_to_str()
         # cls.count_of_commits = cls.get_count_of_commits()
 
-        cls.current_timestamp()
+        cls.save_current_timestamp()
 
 
 
@@ -1676,6 +1736,11 @@ def main():
     # input_file_path = "input_data/beispiel_modul.bas"
     # input_file_path = "input_data/beispiel_modul1.bas"
     input_file_path = "input_data/beispiel_modul2.bas"
+
+    MetaData.input_path = input_file_path
+
+
+    
 
     # initialize the class including reading the input file:
     Procedure.initialize_input_code(input_file_path)

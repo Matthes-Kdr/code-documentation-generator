@@ -1,17 +1,18 @@
 ## Infos zum Script, welches für die Erstellung dieser Dokumentation verwendet wurde:
 
-- **commit: 	3f566860f5e3e2381320d179986c6e9fe1367b57**
-- gitdir: 	D:\Desktop\WORKSPACE\2023-12-28_-_00_51_57_VBA-Code-Dokumentation-Generator_Selbstbau\Programmentwicklung\__DEV__CURRENT_VERSION\.git
-- **message: 	init**
-- **refs: 	Versionsinfo_Documenter**
-- tree: 	908050dc25d258aef10a0de3123b8d0195b1b39f
-- parent: 	43d94997d3f9d7c83ff9dbb1724f6120425c4d77
-- author: 	Matthias Kader <_>
-- **author_date: 	2024-01-03 00:55:15**
+- **commit: 414de1090769b7882a28de6b45348ea5e963856e**
+- gitdir: D:\Desktop\WORKSPACE\2023-12-28_-_00_51_57_VBA-Code-Dokumentation-Generator_Selbstbau\Programmentwicklung\__DEV__CURRENT_VERSION\.git
+- **message:** 
+> **Refactoring: Neue MetaClass zum Speichern von organisatorischen Infos. Inkl. metaclass=AutoCallMeta, damit eine Kalssenmethode implizit sofort nach Deklaration aufgerufen wird. Organisatorische Infos werden vorläufig in die MD-Datei geschrieben**
+- **refs: Versionsinfo_Documenter**
+- tree: e7407a8927b62ce609b79263b7f087ccbfd45cf0
+- parent: 3f566860f5e3e2381320d179986c6e9fe1367b57
+- author: Matthias Kader <_>
+- **author_date: 2024-01-03 02:03:53**
 
 
 
-Datum der Umwandlung: 2024-01-03 01:50:17﻿
+Datum der Umwandlung: 2024-01-03 02:09:42﻿
 
 
 <!-- --------------------------------------------------------------- -->

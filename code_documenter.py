@@ -82,6 +82,20 @@ CONVERT_TO_HTML = 1
 
 
 
+def db(*args):
+    """
+    Schleust zum printen durch - nur zum Debuggen
+    """
+    if DEBUG == False:
+        return
+    
+    print("__DEBUG_PRINT__\n")
+    for _ in args:
+        print(_)
+
+
+
+
 
 # =============================================================================
 #### Workaround: Verwendung von MetaClasses: Metaklassen für Direktaufrufe / implizite Aufrufe einer Classmethod direkt nach Implementierung einer Klasse ####
@@ -186,7 +200,9 @@ class MetaData(metaclass=AutoCallMeta):
 
         for key, value in info.items():
             bold = "**" if key in keys_bold else ""
-            cls.gitinfo = cls.gitinfo + "- " + bold + key + ": \t" + value + bold  + "\n"
+            indent_message = "** \n> **" if key == "message" else " "
+
+            cls.gitinfo = cls.gitinfo + "- " + bold + key + ":" + indent_message + value + bold  + "\n"
 
 
 
@@ -1619,16 +1635,6 @@ class Function(Procedure):
 
 
 
-def db(*args):
-    """
-    Schleust zum printen durch - nur zum Debuggen
-    """
-    if DEBUG == False:
-        return
-    
-    print("__DEBUG_PRINT__\n")
-    for _ in args:
-        print(_)
 
 
 
@@ -1665,9 +1671,6 @@ def main():
     Hauptprogramm. Steuert den Gesamt-Ablauf des Scripts. 
     Die meisten Methoden sind innerhalb der Superklasse Procedure definiert.
     """
-
-    # Initialisiere Klasse, um Informationen über die Programmversion (git) zu erhalten von diesem Codumenter:
-    MetaData.init_cls()
 
     # HACK: path for Source-vba-code
     # input_file_path = "input_data/beispiel_modul.bas"

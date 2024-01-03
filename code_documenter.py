@@ -56,6 +56,7 @@ Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.
 
 
 
+from datetime import datetime
 import os
 import re
 
@@ -81,24 +82,41 @@ CONVERT_TO_HTML = 1
 
 
 
-class Development:
 
-    @staticmethod
-    def get_count_of_commits():
+# =============================================================================
+#### Workaround: Verwendung von MetaClasses: Metaklassen für Direktaufrufe / implizite Aufrufe einer Classmethod direkt nach Implementierung einer Klasse ####
+# =============================================================================
+
+
+# =============================================================================
+#### # WIEDERHOLFUNKTION-KANDIDAT!!! ####
+# =============================================================================
+class AutoCallMeta(type):
+    """
+    Sofern diese Klasse als metaclass für eine andere Klasse verwendet wird, wird die unten aufgeführte Klassenmethode direkt nach Definition ohne ein zusätzlichen, expliziten Aufruf automatisch aufgerufen.
+
+    Dazu muss nur der Name der aufzurufenden Methode in der Klassenvariable 'class_name_to_call_implicit' parametrisiert werden.
+    """    
+    class_name_to_call_implicit = "initialize_class" # NUR HIER ZU PARAMETRISIEREN!
     
-        cmd = "git rev-list --count HEAD"
-        return_ =  subprocess.run(cmd)
-        
-        db(return_)
+    def __init__(cls, name, bases, attrs):
+        super().__init__(name, bases, attrs)
+        func_name  = AutoCallMeta.class_name_to_call_implicit
 
-        db(str(return_).split(" ")[0])
-        
-        return str(return_).split(" ")[0]
-    
+        # Aufruf der relevanten Methode, sofern sie vorhanden ist:
+        if hasattr(cls, func_name):
+            func = getattr(cls, func_name)
+            # Aufruf:
+            func()
 
 
-    gitinfo = gitinfo.get_git_info()
-    count_of_commits = get_count_of_commits()
+
+
+
+
+
+
+
 
 
 
@@ -107,6 +125,115 @@ class Development:
 # =============================================================================
 #### CLASSES: ####
 # =============================================================================
+
+
+
+
+
+
+class MetaData(metaclass=AutoCallMeta):
+    """
+    In dieser Klasse werden hauptsächlich Daten gespeichert, die später als Art MetaDaten angesehen werden können.
+    Der Parent-class / metaclass sorgt dafür, dass direkt nach Implementierung dieser (gewöhnlichen) Klasse eine in der metaclass parametrisierte Methode aufgerufen wird.
+    Somit ist kein expliziter Aufruf der Klassenmethode MetaData.initialize_class erforderlich, da dies über die metaclass erledigt wird.
+
+    # TODO: Die Klasse ist noch nicht fertig.
+
+    Zu den hierin gespeicherten Daten gehören z. B.:
+
+    - Dieses Dokumentations-Tool-Script
+        - Versionsinformationen, basierend auf dem letzten Git-Commit
+        - TODO: Versionsnummer dieses Scriptes...
+    - Das zu dokumentierende Modul
+        - Dateipfad
+        - Dateiname
+        - Datum der letzten Speicherung / Änderung
+    - Aktuellen Zeitstempel zur Angabe des Zeitpunktes der Dokumentation
+      
+    """
+
+
+
+
+
+    @staticmethod
+    def get_count_of_commits():
+        """
+        ### ACHTUNG: Nicht funktional!!!
+        """
+
+
+        cmd = "git rev-list --count HEAD"
+        return_ =  subprocess.run(cmd)
+        
+        db(return_)
+
+        db(str(return_).split(" ")[0])
+        # return str(return_).split(" ")[0]
+        return str(return_)
+
+
+
+
+    @classmethod
+    def git_info_to_str(cls):
+
+        info:dict = gitinfo.get_git_info()
+        cls.gitinfo = "## Infos zum Script, welches für die Erstellung dieser Dokumentation verwendet wurde:\n\n"
+
+        keys_bold = ["commit", "message", "refs", "author_date"]
+
+
+        for key, value in info.items():
+            bold = "**" if key in keys_bold else ""
+            cls.gitinfo = cls.gitinfo + "- " + bold + key + ": \t" + value + bold  + "\n"
+
+
+
+
+
+    @classmethod
+    def current_timestamp(cls):
+
+        # Aktuelles Datum und Uhrzeit
+        current_datetime = datetime.now()
+
+        # Wandele das Datum und die Uhrzeit in einen Zeitstempel um
+        current_timestamp = int(current_datetime.timestamp())
+
+        db(f"Current Timestamp: {current_timestamp}")
+
+        current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+
+        cls.date_of_process = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+
+
+
+
+
+
+
+    @classmethod
+    def initialize_class(cls):
+        """
+        Diese Methode wird implizit direkt nach Implementierung dieser Klasse aufgerufen.
+        Somit muss sie nicht mehr von außen aufgerufen werden.
+        Sie initialisiert alle Attribute mit ihren WErten.
+        """
+
+
+
+        cls.git_info_to_str()
+        # cls.count_of_commits = cls.get_count_of_commits()
+
+        cls.current_timestamp()
+
+
+
+
+
+
+
 
 
 class Procedure():
@@ -872,7 +999,9 @@ class Procedure():
                                 
             # TEST                                                                                                              
             # Extrahiere Daten von der Version DIESES DOKUMENTIER-TOOLS:
-            content = str(Development.gitinfo) + "\n\nAnzahl der Commits = " + Development.count_of_commits
+            content = MetaData.gitinfo 
+            content = content + "\n"*3 + "Datum der Umwandlung: " + MetaData.date_of_process
+                          
 
 
             # TODO: Hier muss noch Placeholders ersetzt werden!!'
@@ -1536,6 +1665,9 @@ def main():
     Hauptprogramm. Steuert den Gesamt-Ablauf des Scripts. 
     Die meisten Methoden sind innerhalb der Superklasse Procedure definiert.
     """
+
+    # Initialisiere Klasse, um Informationen über die Programmversion (git) zu erhalten von diesem Codumenter:
+    MetaData.init_cls()
 
     # HACK: path for Source-vba-code
     # input_file_path = "input_data/beispiel_modul.bas"

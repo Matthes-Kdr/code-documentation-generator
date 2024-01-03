@@ -1,31 +1,17 @@
-﻿# **TODO** Code-Dokumentation: Modul '@PLACEHOLDER_INPUT_FILE@' > Version 0.2.0
-<!-- TODO: Platzhalter ersetzen! -->
+## Infos zum Script, welches für die Erstellung dieser Dokumentation verwendet wurde:
 
-**TODO:** Organisatorische Hinweise zur Verwendeten bzw. dokumentierten Datei.
-
-Erstellungsdatum dieser Dokumentation: @PLACEHOLDER_TIMESTAMP_NOW@
-<!-- TODO: Platzhalter ersetzen! --> 
-(DAS KOMMT IN DEN TAIL!!! SIEHE FUSSZEILE!)
-
-
-
-
-Die hier dokumentierte Quelldatei wurde vor dieser automatischen Dokumentationserstellung zuletzt modifiziert am @PLACEHOLDER_TIMESTAMP_SOURCEFILE@
-<!-- TODO: Platzhalter ersetzen! -->
+- **commit: 	3f566860f5e3e2381320d179986c6e9fe1367b57**
+- gitdir: 	D:\Desktop\WORKSPACE\2023-12-28_-_00_51_57_VBA-Code-Dokumentation-Generator_Selbstbau\Programmentwicklung\__DEV__CURRENT_VERSION\.git
+- **message: 	init**
+- **refs: 	Versionsinfo_Documenter**
+- tree: 	908050dc25d258aef10a0de3123b8d0195b1b39f
+- parent: 	43d94997d3f9d7c83ff9dbb1724f6120425c4d77
+- author: 	Matthias Kader <_>
+- **author_date: 	2024-01-03 00:55:15**
 
 
 
-
-
-
-
-
->  **ACHTUNG.** 
-> Das Tool für die automatisierte Erstellung der Dokumentation ist noch nicht fertig! 
-> Für weitere Infos: Siehe Schlussbemerkungen!
-
-
-﻿
+Datum der Umwandlung: 2024-01-03 01:50:17﻿
 
 
 <!-- --------------------------------------------------------------- -->

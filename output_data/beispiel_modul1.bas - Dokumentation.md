@@ -1,4 +1,4 @@
-﻿# Code-Dokumentation: Modul '@PLACEHOLDER_INPUT_FILE@'
+﻿# Code-Dokumentation: Modul 'beispiel_modul1.bas'
 
 <!-- TODO: Platzhalter ersetzen! -->
 

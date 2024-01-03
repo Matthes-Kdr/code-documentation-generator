@@ -2,6 +2,7 @@
 '''
 Created on: Fri, 2023-12-29 (00:45:39)
 
+
 @author: Matthias Kader
 
 
@@ -176,6 +177,48 @@ class MetaData(metaclass=AutoCallMeta):
         return cls.__input_path
     
     
+    @classmethod
+    def get_input_filename(cls) -> str:
+        return cls.__input_filename
+    
+    
+    
+    @classmethod
+    def get_output_filename(cls) -> str:
+        return cls.__output_filename
+    
+    
+
+    @staticmethod
+    def get_last_modified_timestamp(file_path) -> str:
+        # Den Zeitstempel der letzten Änderung der Datei auslesen
+        timestamp = os.path.getmtime(file_path)
+        
+        # Den Zeitstempel in ein lesbares Datum umwandeln
+        last_modified_datetime = datetime.fromtimestamp(timestamp)
+        
+        # Das Datum im gewünschten Format ausgeben
+        formatted_date = last_modified_datetime.strftime('%Y-%m-%d %H:%M')
+        
+        return formatted_date
+
+
+
+
+
+    @classmethod
+    def extract_date_of_change(cls):
+        """
+        Liesst das letzte Aenderungsdatum der Input-Datei aus und speichert diese in der Klassenvariable cls.input_file_date_of_change
+        """
+
+        date_of_change = cls.get_last_modified_timestamp(cls.__input_path)
+        cls.input_file__date_of_change = date_of_change
+
+
+
+
+
 
     @classmethod
     def set_input_path(cls, input_path:str=None):
@@ -194,6 +237,7 @@ class MetaData(metaclass=AutoCallMeta):
             if os.path.isfile(input_path):
                 if input_path.endswith(".bas"):
                     cls.__input_path = input_path
+                    cls.extract_date_of_change()
                     return
                 
         neuer_input = input("!!! FEHLER !!! Die Angegebene Datei ist keine .bas Datei! Bitte einen gueltigen Pfad zur entsprechenden Datei eingeben (Foreward-Slashes! ohne Anfuehrungszeichen)\n> Ihre Eingabe: ")
@@ -321,8 +365,8 @@ class MetaData(metaclass=AutoCallMeta):
     @classmethod
     def make_output_filename(cls):
         
-        cls.input_filename = os.path.basename(cls.__input_path)
-        cls.output_filename = cls.input_filename + " - Dokumentation"
+        cls.__input_filename = os.path.basename(cls.__input_path)
+        cls.__output_filename = cls.__input_filename + " - Dokumentation"
 
 
 
@@ -339,7 +383,7 @@ class MetaData(metaclass=AutoCallMeta):
             str : Dateipfad
         """
 
-        path =  os.path.join(cls.__output_dir, cls.output_filename + extension)
+        path =  os.path.join(cls.__output_dir, cls.__output_filename + extension)
         return path
     
     
@@ -359,11 +403,13 @@ class MetaData(metaclass=AutoCallMeta):
 
 
         # HACK: path for Source-vba-code
-        # input_file_path = "input_data/beispiel_modul.bas"
-        input_file_path = "input_data/beispiel_modul1.bas"
+        input_file_path = "input_data/beispiel_modul.bas"
+        # input_file_path = "input_data/beispiel_modul1.bas"
         # input_file_path = "input_data/beispiel_modul1.bas"
         
         cls.set_input_path(input_file_path)
+
+
 
 
 
@@ -385,6 +431,9 @@ class MetaData(metaclass=AutoCallMeta):
         # cls.git_info_to_str()
         cls.extract_git_info()
         # cls.count_of_commits = cls.get_count_of_commits()
+
+
+
 
         cls.save_current_timestamp()
 
@@ -607,6 +656,34 @@ class Procedure():
 
 
     
+
+
+    @classmethod
+    def initialize_page_top_text(cls):
+        """
+        Initialisiert den Text für den Markdown-Text des  Headers der Seite und speichert es in der Klassenvariable cls.head. 
+        Zugriff erfolgt über die Superklasse Procedure. 
+
+        
+        """
+
+        page_top_text = cls.__read_template("templates/sec_head.md")
+
+        # Gesamtanzahl an verfügbaren prozeduren je Art einsetzen:
+        placeholder_replacer = {
+            "@PLACEHOLDER_INPUT_FILE@" : MetaData.get_input_filename(),
+            "@PLACEHOLDER_TIMESTAMP_NOW@" : MetaData.date_of_process,
+            "@PLACEHOLDER_TIMESTAMP_SOURCEFILE@" : MetaData.input_file__date_of_change,
+        }
+
+
+        for placeholder, replacer in placeholder_replacer.items():
+            page_top_text = page_top_text.replace(placeholder, str(replacer))
+
+        cls.page_top_text = page_top_text
+        
+
+
 
 
     @classmethod
@@ -846,6 +923,10 @@ class Procedure():
         """
 
 
+
+
+
+        cls.initialize_page_top_text()
 
 
         # =============================================================================
@@ -1153,11 +1234,18 @@ class Procedure():
         Schreibt die Dokumentation aller Prozeduren (aller Art) in die als Dateipfad übergebene Zieldatei(pfad).
         """
 
+
+
+        # initialize_toc
+
+
+
         with open(output_file_path, "w", ) as file:
 
             ## TODO: Dies gehört eigentlich nicht mehr in die Klasse Procedure, aber aktuell trotzdem hierher, um alles zusammen zu haben. Ggf.s später refactoring...
             # Initialisiere die Seite mit Titel und organisatorischen Hinweisen:
             content = cls.__read_template("templates/sec_head.md")
+
 
                                 
             # # TEST                                                                                                              
@@ -1168,7 +1256,7 @@ class Procedure():
 
 
             # TODO: Hier muss noch Placeholders ersetzt werden!!'
-            file.write(content)
+            file.write(cls.page_top_text)
 
 
             #Einfügen des Index / TOCs /  Inhaltsverzeichnis:
@@ -1282,7 +1370,12 @@ class Procedure():
             # Finalisiere die Seite mit Schlusbemerkungen:
             content = cls.__read_template("templates/sec_tail.md")
             # HACK: Nur fuer ENtwicklungsstadium!
-            content = content.replace("PLACEHOLDER_DOC_PYTHON", __doc__)
+            content = content.replace("@PLACEHOLDER_TIMESTAMP_NOW@", MetaData.date_of_process)
+            content = content.replace("@PLACEHOLDER_DOC_PYTHON@", __doc__.replace("\n", "<br>"))
+            content = content.replace("@PLACEHOLDER_DOCUMENTER_VERSION__AUTHOR@", MetaData.documenter_version__author.rstrip(" <_>"))
+            content = content.replace("@PLACEHOLDER_DOCUMENTER_VERSION__COMMIT@", MetaData.documenter_version__commit)
+            content = content.replace("@PLACEHOLDER_DOCUMENTER_VERSION__DATE@", MetaData.documenter_version__author_date)
+
             file.write(content)
 
 

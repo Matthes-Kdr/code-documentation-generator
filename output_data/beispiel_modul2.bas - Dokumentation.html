@@ -1,112 +1,78 @@
-## Infos zum Script, welches für die Erstellung dieser Dokumentation verwendet wurde:
-
-- **commit: 4c77e5abcc39ccd5bf24a4e0e21ee5bd39490d4b**
-- gitdir: D:\Desktop\WORKSPACE\2023-12-28_-_00_51_57_VBA-Code-Dokumentation-Generator_Selbstbau\Programmentwicklung\__DEV__CURRENT_VERSION\.git
-- **message:** 
-> **Einfache Eingabemöglichkeiten für Input und Output Pfade und Speicherung der Daten in MetaData**
-- **refs: Versionsinfo_Documenter**
-- tree: b070730f6c702fcf16cbde3f6f1bb474ee8f419c
-- parent: 946f09ee91cf50614206f629099724fa021147ab
-- author: Matthias Kader <_>
-- **author_date: 2024-01-03 03:01:38**
-
-
-
-Datum der Umwandlung: 2024-01-03 03:07:19﻿
-
-
+<h2>Infos zum Script, welches für die Erstellung dieser Dokumentation verwendet wurde:</h2>
+<ul>
+<li><strong>commit: 4c77e5abcc39ccd5bf24a4e0e21ee5bd39490d4b</strong></li>
+<li>gitdir: D:\Desktop\WORKSPACE\2023-12-28_-_00_51_57_VBA-Code-Dokumentation-Generator_Selbstbau\Programmentwicklung__DEV__CURRENT_VERSION.git</li>
+<li><strong>message:</strong> <blockquote>
+<p><strong>Einfache Eingabemöglichkeiten für Input und Output Pfade und Speicherung der Daten in MetaData</strong></p>
+</blockquote>
+</li>
+<li><strong>refs: Versionsinfo_Documenter</strong></li>
+<li>tree: b070730f6c702fcf16cbde3f6f1bb474ee8f419c</li>
+<li>parent: 946f09ee91cf50614206f629099724fa021147ab</li>
+<li>author: Matthias Kader &lt;_&gt;</li>
+<li><strong>author_date: 2024-01-03 03:01:38</strong></li>
+</ul>
+<p>Datum der Umwandlung: 2024-01-03 03:28:56﻿</p>
 <!-- --------------------------------------------------------------- -->
 <!-- Index / TOC -->
 <!-- --------------------------------------------------------------- -->
 
-## Index / Table Of Content
+<h2>Index / Table Of Content</h2>
+<p>Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem Modul verwendet werden:</p>
+<ul>
+<li><a href="#sec_modulinfos"><strong>Modulinformationen / Modulkopf</strong></a></li>
+</ul>
+<!-- ---------- SUBS: --------------- -->
 
-Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem Modul verwendet werden:
+<ul>
+<li>
+<p><a href="#sec_subs"><strong>Subs</strong></a> (7)</p>
+</li>
+<li>
+<p><a href="#hauptfunc1"><code>hauptfunc1</code></a> <small>(Zeile 32)</small></p>
+</li>
+<li><a href="#hauptfunc2"><code>hauptfunc2</code></a> <small>(Zeile 40)</small></li>
+<li><a href="#hauptfunc3"><code>hauptfunc3</code></a> <small>(Zeile 49)</small></li>
+<li><a href="#main"><code>main</code></a> <small>(Zeile 60)</small></li>
+<li><a href="#unterfunktionA"><code>unterfunktionA</code></a> <small>(Zeile 19)</small></li>
+<li><a href="#unterfunktionB"><code>unterfunktionB</code></a> <small>(Zeile 25)</small></li>
+<li><a href="#wiederholungsfunktion"><code>wiederholungsfunktion</code></a> <small>(Zeile 13)</small></li>
+</ul>
+<!-- ---------- FUNCTIONS: --------------- -->
 
-* [**Modulinformationen / Modulkopf**](#sec_modulinfos)
-  
+<ul>
+<li><a href="#sec_functions"><strong>Functions</strong></a> (0)</li>
+</ul>
+<!-- ---------- TAIL: --------------- -->
 
-  
-  <!-- ---------- SUBS: --------------- -->
-
-* [**Subs**](#sec_subs) (7)
-  
-  * [```hauptfunc1```](#hauptfunc1) <small>(Zeile 32)</small>
-  * [```hauptfunc2```](#hauptfunc2) <small>(Zeile 40)</small>
-  * [```hauptfunc3```](#hauptfunc3) <small>(Zeile 49)</small>
-  * [```main```](#main) <small>(Zeile 60)</small>
-  * [```unterfunktionA```](#unterfunktionA) <small>(Zeile 19)</small>
-  * [```unterfunktionB```](#unterfunktionB) <small>(Zeile 25)</small>
-  * [```wiederholungsfunktion```](#wiederholungsfunktion) <small>(Zeile 13)</small>
-  
-
-
-
-
-  <!-- ---------- FUNCTIONS: --------------- -->
-
-
-* [**Functions**](#sec_functions) (0)
-  
-  
-  
-
-
-
-
-  <!-- ---------- TAIL: --------------- -->
-
-
-* [**Schlussbemerkungen** (inkl. Angaben zum Entwicklungszustand des Code-Dokumenter-Tools)](#sec_tail)
-
-
-
-
-﻿
-
-
-<a name="sec_modulinfos"></a>
-
-## Modulbeschreibung
-
- Demo Modul zum Testen der Aufrufebenen / Aufruf-Abfolge / Ablauf
-
- Das Modul besteht aus insgesamt 7 Subs in folgender Aufrufhierarchie:
+<ul>
+<li><a href="#sec_tail"><strong>Schlussbemerkungen</strong> (inkl. Angaben zum Entwicklungszustand des Code-Dokumenter-Tools)</a></li>
+</ul>
+<p>﻿</p>
+<p><a name="sec_modulinfos"></a></p>
+<h2>Modulbeschreibung</h2>
+<p>Demo Modul zum Testen der Aufrufebenen / Aufruf-Abfolge / Ablauf</p>
+<p>Das Modul besteht aus insgesamt 7 Subs in folgender Aufrufhierarchie:
  ' 1 x main
  ' 3 x hauptfunc
  ' 2 x unterfuncktion
- ' 1 x wiederholungsfunktion
-
-
-
-﻿
+ ' 1 x wiederholungsfunktion</p>
+<p>﻿</p>
 <!-- -------------------------------------------------- -->
 <!-- SECTION-START : FUNCTIONS -->
 <!-- -------------------------------------------------- -->
 
-<a name="sec_functions"></a>
-
-## Functions
-
-
-﻿
-
-
-
-
-
+<p><a name="sec_functions"></a></p>
+<h2>Functions</h2>
+<p>﻿</p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-<a name="hauptfunc1"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub hauptfunc1```</span><small>(Zeile 32)</small>
-
+<p><a name="hauptfunc1"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub hauptfunc1</code></span><small>(Zeile 32)</small></p>
 <div style="padding-left:2em;">
 
 >  weiterere 2 Aufrufe in dieser Funktion
@@ -221,55 +187,18 @@ end sub
 
 </div>
 
-
----
-
-
+<hr />
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-﻿
-
-
-
-
-
+<p>﻿</p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-<a name="hauptfunc2"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub hauptfunc2```</span><small>(Zeile 40)</small>
-
+<p><a name="hauptfunc2"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub hauptfunc2</code></span><small>(Zeile 40)</small></p>
 <div style="padding-left:2em;">
 
 >  weiterer Aufruf von unterfunktionA in dieser Funktion
@@ -374,7 +303,7 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 Sub hauptfunc2()
     ' weiterer Aufruf von unterfunktionA in dieser Funktion
     call unterfunktionA()
-    
+
     msgbox("standalone")
 end sub
 
@@ -385,55 +314,18 @@ end sub
 
 </div>
 
-
----
-
-
+<hr />
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-﻿
-
-
-
-
-
+<p>﻿</p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-<a name="hauptfunc3"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub hauptfunc3```</span><small>(Zeile 49)</small>
-
+<p><a name="hauptfunc3"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub hauptfunc3</code></span><small>(Zeile 49)</small></p>
 <div style="padding-left:2em;">
 
 >  kein weiterer Aufruf in dieser Funktion
@@ -547,55 +439,18 @@ end sub
 
 </div>
 
-
----
-
-
+<hr />
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-﻿
-
-
-
-
-
+<p>﻿</p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-<a name="main"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub main```</span><small>(Zeile 60)</small>
-
+<p><a name="main"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub main</code></span><small>(Zeile 60)</small></p>
 <div style="padding-left:2em;">
 
 >  Sequentieller Aufruf aller 3 Hauptfunktionen
@@ -711,55 +566,18 @@ end sub
 
 </div>
 
-
----
-
-
+<hr />
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-﻿
-
-
-
-
-
+<p>﻿</p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-<a name="unterfunktionA"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub unterfunktionA```</span><small>(Zeile 19)</small>
-
+<p><a name="unterfunktionA"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub unterfunktionA</code></span><small>(Zeile 19)</small></p>
 <div style="padding-left:2em;">
 
 >  weiterer Aufruf einer wiederholungsfunktion:
@@ -874,55 +692,18 @@ end sub
 
 </div>
 
-
----
-
-
+<hr />
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-﻿
-
-
-
-
-
+<p>﻿</p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-<a name="unterfunktionB"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub unterfunktionB```</span><small>(Zeile 25)</small>
-
+<p><a name="unterfunktionB"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub unterfunktionB</code></span><small>(Zeile 25)</small></p>
 <div style="padding-left:2em;">
 
 >  kein externer aufruf
@@ -1036,55 +817,18 @@ end sub
 
 </div>
 
-
----
-
-
+<hr />
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-﻿
-
-
-
-
-
+<p>﻿</p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-<a name="wiederholungsfunktion"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub wiederholungsfunktion```</span><small>(Zeile 13)</small>
-
+<p><a name="wiederholungsfunktion"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub wiederholungsfunktion</code></span><small>(Zeile 13)</small></p>
 <div style="padding-left:2em;">
 
 >  Func für standard-aufgaben
@@ -1199,59 +943,20 @@ end sub
 
 </div>
 
-
----
-
-
+<hr />
 <!-- --------------------------------------------------------------- -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-﻿
+<p>﻿</p>
 <!-- -------------------------------------------------- -->
 <!-- SECTION-START : FUNCTIONS -->
 <!-- -------------------------------------------------- -->
 
-<a name="sec_functions"></a>
-
-## Functions
-
-
-﻿
-
-
-
----
-
-<a name="sec_tail"></a>
-
-## Schlussbemerkungen
-
-
-
+<p><a name="sec_functions"></a></p>
+<h2>Functions</h2>
+<p>﻿</p>
+<hr />
+<p><a name="sec_tail"></a></p>
+<h2>Schlussbemerkungen</h2>
 <!-- 
 **Notice:**
 
@@ -1273,8 +978,9 @@ end sub
 
 **ODER:** -->
 
-> Diese Dokumentation wurde automatisch generiert durch ein Programm, welches sich noch im Entwicklungsstadium befindet. Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.
-
+<blockquote>
+<p>Diese Dokumentation wurde automatisch generiert durch ein Programm, welches sich noch im Entwicklungsstadium befindet. Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.</p>
+</blockquote>
 <details>
 
 <summary> Modulinformationen anzeigen/verbergen.
@@ -1326,14 +1032,8 @@ Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.
 
 </details>
 
-
-
-<small>
-
-**Notice:**
-
-*To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.*
-
-</small> 
-
-<small> **TODO:** Erstellt am (Datum) durch das  automatisierte Code-Dokumentationstool von .... in der Version ....</small> 
+<p><small></p>
+<p><strong>Notice:</strong></p>
+<p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
+<p></small> </p>
+<p><small> <strong>TODO:</strong> Erstellt am (Datum) durch das  automatisierte Code-Dokumentationstool von .... in der Version ....</small> </p>

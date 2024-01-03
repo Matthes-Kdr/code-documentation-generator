@@ -194,10 +194,11 @@ class MetaData(metaclass=AutoCallMeta):
             if os.path.isfile(input_path):
                 if input_path.endswith(".bas"):
                     cls.__input_path = input_path
-        else:
-            neuer_input = input("!!! FEHLER !!! Die Angegebene Datei ist keine .bas Datei! Bitte einen gueltigen Pfad zur entsprechenden Datei eingeben (Foreward-Slashes! ohne Anfuehrungszeichen)\n> Ihre Eingabe: ")
+                    return
+                
+        neuer_input = input("!!! FEHLER !!! Die Angegebene Datei ist keine .bas Datei! Bitte einen gueltigen Pfad zur entsprechenden Datei eingeben (Foreward-Slashes! ohne Anfuehrungszeichen)\n> Ihre Eingabe: ")
 
-            cls.set_input_path(neuer_input)
+        cls.set_input_path(neuer_input)
 
 
     @classmethod
@@ -216,16 +217,17 @@ class MetaData(metaclass=AutoCallMeta):
         if output_dir != None:
             if os.path.isdir(output_dir):
                 cls.__output_dir = output_dir
-        else:
-            neuer_input = input("!!! FEHLER !!! Der  angegebene Pfad ist kein gueltiges Verzeichnis. Bitte einen gueltigen Pfad fuer den Export der Output-Dateien  eingeben (Foreward-Slashes! ohne Anfuehrungszeichen)\n> Ihre Eingabe: ")
+                return
+        neuer_input = input("!!! FEHLER !!! Der  angegebene Pfad ist kein gueltiges Verzeichnis. Bitte einen gueltigen Pfad fuer den Export der Output-Dateien  eingeben (Foreward-Slashes! ohne Anfuehrungszeichen)\n> Ihre Eingabe: ")
 
-            cls.set_output_dir(neuer_input)
+        cls.set_output_dir(neuer_input)
 
 
 
-    @classmethod
-    def get_output_dir(cls) -> str:
-        return cls.__output_dir
+    # OBSOLET: nicht erforderlich - zur Vorbeugung von Verwendchslung daher auskommenteirt:
+    # @classmethod
+    # def get_output_dir(cls) -> str:
+    #     return cls.__output_dir
     
     
 
@@ -290,6 +292,35 @@ class MetaData(metaclass=AutoCallMeta):
 
 
     @classmethod
+    def make_output_filename(cls):
+        
+        cls.input_filename = os.path.basename(cls.__input_path)
+        cls.output_filename = cls.input_filename + " - Dokumentation"
+
+
+
+
+    @classmethod
+    def get_output_path(cls, extension=".md") -> str:
+        """
+        Gibt den gesamten Pfad fuer die neu zu generierende Output-Datei zurueck, inkl. Dateierweiterung.
+
+        Args:
+            extension (str, optional): Dateiendung der Output-Dtaei. Defaults to ".md". Modifizierbar z. B. zu .html oder .txt
+
+        Returns:
+            str : Dateipfad
+        """
+
+        path =  os.path.join(cls.__output_dir, cls.output_filename + extension)
+        return path
+    
+    
+
+
+
+
+    @classmethod
     def initialize_class(cls):
         """
         Diese Methode wird implizit direkt nach Implementierung dieser Klasse aufgerufen.
@@ -299,11 +330,38 @@ class MetaData(metaclass=AutoCallMeta):
 
 
 
+
+        # HACK: path for Source-vba-code
+        # input_file_path = "input_data/beispiel_modul.bas"
+        # input_file_path = "input_data/beispiel_modul1.bas"
+        input_file_path = "input_data/beispiel_modul2.bas"
+        
+        cls.set_input_path(input_file_path)
+
+
+
+
+        # HACK: DIR FOR OAUTPUT
+        # Schreibe die Datei erst in eine Markdown-Datei:
+        output_dir = "output_data"
+        cls.set_output_dir(output_dir)
+
+
+
+
+
+
+
+
+
+
         cls.git_info_to_str()
         # cls.count_of_commits = cls.get_count_of_commits()
 
         cls.save_current_timestamp()
 
+
+        cls.make_output_filename()
 
 
 
@@ -384,6 +442,7 @@ class Procedure():
     def initialize_input_code(cls, input_path:str):
         """
         Liesst den zu analysierenden und zu dokumentierenden Input-Quellcode ein und speichert ihn innerhalb dder Superklasse als immer verfuegbare Liste einzelner Zeileninhalte ab.
+
         ### TODO: Später sollte hier auch noch eine einfache GUI erstellt werden zur Auswahl!
         ggf. sollte diese GUI aber losgelöst von dieser Klasse sein (Wiederholfunktion!). Daher als Kapselung mit übergebenen input-path!
         """
@@ -1732,18 +1791,21 @@ def main():
     Die meisten Methoden sind innerhalb der Superklasse Procedure definiert.
     """
 
+    """
+    # REFACTORING: In MetaData.initialize_class
+
     # HACK: path for Source-vba-code
     # input_file_path = "input_data/beispiel_modul.bas"
     # input_file_path = "input_data/beispiel_modul1.bas"
     input_file_path = "input_data/beispiel_modul2.bas"
 
-    MetaData.input_path = input_file_path
+    MetaData.set_input_path(input_file_path)
 
-
+    """
     
 
     # initialize the class including reading the input file:
-    Procedure.initialize_input_code(input_file_path)
+    Procedure.initialize_input_code(MetaData.get_input_path())
 
 
     #  Identifizieren und Speichern der Deklarationszeilen von Prozeduren:
@@ -1756,20 +1818,34 @@ def main():
 
 
 
-
+    """
+    # REFACTORING: In MetaData.initialize_class
+    # 
     # Schreibe die Datei erst in eine Markdown-Datei:
-    output_file_path = "output_data/demo_output.md"
-    Procedure.finilize(output_file_path)
+    output_dir = "output_data/demo_output.md"
+    MetaData.set_output_dir(output_dir)
+
+    """
+
+
+    Procedure.finilize(MetaData.get_output_path())
 
 
 
 
     # Generiere HTML Datei from Markdown:
     if CONVERT_TO_HTML:
-        markdown.markdownFromFile(input=output_file_path,output=output_file_path.replace(".md", ".html"), encoding="utf8")
+        markdown.markdownFromFile(
+            input=MetaData.get_output_path(extension=".md"),
+            output=MetaData.get_output_path(extension=".html"), 
+            encoding="utf8"
+        )
 
         print("HTML-Datei wurde aus MD-Datei generiert.")
         
+
+
+
     print(chr(13), '>>>>>>> ENDE.')
 
 

@@ -1,8 +1,26 @@
-﻿# **TODO** Code-Dokumentation: Modul 'modulname.bas (bislang HACK!)' > Version 0.1.3
+﻿# Code-Dokumentation: Modul '@PLACEHOLDER_INPUT_FILE@'
+
 <!-- TODO: Platzhalter ersetzen! -->
 
+
+
+
 **TODO:** Organisatorische Hinweise zur Verwendeten bzw. dokumentierten Datei.
-<!-- TODO: ... -->
+
+Erstellungsdatum dieser Dokumentation: @PLACEHOLDER_TIMESTAMP_NOW@
+<!-- TODO: Platzhalter ersetzen! --> 
+(DAS KOMMT IN DEN TAIL!!! SIEHE FUSSZEILE!)
+
+
+
+
+Die hier dokumentierte Quelldatei wurde vor dieser automatischen Dokumentationserstellung zuletzt modifiziert am @PLACEHOLDER_TIMESTAMP_SOURCEFILE@
+<!-- TODO: Platzhalter ersetzen! -->
+
+
+
+
+
 
 
 
@@ -116,7 +134,6 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 <details>
 
-<!-- TODO: Referenzierungen suchen: -->
 <summary> Referenzierungen dieser Prozedur (0)</summary>
 
 <div style="padding-left:1em;">
@@ -138,8 +155,72 @@ Kein Aufruf gefunden.
 
 
 
+
+
+
+
+
+
+
+<!-- TODO: ABRUFABFOLGE (DEV) -->
+
+
+<!-- <div style="padding-left:1em;"> -->
+
+
 <details>
-    <summary>      Show/Hide Source Code</summary>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+* ```hauptfunc1```
+  * ```unterfunktionA```
+    * ```wiederholungsfunktion```
+  * ```unterfunktionB```
+* ```hauptfunc2```
+* ```hauptfunc3```
+* ```wiederholungsfunktion```
+  * ```wiederholungsfunktion```
+
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+</details>
+
+
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+    <summary>      Source Code</summary>
 
 ---
 
@@ -229,7 +310,6 @@ End Sub
 
 <details>
 
-<!-- TODO: Referenzierungen suchen: -->
 <summary> Referenzierungen dieser Prozedur (0)</summary>
 
 <div style="padding-left:1em;">
@@ -251,8 +331,72 @@ Kein Aufruf gefunden.
 
 
 
+
+
+
+
+
+
+
+<!-- TODO: ABRUFABFOLGE (DEV) -->
+
+
+<!-- <div style="padding-left:1em;"> -->
+
+
 <details>
-    <summary>      Show/Hide Source Code</summary>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+* ```hauptfunc1```
+  * ```unterfunktionA```
+    * ```wiederholungsfunktion```
+  * ```unterfunktionB```
+* ```hauptfunc2```
+* ```hauptfunc3```
+* ```wiederholungsfunktion```
+  * ```wiederholungsfunktion```
+
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+</details>
+
+
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+    <summary>      Source Code</summary>
 
 ---
 
@@ -332,7 +476,6 @@ End Sub
 
 <details>
 
-<!-- TODO: Referenzierungen suchen: -->
 <summary> Referenzierungen dieser Prozedur (5)</summary>
 
 <div style="padding-left:1em;">
@@ -359,8 +502,72 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+
+
+
+
+
+
+
+<!-- TODO: ABRUFABFOLGE (DEV) -->
+
+
+<!-- <div style="padding-left:1em;"> -->
+
+
 <details>
-    <summary>      Show/Hide Source Code</summary>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+* ```hauptfunc1```
+  * ```unterfunktionA```
+    * ```wiederholungsfunktion```
+  * ```unterfunktionB```
+* ```hauptfunc2```
+* ```hauptfunc3```
+* ```wiederholungsfunktion```
+  * ```wiederholungsfunktion```
+
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+</details>
+
+
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+    <summary>      Source Code</summary>
 
 ---
 
@@ -439,7 +646,6 @@ End Sub
 
 <details>
 
-<!-- TODO: Referenzierungen suchen: -->
 <summary> Referenzierungen dieser Prozedur (0)</summary>
 
 <div style="padding-left:1em;">
@@ -461,8 +667,72 @@ Kein Aufruf gefunden.
 
 
 
+
+
+
+
+
+
+
+<!-- TODO: ABRUFABFOLGE (DEV) -->
+
+
+<!-- <div style="padding-left:1em;"> -->
+
+
 <details>
-    <summary>      Show/Hide Source Code</summary>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+* ```hauptfunc1```
+  * ```unterfunktionA```
+    * ```wiederholungsfunktion```
+  * ```unterfunktionB```
+* ```hauptfunc2```
+* ```hauptfunc3```
+* ```wiederholungsfunktion```
+  * ```wiederholungsfunktion```
+
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+</details>
+
+
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+    <summary>      Source Code</summary>
 
 ---
 
@@ -567,7 +837,6 @@ End Sub
 
 <details>
 
-<!-- TODO: Referenzierungen suchen: -->
 <summary> Referenzierungen dieser Prozedur (2)</summary>
 
 <div style="padding-left:1em;">
@@ -591,8 +860,72 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+
+
+
+
+
+
+
+<!-- TODO: ABRUFABFOLGE (DEV) -->
+
+
+<!-- <div style="padding-left:1em;"> -->
+
+
 <details>
-    <summary>      Show/Hide Source Code</summary>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+* ```hauptfunc1```
+  * ```unterfunktionA```
+    * ```wiederholungsfunktion```
+  * ```unterfunktionB```
+* ```hauptfunc2```
+* ```hauptfunc3```
+* ```wiederholungsfunktion```
+  * ```wiederholungsfunktion```
+
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+</details>
+
+
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+    <summary>      Source Code</summary>
 
 ---
 
@@ -671,7 +1004,6 @@ End Function
 
 <details>
 
-<!-- TODO: Referenzierungen suchen: -->
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 
 <div style="padding-left:1em;">
@@ -694,8 +1026,72 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+
+
+
+
+
+
+
+<!-- TODO: ABRUFABFOLGE (DEV) -->
+
+
+<!-- <div style="padding-left:1em;"> -->
+
+
 <details>
-    <summary>      Show/Hide Source Code</summary>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+* ```hauptfunc1```
+  * ```unterfunktionA```
+    * ```wiederholungsfunktion```
+  * ```unterfunktionB```
+* ```hauptfunc2```
+* ```hauptfunc3```
+* ```wiederholungsfunktion```
+  * ```wiederholungsfunktion```
+
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+</details>
+
+
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+    <summary>      Source Code</summary>
 
 ---
 
@@ -806,14 +1202,16 @@ Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Program
 
 • Einbindung vom Programmkopf-Docstring
 
+• Implementierung von References-Durchsuchungen
+
+• Implementierung eines Exportes zu HTML
+
 
 ### TODO: Größere TODOS:
 
 • Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren
 
-• Implementierung von References-Durchsuchungen
 
-• Implementierung eines Exportes zu HTML
 
 
 ### AUSBLICK für später und in schön:

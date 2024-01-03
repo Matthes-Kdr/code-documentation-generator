@@ -250,21 +250,48 @@ class MetaData(metaclass=AutoCallMeta):
 
 
 
-
     @classmethod
-    def git_info_to_str(cls):
-
+    def extract_git_info(cls):
         info:dict = gitinfo.get_git_info()
-        cls.gitinfo = "## Infos zum Script, welches für die Erstellung dieser Dokumentation verwendet wurde:\n\n"
 
-        keys_bold = ["commit", "message", "refs", "author_date"]
-
-
+        # Übernehme die Infos aus git in die Klasse:
         for key, value in info.items():
-            bold = "**" if key in keys_bold else ""
-            indent_message = "** \n> **" if key == "message" else " "
 
-            cls.gitinfo = cls.gitinfo + "- " + bold + key + ":" + indent_message + value + bold  + "\n"
+            # if not hasattr(cls, key):
+            #     # Wenn nicht, erstelle es und weise den Wert zu
+            #     setattr(cls, key, value)
+
+            attr_name =  f"documenter_version__{key}"
+
+            setattr(cls, attr_name, value)
+            db(getattr(cls, attr_name))
+
+
+
+
+            # bold = "**" if key in keys_bold else ""
+            # indent_message = "** \n> **" if key == "message" else " "
+
+            # cls.gitinfo = cls.gitinfo + "- " + bold + key + ":" + indent_message + value + bold  + "\n"
+
+
+
+
+
+    # @classmethod
+    # def git_info_to_str(cls):
+
+    #     info:dict = gitinfo.get_git_info()
+    #     cls.gitinfo = "## Infos zum Script, welches für die Erstellung dieser Dokumentation verwendet wurde:\n\n"
+
+    #     keys_bold = ["commit", "message", "refs", "author_date"]
+
+
+    #     for key, value in info.items():
+    #         bold = "**" if key in keys_bold else ""
+    #         indent_message = "** \n> **" if key == "message" else " "
+
+    #         cls.gitinfo = cls.gitinfo + "- " + bold + key + ":" + indent_message + value + bold  + "\n"
 
 
 
@@ -333,8 +360,8 @@ class MetaData(metaclass=AutoCallMeta):
 
         # HACK: path for Source-vba-code
         # input_file_path = "input_data/beispiel_modul.bas"
+        input_file_path = "input_data/beispiel_modul1.bas"
         # input_file_path = "input_data/beispiel_modul1.bas"
-        input_file_path = "input_data/beispiel_modul2.bas"
         
         cls.set_input_path(input_file_path)
 
@@ -355,7 +382,8 @@ class MetaData(metaclass=AutoCallMeta):
 
 
 
-        cls.git_info_to_str()
+        # cls.git_info_to_str()
+        cls.extract_git_info()
         # cls.count_of_commits = cls.get_count_of_commits()
 
         cls.save_current_timestamp()
@@ -1132,10 +1160,10 @@ class Procedure():
             content = cls.__read_template("templates/sec_head.md")
 
                                 
-            # TEST                                                                                                              
-            # Extrahiere Daten von der Version DIESES DOKUMENTIER-TOOLS:
-            content = MetaData.gitinfo 
-            content = content + "\n"*3 + "Datum der Umwandlung: " + MetaData.date_of_process
+            # # TEST                                                                                                              
+            # # Extrahiere Daten von der Version DIESES DOKUMENTIER-TOOLS:
+            # content = MetaData.gitinfo 
+            # content = content + "\n"*3 + "Datum der Umwandlung: " + MetaData.date_of_process
                           
 
 

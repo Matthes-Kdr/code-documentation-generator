@@ -1,18 +1,18 @@
 ## Infos zum Script, welches für die Erstellung dieser Dokumentation verwendet wurde:
 
-- **commit: 4c77e5abcc39ccd5bf24a4e0e21ee5bd39490d4b**
+- **commit: 8ff71792281afdca59395d339dee12fa8902f63e**
 - gitdir: D:\Desktop\WORKSPACE\2023-12-28_-_00_51_57_VBA-Code-Dokumentation-Generator_Selbstbau\Programmentwicklung\__DEV__CURRENT_VERSION\.git
 - **message:** 
-> **Einfache Eingabemöglichkeiten für Input und Output Pfade und Speicherung der Daten in MetaData**
+> **BUGFIX: Inputs+Outputs sind jetzt parametrisierbar und anwendbar**
 - **refs: Versionsinfo_Documenter**
-- tree: b070730f6c702fcf16cbde3f6f1bb474ee8f419c
-- parent: 946f09ee91cf50614206f629099724fa021147ab
+- tree: 78a136975972fc19a3c62f923f7fc149af326a74
+- parent: 4c77e5abcc39ccd5bf24a4e0e21ee5bd39490d4b
 - author: Matthias Kader <_>
-- **author_date: 2024-01-03 03:01:38**
+- **author_date: 2024-01-03 03:29:40**
 
 
 
-Datum der Umwandlung: 2024-01-03 03:28:56﻿
+Datum der Umwandlung: 2024-01-03 03:29:59﻿
 
 
 <!-- --------------------------------------------------------------- -->

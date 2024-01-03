@@ -1,15 +1,8 @@
-<h1><strong>TODO</strong> Code-Dokumentation: Modul '@PLACEHOLDER_INPUT_FILE@' &gt; Version 0.2.0</h1>
-<!-- TODO: Platzhalter ersetzen! -->
-
-<p><strong>TODO:</strong> Organisatorische Hinweise zur Verwendeten bzw. dokumentierten Datei.</p>
-<p>Erstellungsdatum dieser Dokumentation: @PLACEHOLDER_TIMESTAMP_NOW@</p>
-<!-- TODO: Platzhalter ersetzen! -->
-<p>(DAS KOMMT IN DEN TAIL!!! SIEHE FUSSZEILE!)</p>
-<p>Die hier dokumentierte Quelldatei wurde vor dieser automatischen Dokumentationserstellung zuletzt modifiziert am @PLACEHOLDER_TIMESTAMP_SOURCEFILE@</p>
-<!-- TODO: Platzhalter ersetzen! -->
-
+<h1>Code-Dokumentation: Modul 'beispiel_modul.bas'</h1>
+<p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2023-12-31 03:37</strong></p>
+<p>Generierungsdatum dieser Dokumentation: 2024-01-03 04:44:37</p>
 <blockquote>
-<p><strong>ACHTUNG.</strong> 
+<p><strong>WICHTIG:</strong> 
 Das Tool für die automatisierte Erstellung der Dokumentation ist noch nicht fertig! 
 Für weitere Infos: Siehe Schlussbemerkungen!</p>
 </blockquote>
@@ -27,22 +20,25 @@ Für weitere Infos: Siehe Schlussbemerkungen!</p>
 
 <ul>
 <li>
-<p><a href="#sec_subs"><strong>Subs</strong></a> (7)</p>
+<p><a href="#sec_subs"><strong>Subs</strong></a> (4)</p>
 </li>
 <li>
-<p><a href="#hauptfunc1"><code>hauptfunc1</code></a> <small>(Zeile 32)</small></p>
+<p><a href="#bauer"><code>bauer</code></a> <small>(Zeile 78)</small></p>
 </li>
-<li><a href="#hauptfunc2"><code>hauptfunc2</code></a> <small>(Zeile 40)</small></li>
-<li><a href="#hauptfunc3"><code>hauptfunc3</code></a> <small>(Zeile 49)</small></li>
-<li><a href="#main"><code>main</code></a> <small>(Zeile 60)</small></li>
-<li><a href="#unterfunktionA"><code>unterfunktionA</code></a> <small>(Zeile 19)</small></li>
-<li><a href="#unterfunktionB"><code>unterfunktionB</code></a> <small>(Zeile 25)</small></li>
-<li><a href="#wiederholungsfunktion"><code>wiederholungsfunktion</code></a> <small>(Zeile 13)</small></li>
+<li><a href="#casio"><code>casio</code></a> <small>(Zeile 116)</small></li>
+<li><a href="#liebherr"><code>liebherr</code></a> <small>(Zeile 103)</small></li>
+<li><a href="#main"><code>main</code></a> <small>(Zeile 48)</small></li>
 </ul>
 <!-- ---------- FUNCTIONS: --------------- -->
 
 <ul>
-<li><a href="#sec_functions"><strong>Functions</strong></a> (0)</li>
+<li>
+<p><a href="#sec_functions"><strong>Functions</strong></a> (2)</p>
+</li>
+<li>
+<p><a href="#addieren"><code>addieren</code></a> <small>(Zeile 24)</small></p>
+</li>
+<li><a href="#subtrahieren"><code>subtrahieren</code></a> <small>(Zeile 34)</small></li>
 </ul>
 <!-- ---------- TAIL: --------------- -->
 
@@ -52,12 +48,11 @@ Für weitere Infos: Siehe Schlussbemerkungen!</p>
 <p>﻿</p>
 <p><a name="sec_modulinfos"></a></p>
 <h2>Modulbeschreibung</h2>
-<p>Demo Modul zum Testen der Aufrufebenen / Aufruf-Abfolge / Ablauf</p>
-<p>Das Modul besteht aus insgesamt 7 Subs in folgender Aufrufhierarchie:
- ' 1 x main
- ' 3 x hauptfunc
- ' 2 x unterfuncktion
- ' 1 x wiederholungsfunktion</p>
+<p>Nach 3 unnoetigen Leerzeichen:</p>
+<p>HAllo!
+ Dieses Modul beinhaltet einige Prozeduren, die für nichts sinnvoll sind...
+ Aber es hat immerhin einen Programmkopf.</p>
+<p>Wichtige Prozeduren: Keine</p>
 <p>﻿</p>
 <!-- -------------------------------------------------- -->
 <!-- SECTION-START : FUNCTIONS -->
@@ -72,389 +67,11 @@ Für weitere Infos: Siehe Schlussbemerkungen!</p>
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 
-<p><a name="hauptfunc1"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub hauptfunc1</code></span><small>(Zeile 32)</small></p>
+<p><a name="bauer"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub bauer</code></span><small>(Zeile 78)</small></p>
 <div style="padding-left:2em;">
 
->  weiterere 2 Aufrufe in dieser Funktion
-
-
-
-
-<details>
-
-<summary> Referenzierungen dieser Prozedur (1)</summary>
-
-<div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```main```](#main) : <small>  Zeile 62 : ```    call hauptfunc1``` </small>
-
-
-
-
-</details
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
-<details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
-<!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<details>
-    <summary>      Source Code</summary>
-
----
-
-```
-Sub hauptfunc1()
-    ' weiterere 2 Aufrufe in dieser Funktion
-    call unterfunktionA()
-    call unterfunktionB()
-end sub
-
-```
-
-</details>
-
-
-</div>
-
-<hr />
-<!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
-<!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- --------------------------------------------------------------- -->
-
-<p><a name="hauptfunc2"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub hauptfunc2</code></span><small>(Zeile 40)</small></p>
-<div style="padding-left:2em;">
-
->  weiterer Aufruf von unterfunktionA in dieser Funktion
-
-
-
-
-<details>
-
-<summary> Referenzierungen dieser Prozedur (1)</summary>
-
-<div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```main```](#main) : <small>  Zeile 63 : ```    call hauptfunc2``` </small>
-
-
-
-
-</details
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
-<details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
-<!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<details>
-    <summary>      Source Code</summary>
-
----
-
-```
-Sub hauptfunc2()
-    ' weiterer Aufruf von unterfunktionA in dieser Funktion
-    call unterfunktionA()
-
-    msgbox("standalone")
-end sub
-
-```
-
-</details>
-
-
-</div>
-
-<hr />
-<!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
-<!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- --------------------------------------------------------------- -->
-
-<p><a name="hauptfunc3"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub hauptfunc3</code></span><small>(Zeile 49)</small></p>
-<div style="padding-left:2em;">
-
->  kein weiterer Aufruf in dieser Funktion
-
-
-
-
-<details>
-
-<summary> Referenzierungen dieser Prozedur (1)</summary>
-
-<div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```main```](#main) : <small>  Zeile 64 : ```    call hauptfunc3``` </small>
-
-
-
-
-</details
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
-<details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
-<!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<details>
-    <summary>      Source Code</summary>
-
----
-
-```
-Sub hauptfunc3()
-    ' kein weiterer Aufruf in dieser Funktion
-    msgbox("standalone")
-end sub
-
-```
-
-</details>
-
-
-</div>
-
-<hr />
-<!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
-<!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- --------------------------------------------------------------- -->
-
-<p><a name="main"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub main</code></span><small>(Zeile 60)</small></p>
-<div style="padding-left:2em;">
-
->  Sequentieller Aufruf aller 3 Hauptfunktionen
+>  Deklaration erfolgte via public sub.
 
 
 
@@ -552,13 +169,26 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 ---
 
 ```
-Sub main()
-    ' Sequentieller Aufruf aller 3 Hauptfunktionen
-    call hauptfunc1
-    call hauptfunc2
-    call hauptfunc3
-    call wiederholungsfunktion
-end sub
+Public Sub bauer()
+''' Deklaration erfolgte via public sub.
+
+    MsgBox("Dies ist ein explizit als public gekennzeichnetes Sub.")
+
+    ' Aufruf:
+    call liebherr
+    call liebherr ' Aufruf
+
+    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!
+
+    ' Wiederum unügltig:
+    var = liebherr
+    var = liebherr("gvkil")
+
+
+
+
+
+End Sub
 
 ```
 
@@ -577,29 +207,26 @@ end sub
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 
-<p><a name="unterfunktionA"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub unterfunktionA</code></span><small>(Zeile 19)</small></p>
+<p><a name="casio"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub casio</code></span><small>(Zeile 116)</small></p>
 <div style="padding-left:2em;">
 
->  weiterer Aufruf einer wiederholungsfunktion:
-
+> *No information availible. For more information expand source code.*
 
 
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (2)</summary>
+<summary> Referenzierungen dieser Prozedur (0)</summary>
 
 <div style="padding-left:1em;">
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+Kein Aufruf gefunden.
 
 
 
-* [```hauptfunc1```](#hauptfunc1) : <small>  Zeile 34 : ```    call unterfunktionA()``` </small>
-* [```hauptfunc2```](#hauptfunc2) : <small>  Zeile 42 : ```    call unterfunktionA()``` </small>
 
 
 
@@ -681,10 +308,15 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 ---
 
 ```
-Sub unterfunktionA()
-    ' weiterer Aufruf einer wiederholungsfunktion:
-    call wiederholungsfunktion()
-end sub
+   Sub casio()
+
+
+    ''' Hier gibt skeinen docstirng
+
+    MsgBox("Dies ist ein implizit als public gekennzeichnetes Sub.")
+
+
+End Sub
 
 ```
 
@@ -703,18 +335,18 @@ end sub
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 
-<p><a name="unterfunktionB"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub unterfunktionB</code></span><small>(Zeile 25)</small></p>
+<p><a name="liebherr"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub liebherr</code></span><small>(Zeile 103)</small></p>
 <div style="padding-left:2em;">
 
->  kein externer aufruf
+>  Deklaration erfolgte via sub.
 
 
 
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> Referenzierungen dieser Prozedur (5)</summary>
 
 <div style="padding-left:1em;">
 
@@ -724,7 +356,11 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```hauptfunc1```](#hauptfunc1) : <small>  Zeile 35 : ```    call unterfunktionB()``` </small>
+* [```main```](#main) : <small>  Zeile 68 : ```    call liebherr``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 84 : ```    call liebherr``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 85 : ```    call liebherr ' Aufruf``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 87 : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 91 : ```    var = liebherr("gvkil")``` </small>
 
 
 
@@ -806,10 +442,13 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 ---
 
 ```
-Sub unterfunktionB()
-    ' kein externer aufruf
-    x = 42
-end sub
+   Sub liebherr()
+''' Deklaration erfolgte via sub.
+
+    MsgBox("Dies ist ein implizit als public gekennzeichnetes Sub.")
+
+
+End Sub
 
 ```
 
@@ -828,29 +467,28 @@ end sub
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 
-<p><a name="wiederholungsfunktion"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub wiederholungsfunktion</code></span><small>(Zeile 13)</small></p>
+<p><a name="main"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Private Sub main</code></span><small>(Zeile 48)</small></p>
 <div style="padding-left:2em;">
 
->  Func für standard-aufgaben
+>  Hier soll das HAuptprogramm stehen.
+ Alles was als KOMMENTAR hier unter der Definitionszeile einer Funktion steht, BEVOR EINE LEERZEILE folgt, soll später als Zusammenfassung angezeigt werden in der Code-Dokumentation - also ähnlich wie im docstring bei python.
 
 
 
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (2)</summary>
+<summary> Referenzierungen dieser Prozedur (0)</summary>
 
 <div style="padding-left:1em;">
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+Kein Aufruf gefunden.
 
 
 
-* [```unterfunktionA```](#unterfunktionA) : <small>  Zeile 21 : ```    call wiederholungsfunktion()``` </small>
-* [```main```](#main) : <small>  Zeile 65 : ```    call wiederholungsfunktion``` </small>
 
 
 
@@ -932,10 +570,30 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 ---
 
 ```
-Sub wiederholungsfunktion()
-    ' Func für standard-aufgaben
-    msgbox("Standardfunktion")
-end sub
+Private Sub main()
+''' Hier soll das HAuptprogramm stehen.
+''' Alles was als KOMMENTAR hier unter der Definitionszeile einer Funktion steht, BEVOR EINE LEERZEILE folgt, soll später als Zusammenfassung angezeigt werden in der Code-Dokumentation - also ähnlich wie im docstring bei python.
+
+' Das hier soll nirgendwo stehen.
+
+    dim i as integer
+
+    i = 10
+
+    for i = 0 to 10
+
+        msgbox(i)
+        ' Ausgabe:
+        wert = addieren(i, i)
+        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!
+
+    next i
+
+
+    call liebherr
+
+
+End Sub
 
 ```
 
@@ -954,6 +612,265 @@ end sub
 
 <p><a name="sec_functions"></a></p>
 <h2>Functions</h2>
+<p>﻿</p>
+<!-- --------------------------------------------------------------- -->
+<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+
+<p><a name="addieren"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Private Function addieren</code></span><small>(Zeile 24)</small></p>
+<div style="padding-left:2em;">
+
+>  Diese Funktion addiert beide Zahlen miteinander und übergibt das Ergebnis zurück.
+
+
+
+
+<details>
+
+<summary> Referenzierungen dieser Prozedur (2)</summary>
+
+<div style="padding-left:1em;">
+
+
+
+Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+
+
+
+* [```subtrahieren```](#subtrahieren) : <small>  Zeile 38 : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+* [```main```](#main) : <small>  Zeile 62 : ```        wert = addieren(i, i)``` </small>
+
+
+
+
+</details
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- TODO: ABRUFABFOLGE (DEV) -->
+
+
+<!-- <div style="padding-left:1em;"> -->
+
+
+<details>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+* ```hauptfunc1```
+  * ```unterfunktionA```
+    * ```wiederholungsfunktion```
+  * ```unterfunktionB```
+* ```hauptfunc2```
+* ```hauptfunc3```
+* ```wiederholungsfunktion```
+  * ```wiederholungsfunktion```
+
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+</details>
+
+
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+    <summary>      Source Code</summary>
+
+---
+
+```
+Private Function addieren(a as integer, b as integer) as integer
+''' Diese Funktion addiert beide Zahlen miteinander und übergibt das Ergebnis zurück.
+
+
+    ' Addieren:
+    addieren = a + b
+
+End Function
+
+```
+
+</details>
+
+
+</div>
+
+<hr />
+<!-- --------------------------------------------------------------- -->
+
+<p>﻿</p>
+<!-- --------------------------------------------------------------- -->
+<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+
+<p><a name="subtrahieren"></a>
+<span style="background-color: lightgrey; padding: 2px;"><code>Private Function subtrahieren</code></span><small>(Zeile 34)</small></p>
+<div style="padding-left:2em;">
+
+>  Diese Funktion subtrahiert b von a und übergibt das Ergebnis zurück.
+
+
+
+
+<details>
+
+<summary> Referenzierungen dieser Prozedur (1)</summary>
+
+<div style="padding-left:1em;">
+
+
+
+Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+
+
+
+* [```main```](#main) : <small>  Zeile 63 : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+
+
+
+
+</details
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- TODO: ABRUFABFOLGE (DEV) -->
+
+
+<!-- <div style="padding-left:1em;"> -->
+
+
+<details>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+* ```hauptfunc1```
+  * ```unterfunktionA```
+    * ```wiederholungsfunktion```
+  * ```unterfunktionB```
+* ```hauptfunc2```
+* ```hauptfunc3```
+* ```wiederholungsfunktion```
+  * ```wiederholungsfunktion```
+
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+</details>
+
+
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+    <summary>      Source Code</summary>
+
+---
+
+```
+Private Function subtrahieren(a as integer, b as integer) as integer
+''' Diese Funktion subtrahiert b von a und übergibt das Ergebnis zurück.
+
+    ' Benutze die addieren Funktion:
+    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben
+
+
+end Function
+
+```
+
+</details>
+
+
+</div>
+
+<hr />
+<!-- --------------------------------------------------------------- -->
+
 <p>﻿</p>
 <hr />
 <p><a name="sec_tail"></a></p>
@@ -980,61 +897,20 @@ end sub
 **ODER:** -->
 
 <blockquote>
-<p>Diese Dokumentation wurde automatisch generiert durch ein Programm, welches sich noch im Entwicklungsstadium befindet. Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.</p>
+<p>Diese Dokumentation wurde automatisiert durch ein entsprechendes Programm generiert. Im Einzelfall, insbesondere wenn im zu dokumentierenden VBA-Code von  bestimmten Konventionen abgewichen wird, können Unstimmigkeiten auftreten. Im Zweifel ist der Originalcode heranzuziehen.</p>
 </blockquote>
+<p>Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.</p>
 <details>
 
 <summary> Modulinformationen anzeigen/verbergen.
 </summary>
 
-  @
-Created on: Fri, 2023-12-29 (00:45:39)
-
-@author: Matthias Kader
-
-
-Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html
-
-
-
-
-### Fertig implementiert:
-
-• Implementierung Inhaltsverzeichnis / Index
-
-• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections
-
-• Einbindung vom Programmkopf-Docstring
-
-• Implementierung von References-Durchsuchungen
-
-• Implementierung eines Exportes zu HTML
-
-
-### TODO: Größere TODOS:
-
-• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren
-
-
-
-
-### AUSBLICK für später und in schön:
-
-• Index an der Seite wie eine NavBar zum einzelnd scrollen
-
-
-
-• Call Sequenz / Calling Sequence:
-Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.
-Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....
-
-
-@
+  <br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br><br><br><br>### Fertig implementiert:<br><br>• Implementierung Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Einbindung vom Programmkopf-Docstring<br><br>• Implementierung von References-Durchsuchungen<br><br>• Implementierung eines Exportes zu HTML<br><br><br>### TODO: Größere TODOS:<br><br>• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren<br><br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br><br><br>• Call Sequenz / Calling Sequence:<br>Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.<br>Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....<br><br><br>
 
 </details>
 
 <p><small></p>
-<p><strong>Notice:</strong></p>
+<p><strong>Notice, Convnentions:</strong></p>
 <p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
 <p></small> </p>
-<p><small> <strong>TODO:</strong> Erstellt am (Datum) durch das  automatisierte Code-Dokumentationstool von .... in der Version ....</small> </p>
+<p><small>Dokumentation generiert am 2024-01-03 04:44:37 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-03 03:48:08: '1966b3fd551f9dc6ab1ff0ab21e29def86064459')</small> </p>

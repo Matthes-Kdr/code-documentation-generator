@@ -2,6 +2,7 @@
 '''
 Created on: Fri, 2023-12-29 (00:45:39)
 
+
 @author: Matthias Kader
 
 
@@ -56,6 +57,7 @@ Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.
 
 
 
+from datetime import datetime
 import os
 import re
 
@@ -81,24 +83,55 @@ CONVERT_TO_HTML = 1
 
 
 
-class Development:
-
-    @staticmethod
-    def get_count_of_commits():
+def db(*args):
+    """
+    Schleust zum printen durch - nur zum Debuggen
+    """
+    if DEBUG == False:
+        return
     
-        cmd = "git rev-list --count HEAD"
-        return_ =  subprocess.run(cmd)
-        
-        db(return_)
+    print("__DEBUG_PRINT__\n")
+    for _ in args:
+        print(_)
 
-        db(str(return_).split(" ")[0])
-        
-        return str(return_).split(" ")[0]
+
+
+
+
+# =============================================================================
+#### Workaround: Verwendung von MetaClasses: Metaklassen für Direktaufrufe / implizite Aufrufe einer Classmethod direkt nach Implementierung einer Klasse ####
+# =============================================================================
+
+
+# =============================================================================
+#### # WIEDERHOLFUNKTION-KANDIDAT!!! ####
+# =============================================================================
+class AutoCallMeta(type):
+    """
+    Sofern diese Klasse als metaclass für eine andere Klasse verwendet wird, wird die unten aufgeführte Klassenmethode direkt nach Definition ohne ein zusätzlichen, expliziten Aufruf automatisch aufgerufen.
+
+    Dazu muss nur der Name der aufzurufenden Methode in der Klassenvariable 'class_name_to_call_implicit' parametrisiert werden.
+    """    
+    class_name_to_call_implicit = "initialize_class" # NUR HIER ZU PARAMETRISIEREN!
     
+    def __init__(cls, name, bases, attrs):
+        super().__init__(name, bases, attrs)
+        func_name  = AutoCallMeta.class_name_to_call_implicit
+
+        # Aufruf der relevanten Methode, sofern sie vorhanden ist:
+        if hasattr(cls, func_name):
+            func = getattr(cls, func_name)
+            # Aufruf:
+            func()
 
 
-    gitinfo = gitinfo.get_git_info()
-    count_of_commits = get_count_of_commits()
+
+
+
+
+
+
+
 
 
 
@@ -107,6 +140,311 @@ class Development:
 # =============================================================================
 #### CLASSES: ####
 # =============================================================================
+
+
+
+
+
+
+class MetaData(metaclass=AutoCallMeta):
+    """
+    In dieser Klasse werden hauptsächlich Daten gespeichert, die später als Art MetaDaten angesehen werden können.
+    Der Parent-class / metaclass sorgt dafür, dass direkt nach Implementierung dieser (gewöhnlichen) Klasse eine in der metaclass parametrisierte Methode aufgerufen wird.
+    Somit ist kein expliziter Aufruf der Klassenmethode MetaData.initialize_class erforderlich, da dies über die metaclass erledigt wird.
+
+    # TODO: Die Klasse ist noch nicht fertig.
+
+    Zu den hierin gespeicherten Daten gehören z. B.:
+
+    - Dieses Dokumentations-Tool-Script
+        - Versionsinformationen, basierend auf dem letzten Git-Commit
+        - TODO: Versionsnummer dieses Scriptes...
+    - Das zu dokumentierende Modul
+        - Dateipfad
+        - Dateiname
+        - Datum der letzten Speicherung / Änderung
+    - Aktuellen Zeitstempel zur Angabe des Zeitpunktes der Dokumentation
+      
+    """
+
+
+    __input_path:str = None
+    __output_dir:str = None
+
+
+    @classmethod
+    def get_input_path(cls) -> str:
+        return cls.__input_path
+    
+    
+    @classmethod
+    def get_input_filename(cls) -> str:
+        return cls.__input_filename
+    
+    
+    
+    @classmethod
+    def get_output_filename(cls) -> str:
+        return cls.__output_filename
+    
+    
+
+    @staticmethod
+    def get_last_modified_timestamp(file_path) -> str:
+        # Den Zeitstempel der letzten Änderung der Datei auslesen
+        timestamp = os.path.getmtime(file_path)
+        
+        # Den Zeitstempel in ein lesbares Datum umwandeln
+        last_modified_datetime = datetime.fromtimestamp(timestamp)
+        
+        # Das Datum im gewünschten Format ausgeben
+        formatted_date = last_modified_datetime.strftime('%Y-%m-%d %H:%M')
+        
+        return formatted_date
+
+
+
+
+
+    @classmethod
+    def extract_date_of_change(cls):
+        """
+        Liesst das letzte Aenderungsdatum der Input-Datei aus und speichert diese in der Klassenvariable cls.input_file_date_of_change
+        """
+
+        date_of_change = cls.get_last_modified_timestamp(cls.__input_path)
+        cls.input_file__date_of_change = date_of_change
+
+
+
+
+
+
+    @classmethod
+    def set_input_path(cls, input_path:str=None):
+        """
+        Prüft den optional übergebenen Pfad, ob er existiert und dort eine .bas Datei vorliegt.
+        Ist dies nicht der Fall, oder wird kein Pfad übergeben, wird per Input ein neuer Pfad abgefragt. 
+        Bis zu einem gültigen Pfad wird die Methode rekursiv aufgerufen.
+        Bislang gibt es noch keine Möglichkeit für den Nutzer, die Eingabe abzubrechen (außer Programmabbruch...)
+
+        Args:
+            input_path (str, optional): Dateipfad zur .bas-Datei, die dokumenteirt werden soll - als Foreward-Slash und ohne Anführungszeichen. Defaults to None.
+
+        """
+
+        if input_path != None:
+            if os.path.isfile(input_path):
+                if input_path.endswith(".bas"):
+                    cls.__input_path = input_path
+                    cls.extract_date_of_change()
+                    return
+                
+        neuer_input = input("!!! FEHLER !!! Die Angegebene Datei ist keine .bas Datei! Bitte einen gueltigen Pfad zur entsprechenden Datei eingeben (Foreward-Slashes! ohne Anfuehrungszeichen)\n> Ihre Eingabe: ")
+
+        cls.set_input_path(neuer_input)
+
+
+    @classmethod
+    def set_output_dir(cls, output_dir:str=None):
+        """
+        Prüft den optional übergebenen Pfad, ob er existiert und ob dies ein Verzeichnis ist
+        Ist dies nicht der Fall, oder wird kein Pfad übergeben, wird per Input ein neuer Pfad abgefragt. 
+        Bis zu einem gültigen Pfad wird die Methode rekursiv aufgerufen.
+        Bislang gibt es noch keine Möglichkeit für den Nutzer, die Eingabe abzubrechen (außer Programmabbruch...)
+
+        Args:
+            output_dir (str, optional): Dateipfad zum Ordner, in dem die generierten Output-Dateien exportiert werden sollen - als Foreward-Slash und ohne Anführungszeichen. Defaults to None.
+
+        """
+
+        if output_dir != None:
+            if os.path.isdir(output_dir):
+                cls.__output_dir = output_dir
+                return
+        neuer_input = input("!!! FEHLER !!! Der  angegebene Pfad ist kein gueltiges Verzeichnis. Bitte einen gueltigen Pfad fuer den Export der Output-Dateien  eingeben (Foreward-Slashes! ohne Anfuehrungszeichen)\n> Ihre Eingabe: ")
+
+        cls.set_output_dir(neuer_input)
+
+
+
+    # OBSOLET: nicht erforderlich - zur Vorbeugung von Verwendchslung daher auskommenteirt:
+    # @classmethod
+    # def get_output_dir(cls) -> str:
+    #     return cls.__output_dir
+    
+    
+
+
+    @staticmethod
+    def get_count_of_commits():
+        """
+        ### ACHTUNG: Nicht funktional!!!
+        """
+
+
+        cmd = "git rev-list --count HEAD"
+        return_ =  subprocess.run(cmd)
+        
+        db(return_)
+
+        db(str(return_).split(" ")[0])
+        # return str(return_).split(" ")[0]
+        return str(return_)
+
+
+
+    @classmethod
+    def extract_git_info(cls):
+        info:dict = gitinfo.get_git_info()
+
+        # Übernehme die Infos aus git in die Klasse:
+        for key, value in info.items():
+
+            # if not hasattr(cls, key):
+            #     # Wenn nicht, erstelle es und weise den Wert zu
+            #     setattr(cls, key, value)
+
+            attr_name =  f"documenter_version__{key}"
+
+            setattr(cls, attr_name, value)
+            db(getattr(cls, attr_name))
+
+
+
+
+            # bold = "**" if key in keys_bold else ""
+            # indent_message = "** \n> **" if key == "message" else " "
+
+            # cls.gitinfo = cls.gitinfo + "- " + bold + key + ":" + indent_message + value + bold  + "\n"
+
+
+
+
+
+    # @classmethod
+    # def git_info_to_str(cls):
+
+    #     info:dict = gitinfo.get_git_info()
+    #     cls.gitinfo = "## Infos zum Script, welches für die Erstellung dieser Dokumentation verwendet wurde:\n\n"
+
+    #     keys_bold = ["commit", "message", "refs", "author_date"]
+
+
+    #     for key, value in info.items():
+    #         bold = "**" if key in keys_bold else ""
+    #         indent_message = "** \n> **" if key == "message" else " "
+
+    #         cls.gitinfo = cls.gitinfo + "- " + bold + key + ":" + indent_message + value + bold  + "\n"
+
+
+
+
+
+    @classmethod
+    def save_current_timestamp(cls):
+
+        # Aktuelles Datum und Uhrzeit
+        current_datetime = datetime.now()
+
+        # Wandele das Datum und die Uhrzeit in einen Zeitstempel um
+        current_timestamp = int(current_datetime.timestamp())
+
+        db(f"Current Timestamp: {current_timestamp}")
+
+        current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+
+        cls.date_of_process = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+
+
+
+
+
+
+
+    @classmethod
+    def make_output_filename(cls):
+        
+        cls.__input_filename = os.path.basename(cls.__input_path)
+        cls.__output_filename = cls.__input_filename + " - Dokumentation"
+
+
+
+
+    @classmethod
+    def get_output_path(cls, extension=".md") -> str:
+        """
+        Gibt den gesamten Pfad fuer die neu zu generierende Output-Datei zurueck, inkl. Dateierweiterung.
+
+        Args:
+            extension (str, optional): Dateiendung der Output-Dtaei. Defaults to ".md". Modifizierbar z. B. zu .html oder .txt
+
+        Returns:
+            str : Dateipfad
+        """
+
+        path =  os.path.join(cls.__output_dir, cls.__output_filename + extension)
+        return path
+    
+    
+
+
+
+
+    @classmethod
+    def initialize_class(cls):
+        """
+        Diese Methode wird implizit direkt nach Implementierung dieser Klasse aufgerufen.
+        Somit muss sie nicht mehr von außen aufgerufen werden.
+        Sie initialisiert alle Attribute mit ihren WErten.
+        """
+
+
+
+
+        # HACK: path for Source-vba-code
+        input_file_path = "input_data/beispiel_modul.bas"
+        # input_file_path = "input_data/beispiel_modul1.bas"
+        # input_file_path = "input_data/beispiel_modul1.bas"
+        
+        cls.set_input_path(input_file_path)
+
+
+
+
+
+
+        # HACK: DIR FOR OAUTPUT
+        # Schreibe die Datei erst in eine Markdown-Datei:
+        output_dir = "output_data"
+        cls.set_output_dir(output_dir)
+
+
+
+
+
+
+
+
+
+
+        # cls.git_info_to_str()
+        cls.extract_git_info()
+        # cls.count_of_commits = cls.get_count_of_commits()
+
+
+
+
+        cls.save_current_timestamp()
+
+
+        cls.make_output_filename()
+
+
+
+
+
+
 
 
 class Procedure():
@@ -181,6 +519,7 @@ class Procedure():
     def initialize_input_code(cls, input_path:str):
         """
         Liesst den zu analysierenden und zu dokumentierenden Input-Quellcode ein und speichert ihn innerhalb dder Superklasse als immer verfuegbare Liste einzelner Zeileninhalte ab.
+
         ### TODO: Später sollte hier auch noch eine einfache GUI erstellt werden zur Auswahl!
         ggf. sollte diese GUI aber losgelöst von dieser Klasse sein (Wiederholfunktion!). Daher als Kapselung mit übergebenen input-path!
         """
@@ -317,6 +656,34 @@ class Procedure():
 
 
     
+
+
+    @classmethod
+    def initialize_page_top_text(cls):
+        """
+        Initialisiert den Text für den Markdown-Text des  Headers der Seite und speichert es in der Klassenvariable cls.head. 
+        Zugriff erfolgt über die Superklasse Procedure. 
+
+        
+        """
+
+        page_top_text = cls.__read_template("templates/sec_head.md")
+
+        # Gesamtanzahl an verfügbaren prozeduren je Art einsetzen:
+        placeholder_replacer = {
+            "@PLACEHOLDER_INPUT_FILE@" : MetaData.get_input_filename(),
+            "@PLACEHOLDER_TIMESTAMP_NOW@" : MetaData.date_of_process,
+            "@PLACEHOLDER_TIMESTAMP_SOURCEFILE@" : MetaData.input_file__date_of_change,
+        }
+
+
+        for placeholder, replacer in placeholder_replacer.items():
+            page_top_text = page_top_text.replace(placeholder, str(replacer))
+
+        cls.page_top_text = page_top_text
+        
+
+
 
 
     @classmethod
@@ -556,6 +923,10 @@ class Procedure():
         """
 
 
+
+
+
+        cls.initialize_page_top_text()
 
 
         # =============================================================================
@@ -863,20 +1234,29 @@ class Procedure():
         Schreibt die Dokumentation aller Prozeduren (aller Art) in die als Dateipfad übergebene Zieldatei(pfad).
         """
 
+
+
+        # initialize_toc
+
+
+
         with open(output_file_path, "w", ) as file:
 
             ## TODO: Dies gehört eigentlich nicht mehr in die Klasse Procedure, aber aktuell trotzdem hierher, um alles zusammen zu haben. Ggf.s später refactoring...
             # Initialisiere die Seite mit Titel und organisatorischen Hinweisen:
             content = cls.__read_template("templates/sec_head.md")
 
+
                                 
-            # TEST
-            # Extrahiere Daten von der Version DIESES DOKUMENTIER-TOOLS:
-            content = str(Development.gitinfo) + "\n\nAnzahl der Commits = " + Development.count_of_commits
+            # # TEST                                                                                                              
+            # # Extrahiere Daten von der Version DIESES DOKUMENTIER-TOOLS:
+            # content = MetaData.gitinfo 
+            # content = content + "\n"*3 + "Datum der Umwandlung: " + MetaData.date_of_process
+                          
 
 
             # TODO: Hier muss noch Placeholders ersetzt werden!!'
-            file.write(content)
+            file.write(cls.page_top_text)
 
 
             #Einfügen des Index / TOCs /  Inhaltsverzeichnis:
@@ -990,7 +1370,12 @@ class Procedure():
             # Finalisiere die Seite mit Schlusbemerkungen:
             content = cls.__read_template("templates/sec_tail.md")
             # HACK: Nur fuer ENtwicklungsstadium!
-            content = content.replace("PLACEHOLDER_DOC_PYTHON", __doc__)
+            content = content.replace("@PLACEHOLDER_TIMESTAMP_NOW@", MetaData.date_of_process)
+            content = content.replace("@PLACEHOLDER_DOC_PYTHON@", __doc__.replace("\n", "<br>"))
+            content = content.replace("@PLACEHOLDER_DOCUMENTER_VERSION__AUTHOR@", MetaData.documenter_version__author.rstrip(" <_>"))
+            content = content.replace("@PLACEHOLDER_DOCUMENTER_VERSION__COMMIT@", MetaData.documenter_version__commit)
+            content = content.replace("@PLACEHOLDER_DOCUMENTER_VERSION__DATE@", MetaData.documenter_version__author_date)
+
             file.write(content)
 
 
@@ -1490,16 +1875,6 @@ class Function(Procedure):
 
 
 
-def db(*args):
-    """
-    Schleust zum printen durch - nur zum Debuggen
-    """
-    if DEBUG == False:
-        return
-    
-    print("__DEBUG_PRINT__\n")
-    for _ in args:
-        print(_)
 
 
 
@@ -1537,13 +1912,21 @@ def main():
     Die meisten Methoden sind innerhalb der Superklasse Procedure definiert.
     """
 
+    """
+    # REFACTORING: In MetaData.initialize_class
+
     # HACK: path for Source-vba-code
     # input_file_path = "input_data/beispiel_modul.bas"
     # input_file_path = "input_data/beispiel_modul1.bas"
     input_file_path = "input_data/beispiel_modul2.bas"
 
+    MetaData.set_input_path(input_file_path)
+
+    """
+    
+
     # initialize the class including reading the input file:
-    Procedure.initialize_input_code(input_file_path)
+    Procedure.initialize_input_code(MetaData.get_input_path())
 
 
     #  Identifizieren und Speichern der Deklarationszeilen von Prozeduren:
@@ -1556,20 +1939,34 @@ def main():
 
 
 
-
+    """
+    # REFACTORING: In MetaData.initialize_class
+    # 
     # Schreibe die Datei erst in eine Markdown-Datei:
-    output_file_path = "output_data/demo_output.md"
-    Procedure.finilize(output_file_path)
+    output_dir = "output_data/demo_output.md"
+    MetaData.set_output_dir(output_dir)
+
+    """
+
+
+    Procedure.finilize(MetaData.get_output_path())
 
 
 
 
     # Generiere HTML Datei from Markdown:
     if CONVERT_TO_HTML:
-        markdown.markdownFromFile(input=output_file_path,output=output_file_path.replace(".md", ".html"), encoding="utf8")
+        markdown.markdownFromFile(
+            input=MetaData.get_output_path(extension=".md"),
+            output=MetaData.get_output_path(extension=".html"), 
+            encoding="utf8"
+        )
 
         print("HTML-Datei wurde aus MD-Datei generiert.")
         
+
+
+
     print(chr(13), '>>>>>>> ENDE.')
 
 

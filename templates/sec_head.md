@@ -1,27 +1,13 @@
-﻿# **TODO** Code-Dokumentation: Modul '@PLACEHOLDER_INPUT_FILE@' > Version 0.2.0
-<!-- TODO: Platzhalter ersetzen! -->
-
-**TODO:** Organisatorische Hinweise zur Verwendeten bzw. dokumentierten Datei.
-
-Erstellungsdatum dieser Dokumentation: @PLACEHOLDER_TIMESTAMP_NOW@
-<!-- TODO: Platzhalter ersetzen! --> 
-(DAS KOMMT IN DEN TAIL!!! SIEHE FUSSZEILE!)
+﻿# Code-Dokumentation: Modul '@PLACEHOLDER_INPUT_FILE@'
 
 
 
-
-Die hier dokumentierte Quelldatei wurde vor dieser automatischen Dokumentationserstellung zuletzt modifiziert am @PLACEHOLDER_TIMESTAMP_SOURCEFILE@
-<!-- TODO: Platzhalter ersetzen! -->
+**Letzte Änderung** der Quelldatei '@PLACEHOLDER_INPUT_FILE@' vor der Generierung dieser automatischen Dokumentation: **@PLACEHOLDER_TIMESTAMP_SOURCEFILE@**
 
 
-
+Generierungsdatum dieser Dokumentation: @PLACEHOLDER_TIMESTAMP_NOW@
 
 
 
-
-
->  **ACHTUNG.** 
-> Das Tool für die automatisierte Erstellung der Dokumentation ist noch nicht fertig! 
-> Für weitere Infos: Siehe Schlussbemerkungen!
 
 

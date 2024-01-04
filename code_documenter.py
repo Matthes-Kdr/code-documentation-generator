@@ -32,7 +32,6 @@ Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Program
 ### TODO: Größere TODOS:
 
 
-
 • Call Sequenz / Calling Sequence:
 
 Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.

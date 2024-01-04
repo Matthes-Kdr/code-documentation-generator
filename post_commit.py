@@ -1,6 +1,2 @@
-﻿import os
-
-
-print("Hello world after commit.")
-
-os.startfile(".")
+﻿import webbrowser
+webbrowser.open("https://www.google.de")

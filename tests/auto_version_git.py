@@ -401,6 +401,11 @@ class Commit:
                 try:
                     # Führen Sie den 'git describe'-Befehl aus und erfassen Sie die Ausgabe
                     git_describe_output = subprocess.check_output(['git', 'describe', '--tags', commit_sha]).decode('utf-8').strip()
+
+                    # prüfe, ob ein explizit erstellter tag vorhanden ist, oder ob er generisch ist:
+
+                    # Commit.is_valid_version_pattern_generic(git_describe_output, allow_generic_tags=True)
+
                     tags_available = True
                     tag_info.append((tags_available, git_describe_output))
                     git_single_commit_infos["tag"] = git_describe_output
@@ -443,9 +448,9 @@ class Commit:
         """
 
 
-        semanticVar = re.compile(f"^\d{1,}\.\d{1,}\.\d{1,}$")   
-
-
+        semanticVar = re.compile(r"^\d{1,}\.\d{1,}\.\d{1,}$")   
+        # semanticVar = re.compile(f"\d{1,}\.\d{1,}\.\d{1,}")   
+        # 0.4.0
         if semanticVar.match(version):
             return True
         else:
@@ -465,7 +470,7 @@ class Commit:
         # semanticVar = re.compile(f"\d{1,}\.\d{1,}\.\d{1,}")     
         
         # if semanticVar.match(version):
-        if Commit.is_valid_version_pattern():
+        if Commit.is_valid_version_pattern(version):
             major, minor, patch = map(int, version.split("."))
 
         else:
@@ -489,7 +494,6 @@ class Commit:
 
 
 
-
         # =============================================================================
         #### Suche Referenz-Commit, die bereits einen tag hat:  ####
         # =============================================================================
@@ -501,7 +505,9 @@ class Commit:
                 
             temp_obj:Commit = self.instances[index]
 
-            if temp_obj.tag:
+            # if temp_obj.tag:
+            if self.is_valid_version_pattern(temp_obj.tag):
+                # BUG: Da das aktuelle einen generischen tag erhält, wird dies nie abbrechen!!!
                 # # found commit with tag!
                 # ref_tag = temp_obj.tag
                 # ref_index = temp_obj.index
@@ -555,8 +561,8 @@ class Commit:
 
 
             if commit_obj == ref_obj:
-                # Angekommen an dem versionierten, tagbehafteten Commit.
-                
+                #  Angekommen an dem versionierten, tagbehafteten Commit.
+                # weitere änderungen nicht notwenig, weil alle sübersprüungen wird
                 break
 
             type_of_commit = commit_obj.message.split(":")[0].rstrip(" ").lstrip(" ").lower()
@@ -596,7 +602,8 @@ class Commit:
         #### # Evaluation of the previous changes since the last tagged commit: ####
         # =============================================================================
         
-        # noch nicht herausspringen jeweils, da noch ein weiteres Attibut gesetzt werden muss!
+        self.is_new_version = True
+        # noch nicht herausspringen jeweils, da noch ein weiteres Attibut gesetzt /korrigiert werden muss!
         if major_change:
             suggestion = "{}.0.0".format(major + 1)
             # return suggestion
@@ -609,11 +616,12 @@ class Commit:
             suggestion = "0.0.{}".format(patch + 1)
             # return suggestion
         
-        # SONST: Keine bedeutenden Modifikationen. Die letzte  Versionsnummer bleibt bestehen.
-        suggestion = previous_version
+        else:
+            # SONST: Keine bedeutenden Modifikationen. Die letzte  Versionsnummer bleibt bestehen.
+            suggestion = previous_version
+            self.is_new_version = False
 
         # als flag:
-        self.is_new_version = True
 
         return suggestion
         
@@ -763,7 +771,7 @@ def main():
     commit:Commit = Commit.get_last_commit()
     suggested_version = commit.suggest_version()
 
-
+    # DEBUG: aktueller commit: wurde NICHT EXPLIZIT getagged, aber: 'demoTag-3-gae17ddb'
     db(suggested_version)
 
 

@@ -462,7 +462,6 @@ class Commit:
 
 
 
-
     @staticmethod
     def extract_params_from_version(version:str) -> tuple:
         """

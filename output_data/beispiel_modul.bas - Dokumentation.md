@@ -2,10 +2,10 @@
 
 
 
-**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-04 15:03**
+**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-04 15:08**
 
 
-Generierungsdatum dieser Dokumentation: 2024-01-04 15:04:30
+Generierungsdatum dieser Dokumentation: 2024-01-04 15:15:09
 
 
 
@@ -73,12 +73,12 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 ﻿
 <!-- -------------------------------------------------- -->
-<!-- SECTION-START : FUNCTIONS -->
+<!-- SECTION-START : SUBS -->
 <!-- -------------------------------------------------- -->
 
-<a name="sec_functions"></a>
+<a name="sec_subs"></a>
 
-## Functions
+## Subs
 
 
 ﻿
@@ -1186,4 +1186,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-04 15:04:30 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-04 04:58:07: '313691b550788a10eeaa24c8d672d2ae12dc9787')</small> 
+<small>Dokumentation generiert am 2024-01-04 15:15:09 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-04 15:06:23: '67b5f247edcde1a41e21633cf7b0615f74b9f8f4')</small> 

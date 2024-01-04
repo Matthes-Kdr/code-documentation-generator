@@ -963,7 +963,9 @@ class Procedure():
             # Initialisieren des Headers unterhalb der Section-Überschrift  (aus gesonderter Template) und in Klassenvariable speichern:
             content = cls.__read_template(procedure_type_cls.TEMPLATE_SECTION_HEAD)
 
-            cls.header = content
+            # cls.header = content
+            # BUG: Durch das Überschreiben von Sub durch Function bevor die Template überschrieben wird, gibt es 2x die Überschrift "Functions"
+            procedure_type_cls.header = content
 
 
 
@@ -1254,7 +1256,6 @@ class Procedure():
                           
 
 
-            # TODO: Hier muss noch Placeholders ersetzt werden!!'
             file.write(cls.page_top_text)
 
 
@@ -1264,6 +1265,10 @@ class Procedure():
 
             # schreiben der Modulinfos / Docstrings:
             file.write(cls.modul_docstring)
+
+
+
+
 
 
 

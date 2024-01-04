@@ -781,7 +781,7 @@ class Procedure():
         Zur Vereinfachung wird eine neue Klassenvariable auf Superklassen-Ebene erstellt, in der alle Elemente der beiden gleichnamigen Listen der einzelnen Subklassen Sub und Function.all_procedures_final enthalten sind. Diese Liste ist sortiert nach aufsteigender Zeilennummer.
 
         Es wird dann nach Referenzierungen (Aufrufen) jeder Einzelnen Prozedur im gesamten Quelltext gesucht. Bei einem gefundenen Match wird weiter identifiziert, innerhalb welcher uebergeordneten Prozedur dieser Aufruf erfolgte. 
-        Fuer jedes Objekt wird eine Objektvariable (Liste) references erstellt, die initial leer ist und bei gefundenen Matches jeweils mit einem Tuple der folgenden Form erweitert wird: (line_no, bezeichnung_uebergeordnete_prozedur, zeilentext_des_aufrufes)
+        Fuer jedes Objekt wird eine Objektvariable (Liste) references erstellt, die initial leer ist und bei gefundenen Matches jeweils mit einem Tuple der folgenden Form erweitert wird: (line_no, bezeichnung_uebergeordnete_prozedur, zeilentext_des_aufrufes).
 
         """
 
@@ -981,9 +981,6 @@ class Procedure():
         # Durchsuche gesamten Quelltext nach allen Referenzierungen für jeweils alle gefundenen Prozeduren und speichere sie in den jeweiligen Objekten der einzelnen Prozeduren:
         cls.analyse_references()
 
-        # JULIA: Diese Referenzierungen müssen jetzt noch in die Template prozedur.md eingebaut werden! Aktuell erfolgt das alles inkl. der Auswertung in der Methode write_to_file
-
-        # TODO: Diese Referenzierungen müssen jetzt noch in die Template prozedur.md eingebaut werden! Aktuell erfolgt das alles inkl. der Auswertung in der Methode write_to_file
 
 
 
@@ -1002,7 +999,7 @@ class Procedure():
     
     def generate_calling_entries(self) -> None:
         """
-        # TODO: # JULIA                                         
+        # JULIA: Aktuell in DEV                                         
         mitten in dev.
 
         ansatz vorhanden
@@ -1014,8 +1011,7 @@ class Procedure():
         """
 
 
-        # TODO                                                                      
-        # JULIA                                                                     
+        # TODO: Aktuell in DEV
         """
         
         MÖGLICHE HERANGEHENSWEISEN
@@ -1358,7 +1354,7 @@ class Procedure():
                     """
 
 
-                    # JULIA: Versuche Wiederherstollung des Tails!!!!
+                    # JULIA: Aufruf Aufrufabfolge :  Versuche Wiederherstollung des Tails!!!!
                     # procedure_obj.generate_calling_entries()
 
                     file.write(procedure_obj.documentation)

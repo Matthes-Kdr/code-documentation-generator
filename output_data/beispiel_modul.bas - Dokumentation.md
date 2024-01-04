@@ -2,10 +2,10 @@
 
 
 
-**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2023-12-31 03:37**
+**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-04 15:03**
 
 
-Generierungsdatum dieser Dokumentation: 2024-01-04 04:52:27
+Generierungsdatum dieser Dokumentation: 2024-01-04 15:04:30
 
 
 
@@ -30,10 +30,10 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 * [**Subs**](#sec_subs) (4)
   
-  * [```bauer```](#bauer) <small>(Zeile 78)</small>
-  * [```casio```](#casio) <small>(Zeile 116)</small>
-  * [```liebherr```](#liebherr) <small>(Zeile 103)</small>
-  * [```main```](#main) <small>(Zeile 48)</small>
+  * [```bauer```](#bauer) <small>(Zeile 71)</small>
+  * [```casio```](#casio) <small>(Zeile 110)</small>
+  * [```liebherr```](#liebherr) <small>(Zeile 96)</small>
+  * [```main```](#main) <small>(Zeile 40)</small>
   
 
 
@@ -45,8 +45,8 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 * [**Functions**](#sec_functions) (2)
   
   
-  * [```addieren```](#addieren) <small>(Zeile 24)</small>
-  * [```subtrahieren```](#subtrahieren) <small>(Zeile 34)</small>
+  * [```addieren```](#addieren) <small>(Zeile 12)</small>
+  * [```subtrahieren```](#subtrahieren) <small>(Zeile 24)</small>
   
 
 
@@ -67,16 +67,8 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 ## Modulbeschreibung
 
-  Nach 3 unnoetigen Leerzeichen:
-
-
-
-
- HAllo!
- Dieses Modul beinhaltet einige Prozeduren, die für nichts sinnvoll sind...
- Aber es hat immerhin einen Programmkopf.
-
- Wichtige Prozeduren: Keine
+  
+ Beispiel Modul zum Testen der Dokumentation der Abruffolge.
 
 
 ﻿
@@ -105,11 +97,11 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 
 <a name="bauer"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub bauer```</span><small>(Zeile 78)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub bauer```</span><small>(Zeile 71)</small>
 
 <div style="padding-left:2em;">
 
->  Deklaration erfolgte via public sub.
+>  Ruft MEHRFACH die Prozedur 'liebherr' auf (insgesamt 5 mal nacheinander)
 
 
 
@@ -208,7 +200,7 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 ```
 Public Sub bauer()
-''' Deklaration erfolgte via public sub.
+''' Ruft MEHRFACH die Prozedur 'liebherr' auf (insgesamt 5 mal nacheinander)
 
     MsgBox("Dies ist ein explizit als public gekennzeichnetes Sub.")
 
@@ -282,11 +274,12 @@ End Sub
 
 
 <a name="casio"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub casio```</span><small>(Zeile 116)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub casio```</span><small>(Zeile 110)</small>
 
 <div style="padding-left:2em;">
 
-> *No information availible. For more information expand source code.*
+>  ' Ruft keine weitere Prozedur auf.
+
 
 
 
@@ -384,9 +377,7 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 ```
    Sub casio()
-
-
-    ''' Hier gibt skeinen docstirng
+    ''' ' Ruft keine weitere Prozedur auf.
 
     MsgBox("Dies ist ein implizit als public gekennzeichnetes Sub.")
 
@@ -447,11 +438,11 @@ End Sub
 
 
 <a name="liebherr"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub liebherr```</span><small>(Zeile 103)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub liebherr```</span><small>(Zeile 96)</small>
 
 <div style="padding-left:2em;">
 
->  Deklaration erfolgte via sub.
+>  ' Ruft keine weitere Prozedur auf.
 
 
 
@@ -468,11 +459,11 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```main```](#main) : <small>  Zeile 68 : ```    call liebherr``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 84 : ```    call liebherr``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 85 : ```    call liebherr ' Aufruf``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 87 : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 91 : ```    var = liebherr("gvkil")``` </small>
+* [```main```](#main) : <small>  Zeile 61 : ```    call liebherr``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 77 : ```    call liebherr``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 78 : ```    call liebherr ' Aufruf``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 80 : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 84 : ```    var = liebherr("gvkil")``` </small>
 
 
 
@@ -555,7 +546,8 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 ```
    Sub liebherr()
-''' Deklaration erfolgte via sub.
+    ''' ' Ruft keine weitere Prozedur auf.
+
 
     MsgBox("Dies ist ein implizit als public gekennzeichnetes Sub.")
 
@@ -616,12 +608,13 @@ End Sub
 
 
 <a name="main"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub main```</span><small>(Zeile 48)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Sub main```</span><small>(Zeile 40)</small>
 
 <div style="padding-left:2em;">
 
->  Hier soll das HAuptprogramm stehen.
- Alles was als KOMMENTAR hier unter der Definitionszeile einer Funktion steht, BEVOR EINE LEERZEILE folgt, soll später als Zusammenfassung angezeigt werden in der Code-Dokumentation - also ähnlich wie im docstring bei python.
+>  Ruft die MEthode 'addieren' auf
+
+ Ruft die MEthode 'subtrahieren' auf
 
 
 
@@ -720,8 +713,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 ```
 Private Sub main()
-''' Hier soll das HAuptprogramm stehen.
-''' Alles was als KOMMENTAR hier unter der Definitionszeile einer Funktion steht, BEVOR EINE LEERZEILE folgt, soll später als Zusammenfassung angezeigt werden in der Code-Dokumentation - also ähnlich wie im docstring bei python.
+''' Ruft die MEthode 'addieren' auf
+'
+''' Ruft die MEthode 'subtrahieren' auf
 
 ' Das hier soll nirgendwo stehen.
 
@@ -808,11 +802,13 @@ End Sub
 
 
 <a name="addieren"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function addieren```</span><small>(Zeile 24)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Function addieren```</span><small>(Zeile 12)</small>
 
 <div style="padding-left:2em;">
 
 >  Diese Funktion addiert beide Zahlen miteinander und übergibt das Ergebnis zurück.
+
+ Ruft keine weitere Prozedur auf.
 
 
 
@@ -829,8 +825,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```subtrahieren```](#subtrahieren) : <small>  Zeile 38 : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
-* [```main```](#main) : <small>  Zeile 62 : ```        wert = addieren(i, i)``` </small>
+* [```subtrahieren```](#subtrahieren) : <small>  Zeile 30 : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+* [```main```](#main) : <small>  Zeile 55 : ```        wert = addieren(i, i)``` </small>
 
 
 
@@ -914,6 +910,8 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 ```
 Private Function addieren(a as integer, b as integer) as integer
 ''' Diese Funktion addiert beide Zahlen miteinander und übergibt das Ergebnis zurück.
+'
+' Ruft keine weitere Prozedur auf.
 
 
     ' Addieren:
@@ -975,11 +973,13 @@ End Function
 
 
 <a name="subtrahieren"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function subtrahieren```</span><small>(Zeile 34)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Function subtrahieren```</span><small>(Zeile 24)</small>
 
 <div style="padding-left:2em;">
 
 >  Diese Funktion subtrahiert b von a und übergibt das Ergebnis zurück.
+
+ Ruft die  Prozedur 'adddieren' auf.
 
 
 
@@ -996,7 +996,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```main```](#main) : <small>  Zeile 63 : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+* [```main```](#main) : <small>  Zeile 56 : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
 
 
 
@@ -1080,6 +1080,8 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 ```
 Private Function subtrahieren(a as integer, b as integer) as integer
 ''' Diese Funktion subtrahiert b von a und übergibt das Ergebnis zurück.
+'
+' Ruft die  Prozedur 'adddieren' auf.
 
     ' Benutze die addieren Funktion:
     subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben
@@ -1184,4 +1186,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-04 04:52:27 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-04 04:52:01: '6a05451ec6875dee525b776114c46b3282a7acad')</small> 
+<small>Dokumentation generiert am 2024-01-04 15:04:30 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-04 04:58:07: '313691b550788a10eeaa24c8d672d2ae12dc9787')</small> 

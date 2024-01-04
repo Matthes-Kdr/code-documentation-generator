@@ -773,20 +773,13 @@ def main():
     commit:Commit = Commit.get_last_commit()
     suggested_version = commit.suggest_version()
 
-    # DEBUG: aktueller commit: wurde NICHT EXPLIZIT getagged, aber: 'demoTag-3-gae17ddb'
-    db(suggested_version)
 
 
     if not commit.is_new_version:
 
-        db(f"Keine weiteren Schritte erforderlich. Die bisherige Versionsnummer {suggested_version} bleibt bestehen.")
+        print("Es wurden keine relevanten Modifikationen seit dem letzten Release vorgenommen, die eine neue Version erforderlich machen. Die bisherige Versionsnummer {} bleibt bestehen.{}".format(suggested_version, "" if commit.tag == "" else "(Generischer tag: " +  commit.tag + ")"))
 
         return False
-
-
-
-
-
 
 
     # ELSE: tag der vorgeschlagenen Version fuer den aktuellen commit hinzufuegen

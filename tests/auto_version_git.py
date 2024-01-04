@@ -351,13 +351,13 @@ class Commit:
         """
 
 
-        if input("ECHT WEITER MACHEN????! [y]") != "y":
-            db("kein tag hinzugefügt!!")
-            return
+        # if input("ECHT WEITER MACHEN????! [y]") != "y":
+        #     db("kein tag hinzugefügt!!")
+        #     return
 
         
         # Git-Befehl zum Erstellen eines Tags
-        git_command = f"git tag '{tag_text}'"
+        git_command = f"git tag {tag_text}"
 
         # Ausführen des Git-Befehls im Terminal
         try:
@@ -419,6 +419,8 @@ class Commit:
                 cls.new_obj_from_dict(git_single_commit_infos)
 
                 # db(cls.instances[0].version)
+
+            print("\n"*10)
 
             # return list(zip(git_commits, tag_info))
             return git_commits_infos
@@ -602,18 +604,18 @@ class Commit:
         #### # Evaluation of the previous changes since the last tagged commit: ####
         # =============================================================================
         
-        self.is_new_version = True
+        self.is_new_version = True # default / initial
         # noch nicht herausspringen jeweils, da noch ein weiteres Attibut gesetzt /korrigiert werden muss!
         if major_change:
             suggestion = "{}.0.0".format(major + 1)
             # return suggestion
         
         elif minor_change:
-            suggestion = "0.{}.0".format(minor + 1)
+            suggestion = "{}.{}.0".format(major, minor + 1)
             # return suggestion
         
         elif patch_change:
-            suggestion = "0.0.{}".format(patch + 1)
+            suggestion = "{}.{}.{}".format(major, minor, patch + 1)
             # return suggestion
         
         else:
@@ -803,7 +805,7 @@ def main():
     # # if commit.version:
 
     # else:
-        version = input("!!! ACHTUNG: Die vorgeschlagene Version ist nicht gueltig. Bitte eine gueltige Versionsnummer eingeben oder 'x' fuer Abbruch")
+        version = input("!!! ACHTUNG: Die vorgeschlagene Version ist nicht gueltig. Bitte eine gueltige Versionsnummer eingeben oder 'x' fuer Abbruch.\n > Ihre Eingabe: ")
         
         if version.lower() == "x":
             db("Programmabbruch durch Benutzter")
@@ -815,7 +817,7 @@ def main():
     commit.add_tag(version)
 
 
-    db(Commit)
+    # db(Commit)
 
     # initialize_commits()
 

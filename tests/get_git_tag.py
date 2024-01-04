@@ -69,6 +69,63 @@ else:
 
 
 
+
+
+
+import subprocess
+
+def get_git_commit_info():
+    try:
+        # Führen Sie den 'git log'-Befehl aus und erfassen Sie die Ausgabe
+        git_log = subprocess.check_output(['git', 'log', '--pretty=format:%H|%s']).decode('utf-8').strip()
+
+        # Teilen Sie die Ausgabe in einzelne Commits auf
+        git_commits = git_log.split('\n')
+
+        # Erstellen Sie eine Liste, um die Verfügbarkeit von Tags und den Text des Tags für jeden Commit zu speichern
+        tag_info = []
+
+        for commit in git_commits:
+            # Teilen Sie den Commit in Teile auf
+            commit_parts = commit.split('|')
+            commit_sha = commit_parts[0]
+
+            try:
+                # Führen Sie den 'git describe'-Befehl aus und erfassen Sie die Ausgabe
+                git_describe_output = subprocess.check_output(['git', 'describe', '--tags', commit_sha]).decode('utf-8').strip()
+                tags_available = True
+                tag_info.append((tags_available, git_describe_output))
+            except subprocess.CalledProcessError:
+                # 'git describe' schlägt fehl, wenn kein Tag vorhanden ist
+                tags_available = False
+                tag_info.append((tags_available, None))
+
+        return list(zip(git_commits, tag_info))
+
+    except subprocess.CalledProcessError:
+        # Fehlerbehandlung, wenn der Befehl nicht erfolgreich ausgeführt wird
+        print("Fehler beim Ausführen des 'git log' oder 'git describe'-Befehls.")
+        return None
+
+# Beispielaufruf
+commit_info = get_git_commit_info()
+
+if commit_info:
+    for commit, (tags_available, tag_text) in commit_info:
+        # Hier können Sie die Commit-Informationen, die Verfügbarkeit von Tags und den Text des Tags im Skript weiterverarbeiten
+        print(f"Commit: {commit}")
+        print(f"Tags verfügbar: {tags_available}")
+        print(f"Tag-Text: {tag_text}")
+        print("------")
+
+else:
+    print("Fehler beim Abrufen der Git-Commit-Informationen.")
+
+
+
+
+
+
 # # WICHTIG:
 # # IDEE / Programmablauf: für versionierer: 
 

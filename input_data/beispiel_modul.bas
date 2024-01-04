@@ -3,6 +3,10 @@
 
 '''  
 ' Beispiel Modul zum Testen der Dokumentation der Abruffolge.
+'
+' ## !!! # ACHTUNG BUGS: !!!
+' > Sub 'liebherr' wird insgesamt 6x referenziert, nicht 5x, wie aktuell dokumentiert!
+
 '''
 
 
@@ -10,6 +14,9 @@
 
 
 Private Function addieren(a as integer, b as integer) as integer
+' Anzahl der Referenzierungen im Modul: 2
+' Anzahl weiterer internen Aufrufe : 0
+'
 ''' Diese Funktion addiert beide Zahlen miteinander und übergibt das Ergebnis zurück.
 '
 ' Ruft keine weitere Prozedur auf.
@@ -22,7 +29,11 @@ End Function
 
 
 Private Function subtrahieren(a as integer, b as integer) as integer
+' Anzahl der Referenzierungen im Modul: 1
+' Anzahl weiterer internen Aufrufe : 1
+'
 ''' Diese Funktion subtrahiert b von a und übergibt das Ergebnis zurück.
+'
 '
 ' Ruft die  Prozedur 'adddieren' auf.
 
@@ -38,6 +49,9 @@ end Function
 
 
 Private Sub main()
+' Anzahl der Referenzierungen im Modul: 0
+' Anzahl weiterer internen Aufrufe : 3
+'
 ''' Ruft die MEthode 'addieren' auf
 '
 ''' Ruft die MEthode 'subtrahieren' auf
@@ -69,7 +83,11 @@ End Sub
 
 
 Public Sub bauer()
-''' Ruft MEHRFACH die Prozedur 'liebherr' auf (insgesamt 5 mal nacheinander)
+' Anzahl der Referenzierungen im Modul: 0
+' Anzahl weiterer internen Aufrufe : 5
+'
+''' Ruft MEHRFACH die Prozedur 'liebherr' auf (insgesamt 5 mal nacheinander in verschiedenen Kontexten)
+'
 
     MsgBox("Dies ist ein explizit als public gekennzeichnetes Sub.")
 
@@ -94,6 +112,9 @@ End Sub
 
 
    Sub liebherr()
+   ' Anzahl der Referenzierungen im Modul: 6
+    ' Anzahl weiterer internen Aufrufe : 0
+    '
     ''' ' Ruft keine weitere Prozedur auf.
 
 
@@ -108,6 +129,9 @@ End Sub
 
 
    Sub casio()
+    ' Anzahl der Referenzierungen im Modul: 0
+    ' Anzahl weiterer internen Aufrufe : 0
+    '
     ''' ' Ruft keine weitere Prozedur auf.
 
     MsgBox("Dies ist ein implizit als public gekennzeichnetes Sub.")

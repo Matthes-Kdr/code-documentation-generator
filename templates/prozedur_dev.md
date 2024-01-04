@@ -64,11 +64,6 @@
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
 * ```hauptfunc1```
   * ```unterfunktionA```
     * ```wiederholungsfunktion```
@@ -90,6 +85,26 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+
+
+
+
+
+
+<!-- TODO: Platzhalter platz -->
+<br>
+<br>
+<br>
+<br>
+<br>
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+
 
 
 </details>

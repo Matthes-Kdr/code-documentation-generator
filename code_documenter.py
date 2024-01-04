@@ -849,7 +849,7 @@ class Procedure():
                         continue
                 
                 
-                # TODO: Backreference auf die Gruppe mit dem Sub-Namen (kenie backref nötig, da es ja EH nur nach dieser gesucht wird!)
+                # TODO: Backreference auf die Gruppe mit dem Sub-Namen (kenie backref nötig, da es ja EH nur nach dieser gesucht wird!) notwendig für aufruf abfolge
                 ziel_prozedur_name = prozedur_name
                 # db(match)
                     
@@ -884,8 +884,10 @@ class Procedure():
 
                 #Erweiterung um den Prozedurnamen, der aufgerufen wird:
                 # ziel_prozedur_name = ""
-
-                prozedur_obj.references.append((line_no, aufrufende_prozedur_tuple[1], line_text, ziel_prozedur_name))
+                # TODO / # JULIA:   Erweiterung um den Prozedurnamen, der aufgerufen wird                    
+                prozedur_obj.references.append(
+                    (line_no, aufrufende_prozedur_tuple[1], line_text, ziel_prozedur_name)
+                )
 
 
 
@@ -1051,13 +1053,13 @@ class Procedure():
 
         # bei hauptfunc1 --> soll 2 einträge: unterfunkntionA + B
         
-        Procedure.all_procedures_final
+        # Procedure.all_procedures_final
         # liste mit exemplarischen einzel-Eintrag: 
         # (procedure_obj, procedure_name, procedure_line )
 
 
-
-        for (procedure_obj, uebergeordnete_prozedur_name, procedure_declaration_line_no) in Procedure.all_procedures_final:
+        # Suche für alle vorhandenen Prozeduren jeweils ihre Referenzen heraus, und prüfe, ob eine Referenz zu der jetzt gerade untersuchten Prozedur (self.name) führt. Wenn ja, ist dies ein Aufruf, der der calling_sequences liste angehangen werden soll.
+        for (procedure_obj, prozedur_name, procedure_declaration_line_no) in Procedure.all_procedures_final:
 
             """
             # iterater = 6 # schleifenzähler pro prozedur
@@ -1073,14 +1075,36 @@ class Procedure():
             # SCHNELLERER ANSATZ:
             # Filtern der liste, so dass uebergeordnetes_sub == name
             # dann fertig!
+            db("Suche Aufrufabfolge für Prozedur >> {}\nAktuell: check ob die folgende Prozedur aufgerufen wird: >> {}".format(self.name, prozedur_name)) # ist IMMER GLEICH in einem einzigen Aufruf! ("bauer")
+            relevante_references = [_ for _ in procedure_obj.references if _[1] == self.name]
+            db("----> Anzahl Relevanter Referenzierungen: {}".format(len(relevante_references)))
 
-            relevante_references = [_ for _ in procedure_obj.references if uebergeordnete_prozedur_name == self.name]
 
-            for (line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name) in relevante_references:
 
-                self.calling_sequences.append((line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name)) # relevant ist nur der name aus der regex im cod
-                # TODO: ??? ggf doch nicht nötig? Bei erstellung dieses tupels bei analyse der referenzen --> speichere auch das ziel, aleso den subname
+            # =============================================================================
+            #### Füge die relevanten Referencen als Aufrufe innerhalb der zu analysierenden Prozedur hinzu: ####
+            # =============================================================================
             
+
+            # OBSOLETE ALTERNATIVE MIT ENTPACKEN:
+            # for (line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name) in relevante_references:
+
+            #     self.calling_sequences.append((line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name)) # relevant ist nur der name aus der regex im cod
+                
+            # db("MIT ENTPACKEN: {}".format(self.calling_sequences))
+                
+
+            # ALTERNATIVE: 
+            for reference in relevante_references:
+                self.calling_sequences.append(reference)
+            
+            # Zugriff später bei Bedarf:
+            # for (line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name) in self.calling_sequence:
+
+
+
+
+                # TODO: ??? ggf doch nicht nötig? Bei erstellung dieses tupels bei analyse der referenzen --> speichere auch das ziel, aleso den subname
 
             """
             # ALTER ALTERNATIVER ANSATZ:
@@ -1097,57 +1121,96 @@ class Procedure():
             """
 
 
+        # =============================================================================
+        #### Abschluss der Prüfung aller Referenzierungen aller Prozeduren. Jetzt: Dokumentation von allem in einem Rutsch FÜR DIESES EINE PROZEDUR: ####
+            # TODO: Problem an dieser Vorgehensweise ist, dass nur die erste Stufe gelistet werden kann
+            # TODO: Besser wäre es, die tatsächliche Dokumentation später direkt für alle Funcs zu machen, nachdem alle Prozeduren analysiert wurden... ähnlich wie toc...
+        # =============================================================================
+            
+        
+            # TODO:  Am Ende vor der dokumentation die liste noch sortieren aufsteigend nach line_no_reference konzeptionell identisch wie im index/toc
 
-                # TODO:  Am Ende vor der dokumentation die liste noch sortieren aufsteigend nach line_no_reference konzeptionell identisch wie im index/toc
-
-                # JULIA: LOGIK FALSCH????
-            db(self.calling_sequences)
-
-
-            _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@"
-
-            # TODO: ersetze im doc:
-            doc = self.documentation
-
-    
+        # db(self.calling_sequences)
 
 
-            # Initialisierung und  Parametrisierung  des Einleitungssatzes:
-            einleitungssatz = "Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden." # default
+        _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@"
 
-            if len(self.calling_sequences) > 0:
-
-                einleitungssatz = "Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:"
-
-            for (line_no_reference, uebergeordnetes_sub, line_code, target_procedure_name) in self.calling_sequences:
-
-
-                # TODO:
-                # HACK:
-                target_procedure_name = "main"
+        # TODO: ersetze im doc:
+        doc = self.documentation
 
 
 
-                replacer_placeholder_reference = f"<small>  Zeile {line_no_reference} </small> : ```{line_code}``` ODER: {target_procedure_name}"
-                # replacer_placeholder_reference = f"* [```{code}```](#{target_procedure}) : <small>  Zeile {line_no_reference} : ```{line_code}``` </small>"
 
-                replacer_placeholder_reference = replacer_placeholder_reference  + f"\n{_PLACEHOLDER_REFERENCE}"
-                    
-                # Ersetzen:
-                doc = doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
-
-                    
-            # Loeschen des verbliebenen Platzhalters zum Einfuegen einzelner Referenzen:
-            doc = doc.replace(_PLACEHOLDER_REFERENCE, "")
+        # Initialisierung und  Parametrisierung  des Einleitungssatzes:
+        einleitungssatz = "Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden." # default
 
 
+        if len(self.calling_sequences) > 0:
 
-            # Einsetzen des Einleitungssatzes:
-            doc = doc.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
+            einleitungssatz = "Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:"
+
+        for (line_no_reference, uebergeordnetes_sub, line_code, target_procedure_name) in self.calling_sequences:
+
+        # for (line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name) in self.calling_sequence:
 
 
-            # shortcut / resubstitution:
-            self.documentation = doc
+
+
+            # =============================================================================
+            #### Verschiedene Darstellungsmöglichkeiten: ####
+            # =============================================================================
+            
+            # TODO: Entscheiden!
+            # ALTERNATIVE DARSTELLUNGEN:
+            DARSTELLUNGSOPTION = 2 # current choice
+            
+            if DARSTELLUNGSOPTION == 0:
+
+                replacer_placeholder_reference = f"<small>  Zeile {line_no_reference} </small> : ```{line_code}```"
+
+
+            elif DARSTELLUNGSOPTION == 1:
+
+                replacer_placeholder_reference = f"<small>  Zeile {line_no_reference} </small> : ```{target_procedure_name}```"
+            
+            elif DARSTELLUNGSOPTION == 2:
+            
+                line_code_without_new_line = line_code.rstrip("\n")
+            
+                replacer_placeholder_reference = f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code_without_new_line}``` </small><br>"
+                
+
+
+
+
+
+
+
+
+
+
+            
+            # replacer_placeholder_reference = f"* [```{code}```](#{target_procedure}) : <small>  Zeile {line_no_reference} : ```{line_code}``` </small>"
+
+            replacer_placeholder_reference = replacer_placeholder_reference  + f"\n{_PLACEHOLDER_REFERENCE}"
+                
+            # Ersetzen:
+            doc = doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
+
+                
+        # Loeschen des verbliebenen Platzhalters zum Einfuegen einzelner Referenzen:
+        doc = doc.replace(_PLACEHOLDER_REFERENCE, "")
+
+
+
+        # Einsetzen des Einleitungssatzes:
+        doc = doc.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
+        # Einsetzen der ÜBersichtsanzahl an Aufrufen:
+        doc = doc.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@", str(len(self.calling_sequences)))
+
+
+        # shortcut / resubstitution:
+        self.documentation = doc
 
 
 
@@ -1235,11 +1298,7 @@ class Procedure():
         Schreibt die Dokumentation aller Prozeduren (aller Art) in die als Dateipfad übergebene Zieldatei(pfad).
         """
 
-
-
         # initialize_toc
-
-
 
         with open(output_file_path, "w", ) as file:
 
@@ -1359,8 +1418,7 @@ class Procedure():
                     """
 
 
-                    # JULIA: Aufruf Aufrufabfolge :  Versuche Wiederherstollung des Tails!!!!
-                    # procedure_obj.generate_calling_entries()
+                    procedure_obj.generate_calling_entries()
 
                     file.write(procedure_obj.documentation)
 
@@ -1956,6 +2014,7 @@ def main():
     Procedure.finilize(MetaData.get_output_path())
 
 
+    print("MD-Datei wurde aus MD-Datei generiert: {}".format(MetaData.get_output_path(".md")))
 
 
     # Generiere HTML Datei from Markdown:
@@ -1966,7 +2025,7 @@ def main():
             encoding="utf8"
         )
 
-        print("HTML-Datei wurde aus MD-Datei generiert.")
+        print("HTML-Datei wurde aus MD-Datei generiert: {}".format(MetaData.get_output_path(".html")))
         
 
 

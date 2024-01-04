@@ -2,13 +2,74 @@
 
 
 
-**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2023-12-31 03:37**
+**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-04 15:33**
 
 
-Generierungsdatum dieser Dokumentation: 2024-01-03 15:16:51
+Generierungsdatum dieser Dokumentation: **2024-01-04 23:13:11**
 
 
 
+
+
+
+
+
+
+<!-- TODO: nur temporrary!  -->
+# ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:
+
+
+
+<details>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+
+
+
+
+
+
+<!-- TODO: Platzhalter platz -->
+<br>
+<br>
+<br>
+<br>
+<br>
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+
+
+* ```hauptfunc1```
+  * ```unterfunktionA```
+    * ```wiederholungsfunktion```
+  * ```unterfunktionB```
+* ```hauptfunc2```
+* ```hauptfunc3```
+* ```wiederholungsfunktion```
+  * ```wiederholungsfunktion```
+
+
+
+
+</details>
 
 
 ﻿
@@ -30,10 +91,10 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 * [**Subs**](#sec_subs) (4)
   
-  * [```bauer```](#bauer) <small>(Zeile 78)</small>
-  * [```casio```](#casio) <small>(Zeile 116)</small>
-  * [```liebherr```](#liebherr) <small>(Zeile 103)</small>
-  * [```main```](#main) <small>(Zeile 48)</small>
+  * [```bauer```](#bauer) <small>(Zeile 85)</small>
+  * [```casio```](#casio) <small>(Zeile 131)</small>
+  * [```liebherr```](#liebherr) <small>(Zeile 114)</small>
+  * [```main```](#main) <small>(Zeile 51)</small>
   
 
 
@@ -45,8 +106,8 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 * [**Functions**](#sec_functions) (2)
   
   
-  * [```addieren```](#addieren) <small>(Zeile 24)</small>
-  * [```subtrahieren```](#subtrahieren) <small>(Zeile 34)</small>
+  * [```addieren```](#addieren) <small>(Zeile 16)</small>
+  * [```subtrahieren```](#subtrahieren) <small>(Zeile 31)</small>
   
 
 
@@ -67,26 +128,20 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 ## Modulbeschreibung
 
-  Nach 3 unnoetigen Leerzeichen:
+  
+ Beispiel Modul zum Testen der Dokumentation der Abruffolge.
 
-
-
-
- HAllo!
- Dieses Modul beinhaltet einige Prozeduren, die für nichts sinnvoll sind...
- Aber es hat immerhin einen Programmkopf.
-
- Wichtige Prozeduren: Keine
-
+ ## !!! # ACHTUNG BUGS: !!!
+ > Sub 'liebherr' wird insgesamt 6x referenziert, nicht 5x, wie aktuell dokumentiert!
 
 ﻿
 <!-- -------------------------------------------------- -->
-<!-- SECTION-START : FUNCTIONS -->
+<!-- SECTION-START : SUBS -->
 <!-- -------------------------------------------------- -->
 
-<a name="sec_functions"></a>
+<a name="sec_subs"></a>
 
-## Functions
+## Subs
 
 
 ﻿
@@ -105,11 +160,15 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 
 <a name="bauer"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub bauer```</span><small>(Zeile 78)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub bauer```</span><small>(Zeile 85)</small>
 
 <div style="padding-left:2em;">
 
->  Deklaration erfolgte via public sub.
+>  Anzahl der Referenzierungen im Modul: 0
+ Anzahl weiterer internen Aufrufe : 5
+
+ Ruft MEHRFACH die Prozedur 'liebherr' auf (insgesamt 5 mal nacheinander in verschiedenen Kontexten)
+
 
 
 
@@ -151,37 +210,34 @@ Kein Aufruf gefunden.
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (4)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
+
+Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
 
 
 
 
 
+- ```liebherr``` <small> : [Zeile 95] : ```    call liebherr``` </small><br>
+- ```liebherr``` <small> : [Zeile 96] : ```    call liebherr ' Aufruf``` </small><br>
+- ```liebherr``` <small> : [Zeile 98] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small><br>
+- ```liebherr``` <small> : [Zeile 102] : ```    var = liebherr("gvkil")``` </small><br>
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+
+
 
 
 </details>
@@ -208,7 +264,11 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 ```
 Public Sub bauer()
-''' Deklaration erfolgte via public sub.
+' Anzahl der Referenzierungen im Modul: 0
+' Anzahl weiterer internen Aufrufe : 5
+'
+''' Ruft MEHRFACH die Prozedur 'liebherr' auf (insgesamt 5 mal nacheinander in verschiedenen Kontexten)
+'
 
     MsgBox("Dies ist ein explizit als public gekennzeichnetes Sub.")
 
@@ -282,11 +342,15 @@ End Sub
 
 
 <a name="casio"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub casio```</span><small>(Zeile 116)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub casio```</span><small>(Zeile 131)</small>
 
 <div style="padding-left:2em;">
 
-> *No information availible. For more information expand source code.*
+>  Anzahl der Referenzierungen im Modul: 0
+ Anzahl weiterer internen Aufrufe : 0
+
+ ' Ruft keine weitere Prozedur auf.
+
 
 
 
@@ -327,37 +391,30 @@ Kein Aufruf gefunden.
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
+
+Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+
+
 
 
 </details>
@@ -384,9 +441,10 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 ```
    Sub casio()
-
-
-    ''' Hier gibt skeinen docstirng
+    ' Anzahl der Referenzierungen im Modul: 0
+    ' Anzahl weiterer internen Aufrufe : 0
+    '
+    ''' ' Ruft keine weitere Prozedur auf.
 
     MsgBox("Dies ist ein implizit als public gekennzeichnetes Sub.")
 
@@ -447,11 +505,14 @@ End Sub
 
 
 <a name="liebherr"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub liebherr```</span><small>(Zeile 103)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub liebherr```</span><small>(Zeile 114)</small>
 
 <div style="padding-left:2em;">
 
->  Deklaration erfolgte via sub.
+>  Anzahl der Referenzierungen im Modul: 6
+ Anzahl weiterer internen Aufrufe : 0
+
+ ' Ruft keine weitere Prozedur auf.
 
 
 
@@ -468,11 +529,11 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```main```](#main) : <small>  Zeile 68 : ```    call liebherr``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 84 : ```    call liebherr``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 85 : ```    call liebherr ' Aufruf``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 87 : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 91 : ```    var = liebherr("gvkil")``` </small>
+* [```main```](#main) : <small>  Zeile 75 : ```    call liebherr``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 95 : ```    call liebherr``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 96 : ```    call liebherr ' Aufruf``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 98 : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 102 : ```    var = liebherr("gvkil")``` </small>
 
 
 
@@ -498,37 +559,30 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
+
+Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+
+
 
 
 </details>
@@ -555,7 +609,11 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 ```
    Sub liebherr()
-''' Deklaration erfolgte via sub.
+   ' Anzahl der Referenzierungen im Modul: 6
+    ' Anzahl weiterer internen Aufrufe : 0
+    '
+    ''' ' Ruft keine weitere Prozedur auf.
+
 
     MsgBox("Dies ist ein implizit als public gekennzeichnetes Sub.")
 
@@ -616,12 +674,16 @@ End Sub
 
 
 <a name="main"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub main```</span><small>(Zeile 48)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Sub main```</span><small>(Zeile 51)</small>
 
 <div style="padding-left:2em;">
 
->  Hier soll das HAuptprogramm stehen.
- Alles was als KOMMENTAR hier unter der Definitionszeile einer Funktion steht, BEVOR EINE LEERZEILE folgt, soll später als Zusammenfassung angezeigt werden in der Code-Dokumentation - also ähnlich wie im docstring bei python.
+>  Anzahl der Referenzierungen im Modul: 0
+ Anzahl weiterer internen Aufrufe : 3
+
+ Ruft die MEthode 'addieren' auf
+
+ Ruft die MEthode 'subtrahieren' auf
 
 
 
@@ -663,37 +725,33 @@ Kein Aufruf gefunden.
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (3)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
+
+Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
 
 
 
 
 
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
+- ```addieren``` <small> : [Zeile 69] : ```        wert = addieren(i, i)``` </small><br>
+- ```subtrahieren``` <small> : [Zeile 70] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small><br>
+- ```liebherr``` <small> : [Zeile 75] : ```    call liebherr``` </small><br>
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+
+
+
+
+
+
 
 
 </details>
@@ -720,8 +778,12 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 ```
 Private Sub main()
-''' Hier soll das HAuptprogramm stehen.
-''' Alles was als KOMMENTAR hier unter der Definitionszeile einer Funktion steht, BEVOR EINE LEERZEILE folgt, soll später als Zusammenfassung angezeigt werden in der Code-Dokumentation - also ähnlich wie im docstring bei python.
+' Anzahl der Referenzierungen im Modul: 0
+' Anzahl weiterer internen Aufrufe : 3
+'
+''' Ruft die MEthode 'addieren' auf
+'
+''' Ruft die MEthode 'subtrahieren' auf
 
 ' Das hier soll nirgendwo stehen.
 
@@ -808,11 +870,16 @@ End Sub
 
 
 <a name="addieren"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function addieren```</span><small>(Zeile 24)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Function addieren```</span><small>(Zeile 16)</small>
 
 <div style="padding-left:2em;">
 
->  Diese Funktion addiert beide Zahlen miteinander und übergibt das Ergebnis zurück.
+>  Anzahl der Referenzierungen im Modul: 2
+ Anzahl weiterer internen Aufrufe : 0
+
+ Diese Funktion addiert beide Zahlen miteinander und übergibt das Ergebnis zurück.
+
+ Ruft keine weitere Prozedur auf.
 
 
 
@@ -829,8 +896,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```subtrahieren```](#subtrahieren) : <small>  Zeile 38 : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
-* [```main```](#main) : <small>  Zeile 62 : ```        wert = addieren(i, i)``` </small>
+* [```subtrahieren```](#subtrahieren) : <small>  Zeile 41 : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+* [```main```](#main) : <small>  Zeile 69 : ```        wert = addieren(i, i)``` </small>
 
 
 
@@ -856,37 +923,30 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
+
+Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+
+
 
 
 </details>
@@ -913,7 +973,12 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 ```
 Private Function addieren(a as integer, b as integer) as integer
+' Anzahl der Referenzierungen im Modul: 2
+' Anzahl weiterer internen Aufrufe : 0
+'
 ''' Diese Funktion addiert beide Zahlen miteinander und übergibt das Ergebnis zurück.
+'
+' Ruft keine weitere Prozedur auf.
 
 
     ' Addieren:
@@ -975,11 +1040,17 @@ End Function
 
 
 <a name="subtrahieren"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function subtrahieren```</span><small>(Zeile 34)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Function subtrahieren```</span><small>(Zeile 31)</small>
 
 <div style="padding-left:2em;">
 
->  Diese Funktion subtrahiert b von a und übergibt das Ergebnis zurück.
+>  Anzahl der Referenzierungen im Modul: 1
+ Anzahl weiterer internen Aufrufe : 1
+
+ Diese Funktion subtrahiert b von a und übergibt das Ergebnis zurück.
+
+
+ Ruft die  Prozedur 'adddieren' auf.
 
 
 
@@ -996,7 +1067,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```main```](#main) : <small>  Zeile 63 : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+* [```main```](#main) : <small>  Zeile 70 : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
 
 
 
@@ -1022,37 +1093,31 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (1)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
+
+Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+
+
+
+
+
+- ```addieren``` <small> : [Zeile 41] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small><br>
 
 
 
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
 
 
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
 </details>
@@ -1079,7 +1144,13 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 ```
 Private Function subtrahieren(a as integer, b as integer) as integer
+' Anzahl der Referenzierungen im Modul: 1
+' Anzahl weiterer internen Aufrufe : 1
+'
 ''' Diese Funktion subtrahiert b von a und übergibt das Ergebnis zurück.
+'
+'
+' Ruft die  Prozedur 'adddieren' auf.
 
     ' Benutze die addieren Funktion:
     subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben
@@ -1168,7 +1239,7 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 <summary> Modulinformationen anzeigen/verbergen.
 </summary>
 
-  <br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br><br><br><br>### Fertig implementiert:<br><br>• Implementierung Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Einbindung vom Programmkopf-Docstring<br><br>• Implementierung von References-Durchsuchungen<br><br>• Implementierung eines Exportes zu HTML<br><br><br><br>• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren<br><br><br><br>### TODO: Größere TODOS:<br><br><br><br>• Call Sequenz / Calling Sequence:<br><br>Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.<br>Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br><br>
+  <br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br><br><br><br>### Fertig implementiert:<br><br>• Implementierung Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Einbindung vom Programmkopf-Docstring<br><br>• Implementierung von References-Durchsuchungen<br><br>• Implementierung eines Exportes zu HTML<br><br><br><br>• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren<br><br><br><br>### TODO: Größere TODOS:<br><br><br>• Call Sequenz / Calling Sequence:<br><br>Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.<br>Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br><br>
 
 </details>
 
@@ -1184,4 +1255,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-03 15:16:51 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-03 05:04:16: '6983855d76209bcc35cf6b040fe5c563dca49724')</small> 
+<small>Dokumentation generiert am 2024-01-04 23:13:11 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-04 17:38:26: '54adbbb1e6ff1e98f4f4d945be259bb3acde40f0')</small> 

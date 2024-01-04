@@ -1,28 +1,25 @@
 ﻿
 
 
-'''  Nach 3 unnoetigen Leerzeichen:
-''
-''
-''
-''
-' HAllo!
-' Dieses Modul beinhaltet einige Prozeduren, die für nichts sinnvoll sind...
-' Aber es hat immerhin einen Programmkopf.
+'''  
+' Beispiel Modul zum Testen der Dokumentation der Abruffolge.
 '
-' Wichtige Prozeduren: Keine
+' ## !!! # ACHTUNG BUGS: !!!
+' > Sub 'liebherr' wird insgesamt 6x referenziert, nicht 5x, wie aktuell dokumentiert!
+
 '''
-
-
-
-' Das hier soll irrelevant sein.
 
 
 
 
 
 Private Function addieren(a as integer, b as integer) as integer
+' Anzahl der Referenzierungen im Modul: 2
+' Anzahl weiterer internen Aufrufe : 0
+'
 ''' Diese Funktion addiert beide Zahlen miteinander und übergibt das Ergebnis zurück.
+'
+' Ruft keine weitere Prozedur auf.
 
 
     ' Addieren:
@@ -32,7 +29,13 @@ End Function
 
 
 Private Function subtrahieren(a as integer, b as integer) as integer
+' Anzahl der Referenzierungen im Modul: 1
+' Anzahl weiterer internen Aufrufe : 1
+'
 ''' Diese Funktion subtrahiert b von a und übergibt das Ergebnis zurück.
+'
+'
+' Ruft die  Prozedur 'adddieren' auf.
 
     ' Benutze die addieren Funktion:
     subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben
@@ -46,8 +49,12 @@ end Function
 
 
 Private Sub main()
-''' Hier soll das HAuptprogramm stehen.
-''' Alles was als KOMMENTAR hier unter der Definitionszeile einer Funktion steht, BEVOR EINE LEERZEILE folgt, soll später als Zusammenfassung angezeigt werden in der Code-Dokumentation - also ähnlich wie im docstring bei python.
+' Anzahl der Referenzierungen im Modul: 0
+' Anzahl weiterer internen Aufrufe : 3
+'
+''' Ruft die MEthode 'addieren' auf
+'
+''' Ruft die MEthode 'subtrahieren' auf
 
 ' Das hier soll nirgendwo stehen.
 
@@ -76,7 +83,11 @@ End Sub
 
 
 Public Sub bauer()
-''' Deklaration erfolgte via public sub.
+' Anzahl der Referenzierungen im Modul: 0
+' Anzahl weiterer internen Aufrufe : 5
+'
+''' Ruft MEHRFACH die Prozedur 'liebherr' auf (insgesamt 5 mal nacheinander in verschiedenen Kontexten)
+'
 
     MsgBox("Dies ist ein explizit als public gekennzeichnetes Sub.")
 
@@ -101,7 +112,11 @@ End Sub
 
 
    Sub liebherr()
-''' Deklaration erfolgte via sub.
+   ' Anzahl der Referenzierungen im Modul: 6
+    ' Anzahl weiterer internen Aufrufe : 0
+    '
+    ''' ' Ruft keine weitere Prozedur auf.
+
 
     MsgBox("Dies ist ein implizit als public gekennzeichnetes Sub.")
 
@@ -114,9 +129,10 @@ End Sub
 
 
    Sub casio()
-
-
-    ''' Hier gibt skeinen docstirng
+    ' Anzahl der Referenzierungen im Modul: 0
+    ' Anzahl weiterer internen Aufrufe : 0
+    '
+    ''' ' Ruft keine weitere Prozedur auf.
 
     MsgBox("Dies ist ein implizit als public gekennzeichnetes Sub.")
 

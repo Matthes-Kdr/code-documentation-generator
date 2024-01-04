@@ -985,6 +985,9 @@ class Procedure():
         # Durchsuche gesamten Quelltext nach allen Referenzierungen für jeweils alle gefundenen Prozeduren und speichere sie in den jeweiligen Objekten der einzelnen Prozeduren:
         cls.analyse_references()
 
+        # TODO:  Analysiere jede Prozedur und speichere jeden weiteren Aufruf einer weiteren Prozedur in dem Prozedur-Objekt. Geschrieben wird es erst später, da dann rekursiv auf alle Calling-Sequences zugegriffen werden kann
+        cls.analyse_call_sequences()
+
 
 
 
@@ -999,9 +1002,247 @@ class Procedure():
         cls.write_to_file(output_file_path)
 
 
+    @classmethod
+    def analyse_call_sequences(cls):
+        """
+        # TODOC: siehe generate_calling_entries
+
+        Anders als bei der vorherigen Prozedur ist es aber jetzt eine classmethod!
+        aber kann verwendet werden, indem einfach jede Instanz der Klasse referenzeiert wird und  durchgeschleust wird zur objekt method!
+        Auf jedes Prozedur-Objekt wird dann die MEthode analyse_calling_sequence_in_one_proc aufgerufen.
+                
+        """
+        cls.all_procedures_final
+
+        # Anwendung der bereits bestehenden Objekt-Methode fuer jede Prozedur:
+        for prozedur in cls.all_procedures_final:
+
+            prozedur_obj:Procedure = prozedur[0]
+
+            prozedur_obj.analyse_calling_sequences_in_one_proc()
+
+        db("Alle Prozeduren analysiert, noch nicht dokumentiert!")
+
+
+
+
+
+	
+
+
+
+
+
+
+
 
     
-    def generate_calling_entries(self) -> None:
+    def analyse_calling_sequences_in_one_proc(self) -> None:
+        """
+        basiert auf OLD_generate_calling_entries
+        nur ummüntzjg 
+        TODO. aktell
+        # JULIA    : aktuelle bearbeitung!
+        """
+        db("wird gerade refactored!!")
+
+
+
+
+        # =============================================================================
+        #### Ermittlung und Speicherung der Daten: ####
+        # =============================================================================
+        
+
+        # TODO: Extrahiere alle Referenzierungen dazwischen:
+        # db("...")
+
+        self.calling_sequences = []
+
+        # bei hauptfunc1 --> soll 2 einträge: unterfunkntionA + B
+        
+        # Procedure.all_procedures_final
+        # liste mit exemplarischen einzel-Eintrag: 
+        # (procedure_obj, procedure_name, procedure_line )
+
+
+        # Suche für alle vorhandenen Prozeduren jeweils ihre Referenzen heraus, und prüfe, ob eine Referenz zu der jetzt gerade untersuchten Prozedur (self.name) führt. Wenn ja, ist dies ein Aufruf, der der calling_sequences liste angehangen werden soll.
+        for (procedure_obj, prozedur_name, procedure_declaration_line_no) in Procedure.all_procedures_final:
+
+            """
+            # iterater = 6 # schleifenzähler pro prozedur
+            # einzelprozedur = Procedure.all_procedures_final[iterater][0]
+            # ENTSPRICHT JETZT:
+            procedure_obj
+
+            procedure_obj.references
+            # liste mit exemplarischen einzel-Eintrag: 
+            # (line_nr_aufruf, "uebergeordnetes_sub", code)
+            """
+            
+            # SCHNELLERER ANSATZ:
+            # Filtern der liste, so dass uebergeordnetes_sub == name
+            # dann fertig!
+            db("Suche Aufrufabfolge für Prozedur >> {}\nAktuell: check ob die folgende Prozedur aufgerufen wird: >> {}".format(self.name, prozedur_name)) # ist IMMER GLEICH in einem einzigen Aufruf! ("bauer")
+            relevante_references = [_ for _ in procedure_obj.references if _[1] == self.name]
+            db("----> Anzahl Relevanter Referenzierungen: {}".format(len(relevante_references)))
+
+
+
+            # =============================================================================
+            #### Füge die relevanten Referencen als Aufrufe innerhalb der zu analysierenden Prozedur hinzu: ####
+            # =============================================================================
+            
+
+            # OBSOLETE ALTERNATIVE MIT ENTPACKEN:
+            # for (line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name) in relevante_references:
+
+            #     self.calling_sequences.append((line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name)) # relevant ist nur der name aus der regex im cod
+                
+            # db("MIT ENTPACKEN: {}".format(self.calling_sequences))
+                
+
+            # ALTERNATIVE: 
+            for reference in relevante_references:
+                self.calling_sequences.append(reference)
+            
+            # Zugriff später bei Bedarf:
+            # for (line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name) in self.calling_sequence:
+
+
+        db("Calling Sequences for procedure {}:\n{}".format(self.name, self.calling_sequences))
+
+        # db("weiter")
+
+                # TODO: ??? ggf doch nicht nötig? Bei erstellung dieses tupels bei analyse der referenzen --> speichere auch das ziel, aleso den subname
+
+        """
+            # ALTER ALTERNATIVER ANSATZ:
+
+            # ist line_nr zwischen self.line.begin + self.line.end der ZU DOKUMENTIERENDEN Prozedur??
+            for (line_no_reference, uebergeordnetes_sub, code) in procedure_obj.references:
+                if line_no_reference < self.line_begin:
+                    continue
+                if line_no_reference > self.line_end:
+                    continue
+                # SONST: liegt es darin!!! AUFNEHMEN IN LISTE!!!!
+
+                self.calling_sequences.append((line_no_reference, uebergeordnetes_sub, code))
+            """
+
+
+
+
+
+        '''
+            # REFACTOR
+            # ALT: Dies heir funktionierte! (siehe auch OLD_calling_sequence methode!)
+            # die Konstante _PLACEHOLDER_REFERENCE beginnt in column 9
+        
+                # =============================================================================
+                #### Abschluss der Prüfung aller Referenzierungen aller Prozeduren. Jetzt: Dokumentation von allem in einem Rutsch FÜR DIESES EINE PROZEDUR: ####
+                    # TODO: Problem an dieser Vorgehensweise ist, dass nur die erste Stufe gelistet werden kann
+                    # TODO: Besser wäre es, die tatsächliche Dokumentation später direkt für alle Funcs zu machen, nachdem alle Prozeduren analysiert wurden... ähnlich wie toc...
+                # =============================================================================
+                    
+                
+                    # TODO:  Am Ende vor der dokumentation die liste noch sortieren aufsteigend nach line_no_reference konzeptionell identisch wie im index/toc
+
+                # db(self.calling_sequences)
+
+
+                _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@"
+
+                # TODO: ersetze im doc:
+                doc = self.documentation
+
+
+
+
+                # Initialisierung und  Parametrisierung  des Einleitungssatzes:
+                einleitungssatz = "Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden." # default
+
+
+                if len(self.calling_sequences) > 0:
+
+                    einleitungssatz = "Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:"
+
+                for (line_no_reference, uebergeordnetes_sub, line_code, target_procedure_name) in self.calling_sequences:
+
+                # for (line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name) in self.calling_sequence:
+
+
+
+
+                    # =============================================================================
+                    #### Verschiedene Darstellungsmöglichkeiten: ####
+                    # =============================================================================
+                    
+                    # TODO: Entscheiden!
+                    # ALTERNATIVE DARSTELLUNGEN:
+                    DARSTELLUNGSOPTION = 2 # current choice
+                    
+                    if DARSTELLUNGSOPTION == 0:
+
+                        replacer_placeholder_reference = f"<small>  Zeile {line_no_reference} </small> : ```{line_code}```"
+
+
+                    elif DARSTELLUNGSOPTION == 1:
+
+                        replacer_placeholder_reference = f"<small>  Zeile {line_no_reference} </small> : ```{target_procedure_name}```"
+                    
+                    elif DARSTELLUNGSOPTION == 2:
+                    
+                        line_code_without_new_line = line_code.rstrip("\n")
+                    
+                        replacer_placeholder_reference = f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code_without_new_line}``` </small><br>"
+                        
+
+
+
+
+
+
+
+
+
+
+                    
+                    # replacer_placeholder_reference = f"* [```{code}```](#{target_procedure}) : <small>  Zeile {line_no_reference} : ```{line_code}``` </small>"
+
+                    replacer_placeholder_reference = replacer_placeholder_reference  + f"\n{_PLACEHOLDER_REFERENCE}"
+                        
+                    # Ersetzen:
+                    doc = doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
+
+                        
+                # Loeschen des verbliebenen Platzhalters zum Einfuegen einzelner Referenzen:
+                doc = doc.replace(_PLACEHOLDER_REFERENCE, "")
+
+
+
+                # Einsetzen des Einleitungssatzes:
+                doc = doc.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
+                # Einsetzen der ÜBersichtsanzahl an Aufrufen:
+                doc = doc.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@", str(len(self.calling_sequences)))
+
+
+                # shortcut / resubstitution:
+                self.documentation = doc
+            '''
+
+
+
+
+
+
+
+
+
+
+
+
+    def OLD_generate_calling_entries(self) -> None:
         """
         # JULIA: Aktuell in DEV                                         
         mitten in dev.
@@ -1215,7 +1456,116 @@ class Procedure():
 
 
 
-    
+    def generate_calling_entries(self):
+        """
+        ### TODO: Sollte die interne self.documentation ähnlich wie die Methode generate_reference_entries modifizieren, dass die bereits ermittelten calling sequences in die Dokumentation eingebunden werden.
+
+        Zugriff erfolgt auf Objektebene.
+        Generiert von dem Objekt der Subklasse Function oder Sub die Dokumentation der Calling Sequence / Abrufabfolge.
+        Speichert das Ergebnis in der bereits existierenden Objektvariable procedure_obj.documentation
+        """
+        # JULIA: Ansätze vgl. gesamt-methode OLD_calling_sequence o.ä....
+
+
+
+        # =============================================================================
+        #### Abschluss der Prüfung aller Referenzierungen aller Prozeduren. Jetzt: Dokumentation von allem in einem Rutsch FÜR DIESES EINE PROZEDUR: ####
+            # TODO: Problem an dieser Vorgehensweise ist, dass nur die erste Stufe gelistet werden kann
+            # TODO: Besser wäre es, die tatsächliche Dokumentation später direkt für alle Funcs zu machen, nachdem alle Prozeduren analysiert wurden... ähnlich wie toc...
+        # =============================================================================
+            
+
+
+
+        
+        # TODO:  Am Ende vor der dokumentation die liste noch sortieren aufsteigend nach line_no_reference konzeptionell identisch wie im index/toc
+
+        # db(self.calling_sequences)
+
+
+        _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@"
+
+        # shortcut:
+        doc:str = self.documentation
+
+
+
+
+        # Initialisierung und  Parametrisierung  des Einleitungssatzes:
+        einleitungssatz = "Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden." # default
+
+
+        if len(self.calling_sequences) > 0:
+
+            einleitungssatz = "Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:"
+
+        for (line_no_reference, uebergeordnetes_sub, line_code, target_procedure_name) in self.calling_sequences:
+
+        # for (line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name) in self.calling_sequence:
+
+
+
+
+            # =============================================================================
+            #### Verschiedene Darstellungsmöglichkeiten: ####
+            # =============================================================================
+            
+            # TODO: Entscheiden!
+            # ALTERNATIVE DARSTELLUNGEN:
+            DARSTELLUNGSOPTION = 2 # current choice
+            
+            if DARSTELLUNGSOPTION == 0:
+
+                replacer_placeholder_reference = f"<small>  Zeile {line_no_reference} </small> : ```{line_code}```"
+
+
+            elif DARSTELLUNGSOPTION == 1:
+
+                replacer_placeholder_reference = f"<small>  Zeile {line_no_reference} </small> : ```{target_procedure_name}```"
+            
+            elif DARSTELLUNGSOPTION == 2:
+            
+                line_code_without_new_line = line_code.rstrip("\n")
+            
+                replacer_placeholder_reference = f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code_without_new_line}``` </small><br>"
+                
+
+
+
+
+
+
+
+
+
+
+            
+            # replacer_placeholder_reference = f"* [```{code}```](#{target_procedure}) : <small>  Zeile {line_no_reference} : ```{line_code}``` </small>"
+
+            replacer_placeholder_reference = replacer_placeholder_reference  + f"\n{_PLACEHOLDER_REFERENCE}"
+                
+            # Ersetzen:
+            doc = doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
+
+        # Loeschen des verbliebenen Platzhalters zum Einfuegen einzelner Referenzen:
+            # TODO: Lösche es nicht, sondern setze noch an den entsprechenden Stellen rekursiv die untergeordneten call_sequences der aufgerufenen MEthoden ein!
+        doc = doc.replace(_PLACEHOLDER_REFERENCE, "")
+
+
+
+        # Einsetzen des Einleitungssatzes:
+        doc = doc.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
+        # Einsetzen der ÜBersichtsanzahl an Aufrufen:
+        doc = doc.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@", str(len(self.calling_sequences)))
+
+
+        # shortcut / resubstitution:
+        self.documentation = doc
+
+
+
+
+
     # @classmethod # eigentlich bezieht sich das auf ein einzelnes Objekt!!!
     def generate_reference_entries(self) -> None:
     # def generate_reference_entries(cls, procedure_obj) -> None:
@@ -1418,7 +1768,12 @@ class Procedure():
                     """
 
 
+                    # JULIA: Bisheriger ansatz:
+                    # procedure_obj.OLD_generate_calling_entries() # so funktionierte es mit der 1. top level ebene!
+                    
                     procedure_obj.generate_calling_entries()
+
+                    # TODO:  schreiben der calling sequence!
 
                     file.write(procedure_obj.documentation)
 

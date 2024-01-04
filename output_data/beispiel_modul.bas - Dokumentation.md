@@ -5,10 +5,71 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-04 15:33**
 
 
-Generierungsdatum dieser Dokumentation: 2024-01-04 17:15:18
+Generierungsdatum dieser Dokumentation: **2024-01-04 23:13:11**
 
 
 
+
+
+
+
+
+
+<!-- TODO: nur temporrary!  -->
+# ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:
+
+
+
+<details>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+
+
+
+
+
+
+<!-- TODO: Platzhalter platz -->
+<br>
+<br>
+<br>
+<br>
+<br>
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+
+
+* ```hauptfunc1```
+  * ```unterfunktionA```
+    * ```wiederholungsfunktion```
+  * ```unterfunktionB```
+* ```hauptfunc2```
+* ```hauptfunc3```
+* ```wiederholungsfunktion```
+  * ```wiederholungsfunktion```
+
+
+
+
+</details>
 
 
 ﻿
@@ -154,17 +215,6 @@ Kein Aufruf gefunden.
 ---
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
 
 
 
@@ -185,17 +235,6 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-
-
-<!-- TODO: Platzhalter platz -->
-<br>
-<br>
-<br>
-<br>
-<br>
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
 
@@ -357,17 +396,6 @@ Kein Aufruf gefunden.
 ---
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
 
 
 
@@ -384,17 +412,6 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
-
-
-<!-- TODO: Platzhalter platz -->
-<br>
-<br>
-<br>
-<br>
-<br>
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
 
@@ -547,17 +564,6 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
 
 
 
@@ -574,17 +580,6 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
-
-
-<!-- TODO: Platzhalter platz -->
-<br>
-<br>
-<br>
-<br>
-<br>
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
 
@@ -735,17 +730,6 @@ Kein Aufruf gefunden.
 ---
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
 
 
 
@@ -765,17 +749,6 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-
-
-<!-- TODO: Platzhalter platz -->
-<br>
-<br>
-<br>
-<br>
-<br>
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
 
@@ -955,17 +928,6 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
 
 
 
@@ -982,17 +944,6 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
-
-
-<!-- TODO: Platzhalter platz -->
-<br>
-<br>
-<br>
-<br>
-<br>
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
 
@@ -1147,17 +1098,6 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
 
 
 
@@ -1175,17 +1115,6 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-
-
-<!-- TODO: Platzhalter platz -->
-<br>
-<br>
-<br>
-<br>
-<br>
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
 
 
 
@@ -1326,4 +1255,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-04 17:15:18 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-04 15:17:08: '76e27f63bb91cd11b488875157668fe475ddefb2')</small> 
+<small>Dokumentation generiert am 2024-01-04 23:13:11 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-04 17:38:26: '54adbbb1e6ff1e98f4f4d945be259bb3acde40f0')</small> 

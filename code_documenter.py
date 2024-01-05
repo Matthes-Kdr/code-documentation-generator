@@ -414,8 +414,9 @@ class MetaData(metaclass=AutoCallMeta):
 
         # HACK: path for Source-vba-code
         input_file_path = "input_data/beispiel_modul.bas"
-        # input_file_path = "input_data/beispiel_modul1.bas"
-        # input_file_path = "input_data/beispiel_modul1.bas"
+        input_file_path = "input_data/beispiel_modul2.bas"
+        input_file_path = "input_data/beispiel_modul1.bas"
+        input_file_path = "input_data/beispiel_modul_rekursiv.bas"
         
         cls.set_input_path(input_file_path)
 
@@ -1039,6 +1040,34 @@ class Procedure():
         return None
 
 
+    @staticmethod
+    def indent_str(text:str, count_of_indents:int=0) -> str:
+        """
+        Stellt jeder Zeile entsprechende Indention-Symbols vorweg.
+
+        Args:
+            text (str): Text
+            count_of_indents (int, optional): Level of indention. Defaults to 0.
+
+        Returns:
+            str: Text eingerückt.
+        """
+        CHARS_PER_INDENT = "  "
+
+        indendet_text = ""
+        
+        pre_line:str = CHARS_PER_INDENT * count_of_indents
+
+        list_of_lines = text.split("\n")
+    
+        for line in list_of_lines:
+            indendet_text = indendet_text + pre_line + line
+    
+
+
+        return indendet_text
+    
+
 
 
     def prepare_single_call_sequence_docs(self, level=0):
@@ -1060,21 +1089,32 @@ class Procedure():
 
 
             db("diese proz ist fertig!")
-            db("diese proz ist fertig!")
+            # db("diese proz ist fertig!")
 
             # TODO: Hier noch level berücksichtigen mit einzügen!
-            return self.calling_sequences_doc
+            
+
+            text_to_return = self.indent_str(self.calling_sequences_doc)
+            # return self.calling_sequences_doc 
+            return text_to_return
+
+
+
+            # return self.calling_sequences_doc
 
 
 
         # Initialisiert den Initialtext aus der template, falls es noch keinen Text gibt:
         if not self.calling_sequences_doc:
 
-            self.calling_sequences_doc = self.__read_template("templates/prozedur_calling_sequences.md")
+            self.calling_sequences_doc = ""
+
+            # self.calling_sequences_doc = self.__read_template("templates/prozedur_calling_sequences.md")
 
 
 
         _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@"
+        _PLACEHOLDER_REFERENCE = ""
 
         # shortcut:
         # OBSOLET:2024-01-05 - 02:48:47
@@ -1103,9 +1143,11 @@ class Procedure():
                 replacer_placeholder_reference = ALTERNATIVE_DARSTELLUNGSOPTIONEN[DARSTELLUNGSOPTION]
                 replacer_placeholder_reference = replacer_placeholder_reference  + f"\n{_PLACEHOLDER_REFERENCE}"
                     
-                # Ersetzen:
-                self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
+                # # Ersetzen:
+                # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
                 
+                
+                self.calling_sequences_doc = self.calling_sequences_doc  + replacer_placeholder_reference
                 
 
 
@@ -1127,9 +1169,48 @@ class Procedure():
                 further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=level + 1)
 
 
-                self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, further_calls_doc)
+                # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, further_calls_doc)
+                self.calling_sequences_doc = self.calling_sequences_doc  +  further_calls_doc
+    
+    
+            
+            
+            # BUGFIX: indention
+            self.calling_sequences_state = True
 
-                return self.calling_sequences_doc 
+            '''
+            # level Berücksichtigen:
+            def indent_str(text:str, count_of_indents:int=0) -> str:
+                """
+                Stellt jeder Zeile entsprechende Indention-Symbols vorweg.
+
+                Args:
+                    text (str): Text
+                    count_of_indents (int, optional): Level of indention. Defaults to 0.
+
+                Returns:
+                    str: Text eingerückt.
+                """
+                CHARS_PER_INDENT = "  "
+
+                indendet_text = ""
+                
+                pre_line:str = CHARS_PER_INDENT * count_of_indents
+
+                list_of_lines = text.split
+            
+                for line in list_of_lines:
+                    indendet_text = indendet_text + pre_line + line
+            
+
+
+                return indendet_text
+            '''
+
+
+            text_to_return = self.indent_str(self.calling_sequences_doc)
+            # return self.calling_sequences_doc 
+            return text_to_return
 
 
 
@@ -1164,8 +1245,10 @@ class Procedure():
 
 
             # TODO: Hier noch level berücksichtigen mit einzügen!
-            return self.calling_sequences_doc
-
+            # return self.calling_sequences_doc
+            text_to_return = self.indent_str(self.calling_sequences_doc)
+            # return self.calling_sequences_doc 
+            return text_to_return
 
             # shortcut / resubstitution:
             # self.documentation = doc

@@ -19,6 +19,14 @@ Generierungsdatum dieser Dokumentation: **@PLACEHOLDER_TIMESTAMP_NOW@**
 # ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:
 
 
+**Aktuelle Bugs:**
+
+- Aufrufabfolge wird noch nicht korrekt dargestellt (Einrückungen sind falsch!)
+- Achtung: bei rekursiven Funktionen: würde er endlosschleife machen! dann einfach falls ziel-name == uebergeordneter-name dann: [ ggf.: rekursiv aufruf nur einmalig]
+
+
+
+
 
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>

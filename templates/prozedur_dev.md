@@ -54,10 +54,25 @@
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
+<details>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
 
 <!-- <div style="padding-left:1em;"> -->
 
+
+
+
+
 @PLACEHOLDER_PROCEDURE_CALLING_SEQUENCES_BLOCK@
+
+
+
 
 
 <!-- </div> -->
@@ -67,6 +82,9 @@
 
 
 
+
+
+</details>
 
 
 

@@ -996,6 +996,10 @@ class Procedure():
         # TODO:  Analysiere jede Prozedur und speichere jeden weiteren Aufruf einer weiteren Prozedur in dem Prozedur-Objekt. Geschrieben wird es erst später, da dann rekursiv auf alle Calling-Sequences zugegriffen werden kann
         cls.analyse_call_sequences()
 
+        cls.prepare_all_call_sequence_docs()
+
+
+
 
 
 
@@ -1008,6 +1012,229 @@ class Procedure():
 
         # Aufruf der Methode zum tatsächlichen Schreiben der Textdatei:
         cls.write_to_file(output_file_path)
+
+
+
+
+
+
+
+    @classmethod
+    def get_procedure_obj_by_name(cls, procedure_name:str) -> 'Procedure':
+        """
+        Gibt das Prozedur-Objetk mit dem übergebenen Namen zurück
+        Das Objekt ist aus der Subklasse Sub oder Function.
+
+        Args:
+            procedure_name (str): Name der gesuchten Procedur
+        """
+
+        # Procedure.all_procedures_final
+        
+        for (prozedur_obj, prozedur_name, prozedur_initialisierungszeile) in Procedure.all_procedures_final:
+            if prozedur_name == procedure_name:
+                return prozedur_obj
+
+        db("nicht gefunden!!!")    
+        return None
+
+
+
+
+    def prepare_single_call_sequence_docs(self, level=0):
+        """
+        ### TODOC: Siehe prepare_all_call_sequence_docs...
+
+        Generiert die vollständige Dokumentation der Aufrufsequenzen in den einzelnen Objekten und speichert sie im Attribut obj.calling_sequences_doc. Nach vervollständigung wird obj.calling_sequences_state = True  gesetzt.
+
+        Zugriff erfolgt auf Objekt-Ebene.
+        """
+
+
+
+
+        db(f"name der ZU ANALYSIERENDEN prozedur : {self.name}")
+
+
+        if self.calling_sequences_state:
+
+
+            db("diese proz ist fertig!")
+            db("diese proz ist fertig!")
+
+            # TODO: Hier noch level berücksichtigen mit einzügen!
+            return self.calling_sequences_doc
+
+
+
+        # Initialisiert den Initialtext aus der template, falls es noch keinen Text gibt:
+        if not self.calling_sequences_doc:
+
+            self.calling_sequences_doc = self.__read_template("templates/prozedur_calling_sequences.md")
+
+
+
+        _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@"
+
+        # shortcut:
+        # OBSOLET:2024-01-05 - 02:48:47
+        # current_doc:str = self.current
+
+        # Initialisierung und  Parametrisierung  des Einleitungssatzes:
+        einleitungssatz = "Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden." # default
+        
+        
+        if len(self.calling_sequences) > 0:
+            einleitungssatz = "Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:"
+
+            # call --> subtrahieren
+            for (line_no_reference, uebergeordnetes_sub, line_code, target_procedure_name) in self.calling_sequences:
+                
+                # TODO: Entscheiden bzgl. Darstellung / Ausgabe der Calling Sequenz Entry:
+                DARSTELLUNGSOPTION = 2 # current choice
+                
+                ALTERNATIVE_DARSTELLUNGSOPTIONEN = {
+                    0 : f"<small>  Zeile {line_no_reference} </small> : ```{line_code}```",
+                    1 : f"<small>  Zeile {line_no_reference} </small> : ```{target_procedure_name}```",
+                    2 : f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small><br>".replace(line_code, line_code.rstrip("\n")),
+                }
+        
+
+                replacer_placeholder_reference = ALTERNATIVE_DARSTELLUNGSOPTIONEN[DARSTELLUNGSOPTION]
+                replacer_placeholder_reference = replacer_placeholder_reference  + f"\n{_PLACEHOLDER_REFERENCE}"
+                    
+                # Ersetzen:
+                self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
+                
+                
+
+
+                # JULIA: Rekursive Aufrufe für untergeordnete Calling-sequenzabfolge:
+                # shortcut / resubstitution:
+                # self.calling_sequences_doc = self.calling_sequences_doc
+                # TODO: get the object from target_procedure_name:
+                
+
+
+
+
+                db(f"neuer ziel-name =  {target_procedure_name}")
+                target_procedure_obj = self.get_procedure_obj_by_name(target_procedure_name)
+
+
+                # Rekursiv: den nächsten Platzhalter mit der nächsten Dokumentation des aufgerufenen calls füllen:
+                
+                further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=level + 1)
+
+
+                self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, further_calls_doc)
+
+                return self.calling_sequences_doc 
+
+
+
+                # TODO: An dieser Stelle ggfs. rekursiv wiederholen??!     
+
+                # db(target_procedure_name)
+
+                # TODO: call the same method recursivly
+
+        else:
+
+            # Loeschen des verbliebenen Platzhalters zum Einfuegen einzelner Referenzen:
+            # TODO: Lösche es nicht, sondern setze noch an den entsprechenden Stellen rekursiv die untergeordneten call_sequences der aufgerufenen MEthoden ein!
+            self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, "")
+
+
+
+            # Einsetzen des Einleitungssatzes:
+            self.calling_sequences_doc = self.calling_sequences_doc.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
+
+
+
+
+            # Einsetzen der ÜBersichtsanzahl an Aufrufen:
+            self.calling_sequences_doc = self.calling_sequences_doc.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@", str(len(self.calling_sequences)))
+
+
+
+
+            self.calling_sequences_state = True
+
+
+
+            # TODO: Hier noch level berücksichtigen mit einzügen!
+            return self.calling_sequences_doc
+
+
+            # shortcut / resubstitution:
+            # self.documentation = doc
+
+
+
+
+
+
+
+
+
+
+    @classmethod
+    def prepare_all_call_sequence_docs(cls):
+        """
+        Generiert die vollständige Dokumentation der Aufrufsequenzen in den einzelnen Objekten und speichert sie im Attribut obj.calling_sequences_doc. Nach vervollständigung wird obj.calling_sequences_state = True  gesetzt.
+
+        Zugriff erfolgt auf Superklassen-Ebene, wobei intern die Instanzen der Klasse referenziert werden
+
+
+        """
+
+
+        for prozedur in cls.all_procedures_final:
+
+            prozedur_obj:Procedure = prozedur[0]
+
+
+            # if prozedur_obj.calling_sequences_state:
+            #     db("diese proz ist fertig!")
+            #     db("diese proz ist fertig!")
+            #     continue
+
+            
+
+            # ELSE:  DANN NICHT FERTIG:
+
+
+            prozedur_obj.prepare_single_call_sequence_docs()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @classmethod
@@ -1302,8 +1529,30 @@ class Procedure():
 
 
 
-    def generate_calling_entries(self, level=0):
+    def XX_generate_calling_entries(self, level=0) -> str:
+    # def generate_calling_entries(self, current_doc=None, level=0) -> str:
         """
+
+        ### CURRENT REFACTORY
+
+
+        2024-01-05 - 03:34:08 :
+        siehe analyse_call_sequences --> eher dort!
+
+        2024-01-05 - 03:00:54:
+        doch nicht! alles per attr calling_sequences_doc:tple
+
+
+        2024-01-05 - 02:46:42:
+        gebe den Text zurück und nehme ihn als parameter als input!
+
+
+        2024-01-05 - 02:35:23:
+        Bislang wurde direkt im Objektvariablen self.doc modifiziert, 
+        neuerdings soll erst mal alles bzgl. calling sequence in einem neuen (aber bereits initialisiertem) Attribut  self.doc_calling_sequences gespeichert werden.
+        Damit kann es im Nachgang einmalig in self.doc eingesetzt werden in einre anderen MEthode.
+
+
         ### TODO: Sollte die interne self.documentation ähnlich wie die Methode generate_reference_entries modifizieren, dass die bereits ermittelten calling sequences in die Dokumentation eingebunden werden.
 
         Zugriff erfolgt auf Objektebene.
@@ -1321,6 +1570,121 @@ class Procedure():
         """
         
         # TODO:  Am Ende vor der dokumentation die liste noch sortieren aufsteigend nach line_no_reference konzeptionell identisch wie im index/toc - ODER IST DAS BEREITS ERLEDIGT?
+
+
+
+        if not self.calling_sequences_state:
+            db("hier abbruchskriterium!")
+            db("hier abbruchskriterium!")
+            # TODO: Bei rückgabe die levels berücksichtigen!
+            return self.calling_sequences_doc
+        
+        # Initialisiert den Initialtext aus der template, falls es noch keinen Text gibt:
+        if not self.calling_sequences_doc:
+            self.calling_sequences_doc = self.__read_template("template/prozedur_calling_sequences.md")
+
+
+
+
+
+        
+
+        _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@"
+
+        # shortcut:
+        # OBSOLET:2024-01-05 - 02:48:47
+        # current_doc:str = self.current
+
+        # Initialisierung und  Parametrisierung  des Einleitungssatzes:
+        einleitungssatz = "Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden." # default
+        
+        
+        if len(self.calling_sequences) > 0:
+            einleitungssatz = "Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:"
+
+            # call --> subtrahieren
+            for (line_no_reference, uebergeordnetes_sub, line_code, target_procedure_name) in self.calling_sequences:
+                
+                # TODO: Entscheiden bzgl. Darstellung / Ausgabe der Calling Sequenz Entry:
+                DARSTELLUNGSOPTION = 2 # current choice
+                
+                ALTERNATIVE_DARSTELLUNGSOPTIONEN = {
+                    0 : f"<small>  Zeile {line_no_reference} </small> : ```{line_code}```",
+                    1 : f"<small>  Zeile {line_no_reference} </small> : ```{target_procedure_name}```",
+                    2 : f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small><br>".replace(line_code, line_code.rstrip("\n")),
+                }
+        
+
+                replacer_placeholder_reference = ALTERNATIVE_DARSTELLUNGSOPTIONEN[DARSTELLUNGSOPTION]
+                replacer_placeholder_reference = replacer_placeholder_reference  + f"\n{_PLACEHOLDER_REFERENCE}"
+                    
+                # Ersetzen:
+                self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
+                
+                
+                # JULIA: Rekursive Aufrufe für untergeordnete Calling-sequenzabfolge:
+                # shortcut / resubstitution:
+                # self.calling_sequences_doc = self.calling_sequences_doc
+                # TODO: get the object from target_procedure_name:
+
+                # Rekursiv: den nächsten Platzhalter mit der nächsten Dokumentation des aufgerufenen calls füllen:
+                
+                further_calls = self.generate_calling_entries(level=level + 1)
+                self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, further_calls)
+
+
+                # TODO: An dieser Stelle ggfs. rekursiv wiederholen??!     
+
+                # db(target_procedure_name)
+
+                # TODO: call the same method recursivly
+
+        else:
+
+                
+
+
+            # Loeschen des verbliebenen Platzhalters zum Einfuegen einzelner Referenzen:
+            # TODO: Lösche es nicht, sondern setze noch an den entsprechenden Stellen rekursiv die untergeordneten call_sequences der aufgerufenen MEthoden ein!
+            self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, "")
+
+
+
+            # Einsetzen des Einleitungssatzes:
+            self.calling_sequences_doc = self.calling_sequences_doc.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
+            # Einsetzen der ÜBersichtsanzahl an Aufrufen:
+            self.calling_sequences_doc = self.calling_sequences_doc.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@", str(len(self.calling_sequences)))
+
+
+            # shortcut / resubstitution:
+            # self.documentation = doc
+
+
+
+
+    def OLD_20240105_0229_generate_calling_entries(self, level=0):
+        """
+        ### war OK.
+
+        ### TODO: Sollte die interne self.documentation ähnlich wie die Methode generate_reference_entries modifizieren, dass die bereits ermittelten calling sequences in die Dokumentation eingebunden werden.
+
+        Zugriff erfolgt auf Objektebene.
+
+        Modifiziert das bereits existierende String in der Objektvariablen self.documentation.
+
+        Generiert von dem Objekt der Subklasse Function oder Sub die Dokumentation der Calling Sequence / Abrufabfolge, basierend auf dem ebenfalls bereits gespeicherten Objektvariablen self.calling_sequence
+        
+        Ansätze und Vorgehensweise basiert auf der anfangs verwendeten Methode OLD_calling_sequence
+
+        ### TODO / # AUSBLICK: Bislang wird nur auf Toplevel dokumentiert, d.h. innerhalb einer Prozedur ProcA wird z. B. der Aufruf von Prozedur ProcB dokumentiert.  Sofern innerhalb ProcB z.B. ein weiterer Aufruf von ProcC folgt, wird dieser NICHT an der Stelle der Dokumentation von ProcA aufgelistet.
+
+
+        ### TODO: toplevel erhöht sich mit jeder Rekursion. Daraus können die Einrückungen realisiert
+        """
+        
+        # TODO:  Am Ende vor der dokumentation die liste noch sortieren aufsteigend nach line_no_reference konzeptionell identisch wie im index/toc - ODER IST DAS BEREITS ERLEDIGT?
+
+
 
         _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@"
 
@@ -1556,7 +1920,12 @@ class Procedure():
 
                     db("name der aktuell zu dokumentierenden prozedur: {}".format(procedure_obj.name))
                     # Ermittlung + Dokumentation Calling Sequences:
-                    procedure_obj.generate_calling_entries()
+                    # procedure_obj.generate_calling_entries()
+                    if not procedure_obj.calling_sequences_state:
+                        db(f"PROBLEM! mit {procedure_obj.name}")
+                        db(f"PROBLEM! mit {procedure_obj.name}")
+                    # BUG: Problem!
+                    procedure_obj.documentation = procedure_obj.documentation.replace("@PLACEHOLDER_PROCEDURE_CALLING_SEQUENCES_BLOCK@", procedure_obj.calling_sequences_doc)
 
 
 
@@ -1975,7 +2344,10 @@ class Procedure():
         # =============================================================================
         #### Zusammenfassen und Schreiben der Dokumentation: ####
         # =============================================================================
-        
+        # TODO später zu tuple zusammenfügen!
+        self.calling_sequences_doc = None
+        self.calling_sequences_state = False
+        # self.doc_of_calling_sequences = (calling_sequences_doc, calling_sequences_state)
         self.generate_documentation()
 
 

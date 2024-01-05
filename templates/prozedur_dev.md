@@ -57,35 +57,7 @@
 
 <!-- <div style="padding-left:1em;"> -->
 
-
-<details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-
-
-
-
-
-
-
-
-
-</details>
+@PLACEHOLDER_PROCEDURE_CALLING_SEQUENCES_BLOCK@
 
 
 <!-- </div> -->

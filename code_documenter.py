@@ -1156,17 +1156,19 @@ class Procedure():
                 # self.calling_sequences_doc = self.calling_sequences_doc
                 # TODO: get the object from target_procedure_name:
                 
+                # BUGFIX: against RecursionError :
+                if target_procedure_name == self.name:
+                    further_calls_doc = self.indent_str("<br>\n... ( recursivly under certain conditions ... )", level+1)
+                else:
 
 
+                    db(f"neuer ziel-name =  {target_procedure_name}")
+                    target_procedure_obj = self.get_procedure_obj_by_name(target_procedure_name)
 
 
-                db(f"neuer ziel-name =  {target_procedure_name}")
-                target_procedure_obj = self.get_procedure_obj_by_name(target_procedure_name)
-
-
-                # Rekursiv: den nächsten Platzhalter mit der nächsten Dokumentation des aufgerufenen calls füllen:
-                
-                further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=level + 1)
+                    # Rekursiv: den nächsten Platzhalter mit der nächsten Dokumentation des aufgerufenen calls füllen:
+                    
+                    further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=level + 1)
 
 
                 # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, further_calls_doc)

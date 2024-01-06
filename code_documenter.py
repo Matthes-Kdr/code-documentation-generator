@@ -1154,14 +1154,16 @@ class Procedure():
                 # JULIA: Rekursive Aufrufe für untergeordnete Calling-sequenzabfolge:
                 # shortcut / resubstitution:
                 # self.calling_sequences_doc = self.calling_sequences_doc
-                # TODO: get the object from target_procedure_name:
                 
-                # BUGFIX: against RecursionError :
+                
+                
+                # _BUGFIX: against RecursionError :
                 if target_procedure_name == self.name:
-                    further_calls_doc = self.indent_str("<br>\n... ( recursivly under certain conditions ... )", level+1)
+                    further_calls_doc = self.indent_str("(... recursivly under certain conditions ... )<br>", level+1)
                 else:
 
 
+                    # get the object from target_procedure_name:
                     db(f"neuer ziel-name =  {target_procedure_name}")
                     target_procedure_obj = self.get_procedure_obj_by_name(target_procedure_name)
 
@@ -1214,13 +1216,6 @@ class Procedure():
             # return self.calling_sequences_doc 
             return text_to_return
 
-
-
-                # TODO: An dieser Stelle ggfs. rekursiv wiederholen??!     
-
-                # db(target_procedure_name)
-
-                # TODO: call the same method recursivly
 
         else:
 
@@ -1279,7 +1274,10 @@ class Procedure():
 
             prozedur_obj:Procedure = prozedur[0]
 
+            prozedur_obj.prepare_single_call_sequence_docs()
 
+            """
+            # OBSOLETER ALTER ANSATZ:
             # if prozedur_obj.calling_sequences_state:
             #     db("diese proz ist fertig!")
             #     db("diese proz ist fertig!")
@@ -1290,8 +1288,7 @@ class Procedure():
             # ELSE:  DANN NICHT FERTIG:
 
 
-            prozedur_obj.prepare_single_call_sequence_docs()
-
+            """
 
 
 
@@ -1338,8 +1335,13 @@ class Procedure():
 
             prozedur_obj.analyse_calling_sequences_in_one_proc()
 
-        db("Alle Prozeduren analysiert, noch nicht dokumentiert!")
 
+
+            # Sortiere generierte Liste aufsteigend nach den Aufrufzeilen:
+            prozedur_obj.calling_sequences = sorted(prozedur_obj.calling_sequences, key=lambda stored_tuple: stored_tuple[0])
+
+
+        db("Alle Prozeduren analysiert, noch nicht dokumentiert!")
 
 
 

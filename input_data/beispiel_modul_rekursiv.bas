@@ -54,6 +54,8 @@ Private Function rekursiv(tx as string) as string
 
     call liebherr
 
+    call liebherr("nochmal")
+
 
 
 
@@ -84,11 +86,15 @@ end Function
 
 Private Sub main()
 ' Anzahl der Referenzierungen im Modul: 0
-' Anzahl weiterer internen Aufrufe : 3
+' Anzahl weiterer internen Aufrufe : 5
 '
 ''' Ruft die MEthode 'addieren' auf
 '
 ''' Ruft die MEthode 'subtrahieren' auf (und darin dann wieder addieren)
+'
+''' Ruft die MEthode 'liebherr' auf
+'
+''' Ruft die MEthode 'rekursiv' auf
 '
 ''' Ruft die MEthode 'liebherr' auf
 
@@ -108,7 +114,11 @@ Private Sub main()
     next i
 
 
-    call liebherr
+    call liebherr("vor rekursivem Aufruf")
+
+    call rekursiv
+
+    call liebherr("NACH rekursivem Aufruf")
 
 
 End Sub

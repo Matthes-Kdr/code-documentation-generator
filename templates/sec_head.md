@@ -21,8 +21,9 @@ Generierungsdatum dieser Dokumentation: **@PLACEHOLDER_TIMESTAMP_NOW@**
 
 **Aktuelle Bugs:**
 
-- Aufrufabfolge wird noch nicht korrekt dargestellt (Einrückungen sind falsch!)
-- Achtung: bei rekursiven Funktionen: würde er endlosschleife machen! dann einfach falls ziel-name == uebergeordneter-name dann: [ ggf.: rekursiv aufruf nur einmalig]
+- Aufrufabfolge wird noch nicht korrekt dargestellt 
+  - (Einrückungen sind falsch!)
+
 
 
 

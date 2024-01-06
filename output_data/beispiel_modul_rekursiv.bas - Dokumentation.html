@@ -41,14 +41,18 @@
     </head>
     <body class="vscode-body vscode-light">
         <h1 id="code-dokumentation-modul-beispiel_modul_rekursivbas">Code-Dokumentation: Modul 'beispiel_modul_rekursiv.bas'</h1>
-<p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul_rekursiv.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2024-01-05 16:37</strong></p>
-<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-05 16:45:36</strong></p>
+<p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul_rekursiv.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2024-01-06 16:17</strong></p>
+<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-06 16:33:41</strong></p>
 <!-- TODO: nur temporrary!  -->
 <h1 id="zwischengelagert-als-ziel-vorgabe-für-abrufsequenz">ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:</h1>
 <p><strong>Aktuelle Bugs:</strong></p>
 <ul>
-<li>Aufrufabfolge wird noch nicht korrekt dargestellt (Einrückungen sind falsch!)</li>
-<li>Achtung: bei rekursiven Funktionen: würde er endlosschleife machen! dann einfach falls ziel-name == uebergeordneter-name dann: [ ggf.: rekursiv aufruf nur einmalig]</li>
+<li>Aufrufabfolge wird noch nicht korrekt dargestellt
+<ul>
+<li>(Einrückungen sind falsch!)</li>
+<li>Reihenfolge ist bislang noch nach Prozedurnamen, nicht nach Aufrufreihenfolge sortiert!</li>
+</ul>
+</li>
 </ul>
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
@@ -97,10 +101,10 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 <li>
 <p><a href="#sec_subs"><strong>Subs</strong></a> (4)</p>
 <ul>
-<li><a href="#bauer"><code>bauer</code></a> <small>(Zeile 121)</small></li>
-<li><a href="#casio"><code>casio</code></a> <small>(Zeile 167)</small></li>
-<li><a href="#liebherr"><code>liebherr</code></a> <small>(Zeile 150)</small></li>
-<li><a href="#main"><code>main</code></a> <small>(Zeile 85)</small></li>
+<li><a href="#bauer"><code>bauer</code></a> <small>(Zeile 131)</small></li>
+<li><a href="#casio"><code>casio</code></a> <small>(Zeile 177)</small></li>
+<li><a href="#liebherr"><code>liebherr</code></a> <small>(Zeile 160)</small></li>
+<li><a href="#main"><code>main</code></a> <small>(Zeile 87)</small></li>
 </ul>
 <!-- ---------- FUNCTIONS: --------------- -->
 </li>
@@ -109,7 +113,7 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 <ul>
 <li><a href="#addieren"><code>addieren</code></a> <small>(Zeile 16)</small></li>
 <li><a href="#rekursiv"><code>rekursiv</code></a> <small>(Zeile 34)</small></li>
-<li><a href="#subtrahieren"><code>subtrahieren</code></a> <small>(Zeile 65)</small></li>
+<li><a href="#subtrahieren"><code>subtrahieren</code></a> <small>(Zeile 67)</small></li>
 </ul>
 <!-- ---------- TAIL: --------------- -->
 </li>
@@ -138,7 +142,7 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 <p><a name="bauer"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub bauer</code></span><small>(Zeile 121)</small></p>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub bauer</code></span><small>(Zeile 131)</small></p>
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 0
@@ -158,10 +162,10 @@ Anzahl weiterer internen Aufrufe : 5</p>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
-<li><code>liebherr</code> <small> : [Zeile 131] : <code>    call liebherr</code> </small><br></li>
-<li><code>liebherr</code> <small> : [Zeile 132] : <code>    call liebherr ' Aufruf</code> </small><br></li>
-<li><code>liebherr</code> <small> : [Zeile 134] : <code>    call liebherr(&quot;ERROR&quot;) ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!</code> </small><br></li>
-<li><code>liebherr</code> <small> : [Zeile 138] : <code>    var = liebherr(&quot;gvkil&quot;)</code> </small><br></li>
+<li><code>liebherr</code> <small> : [Zeile 141] : <code>    call liebherr</code> </small><br></li>
+<li><code>liebherr</code> <small> : [Zeile 142] : <code>    call liebherr ' Aufruf</code> </small><br></li>
+<li><code>liebherr</code> <small> : [Zeile 144] : <code>    call liebherr(&quot;ERROR&quot;) ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!</code> </small><br></li>
+<li><code>liebherr</code> <small> : [Zeile 148] : <code>    var = liebherr(&quot;gvkil&quot;)</code> </small><br></li>
 </ul>
 <!-- </div> -->
 </details>
@@ -205,7 +209,7 @@ End Sub
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 <p><a name="casio"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub casio</code></span><small>(Zeile 167)</small></p>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub casio</code></span><small>(Zeile 177)</small></p>
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 0
@@ -252,7 +256,7 @@ End Sub
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 <p><a name="liebherr"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub liebherr</code></span><small>(Zeile 150)</small></p>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub liebherr</code></span><small>(Zeile 160)</small></p>
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 6
@@ -260,16 +264,18 @@ Anzahl weiterer internen Aufrufe : 0</p>
 </blockquote>
 <p>' Ruft keine weitere Prozedur auf.</p>
 <details>
-<summary> Referenzierungen dieser Prozedur (6)</summary>
+<summary> Referenzierungen dieser Prozedur (8)</summary>
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
 <li><a href="#rekursiv"><code>rekursiv</code></a> : <small>  Zeile 55 : <code>    call liebherr</code> </small></li>
-<li><a href="#main"><code>main</code></a> : <small>  Zeile 111 : <code>    call liebherr</code> </small></li>
-<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 131 : <code>    call liebherr</code> </small></li>
-<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 132 : <code>    call liebherr ' Aufruf</code> </small></li>
-<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 134 : <code>    call liebherr(&quot;ERROR&quot;) ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!</code> </small></li>
-<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 138 : <code>    var = liebherr(&quot;gvkil&quot;)</code> </small></li>
+<li><a href="#rekursiv"><code>rekursiv</code></a> : <small>  Zeile 57 : <code>    call liebherr(&quot;nochmal&quot;)</code> </small></li>
+<li><a href="#main"><code>main</code></a> : <small>  Zeile 117 : <code>    call liebherr(&quot;vor rekursivem Aufruf&quot;)</code> </small></li>
+<li><a href="#main"><code>main</code></a> : <small>  Zeile 121 : <code>    call liebherr(&quot;NACH rekursivem Aufruf&quot;)</code> </small></li>
+<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 141 : <code>    call liebherr</code> </small></li>
+<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 142 : <code>    call liebherr ' Aufruf</code> </small></li>
+<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 144 : <code>    call liebherr(&quot;ERROR&quot;) ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!</code> </small></li>
+<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 148 : <code>    var = liebherr(&quot;gvkil&quot;)</code> </small></li>
 </ul>
 </details
 </div>
@@ -308,14 +314,16 @@ End Sub
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 <p><a name="main"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Private Sub main</code></span><small>(Zeile 85)</small></p>
+<span style="background-color: lightgrey; padding: 2px;"><code>Private Sub main</code></span><small>(Zeile 87)</small></p>
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 0
-Anzahl weiterer internen Aufrufe : 3</p>
+Anzahl weiterer internen Aufrufe : 5</p>
 </blockquote>
 <p>Ruft die MEthode 'addieren' auf</p>
 <p>Ruft die MEthode 'subtrahieren' auf (und darin dann wieder addieren)</p>
+<p>Ruft die MEthode 'liebherr' auf</p>
+<p>Ruft die MEthode 'rekursiv' auf</p>
 <p>Ruft die MEthode 'liebherr' auf</p>
 <details>
 <summary> Referenzierungen dieser Prozedur (0)</summary>
@@ -330,9 +338,11 @@ Anzahl weiterer internen Aufrufe : 3</p>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
-<li><code>addieren</code> <small> : [Zeile 105] : <code>        wert = addieren(i, i)</code> </small><br></li>
-<li><code>subtrahieren</code> <small> : [Zeile 106] : <code>        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!</code> </small><br></li>
-<li><code>addieren</code> <small> : [Zeile 75] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small><br>- <code>liebherr</code> <small> : [Zeile 111] : <code>    call liebherr</code> </small><br></li>
+<li><code>addieren</code> <small> : [Zeile 111] : <code>        wert = addieren(i, i)</code> </small><br></li>
+<li><code>subtrahieren</code> <small> : [Zeile 112] : <code>        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!</code> </small><br></li>
+<li><code>addieren</code> <small> : [Zeile 77] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small><br>- <code>liebherr</code> <small> : [Zeile 117] : <code>    call liebherr(&quot;vor rekursivem Aufruf&quot;)</code> </small><br></li>
+<li><code>rekursiv</code> <small> : [Zeile 119] : <code>    call rekursiv</code> </small><br></li>
+<li><code>addieren</code> <small> : [Zeile 46] : <code>    tx = tx + string(addieren(1,2))</code> </small><br>- <code>rekursiv</code> <small> : [Zeile 50] : <code>        rekursiv(tx)</code> </small><br>  (... recursivly under certain conditions ... )<br>- <code>liebherr</code> <small> : [Zeile 55] : <code>    call liebherr</code> </small><br>- <code>liebherr</code> <small> : [Zeile 57] : <code>    call liebherr(&quot;nochmal&quot;)</code> </small><br>- <code>liebherr</code> <small> : [Zeile 121] : <code>    call liebherr(&quot;NACH rekursivem Aufruf&quot;)</code> </small><br></li>
 </ul>
 <!-- </div> -->
 </details>
@@ -341,11 +351,15 @@ Anzahl weiterer internen Aufrufe : 3</p>
 <hr>
 <pre><code>Private Sub main()
 ' Anzahl der Referenzierungen im Modul: 0
-' Anzahl weiterer internen Aufrufe : 3
+' Anzahl weiterer internen Aufrufe : 5
 '
 ''' Ruft die MEthode 'addieren' auf
 '
 ''' Ruft die MEthode 'subtrahieren' auf (und darin dann wieder addieren)
+'
+''' Ruft die MEthode 'liebherr' auf
+'
+''' Ruft die MEthode 'rekursiv' auf
 '
 ''' Ruft die MEthode 'liebherr' auf
 
@@ -365,7 +379,11 @@ Anzahl weiterer internen Aufrufe : 3</p>
     next i
 
 
-    call liebherr
+    call liebherr(&quot;vor rekursivem Aufruf&quot;)
+
+    call rekursiv
+
+    call liebherr(&quot;NACH rekursivem Aufruf&quot;)
 
 
 End Sub
@@ -402,8 +420,8 @@ Anzahl weiterer internen Aufrufe : 0</p>
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
 <li><a href="#rekursiv"><code>rekursiv</code></a> : <small>  Zeile 46 : <code>    tx = tx + string(addieren(1,2))</code> </small></li>
-<li><a href="#subtrahieren"><code>subtrahieren</code></a> : <small>  Zeile 75 : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small></li>
-<li><a href="#main"><code>main</code></a> : <small>  Zeile 105 : <code>        wert = addieren(i, i)</code> </small></li>
+<li><a href="#subtrahieren"><code>subtrahieren</code></a> : <small>  Zeile 77 : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small></li>
+<li><a href="#main"><code>main</code></a> : <small>  Zeile 111 : <code>        wert = addieren(i, i)</code> </small></li>
 </ul>
 </details
 </div>
@@ -454,11 +472,12 @@ Anzahl weiterer internen Aufrufe : 3 (1 + rekursiv sich selbst + 1)</p>
 ruft unter bestimmten Bedingungen wiederum rekursiv die selbe Funktion rekursiv auf
 ruft liebherr auf</p>
 <details>
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> Referenzierungen dieser Prozedur (2)</summary>
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
 <li><a href="#rekursiv"><code>rekursiv</code></a> : <small>  Zeile 50 : <code>        rekursiv(tx)</code> </small></li>
+<li><a href="#main"><code>main</code></a> : <small>  Zeile 119 : <code>    call rekursiv</code> </small></li>
 </ul>
 </details
 </div>
@@ -471,7 +490,8 @@ ruft liebherr auf</p>
 <ul>
 <li><code>addieren</code> <small> : [Zeile 46] : <code>    tx = tx + string(addieren(1,2))</code> </small><br></li>
 <li><code>rekursiv</code> <small> : [Zeile 50] : <code>        rekursiv(tx)</code> </small><br>
-<br>  ... ( recursivly under certain conditions ... )- <code>liebherr</code> <small> : [Zeile 55] : <code>    call liebherr</code> </small><br></li>
+(... recursivly under certain conditions ... )<br>- <code>liebherr</code> <small> : [Zeile 55] : <code>    call liebherr</code> </small><br></li>
+<li><code>liebherr</code> <small> : [Zeile 57] : <code>    call liebherr(&quot;nochmal&quot;)</code> </small><br></li>
 </ul>
 <!-- </div> -->
 </details>
@@ -501,6 +521,8 @@ ruft liebherr auf</p>
 
     call liebherr
 
+    call liebherr(&quot;nochmal&quot;)
+
 
 
 
@@ -518,7 +540,7 @@ End Function
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 <p><a name="subtrahieren"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Private Function subtrahieren</code></span><small>(Zeile 65)</small></p>
+<span style="background-color: lightgrey; padding: 2px;"><code>Private Function subtrahieren</code></span><small>(Zeile 67)</small></p>
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 1
@@ -531,7 +553,7 @@ Anzahl weiterer internen Aufrufe : 1</p>
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#main"><code>main</code></a> : <small>  Zeile 106 : <code>        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!</code> </small></li>
+<li><a href="#main"><code>main</code></a> : <small>  Zeile 112 : <code>        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!</code> </small></li>
 </ul>
 </details
 </div>
@@ -542,7 +564,7 @@ Anzahl weiterer internen Aufrufe : 1</p>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
-<li><code>addieren</code> <small> : [Zeile 75] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small><br></li>
+<li><code>addieren</code> <small> : [Zeile 77] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small><br></li>
 </ul>
 <!-- </div> -->
 </details>
@@ -608,7 +630,7 @@ end Function
 <p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
 </small> 
 <hr>
-<p><small>Dokumentation generiert am 2024-01-05 16:45:36 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-05 16:39:36: 'b58776ef2d1d01464fd7f0ac7bdabf7bcaba5781')</small></p>
+<p><small>Dokumentation generiert am 2024-01-06 16:33:41 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-05 16:52:20: '514965255e38e5dc3f230d9d6b2a34f1072489a5')</small></p>
 
         
         

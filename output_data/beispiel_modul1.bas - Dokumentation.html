@@ -42,16 +42,18 @@
     <body class="vscode-body vscode-light">
         <h1 id="code-dokumentation-modul-beispiel_modul1bas">Code-Dokumentation: Modul 'beispiel_modul1.bas'</h1>
 <p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul1.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2023-11-17 00:52</strong></p>
-<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-07 11:22:31</strong></p>
+<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-07 22:48:22</strong></p>
 <!-- TODO: nur temporrary!  -->
 <h1 id="zwischengelagert-als-ziel-vorgabe-für-abrufsequenz">ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:</h1>
 <p><strong>Aktuelle Bugs:</strong></p>
 <ul>
-<li>Aufrufabfolge wird in manchen Fällen noch nicht ganz korrekt dargestellt
+<li>
+<p>Probleme mit inkorrekter Einrückungen nach diversen Aufrufebenen scheint behoben zu sein 2024-01-07 - 22:47:41 (Teste nochmal!)</p>
+</li>
+<li>
+<p>Es werden nicht alle Aufrufe erkannt (ODER??!)</p>
 <ul>
-<li>siehe beispiel_modul1.bas --&gt; notengriffe_erzeugen --&gt; getFilePath</li>
-<li>Scheint v.a. nach  vielen Unteraufrufen aufzutreten...</li>
-<li>Inhaltlich aber nicht falsch... (ODER????!)</li>
+<li>siehe beispiel_modul1.bas --&gt; liebherr : sollte 6 referenzierungen haben, es werden nur 5 dokumentiert...</li>
 </ul>
 </li>
 </ul>
@@ -69,45 +71,111 @@
 <li>
 <p><a href="#sec_subs"><strong>Subs</strong></a> (16)</p>
 <ul>
-<li><a href="#InsertImageFromFileToCell"><code>InsertImageFromFileToCell</code></a> <small>(Zeile 833)</small></li>
-<li><a href="#SeitenformatNextPosition"><code>SeitenformatNextPosition</code></a> <small>(Zeile 775)</small></li>
-<li><a href="#THIS_VERSION__1_17"><code>THIS_VERSION__1_17</code></a> <small>(Zeile 1220)</small></li>
-<li><a href="#applyLayoutPrintArea"><code>applyLayoutPrintArea</code></a> <small>(Zeile 247)</small></li>
-<li><a href="#applyLayoutToAllPages"><code>applyLayoutToAllPages</code></a> <small>(Zeile 136)</small></li>
-<li><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> <small>(Zeile 161)</small></li>
-<li><a href="#erstelleKonvertierteSeite"><code>erstelleKonvertierteSeite</code></a> <small>(Zeile 655)</small></li>
-<li><a href="#init"><code>init</code></a> <small>(Zeile 119)</small></li>
-<li><a href="#insertFrameLineBelow"><code>insertFrameLineBelow</code></a> <small>(Zeile 1011)</small></li>
-<li><a href="#insertSheet"><code>insertSheet</code></a> <small>(Zeile 274)</small></li>
-<li><a href="#mergeCells"><code>mergeCells</code></a> <small>(Zeile 320)</small></li>
-<li><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> <small>(Zeile 535)</small></li>
-<li><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> <small>(Zeile 578)</small></li>
-<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> <small>(Zeile 1169)</small></li>
-<li><a href="#printLastSheetsAsPdf"><code>printLastSheetsAsPdf</code></a> <small>(Zeile 1081)</small></li>
-<li><a href="#resetWorkbook"><code>resetWorkbook</code></a> <small>(Zeile 87)</small></li>
+<li>
+<p><a href="#InsertImageFromFileToCell"><code>InsertImageFromFileToCell</code></a> : <small>  [Zeile 833]  </small></p>
+</li>
+<li>
+<p><a href="#SeitenformatNextPosition"><code>SeitenformatNextPosition</code></a> : <small>  [Zeile 775]  </small></p>
+</li>
+<li>
+<p><a href="#THIS_VERSION__1_17"><code>THIS_VERSION__1_17</code></a> : <small>  [Zeile 1220]  </small></p>
+</li>
+<li>
+<p><a href="#applyLayoutPrintArea"><code>applyLayoutPrintArea</code></a> : <small>  [Zeile 247]  </small></p>
+</li>
+<li>
+<p><a href="#applyLayoutToAllPages"><code>applyLayoutToAllPages</code></a> : <small>  [Zeile 136]  </small></p>
+</li>
+<li>
+<p><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  [Zeile 161]  </small></p>
+</li>
+<li>
+<p><a href="#erstelleKonvertierteSeite"><code>erstelleKonvertierteSeite</code></a> : <small>  [Zeile 655]  </small></p>
+</li>
+<li>
+<p><a href="#init"><code>init</code></a> : <small>  [Zeile 119]  </small></p>
+</li>
+<li>
+<p><a href="#insertFrameLineBelow"><code>insertFrameLineBelow</code></a> : <small>  [Zeile 1011]  </small></p>
+</li>
+<li>
+<p><a href="#insertSheet"><code>insertSheet</code></a> : <small>  [Zeile 274]  </small></p>
+</li>
+<li>
+<p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 320]  </small></p>
+</li>
+<li>
+<p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 535]  </small></p>
+</li>
+<li>
+<p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 578]  </small></p>
+</li>
+<li>
+<p><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  [Zeile 1169]  </small></p>
+</li>
+<li>
+<p><a href="#printLastSheetsAsPdf"><code>printLastSheetsAsPdf</code></a> : <small>  [Zeile 1081]  </small></p>
+</li>
+<li>
+<p><a href="#resetWorkbook"><code>resetWorkbook</code></a> : <small>  [Zeile 87]  </small></p>
+</li>
 </ul>
 <!-- ---------- FUNCTIONS: --------------- -->
 </li>
 <li>
 <p><a href="#sec_functions"><strong>Functions</strong></a> (17)</p>
 <ul>
-<li><a href="#addSeitenformat"><code>addSeitenformat</code></a> <small>(Zeile 964)</small></li>
-<li><a href="#areaEmpty"><code>areaEmpty</code></a> <small>(Zeile 800)</small></li>
-<li><a href="#existsSheetname"><code>existsSheetname</code></a> <small>(Zeile 300)</small></li>
-<li><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> <small>(Zeile 235)</small></li>
-<li><a href="#getFilePath"><code>getFilePath</code></a> <small>(Zeile 338)</small></li>
-<li><a href="#getModifiedKeyIfTaktwechsel"><code>getModifiedKeyIfTaktwechsel</code></a> <small>(Zeile 622)</small></li>
-<li><a href="#getProjectTitle"><code>getProjectTitle</code></a> <small>(Zeile 79)</small></li>
-<li><a href="#getReplacerCount"><code>getReplacerCount</code></a> <small>(Zeile 482)</small></li>
-<li><a href="#getReplacerEmpty"><code>getReplacerEmpty</code></a> <small>(Zeile 516)</small></li>
-<li><a href="#getReplacerNote"><code>getReplacerNote</code></a> <small>(Zeile 451)</small></li>
-<li><a href="#getReplacerPost"><code>getReplacerPost</code></a> <small>(Zeile 500)</small></li>
-<li><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> <small>(Zeile 378)</small></li>
-<li><a href="#getReplacerPre2"><code>getReplacerPre2</code></a> <small>(Zeile 441)</small></li>
-<li><a href="#getTypeOfFollowingSeperatorLine"><code>getTypeOfFollowingSeperatorLine</code></a> <small>(Zeile 1044)</small></li>
-<li><a href="#identifyLastRow"><code>identifyLastRow</code></a> <small>(Zeile 867)</small></li>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> <small>(Zeile 696)</small></li>
-<li><a href="#newSeitenformat"><code>newSeitenformat</code></a> <small>(Zeile 896)</small></li>
+<li>
+<p><a href="#addSeitenformat"><code>addSeitenformat</code></a> : <small>  [Zeile 964]  </small></p>
+</li>
+<li>
+<p><a href="#areaEmpty"><code>areaEmpty</code></a> : <small>  [Zeile 800]  </small></p>
+</li>
+<li>
+<p><a href="#existsSheetname"><code>existsSheetname</code></a> : <small>  [Zeile 300]  </small></p>
+</li>
+<li>
+<p><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 235]  </small></p>
+</li>
+<li>
+<p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 338]  </small></p>
+</li>
+<li>
+<p><a href="#getModifiedKeyIfTaktwechsel"><code>getModifiedKeyIfTaktwechsel</code></a> : <small>  [Zeile 622]  </small></p>
+</li>
+<li>
+<p><a href="#getProjectTitle"><code>getProjectTitle</code></a> : <small>  [Zeile 79]  </small></p>
+</li>
+<li>
+<p><a href="#getReplacerCount"><code>getReplacerCount</code></a> : <small>  [Zeile 482]  </small></p>
+</li>
+<li>
+<p><a href="#getReplacerEmpty"><code>getReplacerEmpty</code></a> : <small>  [Zeile 516]  </small></p>
+</li>
+<li>
+<p><a href="#getReplacerNote"><code>getReplacerNote</code></a> : <small>  [Zeile 451]  </small></p>
+</li>
+<li>
+<p><a href="#getReplacerPost"><code>getReplacerPost</code></a> : <small>  [Zeile 500]  </small></p>
+</li>
+<li>
+<p><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 378]  </small></p>
+</li>
+<li>
+<p><a href="#getReplacerPre2"><code>getReplacerPre2</code></a> : <small>  [Zeile 441]  </small></p>
+</li>
+<li>
+<p><a href="#getTypeOfFollowingSeperatorLine"><code>getTypeOfFollowingSeperatorLine</code></a> : <small>  [Zeile 1044]  </small></p>
+</li>
+<li>
+<p><a href="#identifyLastRow"><code>identifyLastRow</code></a> : <small>  [Zeile 867]  </small></p>
+</li>
+<li>
+<p><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 696]  </small></p>
+</li>
+<li>
+<p><a href="#newSeitenformat"><code>newSeitenformat</code></a> : <small>  [Zeile 896]  </small></p>
+</li>
 </ul>
 <!-- ---------- TAIL: --------------- -->
 </li>
@@ -142,15 +210,15 @@
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 744 : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></li>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -211,15 +279,15 @@ End Sub
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 767 : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></li>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -273,9 +341,9 @@ End Sub
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -312,19 +380,19 @@ End Sub
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  Zeile 1192 : <code>        Call applyLayoutPrintArea(oSeite)</code> </small></li>
+<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  [Zeile 1192] : <code>        Call applyLayoutPrintArea(oSeite)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>getCountsOfColumnsToPrint</code> <small> : [Zeile 254] : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+<p><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 254] : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
@@ -385,34 +453,37 @@ Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabe
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  Zeile 1201 : <code>    Call applyLayoutToAllPages(oSeite)</code> </small></li>
+<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  [Zeile 1201] : <code>    Call applyLayoutToAllPages(oSeite)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>applyLayoutToSinglePage</code> <small> : [Zeile 150] : <code>        Call applyLayoutToSinglePage(ws, page, oSeite)</code> </small></p>
+<p><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  [Zeile 150] : <code>        Call applyLayoutToSinglePage(ws, page, oSeite)</code> </small></p>
 <ul>
 <li>
-<p><code>getCountsOfColumnsToPrint</code> <small> : [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>mergeCells</code> <small> : [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>mergeCells</code> <small> : [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
 <p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
@@ -470,31 +541,34 @@ End Sub
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#applyLayoutToAllPages"><code>applyLayoutToAllPages</code></a> : <small>  Zeile 150 : <code>        Call applyLayoutToSinglePage(ws, page, oSeite)</code> </small></li>
+<li><a href="#applyLayoutToAllPages"><code>applyLayoutToAllPages</code></a> : <small>  [Zeile 150] : <code>        Call applyLayoutToSinglePage(ws, page, oSeite)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (3)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>getCountsOfColumnsToPrint</code> <small> : [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>mergeCells</code> <small> : [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>mergeCells</code> <small> : [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
 <p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
@@ -595,22 +669,22 @@ End Sub
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  Zeile 1191 : <code>        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)</code> </small></li>
+<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  [Zeile 1191] : <code>        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (2)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>insertSheet</code> <small> : [Zeile 662] : <code>        Call insertSheet(oSeite.blattname &amp; pageNum)</code> </small></p>
+<p><a href="#insertSheet"><code>insertSheet</code></a> : <small>  [Zeile 662] : <code>        Call insertSheet(oSeite.blattname &amp; pageNum)</code> </small></p>
 <ul>
 <li>
-<p><code>existsSheetname</code> <small> : [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
+<p><a href="#existsSheetname"><code>existsSheetname</code></a> : <small>  [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
@@ -621,105 +695,117 @@ End Sub
 </ul>
 </li>
 <li>
-<p><code>konvertiereZeile</code> <small> : [Zeile 677] : <code>            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then</code> </small></p>
+<p><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 677] : <code>            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then</code> </small></p>
 <ul>
 <li>
-<p><code>getReplacerPre1</code> <small> : [Zeile 723] : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></p>
-<pre><code>- ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
-
-
-  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-
-
-- ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
-
-
-  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 723] : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></p>
+<ul>
+<li>
+<p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>getReplacerPre2</code> <small> : [Zeile 725] : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></p>
-<pre><code>- ```getReplacerPre1``` &lt;small&gt; : [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` &lt;/small&gt;
-
-
-
-
-  - ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
-
-
-    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-
-
-  - ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
-
-
-    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-
-- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>getReplacerNote</code> <small> : [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 </li>
 <li>
-<p><code>getReplacerCount</code> <small> : [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerPre2"><code>getReplacerPre2</code></a> : <small>  [Zeile 725] : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></p>
+<ul>
+<li>
+<p><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 445] : <code>    getReplacerPre2 = getReplacerPre1(stichwort)</code> </small></p>
+<ul>
+<li>
+<p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>getReplacerPost</code> <small> : [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>getReplacerEmpty</code> <small> : [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 </li>
 <li>
-<p><code>getFilePath</code> <small> : [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
-<pre><code>- ```getFilePath``` &lt;small&gt; : [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` &lt;/small&gt;
-
-  - &lt;small&gt; *... recursivly calls itself under certain conditions ...* &lt;/small&gt; 
-
-
-
-- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 </li>
 <li>
-<p><code>InsertImageFromFileToCell</code> <small> : [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerNote"><code>getReplacerNote</code></a> : <small>  [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>getTypeOfFollowingSeperatorLine</code> <small> : [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerCount"><code>getReplacerCount</code></a> : <small>  [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>insertFrameLineBelow</code> <small> : [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerPost"><code>getReplacerPost</code></a> : <small>  [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>SeitenformatNextPosition</code> <small> : [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerEmpty"><code>getReplacerEmpty</code></a> : <small>  [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
+<ul>
+<li>
+<p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 366] : <code>    getFilePath = getFilePath(ERROR_FILENAME)</code> </small></p>
+<ul>
+<li><small> <em>... recursivly calls itself under certain conditions ...</em> </small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#InsertImageFromFileToCell"><code>InsertImageFromFileToCell</code></a> : <small>  [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#getTypeOfFollowingSeperatorLine"><code>getTypeOfFollowingSeperatorLine</code></a> : <small>  [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#insertFrameLineBelow"><code>insertFrameLineBelow</code></a> : <small>  [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#SeitenformatNextPosition"><code>SeitenformatNextPosition</code></a> : <small>  [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
 <p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
@@ -797,9 +883,9 @@ End Sub
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -846,15 +932,15 @@ End Sub
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 762 : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></li>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -913,19 +999,19 @@ End Sub
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#erstelleKonvertierteSeite"><code>erstelleKonvertierteSeite</code></a> : <small>  Zeile 662 : <code>        Call insertSheet(oSeite.blattname &amp; pageNum)</code> </small></li>
+<li><a href="#erstelleKonvertierteSeite"><code>erstelleKonvertierteSeite</code></a> : <small>  [Zeile 662] : <code>        Call insertSheet(oSeite.blattname &amp; pageNum)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>existsSheetname</code> <small> : [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
+<p><a href="#existsSheetname"><code>existsSheetname</code></a> : <small>  [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
@@ -984,16 +1070,20 @@ End Sub
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  Zeile 195 : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></li>
-<li><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  Zeile 211 : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></li>
+<li>
+<p><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
+</li>
+<li>
+<p><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
+</li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -1041,15 +1131,15 @@ ACHTUNG: Die keys sind case-INSENSITIV , es gelten also immer gross und kleinsch
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  Zeile 419 : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></li>
+<li><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -1123,15 +1213,15 @@ ALLE MOEGLICHEN Taktarten muessen EXPLIZIT IM ARRAY definiert sein (keysAndRepla
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  Zeile 422 : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></li>
+<li><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -1207,53 +1297,31 @@ End Sub
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (5)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>addSeitenformat</code> <small> : [Zeile 1183] : <code>        oSeite = addSeitenformat(startzeileSteuertabelle)</code> </small></p>
+<p><a href="#addSeitenformat"><code>addSeitenformat</code></a> : <small>  [Zeile 1183] : <code>        oSeite = addSeitenformat(startzeileSteuertabelle)</code> </small></p>
 <ul>
 <li>
-<p><code>newSeitenformat</code> <small> : [Zeile 970] : <code>    oFormat = newSeitenformat()</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><code>identifyLastRow</code> <small> : [Zeile 980] : <code>    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)</code> </small></p>
-<ul>
-<li>
-<p><code>newSeitenformat</code> <small> : [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
+<p><a href="#newSeitenformat"><code>newSeitenformat</code></a> : <small>  [Zeile 970] : <code>    oFormat = newSeitenformat()</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
 </li>
 <li>
-<p><code>areaEmpty</code> <small> : [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
+<p><a href="#identifyLastRow"><code>identifyLastRow</code></a> : <small>  [Zeile 980] : <code>    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)</code> </small></p>
+<ul>
+<li>
+<p><a href="#newSeitenformat"><code>newSeitenformat</code></a> : <small>  [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
 </li>
 <li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
-</ul>
-</li>
-<li>
-<p><code>erstelleKonvertierteSeite</code> <small> : [Zeile 1191] : <code>        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)</code> </small></p>
-<ul>
-<li>
-<p><code>insertSheet</code> <small> : [Zeile 662] : <code>        Call insertSheet(oSeite.blattname &amp; pageNum)</code> </small></p>
-<ul>
-<li>
-<p><code>existsSheetname</code> <small> : [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
+<p><a href="#areaEmpty"><code>areaEmpty</code></a> : <small>  [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
@@ -1264,121 +1332,18 @@ End Sub
 </ul>
 </li>
 <li>
-<p><code>konvertiereZeile</code> <small> : [Zeile 677] : <code>            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then</code> </small></p>
-<ul>
-<li>
-<p><code>getReplacerPre1</code> <small> : [Zeile 723] : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></p>
-<pre><code>- ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
-
-
-  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-
-
-- ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
-
-
-  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><code>getReplacerPre2</code> <small> : [Zeile 725] : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></p>
-<pre><code>- ```getReplacerPre1``` &lt;small&gt; : [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` &lt;/small&gt;
-
-
-
-
-  - ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
-
-
-    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-
-
-  - ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
-
-
-    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-
-- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><code>getReplacerNote</code> <small> : [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><code>getReplacerCount</code> <small> : [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><code>getReplacerPost</code> <small> : [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><code>getReplacerEmpty</code> <small> : [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><code>getFilePath</code> <small> : [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
-<pre><code>- ```getFilePath``` &lt;small&gt; : [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` &lt;/small&gt;
-
-  - &lt;small&gt; *... recursivly calls itself under certain conditions ...* &lt;/small&gt; 
-
-
-
-- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><code>InsertImageFromFileToCell</code> <small> : [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><code>getTypeOfFollowingSeperatorLine</code> <small> : [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><code>insertFrameLineBelow</code> <small> : [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><code>SeitenformatNextPosition</code> <small> : [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
 <p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
 <li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
-</ul>
-</li>
-<li>
-<p><code>applyLayoutPrintArea</code> <small> : [Zeile 1192] : <code>        Call applyLayoutPrintArea(oSeite)</code> </small></p>
+<p><a href="#erstelleKonvertierteSeite"><code>erstelleKonvertierteSeite</code></a> : <small>  [Zeile 1191] : <code>        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)</code> </small></p>
 <ul>
 <li>
-<p><code>getCountsOfColumnsToPrint</code> <small> : [Zeile 254] : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+<p><a href="#insertSheet"><code>insertSheet</code></a> : <small>  [Zeile 662] : <code>        Call insertSheet(oSeite.blattname &amp; pageNum)</code> </small></p>
+<ul>
+<li>
+<p><a href="#existsSheetname"><code>existsSheetname</code></a> : <small>  [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
@@ -1389,29 +1354,21 @@ End Sub
 </ul>
 </li>
 <li>
-<p><code>applyLayoutToAllPages</code> <small> : [Zeile 1201] : <code>    Call applyLayoutToAllPages(oSeite)</code> </small></p>
+<p><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 677] : <code>            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then</code> </small></p>
 <ul>
 <li>
-<p><code>applyLayoutToSinglePage</code> <small> : [Zeile 150] : <code>        Call applyLayoutToSinglePage(ws, page, oSeite)</code> </small></p>
+<p><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 723] : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></p>
 <ul>
 <li>
-<p><code>getCountsOfColumnsToPrint</code> <small> : [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>mergeCells</code> <small> : [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><code>mergeCells</code> <small> : [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
+<p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
 </li>
 <li>
@@ -1420,7 +1377,155 @@ End Sub
 </ul>
 </li>
 <li>
-<p><code>printLastSheetsAsPdf</code> <small> : [Zeile 1210] : <code>        Call printLastSheetsAsPdf(pageNum)</code> </small></p>
+<p><a href="#getReplacerPre2"><code>getReplacerPre2</code></a> : <small>  [Zeile 725] : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></p>
+<ul>
+<li>
+<p><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 445] : <code>    getReplacerPre2 = getReplacerPre1(stichwort)</code> </small></p>
+<ul>
+<li>
+<p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#getReplacerNote"><code>getReplacerNote</code></a> : <small>  [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#getReplacerCount"><code>getReplacerCount</code></a> : <small>  [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#getReplacerPost"><code>getReplacerPost</code></a> : <small>  [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#getReplacerEmpty"><code>getReplacerEmpty</code></a> : <small>  [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
+<ul>
+<li>
+<p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 366] : <code>    getFilePath = getFilePath(ERROR_FILENAME)</code> </small></p>
+<ul>
+<li><small> <em>... recursivly calls itself under certain conditions ...</em> </small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#InsertImageFromFileToCell"><code>InsertImageFromFileToCell</code></a> : <small>  [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#getTypeOfFollowingSeperatorLine"><code>getTypeOfFollowingSeperatorLine</code></a> : <small>  [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#insertFrameLineBelow"><code>insertFrameLineBelow</code></a> : <small>  [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#SeitenformatNextPosition"><code>SeitenformatNextPosition</code></a> : <small>  [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#applyLayoutPrintArea"><code>applyLayoutPrintArea</code></a> : <small>  [Zeile 1192] : <code>        Call applyLayoutPrintArea(oSeite)</code> </small></p>
+<ul>
+<li>
+<p><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 254] : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#applyLayoutToAllPages"><code>applyLayoutToAllPages</code></a> : <small>  [Zeile 1201] : <code>    Call applyLayoutToAllPages(oSeite)</code> </small></p>
+<ul>
+<li>
+<p><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  [Zeile 150] : <code>        Call applyLayoutToSinglePage(ws, page, oSeite)</code> </small></p>
+<ul>
+<li>
+<p><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#printLastSheetsAsPdf"><code>printLastSheetsAsPdf</code></a> : <small>  [Zeile 1210] : <code>        Call printLastSheetsAsPdf(pageNum)</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
@@ -1506,15 +1611,15 @@ End Sub
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  Zeile 1210 : <code>        Call printLastSheetsAsPdf(pageNum)</code> </small></li>
+<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  [Zeile 1210] : <code>        Call printLastSheetsAsPdf(pageNum)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -1626,13 +1731,13 @@ End Sub
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>getProjectTitle</code> <small> : [Zeile 111] : <code>    MsgBox &quot;Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--&gt; falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)&quot;, vbOK, getProjectTitle()</code> </small></p>
+<p><a href="#getProjectTitle"><code>getProjectTitle</code></a> : <small>  [Zeile 111] : <code>    MsgBox &quot;Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--&gt; falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)&quot;, vbOK, getProjectTitle()</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
@@ -1703,34 +1808,34 @@ Berechnet alle Attribute, das Obj wird zurück gegeben, auf Grundlage von diesem
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  Zeile 1183 : <code>        oSeite = addSeitenformat(startzeileSteuertabelle)</code> </small></li>
+<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  [Zeile 1183] : <code>        oSeite = addSeitenformat(startzeileSteuertabelle)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (2)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>newSeitenformat</code> <small> : [Zeile 970] : <code>    oFormat = newSeitenformat()</code> </small></p>
+<p><a href="#newSeitenformat"><code>newSeitenformat</code></a> : <small>  [Zeile 970] : <code>    oFormat = newSeitenformat()</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
 </li>
 <li>
-<p><code>identifyLastRow</code> <small> : [Zeile 980] : <code>    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)</code> </small></p>
+<p><a href="#identifyLastRow"><code>identifyLastRow</code></a> : <small>  [Zeile 980] : <code>    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)</code> </small></p>
 <ul>
 <li>
-<p><code>newSeitenformat</code> <small> : [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
+<p><a href="#newSeitenformat"><code>newSeitenformat</code></a> : <small>  [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
 </li>
 <li>
-<p><code>areaEmpty</code> <small> : [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
+<p><a href="#areaEmpty"><code>areaEmpty</code></a> : <small>  [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
@@ -1816,15 +1921,15 @@ False falls NICHT ALLE ZEllen leer sind</p>
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#identifyLastRow"><code>identifyLastRow</code></a> : <small>  Zeile 882 : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></li>
+<li><a href="#identifyLastRow"><code>identifyLastRow</code></a> : <small>  [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -1885,15 +1990,15 @@ False falls NICHT ALLE ZEllen leer sind</p>
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#insertSheet"><code>insertSheet</code></a> : <small>  Zeile 283 : <code>        If existsSheetname(sheetname) = False Then</code> </small></li>
+<li><a href="#insertSheet"><code>insertSheet</code></a> : <small>  [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -1943,16 +2048,20 @@ Dafuer wird die letzte Spalte abgezogen, weil wg. Blattrand keine zusaetzliche L
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  Zeile 179 : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></li>
-<li><a href="#applyLayoutPrintArea"><code>applyLayoutPrintArea</code></a> : <small>  Zeile 254 : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></li>
+<li>
+<p><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+</li>
+<li>
+<p><a href="#applyLayoutPrintArea"><code>applyLayoutPrintArea</code></a> : <small>  [Zeile 254] : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+</li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -1993,20 +2102,24 @@ Sofern es keine passende Datei gibt, wird ein Platzhalter-Bild referenziert, dur
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#getFilePath"><code>getFilePath</code></a> : <small>  Zeile 366 : <code>    getFilePath = getFilePath(ERROR_FILENAME)</code> </small></li>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 742 : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></li>
+<li>
+<p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 366] : <code>    getFilePath = getFilePath(ERROR_FILENAME)</code> </small></p>
+</li>
+<li>
+<p><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
+</li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>getFilePath</code> <small> : [Zeile 366] : <code>    getFilePath = getFilePath(ERROR_FILENAME)</code> </small></p>
+<p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 366] : <code>    getFilePath = getFilePath(ERROR_FILENAME)</code> </small></p>
 <ul>
 <li><small> <em>... recursivly calls itself under certain conditions ...</em> </small></li>
 </ul>
@@ -2078,9 +2191,9 @@ Dazu werden konkrete Stichworte geprueftund durch ein alternativ-stichwort fuer 
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -2140,15 +2253,15 @@ End Function
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#resetWorkbook"><code>resetWorkbook</code></a> : <small>  Zeile 111 : <code>    MsgBox &quot;Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--&gt; falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)&quot;, vbOK, getProjectTitle()</code> </small></li>
+<li><a href="#resetWorkbook"><code>resetWorkbook</code></a> : <small>  [Zeile 111] : <code>    MsgBox &quot;Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--&gt; falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)&quot;, vbOK, getProjectTitle()</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -2186,15 +2299,15 @@ End Function
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 729 : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></li>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -2242,15 +2355,15 @@ End Function
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 733 : <code>                    oReplacer = getReplacerEmpty()</code> </small></li>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -2295,15 +2408,15 @@ End Function
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 727 : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></li>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -2364,15 +2477,15 @@ End Function
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 731 : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></li>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -2418,26 +2531,30 @@ End Function
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#getReplacerPre2"><code>getReplacerPre2</code></a> : <small>  Zeile 445 : <code>    getReplacerPre2 = getReplacerPre1(stichwort)</code> </small></li>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 723 : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></li>
+<li>
+<p><a href="#getReplacerPre2"><code>getReplacerPre2</code></a> : <small>  [Zeile 445] : <code>    getReplacerPre2 = getReplacerPre1(stichwort)</code> </small></p>
+</li>
+<li>
+<p><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 723] : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></p>
+</li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (2)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>modifyReplacerIfSonderzeichen</code> <small> : [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
+<p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
 </li>
 <li>
-<p><code>modifyReplacerIfTaktwechsel</code> <small> : [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
+<p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
@@ -2534,28 +2651,28 @@ End Function
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 725 : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></li>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 725] : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>getReplacerPre1</code> <small> : [Zeile 445] : <code>    getReplacerPre2 = getReplacerPre1(stichwort)</code> </small></p>
+<p><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 445] : <code>    getReplacerPre2 = getReplacerPre1(stichwort)</code> </small></p>
 <ul>
 <li>
-<p><code>modifyReplacerIfSonderzeichen</code> <small> : [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
+<p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
 </li>
 <li>
-<p><code>modifyReplacerIfTaktwechsel</code> <small> : [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
+<p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
@@ -2606,15 +2723,15 @@ returns -1 falls gestrichelte Linie folgt.</p>
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 757 : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></li>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -2677,25 +2794,25 @@ Ziel davon ist, dass man so erkennt, wenn die letzten n zeilen nur freizeilen si
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#addSeitenformat"><code>addSeitenformat</code></a> : <small>  Zeile 980 : <code>    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)</code> </small></li>
+<li><a href="#addSeitenformat"><code>addSeitenformat</code></a> : <small>  [Zeile 980] : <code>    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (2)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>newSeitenformat</code> <small> : [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
+<p><a href="#newSeitenformat"><code>newSeitenformat</code></a> : <small>  [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
 </li>
 <li>
-<p><code>areaEmpty</code> <small> : [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
+<p><a href="#areaEmpty"><code>areaEmpty</code></a> : <small>  [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
@@ -2761,114 +2878,126 @@ Rueckgabewert: True fuer normale Zeile ,False falls eine zusaetzliche ZEile der 
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#erstelleKonvertierteSeite"><code>erstelleKonvertierteSeite</code></a> : <small>  Zeile 677 : <code>            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then</code> </small></li>
+<li><a href="#erstelleKonvertierteSeite"><code>erstelleKonvertierteSeite</code></a> : <small>  [Zeile 677] : <code>            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then</code> </small></li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (11)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
-<p><code>getReplacerPre1</code> <small> : [Zeile 723] : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></p>
-<pre><code>- ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
-
-
-  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-
-
-- ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
-
-
-  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 723] : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></p>
+<ul>
+<li>
+<p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>getReplacerPre2</code> <small> : [Zeile 725] : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></p>
-<pre><code>- ```getReplacerPre1``` &lt;small&gt; : [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` &lt;/small&gt;
-
-
-
-
-  - ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
-
-
-    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-
-
-  - ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
-
-
-    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-
-
-
-- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>getReplacerNote</code> <small> : [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 </li>
 <li>
-<p><code>getReplacerCount</code> <small> : [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerPre2"><code>getReplacerPre2</code></a> : <small>  [Zeile 725] : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></p>
+<ul>
+<li>
+<p><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 445] : <code>    getReplacerPre2 = getReplacerPre1(stichwort)</code> </small></p>
+<ul>
+<li>
+<p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>getReplacerPost</code> <small> : [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>getReplacerEmpty</code> <small> : [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 </li>
 <li>
-<p><code>getFilePath</code> <small> : [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
-<pre><code>- ```getFilePath``` &lt;small&gt; : [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` &lt;/small&gt;
-
-  - &lt;small&gt; *... recursivly calls itself under certain conditions ...* &lt;/small&gt; 
-
-
-
-- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 </li>
 <li>
-<p><code>InsertImageFromFileToCell</code> <small> : [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerNote"><code>getReplacerNote</code></a> : <small>  [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>getTypeOfFollowingSeperatorLine</code> <small> : [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerCount"><code>getReplacerCount</code></a> : <small>  [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>insertFrameLineBelow</code> <small> : [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerPost"><code>getReplacerPost</code></a> : <small>  [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
-<p><code>SeitenformatNextPosition</code> <small> : [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
-<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
-</code></pre>
+<p><a href="#getReplacerEmpty"><code>getReplacerEmpty</code></a> : <small>  [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
+<ul>
+<li>
+<p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 366] : <code>    getFilePath = getFilePath(ERROR_FILENAME)</code> </small></p>
+<ul>
+<li><small> <em>... recursivly calls itself under certain conditions ...</em> </small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#InsertImageFromFileToCell"><code>InsertImageFromFileToCell</code></a> : <small>  [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#getTypeOfFollowingSeperatorLine"><code>getTypeOfFollowingSeperatorLine</code></a> : <small>  [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#insertFrameLineBelow"><code>insertFrameLineBelow</code></a> : <small>  [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><a href="#SeitenformatNextPosition"><code>SeitenformatNextPosition</code></a> : <small>  [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 </li>
 <li>
 <p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
@@ -2978,16 +3107,20 @@ End Function
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#identifyLastRow"><code>identifyLastRow</code></a> : <small>  Zeile 876 : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></li>
-<li><a href="#addSeitenformat"><code>addSeitenformat</code></a> : <small>  Zeile 970 : <code>    oFormat = newSeitenformat()</code> </small></li>
+<li>
+<p><a href="#identifyLastRow"><code>identifyLastRow</code></a> : <small>  [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
+</li>
+<li>
+<p><a href="#addSeitenformat"><code>addSeitenformat</code></a> : <small>  [Zeile 970] : <code>    oFormat = newSeitenformat()</code> </small></p>
+</li>
 </ul>
 </details
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -3096,7 +3229,7 @@ End Function
 <details>
 <summary> Modulinformationen anzeigen/verbergen.
 </summary>
-<p><br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für generelles Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br>Wichtige Details siehe am Ende dieses docstrings.<br><br><br><br><br>### Fertig implementiert:<br><br>• Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation<br><br>• Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation<br><br>• Sofortiger Export der MD-Datei in eine  HTML-Datei<br><br>• Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation<br><br>• Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Optimierung der Darstellung der Aufrufebenen: Verlinkung der PRozeduren, genau wie bei den References<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br>• Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --&gt; notengriffe_erzeugen --&gt; getFilePath)<br><br><br><br><br><br># =============================================================================<br>#### Wichtige Aufrufreihenfolge der Methode innerhalb dieses Python-Scriptes zur Erstellung der Dokumentation der Aufrufreihenfolge der zu dokumentierenden VBA-Prozeduren: ####<br># =============================================================================<br><br>Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wiederum alle Prozeduren komplett dokumentiert. Für beide Vorgänge erfolgt dies in einer Methode auf Objektebene, wobei diese jeweilige MEthode in beiden Fällen aus einer Klassenmethode aufgerufen wird, in der über die einzelnen Prozedur-Objekte innerhalb dieser Klasse iteriert wird:<br><br>- analyse_call_sequence(cls)<br>    - analyse_calling_sequence_in_one_proc(self)<br>- prepare_all_call_sequences_docs(cls)<br>    - prepare_single_call_sequence_docs(cls)<br><br>(hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )<br><br><br><br><br></p>
+<p><br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für generelles Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br>Wichtige Details siehe am Ende dieses docstrings.<br><br><br><br><br>### Fertig implementiert:<br><br>• Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation<br><br>• Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation<br><br>• Sofortiger Export der MD-Datei in eine  HTML-Datei<br><br>• Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation<br><br>• Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.<br><br><br><br>### TODOS:<br><br>• Bereitstellung einer einfachen GUI / HMI, um Input- und Output Pfade zu parametrisieren<br><br>• Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --&gt; notengriffe_erzeugen --&gt; getFilePath)<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br>• Ermöglichung von Berücksichtigung weiterer Module innerhalb der Dokumentation<br>    <br>    • z. B. 2 VBA-Module innerhalb eines Projektes, wobei Prozeduren von Modul1  andere Prozeduren aus Modul2 aufrufen.<br><br>        • Erstmal nur als Verweis  (Mögl. Ansatz included = &quot;Modul1.*&quot; ohne rekursive Auflistung derer Aufrufe... oder eben mit... bestenfalls auch das parametrisierbar)<br><br>• Dokumentation von weiteren PRogrammiersprachen<br><br>    • OK --&gt; VBA<br>    • Nächste Prio: C++ / Arduino<br>    • Letzte Prio: Python (v.a. für den Ablaufsequence sehr hilfreich, für den rest gibt es pdoc...)<br><br><br><br><br><br><br><br><br># =============================================================================<br>#### Wichtige Aufrufreihenfolge der Methode innerhalb dieses Python-Scriptes zur Erstellung der Dokumentation der Aufrufreihenfolge der zu dokumentierenden VBA-Prozeduren: ####<br># =============================================================================<br><br>Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wiederum alle Prozeduren komplett dokumentiert. Für beide Vorgänge erfolgt dies in einer Methode auf Objektebene, wobei diese jeweilige MEthode in beiden Fällen aus einer Klassenmethode aufgerufen wird, in der über die einzelnen Prozedur-Objekte innerhalb dieser Klasse iteriert wird:<br><br>- analyse_call_sequence(cls)<br>    - analyse_calling_sequence_in_one_proc(self)<br>- prepare_all_call_sequences_docs(cls)<br>    - prepare_single_call_sequence_docs(cls)<br><br>(hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )<br><br><br><br><br><br><br><br># =============================================================================<br>#### Unwichtige Nebensächlichkeiten: ####<br># =============================================================================<br><br>In der Version vom 2024-01-07 - 15:26:03:<br>    - Gesamtanzahl der Zeilen: 2771 (100%)<br>    - davon Leerzeilen: 1408 (51%)<br>    - davon Einzelkommentarzeilen: 278 (10%)<br>    - davon Blockkommentarzeilen: 550 (20%)<br><br>    ==&gt; Summe aller Kommentarzeilen 828 (30%)<br>    ==&gt; Code-relevante Zeilen: 535 (19%)<br><br><br><br><br></p>
 </details>
 <hr>
 <small>
@@ -3104,7 +3237,7 @@ End Function
 <p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
 </small> 
 <hr>
-<p><small>Dokumentation generiert am 2024-01-07 11:22:31 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 11:13:09: '54c86f1314d7e8ea2ef2dd5da97908caf2bfcb80')</small></p>
+<p><small>Dokumentation generiert am 2024-01-07 22:48:22 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 15:46:48: 'b0fc982eeee2e7e5a2d7bbc29900ebd1033ed48d')</small></p>
 
         
         

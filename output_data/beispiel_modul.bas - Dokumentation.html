@@ -42,21 +42,23 @@
     <body class="vscode-body vscode-light">
         <h1 id="code-dokumentation-modul-beispiel_modulbas">Code-Dokumentation: Modul 'beispiel_modul.bas'</h1>
 <p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2024-01-07 11:28</strong></p>
-<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-07 15:46:10</strong></p>
+<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-07 23:16:28</strong></p>
 <!-- TODO: nur temporrary!  -->
 <h1 id="zwischengelagert-als-ziel-vorgabe-für-abrufsequenz">ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:</h1>
 <p><strong>Aktuelle Bugs:</strong></p>
 <ul>
-<li>Aufrufabfolge wird in manchen Fällen noch nicht ganz korrekt dargestellt
-<ul>
-<li>siehe beispiel_modul1.bas --&gt; notengriffe_erzeugen --&gt; getFilePath</li>
-<li>Scheint v.a. nach  vielen Unteraufrufen aufzutreten...</li>
-<li>Inhaltlich aber nicht falsch... (ODER????!)</li>
-</ul>
+<li>
+<p>Probleme mit inkorrekter Einrückungen nach diversen Aufrufebenen scheint behoben zu sein 2024-01-07 - 22:47:41 (Teste nochmal!)</p>
 </li>
-<li>Es werden nicht alle Aufrufe erkannt (ODER??!)
+<li>
+<p>Es werden nicht alle Aufrufe erkannt (ODER??!)</p>
 <ul>
-<li>siehe beispiel_modul1.bas --&gt; liebherr : sollte 6 referenzierungen haben, es werden nur 5 dokumentiert...</li>
+<li>
+<p>siehe beispiel_modul.bas --&gt; liebherr : sollte 6 referenzierungen haben, es werden nur 5 dokumentiert... Zeile 106 fehlt:  <code>var = liebherr</code></p>
+</li>
+<li>
+<p>wäre nicht tragisch, weil liebherr in diesem Syntax bei VBA nur eine Funktion mit Rückgabewert sein kann, und dann könnte man auch liebherr() schreiben, das würde erkannt werden. Allerdings funktioniert auch die Schreibweise ohne KLammern, weshalb sie auch erkannt werden sollte (auch wenn ich es nie so schreiben wollen würde...)</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -125,26 +127,28 @@
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="bauer"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Sub bauer</code></span><small>(Zeile 90)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 0
 Anzahl weiterer internen Aufrufe : 5</p>
 </blockquote>
 <p>Ruft MEHRFACH die Prozedur 'liebherr' auf (insgesamt 5 mal nacheinander in verschiedenen Kontexten)</p>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (0)</summary>
 <div style="padding-left:1em;">
 <p>Kein Aufruf gefunden.</p>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (4)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#liebherr"><code>liebherr</code></a> : <small>  [Zeile 100] : <code>    call liebherr</code> </small></p>
@@ -174,8 +178,8 @@ Anzahl weiterer internen Aufrufe : 5</p>
 <p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -209,37 +213,40 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="casio"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Sub casio</code></span><small>(Zeile 136)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 0
 Anzahl weiterer internen Aufrufe : 0</p>
 </blockquote>
 <p>' Ruft keine weitere Prozedur auf.</p>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (0)</summary>
 <div style="padding-left:1em;">
 <p>Kein Aufruf gefunden.</p>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -259,20 +266,24 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="liebherr"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Sub liebherr</code></span><small>(Zeile 119)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 6
 Anzahl weiterer internen Aufrufe : 0</p>
 </blockquote>
 <p>' Ruft keine weitere Prozedur auf.</p>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (5)</summary>
 <div style="padding-left:1em;">
@@ -296,17 +307,16 @@ Anzahl weiterer internen Aufrufe : 0</p>
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -327,14 +337,17 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="main"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub main</code></span><small>(Zeile 54)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 0
@@ -343,18 +356,18 @@ Anzahl weiterer internen Aufrufe : 3</p>
 <p>Ruft die MEthode 'addieren' auf</p>
 <p>Ruft die MEthode 'subtrahieren' auf (und darin dann wieder addieren)</p>
 <p>Ruft die MEthode 'liebherr' auf</p>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (0)</summary>
 <div style="padding-left:1em;">
 <p>Kein Aufruf gefunden.</p>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (3)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#addieren"><code>addieren</code></a> : <small>  [Zeile 74] : <code>        wert = addieren(i, i)</code> </small></p>
@@ -386,8 +399,8 @@ Anzahl weiterer internen Aufrufe : 3</p>
 <p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -427,6 +440,7 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- -------------------------------------------------- -->
 <!-- SECTION-START : FUNCTIONS -->
@@ -439,8 +453,10 @@ End Sub
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="addieren"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function addieren</code></span><small>(Zeile 16)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 2
@@ -448,6 +464,7 @@ Anzahl weiterer internen Aufrufe : 0</p>
 </blockquote>
 <p>Diese Funktion addiert beide Zahlen miteinander und übergibt das Ergebnis zurück.</p>
 <p>Ruft keine weitere Prozedur auf.</p>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (2)</summary>
 <div style="padding-left:1em;">
@@ -462,17 +479,16 @@ Anzahl weiterer internen Aufrufe : 0</p>
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -495,14 +511,17 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="subtrahieren"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function subtrahieren</code></span><small>(Zeile 34)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 1
@@ -510,6 +529,7 @@ Anzahl weiterer internen Aufrufe : 1</p>
 </blockquote>
 <p>Diese Funktion subtrahiert b von a und übergibt das Ergebnis zurück.</p>
 <p>Ruft die  Prozedur 'adddieren' auf.</p>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -519,12 +539,11 @@ Anzahl weiterer internen Aufrufe : 1</p>
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#addieren"><code>addieren</code></a> : <small>  [Zeile 44] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small></p>
@@ -536,8 +555,8 @@ Anzahl weiterer internen Aufrufe : 1</p>
 <p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -560,6 +579,7 @@ end Function
 </details>
 </div>
 <hr>
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 <p></p>
 <hr>
@@ -600,7 +620,7 @@ end Function
 <p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
 </small> 
 <hr>
-<p><small>Dokumentation generiert am 2024-01-07 15:46:10 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 14:04:50: '6f5357336fc5ce4b62f02f6de03fa0280afd4a51')</small></p>
+<p><small>Dokumentation generiert am 2024-01-07 23:16:28 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 15:46:48: 'b0fc982eeee2e7e5a2d7bbc29900ebd1033ed48d')</small></p>
 
         
         

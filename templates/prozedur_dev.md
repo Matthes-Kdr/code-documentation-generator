@@ -13,14 +13,33 @@
 
 
 
+<!-- PLACEHOLDER: Initialisierungszeile: -->
+
+
+
 <a name="@PLACEHOLDER_PROCEDURE_NAME@"></a>
 <span style="background-color: lightgrey; padding: 2px;">```@PLACEHOLDER_PROCEDURE_MODIFIER@ @PLACEHOLDER_PROCEDURE_TYPE@ @PLACEHOLDER_PROCEDURE_NAME@```</span><small>(Zeile @PLACEHOLDER_PROCEDURE_LINE_BEGIN@)</small>
+
+
+
+
+
+
+<!--  DocString der Prozedur: -->
+
+
+
 
 <div style="padding-left:2em;">
 
 > @PLACEHOLDER_PROCEDURE_DOCSTRING@
 
 
+
+
+
+
+<!--  References der Procedure: -->
 
 <details>
 
@@ -49,10 +68,8 @@
 
 
 
+<!--  CALL SEQUENCE Abruffolge: -->
 
-
-
-<!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
@@ -63,19 +80,10 @@
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
-<!-- <div style="padding-left:1em;"> -->
-
-
 
 
 
 @PLACEHOLDER_PROCEDURE_CALLING_SEQUENCES_BLOCK@
-
-
-
-
-
-<!-- </div> -->
 
 
 
@@ -89,6 +97,8 @@
 
 
 
+
+<!--  Source Code: -->
 
 
 
@@ -110,6 +120,7 @@
 ---
 
 
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 

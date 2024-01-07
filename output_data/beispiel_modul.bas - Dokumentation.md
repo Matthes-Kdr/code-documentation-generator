@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-07 11:28**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-07 15:46:10**
+Generierungsdatum dieser Dokumentation: **2024-01-07 23:16:28**
 
 
 
@@ -21,12 +21,14 @@ Generierungsdatum dieser Dokumentation: **2024-01-07 15:46:10**
 
 **Aktuelle Bugs:**
 
-- Aufrufabfolge wird in manchen Fällen noch nicht ganz korrekt dargestellt 
-  - siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath
-  - Scheint v.a. nach  vielen Unteraufrufen aufzutreten...
-  - Inhaltlich aber nicht falsch... (ODER????!)
+- Probleme mit inkorrekter Einrückungen nach diversen Aufrufebenen scheint behoben zu sein 2024-01-07 - 22:47:41 (Teste nochmal!)
+  
 - Es werden nicht alle Aufrufe erkannt (ODER??!)
-  - siehe beispiel_modul1.bas --> liebherr : sollte 6 referenzierungen haben, es werden nur 5 dokumentiert...
+    
+  - siehe beispiel_modul.bas --> liebherr : sollte 6 referenzierungen haben, es werden nur 5 dokumentiert... Zeile 106 fehlt:  ```var = liebherr```
+
+  - wäre nicht tragisch, weil liebherr in diesem Syntax bei VBA nur eine Funktion mit Rückgabewert sein kann, und dann könnte man auch liebherr() schreiben, das würde erkannt werden. Allerdings funktioniert auch die Schreibweise ohne KLammern, weshalb sie auch erkannt werden sollte (auch wenn ich es nie so schreiben wollen würde...)
+
 
 ﻿
 
@@ -127,8 +129,22 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 
 
+<!-- PLACEHOLDER: Initialisierungszeile: -->
+
+
+
 <a name="bauer"></a>
 <span style="background-color: lightgrey; padding: 2px;">```Public Sub bauer```</span><small>(Zeile 90)</small>
+
+
+
+
+
+
+<!--  DocString der Prozedur: -->
+
+
+
 
 <div style="padding-left:2em;">
 
@@ -140,6 +156,11 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 
 
+
+
+
+
+<!--  References der Procedure: -->
 
 <details>
 
@@ -168,10 +189,8 @@ Kein Aufruf gefunden.
 
 
 
+<!--  CALL SEQUENCE Abruffolge: -->
 
-
-
-<!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
     <summary>      Interne Aufrufabfolge (4)</summary>
@@ -180,9 +199,6 @@ Kein Aufruf gefunden.
 
 
 Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
-
-
-<!-- <div style="padding-left:1em;"> -->
 
 
 
@@ -224,12 +240,6 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-<!-- </div> -->
-
-
-
-
-
 
 
 
@@ -238,6 +248,8 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+
+<!--  Source Code: -->
 
 
 
@@ -284,6 +296,7 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 
 
 
@@ -325,8 +338,22 @@ End Sub
 
 
 
+<!-- PLACEHOLDER: Initialisierungszeile: -->
+
+
+
 <a name="casio"></a>
 <span style="background-color: lightgrey; padding: 2px;">```Public Sub casio```</span><small>(Zeile 136)</small>
+
+
+
+
+
+
+<!--  DocString der Prozedur: -->
+
+
+
 
 <div style="padding-left:2em;">
 
@@ -337,6 +364,11 @@ End Sub
 
 
 
+
+
+
+
+<!--  References der Procedure: -->
 
 <details>
 
@@ -365,10 +397,8 @@ Kein Aufruf gefunden.
 
 
 
+<!--  CALL SEQUENCE Abruffolge: -->
 
-
-
-<!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
@@ -377,9 +407,6 @@ Kein Aufruf gefunden.
 
 
 Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
-
-
-<!-- <div style="padding-left:1em;"> -->
 
 
 
@@ -393,12 +420,6 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
-<!-- </div> -->
-
-
-
-
-
 
 
 
@@ -407,6 +428,8 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
+
+<!--  Source Code: -->
 
 
 
@@ -439,6 +462,7 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 
 
 
@@ -480,8 +504,22 @@ End Sub
 
 
 
+<!-- PLACEHOLDER: Initialisierungszeile: -->
+
+
+
 <a name="liebherr"></a>
 <span style="background-color: lightgrey; padding: 2px;">```Public Sub liebherr```</span><small>(Zeile 119)</small>
+
+
+
+
+
+
+<!--  DocString der Prozedur: -->
+
+
+
 
 <div style="padding-left:2em;">
 
@@ -492,6 +530,11 @@ End Sub
 
 
 
+
+
+
+
+<!--  References der Procedure: -->
 
 <details>
 
@@ -530,10 +573,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+<!--  CALL SEQUENCE Abruffolge: -->
 
-
-
-<!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
@@ -542,9 +583,6 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
-
-
-<!-- <div style="padding-left:1em;"> -->
 
 
 
@@ -558,12 +596,6 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
-<!-- </div> -->
-
-
-
-
-
 
 
 
@@ -572,6 +604,8 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
+
+<!--  Source Code: -->
 
 
 
@@ -604,6 +638,7 @@ End Sub
 ---
 
 
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
@@ -646,8 +681,22 @@ End Sub
 
 
 
+<!-- PLACEHOLDER: Initialisierungszeile: -->
+
+
+
 <a name="main"></a>
 <span style="background-color: lightgrey; padding: 2px;">```Private Sub main```</span><small>(Zeile 54)</small>
+
+
+
+
+
+
+<!--  DocString der Prozedur: -->
+
+
+
 
 <div style="padding-left:2em;">
 
@@ -662,6 +711,11 @@ End Sub
 
 
 
+
+
+
+
+<!--  References der Procedure: -->
 
 <details>
 
@@ -690,10 +744,8 @@ Kein Aufruf gefunden.
 
 
 
+<!--  CALL SEQUENCE Abruffolge: -->
 
-
-
-<!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
     <summary>      Interne Aufrufabfolge (3)</summary>
@@ -702,9 +754,6 @@ Kein Aufruf gefunden.
 
 
 Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
-
-
-<!-- <div style="padding-left:1em;"> -->
 
 
 
@@ -745,12 +794,6 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-<!-- </div> -->
-
-
-
-
-
 
 
 
@@ -759,6 +802,8 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+
+<!--  Source Code: -->
 
 
 
@@ -811,6 +856,7 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 
 
 
@@ -862,8 +908,22 @@ End Sub
 
 
 
+<!-- PLACEHOLDER: Initialisierungszeile: -->
+
+
+
 <a name="addieren"></a>
 <span style="background-color: lightgrey; padding: 2px;">```Private Function addieren```</span><small>(Zeile 16)</small>
+
+
+
+
+
+
+<!--  DocString der Prozedur: -->
+
+
+
 
 <div style="padding-left:2em;">
 
@@ -876,6 +936,11 @@ End Sub
 
 
 
+
+
+
+
+<!--  References der Procedure: -->
 
 <details>
 
@@ -908,10 +973,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+<!--  CALL SEQUENCE Abruffolge: -->
 
-
-
-<!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
@@ -920,9 +983,6 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
-
-
-<!-- <div style="padding-left:1em;"> -->
 
 
 
@@ -936,12 +996,6 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
-<!-- </div> -->
-
-
-
-
-
 
 
 
@@ -950,6 +1004,8 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
+
+<!--  Source Code: -->
 
 
 
@@ -984,6 +1040,7 @@ End Function
 ---
 
 
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
@@ -1026,8 +1083,22 @@ End Function
 
 
 
+<!-- PLACEHOLDER: Initialisierungszeile: -->
+
+
+
 <a name="subtrahieren"></a>
 <span style="background-color: lightgrey; padding: 2px;">```Private Function subtrahieren```</span><small>(Zeile 34)</small>
+
+
+
+
+
+
+<!--  DocString der Prozedur: -->
+
+
+
 
 <div style="padding-left:2em;">
 
@@ -1041,6 +1112,11 @@ End Function
 
 
 
+
+
+
+
+<!--  References der Procedure: -->
 
 <details>
 
@@ -1071,10 +1147,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+<!--  CALL SEQUENCE Abruffolge: -->
 
-
-
-<!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
     <summary>      Interne Aufrufabfolge (1)</summary>
@@ -1083,9 +1157,6 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
-
-
-<!-- <div style="padding-left:1em;"> -->
 
 
 
@@ -1106,12 +1177,6 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-<!-- </div> -->
-
-
-
-
-
 
 
 
@@ -1120,6 +1185,8 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+
+<!--  Source Code: -->
 
 
 
@@ -1155,6 +1222,7 @@ end Function
 ---
 
 
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
@@ -1242,4 +1310,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-07 15:46:10 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 14:04:50: '6f5357336fc5ce4b62f02f6de03fa0280afd4a51')</small> 
+<small>Dokumentation generiert am 2024-01-07 23:16:28 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 15:46:48: 'b0fc982eeee2e7e5a2d7bbc29900ebd1033ed48d')</small> 

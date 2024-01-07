@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul_rekursiv.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-06 16:17**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-07 06:57:35**
+Generierungsdatum dieser Dokumentation: **2024-01-07 05:29:01**
 
 
 
@@ -234,40 +234,28 @@ Kein Aufruf gefunden.
 
 
 - ```liebherr``` <small> : [Zeile 141] : ```    call liebherr``` </small>
-
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
+      
+      - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz liebherr , counts_indents=3)
 
 
 
 - ```liebherr``` <small> : [Zeile 142] : ```    call liebherr ' Aufruf``` </small>
-
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
+      
+      - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz liebherr , counts_indents=3)
 
 
 
 - ```liebherr``` <small> : [Zeile 144] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
-
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
+      
+      - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz liebherr , counts_indents=3)
 
 
 
 - ```liebherr``` <small> : [Zeile 148] : ```    var = liebherr("gvkil")``` </small>
+      
+      - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz liebherr , counts_indents=3)
 
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
-
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz bauer , counts_indents=1)
 
 
 
@@ -436,7 +424,7 @@ Kein Aufruf gefunden.
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz casio , counts_indents=1)
 
 
 
@@ -599,7 +587,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz liebherr , counts_indents=3)
 
 
 
@@ -766,92 +754,64 @@ Kein Aufruf gefunden.
 
 
 - ```addieren``` <small> : [Zeile 111] : ```        wert = addieren(i, i)``` </small>
-
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
+      
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz addieren , counts_indents=1)
 
 
 
 - ```subtrahieren``` <small> : [Zeile 112] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
-
-
+      
 
 
   - ```addieren``` <small> : [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+      
+    - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz addieren , counts_indents=1)
 
-
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz subtrahieren , counts_indents=1)
 
 
 
 - ```liebherr``` <small> : [Zeile 117] : ```    call liebherr("vor rekursivem Aufruf")``` </small>
-
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
+      
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz liebherr , counts_indents=3)
 
 
 
 - ```rekursiv``` <small> : [Zeile 119] : ```    call rekursiv``` </small>
-
-
+      
 
 
   - ```addieren``` <small> : [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small>
-
-
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
+      
+    - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz addieren , counts_indents=1)
 
 
 
   - ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small>
-
-    - <small> *... recursivly calls itself under certain conditions ...* </small> 
-
+  (... recursivly under certain conditions ... )
 
 
 
 
   - ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small>
-
-
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
+  
+    - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz liebherr , counts_indents=3)
 
 
 
   - ```liebherr``` <small> : [Zeile 57] : ```    call liebherr("nochmal")``` </small>
+      
+    - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz liebherr , counts_indents=3)
 
-
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz rekursiv , counts_indents=1)
 
 
 
 - ```liebherr``` <small> : [Zeile 121] : ```    call liebherr("NACH rekursivem Aufruf")``` </small>
+      
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz liebherr , counts_indents=3)
 
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
-
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz main , counts_indents=1)
 
 
 
@@ -1049,7 +1009,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz addieren , counts_indents=1)
 
 
 
@@ -1216,38 +1176,28 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 - ```addieren``` <small> : [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small>
-
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
+      
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz addieren , counts_indents=1)
 
 
 
 - ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small>
-
-  - <small> *... recursivly calls itself under certain conditions ...* </small> 
-
+  (... recursivly under certain conditions ... )
 
 
 
 
 - ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small>
-
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
+  
+      - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz liebherr , counts_indents=3)
 
 
 
 - ```liebherr``` <small> : [Zeile 57] : ```    call liebherr("nochmal")``` </small>
+      
+      - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz liebherr , counts_indents=3)
 
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
-
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz rekursiv , counts_indents=1)
 
 
 
@@ -1428,13 +1378,10 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 - ```addieren``` <small> : [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+      
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz addieren , counts_indents=1)
 
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-
-
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1404 : Aufruf aus Instanz subtrahieren , counts_indents=1)
 
 
 
@@ -1577,4 +1524,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-07 06:57:35 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 05:01:04: '9deb09e301d564a4c3b451128fc9eab5d2d78122')</small> 
+<small>Dokumentation generiert am 2024-01-07 05:29:01 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 05:01:04: '9deb09e301d564a4c3b451128fc9eab5d2d78122')</small> 

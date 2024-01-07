@@ -441,10 +441,10 @@ class MetaData(metaclass=AutoCallMeta):
 
         # HACK: path for Source-vba-code
         input_file_path = "input_data/beispiel_modul.bas"
-        input_file_path = "input_data/beispiel_modul2.bas"
-        input_file_path = "input_data/beispiel_modul1.bas"
         input_file_path = "input_data/beispiel_modul_bauer+liebherr.bas"
         input_file_path = "input_data/beispiel_modul_rekursiv.bas"
+        input_file_path = "input_data/beispiel_modul2.bas"
+        input_file_path = "input_data/beispiel_modul1.bas"
         
         cls.set_input_path(input_file_path)
 
@@ -500,6 +500,11 @@ class Procedure():
     # TEMPLATE = "templates/prozedur.md"
     # HACK: für weiterentwicklung bzgl abruffolge:
     TEMPLATE = "templates/prozedur_dev.md"
+
+    
+    # AUSBLICK: Mache  dies via GUI als Option parametrisierbar:
+    # print_final_calling_sequence_message = False
+    print_final_calling_sequence_message = True
 
 
     search_for_begin = True # initialer wErt
@@ -1080,7 +1085,7 @@ class Procedure():
         Returns:
             str: Text eingerückt.
         """
-        CHARS_PER_INDENT = "§"
+        CHARS_PER_INDENT = "  "
 
         indendet_text = ""
         
@@ -1089,7 +1094,13 @@ class Procedure():
         list_of_lines = text.split("\n")
     
         for line in list_of_lines:
-            indendet_text = indendet_text + pre_line + line
+            if line != "":
+                # continue
+                # indendet_text = indendet_text + "\n"
+            # else:
+                indendet_text = indendet_text + pre_line + line
+            
+            indendet_text = indendet_text + "\n"
     
 
 
@@ -1307,7 +1318,17 @@ class Procedure():
         Zugriff erfolgt auf Objekt-Ebene.
         """
 
+
+        
+        
+        
         db(f"name der ZU ANALYSIERENDEN prozedur : {self.name}")
+
+
+
+        # EINRUECKUNG = "  "
+        # level = 0
+
 
         if self.calling_sequences_state:
             db("diese proz ist fertig!")
@@ -1316,6 +1337,15 @@ class Procedure():
             end_text_per_procedure = ""
 
             text_to_return = self.calling_sequences_doc +  end_text_per_procedure
+            
+            
+            # text_to_return =EINRUECKUNG * level +  text_to_return
+        
+        
+            # ACHTUNG: keine indentions einfuegen!
+            text_to_return = self.indent_str(text_to_return, 0)
+
+
             return text_to_return
 
 
@@ -1332,22 +1362,35 @@ class Procedure():
         # if len(self.calling_sequences) > 0:
 
         for (line_no_reference, uebergeordnetes_sub, line_code, target_procedure_name) in self.calling_sequences:
+            
+            
 
 
             # ACHTUNG: Weitere Darstellungmöglchkeiten siehe OLD_self !
+
+            # replacer_placeholder_reference = "\n" * 3 + f"{level * EINRUECKUNG}- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n"
             replacer_placeholder_reference = "\n" * 3 + f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n"
+
+
+
+            # ACHTUNG: keine indentions einfuegen!
+            replacer_placeholder_reference = self.indent_str(replacer_placeholder_reference, 0)
+
             # debug_text = " (# OBS : DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :{})".format(inspect_get_current_line_number())
             debug_text = ""
+            
+            
+            
             self.calling_sequences_doc = self.calling_sequences_doc  + replacer_placeholder_reference + debug_text
 
-
+            level = level + 1
 
 
 
             # Rekursive Aufrufe für untergeordnete Calling-sequenzabfolge:
             if target_procedure_name == self.name:
                 # Abbruch gegen Endlosrekusrion:
-                further_calls_doc = "(... recursivly under certain conditions ... )\n\n"
+                further_calls_doc = "- <small> *... recursivly calls itself under certain conditions ...* </small> \n\n"
 
             else:
 
@@ -1358,14 +1401,23 @@ class Procedure():
 
 
                 # Rekursiv: den nächsten Platzhalter mit der nächsten Dokumentation des aufgerufenen calls füllen:
-                further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=0)
+                further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level + 1)
 
 
 
             # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, further_calls_doc)
             # debug_text = " (FURTHER_DEBUGTEXT @ l. :{})".format(inspect_get_current_line_number())
             debug_text = ""
-            self.calling_sequences_doc = self.calling_sequences_doc  +  further_calls_doc + debug_text
+            # self.calling_sequences_doc = self.calling_sequences_doc  + level * EINRUECKUNG +  further_calls_doc + debug_text
+            
+            
+            # ACHTUNG: HIER JA:  indentions einfuegen!
+            self.calling_sequences_doc = self.calling_sequences_doc  + self.indent_str(further_calls_doc + debug_text, level)
+
+
+            level = level - 1
+
+
 
             '''
             self.calling_sequences_state = True
@@ -1378,7 +1430,30 @@ class Procedure():
             '''
 
 
-        abschlusstext = "\n\n(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : {} : Aufruf aus Instanz {})\n".format(inspect_get_current_line_number(), self.name)
+
+
+        # TODO: Hier müssen levels of indentions berückstig werden!
+        
+        level = level + 1
+        # abschlusstext = "\n{}- (! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : {} : Aufruf aus Instanz {} , counts_indents={})\n".format(EINRUECKUNG * level, inspect_get_current_line_number(), self.name, level)
+
+
+
+        # abschlusstext = "\n- (!  TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : {} : Aufruf aus Instanz {} , counts_indents={})\n".format(inspect_get_current_line_number(), self.name, level)
+        
+        
+        abschlusstext = "\n- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>"
+        if Procedure.print_final_calling_sequence_message == False:
+            abschlusstext = ""
+
+
+        
+        # abschlusstext = self.indent_str(abschlusstext, level)
+        # ACHTUNG: keine indentions einfuegen!
+        abschlusstext = self.indent_str(abschlusstext, 0)
+
+
+        # abschlusstext = "\n\n(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : {} : Aufruf aus Instanz {})\n".format(inspect_get_current_line_number(), self.name)
         self.calling_sequences_doc = self.calling_sequences_doc + abschlusstext
 
         self.calling_sequences_state = True

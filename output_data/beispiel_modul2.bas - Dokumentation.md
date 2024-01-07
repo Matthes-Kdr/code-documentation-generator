@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul2.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-03 00:06**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-05 16:06:37**
+Generierungsdatum dieser Dokumentation: **2024-01-07 06:59:43**
 
 
 
@@ -21,7 +21,9 @@ Generierungsdatum dieser Dokumentation: **2024-01-05 16:06:37**
 
 **Aktuelle Bugs:**
 
-- Aufrufabfolge wird noch nicht korrekt dargestellt (Einrückungen sind falsch!)
+- Aufrufabfolge wird noch nicht korrekt dargestellt 
+    - (Einrückungen sind falsch!)
+
 
 
 
@@ -229,8 +231,35 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- ```unterfunktionA``` <small> : [Zeile 34] : ```    call unterfunktionA()``` </small><br>
-- ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small><br>- ```unterfunktionB``` <small> : [Zeile 35] : ```    call unterfunktionB()``` </small><br>
+
+
+
+- ```unterfunktionA``` <small> : [Zeile 34] : ```    call unterfunktionA()``` </small>
+
+
+
+
+  - ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small>
+
+
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```unterfunktionB``` <small> : [Zeile 35] : ```    call unterfunktionB()``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -377,8 +406,27 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- ```unterfunktionA``` <small> : [Zeile 42] : ```    call unterfunktionA()``` </small><br>
-- ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small><br>
+
+
+
+- ```unterfunktionA``` <small> : [Zeile 42] : ```    call unterfunktionA()``` </small>
+
+
+
+
+  - ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small>
+
+
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
 
 
 
@@ -526,6 +574,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
 
 
 
@@ -669,10 +719,89 @@ Kein Aufruf gefunden.
 
 
 
-- ```wiederholungsfunktion``` <small> : [Zeile 65] : ```    call wiederholungsfunktion``` </small><br>
-- ```hauptfunc1``` <small> : [Zeile 62] : ```    call hauptfunc1``` </small><br>
-- ```unterfunktionA``` <small> : [Zeile 34] : ```    call unterfunktionA()``` </small><br>- ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small><br>- ```unterfunktionB``` <small> : [Zeile 35] : ```    call unterfunktionB()``` </small><br>- ```hauptfunc2``` <small> : [Zeile 63] : ```    call hauptfunc2``` </small><br>
-- ```unterfunktionA``` <small> : [Zeile 42] : ```    call unterfunktionA()``` </small><br>- ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small><br>- ```hauptfunc3``` <small> : [Zeile 64] : ```    call hauptfunc3``` </small><br>
+
+
+
+- ```hauptfunc1``` <small> : [Zeile 62] : ```    call hauptfunc1``` </small>
+
+
+
+
+  - ```unterfunktionA``` <small> : [Zeile 34] : ```    call unterfunktionA()``` </small>
+
+
+
+
+    - ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small>
+
+
+      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+  - ```unterfunktionB``` <small> : [Zeile 35] : ```    call unterfunktionB()``` </small>
+
+
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```hauptfunc2``` <small> : [Zeile 63] : ```    call hauptfunc2``` </small>
+
+
+
+
+  - ```unterfunktionA``` <small> : [Zeile 42] : ```    call unterfunktionA()``` </small>
+
+
+
+
+    - ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small>
+
+
+      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```hauptfunc3``` <small> : [Zeile 64] : ```    call hauptfunc3``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```wiederholungsfunktion``` <small> : [Zeile 65] : ```    call wiederholungsfunktion``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -822,7 +951,17 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small><br>
+
+
+
+- ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -968,6 +1107,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -1115,6 +1256,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
 
 
 
@@ -1256,4 +1399,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-05 16:06:37 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-05 04:43:00: '68cb9360dd288bdaec93586777e667b2623c098e')</small> 
+<small>Dokumentation generiert am 2024-01-07 06:59:43 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 05:01:04: '9deb09e301d564a4c3b451128fc9eab5d2d78122')</small> 

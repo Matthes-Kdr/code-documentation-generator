@@ -1,21 +1,11 @@
 ﻿# Code-Dokumentation: Modul 'beispiel_modul1.bas'
 
-<!-- TODO: Platzhalter ersetzen! -->
 
 
+**Letzte Änderung** der Quelldatei 'beispiel_modul1.bas' vor der Generierung dieser automatischen Dokumentation: **2023-11-17 00:52**
 
 
-**TODO:** Organisatorische Hinweise zur Verwendeten bzw. dokumentierten Datei.
-
-Erstellungsdatum dieser Dokumentation: @PLACEHOLDER_TIMESTAMP_NOW@
-<!-- TODO: Platzhalter ersetzen! --> 
-(DAS KOMMT IN DEN TAIL!!! SIEHE FUSSZEILE!)
-
-
-
-
-Die hier dokumentierte Quelldatei wurde vor dieser automatischen Dokumentationserstellung zuletzt modifiziert am @PLACEHOLDER_TIMESTAMP_SOURCEFILE@
-<!-- TODO: Platzhalter ersetzen! -->
+Generierungsdatum dieser Dokumentation: **2024-01-07 07:19:23**
 
 
 
@@ -24,9 +14,71 @@ Die hier dokumentierte Quelldatei wurde vor dieser automatischen Dokumentationse
 
 
 
->  **ACHTUNG.** 
-> Das Tool für die automatisierte Erstellung der Dokumentation ist noch nicht fertig! 
-> Für weitere Infos: Siehe Schlussbemerkungen!
+
+<!-- TODO: nur temporrary!  -->
+# ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:
+
+
+**Aktuelle Bugs:**
+
+- Aufrufabfolge wird noch nicht korrekt dargestellt 
+    - (Einrückungen sind falsch!)
+
+
+
+
+
+
+<details>
+    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+
+---
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+
+
+
+
+
+@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
+
+
+
+
+
+
+
+
+<!-- TODO: Platzhalter platz -->
+<br>
+<br>
+<br>
+<br>
+<br>
+STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
+
+<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+
+
+
+
+* ```hauptfunc1```
+  * ```unterfunktionA```
+    * ```wiederholungsfunktion```
+  * ```unterfunktionB```
+* ```hauptfunc2```
+* ```hauptfunc3```
+* ```wiederholungsfunktion```
+  * ```wiederholungsfunktion```
+
+
+
+
+</details>
 
 
 ﻿
@@ -116,12 +168,12 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 ﻿
 <!-- -------------------------------------------------- -->
-<!-- SECTION-START : FUNCTIONS -->
+<!-- SECTION-START : SUBS -->
 <!-- -------------------------------------------------- -->
 
-<a name="sec_functions"></a>
+<a name="sec_subs"></a>
 
-## Functions
+## Subs
 
 
 ﻿
@@ -182,45 +234,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -230,6 +263,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -368,45 +404,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -416,6 +433,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -543,45 +563,26 @@ Kein Aufruf gefunden.
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -591,6 +592,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -705,45 +709,34 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```getCountsOfColumnsToPrint``` <small> : [Zeile 254] : ```    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)``` </small>
+
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -753,6 +746,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -887,45 +883,55 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```applyLayoutToSinglePage``` <small> : [Zeile 150] : ```        Call applyLayoutToSinglePage(ws, page, oSeite)``` </small>
+
+
+
+
+  - ```getCountsOfColumnsToPrint``` <small> : [Zeile 179] : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
+
+
+
+
+
+
+  - ```mergeCells``` <small> : [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
+
+
+
+
+
+
+  - ```mergeCells``` <small> : [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -935,6 +941,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -1064,45 +1073,48 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```getCountsOfColumnsToPrint``` <small> : [Zeile 179] : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
+
+
+
+
+
+
+- ```mergeCells``` <small> : [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
+
+
+
+
+
+
+- ```mergeCells``` <small> : [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
+
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -1112,6 +1124,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -1289,45 +1304,176 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```insertSheet``` <small> : [Zeile 662] : ```        Call insertSheet(oSeite.blattname & pageNum)``` </small>
+
+
+
+
+  - ```existsSheetname``` <small> : [Zeile 283] : ```        If existsSheetname(sheetname) = False Then``` </small>
+
+
+
+
+
+
+
+
+
+- ```konvertiereZeile``` <small> : [Zeile 677] : ```            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then``` </small>
+
+
+
+
+  - ```getReplacerPre1``` <small> : [Zeile 723] : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
+
+
+
+
+        - ```modifyReplacerIfSonderzeichen``` <small> : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+
+
+
+
+
+
+        - ```modifyReplacerIfTaktwechsel``` <small> : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+
+
+
+
+
+
+
+
+
+  - ```getReplacerPre2``` <small> : [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
+
+
+
+
+        - ```getReplacerPre1``` <small> : [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+
+
+
+
+          - ```modifyReplacerIfSonderzeichen``` <small> : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+
+
+
+
+
+
+          - ```modifyReplacerIfTaktwechsel``` <small> : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+
+
+
+
+
+
+
+
+
+
+
+
+  - ```getReplacerNote``` <small> : [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
+
+
+
+
+
+
+
+  - ```getReplacerCount``` <small> : [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
+
+
+
+
+
+
+
+  - ```getReplacerPost``` <small> : [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
+
+
+
+
+
+
+
+  - ```getReplacerEmpty``` <small> : [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
+
+
+
+
+
+
+
+  - ```getFilePath``` <small> : [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
+
+
+
+
+        - ```getFilePath``` <small> : [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+
+          - <small> *... recursivly calls itself under certain conditions ...* </small> 
+
+
+
+
+
+
+
+
+  - ```InsertImageFromFileToCell``` <small> : [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
+
+
+
+
+
+
+  - ```getTypeOfFollowingSeperatorLine``` <small> : [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
+
+
+
+
+
+
+  - ```insertFrameLineBelow``` <small> : [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
+
+
+
+
+
+
+  - ```SeitenformatNextPosition``` <small> : [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -1337,6 +1483,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -1482,45 +1631,26 @@ Kein Aufruf gefunden.
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -1530,6 +1660,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -1654,45 +1787,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -1702,6 +1816,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -1838,45 +1955,33 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```existsSheetname``` <small> : [Zeile 283] : ```        If existsSheetname(sheetname) = False Then``` </small>
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -1886,6 +1991,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -2019,45 +2127,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -2067,6 +2156,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -2192,45 +2284,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -2240,6 +2313,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -2391,45 +2467,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -2439,6 +2496,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -2587,45 +2647,284 @@ Kein Aufruf gefunden.
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```addSeitenformat``` <small> : [Zeile 1183] : ```        oSeite = addSeitenformat(startzeileSteuertabelle)``` </small>
+
+
+
+
+  - ```newSeitenformat``` <small> : [Zeile 970] : ```    oFormat = newSeitenformat()``` </small>
+
+
+
+
+
+
+
+  - ```identifyLastRow``` <small> : [Zeile 980] : ```    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)``` </small>
+
+
+
+
+    - ```newSeitenformat``` <small> : [Zeile 876] : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
+
+
+
+
+
+
+    - ```areaEmpty``` <small> : [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
+
+
+
+
+
+
+
+
+
+
+
+
+
+- ```erstelleKonvertierteSeite``` <small> : [Zeile 1191] : ```        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)``` </small>
+
+
+
+
+  - ```insertSheet``` <small> : [Zeile 662] : ```        Call insertSheet(oSeite.blattname & pageNum)``` </small>
+
+
+
+
+    - ```existsSheetname``` <small> : [Zeile 283] : ```        If existsSheetname(sheetname) = False Then``` </small>
+
+
+
+
+
+
+
+
+
+  - ```konvertiereZeile``` <small> : [Zeile 677] : ```            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then``` </small>
+
+
+
+
+    - ```getReplacerPre1``` <small> : [Zeile 723] : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
+
+
+
+
+        - ```modifyReplacerIfSonderzeichen``` <small> : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+
+
+
+
+
+
+        - ```modifyReplacerIfTaktwechsel``` <small> : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+
+
+
+
+
+
+
+
+
+    - ```getReplacerPre2``` <small> : [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
+
+
+
+
+        - ```getReplacerPre1``` <small> : [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+
+
+
+
+        - ```modifyReplacerIfSonderzeichen``` <small> : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+
+
+
+
+
+
+        - ```modifyReplacerIfTaktwechsel``` <small> : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+
+
+
+
+
+
+
+
+
+
+
+
+    - ```getReplacerNote``` <small> : [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
+
+
+
+
+
+
+
+    - ```getReplacerCount``` <small> : [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
+
+
+
+
+
+
+
+    - ```getReplacerPost``` <small> : [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
+
+
+
+
+
+
+
+    - ```getReplacerEmpty``` <small> : [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
+
+
+
+
+
+
+
+    - ```getFilePath``` <small> : [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
+
+
+
+
+          - ```getFilePath``` <small> : [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+
+            - <small> *... recursivly calls itself under certain conditions ...* </small> 
+
+
+
+
+
+
+
+
+    - ```InsertImageFromFileToCell``` <small> : [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
+
+
+
+
+
+
+    - ```getTypeOfFollowingSeperatorLine``` <small> : [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
+
+
+
+
+
+
+    - ```insertFrameLineBelow``` <small> : [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
+
+
+
+
+
+
+    - ```SeitenformatNextPosition``` <small> : [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
+
+
+
+
+
+
+
+
+
+
+
+- ```applyLayoutPrintArea``` <small> : [Zeile 1192] : ```        Call applyLayoutPrintArea(oSeite)``` </small>
+
+
+
+
+  - ```getCountsOfColumnsToPrint``` <small> : [Zeile 254] : ```    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)``` </small>
+
+
+
+
+
+
+
+
+
+
+- ```applyLayoutToAllPages``` <small> : [Zeile 1201] : ```    Call applyLayoutToAllPages(oSeite)``` </small>
+
+
+
+
+  - ```applyLayoutToSinglePage``` <small> : [Zeile 150] : ```        Call applyLayoutToSinglePage(ws, page, oSeite)``` </small>
+
+
+
+
+    - ```getCountsOfColumnsToPrint``` <small> : [Zeile 179] : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
+
+
+
+
+
+
+    - ```mergeCells``` <small> : [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
+
+
+
+
+
+
+    - ```mergeCells``` <small> : [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
+
+
+
+
+
+
+
+
+
+
+
+
+- ```printLastSheetsAsPdf``` <small> : [Zeile 1210] : ```        Call printLastSheetsAsPdf(pageNum)``` </small>
+
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -2635,6 +2934,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -2794,45 +3096,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -2842,6 +3125,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -3026,45 +3312,34 @@ Kein Aufruf gefunden.
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```getProjectTitle``` <small> : [Zeile 111] : ```    MsgBox "Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--> falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)", vbOK, getProjectTitle()``` </small>
+
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -3074,6 +3349,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -3222,45 +3500,57 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```newSeitenformat``` <small> : [Zeile 970] : ```    oFormat = newSeitenformat()``` </small>
+
+
+
+
+
+
+
+- ```identifyLastRow``` <small> : [Zeile 980] : ```    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)``` </small>
+
+
+
+
+  - ```newSeitenformat``` <small> : [Zeile 876] : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
+
+
+
+
+
+
+  - ```areaEmpty``` <small> : [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -3270,6 +3560,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -3424,45 +3717,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -3472,6 +3746,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -3609,45 +3886,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -3657,6 +3915,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -3785,45 +4046,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -3833,6 +4075,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -3952,45 +4197,34 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```getFilePath``` <small> : [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+
+  - <small> *... recursivly calls itself under certain conditions ...* </small> 
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -4000,6 +4234,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -4141,45 +4378,26 @@ Kein Aufruf gefunden.
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -4189,6 +4407,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -4325,45 +4546,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -4373,6 +4575,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -4488,45 +4693,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -4536,6 +4722,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -4661,45 +4850,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -4709,6 +4879,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -4831,45 +5004,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -4879,6 +5033,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -5017,45 +5174,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -5065,6 +5203,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -5189,45 +5330,40 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```modifyReplacerIfSonderzeichen``` <small> : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+
+
+
+
+
+
+- ```modifyReplacerIfTaktwechsel``` <small> : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -5237,6 +5373,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -5407,45 +5546,48 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```getReplacerPre1``` <small> : [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+
+
+
+
+  - ```modifyReplacerIfSonderzeichen``` <small> : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+
+
+
+
+
+
+  - ```modifyReplacerIfTaktwechsel``` <small> : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -5455,6 +5597,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -5574,45 +5719,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -5622,6 +5748,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -5762,45 +5891,41 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```newSeitenformat``` <small> : [Zeile 876] : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
+
+
+
+
+
+
+- ```areaEmpty``` <small> : [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
+
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -5810,6 +5935,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -5949,45 +6077,154 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```getReplacerPre1``` <small> : [Zeile 723] : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
+
+
+
+
+      - ```modifyReplacerIfSonderzeichen``` <small> : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+
+
+
+
+
+
+      - ```modifyReplacerIfTaktwechsel``` <small> : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+
+
+
+
+
+
+
+
+
+- ```getReplacerPre2``` <small> : [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
+
+
+
+
+      - ```getReplacerPre1``` <small> : [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+
+
+
+
+        - ```modifyReplacerIfSonderzeichen``` <small> : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+
+
+
+
+
+
+        - ```modifyReplacerIfTaktwechsel``` <small> : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+
+
+
+
+
+
+
+
+
+
+
+
+- ```getReplacerNote``` <small> : [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
+
+
+
+
+
+
+
+- ```getReplacerCount``` <small> : [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
+
+
+
+
+
+
+
+- ```getReplacerPost``` <small> : [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
+
+
+
+
+
+
+
+- ```getReplacerEmpty``` <small> : [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
+
+
+
+
+
+
+
+- ```getFilePath``` <small> : [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
+
+
+
+
+      - ```getFilePath``` <small> : [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+
+        - <small> *... recursivly calls itself under certain conditions ...* </small> 
+
+
+
+
+
+
+
+
+- ```InsertImageFromFileToCell``` <small> : [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
+
+
+
+
+
+
+- ```getTypeOfFollowingSeperatorLine``` <small> : [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
+
+
+
+
+
+
+- ```insertFrameLineBelow``` <small> : [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
+
+
+
+
+
+
+- ```SeitenformatNextPosition``` <small> : [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
+
+
+
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -5997,6 +6234,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -6187,45 +6427,26 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+
+
 
 
 <!-- </div> -->
@@ -6235,6 +6456,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -6353,6 +6577,7 @@ End Function
 
 
 
+
 ---
 
 <a name="sec_tail"></a>
@@ -6382,67 +6607,30 @@ End Function
 
 **ODER:** -->
 
-> Diese Dokumentation wurde automatisch generiert durch ein Programm, welches sich noch im Entwicklungsstadium befindet. Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.
+> Diese Dokumentation wurde automatisiert durch ein entsprechendes Programm generiert. Im Einzelfall, insbesondere wenn im zu dokumentierenden VBA-Code von  bestimmten Konventionen abgewichen wird, können Unstimmigkeiten auftreten. Im Zweifel ist der Originalcode heranzuziehen.
+
+
+Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.
 
 <details>
 
 <summary> Modulinformationen anzeigen/verbergen.
 </summary>
 
-  @
-Created on: Fri, 2023-12-29 (00:45:39)
-
-@author: Matthias Kader
-
-
-Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html
-
-
-
-
-### Fertig implementiert:
-
-• Implementierung Inhaltsverzeichnis / Index
-
-• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections
-
-• Einbindung vom Programmkopf-Docstring
-
-• Implementierung von References-Durchsuchungen
-
-• Implementierung eines Exportes zu HTML
-
-
-### TODO: Größere TODOS:
-
-• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren
-
-
-
-
-### AUSBLICK für später und in schön:
-
-• Index an der Seite wie eine NavBar zum einzelnd scrollen
-
-
-
-• Call Sequenz / Calling Sequence:
-Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.
-Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....
-
-
-@
+  <br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br><br><br><br>### Fertig implementiert:<br><br>• Implementierung Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Einbindung vom Programmkopf-Docstring<br><br>• Implementierung von References-Durchsuchungen<br><br>• Implementierung eines Exportes zu HTML<br><br><br><br>• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren<br><br>• Implementierung der Calling Sequence: Für jede Prozedur: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren.<br>Bislang wird eine einfache Auflistung gegeben. Perspektivisch wäre eine rekursiver Ansatz denkbar, sodass je Aufruf wieder alle Aufrufe innerhabl dieser Prozedur gelistet werden können usw...<br><br><br><br>### TODO: Größere TODOS:<br><br><br>• Call Sequenz / Calling Sequence:<br><br>Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.<br>Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br><br><br># TODO / CURRENT DEV:<br>    Aufrufebenen im 'main' untersuchen, inkl. Rekursive Auflistung aller Calls.<br><br>
 
 </details>
 
-
+---
 
 <small>
 
-**Notice:**
+**Notice, Convnentions:**
 
 *To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.*
 
 </small> 
 
-<small> **TODO:** Erstellt am (Datum) durch das  automatisierte Code-Dokumentationstool von .... in der Version ....</small> 
+---
+
+<small>Dokumentation generiert am 2024-01-07 07:19:23 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 05:01:04: '9deb09e301d564a4c3b451128fc9eab5d2d78122')</small> 

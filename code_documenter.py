@@ -31,11 +31,10 @@ Wichtige Details siehe am Ende dieses docstrings.
 
 
 
-### TODOS:
+### TODOS:  Gesamt-Aufgaben (modulweit / general)
 
 • Bereitstellung einer einfachen GUI / HMI, um Input- und Output Pfade zu parametrisieren
 
-• Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath)
 
 
 
@@ -79,11 +78,34 @@ Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wied
 
 
 
+# =============================================================================
+#### Hinweise zur Anwendung und Benutzung: ####
+# =============================================================================
+
+- To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line. Empty lines that are to be included must also be labelled as comments.
+
+- Durch das Script wird eine MD-Datei (Markdown) erzeugt, die anschließend über die Library markdown sofort in eine HTML umgewandelt wird, sodass nach Abschluss des Scriptes 2 Dateien erstellt wurden. Durch unterschiedliche Interpretationen im Rahmen der Konvertierung unterscheidet sich die Darstellung der so generierten HTML-Datei allerdings, wenn sie über VSCode Extension gesondert konvertiert wird. Die über VSCode generierte Datei ist übersichtlicher und schöner. Das sollte also am Ende nochmals gesondert erfolgen.
+
+
+
+
+
 
 
 # =============================================================================
-#### Unwichtige Nebensächlichkeiten: ####
+#### Unwichtige Nebensächlichkeiten: Code-Analyse Zusammenfassung: ####
 # =============================================================================
+
+In der Version vom 2024-01-07 - 23:37:04:
+    - Gesamtanzahl der Zeilen: 2164 (100%)
+    - davon Leerzeilen: 1091 (50%)
+    - davon Einzelkommentarzeilen: 226 (10%)
+    - davon Blockkommentarzeilen: 364 (17%)
+
+    ==> Summe aller Kommentarzeilen 590 (27%)
+    ==> Code-relevante Zeilen: 483 (22%)
+
+-----------------------------------------------
 
 In der Version vom 2024-01-07 - 15:26:03:
     - Gesamtanzahl der Zeilen: 2771 (100%)
@@ -94,6 +116,7 @@ In der Version vom 2024-01-07 - 15:26:03:
     ==> Summe aller Kommentarzeilen 828 (30%)
     ==> Code-relevante Zeilen: 535 (19%)
 
+-----------------------------------------------
 
 
 

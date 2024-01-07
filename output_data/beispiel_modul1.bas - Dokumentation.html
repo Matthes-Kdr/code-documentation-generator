@@ -1,37 +1,75 @@
-<h1>Code-Dokumentation: Modul 'beispiel_modul1.bas'</h1>
-<!-- TODO: Platzhalter ersetzen! -->
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Code-Dokumentation&colon; Modul &apos;beispiel&lowbar;modul1&period;bas&apos;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 
-<p><strong>TODO:</strong> Organisatorische Hinweise zur Verwendeten bzw. dokumentierten Datei.</p>
-<p>Erstellungsdatum dieser Dokumentation: @PLACEHOLDER_TIMESTAMP_NOW@</p>
-<!-- TODO: Platzhalter ersetzen! -->
-<p>(DAS KOMMT IN DEN TAIL!!! SIEHE FUSSZEILE!)</p>
-<p>Die hier dokumentierte Quelldatei wurde vor dieser automatischen Dokumentationserstellung zuletzt modifiziert am @PLACEHOLDER_TIMESTAMP_SOURCEFILE@</p>
-<!-- TODO: Platzhalter ersetzen! -->
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
 
-<blockquote>
-<p><strong>ACHTUNG.</strong> 
-Das Tool für die automatisierte Erstellung der Dokumentation ist noch nicht fertig! 
-Für weitere Infos: Siehe Schlussbemerkungen!</p>
-</blockquote>
-<p>﻿</p>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="code-dokumentation-modul-beispiel_modul1bas">Code-Dokumentation: Modul 'beispiel_modul1.bas'</h1>
+<p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul1.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2023-11-17 00:52</strong></p>
+<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-07 11:22:31</strong></p>
+<!-- TODO: nur temporrary!  -->
+<h1 id="zwischengelagert-als-ziel-vorgabe-für-abrufsequenz">ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:</h1>
+<p><strong>Aktuelle Bugs:</strong></p>
+<ul>
+<li>Aufrufabfolge wird in manchen Fällen noch nicht ganz korrekt dargestellt
+<ul>
+<li>siehe beispiel_modul1.bas --&gt; notengriffe_erzeugen --&gt; getFilePath</li>
+<li>Scheint v.a. nach  vielen Unteraufrufen aufzutreten...</li>
+<li>Inhaltlich aber nicht falsch... (ODER????!)</li>
+</ul>
+</li>
+</ul>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- Index / TOC -->
 <!-- --------------------------------------------------------------- -->
-
-<h2>Index / Table Of Content</h2>
+<h2 id="index--table-of-content">Index / Table Of Content</h2>
 <p>Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem Modul verwendet werden:</p>
 <ul>
-<li><a href="#sec_modulinfos"><strong>Modulinformationen / Modulkopf</strong></a></li>
-</ul>
+<li>
+<p><a href="#sec_modulinfos"><strong>Modulinformationen / Modulkopf</strong></a></p>
 <!-- ---------- SUBS: --------------- -->
-
-<ul>
+</li>
 <li>
 <p><a href="#sec_subs"><strong>Subs</strong></a> (16)</p>
-</li>
-<li>
-<p><a href="#InsertImageFromFileToCell"><code>InsertImageFromFileToCell</code></a> <small>(Zeile 833)</small></p>
-</li>
+<ul>
+<li><a href="#InsertImageFromFileToCell"><code>InsertImageFromFileToCell</code></a> <small>(Zeile 833)</small></li>
 <li><a href="#SeitenformatNextPosition"><code>SeitenformatNextPosition</code></a> <small>(Zeile 775)</small></li>
 <li><a href="#THIS_VERSION__1_17"><code>THIS_VERSION__1_17</code></a> <small>(Zeile 1220)</small></li>
 <li><a href="#applyLayoutPrintArea"><code>applyLayoutPrintArea</code></a> <small>(Zeile 247)</small></li>
@@ -49,14 +87,11 @@ Für weitere Infos: Siehe Schlussbemerkungen!</p>
 <li><a href="#resetWorkbook"><code>resetWorkbook</code></a> <small>(Zeile 87)</small></li>
 </ul>
 <!-- ---------- FUNCTIONS: --------------- -->
-
-<ul>
+</li>
 <li>
 <p><a href="#sec_functions"><strong>Functions</strong></a> (17)</p>
-</li>
-<li>
-<p><a href="#addSeitenformat"><code>addSeitenformat</code></a> <small>(Zeile 964)</small></p>
-</li>
+<ul>
+<li><a href="#addSeitenformat"><code>addSeitenformat</code></a> <small>(Zeile 964)</small></li>
 <li><a href="#areaEmpty"><code>areaEmpty</code></a> <small>(Zeile 800)</small></li>
 <li><a href="#existsSheetname"><code>existsSheetname</code></a> <small>(Zeile 300)</small></li>
 <li><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> <small>(Zeile 235)</small></li>
@@ -75,132 +110,57 @@ Für weitere Infos: Siehe Schlussbemerkungen!</p>
 <li><a href="#newSeitenformat"><code>newSeitenformat</code></a> <small>(Zeile 896)</small></li>
 </ul>
 <!-- ---------- TAIL: --------------- -->
-
-<ul>
-<li><a href="#sec_tail"><strong>Schlussbemerkungen</strong> (inkl. Angaben zum Entwicklungszustand des Code-Dokumenter-Tools)</a></li>
+</li>
+<li>
+<p><a href="#sec_tail"><strong>Schlussbemerkungen</strong> (inkl. Angaben zum Entwicklungszustand des Code-Dokumenter-Tools)</a></p>
+</li>
 </ul>
-<p>﻿</p>
+<p></p>
 <p><a name="sec_modulinfos"></a></p>
-<h2>Modulbeschreibung</h2>
+<h2 id="modulbeschreibung">Modulbeschreibung</h2>
 <p>@author: Matthias Kader</p>
-<p>﻿</p>
+<p></p>
 <!-- -------------------------------------------------- -->
-<!-- SECTION-START : FUNCTIONS -->
+<!-- SECTION-START : SUBS -->
 <!-- -------------------------------------------------- -->
-
-<p><a name="sec_functions"></a></p>
-<h2>Functions</h2>
-<p>﻿</p>
+<p><a name="sec_subs"></a></p>
+<h2 id="subs">Subs</h2>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="InsertImageFromFileToCell"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub InsertImageFromFileToCell</code></span><small>(Zeile 833)</small></p>
 <div style="padding-left:2em;">
-
->  Private Sub InsertImageFromFileToCell(zeile As Integer, spalte As Integer, image_path As String)
-
-
-
-
+<blockquote>
+<p>Private Sub InsertImageFromFileToCell(zeile As Integer, spalte As Integer, image_path As String)</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```konvertiereZeile```](#konvertiereZeile) : <small>  Zeile 744 : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 744 : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub InsertImageFromFileToCell(zeile As Integer, spalte As Integer, image_path As String, Optional fitTo As String = "Width")
+<hr>
+<pre><code>Private Sub InsertImageFromFileToCell(zeile As Integer, spalte As Integer, image_path As String, Optional fitTo As String = &quot;Width&quot;)
 ' Private Sub InsertImageFromFileToCell(zeile As Integer, spalte As Integer, image_path As String)
 
     'Dim image_path As Variant
@@ -209,13 +169,13 @@ Private Sub InsertImageFromFileToCell(zeile As Integer, spalte As Integer, image
     wsResult.Cells(zeile, spalte).Select  ' Zielzelle markieren
     Set img = wsResult.Shapes.AddPicture(Filename:=image_path, LinkToFile:=msoFalse, SaveWithDocument:=msoTrue, Left:=Selection.Left, Top:=Selection.Top, Width:=-1, Height:=-1)
 
-
+    
 
     ' Groesse zu Zelle ziehen
     With img
         .LockAspectRatio = msoTrue
 
-        If fitTo = "Width" Then
+        If fitTo = &quot;Width&quot; Then
             .Width = .TopLeftCell.Width ' Breite der Bild-Zelle
         Else
             .Height = .TopLeftCell.Height ' Breite der Bild-Zelle
@@ -229,390 +189,156 @@ Private Sub InsertImageFromFileToCell(zeile As Integer, spalte As Integer, image
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="SeitenformatNextPosition"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub SeitenformatNextPosition</code></span><small>(Zeile 775)</small></p>
 <div style="padding-left:2em;">
-
->  Modifiziert die Attribute des Objektes so, dass die naechste Position in den Attributen gespeichert wird
-
-
-
-
+<blockquote>
+<p>Modifiziert die Attribute des Objektes so, dass die naechste Position in den Attributen gespeichert wird</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```konvertiereZeile```](#konvertiereZeile) : <small>  Zeile 767 : ```    Call SeitenformatNextPosition(oSeite)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 767 : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub SeitenformatNextPosition(oSeite As Seitenformat)
+<hr>
+<pre><code>Private Sub SeitenformatNextPosition(oSeite As Seitenformat)
 ' Modifiziert die Attribute des Objektes so, dass die naechste Position in den Attributen gespeichert wird
-
-    If oSeite.zeilengruppe + 1 > oSeite.anzahlZeilen Then
+    
+    If oSeite.zeilengruppe + 1 &gt; oSeite.anzahlZeilen Then
         ' Reset zeilen fuer neue Spalte
         oSeite.zeilengruppe = 1
         oSeite.spaltengruppe = oSeite.spaltengruppe + 1
 
-        If oSeite.spaltengruppe > oSeite.anzahlSpalten Then
+        If oSeite.spaltengruppe &gt; oSeite.anzahlSpalten Then
             oSeite.finished = True
         End If
     Else
         oSeite.zeilengruppe = oSeite.zeilengruppe + 1
     End If
-
+    
     oSeite.excelZeilenNr = oSeite.zeilengruppe + oSeite.excelStartZeilenNr - 1
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="THIS_VERSION__1_17"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub THIS_VERSION__1_17</code></span><small>(Zeile 1220)</small></p>
 <div style="padding-left:2em;">
-
->  Dummy-Methode, um Versionsnummer in MacroList anzeigen zu lassen...
-
-
-
-
+<blockquote>
+<p>Dummy-Methode, um Versionsnummer in MacroList anzeigen zu lassen...</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (0)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Kein Aufruf gefunden.
-
-
-
-
-
-
-
+<p>Kein Aufruf gefunden.</p>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub THIS_VERSION__1_17()
+<hr>
+<pre><code>Private Sub THIS_VERSION__1_17()
 ' Dummy-Methode, um Versionsnummer in MacroList anzeigen zu lassen...
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="applyLayoutPrintArea"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub applyLayoutPrintArea</code></span><small>(Zeile 247)</small></p>
 <div style="padding-left:2em;">
-
->  Legt den Druckbereich der einzelnen Seite fest, in Abhängigkeit der tatsaechlich vorhandenen Anzahl von Spalten:
-
-
-
-
+<blockquote>
+<p>Legt den Druckbereich der einzelnen Seite fest, in Abhängigkeit der tatsaechlich vorhandenen Anzahl von Spalten:</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  Zeile 1192 : ```        Call applyLayoutPrintArea(oSeite)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  Zeile 1192 : <code>        Call applyLayoutPrintArea(oSeite)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>getCountsOfColumnsToPrint</code> <small> : [Zeile 254] : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub applyLayoutPrintArea(oSeite As Seitenformat)
+<hr>
+<pre><code>Private Sub applyLayoutPrintArea(oSeite As Seitenformat)
     ' Legt den Druckbereich der einzelnen Seite fest, in Abhängigkeit der tatsaechlich vorhandenen Anzahl von Spalten:
 
 
@@ -623,8 +349,8 @@ Private Sub applyLayoutPrintArea(oSeite As Seitenformat)
     lastRowToPrint = oSeite.excelStartZeilenNr + oSeite.maxAnzahlZeilen - 1
 
     With wsResult.PageSetup
-
-        If oSeite.ausrichtung = "Querformat" Then
+    
+        If oSeite.ausrichtung = &quot;Querformat&quot; Then
             .Orientation = xlLandscape
         Else
             .Orientation = xlPortrait
@@ -636,128 +362,73 @@ Private Sub applyLayoutPrintArea(oSeite As Seitenformat)
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="applyLayoutToAllPages"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub applyLayoutToAllPages</code></span><small>(Zeile 136)</small></p>
 <div style="padding-left:2em;">
-
->  Durchlaeuft alle erstellten Tabellenblaetter und schleust durch zu einer Anwendungsfunktion, die wiederum  den Titel und andere Dinge in diese Blaetter  ein. Als oSeite wird das zuletzt-verwendete Objekt verwendet - benoetigt werden neben den ALLGEMEINEN UND KONSTANTEN Attributen nur die Angabe der pageNum als Gesamtseitenzahl.
- Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabelle eingefuegt...
-
-
-
-
+<blockquote>
+<p>Durchlaeuft alle erstellten Tabellenblaetter und schleust durch zu einer Anwendungsfunktion, die wiederum  den Titel und andere Dinge in diese Blaetter  ein. Als oSeite wird das zuletzt-verwendete Objekt verwendet - benoetigt werden neben den ALLGEMEINEN UND KONSTANTEN Attributen nur die Angabe der pageNum als Gesamtseitenzahl.
+Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabelle eingefuegt...</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  Zeile 1201 : ```    Call applyLayoutToAllPages(oSeite)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  Zeile 1201 : <code>    Call applyLayoutToAllPages(oSeite)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>applyLayoutToSinglePage</code> <small> : [Zeile 150] : <code>        Call applyLayoutToSinglePage(ws, page, oSeite)</code> </small></p>
+<ul>
+<li>
+<p><code>getCountsOfColumnsToPrint</code> <small> : [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>mergeCells</code> <small> : [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>mergeCells</code> <small> : [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub applyLayoutToAllPages(oSeite As Seitenformat)
+<hr>
+<pre><code>Private Sub applyLayoutToAllPages(oSeite As Seitenformat)
     ' Durchlaeuft alle erstellten Tabellenblaetter und schleust durch zu einer Anwendungsfunktion, die wiederum  den Titel und andere Dinge in diese Blaetter  ein. Als oSeite wird das zuletzt-verwendete Objekt verwendet - benoetigt werden neben den ALLGEMEINEN UND KONSTANTEN Attributen nur die Angabe der pageNum als Gesamtseitenzahl.
     ' Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabelle eingefuegt...
 
@@ -768,136 +439,73 @@ Private Sub applyLayoutToAllPages(oSeite As Seitenformat)
     pagesTotal = pageNum ' Abgreifen aus dem letzten Durchlauf.
 
     For page = 1 To pagesTotal
-
+        
         Set ws = Sheets(Sheets.Count - pagesTotal + page)
         ' Anwenden der Layout-Methode, in der auch die Positionierung der Elemente definiert ist:
         Call applyLayoutToSinglePage(ws, page, oSeite)
-
+    
     Next page
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="applyLayoutToSinglePage"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub applyLayoutToSinglePage</code></span><small>(Zeile 161)</small></p>
 <div style="padding-left:2em;">
-
->  Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabelle eingefuegt...
-
-
-
-
+<blockquote>
+<p>Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabelle eingefuegt...</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```applyLayoutToAllPages```](#applyLayoutToAllPages) : <small>  Zeile 150 : ```        Call applyLayoutToSinglePage(ws, page, oSeite)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#applyLayoutToAllPages"><code>applyLayoutToAllPages</code></a> : <small>  Zeile 150 : <code>        Call applyLayoutToSinglePage(ws, page, oSeite)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>getCountsOfColumnsToPrint</code> <small> : [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>mergeCells</code> <small> : [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>mergeCells</code> <small> : [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub applyLayoutToSinglePage(wsResult As Worksheet, thisPageNum As Integer, oSeite As Seitenformat)
+<hr>
+<pre><code>Private Sub applyLayoutToSinglePage(wsResult As Worksheet, thisPageNum As Integer, oSeite As Seitenformat)
     ' Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabelle eingefuegt...
 
     Dim zielspalteHyperlink As Integer
@@ -905,8 +513,8 @@ Private Sub applyLayoutToSinglePage(wsResult As Worksheet, thisPageNum As Intege
     zielspalteHyperlink = oSeite.excelStartSpaltenNr + oSeite.maxAnzahlSpalten * oSeite.anzahlSubSpaltenProSpalte + 2
 
     ' Eintragung des Hyperlinkes zur Steuertabelle - ausserhalb des Sdruckbereiches:
-    wsResult.Hyperlinks.Add Anchor:=wsResult.Cells(1, zielspalteHyperlink), Address:="", SubAddress:= _
-        "STEUERTABELLE!A1", TextToDisplay:="<-- Zurueck zur Steuertabelle..."
+    wsResult.Hyperlinks.Add Anchor:=wsResult.Cells(1, zielspalteHyperlink), Address:=&quot;&quot;, SubAddress:= _
+        &quot;STEUERTABELLE!A1&quot;, TextToDisplay:=&quot;&lt;-- Zurueck zur Steuertabelle...&quot;
 
 
     Dim pagesTotal As Integer
@@ -914,7 +522,7 @@ Private Sub applyLayoutToSinglePage(wsResult As Worksheet, thisPageNum As Intege
 
     ' Berechnung der Gesamtspalten, ueber die zentrierte Texte verbunden + zentriert werden soll:
     Dim anzahlColumnsToMerge As Integer
-    ' Die letzte "luft"-Spalte wird abgezogen, weil nach der letzten Spalte keine Luft notwendigt ist! (Blattrand!)
+    ' Die letzte &quot;luft&quot;-Spalte wird abgezogen, weil nach der letzten Spalte keine Luft notwendigt ist! (Blattrand!)
     anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)
 
 
@@ -943,7 +551,7 @@ Private Sub applyLayoutToSinglePage(wsResult As Worksheet, thisPageNum As Intege
 
     seitenangabeZeile = 2
     seitenangabeSpalte = 1
-    seitenangabe = "Seite " & thisPageNum & " von " & pagesTotal
+    seitenangabe = &quot;Seite &quot; &amp; thisPageNum &amp; &quot; von &quot; &amp; pagesTotal
 
     wsResult.Cells(seitenangabeZeile, seitenangabeSpalte) = seitenangabe
 
@@ -965,155 +573,197 @@ Private Sub applyLayoutToSinglePage(wsResult As Worksheet, thisPageNum As Intege
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="erstelleKonvertierteSeite"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub erstelleKonvertierteSeite</code></span><small>(Zeile 655)</small></p>
 <div style="padding-left:2em;">
-
->  Erstelle neues TBB und wende Atrriubte an
-
-
-
-
+<blockquote>
+<p>Erstelle neues TBB und wende Atrriubte an</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  Zeile 1191 : ```        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  Zeile 1191 : <code>        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>insertSheet</code> <small> : [Zeile 662] : <code>        Call insertSheet(oSeite.blattname &amp; pageNum)</code> </small></p>
+<ul>
+<li>
+<p><code>existsSheetname</code> <small> : [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>konvertiereZeile</code> <small> : [Zeile 677] : <code>            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then</code> </small></p>
+<ul>
+<li>
+<p><code>getReplacerPre1</code> <small> : [Zeile 723] : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></p>
+<pre><code>- ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
 
 
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
+  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
 
 
+
+
+- ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
+
+
+  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerPre2</code> <small> : [Zeile 725] : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></p>
+<pre><code>- ```getReplacerPre1``` &lt;small&gt; : [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` &lt;/small&gt;
+
+
+
+
+  - ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
+
+
+    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+
+
+  - ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
+
+
+    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+
+- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerNote</code> <small> : [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerCount</code> <small> : [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerPost</code> <small> : [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerEmpty</code> <small> : [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getFilePath</code> <small> : [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
+<pre><code>- ```getFilePath``` &lt;small&gt; : [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` &lt;/small&gt;
+
+  - &lt;small&gt; *... recursivly calls itself under certain conditions ...* &lt;/small&gt; 
+
+
+
+- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>InsertImageFromFileToCell</code> <small> : [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getTypeOfFollowingSeperatorLine</code> <small> : [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>insertFrameLineBelow</code> <small> : [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>SeitenformatNextPosition</code> <small> : [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub erstelleKonvertierteSeite(startzeileSteuertabelle As Integer, oSeite As Seitenformat)
+<hr>
+<pre><code>Private Sub erstelleKonvertierteSeite(startzeileSteuertabelle As Integer, oSeite As Seitenformat)
     ' Erstelle neues TBB und wende Atrriubte an
 
     Dim zeileSteuertabelle As Integer
     'Dim ignoreLine  As Integer
-
+        
         pageNum = pageNum + 1
-        Call insertSheet(oSeite.blattname & pageNum)
-
-        ' '  BUGFIX: In VBA werden die Bedingungen einer For-Schleife immer nur einmalig beim Beginn der Schleife ausgewertet! Somit wird nicht reagiert, sofern der "BIS-Wert" sich veraendert!
+        Call insertSheet(oSeite.blattname &amp; pageNum)
+        
+        ' '  BUGFIX: In VBA werden die Bedingungen einer For-Schleife immer nur einmalig beim Beginn der Schleife ausgewertet! Somit wird nicht reagiert, sofern der &quot;BIS-Wert&quot; sich veraendert!
         ' ' BUGFIX: Daher ForSchleife in While-Schleife umgewandelt:
         'For zeileSteuertabelle = startzeileSteuertabelle To startzeileSteuertabelle + oSeite.maxAnzahlEintraege + countOfSkippedLinesTodo
         zeileSteuertabelle = startzeileSteuertabelle
-        Do While zeileSteuertabelle <= startzeileSteuertabelle + oSeite.maxAnzahlEintraege + oSeite.countOfSkippedLinesTodo
-
+        Do While zeileSteuertabelle &lt;= startzeileSteuertabelle + oSeite.maxAnzahlEintraege + oSeite.countOfSkippedLinesTodo
+        
             If oSeite.finished = True Then
-
-                Exit Sub ' springe zurueck in die Loop des mains: noengriffeErzeugen"
-
+                
+                Exit Sub ' springe zurueck in die Loop des mains: noengriffeErzeugen&quot;
+            
             End If
 
-
+            
             If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then
-
+            
                 ' dann ist naechste Zeile ist leer, daher wird die Laufvariable zusaetzlich um eins erhoeht, ehe sie ohnehin durch den Schleifendurchlauf inkrementiert wird
                 zeileSteuertabelle = zeileSteuertabelle + 1
-
+                
             End If
-
+            
             zeileSteuertabelle = zeileSteuertabelle + 1
 
         'Next zeileSteuertabelle ' BUGFIX: Siehe oben...
@@ -1122,269 +772,107 @@ Private Sub erstelleKonvertierteSeite(startzeileSteuertabelle As Integer, oSeite
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="init"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub init</code></span><small>(Zeile 119)</small></p>
 <div style="padding-left:2em;">
-
->  Parameter fuer modulweite Variablen laden
-
-
-
-
+<blockquote>
+<p>Parameter fuer modulweite Variablen laden</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (0)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Kein Aufruf gefunden.
-
-
-
-
-
-
-
+<p>Kein Aufruf gefunden.</p>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub init()
+<hr>
+<pre><code>Private Sub init()
     ' Parameter fuer modulweite Variablen laden
 
     ' Vorlage fuer Format:
-    Set wsTemplate = Worksheets("TEMPLATE_LAYOUT")
+    Set wsTemplate = Worksheets(&quot;TEMPLATE_LAYOUT&quot;)
 
 
     ' TODO-Tabellenblatt:
-    Set wsTodo = Worksheets("STEUERTABELLE")
-
+    Set wsTodo = Worksheets(&quot;STEUERTABELLE&quot;)
+    
     ' Seitenzahl:
     pageNum = 0
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="insertFrameLineBelow"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub insertFrameLineBelow</code></span><small>(Zeile 1011)</small></p>
 <div style="padding-left:2em;">
-
->  Fuegt die unteren Rahmenlinien aller Zellen dieser Zeile im Subspaltenbereich ein
-
-
-
-
+<blockquote>
+<p>Fuegt die unteren Rahmenlinien aller Zellen dieser Zeile im Subspaltenbereich ein</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```konvertiereZeile```](#konvertiereZeile) : <small>  Zeile 762 : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 762 : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub insertFrameLineBelow(rowAbove As Integer, oSeite As Seitenformat, dashed As Boolean)
+<hr>
+<pre><code>Private Sub insertFrameLineBelow(rowAbove As Integer, oSeite As Seitenformat, dashed As Boolean)
     ' Fuegt die unteren Rahmenlinien aller Zellen dieser Zeile im Subspaltenbereich ein
-
+    
     Dim column As Integer
     Dim columnStart As Integer
     columnStart = (oSeite.spaltengruppe - 1) * oSeite.anzahlSubSpaltenProSpalte + 1
-
+    
     For column = columnStart To columnStart + oSeite.anzahlSubSpaltenProSpalte - 2
-
+        
         With wsResult.Cells(oSeite.excelZeilenNr, column).Borders(xlEdgeBottom)
 
             .ColorIndex = 0
@@ -1395,135 +883,63 @@ Private Sub insertFrameLineBelow(rowAbove As Integer, oSeite As Seitenformat, da
                 ' .LineStyle = xlDot ' gestrichelt
                 .LineStyle = xlDashDotDot ' Strich-Punkt-Punkt
             End If
-
+            
         End With
-
+    
     Next column
-
+    
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="insertSheet"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub insertSheet</code></span><small>(Zeile 274)</small></p>
 <div style="padding-left:2em;">
-
->  Fuegt ein neues Tabellenblatt hinzu mit dem uebergebenen Namen und modifiziert den Tabellenblattnamen, sofern dieser bereits existiert
-
-
-
-
+<blockquote>
+<p>Fuegt ein neues Tabellenblatt hinzu mit dem uebergebenen Namen und modifiziert den Tabellenblattnamen, sofern dieser bereits existiert</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```erstelleKonvertierteSeite```](#erstelleKonvertierteSeite) : <small>  Zeile 662 : ```        Call insertSheet(oSeite.blattname & pageNum)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#erstelleKonvertierteSeite"><code>erstelleKonvertierteSeite</code></a> : <small>  Zeile 662 : <code>        Call insertSheet(oSeite.blattname &amp; pageNum)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>existsSheetname</code> <small> : [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub insertSheet(sheetname As String)
+<hr>
+<pre><code>Private Sub insertSheet(sheetname As String)
     ' Fuegt ein neues Tabellenblatt hinzu mit dem uebergebenen Namen und modifiziert den Tabellenblattnamen, sofern dieser bereits existiert
 
     wsTemplate.Copy After:=Sheets(Sheets.Count)
@@ -1535,139 +951,59 @@ Private Sub insertSheet(sheetname As String)
         If existsSheetname(sheetname) = False Then
             Exit Do
         End If
-
-        sheetname = sheetname & i
+        
+        sheetname = sheetname &amp; i
         i = i + 1
-
+    
     Loop
-
+    
     ' # AUSBLICK: Fehlervermeidung bzgl. Sonderzeichen und max. Zeichenanzahl
     wsResult.name = sheetname
-
+    
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="mergeCells"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub mergeCells</code></span><small>(Zeile 320)</small></p>
 <div style="padding-left:2em;">
-
->  Verbindet den uebergebenen Zellbereich
-
-
-
-
+<blockquote>
+<p>Verbindet den uebergebenen Zellbereich</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (2)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  Zeile 195 : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
-* [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  Zeile 211 : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  Zeile 195 : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></li>
+<li><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  Zeile 211 : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub mergeCells(ws As Worksheet, lineFrom As Integer, columnFrom As Integer, lineTo As Integer, columnTo As Integer)
+<hr>
+<pre><code>Private Sub mergeCells(ws As Worksheet, lineFrom As Integer, columnFrom As Integer, lineTo As Integer, columnTo As Integer)
     ' Verbindet den uebergebenen Zellbereich
 
     Dim cellTopLeft As Range
@@ -1675,149 +1011,69 @@ Private Sub mergeCells(ws As Worksheet, lineFrom As Integer, columnFrom As Integ
 
     Set cellTopLeft = ws.Cells(lineFrom, columnFrom)
     Set cellBottomRight = ws.Cells(lineTo, columnTo)
-
+   
     ' Verbinden der Zellen:
     Range(cellTopLeft, cellBottomRight).Merge
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="modifyReplacerIfSonderzeichen"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub modifyReplacerIfSonderzeichen</code></span><small>(Zeile 535)</small></p>
 <div style="padding-left:2em;">
-
->  Prueft, ob das Stichwort einem definierten Sonderzeichen entspricht.
- Jedes definierte Sonderzeichen erhaelt ein expliziten Bild-Dateiname als Verknuepfung (ohne Dateiendung hier.)
- ACHTUNG: Die keys sind case-INSENSITIV , es gelten also immer gross und kleinscheibung fuer die keys!
-
-
-
-
+<blockquote>
+<p>Prueft, ob das Stichwort einem definierten Sonderzeichen entspricht.
+Jedes definierte Sonderzeichen erhaelt ein expliziten Bild-Dateiname als Verknuepfung (ohne Dateiendung hier.)
+ACHTUNG: Die keys sind case-INSENSITIV , es gelten also immer gross und kleinscheibung fuer die keys!</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```getReplacerPre1```](#getReplacerPre1) : <small>  Zeile 419 : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  Zeile 419 : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub modifyReplacerIfSonderzeichen(oReplacer As Replacer)
+<hr>
+<pre><code>Private Sub modifyReplacerIfSonderzeichen(oReplacer As Replacer)
     ' Prueft, ob das Stichwort einem definierten Sonderzeichen entspricht.
     ' Jedes definierte Sonderzeichen erhaelt ein expliziten Bild-Dateiname als Verknuepfung (ohne Dateiendung hier.)
     ' ACHTUNG: Die keys sind case-INSENSITIV , es gelten also immer gross und kleinscheibung fuer die keys!
-
+    
 
     ' modifyReplacerIfSonderzeichen = False 'default initial: Fuer den Fall dass es KEIN Sonderzeichen ist.
 
     Dim keysAndReplacers() As Variant
-    ' Aufbau des Arrays: ("Key1", "imageNameForKey1, "key2", "imageNameForKey2", ...)
+    ' Aufbau des Arrays: (&quot;Key1&quot;, &quot;imageNameForKey1, &quot;key2&quot;, &quot;imageNameForKey2&quot;, ...)
 
-    keysAndReplacers = Array("X", "paukenschlag", _
-        "signum", "signum", _
-        "segno", "segno", _
-        "coda", "coda")
+    keysAndReplacers = Array(&quot;X&quot;, &quot;paukenschlag&quot;, _
+        &quot;signum&quot;, &quot;signum&quot;, _
+        &quot;segno&quot;, &quot;segno&quot;, _
+        &quot;coda&quot;, &quot;coda&quot;)
 
 
     Dim i As Integer
@@ -1829,156 +1085,76 @@ Private Sub modifyReplacerIfSonderzeichen(oReplacer As Replacer)
             ' Dann ersetze das Stichwot (oReplacer.value) durch das Ersatz-Stichwort:
             oReplacer.value = keysAndReplacers(i + 1)
             oReplacer.isImage = True
-
+        
             ' modifyReplacerIfSonderzeichen = True
             ' Merker, dass es einen Taktartwechsel gegeben hat.
             Exit Sub
             ' Exit Function
-
+            
         End If
-
+            
 
     Next i
 
 ' End Function
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="modifyReplacerIfTaktwechsel"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub modifyReplacerIfTaktwechsel</code></span><small>(Zeile 578)</small></p>
 <div style="padding-left:2em;">
-
->  Prueft, ob das Stichwort einem Taktartwechsel entspricht.
- Je nach Taktart wird das uebergebene Replacer-Objekt inplace modifiziert und zurueckgegeben (mal wird ein Bild gewuenscht, mal nciht...)
- ALLE MOEGLICHEN Taktarten muessen EXPLIZIT IM ARRAY definiert sein (keysAndReplacers), damit sie als solche erkannt wird!
-
-
-
-
+<blockquote>
+<p>Prueft, ob das Stichwort einem Taktartwechsel entspricht.
+Je nach Taktart wird das uebergebene Replacer-Objekt inplace modifiziert und zurueckgegeben (mal wird ein Bild gewuenscht, mal nciht...)
+ALLE MOEGLICHEN Taktarten muessen EXPLIZIT IM ARRAY definiert sein (keysAndReplacers), damit sie als solche erkannt wird!</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```getReplacerPre1```](#getReplacerPre1) : <small>  Zeile 422 : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  Zeile 422 : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Sub modifyReplacerIfTaktwechsel(oReplacer As Replacer)
+<hr>
+<pre><code>Private Sub modifyReplacerIfTaktwechsel(oReplacer As Replacer)
     ' Prueft, ob das Stichwort einem Taktartwechsel entspricht.
     ' Je nach Taktart wird das uebergebene Replacer-Objekt inplace modifiziert und zurueckgegeben (mal wird ein Bild gewuenscht, mal nciht...)
     ' ALLE MOEGLICHEN Taktarten muessen EXPLIZIT IM ARRAY definiert sein (keysAndReplacers), damit sie als solche erkannt wird!
-
+    
 
     Dim keysAndReplacers() As Variant
-    ' Aufbau des Arrays: ("Key1", "IMG:ersatzString1, "key2", "IMG:ersatz2", ...) wobei immer wenn ein Bild eingefuegt werden soll ein "IMG:" davor steht, sonst nicht, dann wird ein Apostroph vorangestellt
-    keysAndReplacers = Array("TC|", "IMG:allabreve", _
-    "T3/4", "'3/4", _
-        "T4/4", "'4/4", _
-        "T6/8", "'6/8", _
-        "T3/8", "'3/8", _
-    "TC", "IMG:TC")
+    ' Aufbau des Arrays: (&quot;Key1&quot;, &quot;IMG:ersatzString1, &quot;key2&quot;, &quot;IMG:ersatz2&quot;, ...) wobei immer wenn ein Bild eingefuegt werden soll ein &quot;IMG:&quot; davor steht, sonst nicht, dann wird ein Apostroph vorangestellt
+    keysAndReplacers = Array(&quot;TC|&quot;, &quot;IMG:allabreve&quot;, _
+    &quot;T3/4&quot;, &quot;'3/4&quot;, _
+        &quot;T4/4&quot;, &quot;'4/4&quot;, _
+        &quot;T6/8&quot;, &quot;'6/8&quot;, _
+        &quot;T3/8&quot;, &quot;'3/8&quot;, _
+    &quot;TC&quot;, &quot;IMG:TC&quot;)
 
     Dim i As Integer
     Dim stichwort As String
@@ -1989,142 +1165,276 @@ Private Sub modifyReplacerIfTaktwechsel(oReplacer As Replacer)
             ' Dann ersetze das Stichwot durch das Ersatz-Stichwort:
             stichwort = keysAndReplacers(i + 1)
             ' pruefe, ob bei diesem Ersatz-Stichwort ein Bild verwendet werden soll oder nicht:
-            If Left(stichwort, 4) = "IMG:" Then
+            If Left(stichwort, 4) = &quot;IMG:&quot; Then
                 oReplacer.isImage = True
                 oReplacer.value = Right(stichwort, Len(stichwort) - 4)
             Else
                 oReplacer.isImage = False
                 oReplacer.value = stichwort
             End If
-
+        
             ' modifyReplacerIfTaktwechsel = True
             ' Merker, dass es einen Taktartwechsel gegeben hat.
             Exit Sub
-
+        
         End If
-
+    
     Next i
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="notengriffeErzeugen"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Sub notengriffeErzeugen</code></span><small>(Zeile 1169)</small></p>
 <div style="padding-left:2em;">
-
-> *No information availible. For more information expand source code.*
-
-
-
+<blockquote>
+<p><em>No information availible. For more information expand source code.</em></p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (0)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Kein Aufruf gefunden.
-
-
-
-
-
-
-
+<p>Kein Aufruf gefunden.</p>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>addSeitenformat</code> <small> : [Zeile 1183] : <code>        oSeite = addSeitenformat(startzeileSteuertabelle)</code> </small></p>
+<ul>
+<li>
+<p><code>newSeitenformat</code> <small> : [Zeile 970] : <code>    oFormat = newSeitenformat()</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><code>identifyLastRow</code> <small> : [Zeile 980] : <code>    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)</code> </small></p>
+<ul>
+<li>
+<p><code>newSeitenformat</code> <small> : [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><code>areaEmpty</code> <small> : [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>erstelleKonvertierteSeite</code> <small> : [Zeile 1191] : <code>        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)</code> </small></p>
+<ul>
+<li>
+<p><code>insertSheet</code> <small> : [Zeile 662] : <code>        Call insertSheet(oSeite.blattname &amp; pageNum)</code> </small></p>
+<ul>
+<li>
+<p><code>existsSheetname</code> <small> : [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>konvertiereZeile</code> <small> : [Zeile 677] : <code>            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then</code> </small></p>
+<ul>
+<li>
+<p><code>getReplacerPre1</code> <small> : [Zeile 723] : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></p>
+<pre><code>- ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
 
----
 
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
+  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
 
 
 
 
+- ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerPre2</code> <small> : [Zeile 725] : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></p>
+<pre><code>- ```getReplacerPre1``` &lt;small&gt; : [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` &lt;/small&gt;
 
 
 
 
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
+  - ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
 
 
+    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+
+
+  - ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
+
+
+    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+
+- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerNote</code> <small> : [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerCount</code> <small> : [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerPost</code> <small> : [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerEmpty</code> <small> : [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getFilePath</code> <small> : [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
+<pre><code>- ```getFilePath``` &lt;small&gt; : [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` &lt;/small&gt;
+
+  - &lt;small&gt; *... recursivly calls itself under certain conditions ...* &lt;/small&gt; 
+
+
+
+- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>InsertImageFromFileToCell</code> <small> : [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getTypeOfFollowingSeperatorLine</code> <small> : [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>insertFrameLineBelow</code> <small> : [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>SeitenformatNextPosition</code> <small> : [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>applyLayoutPrintArea</code> <small> : [Zeile 1192] : <code>        Call applyLayoutPrintArea(oSeite)</code> </small></p>
+<ul>
+<li>
+<p><code>getCountsOfColumnsToPrint</code> <small> : [Zeile 254] : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>applyLayoutToAllPages</code> <small> : [Zeile 1201] : <code>    Call applyLayoutToAllPages(oSeite)</code> </small></p>
+<ul>
+<li>
+<p><code>applyLayoutToSinglePage</code> <small> : [Zeile 150] : <code>        Call applyLayoutToSinglePage(ws, page, oSeite)</code> </small></p>
+<ul>
+<li>
+<p><code>getCountsOfColumnsToPrint</code> <small> : [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>mergeCells</code> <small> : [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>mergeCells</code> <small> : [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>printLastSheetsAsPdf</code> <small> : [Zeile 1210] : <code>        Call printLastSheetsAsPdf(pageNum)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Public Sub notengriffeErzeugen()
+<hr>
+<pre><code>Public Sub notengriffeErzeugen()
 
     ' Initialisieren der modulweiten Variablen (Worksheets usw...)
     Call init
@@ -2141,7 +1451,7 @@ Public Sub notengriffeErzeugen()
         oSeite = addSeitenformat(startzeileSteuertabelle)
 
 
-        If oSeite.anzahlEintraege <= 0 Then
+        If oSeite.anzahlEintraege &lt;= 0 Then
             Exit Do ' Ende der STB erreicht
         End If
 
@@ -2169,132 +1479,52 @@ Public Sub notengriffeErzeugen()
     End If
 
 
-    MsgBox "Herzlichen Glueckwunsch (nachtraeglich) zum Geburtstag ;-) <3." & vbCrLf & vbCrLf & "Umwandlung abgeschlossen." & vbCrLf & vbCrLf & "Sofern das Ergebnis (nochmals) als PDF exportiert werden sollte, muss die Checkbox in Zeile 1 der Steuertabelle aktiviert werden und die Umwandlung erneut durchgefuehrt werden. (Aktuell gibt es kein Automatismusm um bereits erstellte Tabellenblaetter automatisiert zu exportieren. Manuelle Version: Markieren aller relevanten Tabellenblaetter (mittels Strg + Anklicken), danach auf Drucken, unter den Einstellungen 'Aktive Blaetter drucken' auswaehlen und die Skalierung so stellen, dass alle SPALTEN auf einer Seite dargestellt werden...) --> oder eben abweichend nach Bedarf ;-)", vbOK, getProjectTitle()
+    MsgBox &quot;Herzlichen Glueckwunsch (nachtraeglich) zum Geburtstag ;-) &lt;3.&quot; &amp; vbCrLf &amp; vbCrLf &amp; &quot;Umwandlung abgeschlossen.&quot; &amp; vbCrLf &amp; vbCrLf &amp; &quot;Sofern das Ergebnis (nochmals) als PDF exportiert werden sollte, muss die Checkbox in Zeile 1 der Steuertabelle aktiviert werden und die Umwandlung erneut durchgefuehrt werden. (Aktuell gibt es kein Automatismusm um bereits erstellte Tabellenblaetter automatisiert zu exportieren. Manuelle Version: Markieren aller relevanten Tabellenblaetter (mittels Strg + Anklicken), danach auf Drucken, unter den Einstellungen 'Aktive Blaetter drucken' auswaehlen und die Skalierung so stellen, dass alle SPALTEN auf einer Seite dargestellt werden...) --&gt; oder eben abweichend nach Bedarf ;-)&quot;, vbOK, getProjectTitle()
 
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="printLastSheetsAsPdf"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Sub printLastSheetsAsPdf</code></span><small>(Zeile 1081)</small></p>
 <div style="padding-left:2em;">
-
->  Speichert die hintersten (ERgebnis-Tabellenblaetter) als PDF ab, inkl. Skalierung auf eine Seite der Spalten.
-
-
-
-
+<blockquote>
+<p>Speichert die hintersten (ERgebnis-Tabellenblaetter) als PDF ab, inkl. Skalierung auf eine Seite der Spalten.</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  Zeile 1210 : ```        Call printLastSheetsAsPdf(pageNum)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  Zeile 1210 : <code>        Call printLastSheetsAsPdf(pageNum)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Sub printLastSheetsAsPdf(anzahlSheets As Integer)
+<hr>
+<pre><code>Sub printLastSheetsAsPdf(anzahlSheets As Integer)
 ' Speichert die hintersten (ERgebnis-Tabellenblaetter) als PDF ab, inkl. Skalierung auf eine Seite der Spalten.
 
     Dim sheetnames() As Variant
@@ -2304,23 +1534,23 @@ Sub printLastSheetsAsPdf(anzahlSheets As Integer)
     ReDim sheetnames(1 To anzahlSheets)
 
     For i = 1 To anzahlSheets
-
+    
         sheetnames(i) = Sheets(Sheets.Count - anzahlSheets + i).name
 
     Next i
-
+    
     Sheets(sheetnames).Select
     Sheets(Sheets.Count).Activate
 
     Application.PrintCommunication = False
 
     With ActiveSheet.PageSetup
-        .LeftHeader = ""
-        .CenterHeader = ""
-        .RightHeader = ""
-        .LeftFooter = ""
-        .CenterFooter = ""
-        .RightFooter = ""
+        .LeftHeader = &quot;&quot;
+        .CenterHeader = &quot;&quot;
+        .RightHeader = &quot;&quot;
+        .LeftFooter = &quot;&quot;
+        .CenterFooter = &quot;&quot;
+        .RightFooter = &quot;&quot;
 
         ' # HACK:  Sofer ein anderes Layout gewaehlt werden soll, muss es  hier umgestellt werden (oder mittels MAcroRekorder!)
         .LeftMargin = Application.InchesToPoints(0.7)
@@ -2351,18 +1581,18 @@ Sub printLastSheetsAsPdf(anzahlSheets As Integer)
         .DifferentFirstPageHeaderFooter = False
         .ScaleWithDocHeaderFooter = True
         .AlignMarginsHeaderFooter = True
-        .EvenPage.LeftHeader.Text = ""
-        .EvenPage.CenterHeader.Text = ""
-        .EvenPage.RightHeader.Text = ""
-        .EvenPage.LeftFooter.Text = ""
-        .EvenPage.CenterFooter.Text = ""
-        .EvenPage.RightFooter.Text = ""
-        .FirstPage.LeftHeader.Text = ""
-        .FirstPage.CenterHeader.Text = ""
-        .FirstPage.RightHeader.Text = ""
-        .FirstPage.LeftFooter.Text = ""
-        .FirstPage.CenterFooter.Text = ""
-        .FirstPage.RightFooter.Text = ""
+        .EvenPage.LeftHeader.Text = &quot;&quot;
+        .EvenPage.CenterHeader.Text = &quot;&quot;
+        .EvenPage.RightHeader.Text = &quot;&quot;
+        .EvenPage.LeftFooter.Text = &quot;&quot;
+        .EvenPage.CenterFooter.Text = &quot;&quot;
+        .EvenPage.RightFooter.Text = &quot;&quot;
+        .FirstPage.LeftHeader.Text = &quot;&quot;
+        .FirstPage.CenterHeader.Text = &quot;&quot;
+        .FirstPage.RightHeader.Text = &quot;&quot;
+        .FirstPage.LeftFooter.Text = &quot;&quot;
+        .FirstPage.CenterFooter.Text = &quot;&quot;
+        .FirstPage.RightFooter.Text = &quot;&quot;
 
     End With
 
@@ -2371,281 +1601,155 @@ Sub printLastSheetsAsPdf(anzahlSheets As Integer)
 
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="resetWorkbook"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Sub resetWorkbook</code></span><small>(Zeile 87)</small></p>
 <div style="padding-left:2em;">
-
-> *No information availible. For more information expand source code.*
-
-
-
+<blockquote>
+<p><em>No information availible. For more information expand source code.</em></p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (0)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Kein Aufruf gefunden.
-
-
-
-
-
-
-
+<p>Kein Aufruf gefunden.</p>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>getProjectTitle</code> <small> : [Zeile 111] : <code>    MsgBox &quot;Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--&gt; falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)&quot;, vbOK, getProjectTitle()</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
+<hr>
+<pre><code>Sub resetWorkbook()
 
----
-
-```
-Sub resetWorkbook()
-
-    If InputBox("Sollen alle generierten Tabellenblaetter UNWIDERUFLICH ENTFERNT werden? (dann eingabe von: 'y', sonst was beliebiges anderes)", getProjectTitle()) <> "y" Then
+    If InputBox(&quot;Sollen alle generierten Tabellenblaetter UNWIDERUFLICH ENTFERNT werden? (dann eingabe von: 'y', sonst was beliebiges anderes)&quot;, getProjectTitle()) &lt;&gt; &quot;y&quot; Then
         Exit Sub
     End If
     Application.DisplayAlerts = False
-
-
+    
+      
     Dim i As Integer
-
+    
     Do Until Sheets.Count = 3
         ' Auffuehrung der Namen aller Tabellenbletter, die beim Reset NICHT entfernt werden sollen.
-        If Sheets(Sheets.Count).name <> "TEMPLATE_LAYOUT" And _
-           Sheets(Sheets.Count).name <> "steuertabelle" And _
-           Sheets(Sheets.Count).name <> "INFOS und Legende" Then
+        If Sheets(Sheets.Count).name &lt;&gt; &quot;TEMPLATE_LAYOUT&quot; And _
+           Sheets(Sheets.Count).name &lt;&gt; &quot;steuertabelle&quot; And _
+           Sheets(Sheets.Count).name &lt;&gt; &quot;INFOS und Legende&quot; Then
 
                Sheets(Sheets.Count).Delete
-
+               
         End If
-
+        
     Loop
-
+    
     Application.DisplayAlerts = True
-
-    MsgBox "Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--> falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)", vbOK, getProjectTitle()
-
+    
+    MsgBox &quot;Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--&gt; falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)&quot;, vbOK, getProjectTitle()
+    
 End Sub
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- -------------------------------------------------- -->
 <!-- SECTION-START : FUNCTIONS -->
 <!-- -------------------------------------------------- -->
-
 <p><a name="sec_functions"></a></p>
-<h2>Functions</h2>
-<p>﻿</p>
+<h2 id="functions">Functions</h2>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="addSeitenformat"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function addSeitenformat</code></span><small>(Zeile 964)</small></p>
 <div style="padding-left:2em;">
-
->  Erstellt ein Objekt des Typs Seitenformat und initialisiert die Konstanten Werte sowie zusaetzlich berechnete.
- Berechnet alle Attribute, das Obj wird zurück gegeben, auf Grundlage von diesem kann ein neues Blatt genereiert werden.
-
-
-
-
+<blockquote>
+<p>Erstellt ein Objekt des Typs Seitenformat und initialisiert die Konstanten Werte sowie zusaetzlich berechnete.
+Berechnet alle Attribute, das Obj wird zurück gegeben, auf Grundlage von diesem kann ein neues Blatt genereiert werden.</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  Zeile 1183 : ```        oSeite = addSeitenformat(startzeileSteuertabelle)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#notengriffeErzeugen"><code>notengriffeErzeugen</code></a> : <small>  Zeile 1183 : <code>        oSeite = addSeitenformat(startzeileSteuertabelle)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>newSeitenformat</code> <small> : [Zeile 970] : <code>    oFormat = newSeitenformat()</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><code>identifyLastRow</code> <small> : [Zeile 980] : <code>    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)</code> </small></p>
+<ul>
+<li>
+<p><code>newSeitenformat</code> <small> : [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><code>areaEmpty</code> <small> : [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function addSeitenformat(startzeileSteuertabelle As Integer) As Seitenformat
+<hr>
+<pre><code>Private Function addSeitenformat(startzeileSteuertabelle As Integer) As Seitenformat
 ' Erstellt ein Objekt des Typs Seitenformat und initialisiert die Konstanten Werte sowie zusaetzlich berechnete.
 ' Berechnet alle Attribute, das Obj wird zurück gegeben, auf Grundlage von diesem kann ein neues Blatt genereiert werden.
 
@@ -2669,148 +1773,68 @@ Private Function addSeitenformat(startzeileSteuertabelle As Integer) As Seitenfo
 
     ' Aufteilen der Eintraege auf die verfuegbaren Blattbereiche (Spalten:) - immer AUFGERUNDET auf naechste Ganzzahl (sodass die letzte Spalte nie mehr Zeilen als die erste Spalte hat)
     Dim tempAnzahlZeilen As Double
-
+    
     tempAnzahlZeilen = oFormat.anzahlEintraege / oFormat.anzahlSpalten
     'oFormat.anzahlZeilen = oFormat.anzahlEintraege / oFormat.anzahlSpalten
-    If tempAnzahlZeilen <> Int(tempAnzahlZeilen) Then
+    If tempAnzahlZeilen &lt;&gt; Int(tempAnzahlZeilen) Then
         tempAnzahlZeilen = Int(tempAnzahlZeilen) + 1
     End If
-
-    If tempAnzahlZeilen > oFormat.maxAnzahlZeilen Then
+    
+    If tempAnzahlZeilen &gt; oFormat.maxAnzahlZeilen Then
         tempAnzahlZeilen = tempAnzahlZeilen - 1
     End If
-
+    
     oFormat.anzahlZeilen = tempAnzahlZeilen
-
+    
     addSeitenformat = oFormat
 
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="areaEmpty"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function areaEmpty</code></span><small>(Zeile 800)</small></p>
 <div style="padding-left:2em;">
-
->  Prueft einen Bereich auf leere Zellen.
- Rueckgabewerte:
- True falls ALLE Zellen im Bereich leer sind
- False falls NICHT ALLE ZEllen leer sind
-
-
-
-
+<blockquote>
+<p>Prueft einen Bereich auf leere Zellen.
+Rueckgabewerte:
+True falls ALLE Zellen im Bereich leer sind
+False falls NICHT ALLE ZEllen leer sind</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```identifyLastRow```](#identifyLastRow) : <small>  Zeile 882 : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#identifyLastRow"><code>identifyLastRow</code></a> : <small>  Zeile 882 : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function areaEmpty(ws As Worksheet, lineFrom As Integer, columnFrom As Integer, lineTo As Integer, columnTo As Integer)
+<hr>
+<pre><code>Private Function areaEmpty(ws As Worksheet, lineFrom As Integer, columnFrom As Integer, lineTo As Integer, columnTo As Integer)
     ' Prueft einen Bereich auf leere Zellen.
     ' Rueckgabewerte:
         ' True falls ALLE Zellen im Bereich leer sind
@@ -2818,12 +1842,12 @@ Private Function areaEmpty(ws As Worksheet, lineFrom As Integer, columnFrom As I
 
         Dim line As Integer
         Dim column As Integer
-
+        
         For line = lineFrom To lineTo
 
             For column = columnFrom To columnTo
-
-                If ws.Cells(line, column) <> "" Then
+                
+                If ws.Cells(line, column) &lt;&gt; &quot;&quot; Then
 
                     ' Funktion beenden mit False:
                     areaEmpty = False
@@ -2836,268 +1860,109 @@ Private Function areaEmpty(ws As Worksheet, lineFrom As Integer, columnFrom As I
         Next line
 
         areaEmpty = True
-
+        
     End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="existsSheetname"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function existsSheetname</code></span><small>(Zeile 300)</small></p>
 <div style="padding-left:2em;">
-
-> *No information availible. For more information expand source code.*
-
-
-
+<blockquote>
+<p><em>No information availible. For more information expand source code.</em></p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```insertSheet```](#insertSheet) : <small>  Zeile 283 : ```        If existsSheetname(sheetname) = False Then``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#insertSheet"><code>insertSheet</code></a> : <small>  Zeile 283 : <code>        If existsSheetname(sheetname) = False Then</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function existsSheetname(name As String) As Boolean
+<hr>
+<pre><code>Private Function existsSheetname(name As String) As Boolean
 
     Dim ws As Worksheet
     For Each ws In Sheets
         If ws.name = name Then
-
+        
             existsSheetname = True
             Exit Function
-
+        
         End If
-
+            
     Next ws
-
+    
     existsSheetname = False
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="getCountsOfColumnsToPrint"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Function getCountsOfColumnsToPrint</code></span><small>(Zeile 235)</small></p>
 <div style="padding-left:2em;">
-
->  Berechnet die tatsaechliche Anzahl der zu druckenden Spalten
- Dafuer wird die letzte Spalte abgezogen, weil wg. Blattrand keine zusaetzliche Luft erforderlich ist:
-
-
-
-
+<blockquote>
+<p>Berechnet die tatsaechliche Anzahl der zu druckenden Spalten
+Dafuer wird die letzte Spalte abgezogen, weil wg. Blattrand keine zusaetzliche Luft erforderlich ist:</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (2)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  Zeile 179 : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
-* [```applyLayoutPrintArea```](#applyLayoutPrintArea) : <small>  Zeile 254 : ```    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  Zeile 179 : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></li>
+<li><a href="#applyLayoutPrintArea"><code>applyLayoutPrintArea</code></a> : <small>  Zeile 254 : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Function getCountsOfColumnsToPrint(oSeite As Seitenformat) As Integer
+<hr>
+<pre><code>Function getCountsOfColumnsToPrint(oSeite As Seitenformat) As Integer
     ' Berechnet die tatsaechliche Anzahl der zu druckenden Spalten
     ' Dafuer wird die letzte Spalte abgezogen, weil wg. Blattrand keine zusaetzliche Luft erforderlich ist:
 
@@ -3105,294 +1970,140 @@ Function getCountsOfColumnsToPrint(oSeite As Seitenformat) As Integer
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="getFilePath"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getFilePath</code></span><small>(Zeile 338)</small></p>
 <div style="padding-left:2em;">
-
->  Generiert einen Path zur Bilddatei basierend auf einem Stichwort.
- Sofern es keine passende Datei gibt, wird ein Platzhalter-Bild referenziert, durch das ein FEHLER verdeutlcihet wird.
-
-
-
-
+<blockquote>
+<p>Generiert einen Path zur Bilddatei basierend auf einem Stichwort.
+Sofern es keine passende Datei gibt, wird ein Platzhalter-Bild referenziert, durch das ein FEHLER verdeutlcihet wird.</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (2)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```getFilePath```](#getFilePath) : <small>  Zeile 366 : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
-* [```konvertiereZeile```](#konvertiereZeile) : <small>  Zeile 742 : ```                pathImage = getFilePath(oReplacer.value)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#getFilePath"><code>getFilePath</code></a> : <small>  Zeile 366 : <code>    getFilePath = getFilePath(ERROR_FILENAME)</code> </small></li>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 742 : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>getFilePath</code> <small> : [Zeile 366] : <code>    getFilePath = getFilePath(ERROR_FILENAME)</code> </small></p>
+<ul>
+<li><small> <em>... recursivly calls itself under certain conditions ...</em> </small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function getFilePath(stichwort As String)
+<hr>
+<pre><code>Private Function getFilePath(stichwort As String)
     ' Generiert einen Path zur Bilddatei basierend auf einem Stichwort.
     ' Sofern es keine passende Datei gibt, wird ein Platzhalter-Bild referenziert, durch das ein FEHLER verdeutlcihet wird.
 
     Dim folderPath As String
     Dim imagePath As String
     Dim ERROR_FILENAME As String
-
+    
 
     ' Einlesen des PFades aus der TodoTanbellenblattes:
     folderPath = wsTodo.Cells(2, 3)
 
     ' DEFAULT-Bildname:
-    ERROR_FILENAME = "ERROR"
-
+    ERROR_FILENAME = &quot;ERROR&quot;
+    
     ' Zusammenbau des Datepfades (als png-Dateien, da svg bei Franziska nicht funktionierte - bei mir schon):
-    imagePath = folderPath & stichwort & ".png"
+    imagePath = folderPath &amp; stichwort &amp; &quot;.png&quot;
 
     ' Fehlervermeidung: Pruefe ob Datei existiert:
-    If Dir(imagePath) <> "" Then
-
+    If Dir(imagePath) &lt;&gt; &quot;&quot; Then
+        
         ' Datei existiert.
         getFilePath = imagePath
         Exit Function
     End If
-
+    
 
     ' Alternativ: Fehler-Bild default nehmen (rekursiv):
     getFilePath = getFilePath(ERROR_FILENAME)
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="getModifiedKeyIfTaktwechsel"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getModifiedKeyIfTaktwechsel</code></span><small>(Zeile 622)</small></p>
 <div style="padding-left:2em;">
-
->  Prueft, ob das Stichwort einem Taktartwechsel entspricht.
- Dazu werden konkrete Stichworte geprueftund durch ein alternativ-stichwort fuer einen Dateinamen ersetzt zurueckgegeben.
-
-
-
-
+<blockquote>
+<p>Prueft, ob das Stichwort einem Taktartwechsel entspricht.
+Dazu werden konkrete Stichworte geprueftund durch ein alternativ-stichwort fuer einen Dateinamen ersetzt zurueckgegeben.</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (0)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Kein Aufruf gefunden.
-
-
-
-
-
-
-
+<p>Kein Aufruf gefunden.</p>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function getModifiedKeyIfTaktwechsel(stichwort As String) As String
+<hr>
+<pre><code>Private Function getModifiedKeyIfTaktwechsel(stichwort As String) As String
     ' Prueft, ob das Stichwort einem Taktartwechsel entspricht.
     ' Dazu werden konkrete Stichworte geprueftund durch ein alternativ-stichwort fuer einen Dateinamen ersetzt zurueckgegeben.
 
-    getModifiedKeyIfTaktwechsel = "!" 'default initial:
+    getModifiedKeyIfTaktwechsel = &quot;!&quot; 'default initial:
 
     Dim keysAndReplacers() As Variant
-    ' Aufbau des Arrays: ("Key1", "ersatzString1, "key2", "ersatz2", ...)
-    keysAndReplacers = Array("TC|", "allabreve", _
-    "T3/4", "T3-4", _
-        "T4/4", "T4-4", _
-        "T6/8", "T6-8", _
-        "T3/8", "T3-8", _
-    "TC", "TC")
+    ' Aufbau des Arrays: (&quot;Key1&quot;, &quot;ersatzString1, &quot;key2&quot;, &quot;ersatz2&quot;, ...)
+    keysAndReplacers = Array(&quot;TC|&quot;, &quot;allabreve&quot;, _
+    &quot;T3/4&quot;, &quot;T3-4&quot;, _
+        &quot;T4/4&quot;, &quot;T4-4&quot;, _
+        &quot;T6/8&quot;, &quot;T6-8&quot;, _
+        &quot;T3/8&quot;, &quot;T3-8&quot;, _
+    &quot;TC&quot;, &quot;TC&quot;)
 
     Dim i As Integer
     For i = LBound(keysAndReplacers) To UBound(keysAndReplacers)
@@ -3407,252 +2118,93 @@ Private Function getModifiedKeyIfTaktwechsel(stichwort As String) As String
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="getProjectTitle"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Function getProjectTitle</code></span><small>(Zeile 79)</small></p>
 <div style="padding-left:2em;">
-
-> *No information availible. For more information expand source code.*
-
-
-
+<blockquote>
+<p><em>No information availible. For more information expand source code.</em></p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```resetWorkbook```](#resetWorkbook) : <small>  Zeile 111 : ```    MsgBox "Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--> falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)", vbOK, getProjectTitle()``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#resetWorkbook"><code>resetWorkbook</code></a> : <small>  Zeile 111 : <code>    MsgBox &quot;Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--&gt; falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)&quot;, vbOK, getProjectTitle()</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
+<hr>
+<pre><code>Function getProjectTitle() As String
 
----
-
-```
-Function getProjectTitle() As String
-
-    getProjectTitle = "Notengriff-Converter"
+    getProjectTitle = &quot;Notengriff-Converter&quot;
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="getReplacerCount"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerCount</code></span><small>(Zeile 482)</small></p>
 <div style="padding-left:2em;">
-
->  Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
-
-
-
-
+<blockquote>
+<p>Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```konvertiereZeile```](#konvertiereZeile) : <small>  Zeile 729 : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 729 : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function getReplacerCount(stichwort As String) As Replacer
+<hr>
+<pre><code>Private Function getReplacerCount(stichwort As String) As Replacer
     ' Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
 
     Dim oErsatz  As Replacer
@@ -3661,267 +2213,107 @@ Private Function getReplacerCount(stichwort As String) As Replacer
 
     oErsatz.isImage = False
     oErsatz.value = stichwort
-    oErsatz.cellfitTo = "Height"
+    oErsatz.cellfitTo = &quot;Height&quot;
 
 
     getReplacerCount = oErsatz
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="getReplacerEmpty"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerEmpty</code></span><small>(Zeile 516)</small></p>
 <div style="padding-left:2em;">
-
->  Gibt leeren Replacer zurueck
-
-
-
-
+<blockquote>
+<p>Gibt leeren Replacer zurueck</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```konvertiereZeile```](#konvertiereZeile) : <small>  Zeile 733 : ```                    oReplacer = getReplacerEmpty()``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 733 : <code>                    oReplacer = getReplacerEmpty()</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function getReplacerEmpty() As Replacer
+<hr>
+<pre><code>Private Function getReplacerEmpty() As Replacer
     ' Gibt leeren Replacer zurueck
 
     Dim oErsatz  As Replacer
-
+    
     oErsatz.isImage = False
-    oErsatz.value = ""
-    oErsatz.cellfitTo = "Height"
+    oErsatz.value = &quot;&quot;
+    oErsatz.cellfitTo = &quot;Height&quot;
 
     getReplacerEmpty = oErsatz
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="getReplacerNote"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerNote</code></span><small>(Zeile 451)</small></p>
 <div style="padding-left:2em;">
-
->  Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
-
-
-
-
+<blockquote>
+<p>Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```konvertiereZeile```](#konvertiereZeile) : <small>  Zeile 727 : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 727 : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function getReplacerNote(stichwort As String) As Replacer
+<hr>
+<pre><code>Private Function getReplacerNote(stichwort As String) As Replacer
     ' Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
 
     Dim oErsatz  As Replacer
@@ -3932,145 +2324,65 @@ Private Function getReplacerNote(stichwort As String) As Replacer
 
     ' # TODO:  Abhaengig von Gross/Kleinschreibweise wird das stichwort so umgeformt, dass das entsprechende Bild hierzu spaeter heraus gesucht wird
     ' Zuordnung: / fuer einfaches und schnelles Eintragen in Excel werden die Oktaven ergaenzt:
-    ' Soll-zuordnung = {"ais" : "ais.png", "Ais" : "Ais1.png", "A0" : "A0.png")
+    ' Soll-zuordnung = {&quot;ais&quot; : &quot;ais.png&quot;, &quot;Ais&quot; : &quot;Ais1.png&quot;, &quot;A0&quot; : &quot;A0.png&quot;)
     ' Alg: Sofern Anfangsbuchstabe GROSS ist UND am Ende keine 0 steht handelt es  sich um Toene der Oktav 1, bei der die 1 ergaenzt wird. Andernfalls immer standardmaessiges Durchschleusen des Keys mit Verbindung mit der Dateiendung
 
     conditionStartsWithUpperCase = Left(stichwort, 1) = UCase(Left(stichwort, 1))
     conditionEndsWith0 = Right(stichwort, 1) = 0
 
     If conditionStartsWithUpperCase And Not conditionEndsWith0 Then
-        stichwort = stichwort & "1"
+        stichwort = stichwort &amp; &quot;1&quot;
     End If
 
     oErsatz.isImage = True
     oErsatz.value = stichwort ' Die Dateierweiterung wird in der MEthode getFilePath angestellt.
-    oErsatz.cellfitTo = "Width"
+    oErsatz.cellfitTo = &quot;Width&quot;
 
     getReplacerNote = oErsatz
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="getReplacerPost"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerPost</code></span><small>(Zeile 500)</small></p>
 <div style="padding-left:2em;">
-
->  Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
-
-
-
-
+<blockquote>
+<p>Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```konvertiereZeile```](#konvertiereZeile) : <small>  Zeile 731 : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 731 : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function getReplacerPost(stichwort As String) As Replacer
+<hr>
+<pre><code>Private Function getReplacerPost(stichwort As String) As Replacer
     ' Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
 
     Dim oErsatz  As Replacer
@@ -4080,140 +2392,74 @@ Private Function getReplacerPost(stichwort As String) As Replacer
     oErsatz.value = stichwort
 
     getReplacerPost = oErsatz
-    oErsatz.cellfitTo = "Height"
+    oErsatz.cellfitTo = &quot;Height&quot;
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="getReplacerPre1"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerPre1</code></span><small>(Zeile 378)</small></p>
 <div style="padding-left:2em;">
-
->  Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
-
-
-
-
+<blockquote>
+<p>Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (2)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```getReplacerPre2```](#getReplacerPre2) : <small>  Zeile 445 : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
-* [```konvertiereZeile```](#konvertiereZeile) : <small>  Zeile 723 : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#getReplacerPre2"><code>getReplacerPre2</code></a> : <small>  Zeile 445 : <code>    getReplacerPre2 = getReplacerPre1(stichwort)</code> </small></li>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 723 : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>modifyReplacerIfSonderzeichen</code> <small> : [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><code>modifyReplacerIfTaktwechsel</code> <small> : [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function getReplacerPre1(stichwort As String) As Replacer
+<hr>
+<pre><code>Private Function getReplacerPre1(stichwort As String) As Replacer
     ' Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
 
     ' Moegliche Optionen:
     ' - Durchschleusen des Strings
-    ' - Wiederholungszeichen (Begin) --> str in TimesNewRoman ODER IMG
-    ' - Klammer-Zahl (Wiederholungsklammer) --> str
-    ' - Taktart-Wechsel --> IMG
-    ' - Paukenschlag --> IMG
+    ' - Wiederholungszeichen (Begin) --&gt; str in TimesNewRoman ODER IMG
+    ' - Klammer-Zahl (Wiederholungsklammer) --&gt; str
+    ' - Taktart-Wechsel --&gt; IMG
+    ' - Paukenschlag --&gt; IMG
     ' [Trennerlinien werden unabhängig davon im Anschluss fuer jede Zeile gesondert geprueft!]
 
     Dim oErsatz  As Replacer
@@ -4224,7 +2470,7 @@ Private Function getReplacerPre1(stichwort As String) As Replacer
     ' Default-Init:
     oErsatz.isImage = False
     oErsatz.value = stichwort
-    oErsatz.cellfitTo = "Height"
+    oErsatz.cellfitTo = &quot;Height&quot;
     ' found = False
 
 
@@ -4234,8 +2480,8 @@ Private Function getReplacerPre1(stichwort As String) As Replacer
     ' ' Abfragen fuer einzelne Zeichen/Symbole:
     ' '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ' ' Pruefe Option: Paukenschlag
-    ' If UCase(stichwort) = "X" Then
-    '     oErsatz.value = "paukenschlag"
+    ' If UCase(stichwort) = &quot;X&quot; Then
+    '     oErsatz.value = &quot;paukenschlag&quot;
     '     oErsatz.isImage = True
 
 
@@ -4243,8 +2489,8 @@ Private Function getReplacerPre1(stichwort As String) As Replacer
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ' Abfragen fuer Gruppen / Kategorien:
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-
+    
+    
     ' found = modifyReplacerIfSonderzeichen(oErsatz)
     Call modifyReplacerIfSonderzeichen(oErsatz)
     'Suche Sonderzeichen wie Paukenschlaege, Coda, Signum, ....
@@ -4256,137 +2502,79 @@ Private Function getReplacerPre1(stichwort As String) As Replacer
             ' Modifikation des Replacers erfolgte bereits innerhabl der Methode.
 
     '     ' ' # ALT: Bis V.1.16:
-    '     ' ElseIf getModifiedKeyIfTaktwechsel(stichwort) <> "!" Then
+    '     ' ElseIf getModifiedKeyIfTaktwechsel(stichwort) &lt;&gt; &quot;!&quot; Then
     '     '     oErsatz.isImage = True
     '     '     oErsatz.value = getModifiedKeyIfTaktwechsel(stichwort)
 
     ' End If
-
+    
     getReplacerPre1 = oErsatz
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="getReplacerPre2"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerPre2</code></span><small>(Zeile 441)</small></p>
 <div style="padding-left:2em;">
-
->  Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
-
-
-
-
+<blockquote>
+<p>Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```konvertiereZeile```](#konvertiereZeile) : <small>  Zeile 725 : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 725 : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>getReplacerPre1</code> <small> : [Zeile 445] : <code>    getReplacerPre2 = getReplacerPre1(stichwort)</code> </small></p>
+<ul>
+<li>
+<p><code>modifyReplacerIfSonderzeichen</code> <small> : [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><code>modifyReplacerIfTaktwechsel</code> <small> : [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function getReplacerPre2(stichwort As String) As Replacer
+<hr>
+<pre><code>Private Function getReplacerPre2(stichwort As String) As Replacer
     ' Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
 
     ' AKTUELL: DIE SELBEN ABFRAGEN WIE BEI PRE1-SPALTE
@@ -4394,147 +2582,67 @@ Private Function getReplacerPre2(stichwort As String) As Replacer
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="getTypeOfFollowingSeperatorLine"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getTypeOfFollowingSeperatorLine</code></span><small>(Zeile 1044)</small></p>
 <div style="padding-left:2em;">
-
->  returns 0 falls kein eLinie folgt
- returns 1 falls durchgezogene Linie folgt
- returns -1 falls gestrichelte Linie folgt.
-
-
-
-
+<blockquote>
+<p>returns 0 falls kein eLinie folgt
+returns 1 falls durchgezogene Linie folgt
+returns -1 falls gestrichelte Linie folgt.</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```konvertiereZeile```](#konvertiereZeile) : <small>  Zeile 757 : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#konvertiereZeile"><code>konvertiereZeile</code></a> : <small>  Zeile 757 : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function getTypeOfFollowingSeperatorLine(lastRowNumber As Integer, oSeite As Seitenformat) As Integer
+<hr>
+<pre><code>Private Function getTypeOfFollowingSeperatorLine(lastRowNumber As Integer, oSeite As Seitenformat) As Integer
 ' returns 0 falls kein eLinie folgt
 ' returns 1 falls durchgezogene Linie folgt
 ' returns -1 falls gestrichelte Linie folgt.
 
     Dim spalteSteuertabelle As Integer
     Dim value As Variant
-
+    
     getTypeOfFollowingSeperatorLine = 0 ' Default
 
     For spalteSteuertabelle = oSeite.excelStartSpaltenNr To oSeite.excelStartSpaltenNr + oSeite.anzahlSubSpaltenProSpalte - 1
-
+        
         value = UCase(wsTodo.Cells(lastRowNumber + 1, spalteSteuertabelle))
-        If value = "LINE" Then
+        If value = &quot;LINE&quot; Then
 
             getTypeOfFollowingSeperatorLine = 1
             Exit Function
 
-        ElseIf value = "LINE--" Then
+        ElseIf value = &quot;LINE--&quot; Then
 
             getTypeOfFollowingSeperatorLine = -1
             Exit Function
@@ -4546,128 +2654,62 @@ Private Function getTypeOfFollowingSeperatorLine(lastRowNumber As Integer, oSeit
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="identifyLastRow"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function identifyLastRow</code></span><small>(Zeile 867)</small></p>
 <div style="padding-left:2em;">
-
->  Liesst die STB ausgehend ab startzeile aus bis dass die Anzahl maxZeilen abgearbeitet wurde. Pro Zeile wird sich die Zeilennummer gemerkt, sofern Inhalt vorhanden ist.
- Ziel davon ist, dass man so erkennt, wenn die letzten n zeilen nur freizeilen sind (um manuell einen seitenumbruch zu generieren), oder ob nur etwas abstand dadurch generiert werden sollte...
-
-
-
-
+<blockquote>
+<p>Liesst die STB ausgehend ab startzeile aus bis dass die Anzahl maxZeilen abgearbeitet wurde. Pro Zeile wird sich die Zeilennummer gemerkt, sofern Inhalt vorhanden ist.
+Ziel davon ist, dass man so erkennt, wenn die letzten n zeilen nur freizeilen sind (um manuell einen seitenumbruch zu generieren), oder ob nur etwas abstand dadurch generiert werden sollte...</p>
+</blockquote>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```addSeitenformat```](#addSeitenformat) : <small>  Zeile 980 : ```    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#addSeitenformat"><code>addSeitenformat</code></a> : <small>  Zeile 980 : <code>    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>newSeitenformat</code> <small> : [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><code>areaEmpty</code> <small> : [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function identifyLastRow(startzeile As Integer, maxZeilen As Integer) As Integer
+<hr>
+<pre><code>Private Function identifyLastRow(startzeile As Integer, maxZeilen As Integer) As Integer
     ' Liesst die STB ausgehend ab startzeile aus bis dass die Anzahl maxZeilen abgearbeitet wurde. Pro Zeile wird sich die Zeilennummer gemerkt, sofern Inhalt vorhanden ist.
     ' Ziel davon ist, dass man so erkennt, wenn die letzten n zeilen nur freizeilen sind (um manuell einen seitenumbruch zu generieren), oder ob nur etwas abstand dadurch generiert werden sollte...
 
@@ -4685,139 +2727,159 @@ Private Function identifyLastRow(startzeile As Integer, maxZeilen As Integer) As
         If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then
 
             identifyLastRow = zeile
-
+        
         End If
 
     Next zeile
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="konvertiereZeile"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function konvertiereZeile</code></span><small>(Zeile 696)</small></p>
 <div style="padding-left:2em;">
-
->  # TODOC: ALT:
- Konvertiert eine Zeile des Todo-Tabellenblattes in eine Zeile des Ergebnis-Tabellenblattes.
- Geht alle Spalten der STB durch und ruft fuer diese Spalte den jeweiligen Getter zum Holen des ReplacerObjektes auf. Die Logik bzgl. der Ersetzung erfolgt in den einzelnen Gettern. Rueckgabewert ist jeweils ein Replacer-Objekt mit den Attributen isImage:bool und value:string
- Die Zielpositionen fuer die Replacer werden aus dem uebergebenen Objekt oSeite gezogen.
- Danach wird dann die eigentliche Ersetzung durchgefuehrt.
- Rueckgabewert: True fuer normale Zeile ,False falls eine zusaetzliche ZEile der STB ueberspringen werden soll (auslassungsstichwort!)
-
-
-
-
+<blockquote>
+<h1 id="todoc-alt">TODOC: ALT:</h1>
+</blockquote>
+<p>Konvertiert eine Zeile des Todo-Tabellenblattes in eine Zeile des Ergebnis-Tabellenblattes.
+Geht alle Spalten der STB durch und ruft fuer diese Spalte den jeweiligen Getter zum Holen des ReplacerObjektes auf. Die Logik bzgl. der Ersetzung erfolgt in den einzelnen Gettern. Rueckgabewert ist jeweils ein Replacer-Objekt mit den Attributen isImage:bool und value:string
+Die Zielpositionen fuer die Replacer werden aus dem uebergebenen Objekt oSeite gezogen.
+Danach wird dann die eigentliche Ersetzung durchgefuehrt.
+Rueckgabewert: True fuer normale Zeile ,False falls eine zusaetzliche ZEile der STB ueberspringen werden soll (auslassungsstichwort!)</p>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (1)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```erstelleKonvertierteSeite```](#erstelleKonvertierteSeite) : <small>  Zeile 677 : ```            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#erstelleKonvertierteSeite"><code>erstelleKonvertierteSeite</code></a> : <small>  Zeile 677 : <code>            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li>
+<p><code>getReplacerPre1</code> <small> : [Zeile 723] : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></p>
+<pre><code>- ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
 
----
 
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
+  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
 
 
 
 
+- ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerPre2</code> <small> : [Zeile 725] : <code>                    oReplacer = getReplacerPre2(stichwort)</code> </small></p>
+<pre><code>- ```getReplacerPre1``` &lt;small&gt; : [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` &lt;/small&gt;
 
 
 
 
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
+  - ```modifyReplacerIfSonderzeichen``` &lt;small&gt; : [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` &lt;/small&gt;
 
 
+    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+
+
+  - ```modifyReplacerIfTaktwechsel``` &lt;small&gt; : [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` &lt;/small&gt;
+
+
+    - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+  - &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+
+
+
+- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerNote</code> <small> : [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerCount</code> <small> : [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerPost</code> <small> : [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getReplacerEmpty</code> <small> : [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getFilePath</code> <small> : [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
+<pre><code>- ```getFilePath``` &lt;small&gt; : [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` &lt;/small&gt;
+
+  - &lt;small&gt; *... recursivly calls itself under certain conditions ...* &lt;/small&gt; 
+
+
+
+- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>InsertImageFromFileToCell</code> <small> : [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>getTypeOfFollowingSeperatorLine</code> <small> : [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>insertFrameLineBelow</code> <small> : [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><code>SeitenformatNextPosition</code> <small> : [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
+<pre><code>- &lt;small&gt;*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*&lt;/small&gt;
+</code></pre>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function konvertiereZeile(zeileSteuertabelle As Integer, oSeite As Seitenformat) As Boolean
+<hr>
+<pre><code>Private Function konvertiereZeile(zeileSteuertabelle As Integer, oSeite As Seitenformat) As Boolean
     ' # TODOC: ALT:
     ' Konvertiert eine Zeile des Todo-Tabellenblattes in eine Zeile des Ergebnis-Tabellenblattes.
     ' Geht alle Spalten der STB durch und ruft fuer diese Spalte den jeweiligen Getter zum Holen des ReplacerObjektes auf. Die Logik bzgl. der Ersetzung erfolgt in den einzelnen Gettern. Rueckgabewert ist jeweils ein Replacer-Objekt mit den Attributen isImage:bool und value:string
@@ -4834,12 +2896,12 @@ Private Function konvertiereZeile(zeileSteuertabelle As Integer, oSeite As Seite
 
 
     For spalteSteuertabelle = oSeite.excelStartSpaltenNr To oSeite.excelStartSpaltenNr + oSeite.anzahlSubSpaltenProSpalte - 1
-
+    
         zielspalte = spalteSteuertabelle + oSeite.anzahlSubSpaltenProSpalte * (oSeite.spaltengruppe - 1)
         stichwort = wsTodo.Cells(zeileSteuertabelle, spalteSteuertabelle)
 
 
-        If stichwort <> "" Then
+        If stichwort &lt;&gt; &quot;&quot; Then
 
             Select Case spalteSteuertabelle
 
@@ -4866,7 +2928,7 @@ Private Function konvertiereZeile(zeileSteuertabelle As Integer, oSeite As Seite
                 pathImage = getFilePath(oReplacer.value)
 
                 Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)
-
+                    
             Else
                 ' Text uebernehmen:
                 wsResult.Cells(oSeite.excelZeilenNr, zielspalte) = oReplacer.value
@@ -4880,7 +2942,7 @@ Private Function konvertiereZeile(zeileSteuertabelle As Integer, oSeite As Seite
     Dim followingLineStyle As Integer
     followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)
 
-    If followingLineStyle <> 0 Then
+    If followingLineStyle &lt;&gt; 0 Then
 
         ' Linienart modifizieren via Uebergabeparameter
         Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))
@@ -4890,135 +2952,52 @@ Private Function konvertiereZeile(zeileSteuertabelle As Integer, oSeite As Seite
 
     Call SeitenformatNextPosition(oSeite)
 
-    ' Anscheinend muss ich oSeite ähnlich wie bei python nicht zurueckuebergeben.... (modulweit / "global"?)
+    ' Anscheinend muss ich oSeite ähnlich wie bei python nicht zurueckuebergeben.... (modulweit / &quot;global&quot;?)
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
+<p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
-
 <p><a name="newSeitenformat"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function newSeitenformat</code></span><small>(Zeile 896)</small></p>
 <div style="padding-left:2em;">
-
-> 
- Standard-Parameter aus TODO-Steuertabelle auslesen und Standardwerte parametrisieren.
- # ACHTUNG: DEPENDENCIES zur Excel-Worksheet!
-
-
-
-
-
+<blockquote></blockquote>
+<p>Standard-Parameter aus TODO-Steuertabelle auslesen und Standardwerte parametrisieren.</p>
+<h1 id="achtung-dependencies-zur-excel-worksheet">ACHTUNG: DEPENDENCIES zur Excel-Worksheet!</h1>
 <details>
-
 <summary> Referenzierungen dieser Prozedur (2)</summary>
-
 <div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-* [```identifyLastRow```](#identifyLastRow) : <small>  Zeile 876 : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
-* [```addSeitenformat```](#addSeitenformat) : <small>  Zeile 970 : ```    oFormat = newSeitenformat()``` </small>
-
-
-
-
+<p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
+<ul>
+<li><a href="#identifyLastRow"><code>identifyLastRow</code></a> : <small>  Zeile 876 : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></li>
+<li><a href="#addSeitenformat"><code>addSeitenformat</code></a> : <small>  Zeile 970 : <code>    oFormat = newSeitenformat()</code> </small></li>
+</ul>
 </details
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 <!-- TODO: ABRUFABFOLGE (DEV) -->
-
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-</details>
-
-
+<hr>
+<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+</details>
 <details>
     <summary>      Source Code</summary>
-
----
-
-```
-Private Function newSeitenformat(Optional readParameters As Boolean = True) As Seitenformat
+<hr>
+<pre><code>Private Function newSeitenformat(Optional readParameters As Boolean = True) As Seitenformat
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ' Standard-Parameter aus TODO-Steuertabelle auslesen und Standardwerte parametrisieren.
     ' # ACHTUNG: DEPENDENCIES zur Excel-Worksheet!
@@ -5031,25 +3010,25 @@ Private Function newSeitenformat(Optional readParameters As Boolean = True) As S
     oSeitenformat.countOfSkippedLinesTodo = 0 ' Anzahl der uebersprungenen Zeilen innerhalb der Steuertabelle im bereich der fuer diese Seite umgewandelten Zeilen
 
     oSeitenformat.anzahlSubSpaltenProSpalte = 6 ' Azahl der Subspalten pro Spaltengruppe
-
-
+    
+    
     oSeitenformat.zeilengruppe = 1
     oSeitenformat.spaltengruppe = 1
-
+    
     oSeitenformat.excelStartZeilenNr = 5 ' Excel-Zeilennummer, auf der die Seite den ersten Eintrag haben soll
     oSeitenformat.excelStartSpaltenNr = 1 ' Excel-Spaltennummer, auf der die Seite den ersten Eintrag haben soll
-
-
+    
+    
     oSeitenformat.excelZeilenNr = oSeitenformat.excelStartZeilenNr ' Tatsaechliche Zielzeilennummer
     oSeitenformat.excelSpaltenNr = oSeitenformat.excelStartSpaltenNr ' Tatsaechliche Zielspaltennummer
-
+    
     oSeitenformat.finished = False
 
     If readParameters = False Then
         ' Vorzeitiges Verlassen der Funktion. Damit habe ich trotzdem duplizierten Code vermieden (hardcodierte parameter)
         newSeitenformat = oSeitenformat
         Exit Function
-
+    
     End If
 
 
@@ -5058,8 +3037,8 @@ Private Function newSeitenformat(Optional readParameters As Boolean = True) As S
     '''''''''''''''''''''''''''''''''''''''''''''''
     Dim paramSpalte As Integer
     paramSpalte = 6 ' Spaltennummer der Steuertabelle, in der die Parameterwerte stehen
-
-
+    
+    
     oSeitenformat.titel = wsTodo.Cells(6, paramSpalte)
     oSeitenformat.zusatztext = wsTodo.Cells(7, paramSpalte)
     oSeitenformat.blattname = wsTodo.Cells(8, paramSpalte)
@@ -5067,7 +3046,7 @@ Private Function newSeitenformat(Optional readParameters As Boolean = True) As S
 
     ' Max. Zeilen- und Spaltenanzahl auslesen:
     paramZeilenOffsetAusrichtung = 0
-    If oSeitenformat.ausrichtung = "Querformat" Then
+    If oSeitenformat.ausrichtung = &quot;Querformat&quot; Then
         paramZeilenOffsetAusrichtung = 3
     End If
 
@@ -5081,20 +3060,15 @@ Private Function newSeitenformat(Optional readParameters As Boolean = True) As S
 
 End Function
 
-```
-
+</code></pre>
 </details>
-
-
 </div>
-
-<hr />
+<hr>
 <!-- --------------------------------------------------------------- -->
-
-<p>﻿</p>
-<hr />
+<p></p>
+<hr>
 <p><a name="sec_tail"></a></p>
-<h2>Schlussbemerkungen</h2>
+<h2 id="schlussbemerkungen">Schlussbemerkungen</h2>
 <!-- 
 **Notice:**
 
@@ -5115,63 +3089,24 @@ End Function
 
 
 **ODER:** -->
-
 <blockquote>
-<p>Diese Dokumentation wurde automatisch generiert durch ein Programm, welches sich noch im Entwicklungsstadium befindet. Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.</p>
+<p>Diese Dokumentation wurde automatisiert durch ein entsprechendes Programm generiert. Im Einzelfall, insbesondere wenn im zu dokumentierenden VBA-Code von  bestimmten Konventionen abgewichen wird, können Unstimmigkeiten auftreten. Im Zweifel ist der Originalcode heranzuziehen.</p>
 </blockquote>
+<p>Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.</p>
 <details>
-
 <summary> Modulinformationen anzeigen/verbergen.
 </summary>
-
-  @
-Created on: Fri, 2023-12-29 (00:45:39)
-
-@author: Matthias Kader
-
-
-Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html
-
-
-
-
-### Fertig implementiert:
-
-• Implementierung Inhaltsverzeichnis / Index
-
-• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections
-
-• Einbindung vom Programmkopf-Docstring
-
-• Implementierung von References-Durchsuchungen
-
-• Implementierung eines Exportes zu HTML
-
-
-### TODO: Größere TODOS:
-
-• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren
-
-
-
-
-### AUSBLICK für später und in schön:
-
-• Index an der Seite wie eine NavBar zum einzelnd scrollen
-
-
-
-• Call Sequenz / Calling Sequence:
-Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.
-Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....
-
-
-@
-
+<p><br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für generelles Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br>Wichtige Details siehe am Ende dieses docstrings.<br><br><br><br><br>### Fertig implementiert:<br><br>• Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation<br><br>• Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation<br><br>• Sofortiger Export der MD-Datei in eine  HTML-Datei<br><br>• Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation<br><br>• Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Optimierung der Darstellung der Aufrufebenen: Verlinkung der PRozeduren, genau wie bei den References<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br>• Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --&gt; notengriffe_erzeugen --&gt; getFilePath)<br><br><br><br><br><br># =============================================================================<br>#### Wichtige Aufrufreihenfolge der Methode innerhalb dieses Python-Scriptes zur Erstellung der Dokumentation der Aufrufreihenfolge der zu dokumentierenden VBA-Prozeduren: ####<br># =============================================================================<br><br>Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wiederum alle Prozeduren komplett dokumentiert. Für beide Vorgänge erfolgt dies in einer Methode auf Objektebene, wobei diese jeweilige MEthode in beiden Fällen aus einer Klassenmethode aufgerufen wird, in der über die einzelnen Prozedur-Objekte innerhalb dieser Klasse iteriert wird:<br><br>- analyse_call_sequence(cls)<br>    - analyse_calling_sequence_in_one_proc(self)<br>- prepare_all_call_sequences_docs(cls)<br>    - prepare_single_call_sequence_docs(cls)<br><br>(hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )<br><br><br><br><br></p>
 </details>
-
-<p><small></p>
-<p><strong>Notice:</strong></p>
+<hr>
+<small>
+<p><strong>Notice, Convnentions:</strong></p>
 <p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
-<p></small> </p>
-<p><small> <strong>TODO:</strong> Erstellt am (Datum) durch das  automatisierte Code-Dokumentationstool von .... in der Version ....</small> </p>
+</small> 
+<hr>
+<p><small>Dokumentation generiert am 2024-01-07 11:22:31 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 11:13:09: '54c86f1314d7e8ea2ef2dd5da97908caf2bfcb80')</small></p>
+
+        
+        
+    </body>
+    </html>

@@ -31,6 +31,39 @@ End Function
 
 
 
+Private Function rekursiv(tx as string) as string
+' wird nirgendwo aufgerufen.
+' Anzahl weiterer internen Aufrufe : 3 (1 + rekursiv sich selbst + 1)
+'
+' ruft addieren auf (innerhalb string-func)
+' ruft unter bestimmten Bedingungen wiederum rekursiv die selbe Funktion rekursiv auf
+' ruft liebherr auf
+'
+'
+
+
+    ' Addieren:
+    tx = tx + string(addieren(1,2))
+
+    if len(tx) < 10 then
+
+        rekursiv(tx)
+
+    end if
+
+
+    call liebherr
+
+    call liebherr("nochmal")
+
+
+
+
+End Function
+
+
+
+
 Private Function subtrahieren(a as integer, b as integer) as integer
 ' Anzahl der Referenzierungen im Modul: 1
 ' Anzahl weiterer internen Aufrufe : 1
@@ -53,11 +86,15 @@ end Function
 
 Private Sub main()
 ' Anzahl der Referenzierungen im Modul: 0
-' Anzahl weiterer internen Aufrufe : 3
+' Anzahl weiterer internen Aufrufe : 5
 '
 ''' Ruft die MEthode 'addieren' auf
 '
 ''' Ruft die MEthode 'subtrahieren' auf (und darin dann wieder addieren)
+'
+''' Ruft die MEthode 'liebherr' auf
+'
+''' Ruft die MEthode 'rekursiv' auf
 '
 ''' Ruft die MEthode 'liebherr' auf
 
@@ -77,7 +114,11 @@ Private Sub main()
     next i
 
 
-    call liebherr
+    call liebherr("vor rekursivem Aufruf")
+
+    call rekursiv
+
+    call liebherr("NACH rekursivem Aufruf")
 
 
 End Sub

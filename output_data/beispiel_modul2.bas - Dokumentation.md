@@ -1,18 +1,34 @@
-## Infos zum Script, welches für die Erstellung dieser Dokumentation verwendet wurde:
-
-- **commit: 8ff71792281afdca59395d339dee12fa8902f63e**
-- gitdir: D:\Desktop\WORKSPACE\2023-12-28_-_00_51_57_VBA-Code-Dokumentation-Generator_Selbstbau\Programmentwicklung\__DEV__CURRENT_VERSION\.git
-- **message:** 
-> **BUGFIX: Inputs+Outputs sind jetzt parametrisierbar und anwendbar**
-- **refs: Versionsinfo_Documenter**
-- tree: 78a136975972fc19a3c62f923f7fc149af326a74
-- parent: 4c77e5abcc39ccd5bf24a4e0e21ee5bd39490d4b
-- author: Matthias Kader <_>
-- **author_date: 2024-01-03 03:29:40**
+﻿# Code-Dokumentation: Modul 'beispiel_modul2.bas'
 
 
 
-Datum der Umwandlung: 2024-01-03 03:29:59﻿
+**Letzte Änderung** der Quelldatei 'beispiel_modul2.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-03 00:06**
+
+
+Generierungsdatum dieser Dokumentation: **2024-01-07 11:22:53**
+
+
+
+
+
+
+
+
+
+<!-- TODO: nur temporrary!  -->
+# ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:
+
+
+**Aktuelle Bugs:**
+
+- Aufrufabfolge wird in manchen Fällen noch nicht ganz korrekt dargestellt 
+  - siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath
+  - Scheint v.a. nach  vielen Unteraufrufen aufzutreten...
+  - Inhaltlich aber nicht falsch... (ODER????!)
+
+
+
+﻿
 
 
 <!-- --------------------------------------------------------------- -->
@@ -81,12 +97,12 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 ﻿
 <!-- -------------------------------------------------- -->
-<!-- SECTION-START : FUNCTIONS -->
+<!-- SECTION-START : SUBS -->
 <!-- -------------------------------------------------- -->
 
-<a name="sec_functions"></a>
+<a name="sec_subs"></a>
 
-## Functions
+## Subs
 
 
 ﻿
@@ -147,45 +163,54 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```unterfunktionA``` <small> : [Zeile 34] : ```    call unterfunktionA()``` </small>
+
+
+
+
+  - ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small>
+
+
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```unterfunktionB``` <small> : [Zeile 35] : ```    call unterfunktionB()``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
 
 
 <!-- </div> -->
@@ -195,6 +220,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -310,45 +338,45 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```unterfunktionA``` <small> : [Zeile 42] : ```    call unterfunktionA()``` </small>
+
+
+
+
+  - ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small>
+
+
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
 
 
 <!-- </div> -->
@@ -358,6 +386,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -474,45 +505,27 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
 
 
 <!-- </div> -->
@@ -522,6 +535,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -635,45 +651,108 @@ Kein Aufruf gefunden.
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```hauptfunc1``` <small> : [Zeile 62] : ```    call hauptfunc1``` </small>
+
+
+
+
+  - ```unterfunktionA``` <small> : [Zeile 34] : ```    call unterfunktionA()``` </small>
+
+
+
+
+    - ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small>
+
+
+      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+  - ```unterfunktionB``` <small> : [Zeile 35] : ```    call unterfunktionB()``` </small>
+
+
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```hauptfunc2``` <small> : [Zeile 63] : ```    call hauptfunc2``` </small>
+
+
+
+
+  - ```unterfunktionA``` <small> : [Zeile 42] : ```    call unterfunktionA()``` </small>
+
+
+
+
+    - ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small>
+
+
+      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```hauptfunc3``` <small> : [Zeile 64] : ```    call hauptfunc3``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```wiederholungsfunktion``` <small> : [Zeile 65] : ```    call wiederholungsfunktion``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
 
 
 <!-- </div> -->
@@ -683,6 +762,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -801,45 +883,36 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+
+
+- ```wiederholungsfunktion``` <small> : [Zeile 21] : ```    call wiederholungsfunktion()``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
 
 
 <!-- </div> -->
@@ -849,6 +922,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -963,45 +1039,27 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
 
 
 <!-- </div> -->
@@ -1011,6 +1069,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -1126,45 +1187,27 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
-
-<!-- <div style="padding-left:1em;"> -->
-
-
 <details>
     <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
 
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-
-
 @PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
 
 
+<!-- <div style="padding-left:1em;"> -->
 
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
 
 
-</details>
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
 
 
 <!-- </div> -->
@@ -1174,6 +1217,9 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 
 
 
+
+
+</details>
 
 
 
@@ -1244,6 +1290,7 @@ end sub
 
 
 
+
 ---
 
 <a name="sec_tail"></a>
@@ -1273,67 +1320,30 @@ end sub
 
 **ODER:** -->
 
-> Diese Dokumentation wurde automatisch generiert durch ein Programm, welches sich noch im Entwicklungsstadium befindet. Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.
+> Diese Dokumentation wurde automatisiert durch ein entsprechendes Programm generiert. Im Einzelfall, insbesondere wenn im zu dokumentierenden VBA-Code von  bestimmten Konventionen abgewichen wird, können Unstimmigkeiten auftreten. Im Zweifel ist der Originalcode heranzuziehen.
+
+
+Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.
 
 <details>
 
 <summary> Modulinformationen anzeigen/verbergen.
 </summary>
 
-  @
-Created on: Fri, 2023-12-29 (00:45:39)
-
-@author: Matthias Kader
-
-
-Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html
-
-
-
-
-### Fertig implementiert:
-
-• Implementierung Inhaltsverzeichnis / Index
-
-• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections
-
-• Einbindung vom Programmkopf-Docstring
-
-• Implementierung von References-Durchsuchungen
-
-• Implementierung eines Exportes zu HTML
-
-
-### TODO: Größere TODOS:
-
-• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren
-
-
-
-
-### AUSBLICK für später und in schön:
-
-• Index an der Seite wie eine NavBar zum einzelnd scrollen
-
-
-
-• Call Sequenz / Calling Sequence:
-Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.
-Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....
-
-
-@
+  <br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für generelles Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br>Wichtige Details siehe am Ende dieses docstrings.<br><br><br><br><br>### Fertig implementiert:<br><br>• Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation<br><br>• Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation<br><br>• Sofortiger Export der MD-Datei in eine  HTML-Datei<br><br>• Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation<br><br>• Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Optimierung der Darstellung der Aufrufebenen: Verlinkung der PRozeduren, genau wie bei den References<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br>• Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath)<br><br><br><br><br><br># =============================================================================<br>#### Wichtige Aufrufreihenfolge der Methode innerhalb dieses Python-Scriptes zur Erstellung der Dokumentation der Aufrufreihenfolge der zu dokumentierenden VBA-Prozeduren: ####<br># =============================================================================<br><br>Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wiederum alle Prozeduren komplett dokumentiert. Für beide Vorgänge erfolgt dies in einer Methode auf Objektebene, wobei diese jeweilige MEthode in beiden Fällen aus einer Klassenmethode aufgerufen wird, in der über die einzelnen Prozedur-Objekte innerhalb dieser Klasse iteriert wird:<br><br>- analyse_call_sequence(cls)<br>    - analyse_calling_sequence_in_one_proc(self)<br>- prepare_all_call_sequences_docs(cls)<br>    - prepare_single_call_sequence_docs(cls)<br><br>(hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )<br><br><br><br><br>
 
 </details>
 
-
+---
 
 <small>
 
-**Notice:**
+**Notice, Convnentions:**
 
 *To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.*
 
 </small> 
 
-<small> **TODO:** Erstellt am (Datum) durch das  automatisierte Code-Dokumentationstool von .... in der Version ....</small> 
+---
+
+<small>Dokumentation generiert am 2024-01-07 11:22:53 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 11:13:09: '54c86f1314d7e8ea2ef2dd5da97908caf2bfcb80')</small> 

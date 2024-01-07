@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-07 11:28**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-07 13:22:59**
+Generierungsdatum dieser Dokumentation: **2024-01-07 14:01:56**
 
 
 
@@ -176,37 +176,29 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+- [```liebherr```](#liebherr) : <small>  [Zeile 100] : ```    call liebherr``` </small>
 
-
-
-- ```liebherr``` <small> : [Zeile 100] : ```    call liebherr``` </small>
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
+- [```liebherr```](#liebherr) : <small>  [Zeile 101] : ```    call liebherr ' Aufruf``` </small>
 
-
-
-- ```liebherr``` <small> : [Zeile 101] : ```    call liebherr ' Aufruf``` </small>
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
+- [```liebherr```](#liebherr) : <small>  [Zeile 103] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
 
-
-
-- ```liebherr``` <small> : [Zeile 103] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
+- [```liebherr```](#liebherr) : <small>  [Zeile 107] : ```    var = liebherr("gvkil")``` </small>
 
-
-
-- ```liebherr``` <small> : [Zeile 107] : ```    var = liebherr("gvkil")``` </small>
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
@@ -501,11 +493,16 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```main```](#main) : <small>  Zeile 80 : ```    call liebherr``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 100 : ```    call liebherr``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 101 : ```    call liebherr ' Aufruf``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 103 : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 107 : ```    var = liebherr("gvkil")``` </small>
+- [```main```](#main) : <small>  [Zeile 80] : ```    call liebherr``` </small>
+
+- [```bauer```](#bauer) : <small>  [Zeile 100] : ```    call liebherr``` </small>
+
+- [```bauer```](#bauer) : <small>  [Zeile 101] : ```    call liebherr ' Aufruf``` </small>
+
+- [```bauer```](#bauer) : <small>  [Zeile 103] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+
+- [```bauer```](#bauer) : <small>  [Zeile 107] : ```    var = liebherr("gvkil")``` </small>
+
 
 
 
@@ -701,24 +698,18 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+- [```addieren```](#addieren) : <small>  [Zeile 74] : ```        wert = addieren(i, i)``` </small>
 
-
-
-- ```addieren``` <small> : [Zeile 74] : ```        wert = addieren(i, i)``` </small>
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
+- [```subtrahieren```](#subtrahieren) : <small>  [Zeile 75] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
 
 
+  - [```addieren```](#addieren) : <small>  [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
-- ```subtrahieren``` <small> : [Zeile 75] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
-
-
-
-
-  - ```addieren``` <small> : [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
@@ -728,10 +719,8 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
+- [```liebherr```](#liebherr) : <small>  [Zeile 80] : ```    call liebherr``` </small>
 
-
-
-- ```liebherr``` <small> : [Zeile 80] : ```    call liebherr``` </small>
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
@@ -888,8 +877,10 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```subtrahieren```](#subtrahieren) : <small>  Zeile 44 : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
-* [```main```](#main) : <small>  Zeile 74 : ```        wert = addieren(i, i)``` </small>
+- [```subtrahieren```](#subtrahieren) : <small>  [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+
+- [```main```](#main) : <small>  [Zeile 74] : ```        wert = addieren(i, i)``` </small>
+
 
 
 
@@ -1051,7 +1042,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```main```](#main) : <small>  Zeile 75 : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+- [```main```](#main) : <small>  [Zeile 75] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+
 
 
 
@@ -1087,10 +1079,8 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+- [```addieren```](#addieren) : <small>  [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
-
-
-- ```addieren``` <small> : [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
@@ -1240,4 +1230,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-07 13:22:59 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 11:28:41: '4b8949429169fbe86e4cfd133585737b3537f5ea')</small> 
+<small>Dokumentation generiert am 2024-01-07 14:01:56 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 13:32:27: '9d976ac8585fb6e64f2f6e7bf1f7638fc4ab7991')</small> 

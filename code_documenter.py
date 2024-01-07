@@ -1065,11 +1065,39 @@ class Procedure():
     
 
 
+    @staticmethod
+    def get_markdown_for_code_line_of_call_entry(proc_name:str, line_no:str, line_text:str) -> str:
+        """
+        Generiert einen String, der in eine MArkdown-Datei mit entsprechendem Syntax eingefügt werden kann.
+        Der String enthält den Namen einer Prozedur, eine relevante Zeilennummer und den relevanten Text der Code-Zeile.
+
+        Innerhalb der Methode wird der String so aufgebaut, dass der Prozedurname später verlinkt ist zu dieser Prozedur.
+
+        Die Methode kann sowohl für calling_sequences (Aufrufe), als auch für references (übergeordnete / aufrufende Prozeduren) verwendet werden und stellt sicher, dass das Ausgabeformat immer identisch ist.
+
+        Args:
+            proc_name (str): Name der Prozedur
+            line_no (str): Relevante Zeilennummer im Code (als str)
+            line_text (str): Textzeile im Code
 
 
+        Returns:
+            str: String im Markdown-Syntax, der eine interaktive Übersicht über die Parameter in leserlicher Form gibt.
+        """
+
+        # proc_name:str, line_no:str, line_text:str
+    
+
+        # replacer_placeholder_reference = "\n" * 3 + f"- [```{target_procedure_name}```](#{target_procedure_name}) <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n"
+
+        markdown_entry = f"- [```{proc_name}```](#{proc_name}) : <small>  [Zeile {line_no}] : ```{line_text}``` </small>"
+
+        markdown_entry = markdown_entry.replace(line_text, line_text.rstrip("\n")) 
+        
+        markdown_entry = markdown_entry + "\n" * 2
 
 
-
+        return markdown_entry
 
 
 
@@ -1139,7 +1167,34 @@ class Procedure():
             # ACHTUNG: Weitere Darstellungmöglchkeiten siehe OLD_self !
 
             # replacer_placeholder_reference = "\n" * 3 + f"{level * EINRUECKUNG}- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n"
-            replacer_placeholder_reference = "\n" * 3 + f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n"
+            # replacer_placeholder_reference = "\n" * 3 + f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n"
+            
+            
+            
+            # replacer_placeholder_reference = "\n" * 3 + f"- [```{target_procedure_name}```](#{target_procedure_name}) <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n"
+
+
+            # replacer_placeholder_reference =  "\n" * 3 + self.get_markdown_for_code_line_of_call_entry(target_procedure_name, line_no_reference, line_code)
+
+
+
+
+
+
+
+            # TODO: Vielleicht kann das "\n" * 3 entfallen??! JA
+            # replacer_placeholder_reference =  "\n" * 3 + self.get_markdown_for_code_line_of_call_entry(target_procedure_name, line_no_reference, line_code)
+            
+            
+            replacer_placeholder_reference =  self.get_markdown_for_code_line_of_call_entry(target_procedure_name, line_no_reference, line_code)
+
+
+
+            # replacer_placeholder_reference =  "\n" * 3 + self.get_markdown_for_code_line_of_call_entry(target_procedure_name, line_no_reference, line_code).replace(line_code, line_code.rstrip("\n")) + "\n"
+
+
+
+
 
 
 
@@ -1917,9 +1972,15 @@ class Procedure():
                 # Zusammenbau des Ersatzwertes für den Platzhalter inkl. Anhängen des Platzhalters für weitere Ersetzungen:
                 
                 # Um MArkdown nicht zu zerschiessen muss der letzte Zeilenumbruch des line_codes entfernt werrden:
-                line_code:str = line_code.rstrip("\n")
+                
+                # OBSOLET: wird in Methode get_markdown_for_code_line_of_call_entry erledigt
+                # line_code:str = line_code.rstrip("\n")
 
-                replacer_placeholder_reference = f"* [```{calling_procedure_name}```](#{calling_procedure_name}) : <small>  Zeile {line_no} : ```{line_code}``` </small>"
+                # replacer_placeholder_reference = f"* [```{calling_procedure_name}```](#{calling_procedure_name}) : <small>  [Zeile {line_no}] : ```{line_code}``` </small>"
+
+
+                replacer_placeholder_reference = self.get_markdown_for_code_line_of_call_entry(calling_procedure_name, line_no, line_code)
+
 
 
                 # # AUSBLICK: weitere collapse details : funktioniert technisch, allerdings steht das collapsable immer in neuer Zeile und daher wird es groß - vielleicht später in schön machen...
@@ -1927,7 +1988,7 @@ class Procedure():
 
 
 
-                replacer_placeholder_reference = replacer_placeholder_reference  + f"\n{_PLACEHOLDER_REFERENCE}"
+                replacer_placeholder_reference = replacer_placeholder_reference  + _PLACEHOLDER_REFERENCE
                 
                 # Ersetzen:
                 doc = doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)

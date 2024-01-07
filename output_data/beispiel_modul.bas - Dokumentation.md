@@ -2,10 +2,10 @@
 
 
 
-**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-05 15:31**
+**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-05 16:37**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-05 15:40:42**
+Generierungsdatum dieser Dokumentation: **2024-01-07 11:23:50**
 
 
 
@@ -19,57 +19,13 @@ Generierungsdatum dieser Dokumentation: **2024-01-05 15:40:42**
 # ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:
 
 
+**Aktuelle Bugs:**
 
-<details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+- Aufrufabfolge wird in manchen Fällen noch nicht ganz korrekt dargestellt 
+  - siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath
+  - Scheint v.a. nach  vielen Unteraufrufen aufzutreten...
+  - Inhaltlich aber nicht falsch... (ODER????!)
 
----
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-
-
-
-
-
-
-<!-- TODO: Platzhalter platz -->
-<br>
-<br>
-<br>
-<br>
-<br>
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-</details>
 
 
 ﻿
@@ -91,10 +47,10 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 * [**Subs**](#sec_subs) (4)
   
-  * [```bauer```](#bauer) <small>(Zeile 87)</small>
-  * [```casio```](#casio) <small>(Zeile 133)</small>
-  * [```liebherr```](#liebherr) <small>(Zeile 116)</small>
-  * [```main```](#main) <small>(Zeile 51)</small>
+  * [```bauer```](#bauer) <small>(Zeile 90)</small>
+  * [```casio```](#casio) <small>(Zeile 136)</small>
+  * [```liebherr```](#liebherr) <small>(Zeile 119)</small>
+  * [```main```](#main) <small>(Zeile 54)</small>
   
 
 
@@ -107,7 +63,7 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
   
   
   * [```addieren```](#addieren) <small>(Zeile 16)</small>
-  * [```subtrahieren```](#subtrahieren) <small>(Zeile 31)</small>
+  * [```subtrahieren```](#subtrahieren) <small>(Zeile 34)</small>
   
 
 
@@ -160,7 +116,7 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 
 <a name="bauer"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub bauer```</span><small>(Zeile 87)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub bauer```</span><small>(Zeile 90)</small>
 
 <div style="padding-left:2em;">
 
@@ -220,10 +176,44 @@ Kein Aufruf gefunden.
 
 
 
-- ```liebherr``` <small> : [Zeile 97] : ```    call liebherr``` </small><br>
-- ```liebherr``` <small> : [Zeile 98] : ```    call liebherr ' Aufruf``` </small><br>
-- ```liebherr``` <small> : [Zeile 100] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small><br>
-- ```liebherr``` <small> : [Zeile 104] : ```    var = liebherr("gvkil")``` </small><br>
+
+
+
+- ```liebherr``` <small> : [Zeile 100] : ```    call liebherr``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```liebherr``` <small> : [Zeile 101] : ```    call liebherr ' Aufruf``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```liebherr``` <small> : [Zeile 103] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```liebherr``` <small> : [Zeile 107] : ```    var = liebherr("gvkil")``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -332,7 +322,7 @@ End Sub
 
 
 <a name="casio"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub casio```</span><small>(Zeile 133)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub casio```</span><small>(Zeile 136)</small>
 
 <div style="padding-left:2em;">
 
@@ -391,6 +381,8 @@ Kein Aufruf gefunden.
 
 
 
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -485,7 +477,7 @@ End Sub
 
 
 <a name="liebherr"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub liebherr```</span><small>(Zeile 116)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub liebherr```</span><small>(Zeile 119)</small>
 
 <div style="padding-left:2em;">
 
@@ -509,11 +501,11 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```main```](#main) : <small>  Zeile 77 : ```    call liebherr``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 97 : ```    call liebherr``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 98 : ```    call liebherr ' Aufruf``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 100 : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
-* [```bauer```](#bauer) : <small>  Zeile 104 : ```    var = liebherr("gvkil")``` </small>
+* [```main```](#main) : <small>  Zeile 80 : ```    call liebherr``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 100 : ```    call liebherr``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 101 : ```    call liebherr ' Aufruf``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 103 : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+* [```bauer```](#bauer) : <small>  Zeile 107 : ```    var = liebherr("gvkil")``` </small>
 
 
 
@@ -549,6 +541,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -644,7 +638,7 @@ End Sub
 
 
 <a name="main"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub main```</span><small>(Zeile 51)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Sub main```</span><small>(Zeile 54)</small>
 
 <div style="padding-left:2em;">
 
@@ -707,9 +701,43 @@ Kein Aufruf gefunden.
 
 
 
-- ```addieren``` <small> : [Zeile 71] : ```        wert = addieren(i, i)``` </small><br>
-- ```subtrahieren``` <small> : [Zeile 72] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small><br>
-- ```addieren``` <small> : [Zeile 41] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small><br>- ```liebherr``` <small> : [Zeile 77] : ```    call liebherr``` </small><br>
+
+
+
+- ```addieren``` <small> : [Zeile 74] : ```        wert = addieren(i, i)``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```subtrahieren``` <small> : [Zeile 75] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+
+
+
+
+  - ```addieren``` <small> : [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+
+
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+
+
+- ```liebherr``` <small> : [Zeile 80] : ```    call liebherr``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -860,8 +888,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```subtrahieren```](#subtrahieren) : <small>  Zeile 41 : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
-* [```main```](#main) : <small>  Zeile 71 : ```        wert = addieren(i, i)``` </small>
+* [```subtrahieren```](#subtrahieren) : <small>  Zeile 44 : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+* [```main```](#main) : <small>  Zeile 74 : ```        wert = addieren(i, i)``` </small>
 
 
 
@@ -897,6 +925,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -994,7 +1024,7 @@ End Function
 
 
 <a name="subtrahieren"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function subtrahieren```</span><small>(Zeile 31)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Function subtrahieren```</span><small>(Zeile 34)</small>
 
 <div style="padding-left:2em;">
 
@@ -1021,7 +1051,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-* [```main```](#main) : <small>  Zeile 72 : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+* [```main```](#main) : <small>  Zeile 75 : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
 
 
 
@@ -1057,7 +1087,17 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- ```addieren``` <small> : [Zeile 41] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small><br>
+
+
+
+- ```addieren``` <small> : [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -1184,7 +1224,7 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 <summary> Modulinformationen anzeigen/verbergen.
 </summary>
 
-  <br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br><br><br><br>### Fertig implementiert:<br><br>• Implementierung Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Einbindung vom Programmkopf-Docstring<br><br>• Implementierung von References-Durchsuchungen<br><br>• Implementierung eines Exportes zu HTML<br><br><br><br>• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren<br><br>• Implementierung der Calling Sequence: Für jede Prozedur: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren.<br>Bislang wird eine einfache Auflistung gegeben. Perspektivisch wäre eine rekursiver Ansatz denkbar, sodass je Aufruf wieder alle Aufrufe innerhabl dieser Prozedur gelistet werden können usw...<br><br><br><br>### TODO: Größere TODOS:<br><br><br>• Call Sequenz / Calling Sequence:<br><br>Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.<br>Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br><br><br># TODO / CURRENT DEV:<br>    Aufrufebenen im 'main' untersuchen, inkl. Rekursive Auflistung aller Calls.<br><br>
+  <br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für generelles Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br>Wichtige Details siehe am Ende dieses docstrings.<br><br><br><br><br>### Fertig implementiert:<br><br>• Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation<br><br>• Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation<br><br>• Sofortiger Export der MD-Datei in eine  HTML-Datei<br><br>• Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation<br><br>• Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Optimierung der Darstellung der Aufrufebenen: Verlinkung der PRozeduren, genau wie bei den References<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br>• Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath)<br><br><br><br><br><br># =============================================================================<br>#### Wichtige Aufrufreihenfolge der Methode innerhalb dieses Python-Scriptes zur Erstellung der Dokumentation der Aufrufreihenfolge der zu dokumentierenden VBA-Prozeduren: ####<br># =============================================================================<br><br>Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wiederum alle Prozeduren komplett dokumentiert. Für beide Vorgänge erfolgt dies in einer Methode auf Objektebene, wobei diese jeweilige MEthode in beiden Fällen aus einer Klassenmethode aufgerufen wird, in der über die einzelnen Prozedur-Objekte innerhalb dieser Klasse iteriert wird:<br><br>- analyse_call_sequence(cls)<br>    - analyse_calling_sequence_in_one_proc(self)<br>- prepare_all_call_sequences_docs(cls)<br>    - prepare_single_call_sequence_docs(cls)<br><br>(hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )<br><br><br><br><br>
 
 </details>
 
@@ -1200,4 +1240,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-05 15:40:42 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-05 04:43:00: '68cb9360dd288bdaec93586777e667b2623c098e')</small> 
+<small>Dokumentation generiert am 2024-01-07 11:23:50 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 11:13:09: '54c86f1314d7e8ea2ef2dd5da97908caf2bfcb80')</small> 

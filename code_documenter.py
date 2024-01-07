@@ -6,7 +6,9 @@ Created on: Fri, 2023-12-29 (00:45:39)
 @author: Matthias Kader
 
 
-Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html
+Für generelles Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html
+
+Wichtige Details siehe am Ende dieses docstrings.
 
 
 
@@ -36,6 +38,25 @@ Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Program
 • Index an der Seite wie eine NavBar zum einzelnd scrollen
 
 • Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath)
+
+
+
+
+
+# =============================================================================
+#### Wichtige Aufrufreihenfolge der Methode innerhalb dieses Python-Scriptes zur Erstellung der Dokumentation der Aufrufreihenfolge der zu dokumentierenden VBA-Prozeduren: ####
+# =============================================================================
+
+Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wiederum alle Prozeduren komplett dokumentiert. Für beide Vorgänge erfolgt dies in einer Methode auf Objektebene, wobei diese jeweilige MEthode in beiden Fällen aus einer Klassenmethode aufgerufen wird, in der über die einzelnen Prozedur-Objekte innerhalb dieser Klasse iteriert wird:
+
+- analyse_call_sequence(cls)
+    - analyse_calling_sequence_in_one_proc(self)
+- prepare_all_call_sequences_docs(cls)
+    - prepare_single_call_sequence_docs(cls)
+
+(hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )
+
+
 
 
 '''
@@ -386,14 +407,12 @@ class MetaData(metaclass=AutoCallMeta):
         """
 
 
-
-
         # HACK: path for Source-vba-code
-        input_file_path = "input_data/beispiel_modul.bas"
-        input_file_path = "input_data/beispiel_modul_bauer+liebherr.bas"
-        input_file_path = "input_data/beispiel_modul_rekursiv.bas"
-        input_file_path = "input_data/beispiel_modul2.bas"
         input_file_path = "input_data/beispiel_modul1.bas"
+        input_file_path = "input_data/beispiel_modul2.bas"
+        input_file_path = "input_data/beispiel_modul_rekursiv.bas"
+        input_file_path = "input_data/beispiel_modul_bauer+liebherr.bas"
+        input_file_path = "input_data/beispiel_modul.bas"
         
         cls.set_input_path(input_file_path)
 

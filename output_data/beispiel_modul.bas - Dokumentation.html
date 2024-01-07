@@ -41,43 +41,20 @@
     </head>
     <body class="vscode-body vscode-light">
         <h1 id="code-dokumentation-modul-beispiel_modulbas">Code-Dokumentation: Modul 'beispiel_modul.bas'</h1>
-<p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2024-01-05 15:31</strong></p>
-<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-05 15:40:42</strong></p>
+<p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2024-01-05 16:37</strong></p>
+<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-07 11:23:50</strong></p>
 <!-- TODO: nur temporrary!  -->
 <h1 id="zwischengelagert-als-ziel-vorgabe-für-abrufsequenz">ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:</h1>
-<details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-<hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@</p>
-<!-- TODO: Platzhalter platz -->
-<br>
-<br>
-<br>
-<br>
-<br>
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
+<p><strong>Aktuelle Bugs:</strong></p>
 <ul>
-<li><code>hauptfunc1</code>
+<li>Aufrufabfolge wird in manchen Fällen noch nicht ganz korrekt dargestellt
 <ul>
-<li><code>unterfunktionA</code>
-<ul>
-<li><code>wiederholungsfunktion</code></li>
-</ul>
-</li>
-<li><code>unterfunktionB</code></li>
-</ul>
-</li>
-<li><code>hauptfunc2</code></li>
-<li><code>hauptfunc3</code></li>
-<li><code>wiederholungsfunktion</code>
-<ul>
-<li><code>wiederholungsfunktion</code></li>
+<li>siehe beispiel_modul1.bas --&gt; notengriffe_erzeugen --&gt; getFilePath</li>
+<li>Scheint v.a. nach  vielen Unteraufrufen aufzutreten...</li>
+<li>Inhaltlich aber nicht falsch... (ODER????!)</li>
 </ul>
 </li>
 </ul>
-</details>
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- Index / TOC -->
@@ -92,10 +69,10 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 <li>
 <p><a href="#sec_subs"><strong>Subs</strong></a> (4)</p>
 <ul>
-<li><a href="#bauer"><code>bauer</code></a> <small>(Zeile 87)</small></li>
-<li><a href="#casio"><code>casio</code></a> <small>(Zeile 133)</small></li>
-<li><a href="#liebherr"><code>liebherr</code></a> <small>(Zeile 116)</small></li>
-<li><a href="#main"><code>main</code></a> <small>(Zeile 51)</small></li>
+<li><a href="#bauer"><code>bauer</code></a> <small>(Zeile 90)</small></li>
+<li><a href="#casio"><code>casio</code></a> <small>(Zeile 136)</small></li>
+<li><a href="#liebherr"><code>liebherr</code></a> <small>(Zeile 119)</small></li>
+<li><a href="#main"><code>main</code></a> <small>(Zeile 54)</small></li>
 </ul>
 <!-- ---------- FUNCTIONS: --------------- -->
 </li>
@@ -103,7 +80,7 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 <p><a href="#sec_functions"><strong>Functions</strong></a> (2)</p>
 <ul>
 <li><a href="#addieren"><code>addieren</code></a> <small>(Zeile 16)</small></li>
-<li><a href="#subtrahieren"><code>subtrahieren</code></a> <small>(Zeile 31)</small></li>
+<li><a href="#subtrahieren"><code>subtrahieren</code></a> <small>(Zeile 34)</small></li>
 </ul>
 <!-- ---------- TAIL: --------------- -->
 </li>
@@ -132,7 +109,7 @@ STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 <p><a name="bauer"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub bauer</code></span><small>(Zeile 87)</small></p>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub bauer</code></span><small>(Zeile 90)</small></p>
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 0
@@ -152,10 +129,33 @@ Anzahl weiterer internen Aufrufe : 5</p>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
-<li><code>liebherr</code> <small> : [Zeile 97] : <code>    call liebherr</code> </small><br></li>
-<li><code>liebherr</code> <small> : [Zeile 98] : <code>    call liebherr ' Aufruf</code> </small><br></li>
-<li><code>liebherr</code> <small> : [Zeile 100] : <code>    call liebherr(&quot;ERROR&quot;) ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!</code> </small><br></li>
-<li><code>liebherr</code> <small> : [Zeile 104] : <code>    var = liebherr(&quot;gvkil&quot;)</code> </small><br></li>
+<li>
+<p><code>liebherr</code> <small> : [Zeile 100] : <code>    call liebherr</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><code>liebherr</code> <small> : [Zeile 101] : <code>    call liebherr ' Aufruf</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><code>liebherr</code> <small> : [Zeile 103] : <code>    call liebherr(&quot;ERROR&quot;) ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><code>liebherr</code> <small> : [Zeile 107] : <code>    var = liebherr(&quot;gvkil&quot;)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
 </ul>
 <!-- </div> -->
 </details>
@@ -199,7 +199,7 @@ End Sub
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 <p><a name="casio"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub casio</code></span><small>(Zeile 133)</small></p>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub casio</code></span><small>(Zeile 136)</small></p>
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 0
@@ -218,6 +218,9 @@ Anzahl weiterer internen Aufrufe : 0</p>
 <hr>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
 </details>
 <details>
@@ -246,7 +249,7 @@ End Sub
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 <p><a name="liebherr"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub liebherr</code></span><small>(Zeile 116)</small></p>
+<span style="background-color: lightgrey; padding: 2px;"><code>Public Sub liebherr</code></span><small>(Zeile 119)</small></p>
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 6
@@ -258,11 +261,11 @@ Anzahl weiterer internen Aufrufe : 0</p>
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#main"><code>main</code></a> : <small>  Zeile 77 : <code>    call liebherr</code> </small></li>
-<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 97 : <code>    call liebherr</code> </small></li>
-<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 98 : <code>    call liebherr ' Aufruf</code> </small></li>
-<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 100 : <code>    call liebherr(&quot;ERROR&quot;) ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!</code> </small></li>
-<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 104 : <code>    var = liebherr(&quot;gvkil&quot;)</code> </small></li>
+<li><a href="#main"><code>main</code></a> : <small>  Zeile 80 : <code>    call liebherr</code> </small></li>
+<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 100 : <code>    call liebherr</code> </small></li>
+<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 101 : <code>    call liebherr ' Aufruf</code> </small></li>
+<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 103 : <code>    call liebherr(&quot;ERROR&quot;) ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!</code> </small></li>
+<li><a href="#bauer"><code>bauer</code></a> : <small>  Zeile 107 : <code>    var = liebherr(&quot;gvkil&quot;)</code> </small></li>
 </ul>
 </details
 </div>
@@ -272,6 +275,9 @@ Anzahl weiterer internen Aufrufe : 0</p>
 <hr>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
 </details>
 <details>
@@ -301,7 +307,7 @@ End Sub
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 <p><a name="main"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Private Sub main</code></span><small>(Zeile 51)</small></p>
+<span style="background-color: lightgrey; padding: 2px;"><code>Private Sub main</code></span><small>(Zeile 54)</small></p>
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 0
@@ -323,9 +329,35 @@ Anzahl weiterer internen Aufrufe : 3</p>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
-<li><code>addieren</code> <small> : [Zeile 71] : <code>        wert = addieren(i, i)</code> </small><br></li>
-<li><code>subtrahieren</code> <small> : [Zeile 72] : <code>        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!</code> </small><br></li>
-<li><code>addieren</code> <small> : [Zeile 41] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small><br>- <code>liebherr</code> <small> : [Zeile 77] : <code>    call liebherr</code> </small><br></li>
+<li>
+<p><code>addieren</code> <small> : [Zeile 74] : <code>        wert = addieren(i, i)</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><code>subtrahieren</code> <small> : [Zeile 75] : <code>        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!</code> </small></p>
+<ul>
+<li>
+<p><code>addieren</code> <small> : [Zeile 44] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>liebherr</code> <small> : [Zeile 80] : <code>    call liebherr</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
 </ul>
 <!-- </div> -->
 </details>
@@ -394,8 +426,8 @@ Anzahl weiterer internen Aufrufe : 0</p>
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#subtrahieren"><code>subtrahieren</code></a> : <small>  Zeile 41 : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small></li>
-<li><a href="#main"><code>main</code></a> : <small>  Zeile 71 : <code>        wert = addieren(i, i)</code> </small></li>
+<li><a href="#subtrahieren"><code>subtrahieren</code></a> : <small>  Zeile 44 : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small></li>
+<li><a href="#main"><code>main</code></a> : <small>  Zeile 74 : <code>        wert = addieren(i, i)</code> </small></li>
 </ul>
 </details
 </div>
@@ -405,6 +437,9 @@ Anzahl weiterer internen Aufrufe : 0</p>
 <hr>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
 <!-- </div> -->
 </details>
 <details>
@@ -436,7 +471,7 @@ End Function
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
 <p><a name="subtrahieren"></a>
-<span style="background-color: lightgrey; padding: 2px;"><code>Private Function subtrahieren</code></span><small>(Zeile 31)</small></p>
+<span style="background-color: lightgrey; padding: 2px;"><code>Private Function subtrahieren</code></span><small>(Zeile 34)</small></p>
 <div style="padding-left:2em;">
 <blockquote>
 <p>Anzahl der Referenzierungen im Modul: 1
@@ -449,7 +484,7 @@ Anzahl weiterer internen Aufrufe : 1</p>
 <div style="padding-left:1em;">
 <p>Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:</p>
 <ul>
-<li><a href="#main"><code>main</code></a> : <small>  Zeile 72 : <code>        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!</code> </small></li>
+<li><a href="#main"><code>main</code></a> : <small>  Zeile 75 : <code>        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!</code> </small></li>
 </ul>
 </details
 </div>
@@ -460,7 +495,15 @@ Anzahl weiterer internen Aufrufe : 1</p>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
-<li><code>addieren</code> <small> : [Zeile 41] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small><br></li>
+<li>
+<p><code>addieren</code> <small> : [Zeile 44] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small></p>
+<ul>
+<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+</ul>
+</li>
+<li>
+<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
+</li>
 </ul>
 <!-- </div> -->
 </details>
@@ -518,7 +561,7 @@ end Function
 <details>
 <summary> Modulinformationen anzeigen/verbergen.
 </summary>
-<p><br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br><br><br><br>### Fertig implementiert:<br><br>• Implementierung Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Einbindung vom Programmkopf-Docstring<br><br>• Implementierung von References-Durchsuchungen<br><br>• Implementierung eines Exportes zu HTML<br><br><br><br>• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren<br><br>• Implementierung der Calling Sequence: Für jede Prozedur: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren.<br>Bislang wird eine einfache Auflistung gegeben. Perspektivisch wäre eine rekursiver Ansatz denkbar, sodass je Aufruf wieder alle Aufrufe innerhabl dieser Prozedur gelistet werden können usw...<br><br><br><br>### TODO: Größere TODOS:<br><br><br>• Call Sequenz / Calling Sequence:<br><br>Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.<br>Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br><br><br># TODO / CURRENT DEV:<br>    Aufrufebenen im 'main' untersuchen, inkl. Rekursive Auflistung aller Calls.<br><br></p>
+<p><br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für generelles Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br>Wichtige Details siehe am Ende dieses docstrings.<br><br><br><br><br>### Fertig implementiert:<br><br>• Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation<br><br>• Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation<br><br>• Sofortiger Export der MD-Datei in eine  HTML-Datei<br><br>• Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation<br><br>• Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Optimierung der Darstellung der Aufrufebenen: Verlinkung der PRozeduren, genau wie bei den References<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br>• Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --&gt; notengriffe_erzeugen --&gt; getFilePath)<br><br><br><br><br><br># =============================================================================<br>#### Wichtige Aufrufreihenfolge der Methode innerhalb dieses Python-Scriptes zur Erstellung der Dokumentation der Aufrufreihenfolge der zu dokumentierenden VBA-Prozeduren: ####<br># =============================================================================<br><br>Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wiederum alle Prozeduren komplett dokumentiert. Für beide Vorgänge erfolgt dies in einer Methode auf Objektebene, wobei diese jeweilige MEthode in beiden Fällen aus einer Klassenmethode aufgerufen wird, in der über die einzelnen Prozedur-Objekte innerhalb dieser Klasse iteriert wird:<br><br>- analyse_call_sequence(cls)<br>    - analyse_calling_sequence_in_one_proc(self)<br>- prepare_all_call_sequences_docs(cls)<br>    - prepare_single_call_sequence_docs(cls)<br><br>(hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )<br><br><br><br><br></p>
 </details>
 <hr>
 <small>
@@ -526,7 +569,7 @@ end Function
 <p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
 </small> 
 <hr>
-<p><small>Dokumentation generiert am 2024-01-05 15:40:42 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-05 04:43:00: '68cb9360dd288bdaec93586777e667b2623c098e')</small></p>
+<p><small>Dokumentation generiert am 2024-01-07 11:23:50 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 11:13:09: '54c86f1314d7e8ea2ef2dd5da97908caf2bfcb80')</small></p>
 
         
         

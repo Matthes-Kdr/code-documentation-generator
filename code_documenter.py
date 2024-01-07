@@ -1261,6 +1261,8 @@ class Procedure():
 
         Zugriff erfolgt auf Superklassen-Ebene, wobei intern die Instanzen der Klasse referenziert werden
 
+        # NEIN: Nach der eigentlichem Itterieren und Dokumentieren der Abruffolge werden innerhalb dieser Klassenmethode für das Objekt die Platzhalter für die Übersicht ersetzt (Anzahl und Einleitungssatz).
+
 
         """
 
@@ -1271,22 +1273,15 @@ class Procedure():
 
             prozedur_obj.prepare_single_call_sequence_docs(level=0)
 
-            """
-            # OBSOLETER ALTER ANSATZ:
-            # if prozedur_obj.calling_sequences_state:
-            #     db("diese proz ist fertig!")
-            #     db("diese proz ist fertig!")
-            #     continue
+            db(len(prozedur_obj.calling_sequences), prozedur_obj.calling_sequences)
 
-            
+            # TODO: Platzhalter ersetzen mit anzahl der calls
+            db("weiter")
 
-            # ELSE:  DANN NICHT FERTIG:
-
-
-            """
 
 
 
+            
 
         db("alle fertig prepared.")
 
@@ -2032,6 +2027,35 @@ class Procedure():
                         db(f"PROBLEM! mit {procedure_obj.name}")
                     # BUG: Problem!
                     procedure_obj.documentation = procedure_obj.documentation.replace("@PLACEHOLDER_PROCEDURE_CALLING_SEQUENCES_BLOCK@", procedure_obj.calling_sequences_doc)
+
+
+
+                    # =============================================================================
+                    # TODO: ISt heir falsch!!!
+                    #### Übersichts-Parameter eintragen für das Objekt: / die Prozedur: ####
+                    # =============================================================================
+                    
+                    # Initialisierung und  Parametrisierung  des Einleitungssatzes:
+
+                    if procedure_obj.calling_sequences:
+
+                        einleitungssatz = "Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:"
+
+                    else:
+
+                        einleitungssatz = "Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden." # default
+
+
+                    # Einsetzen des Einleitungssatzes:
+                    procedure_obj.documentation = procedure_obj.documentation.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
+
+
+                    # Einsetzen der ÜBersichtsanzahl an Aufrufen:
+                    procedure_obj.documentation = procedure_obj.documentation.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@", str(len(procedure_obj.calling_sequences)))
+
+
+
+
 
 
 

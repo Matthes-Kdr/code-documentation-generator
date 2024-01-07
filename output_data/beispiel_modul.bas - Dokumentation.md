@@ -2,10 +2,10 @@
 
 
 
-**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-05 16:37**
+**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-07 11:28**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-07 11:23:50**
+Generierungsdatum dieser Dokumentation: **2024-01-07 13:22:59**
 
 
 
@@ -25,8 +25,8 @@ Generierungsdatum dieser Dokumentation: **2024-01-07 11:23:50**
   - siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath
   - Scheint v.a. nach  vielen Unteraufrufen aufzutreten...
   - Inhaltlich aber nicht falsch... (ODER????!)
-
-
+- Es werden nicht alle Aufrufe erkannt (ODER??!)
+  - siehe beispiel_modul1.bas --> liebherr : sollte 6 referenzierungen haben, es werden nur 5 dokumentiert...
 
 ﻿
 
@@ -162,12 +162,12 @@ Kein Aufruf gefunden.
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (4)</summary>
 
 ---
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
 
 
 <!-- <div style="padding-left:1em;"> -->
@@ -367,12 +367,12 @@ Kein Aufruf gefunden.
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 
 ---
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 <!-- <div style="padding-left:1em;"> -->
@@ -527,12 +527,12 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 
 ---
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 <!-- <div style="padding-left:1em;"> -->
@@ -687,12 +687,12 @@ Kein Aufruf gefunden.
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (3)</summary>
 
 ---
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
 
 
 <!-- <div style="padding-left:1em;"> -->
@@ -911,12 +911,12 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 
 ---
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 <!-- <div style="padding-left:1em;"> -->
@@ -1073,12 +1073,12 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (1)</summary>
 
 ---
 
 
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
+Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
 
 
 <!-- <div style="padding-left:1em;"> -->
@@ -1240,4 +1240,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-07 11:23:50 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 11:13:09: '54c86f1314d7e8ea2ef2dd5da97908caf2bfcb80')</small> 
+<small>Dokumentation generiert am 2024-01-07 13:22:59 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 11:28:41: '4b8949429169fbe86e4cfd133585737b3537f5ea')</small> 

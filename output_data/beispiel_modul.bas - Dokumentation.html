@@ -41,8 +41,8 @@
     </head>
     <body class="vscode-body vscode-light">
         <h1 id="code-dokumentation-modul-beispiel_modulbas">Code-Dokumentation: Modul 'beispiel_modul.bas'</h1>
-<p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2024-01-05 16:37</strong></p>
-<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-07 11:23:50</strong></p>
+<p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2024-01-07 11:28</strong></p>
+<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-07 13:22:59</strong></p>
 <!-- TODO: nur temporrary!  -->
 <h1 id="zwischengelagert-als-ziel-vorgabe-für-abrufsequenz">ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:</h1>
 <p><strong>Aktuelle Bugs:</strong></p>
@@ -52,6 +52,11 @@
 <li>siehe beispiel_modul1.bas --&gt; notengriffe_erzeugen --&gt; getFilePath</li>
 <li>Scheint v.a. nach  vielen Unteraufrufen aufzutreten...</li>
 <li>Inhaltlich aber nicht falsch... (ODER????!)</li>
+</ul>
+</li>
+<li>Es werden nicht alle Aufrufe erkannt (ODER??!)
+<ul>
+<li>siehe beispiel_modul1.bas --&gt; liebherr : sollte 6 referenzierungen haben, es werden nur 5 dokumentiert...</li>
 </ul>
 </li>
 </ul>
@@ -124,9 +129,9 @@ Anzahl weiterer internen Aufrufe : 5</p>
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (4)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
@@ -214,9 +219,9 @@ Anzahl weiterer internen Aufrufe : 0</p>
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -271,9 +276,9 @@ Anzahl weiterer internen Aufrufe : 0</p>
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -324,9 +329,9 @@ Anzahl weiterer internen Aufrufe : 3</p>
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (3)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
@@ -433,9 +438,9 @@ Anzahl weiterer internen Aufrufe : 0</p>
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
@@ -490,9 +495,9 @@ Anzahl weiterer internen Aufrufe : 1</p>
 </div>
 <!-- TODO: ABRUFABFOLGE (DEV) -->
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
-<p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
+<p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
@@ -569,7 +574,7 @@ end Function
 <p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
 </small> 
 <hr>
-<p><small>Dokumentation generiert am 2024-01-07 11:23:50 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 11:13:09: '54c86f1314d7e8ea2ef2dd5da97908caf2bfcb80')</small></p>
+<p><small>Dokumentation generiert am 2024-01-07 13:22:59 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 11:28:41: '4b8949429169fbe86e4cfd133585737b3537f5ea')</small></p>
 
         
         

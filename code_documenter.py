@@ -13,43 +13,30 @@ Für Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Program
 
 ### Fertig implementiert:
 
-• Implementierung Inhaltsverzeichnis / Index
+• Inhaltsverzeichnis / Index
 
 • Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections
 
-• Einbindung vom Programmkopf-Docstring
+• Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation
 
-• Implementierung von References-Durchsuchungen
+• Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation
 
-• Implementierung eines Exportes zu HTML
+• Sofortiger Export der MD-Datei in eine  HTML-Datei
 
+• Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation
 
-
-• Einbindung organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren
-
-• Implementierung der Calling Sequence: Für jede Prozedur: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren.
-Bislang wird eine einfache Auflistung gegeben. Perspektivisch wäre eine rekursiver Ansatz denkbar, sodass je Aufruf wieder alle Aufrufe innerhabl dieser Prozedur gelistet werden können usw...
-
-
-
-### TODO: Größere TODOS:
-
-
-• Call Sequenz / Calling Sequence:
-
-Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.
-Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....
+• Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.
 
 
 
 ### AUSBLICK für später und in schön:
 
+• Optimierung der Darstellung der Aufrufebenen: Verlinkung der PRozeduren, genau wie bei den References
+
 • Index an der Seite wie eine NavBar zum einzelnd scrollen
 
+• Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath)
 
-
-# TODO / CURRENT DEV:
-    Aufrufebenen im 'main' untersuchen, inkl. Rekursive Auflistung aller Calls.
 
 '''
 
@@ -305,13 +292,6 @@ class MetaData(metaclass=AutoCallMeta):
 
 
 
-    # OBSOLET: nicht erforderlich - zur Vorbeugung von Verwendchslung daher auskommenteirt:
-    # @classmethod
-    # def get_output_dir(cls) -> str:
-    #     return cls.__output_dir
-    
-    
-
 
     @staticmethod
     def get_count_of_commits():
@@ -338,41 +318,10 @@ class MetaData(metaclass=AutoCallMeta):
         # Übernehme die Infos aus git in die Klasse:
         for key, value in info.items():
 
-            # if not hasattr(cls, key):
-            #     # Wenn nicht, erstelle es und weise den Wert zu
-            #     setattr(cls, key, value)
 
             attr_name =  f"documenter_version__{key}"
 
             setattr(cls, attr_name, value)
-            db(getattr(cls, attr_name))
-
-
-
-
-            # bold = "**" if key in keys_bold else ""
-            # indent_message = "** \n> **" if key == "message" else " "
-
-            # cls.gitinfo = cls.gitinfo + "- " + bold + key + ":" + indent_message + value + bold  + "\n"
-
-
-
-
-
-    # @classmethod
-    # def git_info_to_str(cls):
-
-    #     info:dict = gitinfo.get_git_info()
-    #     cls.gitinfo = "## Infos zum Script, welches für die Erstellung dieser Dokumentation verwendet wurde:\n\n"
-
-    #     keys_bold = ["commit", "message", "refs", "author_date"]
-
-
-    #     for key, value in info.items():
-    #         bold = "**" if key in keys_bold else ""
-    #         indent_message = "** \n> **" if key == "message" else " "
-
-    #         cls.gitinfo = cls.gitinfo + "- " + bold + key + ":" + indent_message + value + bold  + "\n"
 
 
 
@@ -451,8 +400,6 @@ class MetaData(metaclass=AutoCallMeta):
 
 
 
-
-
         # HACK: DIR FOR OAUTPUT
         # Schreibe die Datei erst in eine Markdown-Datei:
         output_dir = "output_data"
@@ -460,18 +407,9 @@ class MetaData(metaclass=AutoCallMeta):
 
 
 
-
-
-
-
-
-
-
         # cls.git_info_to_str()
         cls.extract_git_info()
         # cls.count_of_commits = cls.get_count_of_commits()
-
-
 
 
         cls.save_current_timestamp()
@@ -1113,193 +1051,6 @@ class Procedure():
 
 
 
-    '''
-
-    def OLD_prepare_single_call_sequence_docs(self, level=0):
-        """
-        ### TODOC: Siehe prepare_all_call_sequence_docs...
-
-        Generiert die vollständige Dokumentation der Aufrufsequenzen in den einzelnen Objekten und speichert sie im Attribut obj.calling_sequences_doc. Nach vervollständigung wird obj.calling_sequences_state = True  gesetzt.
-
-        Zugriff erfolgt auf Objekt-Ebene.
-        """
-
-        db(f"name der ZU ANALYSIERENDEN prozedur : {self.name}")
-
-        if self.calling_sequences_state:
-
-            db("diese proz ist fertig!")
-
-            # end_text_per_procedure = "<br>(nichts weiter... Hier KEINE indentions! @ line :{})<br>".format(inspect_get_current_line_number())
-            end_text_per_procedure = "\n(# DEBUG: CALLING_SEQUENCE_STATE=TRUE (return) @ line :{})\n\n".format(inspect_get_current_line_number())
-
-
-            # TODO: NEIN: Hier noch level berücksichtigen mit einzügen! --> NEIN
-
-            # text_to_return = self.calling_sequences_doc +  self.indent_str(end_text_per_procedure, count_of_indents=level+1)
-            # text_to_return = self.calling_sequences_doc +  self.indent_str(end_text_per_procedure, count_of_indents=level)
-            text_to_return = self.calling_sequences_doc +  end_text_per_procedure
-
-            # return self.calling_sequences_doc 
-            return text_to_return
-
-            # return self.calling_sequences_doc
-
-
-
-        # Initialisiert den Initialtext aus der template, falls es noch keinen Text gibt:
-        if not self.calling_sequences_doc:
-
-            self.calling_sequences_doc = ""
-            # self.calling_sequences_doc = "<br>"
-
-            # self.calling_sequences_doc = self.__read_template("templates/prozedur_calling_sequences.md")
-
-
-
-        # _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@"
-        # _PLACEHOLDER_REFERENCE = ""
-
-        # shortcut:
-        # OBSOLET:2024-01-05 - 02:48:47
-        # current_doc:str = self.current
-
-        # Initialisierung und  Parametrisierung  des Einleitungssatzes:
-        # einleitungssatz = "Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden." # default
-        
-        
-        if len(self.calling_sequences) > 0:
-            # einleitungssatz = "Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:"
-
-            # call --> subtrahieren
-            for (line_no_reference, uebergeordnetes_sub, line_code, target_procedure_name) in self.calling_sequences:
-                
-                # TODO: Entscheiden bzgl. Darstellung / Ausgabe der Calling Sequenz Entry:
-                DARSTELLUNGSOPTION = 2 # current choice
-                
-                ALTERNATIVE_DARSTELLUNGSOPTIONEN = {
-                    0 : f"<small>  Zeile {line_no_reference} </small> : ```{line_code}```",
-
-
-                    1 : f"<small>  Zeile {line_no_reference} </small> : ```{target_procedure_name}```",
-                  
-
-                  
-                    2 : "\n" * 3 + f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n",
-
-                # ACHTUNG: all diesen Optionen wird noch ein "\n" angehangen nachträglich (hier noch nicht, wegen f-string!)
-
-                }
-        
-
-                replacer_placeholder_reference = ALTERNATIVE_DARSTELLUNGSOPTIONEN[DARSTELLUNGSOPTION]
-
-
-                # replacer_placeholder_reference = replacer_placeholder_reference  + "{}".format(_PLACEHOLDER_REFERENCE)
-                    
-                # # Ersetzen:
-                # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
-                
-                debug_text = " (# OBS : DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :{})".format(inspect_get_current_line_number())
-                self.calling_sequences_doc = self.calling_sequences_doc  + replacer_placeholder_reference + debug_text
-                
-
-
-                # JULIA: Rekursive Aufrufe für untergeordnete Calling-sequenzabfolge:
-                # shortcut / resubstitution:
-                # self.calling_sequences_doc = self.calling_sequences_doc
-                
-                
-                
-                # _BUGFIX: against RecursionError :
-                if target_procedure_name == self.name:
-                    # further_calls_doc = self.indent_str("(... recursivly under certain conditions ... )<br>", level+1)
-                    # further_calls_doc = self.indent_str("(... recursivly under certain conditions ... )\n\n", 0)
-                    further_calls_doc = "(... recursivly under certain conditions ... )\n\n"
-                else:
-
-
-                    # get the object from target_procedure_name:
-                    db(f"neuer ziel-name =  {target_procedure_name}")
-                    target_procedure_obj = self.get_procedure_obj_by_name(target_procedure_name)
-
-
-                    # Rekursiv: den nächsten Platzhalter mit der nächsten Dokumentation des aufgerufenen calls füllen:
-                    
-                    further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=0)
-                    # further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=level)
-                    # further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=level + 1)
-
-                
-                
-
-
-                # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, further_calls_doc)
-                debug_text = " (FURTHER_DEBUGTEXT @ l. :{})".format(inspect_get_current_line_number())
-                self.calling_sequences_doc = self.calling_sequences_doc  +  further_calls_doc + debug_text
-                # self.calling_sequences_doc = self.calling_sequences_doc  +  self.indent_str(further_calls_doc, count_of_indents=0)
-                # TODO: Mix of <br> und \n
-                # self.calling_sequences_doc = self.calling_sequences_doc  +  self.indent_str(further_calls_doc, count_of_indents=level + 1)
-                # self.calling_sequences_doc = self.calling_sequences_doc  +  further_calls_doc
-    
-    
-                        
-            # BUGFIX: indention
-            self.calling_sequences_state = True
-            self.calling_sequences_doc = self.calling_sequences_doc  + "\n (Abschluss dieser Doc / keine weiteren Aufrufe @ line :{})\n".format(inspect_get_current_line_number())
-
-
-
-            # text_to_return = self.indent_str(self.calling_sequences_doc, count_of_indents=0)
-            text_to_return = self.calling_sequences_doc
-            # return self.calling_sequences_doc 
-            return text_to_return
-
-
-        else:
-
-            # Loeschen des verbliebenen Platzhalters zum Einfuegen einzelner Referenzen:
-            # TODO: Lösche es nicht, sondern setze noch an den entsprechenden Stellen rekursiv die untergeordneten call_sequences der aufgerufenen MEthoden ein!
-            # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, "")
-
-
-
-            # # Einsetzen des Einleitungssatzes:
-            # self.calling_sequences_doc = self.calling_sequences_doc.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
-
-
-
-
-            # # Einsetzen der ÜBersichtsanzahl an Aufrufen:
-            # self.calling_sequences_doc = self.calling_sequences_doc.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@", str(len(self.calling_sequences)))
-
-
-            # JULIA: DEBUG RAUSGENOMMEN
-            # abschlusstext = ""
-            abschlusstext = "! ABSCHLUSSTEXT BEIM ELSE @ line : {}\n".format(inspect_get_current_line_number())
-            self.calling_sequences_doc = self.calling_sequences_doc + abschlusstext
-
-
-            self.calling_sequences_state = True
-
-
-
-            # TODO: Hier noch level berücksichtigen mit einzügen!
-            # return self.calling_sequences_doc
-            text_to_return = self.calling_sequences_doc
-            # text_to_return = self.indent_str(self.calling_sequences_doc, count_of_indents=0)
-            # return self.calling_sequences_doc 
-            return text_to_return
-
-            # shortcut / resubstitution:
-            # self.documentation = doc
-
-    '''
-
-
-
-
-
 
 
 
@@ -1307,7 +1058,7 @@ class Procedure():
 
     def prepare_single_call_sequence_docs(self, level=0):
         """
-        ### TODOC: Siehe prepare_all_call_sequence_docs...
+        ### TODOC: Siehe prepare_all_call_sequence_docs... (gelöscht)
         ### CHANGELOG:
 
         - 2024-01-07 - 04:16:47 Beginn neuafbau

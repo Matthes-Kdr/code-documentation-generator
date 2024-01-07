@@ -21,63 +21,10 @@ Generierungsdatum dieser Dokumentation: **@PLACEHOLDER_TIMESTAMP_NOW@**
 
 **Aktuelle Bugs:**
 
-- Aufrufabfolge wird noch nicht korrekt dargestellt 
-    - (Einrückungen sind falsch!)
+- Aufrufabfolge wird in manchen Fällen noch nicht ganz korrekt dargestellt 
+  - siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath
+  - Scheint v.a. nach  vielen Unteraufrufen aufzutreten...
+  - Inhaltlich aber nicht falsch... (ODER????!)
 
-
-
-
-
-
-<details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
-
----
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@
-
-
-
-
-
-@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@
-
-
-
-
-
-
-
-
-<!-- TODO: Platzhalter platz -->
-<br>
-<br>
-<br>
-<br>
-<br>
-STATIC  - EXEMPLARISCHES ZIEL- OUTPUT für MAIN:
-
-<!-- TODO: Links einfügen! gleiches prinzip wie bei  references!-->
-
-
-
-
-* ```hauptfunc1```
-  * ```unterfunktionA```
-    * ```wiederholungsfunktion```
-  * ```unterfunktionB```
-* ```hauptfunc2```
-* ```hauptfunc3```
-* ```wiederholungsfunktion```
-  * ```wiederholungsfunktion```
-
-
-
-
-</details>
 
 

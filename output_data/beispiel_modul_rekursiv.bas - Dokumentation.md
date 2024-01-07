@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul_rekursiv.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-06 16:17**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-06 16:33:41**
+Generierungsdatum dieser Dokumentation: **2024-01-07 00:54:24**
 
 
 
@@ -22,8 +22,7 @@ Generierungsdatum dieser Dokumentation: **2024-01-06 16:33:41**
 **Aktuelle Bugs:**
 
 - Aufrufabfolge wird noch nicht korrekt dargestellt 
-  - (Einrückungen sind falsch!)
-  - Reihenfolge ist bislang noch nach Prozedurnamen, nicht nach Aufrufreihenfolge sortiert!
+    - (Einrückungen sind falsch!)
 
 
 
@@ -232,10 +231,10 @@ Kein Aufruf gefunden.
 
 
 - ```liebherr``` <small> : [Zeile 141] : ```    call liebherr``` </small><br>
-- ```liebherr``` <small> : [Zeile 142] : ```    call liebherr ' Aufruf``` </small><br>
-- ```liebherr``` <small> : [Zeile 144] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small><br>
-- ```liebherr``` <small> : [Zeile 148] : ```    var = liebherr("gvkil")``` </small><br>
-
+<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```liebherr``` <small> : [Zeile 142] : ```    call liebherr ' Aufruf``` </small><br>
+<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```liebherr``` <small> : [Zeile 144] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small><br>
+<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```liebherr``` <small> : [Zeile 148] : ```    var = liebherr("gvkil")``` </small><br>
+<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230
 
 
 
@@ -726,11 +725,11 @@ Kein Aufruf gefunden.
 
 
 - ```addieren``` <small> : [Zeile 111] : ```        wert = addieren(i, i)``` </small><br>
-- ```subtrahieren``` <small> : [Zeile 112] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small><br>
-- ```addieren``` <small> : [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small><br>- ```liebherr``` <small> : [Zeile 117] : ```    call liebherr("vor rekursivem Aufruf")``` </small><br>
-- ```rekursiv``` <small> : [Zeile 119] : ```    call rekursiv``` </small><br>
-- ```addieren``` <small> : [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small><br>- ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small><br>  (... recursivly under certain conditions ... )<br>- ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small><br>- ```liebherr``` <small> : [Zeile 57] : ```    call liebherr("nochmal")``` </small><br>- ```liebherr``` <small> : [Zeile 121] : ```    call liebherr("NACH rekursivem Aufruf")``` </small><br>
-
+<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```subtrahieren``` <small> : [Zeile 112] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small><br>
+- ```addieren``` <small> : [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small><br><br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```liebherr``` <small> : [Zeile 117] : ```    call liebherr("vor rekursivem Aufruf")``` </small><br>
+<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```rekursiv``` <small> : [Zeile 119] : ```    call rekursiv``` </small><br>
+- ```addieren``` <small> : [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small><br><br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small><br>(... recursivly under certain conditions ... )<br>- ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small><br>- ```liebherr``` <small> : [Zeile 57] : ```    call liebherr("nochmal")``` </small><br><br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```liebherr``` <small> : [Zeile 121] : ```    call liebherr("NACH rekursivem Aufruf")``` </small><br>
+<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230
 
 
 
@@ -1089,10 +1088,10 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 - ```addieren``` <small> : [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small><br>
-- ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small><br>
-  (... recursivly under certain conditions ... )<br>- ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small><br>
+<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small><br>
+(... recursivly under certain conditions ... )<br>- ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small><br>
 - ```liebherr``` <small> : [Zeile 57] : ```    call liebherr("nochmal")``` </small><br>
-
+<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230
 
 
 
@@ -1269,7 +1268,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 - ```addieren``` <small> : [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small><br>
-
+<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230
 
 
 
@@ -1411,4 +1410,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-06 16:33:41 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-05 16:52:20: '514965255e38e5dc3f230d9d6b2a34f1072489a5')</small> 
+<small>Dokumentation generiert am 2024-01-07 00:54:24 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-06 16:35:43: '1a63524c298ce2d0f14d46420c9b708d45c5c7e9')</small> 

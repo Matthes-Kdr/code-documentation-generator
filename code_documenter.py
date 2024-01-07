@@ -68,6 +68,7 @@ Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.
 
 
 from datetime import datetime
+import inspect
 import os
 import re
 
@@ -103,6 +104,32 @@ def db(*args):
     print("__DEBUG_PRINT__\n")
     for _ in args:
         print(_)
+
+
+
+
+
+
+def inspect_get_current_line_number():
+    """
+    Gibt die Zeilennummer des Codes zurück - geeignet zum Debuggen!
+
+    Returns:
+        int: number of line  in code file.
+    """
+
+    # Die Stack-Informationen abrufen
+    stack = inspect.stack()
+    
+    # Die Informationen für die aktuelle Funktion/Frame erhalten
+    aktueller_frame = stack[1]
+    
+    # Die Zeilennummer extrahieren
+    zeilennummer = aktueller_frame[2]
+    
+
+    return zeilennummer
+
 
 
 
@@ -417,6 +444,7 @@ class MetaData(metaclass=AutoCallMeta):
         input_file_path = "input_data/beispiel_modul2.bas"
         input_file_path = "input_data/beispiel_modul1.bas"
         input_file_path = "input_data/beispiel_modul_rekursiv.bas"
+        input_file_path = "input_data/beispiel_modul_bauer+liebherr.bas"
         
         cls.set_input_path(input_file_path)
 
@@ -1052,7 +1080,7 @@ class Procedure():
         Returns:
             str: Text eingerückt.
         """
-        CHARS_PER_INDENT = "  "
+        CHARS_PER_INDENT = "§"
 
         indendet_text = ""
         
@@ -1081,7 +1109,6 @@ class Procedure():
 
 
 
-
         db(f"name der ZU ANALYSIERENDEN prozedur : {self.name}")
 
 
@@ -1091,10 +1118,24 @@ class Procedure():
             db("diese proz ist fertig!")
             # db("diese proz ist fertig!")
 
-            # TODO: Hier noch level berücksichtigen mit einzügen!
-            
 
-            text_to_return = self.indent_str(self.calling_sequences_doc)
+
+
+            end_text_per_procedure = "<br>(nichts weiter... Hier KEINE indentions! @ line :{})<br>".format(inspect_get_current_line_number())
+
+
+
+            # TODO: Hier noch level berücksichtigen mit einzügen!
+
+            # text_to_return = self.calling_sequences_doc +  self.indent_str(end_text_per_procedure, count_of_indents=level+1)
+            # text_to_return = self.calling_sequences_doc +  self.indent_str(end_text_per_procedure, count_of_indents=level)
+            text_to_return = self.calling_sequences_doc +  end_text_per_procedure
+
+
+
+
+
+
             # return self.calling_sequences_doc 
             return text_to_return
 
@@ -1108,6 +1149,7 @@ class Procedure():
         if not self.calling_sequences_doc:
 
             self.calling_sequences_doc = ""
+            # self.calling_sequences_doc = "<br>"
 
             # self.calling_sequences_doc = self.__read_template("templates/prozedur_calling_sequences.md")
 
@@ -1159,7 +1201,8 @@ class Procedure():
                 
                 # _BUGFIX: against RecursionError :
                 if target_procedure_name == self.name:
-                    further_calls_doc = self.indent_str("(... recursivly under certain conditions ... )<br>", level+1)
+                    # further_calls_doc = self.indent_str("(... recursivly under certain conditions ... )<br>", level+1)
+                    further_calls_doc = self.indent_str("(... recursivly under certain conditions ... )<br>", 0)
                 else:
 
 
@@ -1170,17 +1213,24 @@ class Procedure():
 
                     # Rekursiv: den nächsten Platzhalter mit der nächsten Dokumentation des aufgerufenen calls füllen:
                     
-                    further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=level + 1)
+                    further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=0)
+                    # further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=level)
+                    # further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=level + 1)
 
 
                 # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, further_calls_doc)
-                self.calling_sequences_doc = self.calling_sequences_doc  +  further_calls_doc
+                self.calling_sequences_doc = self.calling_sequences_doc  +  self.indent_str(further_calls_doc, count_of_indents=0)
+                # TODO: Mix of <br> und \n
+                # self.calling_sequences_doc = self.calling_sequences_doc  +  self.indent_str(further_calls_doc, count_of_indents=level + 1)
+                # self.calling_sequences_doc = self.calling_sequences_doc  +  further_calls_doc
     
     
-            
-            
+                        
             # BUGFIX: indention
             self.calling_sequences_state = True
+            self.calling_sequences_doc = self.calling_sequences_doc  + "\n --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :{}\n".format(inspect_get_current_line_number())
+
+
 
             '''
             # level Berücksichtigen:
@@ -1212,7 +1262,7 @@ class Procedure():
             '''
 
 
-            text_to_return = self.indent_str(self.calling_sequences_doc)
+            text_to_return = self.indent_str(self.calling_sequences_doc, count_of_indents=0)
             # return self.calling_sequences_doc 
             return text_to_return
 
@@ -1235,6 +1285,8 @@ class Procedure():
             self.calling_sequences_doc = self.calling_sequences_doc.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@", str(len(self.calling_sequences)))
 
 
+            abschlusstext = "! Abschlusstext beim else @ line : {}\n".format(inspect_get_current_line_number())
+            self.calling_sequences_doc = self.calling_sequences_doc + abschlusstext
 
 
             self.calling_sequences_state = True
@@ -1243,7 +1295,7 @@ class Procedure():
 
             # TODO: Hier noch level berücksichtigen mit einzügen!
             # return self.calling_sequences_doc
-            text_to_return = self.indent_str(self.calling_sequences_doc)
+            text_to_return = self.indent_str(self.calling_sequences_doc, count_of_indents=0)
             # return self.calling_sequences_doc 
             return text_to_return
 
@@ -1271,10 +1323,10 @@ class Procedure():
 
 
         for prozedur in cls.all_procedures_final:
-
             prozedur_obj:Procedure = prozedur[0]
+            db(prozedur_obj.name)
 
-            prozedur_obj.prepare_single_call_sequence_docs()
+            prozedur_obj.prepare_single_call_sequence_docs(level=0)
 
             """
             # OBSOLETER ALTER ANSATZ:
@@ -1293,7 +1345,7 @@ class Procedure():
 
 
 
-
+        db("alle fertig prepared.")
 
 
 
@@ -2640,7 +2692,27 @@ def main():
 
 
 
+
+
+# def test_inspect():
+
+
+
+#     print("stack wurde in Zeile 2677 (hardcodiert!) geschrieben. \nErmitte zeilennummer: {}".format(inspect_get_current_line_number()))
+          
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
+
+
+    # test_inspect()
+
     main()
 
 

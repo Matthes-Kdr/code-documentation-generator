@@ -443,8 +443,8 @@ class MetaData(metaclass=AutoCallMeta):
         input_file_path = "input_data/beispiel_modul.bas"
         input_file_path = "input_data/beispiel_modul2.bas"
         input_file_path = "input_data/beispiel_modul1.bas"
-        input_file_path = "input_data/beispiel_modul_rekursiv.bas"
         input_file_path = "input_data/beispiel_modul_bauer+liebherr.bas"
+        input_file_path = "input_data/beispiel_modul_rekursiv.bas"
         
         cls.set_input_path(input_file_path)
 
@@ -1121,7 +1121,8 @@ class Procedure():
 
 
 
-            end_text_per_procedure = "<br>(nichts weiter... Hier KEINE indentions! @ line :{})<br>".format(inspect_get_current_line_number())
+            # end_text_per_procedure = "<br>(nichts weiter... Hier KEINE indentions! @ line :{})<br>".format(inspect_get_current_line_number())
+            end_text_per_procedure = "\n(CALLING_SEQUENCE_STATE=TRUE (return) @ line :{})\n\n".format(inspect_get_current_line_number())
 
 
 
@@ -1155,8 +1156,8 @@ class Procedure():
 
 
 
-        _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@"
-        _PLACEHOLDER_REFERENCE = ""
+        # _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_ENTRY@"
+        # _PLACEHOLDER_REFERENCE = ""
 
         # shortcut:
         # OBSOLET:2024-01-05 - 02:48:47
@@ -1177,19 +1178,29 @@ class Procedure():
                 
                 ALTERNATIVE_DARSTELLUNGSOPTIONEN = {
                     0 : f"<small>  Zeile {line_no_reference} </small> : ```{line_code}```",
+
+
                     1 : f"<small>  Zeile {line_no_reference} </small> : ```{target_procedure_name}```",
-                    2 : f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small><br>".replace(line_code, line_code.rstrip("\n")),
+                  
+
+                  
+                    2 : "\n" * 3 + f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n",
+
+                # ACHTUNG: all diesen Optionen wird noch ein "\n" angehangen nachträglich (hier noch nicht, wegen f-string!)
+
                 }
         
 
                 replacer_placeholder_reference = ALTERNATIVE_DARSTELLUNGSOPTIONEN[DARSTELLUNGSOPTION]
-                replacer_placeholder_reference = replacer_placeholder_reference  + f"\n{_PLACEHOLDER_REFERENCE}"
+
+
+                # replacer_placeholder_reference = replacer_placeholder_reference  + "{}".format(_PLACEHOLDER_REFERENCE)
                     
                 # # Ersetzen:
                 # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
                 
-                
-                self.calling_sequences_doc = self.calling_sequences_doc  + replacer_placeholder_reference
+                debug_text = " (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :{})".format(inspect_get_current_line_number())
+                self.calling_sequences_doc = self.calling_sequences_doc  + replacer_placeholder_reference + debug_text
                 
 
 
@@ -1202,7 +1213,8 @@ class Procedure():
                 # _BUGFIX: against RecursionError :
                 if target_procedure_name == self.name:
                     # further_calls_doc = self.indent_str("(... recursivly under certain conditions ... )<br>", level+1)
-                    further_calls_doc = self.indent_str("(... recursivly under certain conditions ... )<br>", 0)
+                    # further_calls_doc = self.indent_str("(... recursivly under certain conditions ... )\n\n", 0)
+                    further_calls_doc = "(... recursivly under certain conditions ... )\n\n"
                 else:
 
 
@@ -1217,9 +1229,14 @@ class Procedure():
                     # further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=level)
                     # further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=level + 1)
 
+                
+                
+
 
                 # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, further_calls_doc)
-                self.calling_sequences_doc = self.calling_sequences_doc  +  self.indent_str(further_calls_doc, count_of_indents=0)
+                debug_text = " (FURTHER_DEBUGTEXT @ l. :{})".format(inspect_get_current_line_number())
+                self.calling_sequences_doc = self.calling_sequences_doc  +  further_calls_doc + debug_text
+                # self.calling_sequences_doc = self.calling_sequences_doc  +  self.indent_str(further_calls_doc, count_of_indents=0)
                 # TODO: Mix of <br> und \n
                 # self.calling_sequences_doc = self.calling_sequences_doc  +  self.indent_str(further_calls_doc, count_of_indents=level + 1)
                 # self.calling_sequences_doc = self.calling_sequences_doc  +  further_calls_doc
@@ -1228,7 +1245,7 @@ class Procedure():
                         
             # BUGFIX: indention
             self.calling_sequences_state = True
-            self.calling_sequences_doc = self.calling_sequences_doc  + "\n --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :{}\n".format(inspect_get_current_line_number())
+            self.calling_sequences_doc = self.calling_sequences_doc  + "\n (Abschluss dieser Doc / keine weiteren Aufrufe @ line :{})\n".format(inspect_get_current_line_number())
 
 
 
@@ -1262,7 +1279,8 @@ class Procedure():
             '''
 
 
-            text_to_return = self.indent_str(self.calling_sequences_doc, count_of_indents=0)
+            # text_to_return = self.indent_str(self.calling_sequences_doc, count_of_indents=0)
+            text_to_return = self.calling_sequences_doc
             # return self.calling_sequences_doc 
             return text_to_return
 
@@ -1271,21 +1289,23 @@ class Procedure():
 
             # Loeschen des verbliebenen Platzhalters zum Einfuegen einzelner Referenzen:
             # TODO: Lösche es nicht, sondern setze noch an den entsprechenden Stellen rekursiv die untergeordneten call_sequences der aufgerufenen MEthoden ein!
-            self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, "")
+            # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, "")
 
 
 
-            # Einsetzen des Einleitungssatzes:
-            self.calling_sequences_doc = self.calling_sequences_doc.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
+            # # Einsetzen des Einleitungssatzes:
+            # self.calling_sequences_doc = self.calling_sequences_doc.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
 
 
 
 
-            # Einsetzen der ÜBersichtsanzahl an Aufrufen:
-            self.calling_sequences_doc = self.calling_sequences_doc.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@", str(len(self.calling_sequences)))
+            # # Einsetzen der ÜBersichtsanzahl an Aufrufen:
+            # self.calling_sequences_doc = self.calling_sequences_doc.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@", str(len(self.calling_sequences)))
 
 
-            abschlusstext = "! Abschlusstext beim else @ line : {}\n".format(inspect_get_current_line_number())
+            # JULIA: DEBUG RAUSGENOMMEN
+            # abschlusstext = ""
+            abschlusstext = "! ABSCHLUSSTEXT BEIM ELSE @ line : {}\n".format(inspect_get_current_line_number())
             self.calling_sequences_doc = self.calling_sequences_doc + abschlusstext
 
 
@@ -1295,7 +1315,8 @@ class Procedure():
 
             # TODO: Hier noch level berücksichtigen mit einzügen!
             # return self.calling_sequences_doc
-            text_to_return = self.indent_str(self.calling_sequences_doc, count_of_indents=0)
+            text_to_return = self.calling_sequences_doc
+            # text_to_return = self.indent_str(self.calling_sequences_doc, count_of_indents=0)
             # return self.calling_sequences_doc 
             return text_to_return
 
@@ -1452,7 +1473,8 @@ class Procedure():
 
 
 
-
+    '''
+    # OBSOLET: / aLT:
 
     def OLD_generate_calling_entries(self) -> None:
         """
@@ -1665,8 +1687,23 @@ class Procedure():
         # shortcut / resubstitution:
         self.documentation = doc
 
+    '''
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    '''
+    # OBSOLET / ALT:
 
     def XX_generate_calling_entries(self, level=0) -> str:
     # def generate_calling_entries(self, current_doc=None, level=0) -> str:
@@ -1798,8 +1835,16 @@ class Procedure():
             # shortcut / resubstitution:
             # self.documentation = doc
 
+    '''
 
 
+
+
+
+
+
+    '''
+    # OBSOLET / ALT:
 
     def OLD_20240105_0229_generate_calling_entries(self, level=0):
         """
@@ -1912,7 +1957,7 @@ class Procedure():
         # shortcut / resubstitution:
         # self.documentation = doc
 
-
+    '''
 
 
 

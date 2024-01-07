@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul_rekursiv.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-06 16:17**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-07 00:54:24**
+Generierungsdatum dieser Dokumentation: **2024-01-07 04:03:54**
 
 
 
@@ -230,11 +230,41 @@ Kein Aufruf gefunden.
 
 
 
-- ```liebherr``` <small> : [Zeile 141] : ```    call liebherr``` </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```liebherr``` <small> : [Zeile 142] : ```    call liebherr ' Aufruf``` </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```liebherr``` <small> : [Zeile 144] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```liebherr``` <small> : [Zeile 148] : ```    var = liebherr("gvkil")``` </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230
+
+
+
+- ```liebherr``` <small> : [Zeile 141] : ```    call liebherr``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```liebherr``` <small> : [Zeile 142] : ```    call liebherr ' Aufruf``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```liebherr``` <small> : [Zeile 144] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```liebherr``` <small> : [Zeile 148] : ```    var = liebherr("gvkil")``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+ (Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)
+
 
 
 
@@ -401,6 +431,7 @@ Kein Aufruf gefunden.
 
 
 
+! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
 
 
 
@@ -562,6 +593,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
 
 
 
@@ -724,12 +756,86 @@ Kein Aufruf gefunden.
 
 
 
-- ```addieren``` <small> : [Zeile 111] : ```        wert = addieren(i, i)``` </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```subtrahieren``` <small> : [Zeile 112] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small><br>
-- ```addieren``` <small> : [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small><br><br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```liebherr``` <small> : [Zeile 117] : ```    call liebherr("vor rekursivem Aufruf")``` </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```rekursiv``` <small> : [Zeile 119] : ```    call rekursiv``` </small><br>
-- ```addieren``` <small> : [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small><br><br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small><br>(... recursivly under certain conditions ... )<br>- ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small><br>- ```liebherr``` <small> : [Zeile 57] : ```    call liebherr("nochmal")``` </small><br><br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```liebherr``` <small> : [Zeile 121] : ```    call liebherr("NACH rekursivem Aufruf")``` </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230
+
+
+
+- ```addieren``` <small> : [Zeile 111] : ```        wert = addieren(i, i)``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```subtrahieren``` <small> : [Zeile 112] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)
+
+
+- ```addieren``` <small> : [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+ (Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```liebherr``` <small> : [Zeile 117] : ```    call liebherr("vor rekursivem Aufruf")``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```rekursiv``` <small> : [Zeile 119] : ```    call rekursiv``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)
+
+
+- ```addieren``` <small> : [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)(... recursivly under certain conditions ... )
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```liebherr``` <small> : [Zeile 57] : ```    call liebherr("nochmal")``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+ (Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```liebherr``` <small> : [Zeile 121] : ```    call liebherr("NACH rekursivem Aufruf")``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+ (Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)
+
 
 
 
@@ -925,6 +1031,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
+! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
 
 
 
@@ -1087,11 +1194,36 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- ```addieren``` <small> : [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small><br>
-(... recursivly under certain conditions ... )<br>- ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small><br>
-- ```liebherr``` <small> : [Zeile 57] : ```    call liebherr("nochmal")``` </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230
+
+
+
+- ```addieren``` <small> : [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)(... recursivly under certain conditions ... )
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+ (FURTHER_DEBUGTEXT @ l. :1237)
+
+
+- ```liebherr``` <small> : [Zeile 57] : ```    call liebherr("nochmal")``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+ (Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)
+
 
 
 
@@ -1267,8 +1399,17 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- ```addieren``` <small> : [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230
+
+
+
+- ```addieren``` <small> : [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+ (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+
+(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)
+
+ (FURTHER_DEBUGTEXT @ l. :1237)
+ (Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)
+
 
 
 
@@ -1410,4 +1551,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-07 00:54:24 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-06 16:35:43: '1a63524c298ce2d0f14d46420c9b708d45c5c7e9')</small> 
+<small>Dokumentation generiert am 2024-01-07 04:03:54 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 01:50:52: '715b0b6485123fbdf7797b023caf84aefe35490c')</small> 

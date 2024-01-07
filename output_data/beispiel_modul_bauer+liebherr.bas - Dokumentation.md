@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul_bauer+liebherr.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-07 01:00**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-07 01:45:26**
+Generierungsdatum dieser Dokumentation: **2024-01-07 02:06:15**
 
 
 
@@ -222,19 +222,24 @@ Kein Aufruf gefunden.
 
 
 
-- ```liebherr``` <small> : [Zeile 22] : ```    call liebherr``` </small>
-  - ! Abschlusstext beim else @ line : 1288
-- ```liebherr``` <small> : [Zeile 23] : ```    call liebherr ' Aufruf``` </small>
-  - ! Abschlusstext beim else @ line : 1288
-  - (nichts weiter... Hier KEINE indentions! @ line :1124)
-- ```liebherr``` <small> : [Zeile 25] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
-  - ! Abschlusstext beim else @ line : 1288
-  - (nichts weiter... Hier KEINE indentions! @ line :1124)
-- ```liebherr``` <small> : [Zeile 28] : ```    var = liebherr("gvkil")``` </small>
-  - ! Abschlusstext beim else @ line : 1288
-  - (nichts weiter... Hier KEINE indentions! @ line :1124)
 
- --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1231
+
+
+- ```liebherr``` <small> : [Zeile 22] : ```    call liebherr``` </small>
+! Abschlusstext beim else @ line : 1299
+
+
+- ```liebherr``` <small> : [Zeile 23] : ```    call liebherr ' Aufruf``` </small>
+! Abschlusstext beim else @ line : 1299(nichts weiter... Hier KEINE indentions! @ line :1125)
+
+
+- ```liebherr``` <small> : [Zeile 25] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+! Abschlusstext beim else @ line : 1299(nichts weiter... Hier KEINE indentions! @ line :1125)
+
+
+- ```liebherr``` <small> : [Zeile 28] : ```    var = liebherr("gvkil")``` </small>
+! Abschlusstext beim else @ line : 1299(nichts weiter... Hier KEINE indentions! @ line :1125)
+ --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1242
 
 
 
@@ -405,7 +410,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-! Abschlusstext beim else @ line : 1288
+! Abschlusstext beim else @ line : 1299
 
 
 
@@ -555,4 +560,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-07 01:45:26 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-06 16:35:43: '1a63524c298ce2d0f14d46420c9b708d45c5c7e9')</small> 
+<small>Dokumentation generiert am 2024-01-07 02:06:15 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 01:50:52: '715b0b6485123fbdf7797b023caf84aefe35490c')</small> 

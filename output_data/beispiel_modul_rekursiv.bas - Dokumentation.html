@@ -42,7 +42,7 @@
     <body class="vscode-body vscode-light">
         <h1 id="code-dokumentation-modul-beispiel_modul_rekursivbas">Code-Dokumentation: Modul 'beispiel_modul_rekursiv.bas'</h1>
 <p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul_rekursiv.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2024-01-06 16:17</strong></p>
-<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-07 00:54:24</strong></p>
+<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-07 04:03:54</strong></p>
 <!-- TODO: nur temporrary!  -->
 <h1 id="zwischengelagert-als-ziel-vorgabe-für-abrufsequenz">ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:</h1>
 <p><strong>Aktuelle Bugs:</strong></p>
@@ -161,12 +161,30 @@ Anzahl weiterer internen Aufrufe : 5</p>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
-<li><code>liebherr</code> <small> : [Zeile 141] : <code>    call liebherr</code> </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- <code>liebherr</code> <small> : [Zeile 142] : <code>    call liebherr ' Aufruf</code> </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- <code>liebherr</code> <small> : [Zeile 144] : <code>    call liebherr(&quot;ERROR&quot;) ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!</code> </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- <code>liebherr</code> <small> : [Zeile 148] : <code>    var = liebherr(&quot;gvkil&quot;)</code> </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230</li>
+<li><code>liebherr</code> <small> : [Zeile 141] : <code>    call liebherr</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</li>
 </ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)</p>
+<ul>
+<li><code>liebherr</code> <small> : [Zeile 142] : <code>    call liebherr ' Aufruf</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</li>
+</ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)</p>
+<ul>
+<li><code>liebherr</code> <small> : [Zeile 144] : <code>    call liebherr(&quot;ERROR&quot;) ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</li>
+</ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)</p>
+<ul>
+<li><code>liebherr</code> <small> : [Zeile 148] : <code>    var = liebherr(&quot;gvkil&quot;)</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</li>
+</ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)
+(Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)</p>
 <!-- </div> -->
 </details>
 <details>
@@ -228,6 +246,7 @@ Anzahl weiterer internen Aufrufe : 0</p>
 <hr>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
+<p>! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</p>
 <!-- </div> -->
 </details>
 <details>
@@ -285,6 +304,7 @@ Anzahl weiterer internen Aufrufe : 0</p>
 <hr>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
+<p>! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</p>
 <!-- </div> -->
 </details>
 <details>
@@ -338,13 +358,72 @@ Anzahl weiterer internen Aufrufe : 5</p>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
-<li><code>addieren</code> <small> : [Zeile 111] : <code>        wert = addieren(i, i)</code> </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- <code>subtrahieren</code> <small> : [Zeile 112] : <code>        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!</code> </small><br></li>
-<li><code>addieren</code> <small> : [Zeile 77] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small><br><br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- <code>liebherr</code> <small> : [Zeile 117] : <code>    call liebherr(&quot;vor rekursivem Aufruf&quot;)</code> </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- <code>rekursiv</code> <small> : [Zeile 119] : <code>    call rekursiv</code> </small><br></li>
-<li><code>addieren</code> <small> : [Zeile 46] : <code>    tx = tx + string(addieren(1,2))</code> </small><br><br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- <code>rekursiv</code> <small> : [Zeile 50] : <code>        rekursiv(tx)</code> </small><br>(... recursivly under certain conditions ... )<br>- <code>liebherr</code> <small> : [Zeile 55] : <code>    call liebherr</code> </small><br>- <code>liebherr</code> <small> : [Zeile 57] : <code>    call liebherr(&quot;nochmal&quot;)</code> </small><br><br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- <code>liebherr</code> <small> : [Zeile 121] : <code>    call liebherr(&quot;NACH rekursivem Aufruf&quot;)</code> </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230</li>
+<li><code>addieren</code> <small> : [Zeile 111] : <code>        wert = addieren(i, i)</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</li>
 </ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)</p>
+<ul>
+<li>
+<p><code>subtrahieren</code> <small> : [Zeile 112] : <code>        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)</p>
+</li>
+<li>
+<p><code>addieren</code> <small> : [Zeile 77] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</p>
+</li>
+</ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)
+(Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)</p>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)</p>
+<ul>
+<li><code>liebherr</code> <small> : [Zeile 117] : <code>    call liebherr(&quot;vor rekursivem Aufruf&quot;)</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</li>
+</ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)</p>
+<ul>
+<li>
+<p><code>rekursiv</code> <small> : [Zeile 119] : <code>    call rekursiv</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)</p>
+</li>
+<li>
+<p><code>addieren</code> <small> : [Zeile 46] : <code>    tx = tx + string(addieren(1,2))</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</p>
+</li>
+</ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)</p>
+<ul>
+<li><code>rekursiv</code> <small> : [Zeile 50] : <code>        rekursiv(tx)</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)(... recursivly under certain conditions ... )</li>
+</ul>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)</p>
+<ul>
+<li>
+<p><code>liebherr</code> <small> : [Zeile 55] : <code>    call liebherr</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+(FURTHER_DEBUGTEXT @ l. :1237)</p>
+</li>
+<li>
+<p><code>liebherr</code> <small> : [Zeile 57] : <code>    call liebherr(&quot;nochmal&quot;)</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</p>
+</li>
+</ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)
+(Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)</p>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)</p>
+<ul>
+<li><code>liebherr</code> <small> : [Zeile 121] : <code>    call liebherr(&quot;NACH rekursivem Aufruf&quot;)</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</li>
+</ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)
+(Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)</p>
 <!-- </div> -->
 </details>
 <details>
@@ -432,6 +511,7 @@ Anzahl weiterer internen Aufrufe : 0</p>
 <hr>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
+<p>! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</p>
 <!-- </div> -->
 </details>
 <details>
@@ -489,12 +569,30 @@ ruft liebherr auf</p>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
-<li><code>addieren</code> <small> : [Zeile 46] : <code>    tx = tx + string(addieren(1,2))</code> </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br>- <code>rekursiv</code> <small> : [Zeile 50] : <code>        rekursiv(tx)</code> </small><br>
-(... recursivly under certain conditions ... )<br>- <code>liebherr</code> <small> : [Zeile 55] : <code>    call liebherr</code> </small><br></li>
-<li><code>liebherr</code> <small> : [Zeile 57] : <code>    call liebherr(&quot;nochmal&quot;)</code> </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230</li>
+<li><code>addieren</code> <small> : [Zeile 46] : <code>    tx = tx + string(addieren(1,2))</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</li>
 </ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)</p>
+<ul>
+<li><code>rekursiv</code> <small> : [Zeile 50] : <code>        rekursiv(tx)</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)(... recursivly under certain conditions ... )</li>
+</ul>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)</p>
+<ul>
+<li>
+<p><code>liebherr</code> <small> : [Zeile 55] : <code>    call liebherr</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308
+(FURTHER_DEBUGTEXT @ l. :1237)</p>
+</li>
+<li>
+<p><code>liebherr</code> <small> : [Zeile 57] : <code>    call liebherr(&quot;nochmal&quot;)</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</p>
+</li>
+</ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)
+(Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)</p>
 <!-- </div> -->
 </details>
 <details>
@@ -566,9 +664,12 @@ Anzahl weiterer internen Aufrufe : 1</p>
 <p>@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@</p>
 <!-- <div style="padding-left:1em;"> -->
 <ul>
-<li><code>addieren</code> <small> : [Zeile 77] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small><br>
-<br>(nichts weiter... Hier KEINE indentions! @ line :1123)<br><br> --- Abschluss dieser Doc / keine weiteren Aufrufe @ line :1230</li>
+<li><code>addieren</code> <small> : [Zeile 77] : <code>    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben</code> </small>
+(DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :1202)! ABSCHLUSSTEXT BEIM ELSE @ line : 1308</li>
 </ul>
+<p>(CALLING_SEQUENCE_STATE=TRUE (return) @ line :1125)</p>
+<p>(FURTHER_DEBUGTEXT @ l. :1237)
+(Abschluss dieser Doc / keine weiteren Aufrufe @ line :1248)</p>
 <!-- </div> -->
 </details>
 <details>
@@ -633,7 +734,7 @@ end Function
 <p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
 </small> 
 <hr>
-<p><small>Dokumentation generiert am 2024-01-07 00:54:24 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-06 16:35:43: '1a63524c298ce2d0f14d46420c9b708d45c5c7e9')</small></p>
+<p><small>Dokumentation generiert am 2024-01-07 04:03:54 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 01:50:52: '715b0b6485123fbdf7797b023caf84aefe35490c')</small></p>
 
         
         

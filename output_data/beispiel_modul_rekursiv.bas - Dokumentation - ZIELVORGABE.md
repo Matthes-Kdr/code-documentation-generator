@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul_rekursiv.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-06 16:17**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-07 04:58:59**
+Generierungsdatum dieser Dokumentation: **2024-01-07 04:44:55**
 
 
 
@@ -236,31 +236,43 @@ Kein Aufruf gefunden.
 - ```liebherr``` <small> : [Zeile 141] : ```    call liebherr``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz liebherr)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
+
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```liebherr``` <small> : [Zeile 142] : ```    call liebherr ' Aufruf``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz liebherr)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
+
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```liebherr``` <small> : [Zeile 144] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz liebherr)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
+
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```liebherr``` <small> : [Zeile 148] : ```    var = liebherr("gvkil")``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz liebherr)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz bauer)
+ (FURTHER_DEBUGTEXT @ l. :1365)
+
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
 
 
@@ -430,7 +442,7 @@ Kein Aufruf gefunden.
 
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz casio)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
 
 
@@ -594,7 +606,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz liebherr)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
 
 
@@ -763,72 +775,98 @@ Kein Aufruf gefunden.
 - ```addieren``` <small> : [Zeile 111] : ```        wert = addieren(i, i)``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz addieren)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
+
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```subtrahieren``` <small> : [Zeile 112] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
 
+# PLACEHOLDER neuer Einzug
 
 
 - ```addieren``` <small> : [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz addieren)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz subtrahieren)
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
+
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
+
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```liebherr``` <small> : [Zeile 117] : ```    call liebherr("vor rekursivem Aufruf")``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz liebherr)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
+
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```rekursiv``` <small> : [Zeile 119] : ```    call rekursiv``` </small>
 
+# PLACEHOLDER neuer Einzug
 
 
 - ```addieren``` <small> : [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz addieren)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
+
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small>
 (... recursivly under certain conditions ... )
 
-
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz liebherr)
-
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```liebherr``` <small> : [Zeile 57] : ```    call liebherr("nochmal")``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz liebherr)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz rekursiv)
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
+
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
+
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```liebherr``` <small> : [Zeile 121] : ```    call liebherr("NACH rekursivem Aufruf")``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz liebherr)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz main)
+ (FURTHER_DEBUGTEXT @ l. :1365)
+
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
 
 
@@ -1027,7 +1065,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz addieren)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
 
 
@@ -1196,30 +1234,36 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 - ```addieren``` <small> : [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz addieren)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
+
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```rekursiv``` <small> : [Zeile 50] : ```        rekursiv(tx)``` </small>
 (... recursivly under certain conditions ... )
 
-
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```liebherr``` <small> : [Zeile 55] : ```    call liebherr``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz liebherr)
-
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
+ (FURTHER_DEBUGTEXT @ l. :1365)
 
 
 - ```liebherr``` <small> : [Zeile 57] : ```    call liebherr("nochmal")``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz liebherr)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz rekursiv)
+ (FURTHER_DEBUGTEXT @ l. :1365)
+
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
 
 
@@ -1402,10 +1446,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 - ```addieren``` <small> : [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz addieren)
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
+(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :1315)
 
-(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : 1381 : Aufruf aus Instanz subtrahieren)
+ (FURTHER_DEBUGTEXT @ l. :1365)
+
+(! # TODO ABSCHLUSSTEXT END@prepare_single_call_sequence_docs @ line : 1379)
 
 
 
@@ -1548,4 +1595,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-07 04:58:59 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 04:09:38: '2b62f2a9d7a25068db98fbd1c11986e7a9552a10')</small> 
+<small>Dokumentation generiert am 2024-01-07 04:44:55 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 04:09:38: '2b62f2a9d7a25068db98fbd1c11986e7a9552a10')</small> 

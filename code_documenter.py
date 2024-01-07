@@ -1098,7 +1098,13 @@ class Procedure():
 
 
 
-    def prepare_single_call_sequence_docs(self, level=0):
+
+
+
+
+    '''
+
+    def OLD_prepare_single_call_sequence_docs(self, level=0):
         """
         ### TODOC: Siehe prepare_all_call_sequence_docs...
 
@@ -1107,40 +1113,24 @@ class Procedure():
         Zugriff erfolgt auf Objekt-Ebene.
         """
 
-
-
         db(f"name der ZU ANALYSIERENDEN prozedur : {self.name}")
-
 
         if self.calling_sequences_state:
 
-
             db("diese proz ist fertig!")
-            # db("diese proz ist fertig!")
-
-
-
 
             # end_text_per_procedure = "<br>(nichts weiter... Hier KEINE indentions! @ line :{})<br>".format(inspect_get_current_line_number())
-            end_text_per_procedure = "\n(CALLING_SEQUENCE_STATE=TRUE (return) @ line :{})\n\n".format(inspect_get_current_line_number())
+            end_text_per_procedure = "\n(# DEBUG: CALLING_SEQUENCE_STATE=TRUE (return) @ line :{})\n\n".format(inspect_get_current_line_number())
 
 
-
-            # TODO: Hier noch level berücksichtigen mit einzügen!
+            # TODO: NEIN: Hier noch level berücksichtigen mit einzügen! --> NEIN
 
             # text_to_return = self.calling_sequences_doc +  self.indent_str(end_text_per_procedure, count_of_indents=level+1)
             # text_to_return = self.calling_sequences_doc +  self.indent_str(end_text_per_procedure, count_of_indents=level)
             text_to_return = self.calling_sequences_doc +  end_text_per_procedure
 
-
-
-
-
-
             # return self.calling_sequences_doc 
             return text_to_return
-
-
 
             # return self.calling_sequences_doc
 
@@ -1164,11 +1154,11 @@ class Procedure():
         # current_doc:str = self.current
 
         # Initialisierung und  Parametrisierung  des Einleitungssatzes:
-        einleitungssatz = "Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden." # default
+        # einleitungssatz = "Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden." # default
         
         
         if len(self.calling_sequences) > 0:
-            einleitungssatz = "Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:"
+            # einleitungssatz = "Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:"
 
             # call --> subtrahieren
             for (line_no_reference, uebergeordnetes_sub, line_code, target_procedure_name) in self.calling_sequences:
@@ -1199,7 +1189,7 @@ class Procedure():
                 # # Ersetzen:
                 # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
                 
-                debug_text = " (DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :{})".format(inspect_get_current_line_number())
+                debug_text = " (# OBS : DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :{})".format(inspect_get_current_line_number())
                 self.calling_sequences_doc = self.calling_sequences_doc  + replacer_placeholder_reference + debug_text
                 
 
@@ -1249,36 +1239,6 @@ class Procedure():
 
 
 
-            '''
-            # level Berücksichtigen:
-            def indent_str(text:str, count_of_indents:int=0) -> str:
-                """
-                Stellt jeder Zeile entsprechende Indention-Symbols vorweg.
-
-                Args:
-                    text (str): Text
-                    count_of_indents (int, optional): Level of indention. Defaults to 0.
-
-                Returns:
-                    str: Text eingerückt.
-                """
-                CHARS_PER_INDENT = "  "
-
-                indendet_text = ""
-                
-                pre_line:str = CHARS_PER_INDENT * count_of_indents
-
-                list_of_lines = text.split
-            
-                for line in list_of_lines:
-                    indendet_text = indendet_text + pre_line + line
-            
-
-
-                return indendet_text
-            '''
-
-
             # text_to_return = self.indent_str(self.calling_sequences_doc, count_of_indents=0)
             text_to_return = self.calling_sequences_doc
             # return self.calling_sequences_doc 
@@ -1322,6 +1282,123 @@ class Procedure():
 
             # shortcut / resubstitution:
             # self.documentation = doc
+
+    '''
+
+
+
+
+
+
+
+
+
+
+    def prepare_single_call_sequence_docs(self, level=0):
+        """
+        ### TODOC: Siehe prepare_all_call_sequence_docs...
+        ### CHANGELOG:
+
+        - 2024-01-07 - 04:16:47 Beginn neuafbau
+
+        
+        Generiert die vollständige Dokumentation der Aufrufsequenzen in den einzelnen Objekten und speichert sie im Attribut obj.calling_sequences_doc. Nach vervollständigung wird obj.calling_sequences_state = True  gesetzt.
+
+        Zugriff erfolgt auf Objekt-Ebene.
+        """
+
+        db(f"name der ZU ANALYSIERENDEN prozedur : {self.name}")
+
+        if self.calling_sequences_state:
+            db("diese proz ist fertig!")
+
+            # end_text_per_procedure = "\n(# DEBUG: SCHREIBE NIX @ CALLING_SEQUENCE_STATE=TRUE (return) @ line :{})\n\n".format(inspect_get_current_line_number())
+            end_text_per_procedure = ""
+
+            text_to_return = self.calling_sequences_doc +  end_text_per_procedure
+            return text_to_return
+
+
+        # Initialisiert den Initialtext aus der template, falls es noch keinen Text gibt:
+        if not self.calling_sequences_doc:
+            self.calling_sequences_doc = ""
+
+
+
+
+
+
+
+        # if len(self.calling_sequences) > 0:
+
+        for (line_no_reference, uebergeordnetes_sub, line_code, target_procedure_name) in self.calling_sequences:
+
+
+            # ACHTUNG: Weitere Darstellungmöglchkeiten siehe OLD_self !
+            replacer_placeholder_reference = "\n" * 3 + f"- ```{target_procedure_name}``` <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n"
+            # debug_text = " (# OBS : DEBUGTEXT_ALWAYS_HAUPTDARSTELLUNG @ l. :{})".format(inspect_get_current_line_number())
+            debug_text = ""
+            self.calling_sequences_doc = self.calling_sequences_doc  + replacer_placeholder_reference + debug_text
+
+
+
+
+
+            # Rekursive Aufrufe für untergeordnete Calling-sequenzabfolge:
+            if target_procedure_name == self.name:
+                # Abbruch gegen Endlosrekusrion:
+                further_calls_doc = "(... recursivly under certain conditions ... )\n\n"
+
+            else:
+
+
+                # get the object from target_procedure_name:
+                db(f"neuer ziel-name =  {target_procedure_name}")
+                target_procedure_obj = self.get_procedure_obj_by_name(target_procedure_name)
+
+
+                # Rekursiv: den nächsten Platzhalter mit der nächsten Dokumentation des aufgerufenen calls füllen:
+                further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level=0)
+
+
+
+            # self.calling_sequences_doc = self.calling_sequences_doc.replace(_PLACEHOLDER_REFERENCE, further_calls_doc)
+            # debug_text = " (FURTHER_DEBUGTEXT @ l. :{})".format(inspect_get_current_line_number())
+            debug_text = ""
+            self.calling_sequences_doc = self.calling_sequences_doc  +  further_calls_doc + debug_text
+
+            '''
+            self.calling_sequences_state = True
+            self.calling_sequences_doc = self.calling_sequences_doc  + "\n (Abschluss dieser Doc / keine weiteren Aufrufe @ line :{})\n".format(inspect_get_current_line_number())
+
+
+            text_to_return = self.calling_sequences_doc
+
+            return text_to_return
+            '''
+
+
+        abschlusstext = "\n\n(! # TODO ABSCHLUSS DER REKURSIONEN INNERHALB DER ZULETZT DEOKUMENTIERTEN PROEDURZ @prepare_single_call_sequence_docs @ line : {} : Aufruf aus Instanz {})\n".format(inspect_get_current_line_number(), self.name)
+        self.calling_sequences_doc = self.calling_sequences_doc + abschlusstext
+
+        self.calling_sequences_state = True
+        text_to_return = self.calling_sequences_doc
+
+        return text_to_return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

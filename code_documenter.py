@@ -31,13 +31,32 @@ Wichtige Details siehe am Ende dieses docstrings.
 
 
 
-### AUSBLICK für später und in schön:
+### TODOS:
 
-• Optimierung der Darstellung der Aufrufebenen: Verlinkung der PRozeduren, genau wie bei den References
+• Bereitstellung einer einfachen GUI / HMI, um Input- und Output Pfade zu parametrisieren
+
+• Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath)
+
+
+
+### AUSBLICK für später und in schön:
 
 • Index an der Seite wie eine NavBar zum einzelnd scrollen
 
-• Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --> notengriffe_erzeugen --> getFilePath)
+• Ermöglichung von Berücksichtigung weiterer Module innerhalb der Dokumentation
+    
+    • z. B. 2 VBA-Module innerhalb eines Projektes, wobei Prozeduren von Modul1  andere Prozeduren aus Modul2 aufrufen.
+
+        • Erstmal nur als Verweis  (Mögl. Ansatz included = "Modul1.*" ohne rekursive Auflistung derer Aufrufe... oder eben mit... bestenfalls auch das parametrisierbar)
+
+• Dokumentation von weiteren PRogrammiersprachen
+
+    • OK --> VBA
+    • Nächste Prio: C++ / Arduino
+    • Letzte Prio: Python (v.a. für den Ablaufsequence sehr hilfreich, für den rest gibt es pdoc...)
+
+
+
 
 
 
@@ -55,6 +74,25 @@ Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wied
     - prepare_single_call_sequence_docs(cls)
 
 (hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )
+
+
+
+
+
+
+
+# =============================================================================
+#### Unwichtige Nebensächlichkeiten: ####
+# =============================================================================
+
+In der Version vom 2024-01-07 - 15:26:03:
+    - Gesamtanzahl der Zeilen: 2771 (100%)
+    - davon Leerzeilen: 1408 (51%)
+    - davon Einzelkommentarzeilen: 278 (10%)
+    - davon Blockkommentarzeilen: 550 (20%)
+
+    ==> Summe aller Kommentarzeilen 828 (30%)
+    ==> Code-relevante Zeilen: 535 (19%)
 
 
 
@@ -313,6 +351,8 @@ class MetaData(metaclass=AutoCallMeta):
 
 
 
+    '''
+    # OBSOLET:
 
     @staticmethod
     def get_count_of_commits():
@@ -329,7 +369,7 @@ class MetaData(metaclass=AutoCallMeta):
         db(str(return_).split(" ")[0])
         # return str(return_).split(" ")[0]
         return str(return_)
-
+    '''
 
 
     @classmethod
@@ -469,7 +509,7 @@ class Procedure():
 
 
 
-    # TODO: Das wäre eig. schöner wenn sie private vars sind...
+    # TODO: Vars besser privatisieren:
 
     # Das folgenden Regex-Muster berücksichtigt nicht das Auskommentieren dieser Zeile
     regex_begin_pattern = r""".*     # Start mit beliebigen Zeichen
@@ -482,7 +522,7 @@ class Procedure():
 
 
 
-    # BUGFIX: Besonders beim Beispielmmodul 1 wird zu früh beendet! Neue Regex > V. 0.1.2
+    # _BUGFIX: Besonders beim Beispielmmodul 1 wird zu früh beendet! Neue Regex > V. 0.1.2
     regex_end_pattern = r""".*?     # Start mit beliebigen Zeichen
                         (?:End)    # Beinhaltet das KEyword
                         \s+        # mind. 1 bis n Leerzeichen
@@ -544,10 +584,7 @@ class Procedure():
 
             for line_begin, line_end in procedure_type_cls.matches_line_ixs:
 
-                # db(line_begin, line_end)
-                
-                # TODO: Bug ausmisten!
-                # BUG: sofern nach ein End {procedure_type} in der allerletzten Zeile des Quellcodes steht undn KEINE LEERZEILE FOLGT, isst line_end = None . Das raised einen TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+                # _BUG(?FIX?): sofern nach ein End {procedure_type} in der allerletzten Zeile des Quellcodes steht undn KEINE LEERZEILE FOLGT, isst line_end = None . Das raised einen TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
                 lines = cls.raw_source_code[line_begin:line_end + 1]
 
                 sub = procedure_type_cls(tuple(lines))
@@ -741,7 +778,12 @@ class Procedure():
             # TODO: Vorgehen wenn es KEINE instanz gibt???! - sollte kein Problem sein, dadurch dass nach jedem Einfügen immer wieder der Ausgangszustand bzgl. des Platzhalters wiederhergestellt wird un dieser am Ende gelöscht wird??!
 
             # Aufbau des Markdown.-Codes fuer diesen TOC-Eintrag:
-            new_entry = "* [```{temp_prozedur_name}```](#{temp_prozedur_name}) <small>(Zeile {temp_prozedur_zeile})</small>".format(temp_prozedur_name=prozedur_name, temp_prozedur_zeile=prozedur_initialisierungszeile)
+            
+            #  TEST: OK:
+            # new_entry = "* [```{temp_prozedur_name}```](#{temp_prozedur_name}) <small>(Zeile {temp_prozedur_zeile})</small>".format(temp_prozedur_name=prozedur_name, temp_prozedur_zeile=prozedur_initialisierungszeile)
+
+            #  TEST: ?:
+            new_entry = cls.get_markdown_for_code_line_of_call_entry(prozedur_name, prozedur_initialisierungszeile, line_text="")
 
             # Append the placeholder to have this flag for insert further entries:
             new_entry = new_entry + "\n  " + platzhalter
@@ -1089,8 +1131,14 @@ class Procedure():
     
 
         # replacer_placeholder_reference = "\n" * 3 + f"- [```{target_procedure_name}```](#{target_procedure_name}) <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n"
+        
+        if line_text == "":
+            __optional_code_line = ""
+        else:
+            __optional_code_line = f": ```{line_text}```"
 
-        markdown_entry = f"- [```{proc_name}```](#{proc_name}) : <small>  [Zeile {line_no}] : ```{line_text}``` </small>"
+
+        markdown_entry = f"- [```{proc_name}```](#{proc_name}) : <small>  [Zeile {line_no}] {__optional_code_line} </small>"
 
         markdown_entry = markdown_entry.replace(line_text, line_text.rstrip("\n")) 
         

@@ -1,0 +1,191 @@
+﻿'''
+### TODO: Dies ist nur ein ANSATZ
+
+
+
+Modul stellt einen a-nsatz für eine - teilweise schon funktionale einfache GUI zur Auswahl der Parameter. Vielleicht könnte/sollte dieses Modul wirklich in einem unabhägnigen Modul blebien??!
+
+
+Es fehlt noch Funktionalität und Prüfung (Gültigkeit von Dateiendungen usw...)
+
+'''
+
+
+import os
+import tkinter as tk
+from tkinter import filedialog, messagebox, simpledialog
+
+
+class DocumenterParameterGui:
+
+    # WIDTH = 650
+    # WIDTH = 550
+    WIDTH = 575
+    HEIGHT = 435
+
+    # def __init__(self, root):
+        # self.root = root
+    def __init__(self):
+        self.root = tk.Tk()
+        self.root.title("Code Documenter")
+        self.root.geometry(f"{self.WIDTH}x{self.HEIGHT}")
+        self.root.resizable(width=False, height=False)  # Make the window not resizable
+
+        # Initialize variables
+        self.convert_var = tk.BooleanVar(value=True)
+        self.show_message_var = tk.BooleanVar(value=True)
+
+        self.output_dir = None # inital
+
+        # self.output_dir_path = tk.StringVar(value="")
+        # self.input_file_path = tk.StringVar(value="")
+
+        # GUI elements
+        self.create_widgets()
+
+
+        self.root.mainloop()
+
+
+
+    def get_file_path_entry(self):
+            return self.file_path_entry.get()
+                #    self.file_path_entry.get()
+    
+    
+    def get_dir_path_entry(self):
+            return self.dir_path_entry.get()
+
+
+    def create_widgets(self):
+        # Label 1
+        explanation_text = "Durch das vorliegende Programm kann eine automatisiert ein Code-Dokumentation von einzelnen VBA-Modulen generiert werden.\n\nHierzu muss der Dateipfad zur zu dokumentierenden .bas-Datei angegeben werden, sowie das Verzeichnis, in welches die Dokumentation exportiert werden soll."
+        label1 = tk.Label(self.root, text=explanation_text, wraplength=540, justify=tk.LEFT)
+        label1.grid(row=0, column=0, columnspan=2, sticky=tk.W, padx=10, pady=5)
+
+
+
+        # File Path Entry and Browse Button
+        self.file_path_entry = tk.Entry(self.root, width=65 + 4, state="readonly")
+        self.file_path_entry.grid(row=1, column=0, padx=10, pady=5, columnspan=2, sticky=tk.W)
+        browse_file_button = tk.Button(self.root, text="Suche Input-File...", command=self.browse_file)
+        browse_file_button.grid(row=1, column=1, padx=5, sticky=tk.E)
+
+        # Directory Path Entry and Browse Button
+        self.dir_path_entry = tk.Entry(self.root, width=65, state="disabled")
+        self.dir_path_entry.grid(row=2, column=0, padx=10, pady=5, columnspan=2, sticky=tk.W)
+        browse_dir_button = tk.Button(self.root, text="Suche Zielverzeichnis...", command=self.browse_dir)
+        browse_dir_button.grid(row=2, column=1, padx=5, sticky=tk.E)
+
+        # Label 10
+        explanation_text10 = "Durch das Programm wird IMMER eine Markdown-Datei ('.md') generiert.\n\nOptional kann zusätzlich aus dieser Datei direkt im Anschluss eine HTML-Datei erstellt werden. Durch unterschiedliche Interpretationen im Rahmen dieser Konvertierung können unterschiedliche Tools zu anderen optischen Erscheinungen in der so generierten HTML-Datei führen. Übersichtlicher und sauberer wird die Umwandlung unter Nutzung der VSCode-Extension 'Markdown Preview Enhanced'. Nach der Generierung der Dokumentation sollte daher nochmals manuell eine solche Umwandlung erfolgen."
+        label10 = tk.Label(self.root, text=explanation_text10, wraplength=540, justify=tk.LEFT)
+        label10.grid(row=3, column=0, columnspan=2, sticky=tk.W, padx=10, pady=5)
+
+        # Convert Checkbox and Show Message Checkbox
+        convert_checkbox = tk.Checkbutton(self.root, text="Erstelle zusätzliche HTML-Datei", variable=self.convert_var)
+        convert_checkbox.grid(row=4, column=0, sticky=tk.W, padx=10, pady=5, columnspan=2)
+
+        show_message_checkbox = tk.Checkbutton(self.root, text="Im Rahmen der Dokumentation der Call Sequences (Aufrufreihenfolge von Prozeduren):\nFüge einen Endhinweis für jede Prozedur hinzu, wenn kein weiterer Aufruf zu einer (durch dieses Tool dokumentierten) Prozedur erfolgt.", variable=self.show_message_var, wraplength=540, justify=tk.LEFT)
+        show_message_checkbox.grid(row=5, column=0, sticky=tk.W, padx=5, pady=5, columnspan=2)
+
+        # Run and Cancel Buttons
+        run_button = tk.Button(self.root, text="Dokumentation generieren", command=self.run_process)
+        run_button.grid(row=6, column=0, padx=10, pady=10, sticky=tk.W)
+
+        cancel_button = tk.Button(self.root, text="Abbrechen", command=self.cancel_process)
+        cancel_button.grid(row=6, column=1, padx=5, pady=10, sticky=tk.E)
+
+
+
+
+
+
+    @staticmethod
+    def update_entry_text(entry_obj, new_text:str):
+        entry_obj.config(state="normal")
+        entry_obj.delete(0, tk.END)
+        entry_obj.insert(0, new_text)
+        entry_obj.config(state="disabled")
+
+
+    def browse_file(self):
+        file_path = filedialog.askopenfilename()
+
+        self.update_entry_text(self.file_path_entry, file_path)
+
+        if not self.output_dir:
+            # Setze output wie input dir:
+            suggested_output_dir = os.path.dirname(file_path)
+            self.update_entry_text(self.dir_path_entry, suggested_output_dir)
+
+
+        # self.file_path_entry.delete(0, tk.END)
+        # self.file_path_entry.insert(0, file_path)
+
+
+    def browse_dir(self):
+
+        
+        self.output_dir = filedialog.askdirectory()
+
+        self.update_entry_text(self.dir_path_entry, self.output_dir)
+
+        # self.dir_path_entry.config(state="normal")
+        # self.dir_path_entry.delete(0, tk.END)
+        # self.dir_path_entry.insert(0, dir_path)
+        # self.dir_path_entry.config(state="disabled")
+
+    def run_process(self):
+        show_message = self.show_message_var.get()
+        convert_checked = self.convert_var.get()
+
+        if show_message:
+            val = self.msgbox_btn("Die Dokumentation wird erstellt. Bitte warten, bis eine Abschlussmeldung erscheint.")
+            print("ergebnis:", val)
+
+            if val:
+                # save current values:
+                self.output_dir = self.dir_path_entry.get()
+                self.output_dir = self.file_path_entry.get()
+                self.root.destroy()
+
+
+
+    def cancel_process(self):
+        simpledialog.messagebox.showinfo("Fehler", "Abbruch.")
+
+
+
+    def msgbox_btn(self, message):
+
+        root = tk.Tk()
+        root.withdraw()  # Hide the main window
+    
+
+        # def on_ok():
+        #     root.destroy()
+        #     if callback:
+        #         callback()
+
+
+        val = simpledialog.messagebox.askokcancel("Information", message)
+        
+        root.destroy()
+
+
+
+
+        return val
+
+
+
+
+
+
+if __name__ == "__main__":
+
+    gui = DocumenterParameterGui()
+
+    print("nachher")
+    print(gui.output_dir)

@@ -16,8 +16,37 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, simpledialog
 
 
-class DocumenterParameterGui:
 
+
+
+def benutzerdefinierte_texte_on_buttons():
+    """
+    # TODO: Ansoatz  https://stackoverflow.com/questions/16242782/change-words-on-tkinter-messagebox-buttons
+    """
+
+    '''
+    # from tkinter import *
+
+    def messageWindow():
+        win = Toplevel()
+        win.title('warning')
+        message = "This will delete stuff"
+        Label(win, text=message).pack()
+        Button(win, text='Delete', command=win.destroy).pack()
+    root = Tk()
+    Button(root, text='Bring up Message', command=messageWindow).pack()
+    root.mainloop()
+    '''
+
+
+
+
+
+
+class DocumenterParameterGui:
+    """
+    ### TODO: Es sollte für die Anwendung i Code-Documenter noch ein Textfeld geben, in dem beliebiger Freitext uebergeben werden kann - oder ein Input-box (extra win mit allem sichtbaren bereich, also nicht nur eine Zeile... Dieser Freitext soll auch in der DCode-Dokumentation iwo eingebaut werdn oben...)
+    """
     # WIDTH = 650
     # WIDTH = 550
     WIDTH = 575
@@ -35,7 +64,8 @@ class DocumenterParameterGui:
         self.convert_var = tk.BooleanVar(value=True)
         self.show_message_var = tk.BooleanVar(value=True)
 
-        self.output_dir = None # inital
+        self.output_dir = "" # inital
+        self.input_file = "" # inital
 
         # self.output_dir_path = tk.StringVar(value="")
         # self.input_file_path = tk.StringVar(value="")
@@ -136,24 +166,57 @@ class DocumenterParameterGui:
         # self.dir_path_entry.insert(0, dir_path)
         # self.dir_path_entry.config(state="disabled")
 
+
+
+
+
     def run_process(self):
         show_message = self.show_message_var.get()
         convert_checked = self.convert_var.get()
 
-        if show_message:
-            val = self.msgbox_btn("Die Dokumentation wird erstellt. Bitte warten, bis eine Abschlussmeldung erscheint.")
-            print("ergebnis:", val)
+        output_dir = self.dir_path_entry.get()
+        input_file = self.file_path_entry.get()
 
-            if val:
-                # save current values:
-                self.output_dir = self.dir_path_entry.get()
-                self.output_dir = self.file_path_entry.get()
-                self.root.destroy()
+        if not all([output_dir, input_file]):
+             
+            # simpledialog.messagebox.showinfo("Fehlerhafte Eingabe", "Bitte über die Buttons die Pfade für die Input-Datei und das Output-Verzeichnis angeben.", icon="error")
+            simpledialog.messagebox.showinfo("Fehlerhafte Eingabe", "Bitte über die Buttons die Pfade für die Input-Datei und das Output-Verzeichnis angeben.", icon="error")
+            # # ALTERNATIVER SHORTCUT: (alias):
+            # simpledialog.messagebox.showerror("Fehlerhafte Eingabe", "Bitte über die Buttons die Pfade für die Input-Datei und das Output-Verzeichnis angeben.")
+
+            return
+        
+
+
+
+
+        val = self.msgbox_btn("Die Dokumentation wird erstellt. Bitte warten, bis eine Abschlussmeldung erscheint.")
+        # print("ergebnis:", val)
+
+
+        if val:
+            # save current values:
+            self.output_dir =  output_dir
+            self.input_file = input_file
+
+            self.root.destroy()
+
+            # Aufruf des eigentlichen Code-Documenters!
+            print("TODO: Hier: Aufruf des eigentlichen Code-Documenters!")
 
 
 
     def cancel_process(self):
-        simpledialog.messagebox.showinfo("Fehler", "Abbruch.")
+
+        # simpledialog.messagebox.showinfo("Fehler", "Abbruch.")
+
+
+
+
+        # val = self.msgbox_btn("Mi das Programm wirklich beendet werden?")
+        # return val
+
+        self.root.destroy()
 
 
 
@@ -173,8 +236,14 @@ class DocumenterParameterGui:
         
         root.destroy()
 
+        # print("RETURNED: ", val)
 
+        # if val:
+        #     # Beenden des main roots / wins
+            # im übergeordneter prozedur!
+        #     self.root.destroy()
 
+             
 
         return val
 

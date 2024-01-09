@@ -2150,9 +2150,6 @@ def main():
 
 
 
-    print(chr(13), '>>>>>>> ENDE.')
-
-
 
 
 
@@ -2173,7 +2170,7 @@ def main():
 
 
 
-
+from tests import gui_tkinter_anwendungsentwicklung_class as gui
 
 
 if __name__ == '__main__':
@@ -2181,7 +2178,12 @@ if __name__ == '__main__':
 
     # test_inspect()
 
+    # window = gui.DocumenterParameterGui(DEBUG=1)
+    window = gui.DocumenterParameterGui(DEBUG=0)
+    # mache dies erst im main selbst!
+
     main()
 
 
-
+    window.show_closing_window()
+    # mache dies erst im main selbst!

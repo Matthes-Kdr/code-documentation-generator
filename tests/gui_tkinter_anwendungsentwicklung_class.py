@@ -79,6 +79,7 @@ class DocumenterParameterGui:
         self.convert_var = tk.BooleanVar(value=True)
         self.show_message_var = tk.BooleanVar(value=True)
 
+
         self.output_dir = "" # inital
         self.input_file = "" # inital
 
@@ -102,9 +103,8 @@ class DocumenterParameterGui:
         self.input_file = "input_file/anywhere...input_file_DEBUG-DEMO.bas"
 
 
-        self.show_message_var = True
-        self.convert_var = True
-
+        self.show_message = True
+        self.convert_checked = True
         self.optinal_user_defined_text = "optionaler user defind text..."
 
 
@@ -173,7 +173,12 @@ class DocumenterParameterGui:
 
 
     def browse_file(self):
-        file_path = filedialog.askopenfilename()
+        
+        extensions = [("VB", ".bas")]
+        default_extension = extensions[0]
+        
+        
+        file_path = filedialog.askopenfilename(defaultextension=default_extension, filetypes=extensions)
 
         self.update_entry_text(self.file_path_entry, file_path)
 
@@ -204,8 +209,8 @@ class DocumenterParameterGui:
 
 
     def run_process(self):
-        show_message = self.show_message_var.get()
-        convert_checked = self.convert_var.get()
+        self.show_message = self.show_message_var.get()
+        self.convert_checked = self.convert_var.get()
 
         output_dir = self.dir_path_entry.get()
         input_file = self.file_path_entry.get()
@@ -321,8 +326,8 @@ class DocumenterParameterGui:
             "Input-File: {}".format(self.input_file),
             "Output-directory: {}".format(self.output_dir),
             "",
-            "{}  :  Erstellung einer HTML-Datei.".format(self.convert_var),
-            "{}  :  Hinzufügen eines Endhinweises für jede Prozedur, in der kein weiterer Aufruf erfolgt.".format(self.show_message_var),
+            "{}  :  Erstellung einer HTML-Datei.".format(self.convert_checked),
+            "{}  :  Hinzufügen eines Endhinweises für jede Prozedur, in der kein weiterer Aufruf erfolgt.".format(self.show_message),
             "",
             "Dieses Fenster kann nun geschlossen werden."
         ]
@@ -552,8 +557,10 @@ if __name__ == "__main__":
 
 
 
-    # gui = DocumenterParameterGui()
-    gui = DocumenterParameterGui(DEBUG=1)
+    gui = DocumenterParameterGui()
+    # gui = DocumenterParameterGui(DEBUG=1)
+
+
 
 
 

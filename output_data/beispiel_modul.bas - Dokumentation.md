@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-07 11:28**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-10 00:16:39**
+Generierungsdatum dieser Dokumentation: **2024-01-10 18:39:42**
 
 
 
@@ -1310,4 +1310,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-10 00:16:39 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-09 22:28:16: '27a1073566e918e62d050640d684c0b9d5484a9f')</small> 
+<small>Dokumentation generiert am 2024-01-10 18:39:42 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-10 17:38:17: '53fdac244a38aaa348d813f2db36accdb76f10b1')</small> 

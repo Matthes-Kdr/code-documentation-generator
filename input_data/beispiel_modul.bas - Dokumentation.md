@@ -1,11 +1,11 @@
-﻿# Code-Dokumentation: Modul 'beispiel_modul_rekursiv.bas'
+﻿# Code-Dokumentation: Modul 'beispiel_modul.bas'
 
 
 
-**Letzte Änderung** der Quelldatei 'beispiel_modul_rekursiv.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-07 11:28**
+**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-07 11:28**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-10 20:19:37**
+Generierungsdatum dieser Dokumentation: **2024-01-10 19:22:00**
 
 
 
@@ -49,16 +49,16 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 * [**Subs**](#sec_subs) (4)
   
-  - [```bauer```](#bauer) : <small>  [Zeile 131]  </small>
+  - [```bauer```](#bauer) : <small>  [Zeile 90]  </small>
 
 
-  - [```casio```](#casio) : <small>  [Zeile 177]  </small>
+  - [```casio```](#casio) : <small>  [Zeile 136]  </small>
 
 
-  - [```liebherr```](#liebherr) : <small>  [Zeile 160]  </small>
+  - [```liebherr```](#liebherr) : <small>  [Zeile 119]  </small>
 
 
-  - [```main```](#main) : <small>  [Zeile 87]  </small>
+  - [```main```](#main) : <small>  [Zeile 54]  </small>
 
 
   
@@ -69,16 +69,13 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
   <!-- ---------- FUNCTIONS: --------------- -->
 
 
-* [**Functions**](#sec_functions) (3)
+* [**Functions**](#sec_functions) (2)
   
   
   - [```addieren```](#addieren) : <small>  [Zeile 16]  </small>
 
 
-  - [```rekursiv```](#rekursiv) : <small>  [Zeile 34]  </small>
-
-
-  - [```subtrahieren```](#subtrahieren) : <small>  [Zeile 67]  </small>
+  - [```subtrahieren```](#subtrahieren) : <small>  [Zeile 34]  </small>
 
 
   
@@ -137,7 +134,7 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 
 <a name="bauer"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub bauer```</span><small>(Zeile 131)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub bauer```</span><small>(Zeile 90)</small>
 
 
 
@@ -207,31 +204,36 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```liebherr```](#liebherr) : <small>  [Zeile 141] : ```    call liebherr``` </small>
+- [```liebherr```](#liebherr) : <small>  [Zeile 100] : ```    call liebherr``` </small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```liebherr```](#liebherr) : <small>  [Zeile 142] : ```    call liebherr ' Aufruf``` </small>
-
-
-
-
-
-- [```liebherr```](#liebherr) : <small>  [Zeile 144] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+- [```liebherr```](#liebherr) : <small>  [Zeile 101] : ```    call liebherr ' Aufruf``` </small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```liebherr```](#liebherr) : <small>  [Zeile 148] : ```    var = liebherr("gvkil")``` </small>
-
-
-
+- [```liebherr```](#liebherr) : <small>  [Zeile 103] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+- [```liebherr```](#liebherr) : <small>  [Zeile 107] : ```    var = liebherr("gvkil")``` </small>
+
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -341,7 +343,7 @@ End Sub
 
 
 <a name="casio"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub casio```</span><small>(Zeile 177)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub casio```</span><small>(Zeile 136)</small>
 
 
 
@@ -411,6 +413,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -506,7 +509,7 @@ End Sub
 
 
 <a name="liebherr"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub liebherr```</span><small>(Zeile 160)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub liebherr```</span><small>(Zeile 119)</small>
 
 
 
@@ -535,7 +538,7 @@ End Sub
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (8)</summary>
+<summary> Referenzierungen dieser Prozedur (5)</summary>
 
 <div style="padding-left:1em;">
 
@@ -545,21 +548,15 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```rekursiv```](#rekursiv) : <small>  [Zeile 55] : ```    call liebherr``` </small>
+- [```main```](#main) : <small>  [Zeile 80] : ```    call liebherr``` </small>
 
-- [```rekursiv```](#rekursiv) : <small>  [Zeile 57] : ```    call liebherr("nochmal")``` </small>
+- [```bauer```](#bauer) : <small>  [Zeile 100] : ```    call liebherr``` </small>
 
-- [```main```](#main) : <small>  [Zeile 117] : ```    call liebherr("vor rekursivem Aufruf")``` </small>
+- [```bauer```](#bauer) : <small>  [Zeile 101] : ```    call liebherr ' Aufruf``` </small>
 
-- [```main```](#main) : <small>  [Zeile 121] : ```    call liebherr("NACH rekursivem Aufruf")``` </small>
+- [```bauer```](#bauer) : <small>  [Zeile 103] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
 
-- [```bauer```](#bauer) : <small>  [Zeile 141] : ```    call liebherr``` </small>
-
-- [```bauer```](#bauer) : <small>  [Zeile 142] : ```    call liebherr ' Aufruf``` </small>
-
-- [```bauer```](#bauer) : <small>  [Zeile 144] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
-
-- [```bauer```](#bauer) : <small>  [Zeile 148] : ```    var = liebherr("gvkil")``` </small>
+- [```bauer```](#bauer) : <small>  [Zeile 107] : ```    var = liebherr("gvkil")``` </small>
 
 
 
@@ -592,6 +589,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -688,7 +686,7 @@ End Sub
 
 
 <a name="main"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub main```</span><small>(Zeile 87)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Sub main```</span><small>(Zeile 54)</small>
 
 
 
@@ -703,15 +701,11 @@ End Sub
 <div style="padding-left:2em;">
 
 >  Anzahl der Referenzierungen im Modul: 0
- Anzahl weiterer internen Aufrufe : 5
+ Anzahl weiterer internen Aufrufe : 3
 
  Ruft die MEthode 'addieren' auf
 
  Ruft die MEthode 'subtrahieren' auf (und darin dann wieder addieren)
-
- Ruft die MEthode 'liebherr' auf
-
- Ruft die MEthode 'rekursiv' auf
 
  Ruft die MEthode 'liebherr' auf
 
@@ -754,7 +748,7 @@ Kein Aufruf gefunden.
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (5)</summary>
+    <summary>      Interne Aufrufabfolge (3)</summary>
 
 ---
 
@@ -765,66 +759,35 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```addieren```](#addieren) : <small>  [Zeile 111] : ```        wert = addieren(i, i)``` </small>
+- [```addieren```](#addieren) : <small>  [Zeile 74] : ```        wert = addieren(i, i)``` </small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```subtrahieren```](#subtrahieren) : <small>  [Zeile 112] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+- [```subtrahieren```](#subtrahieren) : <small>  [Zeile 75] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
 
 
-  - [```addieren```](#addieren) : <small>  [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
-
-
-
-
+  - [```addieren```](#addieren) : <small>  [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
 
 
-
-- [```liebherr```](#liebherr) : <small>  [Zeile 117] : ```    call liebherr("vor rekursivem Aufruf")``` </small>
-
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-- [```rekursiv```](#rekursiv) : <small>  [Zeile 119] : ```    call rekursiv``` </small>
 
-
-  - [```addieren```](#addieren) : <small>  [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small>
-
+- [```liebherr```](#liebherr) : <small>  [Zeile 80] : ```    call liebherr``` </small>
 
 
 
-
-  - [```rekursiv```](#rekursiv) : <small>  [Zeile 50] : ```        rekursiv(tx)``` </small>
-
-
-    - <small> *... recursivly calls itself under certain conditions ...* </small> 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-  - [```liebherr```](#liebherr) : <small>  [Zeile 55] : ```    call liebherr``` </small>
-
-
-
-
-  - [```liebherr```](#liebherr) : <small>  [Zeile 57] : ```    call liebherr("nochmal")``` </small>
-
-
-
-
-
-
-
-
-- [```liebherr```](#liebherr) : <small>  [Zeile 121] : ```    call liebherr("NACH rekursivem Aufruf")``` </small>
-
-
-
-
-
-
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -852,15 +815,11 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 ```
 Private Sub main()
 ' Anzahl der Referenzierungen im Modul: 0
-' Anzahl weiterer internen Aufrufe : 5
+' Anzahl weiterer internen Aufrufe : 3
 '
 ''' Ruft die MEthode 'addieren' auf
 '
 ''' Ruft die MEthode 'subtrahieren' auf (und darin dann wieder addieren)
-'
-''' Ruft die MEthode 'liebherr' auf
-'
-''' Ruft die MEthode 'rekursiv' auf
 '
 ''' Ruft die MEthode 'liebherr' auf
 
@@ -880,11 +839,7 @@ Private Sub main()
     next i
 
 
-    call liebherr("vor rekursivem Aufruf")
-
-    call rekursiv
-
-    call liebherr("NACH rekursivem Aufruf")
+    call liebherr
 
 
 End Sub
@@ -989,7 +944,7 @@ End Sub
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (3)</summary>
+<summary> Referenzierungen dieser Prozedur (2)</summary>
 
 <div style="padding-left:1em;">
 
@@ -999,11 +954,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```rekursiv```](#rekursiv) : <small>  [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small>
+- [```subtrahieren```](#subtrahieren) : <small>  [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
-- [```subtrahieren```](#subtrahieren) : <small>  [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
-
-- [```main```](#main) : <small>  [Zeile 111] : ```        wert = addieren(i, i)``` </small>
+- [```main```](#main) : <small>  [Zeile 74] : ```        wert = addieren(i, i)``` </small>
 
 
 
@@ -1036,6 +989,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -1133,223 +1087,8 @@ End Function
 
 
 
-<a name="rekursiv"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function rekursiv```</span><small>(Zeile 34)</small>
-
-
-
-
-
-
-<!--  DocString der Prozedur: -->
-
-
-
-
-<div style="padding-left:2em;">
-
->  wird nirgendwo aufgerufen.
- Anzahl weiterer internen Aufrufe : 3 (1 + rekursiv sich selbst + 1)
-
- ruft addieren auf (innerhalb string-func)
- ruft unter bestimmten Bedingungen wiederum rekursiv die selbe Funktion rekursiv auf
- ruft liebherr auf
-
-
-
-
-
-
-
-
-
-<!--  References der Procedure: -->
-
-<details>
-
-<summary> Referenzierungen dieser Prozedur (2)</summary>
-
-<div style="padding-left:1em;">
-
-
-
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
-
-
-
-- [```rekursiv```](#rekursiv) : <small>  [Zeile 50] : ```        rekursiv(tx)``` </small>
-
-- [```main```](#main) : <small>  [Zeile 119] : ```    call rekursiv``` </small>
-
-
-
-
-
-</details
-
-</div>
-
-
-
-
-
-
-
-
-<!--  CALL SEQUENCE Abruffolge: -->
-
-
-<details>
-    <summary>      Interne Aufrufabfolge (4)</summary>
-
----
-
-
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
-
-
-
-
-
-- [```addieren```](#addieren) : <small>  [Zeile 46] : ```    tx = tx + string(addieren(1,2))``` </small>
-
-
-
-
-
-- [```rekursiv```](#rekursiv) : <small>  [Zeile 50] : ```        rekursiv(tx)``` </small>
-
-
-  - <small> *... recursivly calls itself under certain conditions ...* </small> 
-
-
-- [```liebherr```](#liebherr) : <small>  [Zeile 55] : ```    call liebherr``` </small>
-
-
-
-
-- [```liebherr```](#liebherr) : <small>  [Zeile 57] : ```    call liebherr("nochmal")``` </small>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</details>
-
-
-
-
-
-<!--  Source Code: -->
-
-
-
-<details>
-    <summary>      Source Code</summary>
-
----
-
-```
-Private Function rekursiv(tx as string) as string
-' wird nirgendwo aufgerufen.
-' Anzahl weiterer internen Aufrufe : 3 (1 + rekursiv sich selbst + 1)
-'
-' ruft addieren auf (innerhalb string-func)
-' ruft unter bestimmten Bedingungen wiederum rekursiv die selbe Funktion rekursiv auf
-' ruft liebherr auf
-'
-'
-
-
-    ' Addieren:
-    tx = tx + string(addieren(1,2))
-
-    if len(tx) < 10 then
-
-        rekursiv(tx)
-
-    end if
-
-
-    call liebherr
-
-    call liebherr("nochmal")
-
-
-
-
-End Function
-
-```
-
-</details>
-
-
-</div>
-
-
----
-
-
-<!-- --------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-﻿
-
-
-
-
-
-<!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- --------------------------------------------------------------- -->
-
-
-
-
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="subtrahieren"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function subtrahieren```</span><small>(Zeile 67)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Function subtrahieren```</span><small>(Zeile 34)</small>
 
 
 
@@ -1391,7 +1130,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```main```](#main) : <small>  [Zeile 112] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+- [```main```](#main) : <small>  [Zeile 75] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
 
 
 
@@ -1423,13 +1162,15 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```addieren```](#addieren) : <small>  [Zeile 77] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+- [```addieren```](#addieren) : <small>  [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -1569,4 +1310,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-10 20:19:37 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-10 17:38:17: '53fdac244a38aaa348d813f2db36accdb76f10b1')</small> 
+<small>Dokumentation generiert am 2024-01-10 19:22:00 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-10 17:38:17: '53fdac244a38aaa348d813f2db36accdb76f10b1')</small> 

@@ -147,6 +147,8 @@ import subprocess
 import gitinfo
 
 
+from gui import DocumenterGui
+
 
 
 
@@ -155,9 +157,9 @@ import gitinfo
 #### GLOBALS: ####
 # =============================================================================
 
-DEBUG = 1
+DEBUG = 0
 
-CONVERT_TO_HTML = 1
+# CONVERT_TO_HTML = 1
 
 
 
@@ -218,6 +220,13 @@ class AutoCallMeta(type):
 
     Dazu muss nur der Name der aufzurufenden Methode in der Klassenvariable 'class_name_to_call_implicit' parametrisiert werden.
     """    
+
+    # ACHTUNG: Bis zur Implementierung der GUI wurde es wie unten gemacht!
+    # Flexibler ist es aber, die Methode MetaClass.initialize_class tatsächlich selbst explizit aufzurufen an einer Stelle, wo bereits alle relevanten Attibute mit Werten belegt wurden. 
+    # Daher wurde mit Implementierung der GUI der Ablauf dementsprechend geändert  und diese Superklasse auch nicht mehr beerbt von der Klasse MetaClass
+    # pass
+
+
     class_name_to_call_implicit = "initialize_class" # NUR HIER ZU PARAMETRISIEREN!
     
     def __init__(cls, name, bases, attrs):
@@ -252,8 +261,17 @@ class AutoCallMeta(type):
 
 
 
-class MetaData(metaclass=AutoCallMeta):
+class MetaData():
+# class MetaData(metaclass=AutoCallMeta):
     """
+
+    ### CHANGELOG 2024-01-10 - 19:45:14:
+    ### ACHTUNG: Bis zur Implementierung der GUI wurde geerbt von der metaclass=AutoCallMeta.
+    Diese Superklasse hat dafür gesortt, dass automatisch direkt nach  der Deklaration der Klasse MetaData ihre Methode MetaClass.initialize_class implizit aufgerufen wurde. Es ist aber flexibler tatsächlich selbst explizit aufzurufen an einer Stelle, wo bereits alle relevanten Attibute mit Werten belegt wurden. 
+    Daher wurde mit Implementierung der GUI der Ablauf dementsprechend geändert  und diese Superklasse auch nicht mehr beerbt von der Klasse MetaClass.
+
+
+
     In dieser Klasse werden hauptsächlich Daten gespeichert, die später als Art MetaDaten angesehen werden können.
     Der Parent-class / metaclass sorgt dafür, dass direkt nach Implementierung dieser (gewöhnlichen) Klasse eine in der metaclass parametrisierte Methode aufgerufen wird.
     Somit ist kein expliziter Aufruf der Klassenmethode MetaData.initialize_class erforderlich, da dies über die metaclass erledigt wird.
@@ -277,6 +295,31 @@ class MetaData(metaclass=AutoCallMeta):
     __input_path:str = None
     __output_dir:str = None
 
+    __convert_to_html = False
+
+    __user_defined_additional_text = ""
+
+
+    @classmethod
+    def set_user_defined_additional_text(cls, val:str):
+        cls.__user_defined_additional_text = val
+    
+
+    @classmethod
+    def get_user_defined_additional_text(cls) -> str:
+        return cls.__user_defined_additional_text
+    
+
+
+    @classmethod
+    def set_convert_to_html(cls, val:bool):
+        cls.__convert_to_html = val
+    
+
+    @classmethod
+    def get_convert_to_html(cls) -> bool:
+        return cls.__convert_to_html
+    
 
     @classmethod
     def get_input_path(cls) -> str:
@@ -450,22 +493,22 @@ class MetaData(metaclass=AutoCallMeta):
         """
 
 
-        # HACK: path for Source-vba-code
-        input_file_path = "input_data/beispiel_modul_rekursiv.bas"
-        input_file_path = "input_data/beispiel_modul_bauer+liebherr.bas"
-        input_file_path = "input_data/beispiel_modul2.bas"
-        input_file_path = "input_data/beispiel_modul1.bas"
-        input_file_path = "input_data/beispiel_modul.bas"
-        
-        cls.set_input_path(input_file_path)
 
+        # # HACK: path for Source-vba-code
+        # input_file_path = "input_data/beispiel_modul_rekursiv.bas"
+        # input_file_path = "input_data/beispiel_modul_bauer+liebherr.bas"
+        # input_file_path = "input_data/beispiel_modul2.bas"
+        # input_file_path = "input_data/beispiel_modul1.bas"
+        # input_file_path = "input_data/beispiel_modul.bas"
 
+        # # HACK: Falls ohne GUI-Daten gearbeitet wird (debugging:)
+        # # Wird normalerweise von aussen aufgerufen und mit Daten aus der GUI gefuellt. Nur durchlaufen, wenn es zum debuggen ist!
+        # cls.set_input_path(input_file_path)
 
-
-        # HACK: DIR FOR OAUTPUT
-        # Schreibe die Datei erst in eine Markdown-Datei:
-        output_dir = "output_data"
-        cls.set_output_dir(output_dir)
+        # # HACK: Falls ohne GUI-Daten gearbeitet wird (debugging:)
+        # # Wird normalerweise von aussen aufgerufen und mit Daten aus der GUI gefuellt
+        # output_dir = "output_data"
+        # cls.set_output_dir(output_dir)
 
 
 
@@ -502,8 +545,8 @@ class Procedure():
     TEMPLATE = "templates/prozedur_dev.md"
 
     
-    # AUSBLICK: Mache  dies via GUI als Option parametrisierbar:
-    print_final_calling_sequence_message = True
+    # TODO: Mache  dies via GUI als Option parametrisierbar:
+    __print_final_calling_sequence_message = True
     # print_final_calling_sequence_message = False
 
 
@@ -556,6 +599,17 @@ class Procedure():
 
     # Hier ist keine weitere Konkretisierung durch Subklassen erforderlich, daher direkt kompiliert:
     regex_ausschluss_kommentar = re.compile(__regex_ausschlus_kommentar_pattern, re.VERBOSE | re.IGNORECASE)
+
+    @classmethod
+    def set_print_final_calling_sequence_message(cls, value:bool):
+        """
+        Wert uebergeben fuer die Einstellung, ob nach jedem Abschluss jeder Prozedur in der Calling Sequence ein Abschlusssatz ergänzt werden soll.
+        """
+        if type(value) == bool:
+            cls.__print_final_calling_sequence_message = value
+            return
+        
+        raise Exception("Ungueltiger Parameter fuer __print_final_calling_sequence_message gewaehlt!")   
 
 
 
@@ -923,7 +977,7 @@ class Procedure():
 
 
     @classmethod
-    def finilize(cls, output_file_path:str):
+    def finalize(cls, output_file_path:str):
         """
         ### TODO: Ob wirklich alles hier in die Klasse gehört ist fraglich! 
         
@@ -941,10 +995,6 @@ class Procedure():
             output_file_path (str): Dateipfad der zu erstellenden Markdown-Datei
         """
 
-
-
-
-
         cls.initialize_page_top_text()
 
 
@@ -959,22 +1009,11 @@ class Procedure():
         cls.modul_docstring = __template_docstring.replace("@PLACEHOLDER_MODUL_DOCSTRING@", __modul_docstring)
 
         
-        
-
-
-
-
-
 
         # Vorbereitung des TOCS:
         cls.initialize_toc()
 
-
-
-
         for procedure_type_cls in [Sub, Function]: 
-
-
 
             # Initialisieren des Headers unterhalb der Section-Überschrift  (aus gesonderter Template) und in Klassenvariable speichern:
             content = cls.__read_template(procedure_type_cls.TEMPLATE_SECTION_HEAD)
@@ -982,8 +1021,6 @@ class Procedure():
             # _BUGFIX: cls.header = content
             # _BUGFIX: Durch das Überschreiben von Sub durch Function bevor die Template überschrieben wird, gibt es 2x die Überschrift "Functions"
             procedure_type_cls.header = content
-
-
 
 
 
@@ -1004,16 +1041,6 @@ class Procedure():
         cls.analyse_call_sequences()
 
         cls.prepare_all_call_sequence_docs()
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1202,7 +1229,7 @@ class Procedure():
 
 
         abschlusstext = "\n- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>"
-        if Procedure.print_final_calling_sequence_message == False:
+        if Procedure.__print_final_calling_sequence_message == False:
             abschlusstext = ""
         
         # ACHTUNG: keine indentions einfuegen!
@@ -1562,9 +1589,7 @@ class Procedure():
 
             file.write(content)
 
-
-
-
+        print("MD-Datei wurde aus MD-Datei generiert: {}".format(MetaData.get_output_path(".md")))
 
 
     @classmethod
@@ -2060,11 +2085,42 @@ class Function(Procedure):
 
 
 
+def load_parameter(documenter_gui_obj:DocumenterGui):
+    """
+    Lädt alle relevanten Attribute (eingestellten Parameter) der GUI in die Klasse MetaData (bzw. Procedure) und initialisiert anschließend die Klasse MetaData.
+
+    Args:
+        documenter_gui_obj (DocumenterGui): Objekt mit Parametern fuer die zu erstellende Dokumentation.
+    """
+    # TODO: Die Parameter sind fertig parametrisiert, aber es erfolgt noch kein Zugriff darauf!
+    # Vorhandene Attrs. = Parameter:
+    MetaData.set_output_dir(documenter_gui_obj.output_dir)
+    MetaData.set_input_path(documenter_gui_obj.input_file)
+    MetaData.set_convert_to_html(documenter_gui_obj.convert_checked)
+    MetaData.set_user_defined_additional_text(documenter_gui_obj.optinal_user_defined_text)
+
+    Procedure.set_print_final_calling_sequence_message(documenter_gui_obj.show_message)
+    # TODO: Mache in der MetaData-Class jeweils ein set-function fuer diese attrs und setze diese um!
+
+
+    # Expliziter Aufurf  der Initialisierungsmethode der MetaData.
+    # Die Klassenattribute werden vorher bereits durch die Aufruf einzelner Setter mit den Daten aus der GUI belegt.
+    MetaData.initialize_class()
 
 
 
 
+def convert_markdown_to_html():
 
+    if MetaData.get_convert_to_html():
+        markdown.markdownFromFile(
+            input=MetaData.get_output_path(extension=".md"),
+            output=MetaData.get_output_path(extension=".html"), 
+            encoding="utf8"
+        )
+
+        print("HTML-Datei wurde aus MD-Datei generiert: {}".format(MetaData.get_output_path(".html")))
+        
 
 
 
@@ -2094,18 +2150,18 @@ def main():
     Die meisten Methoden sind innerhalb der Superklasse Procedure definiert.
     """
 
-    """
-    # REFACTORING: In MetaData.initialize_class
-
-    # HACK: path for Source-vba-code
-    # input_file_path = "input_data/beispiel_modul.bas"
-    # input_file_path = "input_data/beispiel_modul1.bas"
-    input_file_path = "input_data/beispiel_modul2.bas"
-
-    MetaData.set_input_path(input_file_path)
-
-    """
+    gui = DocumenterGui()
     
+    if not gui.get_is_ready():
+        db("KEIN Start! -> Abbruch")
+        return
+
+    db("Dann starte Dokumentation von aussen mit den Parametern durch Zugriff auf die Objektvariablen")
+
+
+    # PArameter des GUI-Objektes in MetaData-Class speichern und Initialisieren der MetaDate-Klasse
+    load_parameter(gui)
+
 
     # initialize the class including reading the input file:
     Procedure.initialize_input_code(MetaData.get_input_path())
@@ -2115,38 +2171,16 @@ def main():
     Procedure.identify_procedures()
 
 
-
     # Detail-Analyse und Speicherung einzelner Bestandteile in Objekten:
     Procedure.detail_analyse_procedures()
 
 
-
-    """
-    # REFACTORING: In MetaData.initialize_class
-    # 
-    # Schreibe die Datei erst in eine Markdown-Datei:
-    output_dir = "output_data/demo_output.md"
-    MetaData.set_output_dir(output_dir)
-
-    """
+    Procedure.finalize(MetaData.get_output_path())
 
 
-    Procedure.finilize(MetaData.get_output_path())
+    convert_markdown_to_html()
 
-
-    print("MD-Datei wurde aus MD-Datei generiert: {}".format(MetaData.get_output_path(".md")))
-
-
-    # Generiere HTML Datei from Markdown:
-    if CONVERT_TO_HTML:
-        markdown.markdownFromFile(
-            input=MetaData.get_output_path(extension=".md"),
-            output=MetaData.get_output_path(extension=".html"), 
-            encoding="utf8"
-        )
-
-        print("HTML-Datei wurde aus MD-Datei generiert: {}".format(MetaData.get_output_path(".html")))
-        
+    gui.show_closing_window()
 
 
 
@@ -2156,34 +2190,12 @@ def main():
 
 
 
-
-
-
-# def test_inspect():
-
-
-
-#     print("stack wurde in Zeile 2677 (hardcodiert!) geschrieben. \nErmitte zeilennummer: {}".format(inspect_get_current_line_number()))
-          
-
-
-
-
-
-from tests import gui_tkinter_anwendungsentwicklung_class as gui
 
 
 if __name__ == '__main__':
 
-
-    # test_inspect()
-
-    # window = gui.DocumenterParameterGui(DEBUG=1)
-    window = gui.DocumenterParameterGui(DEBUG=0)
-    # mache dies erst im main selbst!
+    print("START....")
 
     main()
 
-
-    window.show_closing_window()
-    # mache dies erst im main selbst!
+    print(".... ENDE.")

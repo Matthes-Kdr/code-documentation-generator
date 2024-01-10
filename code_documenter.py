@@ -30,9 +30,6 @@ Wichtige Details siehe am Ende dieses docstrings.
 • Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.
 
 
-
-### TODOS:  Gesamt-Aufgaben (modulweit / general)
-
 • Bereitstellung einer einfachen GUI / HMI, um Input- und Output Pfade zu parametrisieren
 
 
@@ -95,6 +92,18 @@ Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wied
 # =============================================================================
 #### Unwichtige Nebensächlichkeiten: Code-Analyse Zusammenfassung: ####
 # =============================================================================
+
+In der Version vom 2024-01-11 - 00:18:43:
+    Angaben jeweils: [Zeilen @ code_documenter.py] + [Zeilen @ gui] = [Summe]
+    - Gesamtanzahl der Zeilen: 408 (100%)+2201 (100%)=2609 (100%)
+    - davon Leerzeilen: 168 (41,1764705882353%)+1071 (48,6597001363017%)=1239 (47,489459563051%)
+    - davon Einzelkommentarzeilen: 20 (4,90196078431373%)+244 (11,0858700590641%)=264 (10,1188194710617%)
+    - davon Blockkommentarzeilen: 85 (20,8333333333333%)+374 (16,9922762380736%)=459 (17,5929474894596%)
+
+    ==> Summe aller Kommentarzeilen: 105 (25,7352941176471%)+618 (28,0781462971377%)=723 (27,7117669605213%)
+    ==> Code-relevante Zeilen: 135 (33,0882352941176%)+512 (23,2621535665607%)=647 (24,7987734764277%)
+
+-----------------------------------------------    
 
 In der Version vom 2024-01-07 - 23:37:04:
     - Gesamtanzahl der Zeilen: 2164 (100%)

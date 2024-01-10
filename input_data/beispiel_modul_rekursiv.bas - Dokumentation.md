@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul_rekursiv.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-07 11:28**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-10 20:19:37**
+Generierungsdatum dieser Dokumentation: **2024-01-10 19:49:09**
 
 
 
@@ -211,27 +211,32 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 - [```liebherr```](#liebherr) : <small>  [Zeile 142] : ```    call liebherr ' Aufruf``` </small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 - [```liebherr```](#liebherr) : <small>  [Zeile 144] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 - [```liebherr```](#liebherr) : <small>  [Zeile 148] : ```    var = liebherr("gvkil")``` </small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -411,6 +416,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -592,6 +598,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -769,6 +776,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 - [```subtrahieren```](#subtrahieren) : <small>  [Zeile 112] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
@@ -778,15 +786,18 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 - [```liebherr```](#liebherr) : <small>  [Zeile 117] : ```    call liebherr("vor rekursivem Aufruf")``` </small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 - [```rekursiv```](#rekursiv) : <small>  [Zeile 119] : ```    call rekursiv``` </small>
@@ -796,6 +807,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
   - [```rekursiv```](#rekursiv) : <small>  [Zeile 50] : ```        rekursiv(tx)``` </small>
@@ -808,23 +820,28 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
   - [```liebherr```](#liebherr) : <small>  [Zeile 57] : ```    call liebherr("nochmal")``` </small>
 
 
 
+    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 - [```liebherr```](#liebherr) : <small>  [Zeile 121] : ```    call liebherr("NACH rekursivem Aufruf")``` </small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -1036,6 +1053,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -1215,6 +1233,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 - [```rekursiv```](#rekursiv) : <small>  [Zeile 50] : ```        rekursiv(tx)``` </small>
@@ -1227,14 +1246,17 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 - [```liebherr```](#liebherr) : <small>  [Zeile 57] : ```    call liebherr("nochmal")``` </small>
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -1427,9 +1449,11 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
+- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 
@@ -1569,4 +1593,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-10 20:19:37 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-10 17:38:17: '53fdac244a38aaa348d813f2db36accdb76f10b1')</small> 
+<small>Dokumentation generiert am 2024-01-10 19:49:09 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-10 17:38:17: '53fdac244a38aaa348d813f2db36accdb76f10b1')</small> 

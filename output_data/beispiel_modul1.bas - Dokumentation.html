@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Code-Dokumentation&colon; Modul &apos;beispiel&lowbar;modul1&period;bas&apos;</title>
-        <style>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Code-Dokumentation&colon; Modul &apos;beispiel&lowbar;modul1&period;bas&apos;</title>
+            <style>
 /* From extension vscode.github */
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
@@ -16,7 +16,7 @@
 }
 
 </style>
-        
+            
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
 <style>
@@ -38,11 +38,11 @@
 }
 </style>
         
-    </head>
-    <body class="vscode-body vscode-light">
-        <h1 id="code-dokumentation-modul-beispiel_modul1bas">Code-Dokumentation: Modul 'beispiel_modul1.bas'</h1>
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="code-dokumentation-modul-beispiel_modul1bas">Code-Dokumentation: Modul 'beispiel_modul1.bas'</h1>
 <p><strong>Letzte Änderung</strong> der Quelldatei 'beispiel_modul1.bas' vor der Generierung dieser automatischen Dokumentation: <strong>2023-11-17 00:52</strong></p>
-<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-07 22:48:22</strong></p>
+<p>Generierungsdatum dieser Dokumentation: <strong>2024-01-11 23:03:22</strong></p>
 <!-- TODO: nur temporrary!  -->
 <h1 id="zwischengelagert-als-ziel-vorgabe-für-abrufsequenz">ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:</h1>
 <p><strong>Aktuelle Bugs:</strong></p>
@@ -53,7 +53,12 @@
 <li>
 <p>Es werden nicht alle Aufrufe erkannt (ODER??!)</p>
 <ul>
-<li>siehe beispiel_modul1.bas --&gt; liebherr : sollte 6 referenzierungen haben, es werden nur 5 dokumentiert...</li>
+<li>
+<p>siehe beispiel_modul.bas --&gt; liebherr : sollte 6 referenzierungen haben, es werden nur 5 dokumentiert... Zeile 106 fehlt:  <code>var = liebherr</code></p>
+</li>
+<li>
+<p>wäre nicht tragisch, weil liebherr in diesem Syntax bei VBA nur eine Funktion mit Rückgabewert sein kann, und dann könnte man auch liebherr() schreiben, das würde erkannt werden. Allerdings funktioniert auch die Schreibweise ohne KLammern, weshalb sie auch erkannt werden sollte (auch wenn ich es nie so schreiben wollen würde...)</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -199,12 +204,15 @@
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="InsertImageFromFileToCell"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub InsertImageFromFileToCell</code></span><small>(Zeile 833)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Private Sub InsertImageFromFileToCell(zeile As Integer, spalte As Integer, image_path As String)</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -214,17 +222,13 @@
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -262,18 +266,22 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="SeitenformatNextPosition"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub SeitenformatNextPosition</code></span><small>(Zeile 775)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Modifiziert die Attribute des Objektes so, dass die naechste Position in den Attributen gespeichert wird</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -283,17 +291,13 @@ End Sub
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -321,35 +325,35 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="THIS_VERSION__1_17"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub THIS_VERSION__1_17</code></span><small>(Zeile 1220)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Dummy-Methode, um Versionsnummer in MacroList anzeigen zu lassen...</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (0)</summary>
 <div style="padding-left:1em;">
 <p>Kein Aufruf gefunden.</p>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -363,18 +367,22 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="applyLayoutPrintArea"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub applyLayoutPrintArea</code></span><small>(Zeile 247)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Legt den Druckbereich der einzelnen Seite fest, in Abhängigkeit der tatsaechlich vorhandenen Anzahl von Spalten:</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -384,25 +392,16 @@ End Sub
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
-<li>
-<p><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 254] : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+<li><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 254] : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></li>
 </ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -435,19 +434,23 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="applyLayoutToAllPages"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub applyLayoutToAllPages</code></span><small>(Zeile 136)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Durchlaeuft alle erstellten Tabellenblaetter und schleust durch zu einer Anwendungsfunktion, die wiederum  den Titel und andere Dinge in diese Blaetter  ein. Als oSeite wird das zuletzt-verwendete Objekt verwendet - benoetigt werden neben den ALLGEMEINEN UND KONSTANTEN Attributen nur die Angabe der pageNum als Gesamtseitenzahl.
 Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabelle eingefuegt...</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -457,45 +460,29 @@ Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabe
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#applyLayoutToSinglePage"><code>applyLayoutToSinglePage</code></a> : <small>  [Zeile 150] : <code>        Call applyLayoutToSinglePage(ws, page, oSeite)</code> </small></p>
 <ul>
 <li>
 <p><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -524,18 +511,22 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="applyLayoutToSinglePage"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub applyLayoutToSinglePage</code></span><small>(Zeile 161)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabelle eingefuegt...</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -545,37 +536,24 @@ End Sub
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (3)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -652,18 +630,22 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="erstelleKonvertierteSeite"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub erstelleKonvertierteSeite</code></span><small>(Zeile 655)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Erstelle neues TBB und wende Atrriubte an</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -673,25 +655,16 @@ End Sub
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (2)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#insertSheet"><code>insertSheet</code></a> : <small>  [Zeile 662] : <code>        Call insertSheet(oSeite.blattname &amp; pageNum)</code> </small></p>
 <ul>
-<li>
-<p><a href="#existsSheetname"><code>existsSheetname</code></a> : <small>  [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
+<li><a href="#existsSheetname"><code>existsSheetname</code></a> : <small>  [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></li>
 </ul>
 </li>
 <li>
@@ -702,18 +675,9 @@ End Sub
 <ul>
 <li>
 <p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
@@ -725,49 +689,25 @@ End Sub
 <ul>
 <li>
 <p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
 <li>
 <p><a href="#getReplacerNote"><code>getReplacerNote</code></a> : <small>  [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getReplacerCount"><code>getReplacerCount</code></a> : <small>  [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getReplacerPost"><code>getReplacerPost</code></a> : <small>  [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getReplacerEmpty"><code>getReplacerEmpty</code></a> : <small>  [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
@@ -778,46 +718,25 @@ End Sub
 <li><small> <em>... recursivly calls itself under certain conditions ...</em> </small></li>
 </ul>
 </li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
 </ul>
 </li>
 <li>
 <p><a href="#InsertImageFromFileToCell"><code>InsertImageFromFileToCell</code></a> : <small>  [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getTypeOfFollowingSeperatorLine"><code>getTypeOfFollowingSeperatorLine</code></a> : <small>  [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#insertFrameLineBelow"><code>insertFrameLineBelow</code></a> : <small>  [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#SeitenformatNextPosition"><code>SeitenformatNextPosition</code></a> : <small>  [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -863,35 +782,35 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="init"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub init</code></span><small>(Zeile 119)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Parameter fuer modulweite Variablen laden</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (0)</summary>
 <div style="padding-left:1em;">
 <p>Kein Aufruf gefunden.</p>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -915,18 +834,22 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="insertFrameLineBelow"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub insertFrameLineBelow</code></span><small>(Zeile 1011)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Fuegt die unteren Rahmenlinien aller Zellen dieser Zeile im Subspaltenbereich ein</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -936,17 +859,13 @@ End Sub
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -982,18 +901,22 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="insertSheet"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub insertSheet</code></span><small>(Zeile 274)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Fuegt ein neues Tabellenblatt hinzu mit dem uebergebenen Namen und modifiziert den Tabellenblattnamen, sofern dieser bereits existiert</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -1003,25 +926,16 @@ End Sub
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
-<li>
-<p><a href="#existsSheetname"><code>existsSheetname</code></a> : <small>  [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+<li><a href="#existsSheetname"><code>existsSheetname</code></a> : <small>  [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></li>
 </ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -1053,18 +967,22 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="mergeCells"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub mergeCells</code></span><small>(Zeile 320)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Verbindet den uebergebenen Zellbereich</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (2)</summary>
 <div style="padding-left:1em;">
@@ -1079,17 +997,13 @@ End Sub
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -1112,20 +1026,24 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="modifyReplacerIfSonderzeichen"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub modifyReplacerIfSonderzeichen</code></span><small>(Zeile 535)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Prueft, ob das Stichwort einem definierten Sonderzeichen entspricht.
 Jedes definierte Sonderzeichen erhaelt ein expliziten Bild-Dateiname als Verknuepfung (ohne Dateiendung hier.)
 ACHTUNG: Die keys sind case-INSENSITIV , es gelten also immer gross und kleinscheibung fuer die keys!</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -1135,17 +1053,13 @@ ACHTUNG: Die keys sind case-INSENSITIV , es gelten also immer gross und kleinsch
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -1194,20 +1108,24 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="modifyReplacerIfTaktwechsel"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Sub modifyReplacerIfTaktwechsel</code></span><small>(Zeile 578)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Prueft, ob das Stichwort einem Taktartwechsel entspricht.
 Je nach Taktart wird das uebergebene Replacer-Objekt inplace modifiziert und zurueckgegeben (mal wird ein Bild gewuenscht, mal nciht...)
 ALLE MOEGLICHEN Taktarten muessen EXPLIZIT IM ARRAY definiert sein (keysAndReplacers), damit sie als solche erkannt wird!</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -1217,17 +1135,13 @@ ALLE MOEGLICHEN Taktarten muessen EXPLIZIT IM ARRAY definiert sein (keysAndRepla
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -1277,62 +1191,50 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="notengriffeErzeugen"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Sub notengriffeErzeugen</code></span><small>(Zeile 1169)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p><em>No information availible. For more information expand source code.</em></p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (0)</summary>
 <div style="padding-left:1em;">
 <p>Kein Aufruf gefunden.</p>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (5)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#addSeitenformat"><code>addSeitenformat</code></a> : <small>  [Zeile 1183] : <code>        oSeite = addSeitenformat(startzeileSteuertabelle)</code> </small></p>
 <ul>
 <li>
 <p><a href="#newSeitenformat"><code>newSeitenformat</code></a> : <small>  [Zeile 970] : <code>    oFormat = newSeitenformat()</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#identifyLastRow"><code>identifyLastRow</code></a> : <small>  [Zeile 980] : <code>    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)</code> </small></p>
 <ul>
 <li>
 <p><a href="#newSeitenformat"><code>newSeitenformat</code></a> : <small>  [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#areaEmpty"><code>areaEmpty</code></a> : <small>  [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
@@ -1342,15 +1244,7 @@ End Sub
 <li>
 <p><a href="#insertSheet"><code>insertSheet</code></a> : <small>  [Zeile 662] : <code>        Call insertSheet(oSeite.blattname &amp; pageNum)</code> </small></p>
 <ul>
-<li>
-<p><a href="#existsSheetname"><code>existsSheetname</code></a> : <small>  [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
+<li><a href="#existsSheetname"><code>existsSheetname</code></a> : <small>  [Zeile 283] : <code>        If existsSheetname(sheetname) = False Then</code> </small></li>
 </ul>
 </li>
 <li>
@@ -1361,18 +1255,9 @@ End Sub
 <ul>
 <li>
 <p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
@@ -1384,49 +1269,25 @@ End Sub
 <ul>
 <li>
 <p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
 <li>
 <p><a href="#getReplacerNote"><code>getReplacerNote</code></a> : <small>  [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getReplacerCount"><code>getReplacerCount</code></a> : <small>  [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getReplacerPost"><code>getReplacerPost</code></a> : <small>  [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getReplacerEmpty"><code>getReplacerEmpty</code></a> : <small>  [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
@@ -1437,57 +1298,28 @@ End Sub
 <li><small> <em>... recursivly calls itself under certain conditions ...</em> </small></li>
 </ul>
 </li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
 </ul>
 </li>
 <li>
 <p><a href="#InsertImageFromFileToCell"><code>InsertImageFromFileToCell</code></a> : <small>  [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getTypeOfFollowingSeperatorLine"><code>getTypeOfFollowingSeperatorLine</code></a> : <small>  [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#insertFrameLineBelow"><code>insertFrameLineBelow</code></a> : <small>  [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#SeitenformatNextPosition"><code>SeitenformatNextPosition</code></a> : <small>  [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
 <li>
 <p><a href="#applyLayoutPrintArea"><code>applyLayoutPrintArea</code></a> : <small>  [Zeile 1192] : <code>        Call applyLayoutPrintArea(oSeite)</code> </small></p>
 <ul>
-<li>
-<p><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 254] : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
+<li><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 254] : <code>    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)</code> </small></li>
 </ul>
 </li>
 <li>
@@ -1498,44 +1330,23 @@ End Sub
 <ul>
 <li>
 <p><a href="#getCountsOfColumnsToPrint"><code>getCountsOfColumnsToPrint</code></a> : <small>  [Zeile 179] : <code>    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 195] : <code>    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#mergeCells"><code>mergeCells</code></a> : <small>  [Zeile 211] : <code>    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
 <li>
 <p><a href="#printLastSheetsAsPdf"><code>printLastSheetsAsPdf</code></a> : <small>  [Zeile 1210] : <code>        Call printLastSheetsAsPdf(pageNum)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -1594,18 +1405,22 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="printLastSheetsAsPdf"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Sub printLastSheetsAsPdf</code></span><small>(Zeile 1081)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Speichert die hintersten (ERgebnis-Tabellenblaetter) als PDF ab, inkl. Skalierung auf eine Seite der Spalten.</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -1615,17 +1430,13 @@ End Sub
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -1711,43 +1522,38 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="resetWorkbook"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Sub resetWorkbook</code></span><small>(Zeile 87)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p><em>No information availible. For more information expand source code.</em></p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (0)</summary>
 <div style="padding-left:1em;">
 <p>Kein Aufruf gefunden.</p>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
-<li>
-<p><a href="#getProjectTitle"><code>getProjectTitle</code></a> : <small>  [Zeile 111] : <code>    MsgBox &quot;Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--&gt; falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)&quot;, vbOK, getProjectTitle()</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
+<li><a href="#getProjectTitle"><code>getProjectTitle</code></a> : <small>  [Zeile 111] : <code>    MsgBox &quot;Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--&gt; falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)&quot;, vbOK, getProjectTitle()</code> </small></li>
 </ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -1784,6 +1590,7 @@ End Sub
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- -------------------------------------------------- -->
 <!-- SECTION-START : FUNCTIONS -->
@@ -1796,13 +1603,16 @@ End Sub
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="addSeitenformat"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function addSeitenformat</code></span><small>(Zeile 964)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Erstellt ein Objekt des Typs Seitenformat und initialisiert die Konstanten Werte sowie zusaetzlich berechnete.
 Berechnet alle Attribute, das Obj wird zurück gegeben, auf Grundlage von diesem kann ein neues Blatt genereiert werden.</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -1812,45 +1622,29 @@ Berechnet alle Attribute, das Obj wird zurück gegeben, auf Grundlage von diesem
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (2)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#newSeitenformat"><code>newSeitenformat</code></a> : <small>  [Zeile 970] : <code>    oFormat = newSeitenformat()</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#identifyLastRow"><code>identifyLastRow</code></a> : <small>  [Zeile 980] : <code>    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)</code> </small></p>
 <ul>
 <li>
 <p><a href="#newSeitenformat"><code>newSeitenformat</code></a> : <small>  [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#areaEmpty"><code>areaEmpty</code></a> : <small>  [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -1901,14 +1695,17 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="areaEmpty"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function areaEmpty</code></span><small>(Zeile 800)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Prueft einen Bereich auf leere Zellen.
@@ -1916,6 +1713,7 @@ Rueckgabewerte:
 True falls ALLE Zellen im Bereich leer sind
 False falls NICHT ALLE ZEllen leer sind</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -1925,17 +1723,13 @@ False falls NICHT ALLE ZEllen leer sind</p>
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -1973,18 +1767,22 @@ False falls NICHT ALLE ZEllen leer sind</p>
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="existsSheetname"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function existsSheetname</code></span><small>(Zeile 300)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p><em>No information availible. For more information expand source code.</em></p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -1994,17 +1792,13 @@ False falls NICHT ALLE ZEllen leer sind</p>
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2030,19 +1824,23 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="getCountsOfColumnsToPrint"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Function getCountsOfColumnsToPrint</code></span><small>(Zeile 235)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Berechnet die tatsaechliche Anzahl der zu druckenden Spalten
 Dafuer wird die letzte Spalte abgezogen, weil wg. Blattrand keine zusaetzliche Luft erforderlich ist:</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (2)</summary>
 <div style="padding-left:1em;">
@@ -2057,17 +1855,13 @@ Dafuer wird die letzte Spalte abgezogen, weil wg. Blattrand keine zusaetzliche L
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2084,19 +1878,23 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="getFilePath"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getFilePath</code></span><small>(Zeile 338)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Generiert einen Path zur Bilddatei basierend auf einem Stichwort.
 Sofern es keine passende Datei gibt, wird ein Platzhalter-Bild referenziert, durch das ein FEHLER verdeutlcihet wird.</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (2)</summary>
 <div style="padding-left:1em;">
@@ -2111,12 +1909,11 @@ Sofern es keine passende Datei gibt, wird ein Platzhalter-Bild referenziert, dur
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 366] : <code>    getFilePath = getFilePath(ERROR_FILENAME)</code> </small></p>
@@ -2124,12 +1921,9 @@ Sofern es keine passende Datei gibt, wird ein Platzhalter-Bild referenziert, dur
 <li><small> <em>... recursivly calls itself under certain conditions ...</em> </small></li>
 </ul>
 </li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2170,36 +1964,36 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="getModifiedKeyIfTaktwechsel"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getModifiedKeyIfTaktwechsel</code></span><small>(Zeile 622)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Prueft, ob das Stichwort einem Taktartwechsel entspricht.
 Dazu werden konkrete Stichworte geprueftund durch ein alternativ-stichwort fuer einen Dateinamen ersetzt zurueckgegeben.</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (0)</summary>
 <div style="padding-left:1em;">
 <p>Kein Aufruf gefunden.</p>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2236,18 +2030,22 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="getProjectTitle"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Public Function getProjectTitle</code></span><small>(Zeile 79)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p><em>No information availible. For more information expand source code.</em></p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -2257,17 +2055,13 @@ End Function
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2282,18 +2076,22 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="getReplacerCount"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerCount</code></span><small>(Zeile 482)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -2303,17 +2101,13 @@ End Function
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2338,18 +2132,22 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="getReplacerEmpty"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerEmpty</code></span><small>(Zeile 516)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Gibt leeren Replacer zurueck</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -2359,17 +2157,13 @@ End Function
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2391,18 +2185,22 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="getReplacerNote"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerNote</code></span><small>(Zeile 451)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -2412,17 +2210,13 @@ End Function
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2460,18 +2254,22 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="getReplacerPost"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerPost</code></span><small>(Zeile 500)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -2481,17 +2279,13 @@ End Function
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2514,18 +2308,22 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="getReplacerPre1"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerPre1</code></span><small>(Zeile 378)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (2)</summary>
 <div style="padding-left:1em;">
@@ -2540,31 +2338,21 @@ End Function
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (2)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2634,18 +2422,22 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="getReplacerPre2"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getReplacerPre2</code></span><small>(Zeile 441)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -2655,39 +2447,26 @@ End Function
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (1)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 445] : <code>    getReplacerPre2 = getReplacerPre1(stichwort)</code> </small></p>
 <ul>
 <li>
 <p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2704,20 +2483,24 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="getTypeOfFollowingSeperatorLine"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function getTypeOfFollowingSeperatorLine</code></span><small>(Zeile 1044)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>returns 0 falls kein eLinie folgt
 returns 1 falls durchgezogene Linie folgt
 returns -1 falls gestrichelte Linie folgt.</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -2727,17 +2510,13 @@ returns -1 falls gestrichelte Linie folgt.</p>
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2776,19 +2555,23 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="identifyLastRow"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function identifyLastRow</code></span><small>(Zeile 867)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <p>Liesst die STB ausgehend ab startzeile aus bis dass die Anzahl maxZeilen abgearbeitet wurde. Pro Zeile wird sich die Zeilennummer gemerkt, sofern Inhalt vorhanden ist.
 Ziel davon ist, dass man so erkennt, wenn die letzten n zeilen nur freizeilen sind (um manuell einen seitenumbruch zu generieren), oder ob nur etwas abstand dadurch generiert werden sollte...</p>
 </blockquote>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -2798,31 +2581,21 @@ Ziel davon ist, dass man so erkennt, wenn die letzten n zeilen nur freizeilen si
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (2)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#newSeitenformat"><code>newSeitenformat</code></a> : <small>  [Zeile 876] : <code>    tempObj = newSeitenformat(readParameters:=False)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#areaEmpty"><code>areaEmpty</code></a> : <small>  [Zeile 882] : <code>        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -2856,14 +2629,17 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="konvertiereZeile"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function konvertiereZeile</code></span><small>(Zeile 696)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote>
 <h1 id="todoc-alt">TODOC: ALT:</h1>
@@ -2873,6 +2649,7 @@ Geht alle Spalten der STB durch und ruft fuer diese Spalte den jeweiligen Getter
 Die Zielpositionen fuer die Replacer werden aus dem uebergebenen Objekt oSeite gezogen.
 Danach wird dann die eigentliche Ersetzung durchgefuehrt.
 Rueckgabewert: True fuer normale Zeile ,False falls eine zusaetzliche ZEile der STB ueberspringen werden soll (auslassungsstichwort!)</p>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (1)</summary>
 <div style="padding-left:1em;">
@@ -2882,30 +2659,20 @@ Rueckgabewert: True fuer normale Zeile ,False falls eine zusaetzliche ZEile der 
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (11)</summary>
 <hr>
 <p>Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:</p>
-<!-- <div style="padding-left:1em;"> -->
 <ul>
 <li>
 <p><a href="#getReplacerPre1"><code>getReplacerPre1</code></a> : <small>  [Zeile 723] : <code>                    oReplacer = getReplacerPre1(stichwort)</code> </small></p>
 <ul>
 <li>
 <p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
@@ -2917,49 +2684,25 @@ Rueckgabewert: True fuer normale Zeile ,False falls eine zusaetzliche ZEile der 
 <ul>
 <li>
 <p><a href="#modifyReplacerIfSonderzeichen"><code>modifyReplacerIfSonderzeichen</code></a> : <small>  [Zeile 419] : <code>    Call modifyReplacerIfSonderzeichen(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#modifyReplacerIfTaktwechsel"><code>modifyReplacerIfTaktwechsel</code></a> : <small>  [Zeile 422] : <code>    Call modifyReplacerIfTaktwechsel(oErsatz)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
 </li>
 <li>
 <p><a href="#getReplacerNote"><code>getReplacerNote</code></a> : <small>  [Zeile 727] : <code>                    oReplacer = getReplacerNote(stichwort)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getReplacerCount"><code>getReplacerCount</code></a> : <small>  [Zeile 729] : <code>                    oReplacer = getReplacerCount(stichwort)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getReplacerPost"><code>getReplacerPost</code></a> : <small>  [Zeile 731] : <code>                    oReplacer = getReplacerPost(stichwort)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getReplacerEmpty"><code>getReplacerEmpty</code></a> : <small>  [Zeile 733] : <code>                    oReplacer = getReplacerEmpty()</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getFilePath"><code>getFilePath</code></a> : <small>  [Zeile 742] : <code>                pathImage = getFilePath(oReplacer.value)</code> </small></p>
@@ -2970,41 +2713,23 @@ Rueckgabewert: True fuer normale Zeile ,False falls eine zusaetzliche ZEile der 
 <li><small> <em>... recursivly calls itself under certain conditions ...</em> </small></li>
 </ul>
 </li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
-</li>
 </ul>
 </li>
 <li>
 <p><a href="#InsertImageFromFileToCell"><code>InsertImageFromFileToCell</code></a> : <small>  [Zeile 744] : <code>                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#getTypeOfFollowingSeperatorLine"><code>getTypeOfFollowingSeperatorLine</code></a> : <small>  [Zeile 757] : <code>    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#insertFrameLineBelow"><code>insertFrameLineBelow</code></a> : <small>  [Zeile 762] : <code>        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
 </li>
 <li>
 <p><a href="#SeitenformatNextPosition"><code>SeitenformatNextPosition</code></a> : <small>  [Zeile 767] : <code>    Call SeitenformatNextPosition(oSeite)</code> </small></p>
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-</li>
-<li>
-<p><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></p>
 </li>
 </ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -3090,18 +2815,22 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- NEUE PROZEDUR-DOKUMENTATION -->
 <!-- --------------------------------------------------------------- -->
+<!-- PLACEHOLDER: Initialisierungszeile: -->
 <p><a name="newSeitenformat"></a>
 <span style="background-color: lightgrey; padding: 2px;"><code>Private Function newSeitenformat</code></span><small>(Zeile 896)</small></p>
+<!--  DocString der Prozedur: -->
 <div style="padding-left:2em;">
 <blockquote></blockquote>
 <p>Standard-Parameter aus TODO-Steuertabelle auslesen und Standardwerte parametrisieren.</p>
 <h1 id="achtung-dependencies-zur-excel-worksheet">ACHTUNG: DEPENDENCIES zur Excel-Worksheet!</h1>
+<!--  References der Procedure: -->
 <details>
 <summary> Referenzierungen dieser Prozedur (2)</summary>
 <div style="padding-left:1em;">
@@ -3116,17 +2845,13 @@ End Function
 </ul>
 </details
 </div>
-<!-- TODO: ABRUFABFOLGE (DEV) -->
+<!--  CALL SEQUENCE Abruffolge: -->
 <details>
     <summary>      Interne Aufrufabfolge (0)</summary>
 <hr>
 <p>Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.</p>
-<!-- <div style="padding-left:1em;"> -->
-<ul>
-<li><small><em>Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.</em></small></li>
-</ul>
-<!-- </div> -->
 </details>
+<!--  Source Code: -->
 <details>
     <summary>      Source Code</summary>
 <hr>
@@ -3198,6 +2923,7 @@ End Function
 </div>
 <hr>
 <!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <p></p>
 <hr>
 <p><a name="sec_tail"></a></p>
@@ -3229,7 +2955,7 @@ End Function
 <details>
 <summary> Modulinformationen anzeigen/verbergen.
 </summary>
-<p><br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für generelles Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br>Wichtige Details siehe am Ende dieses docstrings.<br><br><br><br><br>### Fertig implementiert:<br><br>• Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation<br><br>• Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation<br><br>• Sofortiger Export der MD-Datei in eine  HTML-Datei<br><br>• Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation<br><br>• Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.<br><br><br><br>### TODOS:<br><br>• Bereitstellung einer einfachen GUI / HMI, um Input- und Output Pfade zu parametrisieren<br><br>• Bugfix: Aufrufebenen ab Unterebene x: Behebung der Formatierungsprobleme (siehe beispiel_modul1.bas --&gt; notengriffe_erzeugen --&gt; getFilePath)<br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br>• Ermöglichung von Berücksichtigung weiterer Module innerhalb der Dokumentation<br>    <br>    • z. B. 2 VBA-Module innerhalb eines Projektes, wobei Prozeduren von Modul1  andere Prozeduren aus Modul2 aufrufen.<br><br>        • Erstmal nur als Verweis  (Mögl. Ansatz included = &quot;Modul1.*&quot; ohne rekursive Auflistung derer Aufrufe... oder eben mit... bestenfalls auch das parametrisierbar)<br><br>• Dokumentation von weiteren PRogrammiersprachen<br><br>    • OK --&gt; VBA<br>    • Nächste Prio: C++ / Arduino<br>    • Letzte Prio: Python (v.a. für den Ablaufsequence sehr hilfreich, für den rest gibt es pdoc...)<br><br><br><br><br><br><br><br><br># =============================================================================<br>#### Wichtige Aufrufreihenfolge der Methode innerhalb dieses Python-Scriptes zur Erstellung der Dokumentation der Aufrufreihenfolge der zu dokumentierenden VBA-Prozeduren: ####<br># =============================================================================<br><br>Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wiederum alle Prozeduren komplett dokumentiert. Für beide Vorgänge erfolgt dies in einer Methode auf Objektebene, wobei diese jeweilige MEthode in beiden Fällen aus einer Klassenmethode aufgerufen wird, in der über die einzelnen Prozedur-Objekte innerhalb dieser Klasse iteriert wird:<br><br>- analyse_call_sequence(cls)<br>    - analyse_calling_sequence_in_one_proc(self)<br>- prepare_all_call_sequences_docs(cls)<br>    - prepare_single_call_sequence_docs(cls)<br><br>(hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )<br><br><br><br><br><br><br><br># =============================================================================<br>#### Unwichtige Nebensächlichkeiten: ####<br># =============================================================================<br><br>In der Version vom 2024-01-07 - 15:26:03:<br>    - Gesamtanzahl der Zeilen: 2771 (100%)<br>    - davon Leerzeilen: 1408 (51%)<br>    - davon Einzelkommentarzeilen: 278 (10%)<br>    - davon Blockkommentarzeilen: 550 (20%)<br><br>    ==&gt; Summe aller Kommentarzeilen 828 (30%)<br>    ==&gt; Code-relevante Zeilen: 535 (19%)<br><br><br><br><br></p>
+<p><br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für generelles Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br>Wichtige Details siehe am Ende dieses docstrings.<br><br><br><br><br>### Fertig implementiert:<br><br>• Inhaltsverzeichnis / Index<br><br>• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>• Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation<br><br>• Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation<br><br>• Sofortiger Export der MD-Datei in eine  HTML-Datei<br><br>• Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation<br><br>• Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.<br><br><br>• Bereitstellung einer einfachen GUI / HMI, um Input- und Output Pfade zu parametrisieren<br><br><br><br><br>### AUSBLICK für später und in schön:<br><br>• Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br>• Ermöglichung von Berücksichtigung weiterer Module innerhalb der Dokumentation<br>    <br>    • z. B. 2 VBA-Module innerhalb eines Projektes, wobei Prozeduren von Modul1  andere Prozeduren aus Modul2 aufrufen.<br><br>        • Erstmal nur als Verweis  (Mögl. Ansatz included = &quot;Modul1.*&quot; ohne rekursive Auflistung derer Aufrufe... oder eben mit... bestenfalls auch das parametrisierbar)<br><br>• Dokumentation von weiteren PRogrammiersprachen<br><br>    • OK --&gt; VBA<br>    • Nächste Prio: C++ / Arduino<br>    • Letzte Prio: Python (v.a. für den Ablaufsequence sehr hilfreich, für den rest gibt es pdoc...)<br><br><br><br><br><br><br><br><br># =============================================================================<br>#### Wichtige Aufrufreihenfolge der Methode innerhalb dieses Python-Scriptes zur Erstellung der Dokumentation der Aufrufreihenfolge der zu dokumentierenden VBA-Prozeduren: ####<br># =============================================================================<br><br>Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wiederum alle Prozeduren komplett dokumentiert. Für beide Vorgänge erfolgt dies in einer Methode auf Objektebene, wobei diese jeweilige MEthode in beiden Fällen aus einer Klassenmethode aufgerufen wird, in der über die einzelnen Prozedur-Objekte innerhalb dieser Klasse iteriert wird:<br><br>- analyse_call_sequence(cls)<br>    - analyse_calling_sequence_in_one_proc(self)<br>- prepare_all_call_sequences_docs(cls)<br>    - prepare_single_call_sequence_docs(cls)<br><br>(hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )<br><br><br><br><br><br># =============================================================================<br>#### Hinweise zur Anwendung und Benutzung: ####<br># =============================================================================<br><br>- To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line. Empty lines that are to be included must also be labelled as comments.<br><br>- Durch das Script wird eine MD-Datei (Markdown) erzeugt, die anschließend über die Library markdown sofort in eine HTML umgewandelt wird, sodass nach Abschluss des Scriptes 2 Dateien erstellt wurden. Durch unterschiedliche Interpretationen im Rahmen der Konvertierung unterscheidet sich die Darstellung der so generierten HTML-Datei allerdings, wenn sie über VSCode Extension gesondert konvertiert wird. Die über VSCode generierte Datei ist übersichtlicher und schöner. Das sollte also am Ende nochmals gesondert erfolgen.<br><br><br><br><br><br><br><br># =============================================================================<br>#### Unwichtige Nebensächlichkeiten: Code-Analyse Zusammenfassung: ####<br># =============================================================================<br><br>In der Version vom 2024-01-11 - 00:18:43:<br>    Angaben jeweils: [Zeilen @ code_documenter.py] + [Zeilen @ gui] = [Summe]<br>    - Gesamtanzahl der Zeilen: 408 (100%)+2201 (100%)=2609 (100%)<br>    - davon Leerzeilen: 168 (41,1764705882353%)+1071 (48,6597001363017%)=1239 (47,489459563051%)<br>    - davon Einzelkommentarzeilen: 20 (4,90196078431373%)+244 (11,0858700590641%)=264 (10,1188194710617%)<br>    - davon Blockkommentarzeilen: 85 (20,8333333333333%)+374 (16,9922762380736%)=459 (17,5929474894596%)<br><br>    ==&gt; Summe aller Kommentarzeilen: 105 (25,7352941176471%)+618 (28,0781462971377%)=723 (27,7117669605213%)<br>    ==&gt; Code-relevante Zeilen: 135 (33,0882352941176%)+512 (23,2621535665607%)=647 (24,7987734764277%)<br><br>-----------------------------------------------    <br><br>In der Version vom 2024-01-07 - 23:37:04:<br>    - Gesamtanzahl der Zeilen: 2164 (100%)<br>    - davon Leerzeilen: 1091 (50%)<br>    - davon Einzelkommentarzeilen: 226 (10%)<br>    - davon Blockkommentarzeilen: 364 (17%)<br><br>    ==&gt; Summe aller Kommentarzeilen 590 (27%)<br>    ==&gt; Code-relevante Zeilen: 483 (22%)<br><br>-----------------------------------------------<br><br>In der Version vom 2024-01-07 - 15:26:03:<br>    - Gesamtanzahl der Zeilen: 2771 (100%)<br>    - davon Leerzeilen: 1408 (51%)<br>    - davon Einzelkommentarzeilen: 278 (10%)<br>    - davon Blockkommentarzeilen: 550 (20%)<br><br>    ==&gt; Summe aller Kommentarzeilen 828 (30%)<br>    ==&gt; Code-relevante Zeilen: 535 (19%)<br><br>-----------------------------------------------<br><br><br><br></p>
 </details>
 <hr>
 <small>
@@ -3237,9 +2963,9 @@ End Function
 <p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
 </small> 
 <hr>
-<p><small>Dokumentation generiert am 2024-01-07 22:48:22 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-07 15:46:48: 'b0fc982eeee2e7e5a2d7bbc29900ebd1033ed48d')</small></p>
+<p><small>Dokumentation generiert am 2024-01-11 23:03:22 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-11 00:25:42: '8e17f8f858b5ab8e630467b2d3c0749d8f6c6720')</small></p>
 
-        
-        
-    </body>
-    </html>
+            
+            
+        </body>
+        </html>

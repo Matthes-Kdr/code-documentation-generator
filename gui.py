@@ -119,11 +119,11 @@ class DocumenterGui:
         damit das Start-Window (Main-window) zwecks Debugging uebersprungen werden kann.
         """
         
-        self.input_file = "input_data/beispiel_modul.bas"
         self.input_file = "input_data/beispiel_modul_rekursiv.bas"
         self.input_file = "input_data/beispiel_modul_bauer+liebherr.bas"
         self.input_file = "input_data/beispiel_modul2.bas"
         self.input_file = "input_data/beispiel_modul1.bas"
+        self.input_file = "input_data/beispiel_modul.bas"
 
 
         self.output_dir = "output_dir"
@@ -131,6 +131,9 @@ class DocumenterGui:
         self.show_message = True
         self.convert_checked = True
         self.optinal_user_defined_text = "optionaler user defind text..."
+
+
+        self.__is_ready = True
 
 
 

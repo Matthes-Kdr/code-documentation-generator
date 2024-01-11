@@ -34,6 +34,17 @@ Wichtige Details siehe am Ende dieses docstrings.
 
 
 
+### TODOS:
+
+• Chore: Aufräumen des Quellcodes
+
+• Refactor: ggfs. modifizieren von write_content
+
+• BUGFIX: modul 1 aufrufe
+
+
+
+
 
 ### AUSBLICK für später und in schön:
 
@@ -166,7 +177,7 @@ from gui import DocumenterGui
 #### GLOBALS: ####
 # =============================================================================
 
-DEBUG = 0
+DEBUG = 1
 
 # CONVERT_TO_HTML = 1
 
@@ -2101,15 +2112,13 @@ def load_parameter(documenter_gui_obj:DocumenterGui):
     Args:
         documenter_gui_obj (DocumenterGui): Objekt mit Parametern fuer die zu erstellende Dokumentation.
     """
-    # TODO: Die Parameter sind fertig parametrisiert, aber es erfolgt noch kein Zugriff darauf!
-    # Vorhandene Attrs. = Parameter:
+    
     MetaData.set_output_dir(documenter_gui_obj.output_dir)
     MetaData.set_input_path(documenter_gui_obj.input_file)
     MetaData.set_convert_to_html(documenter_gui_obj.convert_checked)
     MetaData.set_user_defined_additional_text(documenter_gui_obj.optinal_user_defined_text)
 
     Procedure.set_print_final_calling_sequence_message(documenter_gui_obj.show_message)
-    # TODO: Mache in der MetaData-Class jeweils ein set-function fuer diese attrs und setze diese um!
 
 
     # Expliziter Aufurf  der Initialisierungsmethode der MetaData.
@@ -2120,6 +2129,11 @@ def load_parameter(documenter_gui_obj:DocumenterGui):
 
 
 def convert_markdown_to_html():
+    """
+    Wandelt die generierte .md Markdown-Datei in eine HTML-Datei um.
+    Die Formatierung ist durch die verwendete Bibliothek allerdings bei weitem nicht so sinnvoll und uebersichtlich,
+    wie wenn die .md Datei im Anschluss manuell durch VSCode umgewandelt wird (Extension Markdown all in one)
+    """
 
     if MetaData.get_convert_to_html():
         markdown.markdownFromFile(
@@ -2204,6 +2218,9 @@ def main():
 if __name__ == '__main__':
 
     print("START....")
+
+
+    # DocumenterGui.DEBUG = DEBUG
 
     main()
 

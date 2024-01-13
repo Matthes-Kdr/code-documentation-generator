@@ -45,7 +45,7 @@ Wichtige Details siehe am Ende dieses docstrings.
 
 - Refactor: ggfs. modifizieren von write_content
 
-- BUGFIX: modul 1 aufrufe
+- BUGFIX: Modul 1 aufrufe
 
 - "Help... " Button in GUI, in dem Erklärungen stehen! --> BESSER, universeller, einfacher und weniger duplizierend: ERstelle eine README.md im Repository, und beim Klick auf "help-btn" wird diese Datei in eine HTML umgewandelt und im Browser angezeigt...
 

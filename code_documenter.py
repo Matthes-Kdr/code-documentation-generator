@@ -15,52 +15,61 @@ Wichtige Details siehe am Ende dieses docstrings.
 
 ### Fertig implementiert:
 
-• Inhaltsverzeichnis / Index
+- Inhaltsverzeichnis / Index
 
-• Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections
+- Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections
 
-• Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation
+- Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation
 
-• Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation
+- Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation
 
-• Sofortiger Export der MD-Datei in eine  HTML-Datei
+- Sofortiger Export der MD-Datei in eine  HTML-Datei
 
-• Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation
+- Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation
 
-• Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.
+- Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.
 
 
-• Bereitstellung einer einfachen GUI / HMI, um Input- und Output Pfade zu parametrisieren
+- Bereitstellung einer einfachen GUI / HMI, um Input- und Output Pfade zu parametrisieren
+
+
+
+
 
 
 
 ### TODOS:
 
-• Chore: Aufräumen des Quellcodes
 
-• Refactor: ggfs. modifizieren von write_content
+- Chore: Aufräumen des Quellcodes
 
-• BUGFIX: modul 1 aufrufe
+- Refactor: ggfs. modifizieren von write_content
 
+- BUGFIX: modul 1 aufrufe
+
+- "Help... " Button in GUI, in dem Erklärungen stehen! --> BESSER, universeller, einfacher und weniger duplizierend: ERstelle eine README.md im Repository, und beim Klick auf "help-btn" wird diese Datei in eine HTML umgewandelt und im Browser angezeigt...
 
 
 
 
 ### AUSBLICK für später und in schön:
 
-• Index an der Seite wie eine NavBar zum einzelnd scrollen
 
-• Ermöglichung von Berücksichtigung weiterer Module innerhalb der Dokumentation
+- Zusatzmöglichkeit in GUI einen benutzerdefinierten Text einzugeben (Prio sehr gering!!). Dieser würde dann in einre eigenen Section angezeigt werden.
+
+- Index an der Seite wie eine NavBar zum einzelnd scrollen
+
+- Ermöglichung von Berücksichtigung weiterer Module innerhalb der Dokumentation
     
-    • z. B. 2 VBA-Module innerhalb eines Projektes, wobei Prozeduren von Modul1  andere Prozeduren aus Modul2 aufrufen.
+    - z. B. 2 VBA-Module innerhalb eines Projektes, wobei Prozeduren von Modul1  andere Prozeduren aus Modul2 aufrufen.
 
-        • Erstmal nur als Verweis  (Mögl. Ansatz included = "Modul1.*" ohne rekursive Auflistung derer Aufrufe... oder eben mit... bestenfalls auch das parametrisierbar)
+        - Erstmal nur als Verweis  (Mögl. Ansatz included = "Modul1.*" ohne rekursive Auflistung derer Aufrufe... oder eben mit... bestenfalls auch das parametrisierbar)
 
-• Dokumentation von weiteren PRogrammiersprachen
+- Dokumentation von weiteren PRogrammiersprachen
 
-    • OK --> VBA
-    • Nächste Prio: C++ / Arduino
-    • Letzte Prio: Python (v.a. für den Ablaufsequence sehr hilfreich, für den rest gibt es pdoc...)
+    - OK --> VBA
+    - Nächste Prio: C++ / Arduino
+    - Letzte Prio: Python (v.a. für den Ablaufsequence sehr hilfreich, für den rest gibt es pdoc...)
 
 
 
@@ -553,11 +562,11 @@ class Procedure():
     """
     Allgemeine Klasse zur Bereitstellung von Inhalten, die fuer alle Prozeduren (Subs und Functions) erforderlich sind. Dazu gehoert:
         
-        • Definition des Dateipfades fuer Template, in die der extrahierte Text übernommen wird
+        - Definition des Dateipfades fuer Template, in die der extrahierte Text übernommen wird
         
-        • Flag-Variable, ob nach Beginn oder Ende der Prozedur gesucht wird
+        - Flag-Variable, ob nach Beginn oder Ende der Prozedur gesucht wird
         
-        • Regex-Muster als String für den Beginn und das Ende einer Prozedur - wobei innerhalb dieses Strings der Platzhalter für die Prozedurart in den Subklassen noch ersetzt werden muss. Ebenfalls
+        - Regex-Muster als String für den Beginn und das Ende einer Prozedur - wobei innerhalb dieses Strings der Platzhalter für die Prozedurart in den Subklassen noch ersetzt werden muss. Ebenfalls
     """
 
     # TEMPLATE = "templates/prozedur.md"
@@ -1006,9 +1015,9 @@ class Procedure():
         Bereitet die finale Ausgabe vor und ruft weitere MEthoden zum Schreiben dieser Ausgabe / der Markdown-Datei auf.
         Zu dieser Vorbereitung gehört:
          
-            • Sortierung der einzelnen Prozeduren innerhalb der verschiedenen Prozedur-Arten gemaess der alphabetischen Reihenfolge ihrer Bezeichner (Namen)
+            - Sortierung der einzelnen Prozeduren innerhalb der verschiedenen Prozedur-Arten gemaess der alphabetischen Reihenfolge ihrer Bezeichner (Namen)
             
-            • Konfigurieren / Initilalisierung der Zwischenüberschriften / Header-Texte unterhalb der einzelnen Section-Überschriften (gespeichert in Klassenvariable cls.header)
+            - Konfigurieren / Initilalisierung der Zwischenüberschriften / Header-Texte unterhalb der einzelnen Section-Überschriften (gespeichert in Klassenvariable cls.header)
 
 
         Args:

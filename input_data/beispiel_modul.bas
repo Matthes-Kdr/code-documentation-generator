@@ -3,9 +3,6 @@
 
 '''  
 ' Beispiel Modul zum Testen der Dokumentation der Abruffolge.
-'
-' ## !!! # ACHTUNG BUGS: !!!
-' > Sub 'liebherr' wird insgesamt 6x referenziert, nicht 5x, wie aktuell dokumentiert!
 
 '''
 

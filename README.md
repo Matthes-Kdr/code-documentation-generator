@@ -1,10 +1,266 @@
 ﻿# Code Documentation Generator
 
+> Hilfsmittel, um automatisiert eine Dokumentation von Quellcode zu generieren
 
 
 > Tool for generate a documentation of sourcecode (currently only for single VBA-moduls) 
 
-.... (TODOC!)
+
+
+
+
+Basierend auf Textdateien mit Quellcode wird durch die Anwendung eine Dokumentation dieses Quellcodes erstellt.
+
+
+
+# Zusammenfassung und Ziel des Projektes
+
+Um bei umfangreicheren Quellcode-Dateien den Überblick über die Inhalte und Abläufe innerhalb dieser Module zu behalten, ist eine Dokumentation sehr sinnvoll bzw. notwendig. Um den Aufwand zur Erstellung hiervon möglichst gering zu halten, kann mit diesem Code-Documentation-Generator automatisiert eine solche Dokumentation erfolgen. Zu den Bestandteilen der Dokumentation gehört eine Beschreibung/Erklärung der einzelnen Prozeduren, die bereits im Quellcode implementiert sein muss (Docstring). Zusätzlich hierzu werden alle Referenzierungen der einzelner Prozeduren detailliert aufgelistet, sodass Zusammenhänge zwischen den einzelnen Prozeduren deutlich werden.
+Außerdem wird der Ablauf von Aufrufen innerhalb jeder Prozedur analysiert und dokumentiert, was letztendlich eine Übersicht des  groben Gesamt-Ablaufes des zu analysierenden Codes darstellt.
+Um im Einzelfall auch genauere Fragestellungen zu beantworten, wird zusätzlich auch der Quellcode selbst von jeder Prozedur dokumentiert.
+
+Die Anwendung erfolgt intuitiv über eine GUI, die alle erforderlichen Eingaben abfragt, und über die der Programmablauf gesteuert wird.
+
+
+
+# Voraussetzungen zur Anwendung
+
+- Aktuell ausschließlich VBA-Code
+- Aktuell kann immer nur ein einziges VBA-Modul dokumentiert werden. Dependencies zu anderen Modulen werden nicht berücksichtigt (z. B. würde bei der Dokumentation des Moduls "Modul1.bas" ein Aufruf der Prozedur `Modul2.Procedure1` nicht als Prozedur-Aufruf berücksichtigt werden, gleichzeitig würde diese Referenzierung dieser Prozedur bei der Dokumentation von Modul2.bas" nicht berücksichtigt werden.)
+
+
+
+## NOTE: Conventions / Konventionen:
+
+
+> **Docstring-Konvention speziell für die Programmiersprache VBA:** Als DocString einer Prozedur werden alle auskommentierten Zeilen gewertet, die direkt (ohne Leerzeile) unter der Deklarationszeile einer Prozedur stehen. Der Docstring wird als beendet angesehen, sobald eine Leerzeile folgt, oder eine Zeile, die nicht auskommentiert ist.
+
+
+> To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line. Empty lines that are to be included must also be labelled as comments.
+
+
+
+
+
+
+# Bedienungshinweise / Workflow der Anwendung
+
+Um eine korrekte Dokumentation zu generieren, muss sichergestellt werden, dass innerhalb der zu dokumentierenden Datei die erforderlichen Konventionen eingehalten werden (siehe Voraussetzungen zur Anwendung).
+
+
+1. Starten der Anwendung
+2. Parametrisierung der vorzunehmenden Dokumentation innerhalb einer GUI:
+   1. Auswahl der zu dokumentierenden Textdatei (".bas")
+   2. Auswahl des Zielverzeichnisses, in dem die zu generierende Dokumentation (".md") gespeichert werden soll
+   3. Auswahl, ob die zu erstellende .md-Datei in eine HTML umgewandelt werden soll
+   4. Auswahl bzgl. Ausgabe-Details in der Dokumentation
+3. Starten der Generierung
+4. (Kurze Wartezeit)
+5. Schließen der Abschlussmeldung
+6. [OPTIONAL]:  Zur manuellen Konvertierung der erstellten Markdown-Datei in eine HTML-Datei wird die Extension 'Markdown All in One' für  VSCode empfohlen, da hierüber eine Konvertierung erfolgt, die für eine ordentliche Formatierung der Code-Segmente in den generierten HTML-Dateien sorgt (siehe Vergleichs-Screenshots unter [Screenshots](#screenshots-von-bedienung-und-ergebnis-der-anwendung)).
+
+
+
+
+# Inhalte der generischen Dokumentation
+
+Alle Inhalte sind in der erstellten HTML-Datei interaktiv miteinander verlinkt.
+
+
+## Anzeige einer Übersicht über das Modul
+- Titel mit Dateinamen der Quelldatei
+- Organisatorische Daten:
+  - Zeitstempel der Generierung der Dokumentation
+  - Zeitstempel der letzten Änderung der Quelldatei
+- Inhaltsverzeichnis
+- Modulinformationen / Modulkopf / DocString des Moduls
+
+
+## Anzeige der Dokumentation aller Prozeduren
+
+Es werden in einer Section zunächst alle einzelnen Subs, in einer weiteren Section dann alle einzelnen Functions dokumentiert, wobei die Dokumentation einer einzelnen Prozedur wie folgt aufgebaut ist:
+
+
+### Anzeige einer Übersicht über die Prozedur
+- Modifier, Name und Zeilennummer der Deklarierungszeile
+- DocString der Prozedur (definiert als die Kommentare direkt unterhalb der Deklarationszeile ohne Leerzeile)
+
+
+
+### Anzeige von Referenzierungen dieser Prozedur
+
+> Zeigt, wo diese Prozedur an anderen Stellen verwendet und aufgerufen wird.
+
+- Anzahl an Referenzierungen
+- Für jede Referenzierung: 
+  - Name der aufrufenden (übergeordneten) Prozedur
+  - Zeilennummer des Aufrufes
+  - Gesamter Code dieser Zeile, sodass Aufrufparameter dokumentiert werden
+
+
+### Anzeige von interner Aufrufabfolge
+
+> Zeigt die Reihenfolge aller Aufrufe von anderen Prozeduren in einer Prozedur. (dabei werden aber nur solche Prozeduren berücksichtigt, die in dieser Dokumentation selbst dokumentiert werden)
+
+- Anzahl an Einträgen für die Aufrufe anderer Prozeduren
+- Für jeden Aufruf einer anderen Prozedur: 
+  - Name dieser aufgerufenen Prozedur
+  - Zeilennummer des Aufrufes
+  - Gesamter Code dieser Zeile, sodass Aufrufparameter dokumentiert werden
+  - sofern es innerhalb der aufgerufenen Prozedur weitere Aufrufe erfolgen, werden diese im gleichen Muster jeweils eingerückt gelistet, und dies bis dass zuletzt eine Prozedur gelistet wird, in der keine weiteren Aufrufe erfolgen.
+
+
+### Anzeige des Quellcodes
+
+> Zeigt den gesamten Quellcode der Prozedur an
+
+- in der erstellten HTML-Datei kann dieser Teil interaktiv verborgen / angezeigt werden (collapse/expand), da der Quellcode normalerweise nicht zur Dokumentation desselben gehört.
+
+
+
+
+## Anzeige der Schlussbemerkungen
+
+Am Seitenende werden Hinweise darauf gegeben, dass es sich bei der Dokumentation um eine generische Dokumentation handelt.
+
+Aktuell wird zusätzlich noch als Collapsed-Segment der DocString des Python-Moduls des Code-Generator-Scriptes dokumentiert, durch das die Umwandlung erfolgte.
+
+Außerdem wird die aktuelle Version bzw. das aktuelle Commit dieses Scriptes dokumentiert.
+
+
+
+# Screenshots von Bedienung und Ergebnis der Anwendung
+
+## GUI zur Parametrisierung und Steuerung des Workflows:
+
+![GUI: Main-Window](screenshots/gui_code_documenter_main_window.png)
+![GUI: End-Window](screenshots/gui_code_documenter_end_window.png)
+
+
+## Output-Ergebnis, nach Umwandlung von MD- in HTML-Datei:
+
+
+### Generierter Seitenanfang:
+
+Nutzung der **automatischen Konvertierung** MD --> HTML:
+
+![Screenshot der generierten Dokumentation](screenshots/result_html_automatic_head.png)
+
+Nutzung der **manuellen Konvertierung** MD --> HTML:
+
+![Screenshot der generierten Dokumentation](screenshots/result_html_manual_head.png)
+
+
+
+
+
+
+### Generierte Dokumentation von Prozeduren:
+
+Nutzung der **automatischen Konvertierung** MD --> HTML:
+
+![Screenshot der generierten Dokumentation](screenshots/result_html_automatic_procedure.png)
+
+Nutzung der **manuellen Konvertierung** MD --> HTML:
+
+![Screenshot der generierten Dokumentation](screenshots/result_html_manual_procedure.png)
+
+
+
+
+### Generierte Dokumentation von Prozeduren:
+
+Nutzung der **automatischen Konvertierung** MD --> HTML:
+
+![Screenshot der generierten Dokumentation](screenshots/result_html_automatic_procedure.png)
+
+Nutzung der **manuellen Konvertierung** MD --> HTML:
+
+![Screenshot der generierten Dokumentation](screenshots/result_html_manual_procedure.png)
+
+
+
+
+
+### Generiertes Seitenende:
+
+Nutzung der **automatischen Konvertierung** MD --> HTML:
+
+![Screenshot der generierten Dokumentation](screenshots/result_html_automatic_tail.png)
+
+Nutzung der **manuellen Konvertierung** MD --> HTML:
+
+![Screenshot der generierten Dokumentation](screenshots/result_html_manual_tail.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Ausblick / mögliche Weiterentwicklungen
+
+
+- Zusatzmöglichkeit in GUI einen benutzerdefinierten Text einzugeben (Prio sehr gering!!). Dieser würde dann in der Dokumentation in einer eigenen Section angezeigt werden.
+
+- Index an der Seite der HTML-Seite einfügen wie eine NavBar zum einzelnd scrollen
+
+- Ermöglichung von Berücksichtigung weiterer Module innerhalb der Dokumentation
+    
+    - z. B. 2 VBA-Module innerhalb eines Projektes, wobei Prozeduren von Modul1  andere Prozeduren aus Modul2 aufrufen.
+
+        - Erstmal nur als Verweis  (Mögl. Ansatz included = "Modul1.*" ohne rekursive Auflistung derer Aufrufe... oder eben mit... bestenfalls auch das parametrisierbar)
+
+- Dokumentation von weiteren PRogrammiersprachen
+
+    - OK --> VBA
+    - Nächste Prio: C++ / Arduino
+    - Letzte Prio: Python (v.a. für den Ablaufsequence sehr hilfreich, für den rest gibt es pdoc...)
+
+
+
+
+
+
+
+
+
+</br></br></br></br></br>
+</br></br></br></br></br>
+</br></br></br></br></br>
+</br></br></br></br></br>
+</br></br></br></br></br>
+
+---
+---
+---
+
+# Alte Dokumentation aus den Ansätzen
+
+> Inzwischen größtenteils obsolet, ggf. auch nicht (mehr) korrekt
+
 
 
 # Möglicher Programmablauf zur Dokumentierung von VBA-Code

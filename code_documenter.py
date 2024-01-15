@@ -904,6 +904,8 @@ class Procedure():
         Es wird dann nach Referenzierungen (Aufrufen) jeder Einzelnen Prozedur im gesamten Quelltext gesucht. Bei einem gefundenen Match wird weiter identifiziert, innerhalb welcher uebergeordneten Prozedur dieser Aufruf erfolgte. 
         Fuer jedes Objekt wird eine Objektvariable (Liste) references erstellt, die initial leer ist und bei gefundenen Matches jeweils mit einem Tuple der folgenden Form erweitert wird: (line_no, bezeichnung_uebergeordnete_prozedur, zeilentext_des_aufrufes).
 
+        Diese Methode bildet auch die Grundlegende Datenbasis, auf der anschließend die Calling_Sequences analysiert werden können.
+
         """
 
         # ERstellung der gemeinsamen Liste auf Superklassen-Ebene:
@@ -928,17 +930,28 @@ class Procedure():
             # regex = re.compile(r"\b(!Function|Sub\b)\W{___PROC_NAME___}\W".format(___PROC_NAME___=prozedur_name))
             
             
-            
+
+            # List of regex-pattern which would match for a call. can be extend as required.
+            # TODO: Use the same concept for the excluding_pattern
+            regex_including_pattern = [
+                r"\bcall\s+{___PROC_NAME___}\b".format(___PROC_NAME___=prozedur_name),
+
+                r"\b{___PROC_NAME___}\(".format(___PROC_NAME___=prozedur_name),
+
+            ]
+
+
+            '''
+            # OBSOLET: Replaced by elements in list regex_including_pattern to can extend this list as required
+
             regex_call = re.compile(r"\bcall\s+{___PROC_NAME___}\b".format(___PROC_NAME___=prozedur_name))
 
+            regex_brackets = re.compile(r"\b{___PROC_NAME___}\(".format(___PROC_NAME___=prozedur_name))
+            
+            '''
 
-
-            # Folgende macht leider einen erroer .  im "normalen " regex geht es, in python.re nicht:
-            # regex_brackets = re.compile(r"(?<!((Function|Sub).*))({___PROC_NAME___}\()".format(___PROC_NAME___=prozedur_name))
 
             # ACHTUNG: es wird hiermit DOCH NICHT ABGEFANGEN, dass die Deklarationszeile nicht gematcht wird! die muss also später noch raus kommen!
-            regex_brackets = re.compile(r"\b{___PROC_NAME___}\(".format(___PROC_NAME___=prozedur_name))
-
 
 
             # Durchsuche den GESAMTEN QUELLTEXT nach einem Aufruf dieser Prozedur:
@@ -955,14 +968,40 @@ class Procedure():
 
 
 
-                if not (match:=regex_brackets.search(line_text)):
-                    # Kein Aufruf mittels ...PROZEDURNAME(...
-                    if not (match:=regex_call.search(line_text)):
-                        # Kein Aufruf mittels ...Call PROZEDURNAME...
 
-                        continue
+                for regex_pattern in regex_including_pattern:
+                    
+                    regex = re.compile(regex_pattern)
+
+
+
+                    if (match:=regex.search(line_text)):
+
+                        # dann match!
+                        
+                        # continue # Soll: try next regex
+
+                    # else:
+                    
+                        break
+
+                # if not match:
+                    
+                #     continue # try next line code
+
+                # if not (match:=regex_brackets.search(line_text)):
+                #     # Kein Aufruf mittels ...PROZEDURNAME(...
+                #     if not (match:=regex_call.search(line_text)):
+                #         # Kein Aufruf mittels ...Call PROZEDURNAME...
+
+                #         continue
                 
-                
+                if not match:
+                    
+                    # then all regex have been no match -> next line
+                    continue
+
+
                 # TODO: Backreference auf die Gruppe mit dem Sub-Namen (kenie backref nötig, da es ja EH nur nach dieser gesucht wird!) notwendig für aufruf abfolge
                 ziel_prozedur_name = prozedur_name
                 # db(match)

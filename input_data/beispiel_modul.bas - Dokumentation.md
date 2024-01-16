@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-14 00:42**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-16 00:32:20**
+Generierungsdatum dieser Dokumentation: **2024-01-16 00:58:37**
 
 
 
@@ -171,7 +171,7 @@ Kein Aufruf gefunden.
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (4)</summary>
+    <summary>      Interne Aufrufabfolge (5)</summary>
 
 ---
 
@@ -195,6 +195,12 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 - [```liebherr```](#liebherr) : <small>  [Zeile 100] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+
+
+
+
+
+- [```liebherr```](#liebherr) : <small>  [Zeile 103] : ```    var = liebherr``` </small>
 
 
 
@@ -510,7 +516,7 @@ End Sub
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (5)</summary>
+<summary> Referenzierungen dieser Prozedur (6)</summary>
 
 <div style="padding-left:1em;">
 
@@ -527,6 +533,8 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 - [```bauer```](#bauer) : <small>  [Zeile 98] : ```    call liebherr ' Aufruf``` </small>
 
 - [```bauer```](#bauer) : <small>  [Zeile 100] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+
+- [```bauer```](#bauer) : <small>  [Zeile 103] : ```    var = liebherr``` </small>
 
 - [```bauer```](#bauer) : <small>  [Zeile 104] : ```    var = liebherr("gvkil")``` </small>
 
@@ -1273,4 +1281,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-16 00:32:20 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-14 02:31:24: 'fd00e3fa96916a12ed195708fb6ee1846ca9e6b9')</small> 
+<small>Dokumentation generiert am 2024-01-16 00:58:37 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-16 00:42:12: '134b0f74aa3b7c3c73826edaa5c383c3a8716563')</small> 

@@ -933,7 +933,7 @@ class Procedure():
 
             # List of regex-pattern which would match for a call. can be extend as required.
             # TODO: Use the same concept for the excluding_pattern
-            regex_including_pattern = [
+            regex_including_patterns = [
 
                 # # OBSOLET durch untere:
                 # r"\bcall\s+§§___PROC_NAME___§§\b".replace("§§___PROC_NAME___§§", prozedur_name),
@@ -946,6 +946,11 @@ class Procedure():
                 r"(\s{0,}§§___PROC_NAME___§§\b)(?!\s{0,}=)".replace("§§___PROC_NAME___§§", prozedur_name)
 
 
+            ]
+
+
+            regex_excluding_patterns = [
+                cls.regex_ausschluss_kommentar,
             ]
 
 
@@ -977,7 +982,7 @@ class Procedure():
 
 
 
-                for regex_pattern in regex_including_pattern:
+                for regex_pattern in regex_including_patterns:
                     
                     regex = re.compile(regex_pattern)
 

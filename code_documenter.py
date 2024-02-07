@@ -655,11 +655,11 @@ class Procedure():
 
         # HACK: nur python bisher!
         pattern = re.compile(r'(""".*?""")|(\'\'\'.*?\'\'\')', re.DOTALL)
-        
-
+        pattern = None # für VBA
             
         
-        matches = pattern.finditer(code)
+
+        
         
 
         comments = []
@@ -677,6 +677,7 @@ class Procedure():
             return
 
 
+        matches = pattern.finditer(code)
 
 
         for match in matches:
@@ -735,7 +736,7 @@ class Procedure():
             cls.raw_source_code = file.readlines()
         """
 
-        # JULIA: Neuer Ansatz für Issue #6 : 
+        # Neuer Ansatz für Issue #6 : 
         # Erst als str einlesen, damit man darüber zusätzlich zu den Zeilen auch die Zeilennummern ermitteln kann und später Blockkommentare (Multiline-Comments) bei den References / calling sequences ignorieren kann:
             
         with open(input_path, "r") as file:
@@ -1088,7 +1089,14 @@ class Procedure():
                     # Dann ist dies die  Deklarationszeile der Funktion, zu der die Aufrufe gefunden werden sollen - also ignorieren!
                     continue
 
+                
+                # TODO: in there: implement query wheather line no is in multiline_comment_line_numbers
+                # JULIA: 
+                if line_no in cls.multiline_comment_line_numbers:
 
+                    # dann block kommentar --> irrelevant!
+                    # TEST: Mit VBA scheint alles ok zu sein, ergebnis von beispiel_modul1.md stimmt vorher/nachher überein.
+                    continue
 
 
                 for regex_pattern in regex_including_patterns:
@@ -1225,10 +1233,17 @@ class Procedure():
         
         # Durchsuche gesamten Quelltext nach allen Referenzierungen für jeweils alle gefundenen Prozeduren und speichere sie in den jeweiligen Objekten der einzelnen Prozeduren:
         cls.analyse_references()
+        # TODO: in there: implement query wheather line no is in multiline_comment_line_numbers
+
+
+
 
 
         # TODO:  Analysiere jede Prozedur und speichere jeden weiteren Aufruf einer weiteren Prozedur in dem Prozedur-Objekt. Geschrieben wird es erst später, da dann rekursiv auf alle Calling-Sequences zugegriffen werden kann
         cls.analyse_call_sequences()
+        # TODO: in there: implement query wheather line no is in multiline_comment_line_numbers
+
+
 
         cls.prepare_all_call_sequence_docs()
 

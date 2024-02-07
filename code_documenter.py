@@ -642,6 +642,84 @@ class Procedure():
 
 
 
+
+    @classmethod
+    def find_multiline_comment(cls, code:str):
+        """
+        ### TODO: Aktuell nur fuer Python!
+        
+        Returns / stores to cls:
+            list[tuple] : Format: [(comment1_start_line:int, comment1_end_line:int, comment1_text:str), (..., ..., ...)]
+
+        """
+
+        # HACK: nur python bisher!
+        pattern = re.compile(r'(""".*?""")|(\'\'\'.*?\'\'\')', re.DOTALL)
+        
+
+            
+        
+        matches = pattern.finditer(code)
+        
+
+        comments = []
+        multiline_comment_line_numbers = [] # 0-basiert!
+
+        # Falls in der relevanten PRogrammiersprache kein Multiline-Comments existieren:
+        if pattern == None:
+            
+
+            cls.multiline_comments = tuple(comments)
+
+            cls.multiline_comment_line_numbers = tuple(multiline_comment_line_numbers)
+
+
+            return
+
+
+
+
+        for match in matches:
+
+            comment = match.group(0)
+
+            start_line = code.count('\n', 0, match.start()) # + 1 # es wird der 0-basierte Index gespeichert!
+
+            end_line = code.count('\n', 0, match.end()) # + 1 # es wird der 0-basierte Index gespeichert!
+
+
+            comments.append((start_line, end_line, comment))
+
+            # Auflistung aller Zeilennummern des Bereiches:
+            for line_no in range(start_line, end_line + 1):
+                multiline_comment_line_numbers.append(line_no)
+
+
+
+
+
+        for start_line, end_line, comment in comments:
+            print(f"Found comment starting at line {start_line} and ending at line {end_line}:\n{comment}\n")
+
+
+        cls.multiline_comments = tuple(comments)
+
+        cls.multiline_comment_line_numbers = tuple(multiline_comment_line_numbers)
+
+
+
+
+        
+        # TODO: Muss jetzt noch referenziert werden bei calling_sequence und references - filtern, dass die zu pruefnde Zeile NICHT in einem dieser Bereiche liegt mit 
+            #if line_no in cls.multiline_comment_line_numbers: ...
+        
+        # OBSOLET:
+        return comments
+
+
+
+
+
     @classmethod
     def initialize_input_code(cls, input_path:str):
         """
@@ -651,9 +729,40 @@ class Procedure():
         ggf. sollte diese GUI aber losgelöst von dieser Klasse sein (Wiederholfunktion!). Daher als Kapselung mit übergebenen input-path!
         """
 
+        """
+        # ALTERNATIVE / OBSOLET:
         with open(input_path, "r") as file:
             cls.raw_source_code = file.readlines()
+        """
 
+        # JULIA: Neuer Ansatz für Issue #6 : 
+        # Erst als str einlesen, damit man darüber zusätzlich zu den Zeilen auch die Zeilennummern ermitteln kann und später Blockkommentare (Multiline-Comments) bei den References / calling sequences ignorieren kann:
+            
+        with open(input_path, "r") as file:
+            raw_source_code_str = file.read()
+
+        # split to lines:
+        cls.raw_source_code = raw_source_code_str.splitlines(keepends=True)
+
+        cls.find_multiline_comment(raw_source_code_str)
+
+
+    '''
+    # ANSATZ:
+    
+    def find_multiline_comment(code):
+        pattern = re.compile(r'(""".*?""")|(\'\'\'.*?\'\'\')', re.DOTALL)
+        matches = pattern.finditer(code)
+        
+        comments = []
+        for match in matches:
+            comment = match.group(0)
+            start_line = code.count('\n', 0, match.start()) + 1
+            end_line = code.count('\n', 0, match.end()) + 1
+            comments.append((start_line, end_line, comment))
+        
+        return comments
+    '''
 
 
 

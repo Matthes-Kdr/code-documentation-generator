@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'beispiel_modul1.bas' vor der Generierung dieser automatischen Dokumentation: **2023-11-17 00:52**
 
 
-Generierungsdatum dieser Dokumentation: **2024-02-07 21:06:14**
+Generierungsdatum dieser Dokumentation: **2024-01-14 01:57:43**
 
 
 
@@ -1677,17 +1677,15 @@ End Sub
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> Referenzierungen dieser Prozedur (0)</summary>
 
 <div style="padding-left:1em;">
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+Kein Aufruf gefunden.
 
 
-
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1172] : ```    Call init``` </small>
 
 
 
@@ -2801,7 +2799,7 @@ Kein Aufruf gefunden.
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (6)</summary>
+    <summary>      Interne Aufrufabfolge (5)</summary>
 
 ---
 
@@ -2810,13 +2808,6 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-
-
-- [```init```](#init) : <small>  [Zeile 1172] : ```    Call init``` </small>
-
-
-
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
 - [```addSeitenformat```](#addSeitenformat) : <small>  [Zeile 1183] : ```        oSeite = addSeitenformat(startzeileSteuertabelle)``` </small>
@@ -6970,4 +6961,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-02-07 21:06:14 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-21 23:36:42: '157a6014c474dcc6ccfbd9ce96e6ea264ce29dc2')</small> 
+<small>Dokumentation generiert am 2024-01-14 01:57:43 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-14 00:28:22: '0afb9dd58034fd94889545b5ec6e620a61bc006f')</small> 

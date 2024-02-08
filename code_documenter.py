@@ -849,11 +849,15 @@ class Procedure():
 
         if cls.regex_begin.match(text):
             if not cls.regex_ausschluss_kommentar.match(text):
-                # Dann aufnehmen in die Liste der MAtches! inkl. Platzhalter für Endzeilennummer:
-                cls.matches_line_ixs.append([line_no, None])
-                Procedure.search_for_begin = False
 
-                return True
+                # JULIA: consider multiline-comments:
+                if line_no not in cls.multiline_comment_line_numbers:
+
+                    # Dann aufnehmen in die Liste der MAtches! inkl. Platzhalter für Endzeilennummer:
+                    cls.matches_line_ixs.append([line_no, None])
+                    Procedure.search_for_begin = False
+
+                    return True
         
         return False
 
@@ -1091,8 +1095,9 @@ class Procedure():
 
                 
                 # TODO: in there: implement query wheather line no is in multiline_comment_line_numbers
-                # JULIA: 
-                if line_no in cls.multiline_comment_line_numbers:
+                # JULIA:  
+                # ACHTUNG: line_no || line_no - 1 ???
+                if line_no - 1 in cls.multiline_comment_line_numbers:
 
                     # dann block kommentar --> irrelevant!
                     # TEST: Mit VBA scheint alles ok zu sein, ergebnis von beispiel_modul1.md stimmt vorher/nachher überein.
@@ -1233,7 +1238,8 @@ class Procedure():
         
         # Durchsuche gesamten Quelltext nach allen Referenzierungen für jeweils alle gefundenen Prozeduren und speichere sie in den jeweiligen Objekten der einzelnen Prozeduren:
         cls.analyse_references()
-        # TODO: in there: implement query wheather line no is in multiline_comment_line_numbers
+        # TODO / TEST: already considered.: in there: implement query wheather line no is in multiline_comment_line_numbers
+
 
 
 
@@ -1241,7 +1247,8 @@ class Procedure():
 
         # TODO:  Analysiere jede Prozedur und speichere jeden weiteren Aufruf einer weiteren Prozedur in dem Prozedur-Objekt. Geschrieben wird es erst später, da dann rekursiv auf alle Calling-Sequences zugegriffen werden kann
         cls.analyse_call_sequences()
-        # TODO: in there: implement query wheather line no is in multiline_comment_line_numbers
+        # TODO / TEST -->: in there: implement query wheather line no is in multiline_comment_line_numbers
+        # TEST: Actually the analysis bases on analyse_references. As pattern for references in multiline-comments are not stored by the last change of analyse_reference, there should be no need to modify analyse_call_sequences.
 
 
 

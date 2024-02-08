@@ -97,6 +97,67 @@ def find_lines_with_blockcomment(text:str) -> list[int]:
 
 
 
+def find_multiline_comment_incl_range_numbers(code:str):
+        """
+        ### TODO: Aktuell nur fuer Python!
+        
+        Returns / stores to cls:
+            list[tuple] : Format: [(comment1_start_line:int, comment1_end_line:int, comment1_text:str), (..., ..., ...)]
+
+        """
+
+        # HACK: nur python bisher!
+        pattern = re.compile(r'(""".*?""")|(\'\'\'.*?\'\'\')', re.DOTALL)
+        
+        
+        matches = pattern.finditer(code)
+        
+
+        comments = []
+        multiline_comment_line_numbers = [] # 0-basiert!
+
+        for match in matches:
+
+            comment = match.group(0)
+
+            start_line = code.count('\n', 0, match.start()) # + 1 # es wird der 0-basierte Index gespeichert!
+
+            end_line = code.count('\n', 0, match.end()) # + 1 # es wird der 0-basierte Index gespeichert!
+
+
+            comments.append((start_line, end_line, comment))
+
+            # Auflistung aller Zeilennummern des Bereiches:
+            for line_no in range(start_line, end_line + 1):
+                multiline_comment_line_numbers.append(line_no)
+
+
+
+
+        for start_line, end_line, comment in comments:
+            print(f"Found comment starting at line {start_line} and ending at line {end_line}:\n{comment}\n")
+
+
+        multiline_comments = tuple(comments)
+
+        multiline_comment_line_numbers = tuple(multiline_comment_line_numbers)
+
+
+
+        
+        # TODO: Muss jetzt noch referenziert werden bei calling_sequence und references - filtern, dass die zu pruefnde Zeile NICHT in einem dieser Bereiche liegt
+        # OBSOLET:
+        return comments
+
+
+
+
+
+
+
+
+
+
 
 
 def find_multiline_comment(code):
@@ -128,11 +189,19 @@ print(Procedure.raw_source_code_str)
 
 
 
-
-lines_block = find_lines_with_blockcomment(Procedure.raw_source_code_str)
+# # OBSOLET / ALTERNATIVE:
+# lines_block = find_lines_with_blockcomment(Procedure.raw_source_code_str)
 
 
 multiline_comments = find_multiline_comment(Procedure.raw_source_code_str)
+
+
+
+multiline_comments = find_multiline_comment_incl_range_numbers(Procedure.raw_source_code_str)
+
+
+
+
 
 for start_line, end_line, comment in multiline_comments:
     print(f"Found comment starting at line {start_line} and ending at line {end_line}:\n{comment}\n")

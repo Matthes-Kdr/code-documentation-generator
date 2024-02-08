@@ -642,6 +642,99 @@ class Procedure():
 
 
 
+
+    @classmethod
+    def find_multiline_comment(cls, code:str):
+        """
+        ### TODO: Aktuell nur fuer Python!
+        
+        Returns / stores to cls:
+            list[tuple] : Format: [(comment1_start_line:int, comment1_end_line:int, comment1_text:str), (..., ..., ...)]
+
+        """
+
+        # HACK: nur python bisher!
+        pattern = re.compile(r'(""".*?""")|(\'\'\'.*?\'\'\')', re.DOTALL)
+        pattern = None # für VBA
+
+        # HACK: @ #6 : 
+        # Comment at Issue #6:
+        """
+        Next step to test with VBA as in VBA there is no syntax available for multiline-comments:
+
+        As a hack: Invent some random keyword for simulate a multiline-comment in VBA. eg: "#####" as this string should be used in VBA-Codes (comments) rather rarely. Than implement this fake-syntax in one of the demo-input-files (.bas) to validate the functionality.
+
+        When this works, it should work with real syntax as well (for python, cpp, ...).
+        """
+        # TEST: @ #6 :  Test works fine! The invented syntax was not documented in the auto-generated-documentation! --> fix OK!
+        pattern = re.compile(r'(#####.*?#####)', re.DOTALL)
+
+
+            
+        
+
+        
+        
+
+        comments = []
+        multiline_comment_line_numbers = [] # 0-basiert!
+
+        # Falls in der relevanten PRogrammiersprache kein Multiline-Comments existieren:
+        if pattern == None:
+            
+
+            cls.multiline_comments = tuple(comments)
+
+            cls.multiline_comment_line_numbers = tuple(multiline_comment_line_numbers)
+
+
+            return
+
+
+        matches = pattern.finditer(code)
+
+
+        for match in matches:
+
+            comment = match.group(0)
+
+            start_line = code.count('\n', 0, match.start()) # + 1 # es wird der 0-basierte Index gespeichert!
+
+            end_line = code.count('\n', 0, match.end()) # + 1 # es wird der 0-basierte Index gespeichert!
+
+
+            comments.append((start_line, end_line, comment))
+
+            # Auflistung aller Zeilennummern des Bereiches:
+            for line_no in range(start_line, end_line + 1):
+                multiline_comment_line_numbers.append(line_no)
+
+
+
+
+
+        for start_line, end_line, comment in comments:
+            print(f"Found comment starting at line {start_line} and ending at line {end_line}:\n{comment}\n")
+
+
+        cls.multiline_comments = tuple(comments)
+
+        cls.multiline_comment_line_numbers = tuple(multiline_comment_line_numbers)
+
+
+
+
+        
+        # TODO: Muss jetzt noch referenziert werden bei calling_sequence und references - filtern, dass die zu pruefnde Zeile NICHT in einem dieser Bereiche liegt mit 
+            #if line_no in cls.multiline_comment_line_numbers: ...
+        
+        # OBSOLET:
+        return comments
+
+
+
+
+
     @classmethod
     def initialize_input_code(cls, input_path:str):
         """
@@ -651,9 +744,40 @@ class Procedure():
         ggf. sollte diese GUI aber losgelöst von dieser Klasse sein (Wiederholfunktion!). Daher als Kapselung mit übergebenen input-path!
         """
 
+        """
+        # ALTERNATIVE / OBSOLET:
         with open(input_path, "r") as file:
             cls.raw_source_code = file.readlines()
+        """
 
+        # Neuer Ansatz für Issue #6 : 
+        # Erst als str einlesen, damit man darüber zusätzlich zu den Zeilen auch die Zeilennummern ermitteln kann und später Blockkommentare (Multiline-Comments) bei den References / calling sequences ignorieren kann:
+            
+        with open(input_path, "r") as file:
+            raw_source_code_str = file.read()
+
+        # split to lines:
+        cls.raw_source_code = raw_source_code_str.splitlines(keepends=True)
+
+        cls.find_multiline_comment(raw_source_code_str)
+
+
+    '''
+    # ANSATZ:
+    
+    def find_multiline_comment(code):
+        pattern = re.compile(r'(""".*?""")|(\'\'\'.*?\'\'\')', re.DOTALL)
+        matches = pattern.finditer(code)
+        
+        comments = []
+        for match in matches:
+            comment = match.group(0)
+            start_line = code.count('\n', 0, match.start()) + 1
+            end_line = code.count('\n', 0, match.end()) + 1
+            comments.append((start_line, end_line, comment))
+        
+        return comments
+    '''
 
 
 
@@ -739,11 +863,15 @@ class Procedure():
 
         if cls.regex_begin.match(text):
             if not cls.regex_ausschluss_kommentar.match(text):
-                # Dann aufnehmen in die Liste der MAtches! inkl. Platzhalter für Endzeilennummer:
-                cls.matches_line_ixs.append([line_no, None])
-                Procedure.search_for_begin = False
 
-                return True
+                # JULIA: consider multiline-comments:
+                if line_no not in cls.multiline_comment_line_numbers:
+
+                    # Dann aufnehmen in die Liste der MAtches! inkl. Platzhalter für Endzeilennummer:
+                    cls.matches_line_ixs.append([line_no, None])
+                    Procedure.search_for_begin = False
+
+                    return True
         
         return False
 
@@ -979,7 +1107,15 @@ class Procedure():
                     # Dann ist dies die  Deklarationszeile der Funktion, zu der die Aufrufe gefunden werden sollen - also ignorieren!
                     continue
 
+                
+                # TODO: in there: implement query wheather line no is in multiline_comment_line_numbers
+                # JULIA:  
+                # ACHTUNG: line_no || line_no - 1 ???
+                if line_no - 1 in cls.multiline_comment_line_numbers:
 
+                    # dann block kommentar --> irrelevant!
+                    # TEST: Mit VBA scheint alles ok zu sein, ergebnis von beispiel_modul1.md stimmt vorher/nachher überein.
+                    continue
 
 
                 for regex_pattern in regex_including_patterns:
@@ -1116,10 +1252,19 @@ class Procedure():
         
         # Durchsuche gesamten Quelltext nach allen Referenzierungen für jeweils alle gefundenen Prozeduren und speichere sie in den jeweiligen Objekten der einzelnen Prozeduren:
         cls.analyse_references()
+        # TODO / TEST: already considered.: in there: implement query wheather line no is in multiline_comment_line_numbers
+
+
+
+
 
 
         # TODO:  Analysiere jede Prozedur und speichere jeden weiteren Aufruf einer weiteren Prozedur in dem Prozedur-Objekt. Geschrieben wird es erst später, da dann rekursiv auf alle Calling-Sequences zugegriffen werden kann
         cls.analyse_call_sequences()
+        # TODO / TEST -->: in there: implement query wheather line no is in multiline_comment_line_numbers
+        # TEST: Actually the analysis bases on analyse_references. As pattern for references in multiline-comments are not stored by the last change of analyse_reference, there should be no need to modify analyse_call_sequences.
+
+
 
         cls.prepare_all_call_sequence_docs()
 

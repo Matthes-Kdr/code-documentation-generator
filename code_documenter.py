@@ -653,24 +653,28 @@ class Procedure():
 
         """
 
-        # HACK: nur python bisher!
-        pattern = re.compile(r'(""".*?""")|(\'\'\'.*?\'\'\')', re.DOTALL)
-        pattern = None # für VBA
 
-        # HACK: @ #6 : 
-        # Comment at Issue #6:
-        """
-        Next step to test with VBA as in VBA there is no syntax available for multiline-comments:
+        # # AUSBLICK: For python OK!
+        # pattern = re.compile(r'(""".*?""")|(\'\'\'.*?\'\'\')', re.DOTALL)
 
-        As a hack: Invent some random keyword for simulate a multiline-comment in VBA. eg: "#####" as this string should be used in VBA-Codes (comments) rather rarely. Than implement this fake-syntax in one of the demo-input-files (.bas) to validate the functionality.
+        # # TEST: @ #6 : 
+        # # Comment at Issue #6:
+        # """
+        # Next step to test with VBA as in VBA there is no syntax available for multiline-comments:
 
-        When this works, it should work with real syntax as well (for python, cpp, ...).
-        """
-        # TEST: @ #6 :  Test works fine! The invented syntax was not documented in the auto-generated-documentation! --> fix OK!
-        pattern = re.compile(r'(#####.*?#####)', re.DOTALL)
+        # As a hack: Invent some random keyword for simulate a multiline-comment in VBA. eg: "#####" as this string should be used in VBA-Codes (comments) rather rarely. Than implement this fake-syntax in one of the demo-input-files (.bas) to validate the functionality.
+
+        # When this works, it should work with real syntax as well (for python, cpp, ...).
+        # """
+        # # TEST: @ #6 :  Test works fine! The invented syntax was not documented in the auto-generated-documentation! --> fix OK!
+        # pattern = re.compile(r'(#####.*?#####)', re.DOTALL)
+
+        # TODO: Get the pattern from a class (e.g.) of the programming language to analyse.
+        pattern = None # for VBA
 
 
-            
+
+
         
 
         

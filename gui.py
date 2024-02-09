@@ -124,6 +124,7 @@ class DocumenterGui:
         self.input_file = "input_data/beispiel_modul2.bas"
         self.input_file = "input_data/beispiel_modul1.bas"
         self.input_file = "input_data/beispiel_modul.bas"
+        self.input_file = "input_data/current_test.bas"
 
 
         self.output_dir = "output_data"

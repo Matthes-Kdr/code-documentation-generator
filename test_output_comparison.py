@@ -63,13 +63,15 @@ def call_script(path:str):
 
 call_script('code_documenter.py')
 
-output_path = "output_data/current_test.md"
+output_path_new = "output_data/current_test.bas - Dokumentation.md"
+output_path_old = "output_data/current_test.bas - Dokumentation_REFERENCE.md"
 
-new_output = read_content(output_path)
+new_output = read_content(output_path_new)
 
-old_output = read_content(output_path[:-3] + "_REFERECE.md")
+# old_output = read_content(output_path[:-3] + "_REFERECE.md")
+old_output = read_content(output_path_old)
 
 if new_output == old_output:
-    print("OK.. No difference in {}.".format(new_output))
+    print("\n\n\nOK.. No difference in {}.".format(output_path_new))
 else:
-    print("!!!!!!!!!! DIFFERENCES TRACKT!!! please check!")
+    print("\n\n\n!!!!!!!!!! DIFFERENCES TRACKT!!! please check!")

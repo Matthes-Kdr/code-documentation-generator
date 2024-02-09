@@ -14,17 +14,68 @@ class SyntaxVba:
     @staticmethod
     def get_pattern_single_line_comment():
         
-        # TODO: ...
-        # pattern_single_line_comment = re.compile(__regex_ausschlus_kommentar_pattern, re.VERBOSE | re.IGNORECASE)
-        pass
+        pattern = r"""'    # KommentarApostroph
+                .?       # Beliebiges Zeichen
+                """
+        
+        return pattern
+        
+
+
+
+
+
+
+
+    @staticmethod
+    def get_pattern_end_of_procedure():
+        
+
+        # Das folgenden Regex-Muster berücksichtigt nicht das Auskommentieren dieser Zeile
+        pattern = r""".*?     # Start mit beliebigen Zeichen
+                (?:End)    # Beinhaltet das KEyword
+                \s+        # mind. 1 bis n Leerzeichen
+                (?:PLACEHOLDER_PROCEDURE_TYPE)    # Beinhaltet das KEyword
+                \s+         # mind. 1 bis n Leerzeichen
+                .*"""
+    
+
+
+        return pattern
+    
+
+
+
+
+
+    @staticmethod
+    def get_pattern_start_of_procedure():
+        
+
+        # Das folgenden Regex-Muster berücksichtigt nicht das Auskommentieren dieser Zeile
+        pattern = r""".*     # Start mit beliebigen Zeichen
+                        (?:Private|Public|Friend)?
+                        (?:PLACEHOLDER_PROCEDURE_TYPE)    # Beinhaltet das KEyword
+                        \s+        # mind. 1 bis n Leerzeichen
+                        (\w+)        # mind. 1 bis n Wortzeichen
+                        \(         # Geöffnete Klammer
+                        """
+    
+
+
+        return pattern
+    
+
 
 
     @staticmethod
     def get_pattern_multiline_comment():
         
-        pattern_multiline_comment = None
+        pattern = None
 
-        return pattern_multiline_comment
+        return pattern
+
+
 
 
 
@@ -33,13 +84,13 @@ class SyntaxVba:
     @staticmethod
     def get_pattern_references(prozedur_name:str):
 
-        pattern_references = [
+        patterns = [
 
             r"(\s{0,}§§___PROC_NAME___§§\b)(?!\s{0,}=)".replace("§§___PROC_NAME___§§", prozedur_name),
 
         ]
 
-        return pattern_references
+        return patterns
 
 
 

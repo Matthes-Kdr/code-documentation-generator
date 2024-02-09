@@ -177,6 +177,8 @@ import gitinfo
 
 
 from gui import DocumenterGui
+from programming_languages import SyntaxVba
+
 
 
 
@@ -188,9 +190,11 @@ from gui import DocumenterGui
 
 DEBUG = 1
 
+# HACK: only Vba by now:
+SyntaxClass = SyntaxVba
+
+
 # CONVERT_TO_HTML = 1
-
-
 
 
 
@@ -586,26 +590,29 @@ class Procedure():
 
     # TODO: Vars besser privatisieren:
 
-    # Das folgenden Regex-Muster berücksichtigt nicht das Auskommentieren dieser Zeile
-    regex_begin_pattern = r""".*     # Start mit beliebigen Zeichen
-                        (?:Private|Public|Friend)?
-                        (?:PLACEHOLDER_PROCEDURE_TYPE)    # Beinhaltet das KEyword
-                        \s+        # mind. 1 bis n Leerzeichen
-                        (\w+)        # mind. 1 bis n Wortzeichen
-                        \(         # Geöffnete Klammer
-                        """
+    # # Das folgenden Regex-Muster berücksichtigt nicht das Auskommentieren dieser Zeile
+    # regex_begin_pattern = r""".*     # Start mit beliebigen Zeichen
+    #                     (?:Private|Public|Friend)?
+    #                     (?:PLACEHOLDER_PROCEDURE_TYPE)    # Beinhaltet das KEyword
+    #                     \s+        # mind. 1 bis n Leerzeichen
+    #                     (\w+)        # mind. 1 bis n Wortzeichen
+    #                     \(         # Geöffnete Klammer
+    #                     """
+
+    regex_begin_pattern = SyntaxClass.get_pattern_start_of_procedure()
 
 
 
-    # _BUGFIX: Besonders beim Beispielmmodul 1 wird zu früh beendet! Neue Regex > V. 0.1.2
-    regex_end_pattern = r""".*?     # Start mit beliebigen Zeichen
-                        (?:End)    # Beinhaltet das KEyword
-                        \s+        # mind. 1 bis n Leerzeichen
-                        (?:PLACEHOLDER_PROCEDURE_TYPE)    # Beinhaltet das KEyword
-                        \s+         # mind. 1 bis n Leerzeichen
-                        .*"""
+
+    # # _BUGFIX: Besonders beim Beispielmmodul 1 wird zu früh beendet! Neue Regex > V. 0.1.2
+    # regex_end_pattern = r""".*?     # Start mit beliebigen Zeichen
+    #                     (?:End)    # Beinhaltet das KEyword
+    #                     \s+        # mind. 1 bis n Leerzeichen
+    #                     (?:PLACEHOLDER_PROCEDURE_TYPE)    # Beinhaltet das KEyword
+    #                     \s+         # mind. 1 bis n Leerzeichen
+    #                     .*"""
     
-
+    regex_end_pattern = SyntaxClass.get_pattern_end_of_procedure()
 
     '''
     # ALT: Bis Version 0.1.1:
@@ -621,10 +628,13 @@ class Procedure():
 
 
 
-    # Zum späteren Prüfen bzgl. Auskommentierung extra Regex:
-    __regex_ausschlus_kommentar_pattern = r"""'    # KommentarApostroph
-                                        .?       # Beliebiges Zeichen
-                                        """
+    # # Zum späteren Prüfen bzgl. Auskommentierung extra Regex:
+    # __regex_ausschlus_kommentar_pattern = r"""'    # KommentarApostroph
+    #                                     .?       # Beliebiges Zeichen
+    #                                     """
+    
+    __regex_ausschlus_kommentar_pattern = SyntaxClass.get_pattern_single_line_comment()
+
 
     # Hier ist keine weitere Konkretisierung durch Subklassen erforderlich, daher direkt kompiliert:
     regex_ausschluss_kommentar = re.compile(__regex_ausschlus_kommentar_pattern, re.VERBOSE | re.IGNORECASE)
@@ -670,7 +680,10 @@ class Procedure():
         # pattern = re.compile(r'(#####.*?#####)', re.DOTALL)
 
         # TODO: Get the pattern from a class (e.g.) of the programming language to analyse.
-        pattern = None # for VBA
+        # pattern = None # for VBA
+
+        # pattern = SyntaxClass.pattern_multiline_comment
+        pattern = SyntaxClass.get_pattern_multiline_comment()
 
 
 
@@ -709,6 +722,7 @@ class Procedure():
 
             comments.append((start_line, end_line, comment))
 
+            # TODO: Sinnvoller (weniger Speicherplatz, dafür aber mehr Logik) wäre nur von und bis zu speichern, und dann über eine Funktion abzugleichen, ob die relevante Zeile innerhalb eines Ausschlusbereiches liegt. Dies wäre nämlich auch relevant fuer Klassenmethoden in Python o.ä. (pattern ist exakt identisch mit Functions aber eben innerhalb einer Klasse...)
             # Auflistung aller Zeilennummern des Bereiches:
             for line_no in range(start_line, end_line + 1):
                 multiline_comment_line_numbers.append(line_no)
@@ -1064,26 +1078,36 @@ class Procedure():
             
 
             # List of regex-pattern which would match for a call. can be extend as required.
-            # TODO: Use the same concept for the excluding_pattern
-            regex_including_patterns = [
-
-                # # OBSOLET durch untere:
-                # r"\bcall\s+§§___PROC_NAME___§§\b".replace("§§___PROC_NAME___§§", prozedur_name),
-
-                # # OBSOLET durch untere:
-                # r"\b§§___PROC_NAME___§§\(".replace("§§___PROC_NAME___§§", prozedur_name),
 
 
+            """ OK:
 
-                r"(\s{0,}§§___PROC_NAME___§§\b)(?!\s{0,}=)".replace("§§___PROC_NAME___§§", prozedur_name)
+            # # TODO: Use the same concept for the excluding_pattern
+            # regex_including_patterns = [
+
+            #     # # OBSOLET durch untere:
+            #     # r"\bcall\s+§§___PROC_NAME___§§\b".replace("§§___PROC_NAME___§§", prozedur_name),
+
+            #     # # OBSOLET durch untere:
+            #     # r"\b§§___PROC_NAME___§§\(".replace("§§___PROC_NAME___§§", prozedur_name),
 
 
-            ]
+
+            #     r"(\s{0,}§§___PROC_NAME___§§\b)(?!\s{0,}=)".replace("§§___PROC_NAME___§§", prozedur_name)
+
+
+            # ]
+            """
+            
+            regex_including_patterns = SyntaxClass.get_pattern_references(prozedur_name)
 
 
             regex_excluding_patterns = [
                 cls.regex_ausschluss_kommentar,
             ]
+            
+            # TODO: # JULIA: 
+            # regex_excluding_patterns = SyntaxClass.get_pattern_single_line_comment()
 
 
             '''

@@ -2,32 +2,13 @@
 
 
 
-**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-01-07 11:28**
+**Letzte Änderung** der Quelldatei 'beispiel_modul.bas' vor der Generierung dieser automatischen Dokumentation: **2024-02-08 21:53**
 
 
-Generierungsdatum dieser Dokumentation: **2024-01-14 00:31:13**
-
-
-
+Generierungsdatum dieser Dokumentation: **2024-02-09 01:29:05**
 
 
 
-
-
-
-<!-- TODO: nur temporrary!  -->
-# ZWISCHENGELAGERT ALS ZIEL-VORGABE FÜR ABRUFSEQUENZ:
-
-
-**Aktuelle Bugs:**
-
-- Probleme mit inkorrekter Einrückungen nach diversen Aufrufebenen scheint behoben zu sein 2024-01-07 - 22:47:41 (Teste nochmal!)
-  
-- Es werden nicht alle Aufrufe erkannt (ODER??!)
-    
-  - siehe beispiel_modul.bas --> liebherr : sollte 6 referenzierungen haben, es werden nur 5 dokumentiert... Zeile 106 fehlt:  ```var = liebherr```
-
-  - wäre nicht tragisch, weil liebherr in diesem Syntax bei VBA nur eine Funktion mit Rückgabewert sein kann, und dann könnte man auch liebherr() schreiben, das würde erkannt werden. Allerdings funktioniert auch die Schreibweise ohne KLammern, weshalb sie auch erkannt werden sollte (auch wenn ich es nie so schreiben wollen würde...)
 
 
 ﻿
@@ -49,16 +30,16 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 * [**Subs**](#sec_subs) (4)
   
-  - [```bauer```](#bauer) : <small>  [Zeile 90]  </small>
+  - [```bauer```](#bauer) : <small>  [Zeile 87]  </small>
 
 
-  - [```casio```](#casio) : <small>  [Zeile 136]  </small>
+  - [```casio```](#casio) : <small>  [Zeile 133]  </small>
 
 
-  - [```liebherr```](#liebherr) : <small>  [Zeile 119]  </small>
+  - [```liebherr```](#liebherr) : <small>  [Zeile 116]  </small>
 
 
-  - [```main```](#main) : <small>  [Zeile 54]  </small>
+  - [```main```](#main) : <small>  [Zeile 51]  </small>
 
 
   
@@ -72,10 +53,10 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 * [**Functions**](#sec_functions) (2)
   
   
-  - [```addieren```](#addieren) : <small>  [Zeile 16]  </small>
+  - [```addieren```](#addieren) : <small>  [Zeile 13]  </small>
 
 
-  - [```subtrahieren```](#subtrahieren) : <small>  [Zeile 34]  </small>
+  - [```subtrahieren```](#subtrahieren) : <small>  [Zeile 31]  </small>
 
 
   
@@ -100,9 +81,6 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
   
  Beispiel Modul zum Testen der Dokumentation der Abruffolge.
-
- ## !!! # ACHTUNG BUGS: !!!
- > Sub 'liebherr' wird insgesamt 6x referenziert, nicht 5x, wie aktuell dokumentiert!
 
 ﻿
 <!-- -------------------------------------------------- -->
@@ -134,7 +112,7 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 
 <a name="bauer"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub bauer```</span><small>(Zeile 90)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub bauer```</span><small>(Zeile 87)</small>
 
 
 
@@ -193,7 +171,7 @@ Kein Aufruf gefunden.
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (4)</summary>
+    <summary>      Interne Aufrufabfolge (5)</summary>
 
 ---
 
@@ -204,28 +182,35 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```liebherr```](#liebherr) : <small>  [Zeile 100] : ```    call liebherr``` </small>
+- [```liebherr```](#liebherr) : <small>  [Zeile 97] : ```    call liebherr``` </small>
 
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```liebherr```](#liebherr) : <small>  [Zeile 101] : ```    call liebherr ' Aufruf``` </small>
+- [```liebherr```](#liebherr) : <small>  [Zeile 98] : ```    call liebherr ' Aufruf``` </small>
 
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```liebherr```](#liebherr) : <small>  [Zeile 103] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+- [```liebherr```](#liebherr) : <small>  [Zeile 100] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
 
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```liebherr```](#liebherr) : <small>  [Zeile 107] : ```    var = liebherr("gvkil")``` </small>
+- [```liebherr```](#liebherr) : <small>  [Zeile 103] : ```    var = liebherr``` </small>
+
+
+
+  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+
+- [```liebherr```](#liebherr) : <small>  [Zeile 104] : ```    var = liebherr("gvkil")``` </small>
 
 
 
@@ -343,7 +328,7 @@ End Sub
 
 
 <a name="casio"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub casio```</span><small>(Zeile 136)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub casio```</span><small>(Zeile 133)</small>
 
 
 
@@ -509,7 +494,7 @@ End Sub
 
 
 <a name="liebherr"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub liebherr```</span><small>(Zeile 119)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Public Sub liebherr```</span><small>(Zeile 116)</small>
 
 
 
@@ -538,7 +523,7 @@ End Sub
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (5)</summary>
+<summary> Referenzierungen dieser Prozedur (6)</summary>
 
 <div style="padding-left:1em;">
 
@@ -548,15 +533,17 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```main```](#main) : <small>  [Zeile 80] : ```    call liebherr``` </small>
+- [```main```](#main) : <small>  [Zeile 77] : ```    call liebherr``` </small>
 
-- [```bauer```](#bauer) : <small>  [Zeile 100] : ```    call liebherr``` </small>
+- [```bauer```](#bauer) : <small>  [Zeile 97] : ```    call liebherr``` </small>
 
-- [```bauer```](#bauer) : <small>  [Zeile 101] : ```    call liebherr ' Aufruf``` </small>
+- [```bauer```](#bauer) : <small>  [Zeile 98] : ```    call liebherr ' Aufruf``` </small>
 
-- [```bauer```](#bauer) : <small>  [Zeile 103] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
+- [```bauer```](#bauer) : <small>  [Zeile 100] : ```    call liebherr("ERROR") ' Aufruf waere zwar ungültig, aber Prozedur könnte ja anders aussehen!``` </small>
 
-- [```bauer```](#bauer) : <small>  [Zeile 107] : ```    var = liebherr("gvkil")``` </small>
+- [```bauer```](#bauer) : <small>  [Zeile 103] : ```    var = liebherr``` </small>
+
+- [```bauer```](#bauer) : <small>  [Zeile 104] : ```    var = liebherr("gvkil")``` </small>
 
 
 
@@ -686,7 +673,7 @@ End Sub
 
 
 <a name="main"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub main```</span><small>(Zeile 54)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Sub main```</span><small>(Zeile 51)</small>
 
 
 
@@ -759,17 +746,17 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```addieren```](#addieren) : <small>  [Zeile 74] : ```        wert = addieren(i, i)``` </small>
+- [```addieren```](#addieren) : <small>  [Zeile 71] : ```        wert = addieren(i, i)``` </small>
 
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```subtrahieren```](#subtrahieren) : <small>  [Zeile 75] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+- [```subtrahieren```](#subtrahieren) : <small>  [Zeile 72] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
 
 
-  - [```addieren```](#addieren) : <small>  [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+  - [```addieren```](#addieren) : <small>  [Zeile 41] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
 
 
@@ -780,7 +767,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```liebherr```](#liebherr) : <small>  [Zeile 80] : ```    call liebherr``` </small>
+- [```liebherr```](#liebherr) : <small>  [Zeile 77] : ```    call liebherr``` </small>
 
 
 
@@ -913,7 +900,7 @@ End Sub
 
 
 <a name="addieren"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function addieren```</span><small>(Zeile 16)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Function addieren```</span><small>(Zeile 13)</small>
 
 
 
@@ -954,9 +941,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```subtrahieren```](#subtrahieren) : <small>  [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+- [```subtrahieren```](#subtrahieren) : <small>  [Zeile 41] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
-- [```main```](#main) : <small>  [Zeile 74] : ```        wert = addieren(i, i)``` </small>
+- [```main```](#main) : <small>  [Zeile 71] : ```        wert = addieren(i, i)``` </small>
 
 
 
@@ -1088,7 +1075,7 @@ End Function
 
 
 <a name="subtrahieren"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function subtrahieren```</span><small>(Zeile 34)</small>
+<span style="background-color: lightgrey; padding: 2px;">```Private Function subtrahieren```</span><small>(Zeile 31)</small>
 
 
 
@@ -1130,7 +1117,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```main```](#main) : <small>  [Zeile 75] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
+- [```main```](#main) : <small>  [Zeile 72] : ```        wert = subtrahieren(i, i - 1) ' Erklärung siehe @ Func!``` </small>
 
 
 
@@ -1162,7 +1149,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```addieren```](#addieren) : <small>  [Zeile 44] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
+- [```addieren```](#addieren) : <small>  [Zeile 41] : ```    subtrahieren = addieren(a, -b) ' Parameter b wird mit -1 multipliziert übergeben``` </small>
 
 
 
@@ -1310,4 +1297,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-01-14 00:31:13 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-01-14 00:28:22: '0afb9dd58034fd94889545b5ec6e620a61bc006f')</small> 
+<small>Dokumentation generiert am 2024-02-09 01:29:05 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-02-09 01:03:20: '02ed4aa70b80f1f83ff87670836ebac8acda7a19')</small> 

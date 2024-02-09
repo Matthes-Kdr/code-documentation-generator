@@ -177,6 +177,8 @@ import gitinfo
 
 
 from gui import DocumenterGui
+from programming_languages import SyntaxVba
+
 
 
 
@@ -670,7 +672,10 @@ class Procedure():
         # pattern = re.compile(r'(#####.*?#####)', re.DOTALL)
 
         # TODO: Get the pattern from a class (e.g.) of the programming language to analyse.
-        pattern = None # for VBA
+        # pattern = None # for VBA
+
+        # pattern = SyntaxVba.pattern_multiline_comment
+        pattern = SyntaxVba.get_pattern_multiline_comment()
 
 
 
@@ -1064,26 +1069,36 @@ class Procedure():
             
 
             # List of regex-pattern which would match for a call. can be extend as required.
-            # TODO: Use the same concept for the excluding_pattern
-            regex_including_patterns = [
-
-                # # OBSOLET durch untere:
-                # r"\bcall\s+§§___PROC_NAME___§§\b".replace("§§___PROC_NAME___§§", prozedur_name),
-
-                # # OBSOLET durch untere:
-                # r"\b§§___PROC_NAME___§§\(".replace("§§___PROC_NAME___§§", prozedur_name),
 
 
+            """ OK:
 
-                r"(\s{0,}§§___PROC_NAME___§§\b)(?!\s{0,}=)".replace("§§___PROC_NAME___§§", prozedur_name)
+            # # TODO: Use the same concept for the excluding_pattern
+            # regex_including_patterns = [
+
+            #     # # OBSOLET durch untere:
+            #     # r"\bcall\s+§§___PROC_NAME___§§\b".replace("§§___PROC_NAME___§§", prozedur_name),
+
+            #     # # OBSOLET durch untere:
+            #     # r"\b§§___PROC_NAME___§§\(".replace("§§___PROC_NAME___§§", prozedur_name),
 
 
-            ]
+
+            #     r"(\s{0,}§§___PROC_NAME___§§\b)(?!\s{0,}=)".replace("§§___PROC_NAME___§§", prozedur_name)
+
+
+            # ]
+            """
+            
+            regex_including_patterns = SyntaxVba.get_pattern_references(prozedur_name)
 
 
             regex_excluding_patterns = [
                 cls.regex_ausschluss_kommentar,
             ]
+            
+            # TODO: # JULIA: 
+            # regex_excluding_patterns = SyntaxVba.get_pattern_single_line_comment()
 
 
             '''

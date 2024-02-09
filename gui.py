@@ -51,7 +51,7 @@ class DocumenterGui:
 
     TITLE = "Code Documenter"
 
-    DEBUG = 0
+    DEBUG = 1
 
     def __init__(self):
         """
@@ -126,7 +126,7 @@ class DocumenterGui:
         self.input_file = "input_data/beispiel_modul.bas"
 
 
-        self.output_dir = "output_dir"
+        self.output_dir = "output_data"
         
         self.show_message = True
         self.convert_checked = True

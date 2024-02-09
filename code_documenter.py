@@ -33,7 +33,7 @@ Wichtige Details siehe am Ende dieses docstrings.
 - Bereitstellung einer einfachen GUI / HMI, um Input- und Output Pfade zu parametrisieren
 
 
-
+ 
 
 
 

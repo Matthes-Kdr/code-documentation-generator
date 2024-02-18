@@ -1,9 +1,23 @@
-﻿# Code Documentation Generator
+﻿# Code Documentation Generator (especially for functional-programming structures)
+
+
+>  Tool to automatically generate a documentation of the source code - mainly used for function-based flows (currently only supporting single VBA-moduls, support for Python and C++ shall follow).
+
+> **Unlinke many other generic documentation tools this project focus on the documentation of code with a functional-programming approach rather than a class-based approach.** Aim is to show the flow (calls of other procedures) within the procedures.
+
+For a quick first impression of the result, see the screenshots in below ([Output-Ergebnis, nach Umwandlung von MD- in HTML-Datei:](#output-ergebnis-nach-umwandlung-von-md--in-html-datei))
+
+
+
+> As I started this project privatly and was not very forward-looking a lot of the text (readme + code comments) is written in **German**. Step by step I will change this and translate everything to have a continuous language - sorry for that.
+
+---
+
+
 
 > Hilfsmittel, um automatisiert eine Dokumentation von Quellcode zu generieren
 
  
-> Tool for generate a documentation of sourcecode (currently only for single VBA-moduls) 
 
 
 
@@ -14,7 +28,7 @@ Basierend auf Textdateien mit Quellcode wird durch die Anwendung eine Dokumentat
 
 <h1> Inhalt:</h1>
 
-- [Code Documentation Generator](#code-documentation-generator)
+- [Code Documentation Generator (especially for functional-programming structures)](#code-documentation-generator-especially-for-functional-programming-structures)
 - [Zusammenfassung und Ziel des Projektes](#zusammenfassung-und-ziel-des-projektes)
 - [Voraussetzungen zur Anwendung](#voraussetzungen-zur-anwendung)
   - [NOTE: Conventions / Konventionen:](#note-conventions--konventionen)
@@ -191,6 +205,8 @@ Nutzung der **automatischen Konvertierung** MD --> HTML:
 Nutzung der **manuellen Konvertierung** MD --> HTML:
 
 ![Screenshot der generierten Dokumentation](screenshots/result_html_manual_procedure.png)
+
+
 
 
 

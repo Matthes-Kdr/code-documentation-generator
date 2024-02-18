@@ -188,7 +188,7 @@ from programming_languages import SyntaxVba
 #### GLOBALS: ####
 # =============================================================================
 
-DEBUG = 1
+DEBUG = 0
 
 # HACK: only Vba by now:
 SyntaxClass = SyntaxVba

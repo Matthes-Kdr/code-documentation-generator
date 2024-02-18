@@ -184,11 +184,15 @@ from programming_languages import SyntaxVba
 
 
 
+
 # =============================================================================
 #### GLOBALS: ####
 # =============================================================================
 
 DEBUG = 0
+
+
+DocumenterGui.set_debug_mode(DEBUG)
 
 # HACK: only Vba by now:
 SyntaxClass = SyntaxVba

@@ -51,7 +51,23 @@ class DocumenterGui:
 
     TITLE = "Code Documenter"
 
-    DEBUG = 1
+
+    __DEBUG = False # should be set from outside the class in the main script as otherwise there will be multiple definitions!
+
+    @classmethod
+    def set_debug_mode(cls, value:bool):
+        """
+        Sets the debug mode for this class.
+
+        Args:
+            value (bool|int): 0 or 1 or boolean values therefore.
+        """
+        cls.__DEBUG = bool(value)
+        if cls.__DEBUG:
+            print("!!!  Use the debug mode of class 'DocumenterGui'  !!!")
+
+
+
 
     def __init__(self):
         """
@@ -64,7 +80,7 @@ class DocumenterGui:
         
         
         
-        if self.DEBUG:
+        if self.__DEBUG:
              
              self.debug_skip_main_win()
              
@@ -405,7 +421,7 @@ def demo_ablauf():
 if __name__ == "__main__":
 
 
-    DocumenterGui.DEBUG = 1
+    DocumenterGui.__DEBUG = 1
 
     demo_ablauf()
 

@@ -3,52 +3,50 @@
 
 >  Tool to automatically generate a documentation of the source code - mainly used for function-based flows (currently only supporting single VBA-moduls, support for Python and C++ shall follow).
 
-> **Unlinke many other generic documentation tools this project focus on the documentation of code with a functional-programming approach rather than a class-based approach.** Aim is to show the flow (calls of other procedures) within the procedures.
+> **Unlinke many other generic documentation tools this project focus on the documentation of code with a functional-programming approach rather than a class-based approach.** Aim is to **show the program schedule (flow / calls of other procedures)** within the procedures.
 
-For a quick first impression of the result, see the screenshots in below ([Output-Ergebnis, nach Umwandlung von MD- in HTML-Datei:](#output-ergebnis-nach-umwandlung-von-md--in-html-datei))
+For a quick first impression of the result, see the screenshots in below [Screenshots of operation and generated output files](#screenshots-of-operation-and-generated-output-files)
 
 
 
-> As I started this project privatly and was not very forward-looking a lot of the text (readme + code comments) is written in **German**. Step by step I will change this and translate everything to have a continuous language - sorry for that.
+> **NOTE:** As I started this project privatly and was not very forward-looking a lot of the text (readme + code comments) is written in **German**. Step by step I will change this and translate everything to have a continuous language - sorry for that.
+>
+> The original [**German Readme**](<readme (German - state of 2024-02-19).md>)  will be untoucht in the future but will still remains as reference with the current status as of 2024-02-19 for checking translation issues.
+>
+> **<span style='color:red'>&#9888; If there is anything unclear or poor translated - feel free to correct it or to ask (e.g. via a new issue?) for the meaning...</span>**
+
 
 ---
 
 
 
-> Hilfsmittel, um automatisiert eine Dokumentation von Quellcode zu generieren
-
- 
+Based on the actual text files with source code, the application creates a documentation of this source code.
 
 
-
-
-
-Basierend auf Textdateien mit Quellcode wird durch die Anwendung eine Dokumentation dieses Quellcodes erstellt.
-
-
-<h1> Inhalt:</h1>
+<h1> Table Of Content:</h1>
 
 - [Code Documentation Generator (especially for functional-programming structures)](#code-documentation-generator-especially-for-functional-programming-structures)
-- [Zusammenfassung und Ziel des Projektes](#zusammenfassung-und-ziel-des-projektes)
-- [Voraussetzungen zur Anwendung](#voraussetzungen-zur-anwendung)
-  - [NOTE: Conventions / Konventionen:](#note-conventions--konventionen)
-- [Bedienungshinweise / Workflow der Anwendung](#bedienungshinweise--workflow-der-anwendung)
-- [Inhalte der generischen Dokumentation](#inhalte-der-generischen-dokumentation)
-  - [Anzeige einer Übersicht über das Modul](#anzeige-einer-übersicht-über-das-modul)
-  - [Anzeige der Dokumentation aller Prozeduren](#anzeige-der-dokumentation-aller-prozeduren)
-    - [Anzeige einer Übersicht über die Prozedur](#anzeige-einer-übersicht-über-die-prozedur)
-    - [Anzeige von Referenzierungen dieser Prozedur](#anzeige-von-referenzierungen-dieser-prozedur)
-    - [Anzeige von interner Aufrufabfolge](#anzeige-von-interner-aufrufabfolge)
-    - [Anzeige des Quellcodes](#anzeige-des-quellcodes)
-  - [Anzeige der Schlussbemerkungen](#anzeige-der-schlussbemerkungen)
-- [Screenshots von Bedienung und Ergebnis der Anwendung](#screenshots-von-bedienung-und-ergebnis-der-anwendung)
-  - [GUI zur Parametrisierung und Steuerung des Workflows:](#gui-zur-parametrisierung-und-steuerung-des-workflows)
-  - [Output-Ergebnis, nach Umwandlung von MD- in HTML-Datei:](#output-ergebnis-nach-umwandlung-von-md--in-html-datei)
-    - [Generierter Seitenanfang:](#generierter-seitenanfang)
-    - [Generierte Dokumentation von Prozeduren:](#generierte-dokumentation-von-prozeduren)
-    - [Generierte Dokumentation von Prozeduren:](#generierte-dokumentation-von-prozeduren-1)
-    - [Generiertes Seitenende:](#generiertes-seitenende)
-- [Ausblick / mögliche Weiterentwicklungen](#ausblick--mögliche-weiterentwicklungen)
+- [Main Advantages in contrast to other tools](#main-advantages-in-contrast-to-other-tools)
+- [Summary and aim of the project](#summary-and-aim-of-the-project)
+- [Prerequisites](#prerequisites)
+  - [Preparation to execute the script](#preparation-to-execute-the-script)
+  - [Preparation of the text file(s) which contains the source code to be documented (input-data)](#preparation-of-the-text-files-which-contains-the-source-code-to-be-documented-input-data)
+- [Operating instructions / Workflow of the Usage of the application](#operating-instructions--workflow-of-the-usage-of-the-application)
+- [Contents of the generic documentation - This is what you will get:](#contents-of-the-generic-documentation---this-is-what-you-will-get)
+  - [Display an overview of the module](#display-an-overview-of-the-module)
+  - [Display the documentation of each of the procedures](#display-the-documentation-of-each-of-the-procedures)
+    - [Display an overview of the procedure](#display-an-overview-of-the-procedure)
+    - [Display of references of this procedure](#display-of-references-of-this-procedure)
+    - [Display of internal call sequence](#display-of-internal-call-sequence)
+    - [Display of the source code](#display-of-the-source-code)
+  - [Display of closing remarks](#display-of-closing-remarks)
+- [Screenshots of operation and generated output files](#screenshots-of-operation-and-generated-output-files)
+  - [GUI for parameterization and control of the workflow:](#gui-for-parameterization-and-control-of-the-workflow)
+  - [Output result, after conversion from MD file to HTML file:](#output-result-after-conversion-from-md-file-to-html-file)
+    - [Generated top of page:](#generated-top-of-page)
+    - [Generated documentation of procedures](#generated-documentation-of-procedures)
+    - [Generated end of page](#generated-end-of-page)
+- [Forecast /  possible further developments](#forecast---possible-further-developments)
 
 
 
@@ -60,186 +58,211 @@ Basierend auf Textdateien mit Quellcode wird durch die Anwendung eine Dokumentat
 
 
 
-# Zusammenfassung und Ziel des Projektes
+# Summary and aim of the project
 
-Um bei umfangreicheren Quellcode-Dateien den Überblick über die Inhalte und Abläufe innerhalb dieser Module zu behalten, ist eine Dokumentation sehr sinnvoll bzw. notwendig. Um den Aufwand zur Erstellung hiervon möglichst gering zu halten, kann mit diesem Code-Documentation-Generator automatisiert eine solche Dokumentation erfolgen. Zu den Bestandteilen der Dokumentation gehört eine Beschreibung/Erklärung der einzelnen Prozeduren, die bereits im Quellcode implementiert sein muss (Docstring). Zusätzlich hierzu werden alle Referenzierungen der einzelner Prozeduren detailliert aufgelistet, sodass Zusammenhänge zwischen den einzelnen Prozeduren deutlich werden.
-Außerdem wird der Ablauf von Aufrufen innerhalb jeder Prozedur analysiert und dokumentiert, was letztendlich eine Übersicht des  groben Gesamt-Ablaufes des zu analysierenden Codes darstellt.
-Um im Einzelfall auch genauere Fragestellungen zu beantworten, wird zusätzlich auch der Quellcode selbst von jeder Prozedur dokumentiert.
+In order to maintain an overview of the content and processes within these modules for larger source code files, documentation is very useful and necessary. In order to minimize the effort required to create this documentation, this code documentation generator can be used to create such documentation automatically. The documentation includes a description/explanation of the individual procedures, which must already be implemented in the source code (as docstrings or docstring-like comment, see conventions below). In addition to that, **all references to the individual procedures are listed in detail, so that  the connections between the individual procedures become obvious**.
+**The sequence of calls (flow) within each procedure is also analyzed and documented, which ultimately provides an overview of the rough overall sequence of the code to be analyzed**.
+In order to answer more precise questions in individual cases, the source code itself of each procedure is also documented in an expandable area.
 
-Die Anwendung erfolgt intuitiv über eine GUI, die alle erforderlichen Eingaben abfragt, und über die der Programmablauf gesteuert wird.
-
-
-
-# Voraussetzungen zur Anwendung
-
-- Aktuell ausschließlich VBA-Code
-- Aktuell kann immer nur ein einziges VBA-Modul dokumentiert werden. Dependencies zu anderen Modulen werden nicht berücksichtigt (z. B. würde bei der Dokumentation des Moduls "Modul1.bas" ein Aufruf der Prozedur `Modul2.Procedure1` nicht als Prozedur-Aufruf berücksichtigt werden, gleichzeitig würde diese Referenzierung dieser Prozedur bei der Dokumentation von Modul2.bas" nicht berücksichtigt werden.)
+The application provides an intuitively handling via GUI, which queries all necessary inputs from the user and controls the program flow.
 
 
 
-## NOTE: Conventions / Konventionen:
-
-
-> **Docstring-Konvention speziell für die Programmiersprache VBA:** Als DocString einer Prozedur werden alle auskommentierten Zeilen gewertet, die direkt (ohne Leerzeile) unter der Deklarationszeile einer Prozedur stehen. Der Docstring wird als beendet angesehen, sobald eine Leerzeile folgt, oder eine Zeile, die nicht auskommentiert ist.
-
-
-> To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line. Empty lines that are to be included must also be labelled as comments.
+> **Unlinke many other generic documentation tools this project focus on the documentation of code with a functional-programming approach rather than a class-based approach.** Aim is to show the program schedule (flow) (calls of other procedures) within the procedures. For mainly class-based programms available tools like pdoc (as an example for python programming language) will be the better choice.
 
 
 
 
+# Prerequisites
+
+## Preparation to execute the script
+
+<span style='color:red'> **&#9888;... # TODO: ... `pip install requirements.txt` - ??? currently the file is missing!!! But you don't need much as most of the logic is just searching through text...... ()**</span>
+
+## Preparation of the text file(s) which contains the source code to be documented (input-data)
 
 
-# Bedienungshinweise / Workflow der Anwendung
+- Currently supported input source code:
+  - only VBA 
+  - (aim is to expand the tool for Python and C++)
+- Currently, only one single text file with code can be documented at a time (only a single module). Dependencies to other modules are not taken into account (e.g. in the documentation of the module "Module1.bas", a call of the procedure "Module2.Procedure1" would not be taken into account as a procedure call, at the same time this referencing of this procedure would not be taken into account in the documentation of "Module2.bas").
 
-Um eine korrekte Dokumentation zu generieren, muss sichergestellt werden, dass innerhalb der zu dokumentierenden Datei die erforderlichen Konventionen eingehalten werden (siehe Voraussetzungen zur Anwendung).
+  <span style="color:red">**&#9888; Poor translation...  Please correct if you get the content...**</span>
 
+- The description of each procedure will be generated by using the docstring below the declaration line in the code - if there is a docstring provided (so make sure it is...)
 
-1. Starten der Anwendung
-2. Parametrisierung der vorzunehmenden Dokumentation innerhalb einer GUI:
-   1. Auswahl der zu dokumentierenden Textdatei (".bas")
-   2. Auswahl des Zielverzeichnisses, in dem die zu generierende Dokumentation (".md") gespeichert werden soll
-   3. Auswahl, ob die zu erstellende .md-Datei in eine HTML umgewandelt werden soll
-   4. Auswahl bzgl. Ausgabe-Details in der Dokumentation
-3. Starten der Generierung
-4. (Kurze Wartezeit)
-5. Schließen der Abschlussmeldung
-6. [OPTIONAL]:  Zur manuellen Konvertierung der erstellten Markdown-Datei in eine HTML-Datei wird die Extension 'Markdown All in One' für  VSCode empfohlen, da hierüber eine Konvertierung erfolgt, die für eine ordentliche Formatierung der Code-Segmente in den generierten HTML-Dateien sorgt (siehe Vergleichs-Screenshots unter [Screenshots](#screenshots-von-bedienung-und-ergebnis-der-anwendung)).
+- Relevant conventions for documenting VBA:
 
-
-
-
-# Inhalte der generischen Dokumentation
-
-Alle Inhalte sind in der erstellten HTML-Datei interaktiv miteinander verlinkt.
-
-
-## Anzeige einer Übersicht über das Modul
-- Titel mit Dateinamen der Quelldatei
-- Organisatorische Daten:
-  - Zeitstempel der Generierung der Dokumentation
-  - Zeitstempel der letzten Änderung der Quelldatei
-- Inhaltsverzeichnis
-- Modulinformationen / Modulkopf / DocString des Moduls
-
-
-## Anzeige der Dokumentation aller Prozeduren
-
-Es werden in einer Section zunächst alle einzelnen Subs, in einer weiteren Section dann alle einzelnen Functions dokumentiert, wobei die Dokumentation einer einzelnen Prozedur wie folgt aufgebaut ist:
-
-
-### Anzeige einer Übersicht über die Prozedur
-- Modifier, Name und Zeilennummer der Deklarierungszeile
-- DocString der Prozedur (definiert als die Kommentare direkt unterhalb der Deklarationszeile ohne Leerzeile)
-
-
-
-### Anzeige von Referenzierungen dieser Prozedur
-
-> Zeigt, wo diese Prozedur an anderen Stellen verwendet und aufgerufen wird.
-
-- Anzahl an Referenzierungen
-- Für jede Referenzierung: 
-  - Name der aufrufenden (übergeordneten) Prozedur
-  - Zeilennummer des Aufrufes
-  - Gesamter Code dieser Zeile, sodass Aufrufparameter dokumentiert werden
-
-
-### Anzeige von interner Aufrufabfolge
-
-> Zeigt die Reihenfolge aller Aufrufe von anderen Prozeduren in einer Prozedur. (dabei werden aber nur solche Prozeduren berücksichtigt, die in dieser Dokumentation selbst dokumentiert werden)
-
-- Anzahl an Einträgen für die Aufrufe anderer Prozeduren
-- Für jeden Aufruf einer anderen Prozedur: 
-  - Name dieser aufgerufenen Prozedur
-  - Zeilennummer des Aufrufes
-  - Gesamter Code dieser Zeile, sodass Aufrufparameter dokumentiert werden
-  - sofern es innerhalb der aufgerufenen Prozedur weitere Aufrufe erfolgen, werden diese im gleichen Muster jeweils eingerückt gelistet, und dies bis dass zuletzt eine Prozedur gelistet wird, in der keine weiteren Aufrufe erfolgen.
-
-
-### Anzeige des Quellcodes
-
-> Zeigt den gesamten Quellcode der Prozedur an
-
-- in der erstellten HTML-Datei kann dieser Teil interaktiv verborgen / angezeigt werden (collapse/expand), da der Quellcode normalerweise nicht zur Dokumentation desselben gehört.
+    > **Docstring convention specifically for the VBA programming language:** 
+    > 
+    > As there is no specific syntax for multiline comments in VBA (as for docstrings in python) here will be introduced following convention: 
+    >
+    > To generate a docstring from the VBA-Source make sure that the text to be displayed is located directly below the declaration line of the procedure. The text of this docstring  is considered completed with the first following line in the code which is not an entire comment line. Empty lines that are to be included must also be labelled as comments.
 
 
 
 
-## Anzeige der Schlussbemerkungen
-
-Am Seitenende werden Hinweise darauf gegeben, dass es sich bei der Dokumentation um eine generische Dokumentation handelt.
-
-Aktuell wird zusätzlich noch als Collapsed-Segment der DocString des Python-Moduls des Code-Generator-Scriptes dokumentiert, durch das die Umwandlung erfolgte.
-
-Außerdem wird die aktuelle Version bzw. das aktuelle Commit dieses Scriptes dokumentiert.
 
 
+# Operating instructions / Workflow of the Usage of the application
 
-# Screenshots von Bedienung und Ergebnis der Anwendung
+In order to generate correct documentation, it must be ensured that the required conventions are adhered to within the file to be documented (see Prerequisites above).
 
-## GUI zur Parametrisierung und Steuerung des Workflows:
+
+1. start the script via navigate to source directory in the terminal and prompt `python code_documenter.py`
+2. Use the GUI to parameterize  the output which will be generated:
+   
+   2.1. selection of the (input-) text file to be documented *(currently only ".bas")*
+
+   2.1. selection of the target directory in which the documentation to be generated (".md") is to be saved
+   
+   2.2. selection of wheather the .md file to be created should be converted to HTML afterwards
+   
+   2.3. selection regarding output details in the documentation
+
+3. start the generation
+
+4. (short waiting time)
+   
+5. close the final message
+
+6. *[OPTIONAL]*:  The 'Markdown All in One' extension for VSCode is recommended for manual conversion of the generated Markdown file into an HTML file, as this provides a conversion that ensures proper formatting of the code segments in the generated HTML files (see comparison screenshots under [Screenshots](#screenshots-of-operation-and-result-of-application)).
+
+
+
+
+# Contents of the generic documentation - This is what you will get:
+
+*All content in the generated output MD and HTML file is interactively linked.*
+
+
+
+## Display an overview of the module
+
+- Title with file name of the source file
+- Organizational data:
+  - Timestamp of the generation of the documentation
+  - Timestamp of the last change to the source file
+- Table of contents
+- Module information / module header / DocString of the module
+
+
+## Display the documentation of each of the procedures
+
+All individual subs are first documented in one section and then all individual functions in another section, whereby the documentation of an individual procedure is structured as follows:
+
+
+### Display an overview of the procedure
+
+- Modifier, name and line number of the declaration line
+- DocString of the procedure *(defined as the comments directly below the declaration line without a blank line)*
+
+
+
+### Display of references of this procedure
+
+> Shows where this procedure is used and called in other places.
+
+- Total counts of references
+- For each referencing: 
+  - Name of the calling (parent) procedure
+  - Line number of the call
+  - Complete code of this line, so that call parameters are documented
+
+
+### Display of internal call sequence
+
+> Shows the sequence of all calls of other procedures in a procedure. (only those procedures that are documented in this documentation itself are taken into account) *(Actually this is the inverse/reverse for the references of the procedures...)*
+
+- Total counts of entries for the calls of other procedures
+- For each call of another procedure: 
+  - Name of this called procedure
+  - Line number of the call
+  - Entire code of this line, so that call parameters are documented
+  - if there are further calls within the called procedure, these are listed indented in the same pattern until the last procedure is listed in which no further calls are made. *(see Screenshots below...)*
+
+
+### Display of the source code
+
+> Displays the entire source code of the procedure
+
+- In the HTML file created, this part can be interactively hidden / displayed (collapse/expand), as the source code is not normally part of the documentation.
+
+
+
+
+## Display of closing remarks
+
+At the bottom of the page, information is given that the documentation is generic documentation.
+
+Currently, the DocString of the Python module of the code generator script used for the conversion is also documented as a collapsed segment.
+
+The current version or the current commit of this script is also documented.
+
+
+
+
+
+# Screenshots of operation and generated output files
+
+## GUI for parameterization and control of the workflow:
 
 ![GUI: Main-Window](screenshots/gui_code_documenter_main_window.png)
+
 ![GUI: End-Window](screenshots/gui_code_documenter_end_window.png)
 
 
-## Output-Ergebnis, nach Umwandlung von MD- in HTML-Datei:
 
+## Output result, after conversion from MD file to HTML file:
 
-### Generierter Seitenanfang:
 
-Nutzung der **automatischen Konvertierung** MD --> HTML:
+### Generated top of page:
 
-![Screenshot der generierten Dokumentation](screenshots/result_html_automatic_head.png)
+Use of **automatic conversion** from MD  to  HTML:
 
-Nutzung der **manuellen Konvertierung** MD --> HTML:
 
-![Screenshot der generierten Dokumentation](screenshots/result_html_manual_head.png)
+![Screenshot of generated documentation](screenshots/result_html_automatic_head.png)
 
+Use of **automatic conversion Konvertierung** MD to HTML:
 
+![Screenshot of generated documentation](screenshots/result_html_manual_head.png)
 
 
 
 
-### Generierte Dokumentation von Prozeduren:
 
-Nutzung der **automatischen Konvertierung** MD --> HTML:
 
-![Screenshot der generierten Dokumentation](screenshots/result_html_automatic_procedure.png)
+### Generated documentation of procedures
 
-Nutzung der **manuellen Konvertierung** MD --> HTML:
+Use of **automatic conversion** from MD to HTML:
 
-![Screenshot der generierten Dokumentation](screenshots/result_html_manual_procedure.png)
+![Screenshot of generated documentation](screenshots/result_html_automatic_procedure.png)
 
+Use of **manual conversion** from MD to HTML using VSCode Extension:
 
+![Screenshot of generated documentation](screenshots/result_html_manual_procedure.png)
 
 
 
 
-### Generierte Dokumentation von Prozeduren:
 
-Nutzung der **automatischen Konvertierung** MD --> HTML:
 
-![Screenshot der generierten Dokumentation](screenshots/result_html_automatic_procedure.png)
 
-Nutzung der **manuellen Konvertierung** MD --> HTML:
 
-![Screenshot der generierten Dokumentation](screenshots/result_html_manual_procedure.png)
+### Generated end of page
 
+Use of **automatic conversion** from MD to HTML:
 
+![Screenshot of generated documentation](screenshots/result_html_automatic_tail.png)
 
+Use of **manual conversion** from MD to HTML using VSCode Extension:
 
+![Screenshot of generated documentation](screenshots/result_html_manual_tail.png)
 
-### Generiertes Seitenende:
 
-Nutzung der **automatischen Konvertierung** MD --> HTML:
 
-![Screenshot der generierten Dokumentation](screenshots/result_html_automatic_tail.png)
 
-Nutzung der **manuellen Konvertierung** MD --> HTML:
 
-![Screenshot der generierten Dokumentation](screenshots/result_html_manual_tail.png)
 
 
 
@@ -267,113 +290,30 @@ Nutzung der **manuellen Konvertierung** MD --> HTML:
 
 
 
+# Forecast /  possible further developments
 
 
-# Ausblick / mögliche Weiterentwicklungen
+- [ ] Extend tool to support further programming languages:
+    - [X] VBA
+    - [ ] Python (especially helpful for the sequence of operations, for the rest pdoc may be the nicer and much better way ...)
+    - [ ] C++ / Arduino
 
 
-- Zusatzmöglichkeit in GUI einen benutzerdefinierten Text einzugeben (Prio sehr gering!!). Dieser würde dann in der Dokumentation in einer eigenen Section angezeigt werden.
+- [ ] Insert an (floating) index on the side of the HTML page like a NavBar for individual scrolling, independent from current display-area (or use templates to render?)
 
-- Index an der Seite der HTML-Seite einfügen wie eine NavBar zum einzelnd scrollen
-
-- Ermöglichung von Berücksichtigung weiterer Module innerhalb der Dokumentation
+- [ ] Enable consideration of further modules within the documentation
     
-    - z. B. 2 VBA-Module innerhalb eines Projektes, wobei Prozeduren von Modul1  andere Prozeduren aus Modul2 aufrufen.
+  - e.g. 2 VBA modules within a project, where procedures from module 1 call other procedures from module 2.
 
-        - Erstmal nur als Verweis  (Mögl. Ansatz included = "Modul1.*" ohne rekursive Auflistung derer Aufrufe... oder eben mit... bestenfalls auch das parametrisierbar)
-
-- Dokumentation von weiteren PRogrammiersprachen
-
-    - OK --> VBA
-    - Nächste Prio: C++ / Arduino
-    - Letzte Prio: Python (v.a. für den Ablaufsequence sehr hilfreich, für den rest gibt es pdoc...)
+    - Initially only as a reference (Possible approach included = "Module1.*" without recursive listing of their calls... or just with... at best also parameterizable)
 
 
 
 
+<del>- [ ] Additional option to enter a user-defined text in the GUI (very low priority!!). This would then be displayed in a separate section in the documentation. &#9888; actually this is not a good thing as the generic usage is not usable herefore...</del>
+
+-----
 
 
-
-
-<!-- 
-
-# OBSOLET  /  ALT:  Alte Dokumentation aus den Ansätzen
-
-(old approaches) 
-
-> Inzwischen größtenteils obsolet, ggf. auch nicht (mehr) korrekt
-
-
-
-# Möglicher Programmablauf zur Dokumentierung von VBA-Code
-
-
-Abarbeiten mit Python, v.a. unter Nutzung von regulärer Ausdrücke (regex, package re)
-
-
-Hier ein beispielhafter, möglicher Programmablauf
-
-
-# Grundsätzliche Basis-Struktur zur Generierung erster Ergebnisse
-
-
-
-1. Einfache GUI zur Auswahl der Quell-Datei(en)  und Ziel-Speicherorte
-1. .bas-Textdatei einlesen
-2. Regex-Suche nach sämtlichen Subs, die NICHT auskommentiert sind. Zeilennummern werden gespeichert in Liste
-2. Regex-Suche nach sämtlichen Functions, die NICHT auskommentiert sind. Zeilennummern werden gespeichert in Liste.
-3. Auflistung aller gefundener Subs in der Kategorie Subs unter Angabe von Namen, ggf. auch von Zeilennummern zusätzlich, und Scope (Private / public...)
-3. Auflistung aller gefundener Functions in der Kategorie Functions unter Angabe von Namen, ggf. auch von Zeilennummern zusätzlich, und Scope (Private / public...)
-
-
-
-Beim Auflisten wird jeweils eine template verwendet (vgl. Code-Generator / PAP-Designer), sodass mit Platzhaltern gearbeitet werden kann. Es wird ein Anker gesetzt, sodass zusätzlich ein Inhaltsverzeichnis am Ende erstellt werden kann.
-
-Damit hätte man mit relativ wenig Aufwand eine Auflistung aller verfügbarer Subs + Functions als Dokumentation inkl. Index. Was dann noch fehlt, sind die Details zu diesen einzelnen Prozeduren.
-
-
-
-
-# Inhalte der einzelnen Prozeduren identifizieren und dokumentieren
-
-
-Vorgehensweise dann ist relativ easy, sofern doppelte Arbeit okay wäre - und das ist es:
-* Verbinde Listen der Zeilennummern der einzelnen Subs und Functions zu einer großen Liste, unabhängig von Art der Prozedur
-* Sortiere diese Liste aufsteigend
-
-Dann ist klar, von welcher Zeile bis zu welcher Zeile jeweils die Prozedur im Quellcode steht. Die Abzüge aufgrund von langen auskommentierten Zeilen oder Leertasten (oder auch nicht verwendeter Prozeduren) erfolgen später
-
-WEitere Vorgehensweise:
-1) Extrahiere den Text ab Startzeile einre Prozedur bis zur Startzeile - 1 der nächsten Prozedur
-2) Fange von hinten an: Suche von hinten die erste Zeile, in der wirklich Code-Relevantes steht (keine Leerzeilen, kein ausschließliche Kommentarzeile)
-3) Von dieser Zeile dann wiederum vorwärts richtung hinten: Sofern diese Zeile + 1 leer ist: Lösche alles dahinter bis zum Ende dieser Prozedur. (Hintergrund: Nach einem Code-Befehl darf noch eine Zeile Kommentar stehen, aber nicht 100 Zeilen kOmmentar + leerzeilen, das könnte nämlcih einfach eine veraltete und nciht mehr gebrauchte, auskommentierte anderer Methode sein...)
-4) Damit ist die Startzeile und Endzeile geklärt
-5) Als nächsts wird geschaut, ob in Zeile 1 unterhalb der Deklarierung ein Kommentar steht. Falls ja: Werte sie als Docstring. Falls nein (code ODR leezeile: kein Beschreibung vorhanden!).Falls Docstring gewertet wurde: Suche auch in allen folgenden Zeilen danach und erweiterer den docstring, bis dass ein eLeerzeile ODRE eine nicht komplett auskommentierte Zeile gefunden wird.
-6) Damit ist auch die Beschreibung verfügbar, die in die Template eingefügt werden kann
-7) ebenfalls verfügbar sind hierdurch nun die Zeilennummern, von und bis, in der die Prozedur stattfndt. Dies kann ebenfalls in die Template gesetzt werden.
-
-
-# Aufrufe / Referenzierungen der Prozeduren
-Es fehlt nur noch die liste der Aufrufe der Prozedur.
-Hierzu: Durchsuche den gesamten Quelltext nach einem Regex-Muster, der einen NICHT-AUSKOMMENTIERTEN Aufruf der entsprechenden Prozedur hat. 
-Extrahiere die Zeile hieraus, und die aufrufende Prozedur (dies ist über Vergleich zwischen ZEilennummern und der Zeilennummernlisten möglich), dann kann auch noch der klartext aufgeschrieben werden.
-
-
-# Call Sequenz / Calling Sequence
-
-Schön (Ausblick) wäre auch ein weiterer Unterpunkt pro Prozedur, in der die Aufrufabfolge hervorgeht.
-Idee ist etwas wie die Aufrufebenen-Auflistung beim Noten-Converter-Programm, d.h. ausgehend von einer Prozedur soll eine Liste stehen der Aufrufe von weiteren Prozeduren die aufgerufen werden (und die in diesem Dokument auch dokumentiert werden... also keine Builtins o.ä.). Im Idealfall kann jeder Punkt dieser Liste wiederum erweitert/expanded werden, darin ist dann wiederum die Liste von DIESER AUFGERUFENEN Funktion drin usw... Rekursiv. Jede Methode, die einmal so dokumentiert wurde kann weiter verwendet werden per Direktzugriff....
-
-
-
-# Abschlussgedanke - wichtig vor dem Start
-Der Ablauf des Programmes wäre auch ähnlich, wenn statt VBA eine andere PRogrammiersprache  dokumentiert werden sollte.  Lediglich die KEywords und Strukturen der zu dokumentierenden Programmierug weichen ab, dementsprechend müssten andere Regex-Mustern verwendet werden. Etwas komplizierter wäre das, wenn die Sprachen stark von voneinander abweichen, oder falls verschiedene Symbole gleiche Bedeutungen haben (z. B. die verschiednenen String-Einleiter bei Python ' oder "). Trotzdem sollte vor Beginn der Arbeit zumindest überlegt werden, in wie weit es sinnvoll oder möglich wäre, das Programm so aufzubauen, dass es ggf. auf verschiedene PRogrammiersprachen erweitert werden könnte.
-
-Das Python-Modul pdoc liefert zwar ohne eigene Programmierung eine ausgereifte, sehr übersichtliche, gut druckbare und interaktive Übersicht von Python-Modulen, allerdings gehen Referenzierungen der einzelnen PRozeduren nicht aus dieser Dokumentation hervor.
-Ein Alternativer Ansatz wäre, obo man das o.g. Zusatzmodul selbst anpassen und erweitern könnte durch solche Funktionalitäten.
-
-
-Relevant wäre eine solche Dokumentationsmöglichkeiten für die folgenden Programmiersprachen:
-* VBA
-* PYthon
-* C++ (µC) 
+**<span style='color:red'>&#9888; Note: Issues with Translation to English:** 
+A lot of the text  has been translated with www.DeepL.com/Translator (free version) - thanks a lot to their developer ;-) But still: if you have problems with understanding or if you have suggestions for correction - feel free to do so :-).</span>

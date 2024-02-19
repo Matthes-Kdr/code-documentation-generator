@@ -52,6 +52,12 @@ Basierend auf Textdateien mit Quellcode wird durch die Anwendung eine Dokumentat
 
 
 
+# Main Advantages in contrast to other tools 
+
+- for function based codes as the internal flow of calls is documented
+
+- shall support multiple programming languages (vba, c++, python) - currently only vba is supported...
+
 
 
 # Zusammenfassung und Ziel des Projektes
@@ -293,6 +299,8 @@ Nutzung der **manuellen Konvertierung** MD --> HTML:
 
 # OBSOLET  /  ALT:  Alte Dokumentation aus den Ansätzen
 
+(old approaches) 
+
 > Inzwischen größtenteils obsolet, ggf. auch nicht (mehr) korrekt
 
 
@@ -369,4 +377,3 @@ Relevant wäre eine solche Dokumentationsmöglichkeiten für die folgenden Progr
 * VBA
 * PYthon
 * C++ (µC) 
--->

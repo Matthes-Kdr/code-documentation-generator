@@ -5,6 +5,12 @@
 
 > **Unlinke many other generic documentation tools this project focus on the documentation of code with a functional-programming approach rather than a class-based approach.** Aim is to **show the program schedule (flow / calls of other procedures)** within the procedures.
 
+
+
+**<span style='color:red'>&#9888; As this project was not meant to become a public one in the first place, I did not chore and tidy the code by now! Also I began in German, but I will fix those both issues step by step and while choring I will translate everything in the code :-)</span>**
+
+
+
 For a quick first impression of the result, see the screenshots in below [Screenshots of operation and generated output files](#screenshots-of-operation-and-generated-output-files)
 
 
@@ -21,6 +27,10 @@ For a quick first impression of the result, see the screenshots in below [Screen
 
 
 Based on the actual text files with source code, the application creates a documentation of this source code.
+
+
+
+
 
 
 <h1> Table Of Content:</h1>

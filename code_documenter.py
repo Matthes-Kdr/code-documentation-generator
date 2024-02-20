@@ -6,70 +6,45 @@ Created on: Fri, 2023-12-29 (00:45:39)
 @author: Matthias Kader
 
 
-Für generelles Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html
+> For further information, see README.md
+----------------------------------------
+>  Tool to automatically generate a documentation of the source code - mainly used for function-based flows (currently only supporting single VBA-moduls, support for Python and C++ shall follow).
 
-Wichtige Details siehe am Ende dieses docstrings.
+> **Unlinke many other generic documentation tools this project focus on the documentation of code with a functional-programming approach rather than a class-based approach.** Aim is to **show the program schedule (flow / calls of other procedures)** within the procedures.
 
+**<span style='color:red'>&#9888; As this project was not meant to become a public one in the first place, I did not chore and tidy the code by now! Also I began in German, but I will fix those both issues step by step and while choring I will translate everything in the code :-)</span>**
 
+> **NOTE:** As I started this project privatly and was not very forward-looking a lot of the text (readme + code comments) is written in **German**. Step by step I will change this and translate everything to have a continuous language - sorry for that.
 
-
-### Fertig implementiert:
-
-- Inhaltsverzeichnis / Index
-
-- Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections
-
-- Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation
-
-- Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation
-
-- Sofortiger Export der MD-Datei in eine  HTML-Datei
-
-- Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation
-
-- Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.
+> **<span style='color:red'>&#9888; If there is anything unclear or poor translated - feel free to correct it or to ask (e.g. via a new issue?) for the meaning...</span>**
 
 
-- Bereitstellung einer einfachen GUI / HMI, um Input- und Output Pfade zu parametrisieren
 
+# =============================================================================
+#### Notes on application and use: ####
+# =============================================================================
 
- 
+- To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line. Empty lines that are to be included must also be labelled as comments.
+
+- The script generates an MD file (Markdown), which is then immediately converted to HTML using the markdown library, so that 2 files are created after the script is completed. However, due to different interpretations during the conversion, the display of the HTML file generated in this way differs if it is converted separately via VSCode Extension ("Markdown all in one"). The file generated via VSCode is clearer and more attractive. This should therefore be done separately at the end.
 
 
 
 
-### TODOS:
+
+### Implemented ready:
+
+- Generating Table of contents / index
+- Overall layout incl. title, subheadings for individual sections
+- Listing the module-wide program header docstring in the generated documentation
+- Listing the reference searches (Where is the procedure called?) in the generated documentation
+- Function to immediate export of the MD file to an HTML file within this script
+- Listing the organizational data regarding the code to be documented and the script used for documentation in the generated documentation
+- Listing of the calling sequence (calling sequence / calling levels) within each procedure in the generated documentation: Enumeration of the calls of other procedures covered in this documentation. Including recursive nested list of which calls are made in each of the called procedures.
+- Providing of a simple GUI / HMI to parameterize input and output paths
 
 
-- Chore: Aufräumen des Quellcodes
-
-- Refactor: ggfs. modifizieren von write_content
-
-- BUGFIX: Modul 1 aufrufe
-
-- "Help... " Button in GUI, in dem Erklärungen stehen! --> BESSER, universeller, einfacher und weniger duplizierend: ERstelle eine README.md im Repository, und beim Klick auf "help-btn" wird diese Datei in eine HTML umgewandelt und im Browser angezeigt...
-
-
-
-
-### AUSBLICK für später und in schön:
-
-
-- Zusatzmöglichkeit in GUI einen benutzerdefinierten Text einzugeben (Prio sehr gering!!). Dieser würde dann in einre eigenen Section angezeigt werden.
-
-- Index an der Seite wie eine NavBar zum einzelnd scrollen
-
-- Ermöglichung von Berücksichtigung weiterer Module innerhalb der Dokumentation
-    
-    - z. B. 2 VBA-Module innerhalb eines Projektes, wobei Prozeduren von Modul1  andere Prozeduren aus Modul2 aufrufen.
-
-        - Erstmal nur als Verweis  (Mögl. Ansatz included = "Modul1.*" ohne rekursive Auflistung derer Aufrufe... oder eben mit... bestenfalls auch das parametrisierbar)
-
-- Dokumentation von weiteren PRogrammiersprachen
-
-    - OK --> VBA
-    - Nächste Prio: C++ / Arduino
-    - Letzte Prio: Python (v.a. für den Ablaufsequence sehr hilfreich, für den rest gibt es pdoc...)
+> For the latest list of issues / TODOS see Github Issues at https://github.com/Matthes-Kdr/code-documentation-generator/issues
 
 
 
@@ -79,29 +54,23 @@ Wichtige Details siehe am Ende dieses docstrings.
 
 
 # =============================================================================
-#### Wichtige Aufrufreihenfolge der Methode innerhalb dieses Python-Scriptes zur Erstellung der Dokumentation der Aufrufreihenfolge der zu dokumentierenden VBA-Prozeduren: ####
+#### Important call sequence of the method within this Python script 
+for creating the documentation of the call sequence of the VBA procedures to be documented:
 # =============================================================================
 
-Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wiederum alle Prozeduren komplett dokumentiert. Für beide Vorgänge erfolgt dies in einer Methode auf Objektebene, wobei diese jeweilige MEthode in beiden Fällen aus einer Klassenmethode aufgerufen wird, in der über die einzelnen Prozedur-Objekte innerhalb dieser Klasse iteriert wird:
+First, all procedures will be completely analyzed, and only after then all procedures will be completely documented. For both procedures, this takes place in a method at object level, whereby this respective method is called in both cases from a class method in which iteration takes place via the individual procedure objects within this class:
 
 - analyse_call_sequence(cls)
     - analyse_calling_sequence_in_one_proc(self)
 - prepare_all_call_sequences_docs(cls)
     - prepare_single_call_sequence_docs(cls)
 
-(hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )
+(Side-note: by the way, the developed tool would have been of great usage to document this in 'nice', if it already had the ability to document Python syntax :-) )
 
 
 
 
 
-# =============================================================================
-#### Hinweise zur Anwendung und Benutzung: ####
-# =============================================================================
-
-- To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line. Empty lines that are to be included must also be labelled as comments.
-
-- Durch das Script wird eine MD-Datei (Markdown) erzeugt, die anschließend über die Library markdown sofort in eine HTML umgewandelt wird, sodass nach Abschluss des Scriptes 2 Dateien erstellt wurden. Durch unterschiedliche Interpretationen im Rahmen der Konvertierung unterscheidet sich die Darstellung der so generierten HTML-Datei allerdings, wenn sie über VSCode Extension gesondert konvertiert wird. Die über VSCode generierte Datei ist übersichtlicher und schöner. Das sollte also am Ende nochmals gesondert erfolgen.
 
 
 
@@ -110,40 +79,40 @@ Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wied
 
 
 # =============================================================================
-#### Unwichtige Nebensächlichkeiten: Code-Analyse Zusammenfassung: ####
+#### Unimportant trivialities: Code analysis summary just for fun and for myself: ####
 # =============================================================================
 
-In der Version vom 2024-01-11 - 00:18:43:
-    Angaben jeweils: [Zeilen @ code_documenter.py] + [Zeilen @ gui] = [Summe]
-    - Gesamtanzahl der Zeilen: 408 (100%)+2201 (100%)=2609 (100%)
-    - davon Leerzeilen: 168 (41,1764705882353%)+1071 (48,6597001363017%)=1239 (47,489459563051%)
-    - davon Einzelkommentarzeilen: 20 (4,90196078431373%)+244 (11,0858700590641%)=264 (10,1188194710617%)
-    - davon Blockkommentarzeilen: 85 (20,8333333333333%)+374 (16,9922762380736%)=459 (17,5929474894596%)
+version from 2024-01-11 - 00:18:43:
+    Details in each case: [count of lines @ code_documenter.py] + [count of lines @ gui] = [Summe]
+    - Total of lines: 408 (100%)+2201 (100%)=2609 (100%)
+    - thereof empty lines: 168 (41,1764705882353%)+1071 (48,6597001363017%)=1239 (47,489459563051%)
+    - thereof single line comments: 20 (4,90196078431373%)+244 (11,0858700590641%)=264 (10,1188194710617%)
+    - thereof multiline-comments: 85 (20,8333333333333%)+374 (16,9922762380736%)=459 (17,5929474894596%)
 
-    ==> Summe aller Kommentarzeilen: 105 (25,7352941176471%)+618 (28,0781462971377%)=723 (27,7117669605213%)
-    ==> Code-relevante Zeilen: 135 (33,0882352941176%)+512 (23,2621535665607%)=647 (24,7987734764277%)
+    ==> sum of all comment-lines:: 105 (25,7352941176471%)+618 (28,0781462971377%)=723 (27,7117669605213%)
+    ==> actual relevant lines with Code commands: 135 (33,0882352941176%)+512 (23,2621535665607%)=647 (24,7987734764277%)
 
 -----------------------------------------------    
 
-In der Version vom 2024-01-07 - 23:37:04:
-    - Gesamtanzahl der Zeilen: 2164 (100%)
-    - davon Leerzeilen: 1091 (50%)
-    - davon Einzelkommentarzeilen: 226 (10%)
-    - davon Blockkommentarzeilen: 364 (17%)
+version from 2024-01-07 - 23:37:04:
+    - Total of lines: 2164 (100%)
+    - thereof empty lines: 1091 (50%)
+    - thereof single line comments: 226 (10%)
+    - thereof multiline-comments: 364 (17%)
 
-    ==> Summe aller Kommentarzeilen 590 (27%)
-    ==> Code-relevante Zeilen: 483 (22%)
+    ==> sum of all comment-lines: 590 (27%)
+    ==> actual relevant lines with Code commands: 483 (22%)
 
 -----------------------------------------------
 
-In der Version vom 2024-01-07 - 15:26:03:
-    - Gesamtanzahl der Zeilen: 2771 (100%)
-    - davon Leerzeilen: 1408 (51%)
-    - davon Einzelkommentarzeilen: 278 (10%)
-    - davon Blockkommentarzeilen: 550 (20%)
+version from 2024-01-07 - 15:26:03:
+    - Total of lines: 2771 (100%)
+    - thereof empty lines: 1408 (51%)
+    - thereof single line comments: 278 (10%)
+    - thereof multiline-comments: 550 (20%)
 
-    ==> Summe aller Kommentarzeilen 828 (30%)
-    ==> Code-relevante Zeilen: 535 (19%)
+    ==> sum of all comment-lines: 828 (30%)
+    ==> actual relevant lines with Code commands: 535 (19%)
 
 -----------------------------------------------
 
@@ -204,7 +173,8 @@ SyntaxClass = SyntaxVba
 
 def db(*args):
     """
-    Schleust zum printen durch - nur zum Debuggen
+    Loops through for printing - only for debugging
+    # TODO: Replace this method with a logger of the python logging module, see #18 @ Github.
     """
     if DEBUG == False:
         return
@@ -220,19 +190,19 @@ def db(*args):
 
 def inspect_get_current_line_number():
     """
-    Gibt die Zeilennummer des Codes zurück - geeignet zum Debuggen!
+    Returns the line number of the code - suitable for debugging!
 
     Returns:
         int: number of line  in code file.
     """
 
-    # Die Stack-Informationen abrufen
+    # calling Stack-Informationen:
     stack = inspect.stack()
     
-    # Die Informationen für die aktuelle Funktion/Frame erhalten
+    # get the information for the current function/frame
     aktueller_frame = stack[1]
     
-    # Die Zeilennummer extrahieren
+    # extract line number:
     zeilennummer = aktueller_frame[2]
     
 
@@ -244,7 +214,9 @@ def inspect_get_current_line_number():
 
 
 # =============================================================================
-#### Workaround: Verwendung von MetaClasses: Metaklassen für Direktaufrufe / implizite Aufrufe einer Classmethod direkt nach Implementierung einer Klasse ####
+#### Workaround: Use of MetaClasses: 
+# Meta classes for direct calls / implicit calls of a class method 
+# directly after implementing a class ####
 # =============================================================================
 
 
@@ -253,15 +225,15 @@ def inspect_get_current_line_number():
 # =============================================================================
 class AutoCallMeta(type):
     """
-    Sofern diese Klasse als metaclass für eine andere Klasse verwendet wird, wird die unten aufgeführte Klassenmethode direkt nach Definition ohne ein zusätzlichen, expliziten Aufruf automatisch aufgerufen.
+    ### OBSOLETE: Since the script provides an GUI this is not  used anymore.
 
-    Dazu muss nur der Name der aufzurufenden Methode in der Klassenvariable 'class_name_to_call_implicit' parametrisiert werden.
+    If this class is used as a metaclass for another class, the class method listed below is automatically called directly after definition without an additional, explicit call.
+
+    To do this, only the name of the method to be called must be parameterized in the class variable 'class_name_to_call_implicit'.
     """    
 
-    # ACHTUNG: Bis zur Implementierung der GUI wurde es wie unten gemacht!
-    # Flexibler ist es aber, die Methode MetaClass.initialize_class tatsächlich selbst explizit aufzurufen an einer Stelle, wo bereits alle relevanten Attibute mit Werten belegt wurden. 
-    # Daher wurde mit Implementierung der GUI der Ablauf dementsprechend geändert  und diese Superklasse auch nicht mehr beerbt von der Klasse MetaClass
-    # pass
+    # However, it is more flexible to actually call the MetaClass.initialize_class method explicitly at a point where all relevant attributes have already been assigned values. 
+    # Therefore, with the implementation of the GUI, the process was changed accordingly and this superclass was no longer inherited by the MetaClass class
 
 
     class_name_to_call_implicit = "initialize_class" # NUR HIER ZU PARAMETRISIEREN!
@@ -301,30 +273,30 @@ class AutoCallMeta(type):
 class MetaData():
 # class MetaData(metaclass=AutoCallMeta):
     """
-
+    
     ### CHANGELOG 2024-01-10 - 19:45:14:
-    ### ACHTUNG: Bis zur Implementierung der GUI wurde geerbt von der metaclass=AutoCallMeta.
-    Diese Superklasse hat dafür gesortt, dass automatisch direkt nach  der Deklaration der Klasse MetaData ihre Methode MetaClass.initialize_class implizit aufgerufen wurde. Es ist aber flexibler tatsächlich selbst explizit aufzurufen an einer Stelle, wo bereits alle relevanten Attibute mit Werten belegt wurden. 
-    Daher wurde mit Implementierung der GUI der Ablauf dementsprechend geändert  und diese Superklasse auch nicht mehr beerbt von der Klasse MetaClass.
+    This superclass has ensured that its MetaClass.initialize_class method is automatically called implicitly directly after the declaration of the MetaData class. However, it is more flexible to actually call it explicitly at a point where all relevant attributes have already been assigned values. 
+    Therefore, with the implementation of the GUI, the process was changed accordingly and this superclass was no longer inherited by the MetaClass class.
 
 
 
-    In dieser Klasse werden hauptsächlich Daten gespeichert, die später als Art MetaDaten angesehen werden können.
-    Der Parent-class / metaclass sorgt dafür, dass direkt nach Implementierung dieser (gewöhnlichen) Klasse eine in der metaclass parametrisierte Methode aufgerufen wird.
-    Somit ist kein expliziter Aufruf der Klassenmethode MetaData.initialize_class erforderlich, da dies über die metaclass erledigt wird.
+    This class mainly stores data that can later be regarded as a type of metadata.
+    The parent class / metaclass ensures that a method parameterized in the metaclass is called directly after the implementation of this (ordinary) class.
+    This means that it is not necessary to explicitly call the MetaData.initialize_class class method, as this is done via the metaclass.
 
-    # TODO: Die Klasse ist noch nicht fertig.
+    # TODO: The class is not yet finished.
 
-    Zu den hierin gespeicherten Daten gehören z. B.:
+    The data stored in it includes e.g:
 
-    - Dieses Dokumentations-Tool-Script
-        - Versionsinformationen, basierend auf dem letzten Git-Commit
-        - TODO: Versionsnummer dieses Scriptes...
-    - Das zu dokumentierende Modul
-        - Dateipfad
-        - Dateiname
-        - Datum der letzten Speicherung / Änderung
-    - Aktuellen Zeitstempel zur Angabe des Zeitpunktes der Dokumentation
+    - This documentation tool script
+        - Version information, based on the last Git commit
+        - TODO: Version number of this script...
+    - The module to be documented
+        - File path
+        - File name
+        - Date of the last save / change
+    - Current timestamp to indicate the time of the documentation
+
       
     """
 
@@ -377,13 +349,13 @@ class MetaData():
 
     @staticmethod
     def get_last_modified_timestamp(file_path) -> str:
-        # Den Zeitstempel der letzten Änderung der Datei auslesen
+        # Read the timestamp of the last change to the file
         timestamp = os.path.getmtime(file_path)
         
-        # Den Zeitstempel in ein lesbares Datum umwandeln
+        # Convert the timestamp into a readable date
         last_modified_datetime = datetime.fromtimestamp(timestamp)
         
-        # Das Datum im gewünschten Format ausgeben
+        # convert the date in the desired format
         formatted_date = last_modified_datetime.strftime('%Y-%m-%d %H:%M')
         
         return formatted_date
@@ -395,7 +367,7 @@ class MetaData():
     @classmethod
     def extract_date_of_change(cls):
         """
-        Liesst das letzte Aenderungsdatum der Input-Datei aus und speichert diese in der Klassenvariable cls.input_file_date_of_change
+        Reads the last change date of the input file and saves it in the class variable cls.input_file_date_of_change
         """
 
         date_of_change = cls.get_last_modified_timestamp(cls.__input_path)
@@ -409,13 +381,13 @@ class MetaData():
     @classmethod
     def set_input_path(cls, input_path:str=None):
         """
-        Prüft den optional übergebenen Pfad, ob er existiert und dort eine .bas Datei vorliegt.
-        Ist dies nicht der Fall, oder wird kein Pfad übergeben, wird per Input ein neuer Pfad abgefragt. 
-        Bis zu einem gültigen Pfad wird die Methode rekursiv aufgerufen.
-        Bislang gibt es noch keine Möglichkeit für den Nutzer, die Eingabe abzubrechen (außer Programmabbruch...)
+        Checks the optionally transferred path to see whether it exists and whether there is a .bas file there.
+        If this is not the case, or if no path is passed, a new path is requested via input. 
+        The method is called recursively until a valid path is found.
+        So far there is no possibility for the user to cancel the input (except program abort...)
 
         Args:
-            input_path (str, optional): Dateipfad zur .bas-Datei, die dokumenteirt werden soll - als Foreward-Slash und ohne Anführungszeichen. Defaults to None.
+            input_path (str, optional): File path to the .bas file to be documented - as a forward slash and without quotation marks. Defaults to None.
 
         """
 
@@ -426,7 +398,7 @@ class MetaData():
                     cls.extract_date_of_change()
                     return
                 
-        neuer_input = input("!!! FEHLER !!! Die Angegebene Datei ist keine .bas Datei! Bitte einen gueltigen Pfad zur entsprechenden Datei eingeben (Foreward-Slashes! ohne Anfuehrungszeichen)\n> Ihre Eingabe: ")
+        neuer_input = input("!!! ERROR !!! The specified file is not a .bas file! Please enter a valid path to the corresponding file (forward slashes! without quotation marks)\n> Your input: ")
 
         cls.set_input_path(neuer_input)
 
@@ -434,13 +406,14 @@ class MetaData():
     @classmethod
     def set_output_dir(cls, output_dir:str=None):
         """
-        Prüft den optional übergebenen Pfad, ob er existiert und ob dies ein Verzeichnis ist
-        Ist dies nicht der Fall, oder wird kein Pfad übergeben, wird per Input ein neuer Pfad abgefragt. 
-        Bis zu einem gültigen Pfad wird die Methode rekursiv aufgerufen.
-        Bislang gibt es noch keine Möglichkeit für den Nutzer, die Eingabe abzubrechen (außer Programmabbruch...)
+        Checks the optionally transferred path to see whether it exists and whether this is a directory
+        If this is not the case, or if no path is passed, a new path is requested via input. 
+        The method is called recursively until a valid path is found.
+        So far there is no possibility for the user to cancel the input (except program abort...)
 
         Args:
-            output_dir (str, optional): Dateipfad zum Ordner, in dem die generierten Output-Dateien exportiert werden sollen - als Foreward-Slash und ohne Anführungszeichen. Defaults to None.
+            output_dir (str, optional): File path to the folder in which the generated output files are to be exported - as a forward slash and without quotation marks. Defaults to None.
+
 
         """
 
@@ -448,7 +421,7 @@ class MetaData():
             if os.path.isdir(output_dir):
                 cls.__output_dir = output_dir
                 return
-        neuer_input = input("!!! FEHLER !!! Der  angegebene Pfad ist kein gueltiges Verzeichnis. Bitte einen gueltigen Pfad fuer den Export der Output-Dateien  eingeben (Foreward-Slashes! ohne Anfuehrungszeichen)\n> Ihre Eingabe: ")
+        neuer_input = input("!!! ERROR !!! The specified path is not a valid directory. Please enter a valid path for the export of the output files (forward slashes! without quotation marks)\n> your input: ")
 
         cls.set_output_dir(neuer_input)
 
@@ -459,7 +432,7 @@ class MetaData():
     def extract_git_info(cls):
         info:dict = gitinfo.get_git_info()
 
-        # Übernehme die Infos aus git in die Klasse:
+        # Transfer the information from git to the class:
         for key, value in info.items():
 
 
@@ -474,10 +447,9 @@ class MetaData():
     @classmethod
     def save_current_timestamp(cls):
 
-        # Aktuelles Datum und Uhrzeit
         current_datetime = datetime.now()
 
-        # Wandele das Datum und die Uhrzeit in einen Zeitstempel um
+        # convert into a timestamp:
         current_timestamp = int(current_datetime.timestamp())
 
         db(f"Current Timestamp: {current_timestamp}")
@@ -504,13 +476,13 @@ class MetaData():
     @classmethod
     def get_output_path(cls, extension=".md") -> str:
         """
-        Gibt den gesamten Pfad fuer die neu zu generierende Output-Datei zurueck, inkl. Dateierweiterung.
+        Returns the entire path for the new output file to be generated, including the file extension.
 
         Args:
-            extension (str, optional): Dateiendung der Output-Dtaei. Defaults to ".md". Modifizierbar z. B. zu .html oder .txt
+            extension (str, optional): File extension of the output file. Defaults to ".md". Modifiable e.g. to .html or .txt
 
         Returns:
-            str : Dateipfad
+            str : File path
         """
 
         path =  os.path.join(cls.__output_dir, cls.__output_filename + extension)
@@ -524,13 +496,18 @@ class MetaData():
     @classmethod
     def initialize_class(cls):
         """
-        Diese Methode wird implizit direkt nach Implementierung dieser Klasse aufgerufen.
-        Somit muss sie nicht mehr von außen aufgerufen werden.
-        Sie initialisiert alle Attribute mit ihren WErten.
+        This method is called implicitly directly after the implementation of this class.
+        It therefore no longer needs to be called from outside.
+        It initializes all attributes with their values.
         """
 
 
 
+
+        # =============================================================================
+        #### DEBUGGING-PARAMETER SECTION: ####
+        # =============================================================================
+        
         # # HACK: path for Source-vba-code
         # input_file_path = "input_data/beispiel_modul_rekursiv.bas"
         # input_file_path = "input_data/beispiel_modul_bauer+liebherr.bas"
@@ -538,12 +515,10 @@ class MetaData():
         # input_file_path = "input_data/beispiel_modul1.bas"
         # input_file_path = "input_data/beispiel_modul.bas"
 
-        # # HACK: Falls ohne GUI-Daten gearbeitet wird (debugging:)
-        # # Wird normalerweise von aussen aufgerufen und mit Daten aus der GUI gefuellt. Nur durchlaufen, wenn es zum debuggen ist!
+        # # HACK: If you are working without GUI data (debugging:)
+        # # Is normally called from outside and filled with data from the GUI. Only run if it is for debugging!
         # cls.set_input_path(input_file_path)
 
-        # # HACK: Falls ohne GUI-Daten gearbeitet wird (debugging:)
-        # # Wird normalerweise von aussen aufgerufen und mit Daten aus der GUI gefuellt
         # output_dir = "output_data"
         # cls.set_output_dir(output_dir)
 
@@ -568,13 +543,11 @@ class MetaData():
 
 class Procedure():
     """
-    Allgemeine Klasse zur Bereitstellung von Inhalten, die fuer alle Prozeduren (Subs und Functions) erforderlich sind. Dazu gehoert:
-        
-        - Definition des Dateipfades fuer Template, in die der extrahierte Text übernommen wird
-        
-        - Flag-Variable, ob nach Beginn oder Ende der Prozedur gesucht wird
-        
-        - Regex-Muster als String für den Beginn und das Ende einer Prozedur - wobei innerhalb dieses Strings der Platzhalter für die Prozedurart in den Subklassen noch ersetzt werden muss. Ebenfalls
+    General class for providing content that is required for all procedures (subs and functions). This includes
+        - Definition of the file path for the template into which the extracted text is transferred
+        - Flag variable, whether to search for the start or end of the procedure
+        - Regex pattern as a string for the start and end of a procedure - whereby the placeholder for the procedure type in the subclasses must still be replaced within this string. Also
+
     """
 
     # TEMPLATE = "templates/prozedur.md"

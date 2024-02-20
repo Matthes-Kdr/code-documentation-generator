@@ -551,11 +551,11 @@ class Procedure():
     """
 
     # TEMPLATE = "templates/prozedur.md"
-    # HACK: für weiterentwicklung bzgl abruffolge:
+    # HACK: for further development of the retrieval sequence:
     TEMPLATE = "templates/prozedur_dev.md"
 
     
-    # TODO: Mache  dies via GUI als Option parametrisierbar:
+    # TODO: Make this parameterizable as an option via the GUI:
     __print_final_calling_sequence_message = True
     # print_final_calling_sequence_message = False
 
@@ -565,67 +565,29 @@ class Procedure():
 
 
 
-    # TODO: Vars besser privatisieren:
-
-    # # Das folgenden Regex-Muster berücksichtigt nicht das Auskommentieren dieser Zeile
-    # regex_begin_pattern = r""".*     # Start mit beliebigen Zeichen
-    #                     (?:Private|Public|Friend)?
-    #                     (?:PLACEHOLDER_PROCEDURE_TYPE)    # Beinhaltet das KEyword
-    #                     \s+        # mind. 1 bis n Leerzeichen
-    #                     (\w+)        # mind. 1 bis n Wortzeichen
-    #                     \(         # Geöffnete Klammer
-    #                     """
+    # TODO: Variables should better be privat ones (?):
 
     regex_begin_pattern = SyntaxClass.get_pattern_start_of_procedure()
 
-
-
-
-    # # _BUGFIX: Besonders beim Beispielmmodul 1 wird zu früh beendet! Neue Regex > V. 0.1.2
-    # regex_end_pattern = r""".*?     # Start mit beliebigen Zeichen
-    #                     (?:End)    # Beinhaltet das KEyword
-    #                     \s+        # mind. 1 bis n Leerzeichen
-    #                     (?:PLACEHOLDER_PROCEDURE_TYPE)    # Beinhaltet das KEyword
-    #                     \s+         # mind. 1 bis n Leerzeichen
-    #                     .*"""
-    
     regex_end_pattern = SyntaxClass.get_pattern_end_of_procedure()
 
-    '''
-    # ALT: Bis Version 0.1.1:
-    regex_end_pattern = r""".*?     # Start mit beliebigen Zeichen
-                        (?:End)    # Beinhaltet das KEyword
-                        \s+        # mind. 1 bis n Leerzeichen
-                        (?:PLACEHOLDER_PROCEDURE_TYPE)?    # Beinhaltet das KEyword
-                        .*"""
-    '''
 
-
-
-
-
-
-    # # Zum späteren Prüfen bzgl. Auskommentierung extra Regex:
-    # __regex_ausschlus_kommentar_pattern = r"""'    # KommentarApostroph
-    #                                     .?       # Beliebiges Zeichen
-    #                                     """
-    
     __regex_ausschlus_kommentar_pattern = SyntaxClass.get_pattern_single_line_comment()
 
 
-    # Hier ist keine weitere Konkretisierung durch Subklassen erforderlich, daher direkt kompiliert:
+    # No further concretization by subclasses is required here, therefore compiled directly:
     regex_ausschluss_kommentar = re.compile(__regex_ausschlus_kommentar_pattern, re.VERBOSE | re.IGNORECASE)
 
     @classmethod
     def set_print_final_calling_sequence_message(cls, value:bool):
         """
-        Wert uebergeben fuer die Einstellung, ob nach jedem Abschluss jeder Prozedur in der Calling Sequence ein Abschlusssatz ergänzt werden soll.
+        Value passed for setting whether a completion record should be added after each completion of each procedure in the calling sequence.
         """
         if type(value) == bool:
             cls.__print_final_calling_sequence_message = value
             return
         
-        raise Exception("Ungueltiger Parameter fuer __print_final_calling_sequence_message gewaehlt!")   
+        raise Exception("Invalid parameter selected for __print_final_calling_sequence_message!")   
 
 
 
@@ -633,7 +595,7 @@ class Procedure():
     @classmethod
     def find_multiline_comment(cls, code:str):
         """
-        ### TODO: Aktuell nur fuer Python!
+        ### TODO: Currently only prepared for the usage of Python!
         
         Returns / stores to cls:
             list[tuple] : Format: [(comment1_start_line:int, comment1_end_line:int, comment1_text:str), (..., ..., ...)]
@@ -641,7 +603,7 @@ class Procedure():
         """
 
 
-        # # AUSBLICK: For python OK!
+        # # Forecast: For python OK!
         # pattern = re.compile(r'(""".*?""")|(\'\'\'.*?\'\'\')', re.DOTALL)
 
         # # TEST: @ #6 : 
@@ -661,69 +623,47 @@ class Procedure():
 
         # pattern = SyntaxClass.pattern_multiline_comment
         pattern = SyntaxClass.get_pattern_multiline_comment()
-
-
-
-
-        
-
-        
         
 
         comments = []
         multiline_comment_line_numbers = [] # 0-basiert!
 
-        # Falls in der relevanten PRogrammiersprache kein Multiline-Comments existieren:
+        # If no multiline comments exist in the relevant programming language:
         if pattern == None:
-            
 
             cls.multiline_comments = tuple(comments)
-
             cls.multiline_comment_line_numbers = tuple(multiline_comment_line_numbers)
-
-
             return
 
 
         matches = pattern.finditer(code)
 
-
         for match in matches:
 
             comment = match.group(0)
 
-            start_line = code.count('\n', 0, match.start()) # + 1 # es wird der 0-basierte Index gespeichert!
-
-            end_line = code.count('\n', 0, match.end()) # + 1 # es wird der 0-basierte Index gespeichert!
-
+            start_line = code.count('\n', 0, match.start()) # the 0-based index is saved
+            end_line = code.count('\n', 0, match.end()) # the 0-based index is saved
 
             comments.append((start_line, end_line, comment))
 
-            # TODO: Sinnvoller (weniger Speicherplatz, dafür aber mehr Logik) wäre nur von und bis zu speichern, und dann über eine Funktion abzugleichen, ob die relevante Zeile innerhalb eines Ausschlusbereiches liegt. Dies wäre nämlich auch relevant fuer Klassenmethoden in Python o.ä. (pattern ist exakt identisch mit Functions aber eben innerhalb einer Klasse...)
-            # Auflistung aller Zeilennummern des Bereiches:
+            # TODO: It would make more sense (less memory, but more logic) to save only from and to, and then use a function to check whether the relevant line is within an exclusion range. This would also be relevant for class methods in Python or similar (pattern is exactly the same as Functions but within a class...)
+            # Listing of all line numbers of the area:
             for line_no in range(start_line, end_line + 1):
                 multiline_comment_line_numbers.append(line_no)
-
-
-
 
 
         for start_line, end_line, comment in comments:
             print(f"Found comment starting at line {start_line} and ending at line {end_line}:\n{comment}\n")
 
-
         cls.multiline_comments = tuple(comments)
-
         cls.multiline_comment_line_numbers = tuple(multiline_comment_line_numbers)
 
 
-
-
-        
-        # TODO: Muss jetzt noch referenziert werden bei calling_sequence und references - filtern, dass die zu pruefnde Zeile NICHT in einem dieser Bereiche liegt mit 
+        # TODO: Must now be referenced at calling_sequence and references - filter that the line to be checked is NOT in one of these areas with 
             #if line_no in cls.multiline_comment_line_numbers: ...
         
-        # OBSOLET:
+        # OBSOLETE:
         return comments
 
 
@@ -733,46 +673,28 @@ class Procedure():
     @classmethod
     def initialize_input_code(cls, input_path:str):
         """
-        Liesst den zu analysierenden und zu dokumentierenden Input-Quellcode ein und speichert ihn innerhalb dder Superklasse als immer verfuegbare Liste einzelner Zeileninhalte ab.
+        Reads in the input source code to be analyzed and documented and saves it within the superclass as an always available list of individual line contents.
 
-        ### TODO: Später sollte hier auch noch eine einfache GUI erstellt werden zur Auswahl!
-        ggf. sollte diese GUI aber losgelöst von dieser Klasse sein (Wiederholfunktion!). Daher als Kapselung mit übergebenen input-path!
+        ### TODO: Later, a simple GUI should also be created here for selection!
+        If necessary, this GUI should be detached from this class (repeat function!). Therefore as encapsulation with passed input-path!
         """
 
         """
-        # ALTERNATIVE / OBSOLET:
+        # ALTERNATIVE / OBSOLETE (before tackling issue #6):
         with open(input_path, "r") as file:
             cls.raw_source_code = file.readlines()
         """
 
-        # Neuer Ansatz für Issue #6 : 
-        # Erst als str einlesen, damit man darüber zusätzlich zu den Zeilen auch die Zeilennummern ermitteln kann und später Blockkommentare (Multiline-Comments) bei den References / calling sequences ignorieren kann:
+        # New approach for Issue #6 : 
+        # First read in as str, so that you can determine the line numbers in addition to the lines and later ignore block comments (multiline comments) in the references / calling sequences:
             
         with open(input_path, "r") as file:
             raw_source_code_str = file.read()
 
         # split to lines:
         cls.raw_source_code = raw_source_code_str.splitlines(keepends=True)
-
         cls.find_multiline_comment(raw_source_code_str)
 
-
-    '''
-    # ANSATZ:
-    
-    def find_multiline_comment(code):
-        pattern = re.compile(r'(""".*?""")|(\'\'\'.*?\'\'\')', re.DOTALL)
-        matches = pattern.finditer(code)
-        
-        comments = []
-        for match in matches:
-            comment = match.group(0)
-            start_line = code.count('\n', 0, match.start()) + 1
-            end_line = code.count('\n', 0, match.end()) + 1
-            comments.append((start_line, end_line, comment))
-        
-        return comments
-    '''
 
 
 
@@ -781,15 +703,15 @@ class Procedure():
     @classmethod
     def detail_analyse_procedures(cls):
         """
-        Detail-Auswertung aller zuvor identifizierten Prozeduren (unabhängig ihrer Art).
-        Die einzelnen Komponenten werden dabei in Objekte der Subklassen gespeichert
+        Detailed evaluation of all previously identified procedures (regardless of their type).
+        The individual components are stored in objects of the subclasses
         """
 
         for procedure_type_cls in [Sub, Function]:
 
             for line_begin, line_end in procedure_type_cls.matches_line_ixs:
 
-                # _BUG(?FIX?): sofern nach ein End {procedure_type} in der allerletzten Zeile des Quellcodes steht undn KEINE LEERZEILE FOLGT, isst line_end = None . Das raised einen TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+                # _BUG(?FIX?): if there is an End {procedure_type} in the very last line of the source code and NO SPACE LINE FOLLOWS, line_end = None . This raises a TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
                 lines = cls.raw_source_code[line_begin:line_end + 1]
 
                 sub = procedure_type_cls(tuple(lines))
@@ -800,18 +722,16 @@ class Procedure():
     # def identify_procedures(cls, list_of_code_lines:list[str]):
     def identify_procedures(cls):
         """
-        Identifizieren  aller Prozeduren (Methoden und Funktione) auf Klassenebene und Speichern der Zeilennummern der Deklarations- und End-Zeilen innerhalb der jeweiligen Klassenvariablen.
+        Identify all procedures (methods and functions) at class level and save the line numbers of the declaration and end lines within the respective class variables.
 
-        Durchsucht werden die einzelnen Strings der als Liste übergebenen Zeileninhalte des Quellcodes.
+        The individual strings of the line contents of the source code passed as a list are searched.
 
         Args:
-            raws (list[str]): Liste mit einem Eintrag pro Zeile des Quellcodes
+            raws (list[str]): List with one entry per line of the source code
 
         """
 
         for ix, text in enumerate(cls.raw_source_code):
-
-            # db(text)
 
             if cls.search_for_begin:
 
@@ -824,7 +744,7 @@ class Procedure():
 
 
             else:
-                # Suche nach dem entsprechend passenden Ende
+                # Search for the appropriate end:
                 current_procedure_type_cls.search_end_of_procedure(text, ix)
 
 
@@ -846,23 +766,23 @@ class Procedure():
     @classmethod
     def check_and_get_match(cls, text:str, line_no:int) -> bool:
         """
-        Prüft eine einzelne Zeile eines Codes (den übergebenen text), ob es sich um ein Match einer Deklarationszeile handelt, und auch, ob diese NICHT-auskommentiert ist. Sofern dies der Fall ist, wird dieses MAtch in die Liste der MAtsches aufgenommen.
+        Checks a single line of code (the transferred text) to see whether it is a match of a declaration line and also whether it is NOT commented out. If this is the case, this match is included in the list of matches.
 
         Args:
-            text (str): Zu prüfender Text ausschnitt
-            line_no (int) : Zeilennummer der Liste an gesamt zu untersuchenden Zeilen
+            text (str): Text section to be checked
+            line_no (int) : Line number of the list of total lines to be checked
 
         Returns:
-            bool: True falls das match aufgenommen wurde
+            bool: True if the match was recorded
         """
 
         if cls.regex_begin.match(text):
             if not cls.regex_ausschluss_kommentar.match(text):
 
-                # JULIA: consider multiline-comments:
+                # TEST: consider multiline-comments:
                 if line_no not in cls.multiline_comment_line_numbers:
 
-                    # Dann aufnehmen in die Liste der MAtches! inkl. Platzhalter für Endzeilennummer:
+                    # Then add to the list of MAtches! incl. placeholder for end line number:
                     cls.matches_line_ixs.append([line_no, None])
                     Procedure.search_for_begin = False
 
@@ -878,18 +798,19 @@ class Procedure():
     @classmethod
     def search_end_of_procedure(cls, text:str, line_no:int) -> bool:
         """
-        Prüft eine einzelne Zeile eines Codes (den übergebenen text), ob es sich um ein Match einer Deklarations-END-zeile handelt, und auch, ob diese NICHT-auskommentiert ist. Sofern dies der Fall ist, wird dieses MAtch in die Liste der MAtsches aufgenommen.
+        Checks a single line of code (the transferred text) to see whether it is a match of a declaration END line and also whether it is NOT commented out. If this is the case, this MAtch is included in the list of MAtches.
 
         Args:
-            text (str): Zu prüfender Text ausschnitt
-            line_no (int) : Zeilennummer der Liste an gesamt zu untersuchenden Zeilen
+            text (str): Text section to be checked
+            line_no (int) : Line number of the list of total lines to be checked
 
         Returns:
-            bool: True falls das match aufgenommen wurde
+            bool: True if the match was recorded
         """
 
         
-        # BUG: Durch die Regex wird aber auch etwas wie End sub  gefunden obwohl es um end function geht! Daher wurde der PRogrammablauf im main angepasst, um sicherzustellen, dass immer nach der richtigen Klassen-Beendigung gesucht wird... Falls Langeweile: Später mal schauen warum...
+        # BUG: The regex also finds something like End sub although it is about end function! Therefore, the program flow in the main was adapted to ensure that the correct class termination is always searched for... If you're bored: See why later...
+
         if cls.regex_end.match(text):
             if not cls.regex_ausschluss_kommentar.match(text):
                 # Dann aufnehmen in die Liste der MAtches!
@@ -908,15 +829,15 @@ class Procedure():
     @classmethod
     def initialize_page_top_text(cls):
         """
-        Initialisiert den Text für den Markdown-Text des  Headers der Seite und speichert es in der Klassenvariable cls.head. 
-        Zugriff erfolgt über die Superklasse Procedure. 
+        Initializes the text for the Markdown text of the page header and saves it in the cls.head class variable. 
+        Access is via the Procedure superclass. 
 
         
         """
 
         page_top_text = cls.__read_template("templates/sec_head.md")
 
-        # Gesamtanzahl an verfügbaren prozeduren je Art einsetzen:
+        # Insert total number of available procedures per type:
         placeholder_replacer = {
             "@PLACEHOLDER_INPUT_FILE@" : MetaData.get_input_filename(),
             "@PLACEHOLDER_TIMESTAMP_NOW@" : MetaData.date_of_process,
@@ -936,13 +857,13 @@ class Procedure():
     @classmethod
     def initialize_toc(cls):
         """
-        Initialisiert den Text für den Markdown-Text des  Table of content und speichert es in der Klassenvariable cls.toc. Zugriff erfolgt über die Superklasse Procedure. 
-        Innerhalb des resultierenden Textes sind weiterhin jeweils 1 Platzhalter fuer jede Prozedur-Art vorhanden. Diese werden spaeter gesondert ersetzt.
+        Initializes the text for the Markdown text of the table of content and saves it in the class variable cls.toc. Access is via the Procedure superclass. 
+        Within the resulting text, there is still 1 placeholder for each procedure type. These will be replaced separately later.
         """
 
         toc = cls.__read_template("templates/sec_toc.md")
 
-        # Gesamtanzahl an verfügbaren prozeduren je Art einsetzen:
+        # Insert total number of available procedures per type:
         placeholder_replacer = {
             "@PLACEHOLDER_SUBS_COUNTS@" : len(Sub.instances),
             "@PLACEHOLDER_FUNCTIONS_COUNTS@" : len(Function.instances),
@@ -963,14 +884,12 @@ class Procedure():
     @classmethod
     def generate_toc_entries(cls, subklasse):
         """
-        
-        Generiert die Einzelnen Eintraege aller Prozeduren der uebergebenen subklasse und fuegt diese in die Klassenvariable cls.toc ein, indem Platzhalter verwendet werden.
-        
-        Zugriff auf Superklassen-Ebene
-
+        Generates the individual entries of all procedures of the passed subclass 
+        and inserts them into the class variable cls.toc by using placeholders.
+        Access at superclass level
 
         Args:
-            subklasse (Sub | Function): Klasse, die aktuell gelistet werden soll
+            subklasse (Sub | Function): Class that is currently to be listed
         """
 
 
@@ -982,16 +901,16 @@ class Procedure():
 
         for (prozedur_obj, prozedur_name, prozedur_initialisierungszeile) in subklasse.all_procedures_final:
 
-            # Iterieren ueber jede Instanz:
+            # Iterate over each instance:
 
-            # TODO: Vorgehen wenn es KEINE instanz gibt???! - sollte kein Problem sein, dadurch dass nach jedem Einfügen immer wieder der Ausgangszustand bzgl. des Platzhalters wiederhergestellt wird un dieser am Ende gelöscht wird??!
+            # TODO: What to do if there is NO instance???! - should not be a problem, because the initial state of the placeholder is always restored after each insertion and it is deleted at the end??!
 
-            # Aufbau des Markdown.-Codes fuer diesen TOC-Eintrag:
+            # Structure of the Markdown code for this TOC entry:
             new_entry = cls.get_markdown_for_code_line_of_call_entry(prozedur_name, prozedur_initialisierungszeile, line_text="")
 
-            # Append the placeholder to have this flag for insert further entries:
+            # Fügen Sie den Platzhalter ein, um dieses Kennzeichen für weitere Einträge zu haben:
             new_entry = new_entry + "\n  " + platzhalter
-            # ACHTUNG: Zusatz-Zeile vorweg sind relevant fuer korrekte Einrueckung im MArkdown!
+            # Insert the placeholder to have this indicator for further entries:
 
 
             toc = toc.replace(platzhalter, new_entry)
@@ -1020,62 +939,31 @@ class Procedure():
     @classmethod
     def analyse_references(cls):
         """
-        Zugriff erfolgt über die Superklasse Procedure. Innerhalb der Methode wird ueber jedes Objekt jeder Subklasse iterriert.
+        Access is via the Procedure superclass. Within the method, it will be iteratded over each object of each subclass.
 
-        Zur Vereinfachung wird eine neue Klassenvariable auf Superklassen-Ebene erstellt, in der alle Elemente der beiden gleichnamigen Listen der einzelnen Subklassen Sub und Function.all_procedures_final enthalten sind. Diese Liste ist sortiert nach aufsteigender Zeilennummer.
+        For simplification, a new class variable is created at superclass level, which contains all elements of the two lists of the same name of the individual subclasses Sub and Function.all_procedures_final. This list is sorted by ascending line number.
 
-        Es wird dann nach Referenzierungen (Aufrufen) jeder Einzelnen Prozedur im gesamten Quelltext gesucht. Bei einem gefundenen Match wird weiter identifiziert, innerhalb welcher uebergeordneten Prozedur dieser Aufruf erfolgte. 
-        Fuer jedes Objekt wird eine Objektvariable (Liste) references erstellt, die initial leer ist und bei gefundenen Matches jeweils mit einem Tuple der folgenden Form erweitert wird: (line_no, bezeichnung_uebergeordnete_prozedur, zeilentext_des_aufrufes).
+        The system then searches for references (calls) of each individual procedure in the entire source code. If a match is found, it is further identified within which higher-level procedure this call was made. 
+        An object variable (list) references is created for each object, which is initially empty and is extended with a tuple of the following form when matches are found: (line_no, bezeichnung_ueberordnete_prozedur, zeilentext_des_aufrufes).
 
-        Diese Methode bildet auch die Grundlegende Datenbasis, auf der anschließend die Calling_Sequences analysiert werden können.
+        This method also forms the basic database on which the calling_sequences can then be analyzed.
 
         """
 
-        # ERstellung der gemeinsamen Liste auf Superklassen-Ebene:
+        # Creation of the common list at superclass level:
         all_procedures = Sub.all_procedures_final + Function.all_procedures_final
 
 
-        # Sortierung der neuen Liste: Basierend auf der Zeilen-Nummer der Deklarationszeile
+        # Sort the new list: Based on the line number of the declaration line
         cls.all_procedures_final = sorted(all_procedures, key=lambda stored_tuple: stored_tuple[2])
 
 
         for (prozedur_obj, prozedur_name, prozedur_initialisierungszeile) in cls.all_procedures_final:
 
-            # Erstellen einer Objektvariable: Liste fuer alle noch zu findenen Referenzierungen:
+            # Create an object variable: List of all references still to be found:
             prozedur_obj.references = []
             
        
-            
-            # ACHTUNG: Die folgende regex matcht zwar NICHT etwas wie ' Prozedurname, aber ohne das Leerzeichen ('Prozedurname) wird fälschlicherweise immer noch gematcht! Daher nach dem matschen einfach nochmal prüfen, ob VOR dem ProcName noch ein ' steht... dann entnehme das Matsch wieder (ähnliches Vorgehensweise wie bei der Identifizierung von Procedures-Deklarationen...). 
-            # regex_ansatz = re.compile(r"(?<!('.*))(\W{___PROC_NAME___}\W)".format(___PROC_NAME___=prozedur_name))
-            # ACHTUNG: Durch diese Einschränkung brauche ich EH diese Kontrolle, daher wird jetzt doch eine regex verwendet, die das Auskommentieren GAR NICHT berücksichtigt, somit werden auch alle auskommentierten Aufrufe gematcht... Dafür wird stattdessen direkt mit berücksichtigt, dass Deklarationszeilen NICHT gematcht werden sollen! Eine einzelne Abfrage hierzu ist also nicht mehr erforderlich!
-            # regex = re.compile(r"(?<!(Function|Sub))\W{___PROC_NAME___}\W".format(___PROC_NAME___=prozedur_name))
-            # regex = re.compile(r"\b(!Function|Sub\b)\W{___PROC_NAME___}\W".format(___PROC_NAME___=prozedur_name))
-            
-            
-
-            # List of regex-pattern which would match for a call. can be extend as required.
-
-
-            """ OK:
-
-            # # TODO: Use the same concept for the excluding_pattern
-            # regex_including_patterns = [
-
-            #     # # OBSOLET durch untere:
-            #     # r"\bcall\s+§§___PROC_NAME___§§\b".replace("§§___PROC_NAME___§§", prozedur_name),
-
-            #     # # OBSOLET durch untere:
-            #     # r"\b§§___PROC_NAME___§§\(".replace("§§___PROC_NAME___§§", prozedur_name),
-
-
-
-            #     r"(\s{0,}§§___PROC_NAME___§§\b)(?!\s{0,}=)".replace("§§___PROC_NAME___§§", prozedur_name)
-
-
-            # ]
-            """
-            
             regex_including_patterns = SyntaxClass.get_pattern_references(prozedur_name)
 
 
@@ -1083,43 +971,23 @@ class Procedure():
                 cls.regex_ausschluss_kommentar,
             ]
             
-            # TODO: # JULIA: 
-            # regex_excluding_patterns = SyntaxClass.get_pattern_single_line_comment()
 
 
-            '''
-            # OBSOLET: Replaced by elements in list regex_including_pattern to can extend this list as required
 
-            regex_call = re.compile(r"\bcall\s+{___PROC_NAME___}\b".format(___PROC_NAME___=prozedur_name))
-
-            regex_brackets = re.compile(r"\b{___PROC_NAME___}\(".format(___PROC_NAME___=prozedur_name))
-            
-            '''
-
-
-            # ACHTUNG: es wird hiermit DOCH NICHT ABGEFANGEN, dass die Deklarationszeile nicht gematcht wird! die muss also später noch raus kommen!
-
-
-            # Durchsuche den GESAMTEN QUELLTEXT nach einem Aufruf dieser Prozedur:
+            # Search the ENTIRE SOURCE TEXT for a call to this procedure:
             for line_no, line_text in enumerate(cls.raw_source_code, 1):
 
 
-
-                # db("gesuchte Methode:", prozedur_name, "Line-Nr = ", line_no, "  :  ", line_text)
-
-
                 if line_no == prozedur_initialisierungszeile:
-                    # Dann ist dies die  Deklarationszeile der Funktion, zu der die Aufrufe gefunden werden sollen - also ignorieren!
+                    # Then this is the declaration line of the function for which the calls are to be found - so ignore it!
                     continue
 
                 
-                # TODO: in there: implement query wheather line no is in multiline_comment_line_numbers
-                # JULIA:  
-                # ACHTUNG: line_no || line_no - 1 ???
+                # TEST: Has it to be just    line_no    or    line_no - 1 ???
                 if line_no - 1 in cls.multiline_comment_line_numbers:
 
-                    # dann block kommentar --> irrelevant!
-                    # TEST: Mit VBA scheint alles ok zu sein, ergebnis von beispiel_modul1.md stimmt vorher/nachher überein.
+                    # then multiline-comment --> not relevant
+                    # TEST: For testing with VBA everything seems to be ok, result of example_module1.md matches before/after.
                     continue
 
 
@@ -1131,24 +999,7 @@ class Procedure():
 
                     if (match:=regex.search(line_text)):
 
-                        # dann match!
-                        
-                        # continue # Soll: try next regex
-
-                    # else:
-                    
                         break
-
-                # if not match:
-                    
-                #     continue # try next line code
-
-                # if not (match:=regex_brackets.search(line_text)):
-                #     # Kein Aufruf mittels ...PROZEDURNAME(...
-                #     if not (match:=regex_call.search(line_text)):
-                #         # Kein Aufruf mittels ...Call PROZEDURNAME...
-
-                #         continue
                 
                 if not match:
                     
@@ -1156,38 +1007,36 @@ class Procedure():
                     continue
 
 
-                # TODO: Backreference auf die Gruppe mit dem Sub-Namen (kenie backref nötig, da es ja EH nur nach dieser gesucht wird!) notwendig für aufruf abfolge
+                # TODO: Backreference to the group with the sub-name (no backref necessary, as it is only searches for this!) necessary for call sequence
                 ziel_prozedur_name = prozedur_name
-                # db(match)
-                    
 
-
-                # An dieser Stelle ist match IMMER != None:
-                # db(match)
+                # At this point, match is ALWAYS != None:
 
                 # Check wheather there is a comment-symbol before the procedure name:
                 __prozedur_name_start_pos = match.span()[0]
                 if (cls.regex_ausschluss_kommentar.search(line_text[0:__prozedur_name_start_pos])):
-                    # Dann kommentar
+                    # then: it is a comment
                     continue
 
 
-                # Hier ist eine tatsächlicher Aufruf gefunden worden, der jetzt dokumentiert werden muss:
-                # JEtzt muss der Aufruf dokumentiert werdn!
+                # An actual call has been found here, which must now be documented:
+                # Now the call must be documented!
                 
 
-
+                # only for me privat (learning... ;-) )
                 # ACHTUNG:  WICHTIG:  Der folgende Schritt / die Logik und Anwendung war mir neu  -  nochmal recherchieren! sowohl mit dem filtern / nach eigenem Key, als auch, dass das Ergebnis nicht DIE EINZELNE ZAHL  ist, sondern tatsächlich direkt das TUPLE, IN DEM DIESE EINZELNE ZAHL GESPEICHERT IST!  Extrem praktich!!!!
 
                 
-                # Logik zum Finden der aufrufenden Prozedur: Die Deklarationszeilennummer muss < line_no sein. Die nächste dran ist die Zeilennummer der Deklarationszeile
+                # Logic for finding the calling procedure: 
+                # # The declaration line number must be < line_no. 
+                # # The next one is the line number of the declaration line
                 aufrufende_prozedur_tuple_relevant = [tpl for tpl in cls.all_procedures_final if tpl[2] < line_no]
 
-                # Das relevante Tuple der Liste cls.all_procedures_final wird in der selben Form gespeichert in der folgenden Variable:
+                # The relevant tuple of the list cls.all_procedures_final is stored in the same form in the following variable:
                 aufrufende_prozedur_tuple = min(aufrufende_prozedur_tuple_relevant, key=lambda x_tuple: abs(x_tuple[2] - line_no))
 
 
-                #Erweiterung um den Prozedurnamen, der aufgerufen wird:
+                # Adding the name of procedure which is called:
                 prozedur_obj.references.append(
                     (line_no, aufrufende_prozedur_tuple[1], line_text, ziel_prozedur_name)
                 )
@@ -1201,81 +1050,73 @@ class Procedure():
     @classmethod
     def finalize(cls, output_file_path:str):
         """
-        ### TODO: Ob wirklich alles hier in die Klasse gehört ist fraglich! 
+        ### TODO: Whether everything really belongs in this class is questionable! 
         
-        Zugriff erfolgt über die Superklasse Procedure. Innerhalb der MEthode wird wiederum in Schleifen itteriert ueber die Subklassen.
+        Access via the Procedure superclass. Within the method, it is again iterated in loops via the subclasses.
         
-        Bereitet die finale Ausgabe vor und ruft weitere MEthoden zum Schreiben dieser Ausgabe / der Markdown-Datei auf.
-        Zu dieser Vorbereitung gehört:
+        Prepares the final output and calls further methods to write this output (which is the Markdown file).
+        This preparation includes
          
-            - Sortierung der einzelnen Prozeduren innerhalb der verschiedenen Prozedur-Arten gemaess der alphabetischen Reihenfolge ihrer Bezeichner (Namen)
+            - Sorting the individual procedures within the different procedure types according to the alphabetical order of their identifiers (names)
             
-            - Konfigurieren / Initilalisierung der Zwischenüberschriften / Header-Texte unterhalb der einzelnen Section-Überschriften (gespeichert in Klassenvariable cls.header)
+            - Configuring / initializing the subheadings / header texts below the individual section headings (stored in class variable cls.header)
 
 
         Args:
-            output_file_path (str): Dateipfad der zu erstellenden Markdown-Datei
+            output_file_path (str): File path of the Markdown file to be created
         """
 
         cls.initialize_page_top_text()
 
 
         # =============================================================================
-        #### # Extrahiere den Modulweiten Docstring (sofern es einen gibt): ####
+        #### # Extract the module-wide docstring (if there is one provided): ####
         # =============================================================================
         
-        # Beginne erst ab Zeile 1 wegen der Codierungszeichen!
+        # start at line 1 instead of line 0 as in the line 0 are stored codes of decoding
         __modul_docstring = cls.identify_docstring(cls.raw_source_code[1:], trim_empty_rows=True, return_alternativ_text=True)
         __template_docstring = cls.__read_template("templates/sec_modulinfos.md")
-        # Ersetze Platzhalter in der Template durch gefundenen Docstring:
+        # Replace placeholders in the template with the docstring found:
         cls.modul_docstring = __template_docstring.replace("@PLACEHOLDER_MODUL_DOCSTRING@", __modul_docstring)
 
         
 
-        # Vorbereitung des TOCS:
+        # preparation of the table of content (TOC):
         cls.initialize_toc()
 
         for procedure_type_cls in [Sub, Function]: 
 
-            # Initialisieren des Headers unterhalb der Section-Überschrift  (aus gesonderter Template) und in Klassenvariable speichern:
+            # Initialize the header below the section heading (from separate template) and save in class variable:
             content = cls.__read_template(procedure_type_cls.TEMPLATE_SECTION_HEAD)
-
-            # _BUGFIX: cls.header = content
-            # _BUGFIX: Durch das Überschreiben von Sub durch Function bevor die Template überschrieben wird, gibt es 2x die Überschrift "Functions"
             procedure_type_cls.header = content
 
-
-
-            # Instanzen der Prozeduren  Alphabetisch  sortieren nach den Namen! und in Klassenvariable speichern:
+            # Sort instances of the procedures alphabetically by name and save them in class variable:
             procedure_type_cls.sort_procedures_by_names()
 
 
-            # Ergänze einen einzigen Eintrag für eine Methode! und haenge sie dem TOC an
-            # WICHTIG: Auf Superklassen-Ebene!
+            # Add a single entry for a method! and attach it to the TOC            
+            # NOTE: This works on superclass-level
             cls.generate_toc_entries(procedure_type_cls)
 
         
-        # Durchsuche gesamten Quelltext nach allen Referenzierungen für jeweils alle gefundenen Prozeduren und speichere sie in den jeweiligen Objekten der einzelnen Prozeduren:
+        # Search the entire source code for all references for all procedures found 
+        # and save them in the respective objects of the individual procedures:
         cls.analyse_references()
-        # TODO / TEST: already considered.: in there: implement query wheather line no is in multiline_comment_line_numbers
 
 
-
-
-
-
-        # TODO:  Analysiere jede Prozedur und speichere jeden weiteren Aufruf einer weiteren Prozedur in dem Prozedur-Objekt. Geschrieben wird es erst später, da dann rekursiv auf alle Calling-Sequences zugegriffen werden kann
+        # Analyze each procedure and save each further call of another procedure in the procedure object. 
+        # Writing this to file will be done later, as all calling sequences can then be accessed recursively.
         cls.analyse_call_sequences()
         # TODO / TEST -->: in there: implement query wheather line no is in multiline_comment_line_numbers
-        # TEST: Actually the analysis bases on analyse_references. As pattern for references in multiline-comments are not stored by the last change of analyse_reference, there should be no need to modify analyse_call_sequences.
-
-
+        # TEST: Actually the analysis bases on analyse_references. \
+        # As pattern for references in multiline-comments are not stored by the last change of analyse_reference, \
+        # there should be no need to modify analyse_call_sequences.
 
         cls.prepare_all_call_sequence_docs()
 
 
 
-        # Aufruf der Methode zum tatsächlichen Schreiben der Textdatei:
+        # Call the method for actually writing the text file:
         cls.write_to_file(output_file_path)
 
 
@@ -1287,34 +1128,33 @@ class Procedure():
     @classmethod
     def get_procedure_obj_by_name(cls, procedure_name:str) -> 'Procedure':
         """
-        Gibt das Prozedur-Objetk mit dem übergebenen Namen zurück
-        Das Objekt ist aus der Subklasse Sub oder Function.
+        Returns the procedure object with the transferred name
+        The object is from the subclass Sub or Function.
 
         Args:
-            procedure_name (str): Name der gesuchten Procedur
+            procedure_name (str): Name of the procedure searched for
         """
 
-        # Procedure.all_procedures_final
-        
         for (prozedur_obj, prozedur_name, prozedur_initialisierungszeile) in Procedure.all_procedures_final:
             if prozedur_name == procedure_name:
                 return prozedur_obj
 
-        db("nicht gefunden!!!")    
+        db("not found!")     # only for debugging
+
         return None
 
 
     @staticmethod
     def indent_str(text:str, count_of_indents:int=0) -> str:
         """
-        Stellt jeder Zeile entsprechende Indention-Symbols vorweg.
+        Precedes each line with the corresponding indention symbol.
 
         Args:
             text (str): Text
             count_of_indents (int, optional): Level of indention. Defaults to 0.
 
         Returns:
-            str: Text eingerückt.
+            str: indented text.
         """
         CHARS_PER_INDENT = "  "
 
@@ -1342,23 +1182,21 @@ class Procedure():
     @staticmethod
     def get_markdown_for_code_line_of_call_entry(proc_name:str, line_no:str, line_text:str) -> str:
         """
-        Generiert einen String, der in eine MArkdown-Datei mit entsprechendem Syntax eingefügt werden kann.
-        Der String enthält den Namen einer Prozedur, eine relevante Zeilennummer und den relevanten Text der Code-Zeile.
+        Generates a string that can be inserted into a Markdown file with the corresponding syntax.
+        The string contains the name of a procedure, a relevant line number and the relevant text of the code line.
 
-        Innerhalb der Methode wird der String so aufgebaut, dass der Prozedurname später verlinkt ist zu dieser Prozedur.
+        Within the method, the string is structured in such a way that the procedure name is later linked to this procedure.
 
-        Die Methode kann sowohl für calling_sequences (Aufrufe), als auch für references (übergeordnete / aufrufende Prozeduren) verwendet werden und stellt sicher, dass das Ausgabeformat immer identisch ist.
-
-        # ACHTUNG: Weitere Darstellungmöglchkeiten siehe OLD_self !
+        The method can be used both for calling_sequences (calls) and for references (superordinate / calling procedures) and ensures that the output format is always identical.
         
         Args:
-            proc_name (str): Name der Prozedur
-            line_no (str): Relevante Zeilennummer im Code (als str)
-            line_text (str): Textzeile im Code
+            proc_name (str): Name of the procedure
+            line_no (str): Relevant line number in the code (as str)
+            line_text (str): Text line in the code
 
 
         Returns:
-            str: String im Markdown-Syntax, der eine interaktive Übersicht über die Parameter in leserlicher Form gibt.
+            str: String in Markdown syntax that provides an interactive overview of the parameters in readable form.
         """
 
         # proc_name:str, line_no:str, line_text:str
@@ -1387,35 +1225,33 @@ class Procedure():
 
     def prepare_single_call_sequence_docs(self, level=0):
         """
-        ### TODOC: Siehe prepare_all_call_sequence_docs... (gelöscht)
-        ### CHANGELOG:
 
-        - 2024-01-07 - 04:16:47 Beginn neuafbau
-        - 2024-01-07 - 23:07:07 läuft jetzt
+        ### TODOC: docs Perhaps not up to date!
+        NOTE: This method has been changed fundamentally, and I don't think that this docstring is up to date!
+
 
         
-        Generiert die vollständige Dokumentation der Aufrufsequenzen in den einzelnen Objekten und speichert sie im Attribut obj.calling_sequences_doc. Nach vervollständigung wird obj.calling_sequences_state = True  gesetzt.
+        Generates the complete documentation of the calling sequences in the individual objects and saves it in the obj.calling_sequences_doc attribute. After completion, obj.calling_sequences_state is set to True.
 
-        Zugriff erfolgt auf Objekt-Ebene.
+        Access is at object level.
         """
-        db(f"name der ZU ANALYSIERENDEN prozedur : {self.name}")
+        db(f"name of the procedure which should be analysed : {self.name}")
 
         if self.calling_sequences_state:
-            db("diese proz ist fertig!")
 
             end_text_per_procedure = ""
 
             text_to_return = self.calling_sequences_doc +  end_text_per_procedure
             
             
-            # ACHTUNG: keine indentions einfuegen!
+            # NOTE: do not insert  any indentions, as this will be done at the very end before writing
             text_to_return = self.indent_str(text_to_return, 0)
 
 
             return text_to_return
 
 
-        # Initialisiert den Initialtext aus der template, falls es noch keinen Text gibt:
+        # If there is no text yet, initializes it from the template:
         if not self.calling_sequences_doc:
             self.calling_sequences_doc = ""
 
@@ -1424,46 +1260,45 @@ class Procedure():
             
             replacer_placeholder_reference =  self.get_markdown_for_code_line_of_call_entry(target_procedure_name, line_no_reference, line_code)
 
-            # ACHTUNG: keine indentions einfuegen!
+            # NOTE: do not insert  any indentions, as this will be done at the very end before writing
             replacer_placeholder_reference = self.indent_str(replacer_placeholder_reference, 0)
             
             self.calling_sequences_doc = self.calling_sequences_doc  + replacer_placeholder_reference 
 
             level = level + 1
 
-            # Rekursive Aufrufe für untergeordnete Calling-sequenzabfolge:
+            # Recursive calls for subordinate calling sequence:
             if target_procedure_name == self.name:
-                # Abbruch gegen Endlosrekusrion:
+                # If finding a recursive call in the procedure, stop the further documentation, as this will be endless recursivly, too.
+                # Instead, add a sentence to document this  to the the user later.
                 further_calls_doc = "- <small> *... recursivly calls itself under certain conditions ...* </small> \n\n"
 
             else:
 
                 # get the object from target_procedure_name:
-                db(f"neuer ziel-name =  {target_procedure_name}")
                 target_procedure_obj = self.get_procedure_obj_by_name(target_procedure_name)
 
-                # Rekursiv: den nächsten Platzhalter mit der nächsten Dokumentation des aufgerufenen calls füllen:
+                # Recursive: fill the next placeholder with the next documentation of the called call:
                 # further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level + 1)
                 further_calls_doc = target_procedure_obj.prepare_single_call_sequence_docs(level + 0)
-                # TEST 2024-01-07 - 22:25:28: hier nur level + 0 ?! scheint zu fixxen!!!! :-) JA @ 2024-01-07 - 23:09:23
-
 
             
-            # ACHTUNG: HIER JA:  indentions einfuegen!
+            # NOTE: **HERE** the indentations will be inserted at last:
             self.calling_sequences_doc = self.calling_sequences_doc  + self.indent_str(further_calls_doc, count_of_indents=level)
 
-            # Verringerung des Levels:
+            # Decrease the level:
             level = level - 1
 
 
+        # Increase the level:
         level = level + 1
 
 
-        abschlusstext = "\n- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>"
+        abschlusstext = "\n- <small>*No further calls to other procedures that are documented here.*</small>"
         if Procedure.__print_final_calling_sequence_message == False:
             abschlusstext = ""
         
-        # ACHTUNG: keine indentions einfuegen!
+        # NOTE: do not insert  any indentions, as this will be done at the very end before writing
         abschlusstext = self.indent_str(abschlusstext, 0)
 
 
@@ -1500,11 +1335,13 @@ class Procedure():
     @classmethod
     def prepare_all_call_sequence_docs(cls):
         """
-        Generiert die vollständige Dokumentation der Aufrufsequenzen in den einzelnen Objekten und speichert sie im Attribut obj.calling_sequences_doc. Nach vervollständigung wird obj.calling_sequences_state = True  gesetzt.
+        Generates the complete documentation of the calling sequences in the individual objects and saves it in the obj.calling_sequences_doc attribute. After completion, obj.calling_sequences_state is set to True.
 
-        Zugriff erfolgt auf Superklassen-Ebene, wobei intern die Instanzen der Klasse referenziert werden
+        Access takes place at superclass level, whereby the instances of the class are referenced internally
 
-        # NEIN: Nach der eigentlichem Itterieren und Dokumentieren der Abruffolge werden innerhalb dieser Klassenmethode für das Objekt die Platzhalter für die Übersicht ersetzt (Anzahl und Einleitungssatz).
+        
+        # TODOC: Why is it labeld with 'NO' ? Should it be so but it is not yet implemented?
+        # NO: After actually iterating and documenting the calling sequence, the placeholders for the overview are replaced within this class method for the object (number and introductory record).
 
 
         """
@@ -1518,10 +1355,10 @@ class Procedure():
 
             db(len(prozedur_obj.calling_sequences), prozedur_obj.calling_sequences)
 
-            db("weiter")
+            db("next procedure...")
             
 
-        db("alle fertig prepared.")
+        db("all call sequences are ready prepared.")
 
 
 
@@ -1550,13 +1387,13 @@ class Procedure():
     @classmethod
     def analyse_call_sequences(cls):
         """
-        Itteriert über sämtliche zu dokumentierenden Prozedur-Objekte und ruft für jedes Objekt die Methode analyse_calling_sequences_in_one_proc auf, in der sämtzliche Aufruf-Abfolgen innerhalb dieser einen Prozedur ermittelt werden.
+        It iterates over all procedure objects to be documented and calls the method analyze_calling_sequences_in_one_proc for each object, in which all calling sequences within this one procedure are determined.
 
-        Zugriff erfolgt auf Superklassen-Ebene, wobei intern die Instanzen der Klasse referenziert werden und diese durchgeschleust werden zur objekt method!
+        Access takes place at superclass level, whereby the instances of the class are referenced internally and these are passed through to the object method!
         """
         cls.all_procedures_final
 
-        # Anwendung der bereits bestehenden Objekt-Methode fuer jede Prozedur:
+        # Use the existing object method for each procedure:
         for prozedur in cls.all_procedures_final:
 
             prozedur_obj:Procedure = prozedur[0]
@@ -1569,7 +1406,7 @@ class Procedure():
             prozedur_obj.calling_sequences = sorted(prozedur_obj.calling_sequences, key=lambda stored_tuple: stored_tuple[0])
 
 
-        db("Alle Prozeduren analysiert, noch nicht dokumentiert!")
+        db("All procedures analyzed, not yet documented!")
 
 
 
@@ -1586,12 +1423,12 @@ class Procedure():
     
     def analyse_calling_sequences_in_one_proc(self) -> None:
         """
-        Ermittelt die Aufruf-Abfolge fremder (aber durch dieses Documenter-Tool dokumentierte) Prozeduren innerhalb dieser Prozedur self.
-        Das Ergebnis wird gespeichert in der Objektvariable self.calling_sequences (Liste aus Tuples, wobei jedes Tuple einen Aufruf darstellt.)
-        Innerhalb dieser MEthode wird NICHT die self.documentation verändert, da dies erst erfolgen sollte, nachdem diese Methode analyse_calling_sequences_in_one_proc für sämtliche zu dokumentierenden VBA-Prozeduren durchlaufen wurde.
+        Determines the calling sequence of external (but documented by this documenter tool) procedures within this procedure self.
+        The result is stored in the object variable self.calling_sequences (list of tuples, where each tuple represents a call).
+        Within this method, the self.documentation is NOT changed, as this should only be done after this method analyze_calling_sequences_in_one_proc has been run for all VBA procedures to be documented.
 
         ### NOTE:
-        Diese Methode basiert auf der zuvor verwendeten Methode OLD_generate_calling_entries, die den Startpunkt der Entwicklung darstellte und zusätzlich zu dem Speichern der Erkenntnisse diese auch direkt dokumentierte. 
+        This method is based on the previously used method OLD_generate_calling_entries, which was the starting point of the development and, in addition to saving the findings, also documented them directly. 
         """
 
         self.calling_sequences = []
@@ -1599,8 +1436,8 @@ class Procedure():
         # Suche für alle vorhandenen Prozeduren jeweils ihre Referenzen heraus, und prüfe, ob eine Referenz zu der jetzt gerade untersuchten Prozedur (self.name) führt. Wenn ja, ist dies ein Aufruf, der der calling_sequences liste angehangen werden soll.
         for (procedure_obj, prozedur_name, procedure_declaration_line_no) in Procedure.all_procedures_final:
             
-            # Filtern der liste, so dass uebergeordnetes_sub == name
-            db("Suche Aufrufabfolge für Prozedur >> {}\nAktuell: check ob die folgende Prozedur aufgerufen wird: >> {}".format(self.name, prozedur_name)) # ist IMMER GLEICH in einem einzigen Aufruf!
+            # Filter the list so that parent_sub == name
+            db("Search call sequence for procedure >> {}\nCurrently: check, wheather the following procedure is be called: >> {}".format(self.name, prozedur_name)) # is ALWAYS EQUAL in a single call!
 
             
             relevante_references = [_ for _ in procedure_obj.references if _[1] == self.name]
@@ -1611,15 +1448,14 @@ class Procedure():
 
 
             # =============================================================================
-            #### Füge die relevanten Referencen als Aufrufe innerhalb der zu analysierenden Prozedur hinzu: ####
+            ### # Add the relevant references as calls within the procedure to be analyzed: ####
             # =============================================================================
             
             for reference in relevante_references:
                 self.calling_sequences.append(reference)
 
-            # NOTE: Zugriff später bei Bedarf:
-            # for (line_no_reference, uebergeordnetes_sub, code, ziel_prozedur_name) in self.calling_sequence:
 
+            # NOTE: Access later if required:
 
         db("Calling Sequences for procedure {}:\n{}".format(self.name, self.calling_sequences))
 
@@ -1632,17 +1468,15 @@ class Procedure():
 
 
 
-    # @classmethod # eigentlich bezieht sich das auf ein einzelnes Objekt!!!
     def generate_reference_entries(self) -> None:
-    # def generate_reference_entries(cls, procedure_obj) -> None:
         """
-        Generiert von dem Objekt der Subklasse Function oder Sub die Dokumentation der Referenzierungen.
-        Speichert das Ergebnis in der bereits existierenden Objektvariable procedure_obj.documentation
+        Generates the documentation of the referencing from the object of the Function or Sub subclass.
+        Saves the result in the existing object variable procedure_obj.documentation
         """
 
 
 
-        # TODO: Struktur...? das gehört zu den references... ist eig. statisch, müsste nicht jedes mal beim funktionsaufruf neu gemacht werden, aber so ist es zusammen...
+        # TODO: Structure...? that belongs to the references... is actually constant, would not have to be redone every time the function is called, but that's how it belongs together... (I think poor structure)
         _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_REFERENCES_ENTRY@" 
 
 
@@ -1650,14 +1484,14 @@ class Procedure():
         # shortcut:
         doc:str = self.documentation 
 
-        # Alle Referenzierungen sind in der Objektvariablen  procedure_obj.references gespeichert:
+        # All referencing is stored in the object variable procedure_obj.references:
         count_of_references = len(self.references)
 
-        # ERsetzen des Platzhalters für die Anzahl der Referenzierungen in der bisherigen Dokumentation:
+        # Set the placeholder for the number of references in the previous documentation:
         doc = doc.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_REFERENCES@", str(count_of_references))
         
 
-        # Initialisierung und  Parametrisierung  des Einleitungssatzes:
+        # Initialization and parameterization of the introductory record:
         einleitungssatz = "Kein Aufruf gefunden." # default
 
         if count_of_references > 0:
@@ -1665,16 +1499,13 @@ class Procedure():
             einleitungssatz = "Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:"
 
             
-            # Iterrieren ueber jede Referenzierung, um diese zu dokumentieren:
+            # Iterate over each referencing to document it:
             for (line_no, calling_procedure_name, line_code, target_procedure_name) in self.references:
 
-                # Zusammenbau des Ersatzwertes für den Platzhalter inkl. Anhängen des Platzhalters für weitere Ersetzungen:
+                # Construct the replacement value for the placeholder incl. appending the placeholder for further replacements:
                 
-                # Um MArkdown nicht zu zerschiessen muss der letzte Zeilenumbruch des line_codes entfernt werrden:
+                # In order not to break MArkdown, the last line break of the line_code must be removed:
                 
-                # OBSOLET: wird in Methode get_markdown_for_code_line_of_call_entry erledigt
-                # line_code:str = line_code.rstrip("\n")
-
                 # replacer_placeholder_reference = f"* [```{calling_procedure_name}```](#{calling_procedure_name}) : <small>  [Zeile {line_no}] : ```{line_code}``` </small>"
 
 
@@ -1682,27 +1513,28 @@ class Procedure():
 
 
 
-                # # AUSBLICK: weitere collapse details : funktioniert technisch, allerdings steht das collapsable immer in neuer Zeile und daher wird es groß - vielleicht später in schön machen...
+                # # FORECAST: more collapse details : works technically, but the collapsable is always in a new line and therefore it will be big - maybe make it nice later...
+
                 # __replacer_placeholder_reference = f"*   [```{calling_procedure_name}```](#{calling_procedure_name})  <details> <summary>: <small>Zeile {line_no}</small> </summary> ```{line_code}``` </details>"
 
 
 
                 replacer_placeholder_reference = replacer_placeholder_reference  + _PLACEHOLDER_REFERENCE
                 
-                # Ersetzen:
+                # Replacing:
                 doc = doc.replace(_PLACEHOLDER_REFERENCE, replacer_placeholder_reference)
 
 
-        # Loeschen des verbliebenen Platzhalters zum Einfuegen einzelner Referenzen:
+        # Delete the remaining placeholder for inserting individual references:
         doc = doc.replace(_PLACEHOLDER_REFERENCE, "")
 
 
 
-        # Einsetzen des Einleitungssatzes:
+        # Insert the introduction sentence:
         doc = doc.replace("@PLACEHOLDER_PROCEDURE_REFERENCES_INTRODUCTION@", einleitungssatz)
 
 
-        # shortcut / resubstitution:
+        # resubstitution of the shortcut:
         self.documentation = doc
         
 
@@ -1715,40 +1547,42 @@ class Procedure():
     @classmethod
     def write_to_file(cls, output_file_path:str):
         """
-        Schreibt die Dokumentation aller Prozeduren (aller Art) in die als Dateipfad übergebene Zieldatei(pfad).
+        Writes the documentation of all procedures (of all types) to the target file (path) passed as the file path.
         """
 
         # initialize_toc
 
         with open(output_file_path, "w", ) as file:
 
-            ## TODO: Dies gehört eigentlich nicht mehr in die Klasse Procedure, aber aktuell trotzdem hierher, um alles zusammen zu haben. Ggf.s später refactoring...
-            # Initialisiere die Seite mit Titel und organisatorischen Hinweisen:
+            # TODO: This doesn't really belong in the Procedure class anymore, but it still belongs here to have everything together. 
+            # Possibly refactor later...
+            
+            # Initialize the page with title and organizational notes:
             content = cls.__read_template("templates/sec_head.md")
 
             file.write(cls.page_top_text)
 
-            #Einfügen des Index / TOCs /  Inhaltsverzeichnis:
+            # Insert Index / TOCs:
             file.write(cls.toc)
 
 
-            # schreiben der Modulinfos / Docstrings:
+            # Write the Modulinfos / Docstrings:
             file.write(cls.modul_docstring)
 
 
-            # # TODO: Struktur...? das gehört zu den references...
+            # # TODO: Poor structure...? actually this regards to the references... Maybe refactor later...
             # _PLACEHOLDER_REFERENCE = "@PLACEHOLDER_PROCEDURE_REFERENCES_ENTRY@" 
 
 
-            for procedure_type_cls in [Sub, Function]: # Reihenfolge wichtig fuer die Reihenfolge der Dokumentierten Sections!
+            for procedure_type_cls in [Sub, Function]: # Order is essential for the order of the documented sections!
 
 
-                # Überschrift der Section einfügen (aus gesonderter Template):
+                # Insert headline of the section (from individual template file)
                 file.write(procedure_type_cls.header)
 
 
 
-                # Dokumentieren aller einzelnen Prozeduren:
+                # Document all individual procedures:
                 for procedur_infos in procedure_type_cls.all_procedures_final:
                 # for (procedure_obj, procedure_name, procedure_line) in procedure_type_cls.all_procedures_final:
 
@@ -1761,36 +1595,36 @@ class Procedure():
                     procedure_obj.generate_reference_entries()
 
                     db("name der aktuell zu dokumentierenden prozedur: {}".format(procedure_obj.name))
-                    # Ermittlung + Dokumentation Calling Sequences:
+                    # Checking + Dokumentation Calling Sequences:
                     # procedure_obj.generate_calling_entries()
                     if not procedure_obj.calling_sequences_state:
-                        db(f"PROBLEM! mit {procedure_obj.name}")
-                        db(f"PROBLEM! mit {procedure_obj.name}")
-                    # BUG: Problem!
+                        db(f"PROBLEM! with {procedure_obj.name}")
+                        db(f"PROBLEM! with {procedure_obj.name}")
+                        # BUG: Problem! (wow! this does not help me anymore, and I tagged it myself :0: )
                     procedure_obj.documentation = procedure_obj.documentation.replace("@PLACEHOLDER_PROCEDURE_CALLING_SEQUENCES_BLOCK@", procedure_obj.calling_sequences_doc)
 
 
 
                     # =============================================================================
-                    #### Übersichts-Parameter eintragen für das Objekt: / die Prozedur: ####
+                    #### Enter overview parameters for the object: / the procedure: ####
                     # =============================================================================
                     
-                    # Initialisierung und  Parametrisierung  des Einleitungssatzes:
+                    # Initialization and parameterization of the introductory record:
 
                     if procedure_obj.calling_sequences:
 
-                        einleitungssatz = "Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:"
+                        einleitungssatz = "The following subordinate procedures are called within the procedure:"
 
                     else:
 
-                        einleitungssatz = "Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden." # default
+                        einleitungssatz = "No further calls found for procedures documented here." # default
 
 
-                    # Einsetzen des Einleitungssatzes:
+                    # Insert introduction sentence: 
                     procedure_obj.documentation = procedure_obj.documentation.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
 
 
-                    # Einsetzen der ÜBersichtsanzahl an Aufrufen:
+                    # Set the overview count of calls:
                     procedure_obj.documentation = procedure_obj.documentation.replace("@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@", str(len(procedure_obj.calling_sequences)))
 
 
@@ -1799,19 +1633,19 @@ class Procedure():
 
 
 
-                    # Schreibe die modifizierte Prozedur-Dokumentation in die Datei:
+                    # Write the modified procedure documentation to the file:
                     file.write(procedure_obj.documentation)
 
 
-                # Ausgabe der Zusammenfassung pro Section:
+                # Print summary per documented section:
                 print("Es wurden {} {}s identifiziert und dokumentiert.".format(len(procedure_type_cls.instances), procedure_type_cls.KEYWORD_TYPE))
 
 
 
-            ## TODO: Dies gehört eigentlich nicht mehr in die Klasse Procedure, aber aktuell trotzdem hierher, um alles zusammen zu haben. Ggf.s später refactoring...
-            # Finalisiere die Seite mit Schlusbemerkungen:
+            ## TODO: This doesn't really belong in the Procedure class anymore, but it still belongs here to have everything together. Possibly refactoring later...
+            # Finalize the page with closing remarks:
             content = cls.__read_template("templates/sec_tail.md")
-            # HACK: Nur fuer ENtwicklungsstadium!
+            # HACK: Actually for debugging usage... (or not?)
             content = content.replace("@PLACEHOLDER_TIMESTAMP_NOW@", MetaData.date_of_process)
             content = content.replace("@PLACEHOLDER_DOC_PYTHON@", __doc__.replace("\n", "<br>"))
             content = content.replace("@PLACEHOLDER_DOCUMENTER_VERSION__AUTHOR@", MetaData.documenter_version__author.rstrip(" <_>"))
@@ -1820,7 +1654,7 @@ class Procedure():
 
             file.write(content)
 
-        print("MD-Datei wurde aus MD-Datei generiert: {}".format(MetaData.get_output_path(".md")))
+        print("MD-file has been created at: {}".format(MetaData.get_output_path(".md")))
 
 
     @classmethod

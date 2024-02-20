@@ -7,7 +7,7 @@
 
 
 
-**<span style='color:red'>&#9888; As this project was not meant to become a public one in the first place, I did not chore and tidy the code by now! Also I began in German, but I will fix those both issues step by step and while choring I will translate everything in the code :-)</span>**
+**<span style='color:red'>&#9888; As this project was not meant to become a public one in the first place, I did not chore and tidy the code by now! Also I began in German, but I will fix those both issues step by step and while choring I will translate everything in the code :-) =====>>> I am currently working on this translation - see branch *'translate_to_english'*</span>**
 
 
 
@@ -15,10 +15,13 @@ For a quick first impression of the result, see the screenshots in below [Screen
 
 
 
-> **NOTE:** As I started this project privatly and was not very forward-looking a lot of the text (readme + code comments) is written in **German**. Step by step I will change this and translate everything to have a continuous language - sorry for that.
+> **NOTE:** As I started this project privatly and was not very forward-looking a lot of the text (readme + code comments) is written in **German**. Step by step I will change this and translate everything to have a continuous language - sorry for that. 
+> 
 >
 > The original [**German Readme**](<readme (German - state of 2024-02-19).md>)  will be untoucht in the future but will still remains as reference with the current status as of 2024-02-19 for checking translation issues.
->
+> ***
+>  > **I am currently working on the translation of the entire code project - see also branch** *'translate_to_english'*
+> ***
 > **<span style='color:red'>&#9888; If there is anything unclear or poor translated - feel free to correct it or to ask (e.g. via a new issue?) for the meaning...</span>**
 
 

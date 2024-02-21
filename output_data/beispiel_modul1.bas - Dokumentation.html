@@ -177,7 +177,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 744] : `                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)` </small>
 
 
 
@@ -235,7 +235,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Sub InsertImageFromFileToCell(zeile As Integer, spalte As Integer, image_path As String, Optional fitTo As String = "Width")
 ' Private Sub InsertImageFromFileToCell(zeile As Integer, spalte As Integer, image_path As String)
 
@@ -265,7 +265,7 @@ Private Sub InsertImageFromFileToCell(zeile As Integer, spalte As Integer, image
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -313,7 +313,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 767] : `    Call SeitenformatNextPosition(oSeite)` </small>
 
 
 
@@ -371,7 +371,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Sub SeitenformatNextPosition(oSeite As Seitenformat)
 ' Modifiziert die Attribute des Objektes so, dass die naechste Position in den Attributen gespeichert wird
 
@@ -391,7 +391,7 @@ Private Sub SeitenformatNextPosition(oSeite As Seitenformat)
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -495,13 +495,13 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Sub THIS_VERSION__1_17()
 ' Dummy-Methode, um Versionsnummer in MacroList anzeigen zu lassen...
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -549,7 +549,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1192] : ```        Call applyLayoutPrintArea(oSeite)``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1192] : `        Call applyLayoutPrintArea(oSeite)` </small>
 
 
 
@@ -581,7 +581,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```getCountsOfColumnsToPrint```](#getCountsOfColumnsToPrint) : <small>  [Zeile 254] : ```    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)``` </small>
+- [`getCountsOfColumnsToPrint`](#getCountsOfColumnsToPrint) : <small>  [Zeile 254] : `    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
@@ -614,7 +614,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Private Sub applyLayoutPrintArea(oSeite As Seitenformat)
     ' Legt den Druckbereich der einzelnen Seite fest, in Abhängigkeit der tatsaechlich vorhandenen Anzahl von Spalten:
 
@@ -639,7 +639,7 @@ Private Sub applyLayoutPrintArea(oSeite As Seitenformat)
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -688,7 +688,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1201] : ```    Call applyLayoutToAllPages(oSeite)``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1201] : `    Call applyLayoutToAllPages(oSeite)` </small>
 
 
 
@@ -720,22 +720,22 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  [Zeile 150] : ```        Call applyLayoutToSinglePage(ws, page, oSeite)``` </small>
+- [`applyLayoutToSinglePage`](#applyLayoutToSinglePage) : <small>  [Zeile 150] : `        Call applyLayoutToSinglePage(ws, page, oSeite)` </small>
 
 
-  - [```getCountsOfColumnsToPrint```](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
-
-
-
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-  - [```mergeCells```](#mergeCells) : <small>  [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
+  - [`getCountsOfColumnsToPrint`](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : `    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-  - [```mergeCells```](#mergeCells) : <small>  [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
+  - [`mergeCells`](#mergeCells) : <small>  [Zeile 195] : `    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)` </small>
+
+
+
+      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+  - [`mergeCells`](#mergeCells) : <small>  [Zeile 211] : `    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)` </small>
 
 
 
@@ -771,7 +771,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Private Sub applyLayoutToAllPages(oSeite As Seitenformat)
     ' Durchlaeuft alle erstellten Tabellenblaetter und schleust durch zu einer Anwendungsfunktion, die wiederum  den Titel und andere Dinge in diese Blaetter  ein. Als oSeite wird das zuletzt-verwendete Objekt verwendet - benoetigt werden neben den ALLGEMEINEN UND KONSTANTEN Attributen nur die Angabe der pageNum als Gesamtseitenzahl.
     ' Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabelle eingefuegt...
@@ -792,7 +792,7 @@ Private Sub applyLayoutToAllPages(oSeite As Seitenformat)
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -840,7 +840,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```applyLayoutToAllPages```](#applyLayoutToAllPages) : <small>  [Zeile 150] : ```        Call applyLayoutToSinglePage(ws, page, oSeite)``` </small>
+- [`applyLayoutToAllPages`](#applyLayoutToAllPages) : <small>  [Zeile 150] : `        Call applyLayoutToSinglePage(ws, page, oSeite)` </small>
 
 
 
@@ -872,19 +872,19 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```getCountsOfColumnsToPrint```](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
+- [`getCountsOfColumnsToPrint`](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : `    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-- [```mergeCells```](#mergeCells) : <small>  [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
+- [`mergeCells`](#mergeCells) : <small>  [Zeile 195] : `    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-- [```mergeCells```](#mergeCells) : <small>  [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
+- [`mergeCells`](#mergeCells) : <small>  [Zeile 211] : `    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)` </small>
 
 
 
@@ -917,7 +917,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Private Sub applyLayoutToSinglePage(wsResult As Worksheet, thisPageNum As Integer, oSeite As Seitenformat)
     ' Zusaetzlich wird AUSSERHALB DES DRUCKBEREICHES auch ein Hyperlink zur Steuertabelle eingefuegt...
 
@@ -986,7 +986,7 @@ Private Sub applyLayoutToSinglePage(wsResult As Worksheet, thisPageNum As Intege
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -1034,7 +1034,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1191] : ```        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1191] : `        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)` </small>
 
 
 
@@ -1066,10 +1066,10 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```insertSheet```](#insertSheet) : <small>  [Zeile 662] : ```        Call insertSheet(oSeite.blattname & pageNum)``` </small>
+- [`insertSheet`](#insertSheet) : <small>  [Zeile 662] : `        Call insertSheet(oSeite.blattname & pageNum)` </small>
 
 
-  - [```existsSheetname```](#existsSheetname) : <small>  [Zeile 283] : ```        If existsSheetname(sheetname) = False Then``` </small>
+  - [`existsSheetname`](#existsSheetname) : <small>  [Zeile 283] : `        If existsSheetname(sheetname) = False Then` </small>
 
 
 
@@ -1079,19 +1079,19 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 677] : ```            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 677] : `            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then` </small>
 
 
-  - [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 723] : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
+  - [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 723] : `                    oReplacer = getReplacerPre1(stichwort)` </small>
 
 
-      - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+      - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-      - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+      - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -1101,19 +1101,19 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-  - [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
+  - [`getReplacerPre2`](#getReplacerPre2) : <small>  [Zeile 725] : `                    oReplacer = getReplacerPre2(stichwort)` </small>
 
 
-      - [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+      - [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 445] : `    getReplacerPre2 = getReplacerPre1(stichwort)` </small>
 
 
-        - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+        - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
           - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-        - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+        - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -1127,38 +1127,38 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-  - [```getReplacerNote```](#getReplacerNote) : <small>  [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
+  - [`getReplacerNote`](#getReplacerNote) : <small>  [Zeile 727] : `                    oReplacer = getReplacerNote(stichwort)` </small>
 
 
 
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-  - [```getReplacerCount```](#getReplacerCount) : <small>  [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
+  - [`getReplacerCount`](#getReplacerCount) : <small>  [Zeile 729] : `                    oReplacer = getReplacerCount(stichwort)` </small>
 
 
 
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-  - [```getReplacerPost```](#getReplacerPost) : <small>  [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
+  - [`getReplacerPost`](#getReplacerPost) : <small>  [Zeile 731] : `                    oReplacer = getReplacerPost(stichwort)` </small>
 
 
 
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-  - [```getReplacerEmpty```](#getReplacerEmpty) : <small>  [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
+  - [`getReplacerEmpty`](#getReplacerEmpty) : <small>  [Zeile 733] : `                    oReplacer = getReplacerEmpty()` </small>
 
 
 
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-  - [```getFilePath```](#getFilePath) : <small>  [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
+  - [`getFilePath`](#getFilePath) : <small>  [Zeile 742] : `                pathImage = getFilePath(oReplacer.value)` </small>
 
 
-      - [```getFilePath```](#getFilePath) : <small>  [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+      - [`getFilePath`](#getFilePath) : <small>  [Zeile 366] : `    getFilePath = getFilePath(ERROR_FILENAME)` </small>
 
 
         - <small> *... recursivly calls itself under certain conditions ...* </small> 
@@ -1168,25 +1168,25 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-  - [```InsertImageFromFileToCell```](#InsertImageFromFileToCell) : <small>  [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
+  - [`InsertImageFromFileToCell`](#InsertImageFromFileToCell) : <small>  [Zeile 744] : `                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)` </small>
 
 
 
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-  - [```getTypeOfFollowingSeperatorLine```](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
+  - [`getTypeOfFollowingSeperatorLine`](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : `    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)` </small>
 
 
 
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-  - [```insertFrameLineBelow```](#insertFrameLineBelow) : <small>  [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
+  - [`insertFrameLineBelow`](#insertFrameLineBelow) : <small>  [Zeile 762] : `        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))` </small>
 
 
 
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-  - [```SeitenformatNextPosition```](#SeitenformatNextPosition) : <small>  [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
+  - [`SeitenformatNextPosition`](#SeitenformatNextPosition) : <small>  [Zeile 767] : `    Call SeitenformatNextPosition(oSeite)` </small>
 
 
 
@@ -1221,7 +1221,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Private Sub erstelleKonvertierteSeite(startzeileSteuertabelle As Integer, oSeite As Seitenformat)
     ' Erstelle neues TBB und wende Atrriubte an
 
@@ -1259,7 +1259,7 @@ Private Sub erstelleKonvertierteSeite(startzeileSteuertabelle As Integer, oSeite
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -1307,7 +1307,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1172] : ```    Call init``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1172] : `    Call init` </small>
 
 
 
@@ -1365,7 +1365,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Sub init()
     ' Parameter fuer modulweite Variablen laden
 
@@ -1381,7 +1381,7 @@ Private Sub init()
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -1429,7 +1429,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 762] : `        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))` </small>
 
 
 
@@ -1487,7 +1487,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Sub insertFrameLineBelow(rowAbove As Integer, oSeite As Seitenformat, dashed As Boolean)
     ' Fuegt die unteren Rahmenlinien aller Zellen dieser Zeile im Subspaltenbereich ein
 
@@ -1515,7 +1515,7 @@ Private Sub insertFrameLineBelow(rowAbove As Integer, oSeite As Seitenformat, da
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -1563,7 +1563,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```erstelleKonvertierteSeite```](#erstelleKonvertierteSeite) : <small>  [Zeile 662] : ```        Call insertSheet(oSeite.blattname & pageNum)``` </small>
+- [`erstelleKonvertierteSeite`](#erstelleKonvertierteSeite) : <small>  [Zeile 662] : `        Call insertSheet(oSeite.blattname & pageNum)` </small>
 
 
 
@@ -1595,7 +1595,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```existsSheetname```](#existsSheetname) : <small>  [Zeile 283] : ```        If existsSheetname(sheetname) = False Then``` </small>
+- [`existsSheetname`](#existsSheetname) : <small>  [Zeile 283] : `        If existsSheetname(sheetname) = False Then` </small>
 
 
 
@@ -1627,7 +1627,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Private Sub insertSheet(sheetname As String)
     ' Fuegt ein neues Tabellenblatt hinzu mit dem uebergebenen Namen und modifiziert den Tabellenblattnamen, sofern dieser bereits existiert
 
@@ -1651,7 +1651,7 @@ Private Sub insertSheet(sheetname As String)
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -1699,9 +1699,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
+- [`applyLayoutToSinglePage`](#applyLayoutToSinglePage) : <small>  [Zeile 195] : `    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)` </small>
 
-- [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
+- [`applyLayoutToSinglePage`](#applyLayoutToSinglePage) : <small>  [Zeile 211] : `    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)` </small>
 
 
 
@@ -1759,7 +1759,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Sub mergeCells(ws As Worksheet, lineFrom As Integer, columnFrom As Integer, lineTo As Integer, columnTo As Integer)
     ' Verbindet den uebergebenen Zellbereich
 
@@ -1774,7 +1774,7 @@ Private Sub mergeCells(ws As Worksheet, lineFrom As Integer, columnFrom As Integ
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -1824,7 +1824,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+- [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
@@ -1882,7 +1882,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Sub modifyReplacerIfSonderzeichen(oReplacer As Replacer)
     ' Prueft, ob das Stichwort einem definierten Sonderzeichen entspricht.
     ' Jedes definierte Sonderzeichen erhaelt ein expliziten Bild-Dateiname als Verknuepfung (ohne Dateiendung hier.)
@@ -1923,7 +1923,7 @@ Private Sub modifyReplacerIfSonderzeichen(oReplacer As Replacer)
 ' End Function
 End Sub
 
-```
+`
 
 </details>
 
@@ -1973,7 +1973,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+- [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -2031,7 +2031,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Sub modifyReplacerIfTaktwechsel(oReplacer As Replacer)
     ' Prueft, ob das Stichwort einem Taktartwechsel entspricht.
     ' Je nach Taktart wird das uebergebene Replacer-Objekt inplace modifiziert und zurueckgegeben (mal wird ein Bild gewuenscht, mal nciht...)
@@ -2073,7 +2073,7 @@ Private Sub modifyReplacerIfTaktwechsel(oReplacer As Replacer)
     Next i
 End Sub
 
-```
+`
 
 </details>
 
@@ -2150,33 +2150,33 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```init```](#init) : <small>  [Zeile 1172] : ```    Call init``` </small>
+- [`init`](#init) : <small>  [Zeile 1172] : `    Call init` </small>
 
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```addSeitenformat```](#addSeitenformat) : <small>  [Zeile 1183] : ```        oSeite = addSeitenformat(startzeileSteuertabelle)``` </small>
+- [`addSeitenformat`](#addSeitenformat) : <small>  [Zeile 1183] : `        oSeite = addSeitenformat(startzeileSteuertabelle)` </small>
 
 
-  - [```newSeitenformat```](#newSeitenformat) : <small>  [Zeile 970] : ```    oFormat = newSeitenformat()``` </small>
+  - [`newSeitenformat`](#newSeitenformat) : <small>  [Zeile 970] : `    oFormat = newSeitenformat()` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-  - [```identifyLastRow```](#identifyLastRow) : <small>  [Zeile 980] : ```    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)``` </small>
+  - [`identifyLastRow`](#identifyLastRow) : <small>  [Zeile 980] : `    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)` </small>
 
 
-    - [```newSeitenformat```](#newSeitenformat) : <small>  [Zeile 876] : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
+    - [`newSeitenformat`](#newSeitenformat) : <small>  [Zeile 876] : `    tempObj = newSeitenformat(readParameters:=False)` </small>
 
 
 
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-    - [```areaEmpty```](#areaEmpty) : <small>  [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
+    - [`areaEmpty`](#areaEmpty) : <small>  [Zeile 882] : `        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then` </small>
 
 
 
@@ -2191,13 +2191,13 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```erstelleKonvertierteSeite```](#erstelleKonvertierteSeite) : <small>  [Zeile 1191] : ```        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)``` </small>
+- [`erstelleKonvertierteSeite`](#erstelleKonvertierteSeite) : <small>  [Zeile 1191] : `        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)` </small>
 
 
-  - [```insertSheet```](#insertSheet) : <small>  [Zeile 662] : ```        Call insertSheet(oSeite.blattname & pageNum)``` </small>
+  - [`insertSheet`](#insertSheet) : <small>  [Zeile 662] : `        Call insertSheet(oSeite.blattname & pageNum)` </small>
 
 
-    - [```existsSheetname```](#existsSheetname) : <small>  [Zeile 283] : ```        If existsSheetname(sheetname) = False Then``` </small>
+    - [`existsSheetname`](#existsSheetname) : <small>  [Zeile 283] : `        If existsSheetname(sheetname) = False Then` </small>
 
 
 
@@ -2207,19 +2207,19 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-  - [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 677] : ```            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then``` </small>
+  - [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 677] : `            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then` </small>
 
 
-    - [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 723] : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
+    - [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 723] : `                    oReplacer = getReplacerPre1(stichwort)` </small>
 
 
-        - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+        - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
           - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-        - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+        - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -2229,19 +2229,19 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-    - [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
+    - [`getReplacerPre2`](#getReplacerPre2) : <small>  [Zeile 725] : `                    oReplacer = getReplacerPre2(stichwort)` </small>
 
 
-        - [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+        - [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 445] : `    getReplacerPre2 = getReplacerPre1(stichwort)` </small>
 
 
-          - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+          - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
             - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-          - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+          - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -2255,38 +2255,38 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-    - [```getReplacerNote```](#getReplacerNote) : <small>  [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
+    - [`getReplacerNote`](#getReplacerNote) : <small>  [Zeile 727] : `                    oReplacer = getReplacerNote(stichwort)` </small>
 
 
 
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-    - [```getReplacerCount```](#getReplacerCount) : <small>  [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
+    - [`getReplacerCount`](#getReplacerCount) : <small>  [Zeile 729] : `                    oReplacer = getReplacerCount(stichwort)` </small>
 
 
 
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-    - [```getReplacerPost```](#getReplacerPost) : <small>  [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
+    - [`getReplacerPost`](#getReplacerPost) : <small>  [Zeile 731] : `                    oReplacer = getReplacerPost(stichwort)` </small>
 
 
 
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-    - [```getReplacerEmpty```](#getReplacerEmpty) : <small>  [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
+    - [`getReplacerEmpty`](#getReplacerEmpty) : <small>  [Zeile 733] : `                    oReplacer = getReplacerEmpty()` </small>
 
 
 
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-    - [```getFilePath```](#getFilePath) : <small>  [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
+    - [`getFilePath`](#getFilePath) : <small>  [Zeile 742] : `                pathImage = getFilePath(oReplacer.value)` </small>
 
 
-        - [```getFilePath```](#getFilePath) : <small>  [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+        - [`getFilePath`](#getFilePath) : <small>  [Zeile 366] : `    getFilePath = getFilePath(ERROR_FILENAME)` </small>
 
 
           - <small> *... recursivly calls itself under certain conditions ...* </small> 
@@ -2296,25 +2296,25 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-    - [```InsertImageFromFileToCell```](#InsertImageFromFileToCell) : <small>  [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
+    - [`InsertImageFromFileToCell`](#InsertImageFromFileToCell) : <small>  [Zeile 744] : `                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)` </small>
 
 
 
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-    - [```getTypeOfFollowingSeperatorLine```](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
+    - [`getTypeOfFollowingSeperatorLine`](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : `    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)` </small>
 
 
 
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-    - [```insertFrameLineBelow```](#insertFrameLineBelow) : <small>  [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
+    - [`insertFrameLineBelow`](#insertFrameLineBelow) : <small>  [Zeile 762] : `        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))` </small>
 
 
 
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-    - [```SeitenformatNextPosition```](#SeitenformatNextPosition) : <small>  [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
+    - [`SeitenformatNextPosition`](#SeitenformatNextPosition) : <small>  [Zeile 767] : `    Call SeitenformatNextPosition(oSeite)` </small>
 
 
 
@@ -2327,10 +2327,10 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```applyLayoutPrintArea```](#applyLayoutPrintArea) : <small>  [Zeile 1192] : ```        Call applyLayoutPrintArea(oSeite)``` </small>
+- [`applyLayoutPrintArea`](#applyLayoutPrintArea) : <small>  [Zeile 1192] : `        Call applyLayoutPrintArea(oSeite)` </small>
 
 
-  - [```getCountsOfColumnsToPrint```](#getCountsOfColumnsToPrint) : <small>  [Zeile 254] : ```    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)``` </small>
+  - [`getCountsOfColumnsToPrint`](#getCountsOfColumnsToPrint) : <small>  [Zeile 254] : `    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
@@ -2341,25 +2341,25 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```applyLayoutToAllPages```](#applyLayoutToAllPages) : <small>  [Zeile 1201] : ```    Call applyLayoutToAllPages(oSeite)``` </small>
+- [`applyLayoutToAllPages`](#applyLayoutToAllPages) : <small>  [Zeile 1201] : `    Call applyLayoutToAllPages(oSeite)` </small>
 
 
-  - [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  [Zeile 150] : ```        Call applyLayoutToSinglePage(ws, page, oSeite)``` </small>
+  - [`applyLayoutToSinglePage`](#applyLayoutToSinglePage) : <small>  [Zeile 150] : `        Call applyLayoutToSinglePage(ws, page, oSeite)` </small>
 
 
-    - [```getCountsOfColumnsToPrint```](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
-
-
-
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
-
-    - [```mergeCells```](#mergeCells) : <small>  [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
+    - [`getCountsOfColumnsToPrint`](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : `    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-    - [```mergeCells```](#mergeCells) : <small>  [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
+    - [`mergeCells`](#mergeCells) : <small>  [Zeile 195] : `    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)` </small>
+
+
+
+        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+
+    - [`mergeCells`](#mergeCells) : <small>  [Zeile 211] : `    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)` </small>
 
 
 
@@ -2373,7 +2373,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```printLastSheetsAsPdf```](#printLastSheetsAsPdf) : <small>  [Zeile 1210] : ```        Call printLastSheetsAsPdf(pageNum)``` </small>
+- [`printLastSheetsAsPdf`](#printLastSheetsAsPdf) : <small>  [Zeile 1210] : `        Call printLastSheetsAsPdf(pageNum)` </small>
 
 
 
@@ -2406,7 +2406,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Public Sub notengriffeErzeugen()
 
     ' Initialisieren der modulweiten Variablen (Worksheets usw...)
@@ -2457,7 +2457,7 @@ Public Sub notengriffeErzeugen()
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -2505,7 +2505,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1210] : ```        Call printLastSheetsAsPdf(pageNum)``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1210] : `        Call printLastSheetsAsPdf(pageNum)` </small>
 
 
 
@@ -2563,7 +2563,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Sub printLastSheetsAsPdf(anzahlSheets As Integer)
 ' Speichert die hintersten (ERgebnis-Tabellenblaetter) als PDF ab, inkl. Skalierung auf eine Seite der Spalten.
 
@@ -2641,7 +2641,7 @@ Sub printLastSheetsAsPdf(anzahlSheets As Integer)
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -2718,7 +2718,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```getProjectTitle```](#getProjectTitle) : <small>  [Zeile 111] : ```    MsgBox "Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--> falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)", vbOK, getProjectTitle()``` </small>
+- [`getProjectTitle`](#getProjectTitle) : <small>  [Zeile 111] : `    MsgBox "Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--> falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)", vbOK, getProjectTitle()` </small>
 
 
 
@@ -2751,7 +2751,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Sub resetWorkbook()
 
     If InputBox("Sollen alle generierten Tabellenblaetter UNWIDERUFLICH ENTFERNT werden? (dann eingabe von: 'y', sonst was beliebiges anderes)", getProjectTitle()) <> "y" Then
@@ -2780,7 +2780,7 @@ Sub resetWorkbook()
 
 End Sub
 
-```
+`
 
 </details>
 
@@ -2836,7 +2836,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1183] : ```        oSeite = addSeitenformat(startzeileSteuertabelle)``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1183] : `        oSeite = addSeitenformat(startzeileSteuertabelle)` </small>
 
 
 
@@ -2868,23 +2868,23 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```newSeitenformat```](#newSeitenformat) : <small>  [Zeile 970] : ```    oFormat = newSeitenformat()``` </small>
+- [`newSeitenformat`](#newSeitenformat) : <small>  [Zeile 970] : `    oFormat = newSeitenformat()` </small>
 
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```identifyLastRow```](#identifyLastRow) : <small>  [Zeile 980] : ```    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)``` </small>
+- [`identifyLastRow`](#identifyLastRow) : <small>  [Zeile 980] : `    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)` </small>
 
 
-  - [```newSeitenformat```](#newSeitenformat) : <small>  [Zeile 876] : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
+  - [`newSeitenformat`](#newSeitenformat) : <small>  [Zeile 876] : `    tempObj = newSeitenformat(readParameters:=False)` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-  - [```areaEmpty```](#areaEmpty) : <small>  [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
+  - [`areaEmpty`](#areaEmpty) : <small>  [Zeile 882] : `        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then` </small>
 
 
 
@@ -2921,7 +2921,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Private Function addSeitenformat(startzeileSteuertabelle As Integer) As Seitenformat
 ' Erstellt ein Objekt des Typs Seitenformat und initialisiert die Konstanten Werte sowie zusaetzlich berechnete.
 ' Berechnet alle Attribute, das Obj wird zurück gegeben, auf Grundlage von diesem kann ein neues Blatt genereiert werden.
@@ -2964,7 +2964,7 @@ Private Function addSeitenformat(startzeileSteuertabelle As Integer) As Seitenfo
 
 End Function
 
-```
+`
 
 </details>
 
@@ -3015,7 +3015,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```identifyLastRow```](#identifyLastRow) : <small>  [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
+- [`identifyLastRow`](#identifyLastRow) : <small>  [Zeile 882] : `        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then` </small>
 
 
 
@@ -3073,7 +3073,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Function areaEmpty(ws As Worksheet, lineFrom As Integer, columnFrom As Integer, lineTo As Integer, columnTo As Integer)
     ' Prueft einen Bereich auf leere Zellen.
     ' Rueckgabewerte:
@@ -3103,7 +3103,7 @@ Private Function areaEmpty(ws As Worksheet, lineFrom As Integer, columnFrom As I
 
     End Function
 
-```
+`
 
 </details>
 
@@ -3150,7 +3150,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```insertSheet```](#insertSheet) : <small>  [Zeile 283] : ```        If existsSheetname(sheetname) = False Then``` </small>
+- [`insertSheet`](#insertSheet) : <small>  [Zeile 283] : `        If existsSheetname(sheetname) = False Then` </small>
 
 
 
@@ -3208,7 +3208,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Function existsSheetname(name As String) As Boolean
 
     Dim ws As Worksheet
@@ -3226,7 +3226,7 @@ Private Function existsSheetname(name As String) As Boolean
 
 End Function
 
-```
+`
 
 </details>
 
@@ -3275,9 +3275,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  [Zeile 179] : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
+- [`applyLayoutToSinglePage`](#applyLayoutToSinglePage) : <small>  [Zeile 179] : `    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)` </small>
 
-- [```applyLayoutPrintArea```](#applyLayoutPrintArea) : <small>  [Zeile 254] : ```    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)``` </small>
+- [`applyLayoutPrintArea`](#applyLayoutPrintArea) : <small>  [Zeile 254] : `    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
@@ -3335,7 +3335,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Function getCountsOfColumnsToPrint(oSeite As Seitenformat) As Integer
     ' Berechnet die tatsaechliche Anzahl der zu druckenden Spalten
     ' Dafuer wird die letzte Spalte abgezogen, weil wg. Blattrand keine zusaetzliche Luft erforderlich ist:
@@ -3344,7 +3344,7 @@ Function getCountsOfColumnsToPrint(oSeite As Seitenformat) As Integer
 
 End Function
 
-```
+`
 
 </details>
 
@@ -3393,9 +3393,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```getFilePath```](#getFilePath) : <small>  [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+- [`getFilePath`](#getFilePath) : <small>  [Zeile 366] : `    getFilePath = getFilePath(ERROR_FILENAME)` </small>
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 742] : `                pathImage = getFilePath(oReplacer.value)` </small>
 
 
 
@@ -3427,7 +3427,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```getFilePath```](#getFilePath) : <small>  [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+- [`getFilePath`](#getFilePath) : <small>  [Zeile 366] : `    getFilePath = getFilePath(ERROR_FILENAME)` </small>
 
 
   - <small> *... recursivly calls itself under certain conditions ...* </small> 
@@ -3459,7 +3459,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Private Function getFilePath(stichwort As String)
     ' Generiert einen Path zur Bilddatei basierend auf einem Stichwort.
     ' Sofern es keine passende Datei gibt, wird ein Platzhalter-Bild referenziert, durch das ein FEHLER verdeutlcihet wird.
@@ -3492,7 +3492,7 @@ Private Function getFilePath(stichwort As String)
 
 End Function
 
-```
+`
 
 </details>
 
@@ -3597,7 +3597,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Function getModifiedKeyIfTaktwechsel(stichwort As String) As String
     ' Prueft, ob das Stichwort einem Taktartwechsel entspricht.
     ' Dazu werden konkrete Stichworte geprueftund durch ein alternativ-stichwort fuer einen Dateinamen ersetzt zurueckgegeben.
@@ -3626,7 +3626,7 @@ Private Function getModifiedKeyIfTaktwechsel(stichwort As String) As String
 
 End Function
 
-```
+`
 
 </details>
 
@@ -3673,7 +3673,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```resetWorkbook```](#resetWorkbook) : <small>  [Zeile 111] : ```    MsgBox "Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--> falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)", vbOK, getProjectTitle()``` </small>
+- [`resetWorkbook`](#resetWorkbook) : <small>  [Zeile 111] : `    MsgBox "Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--> falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)", vbOK, getProjectTitle()` </small>
 
 
 
@@ -3731,14 +3731,14 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Function getProjectTitle() As String
 
     getProjectTitle = "Notengriff-Converter"
 
 End Function
 
-```
+`
 
 </details>
 
@@ -3786,7 +3786,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 729] : `                    oReplacer = getReplacerCount(stichwort)` </small>
 
 
 
@@ -3844,7 +3844,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Function getReplacerCount(stichwort As String) As Replacer
     ' Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
 
@@ -3861,7 +3861,7 @@ Private Function getReplacerCount(stichwort As String) As Replacer
 
 End Function
 
-```
+`
 
 </details>
 
@@ -3909,7 +3909,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 733] : `                    oReplacer = getReplacerEmpty()` </small>
 
 
 
@@ -3967,7 +3967,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Function getReplacerEmpty() As Replacer
     ' Gibt leeren Replacer zurueck
 
@@ -3981,7 +3981,7 @@ Private Function getReplacerEmpty() As Replacer
 
 End Function
 
-```
+`
 
 </details>
 
@@ -4029,7 +4029,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 727] : `                    oReplacer = getReplacerNote(stichwort)` </small>
 
 
 
@@ -4087,7 +4087,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Function getReplacerNote(stichwort As String) As Replacer
     ' Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
 
@@ -4117,7 +4117,7 @@ Private Function getReplacerNote(stichwort As String) As Replacer
 
 End Function
 
-```
+`
 
 </details>
 
@@ -4165,7 +4165,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 731] : `                    oReplacer = getReplacerPost(stichwort)` </small>
 
 
 
@@ -4223,7 +4223,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Function getReplacerPost(stichwort As String) As Replacer
     ' Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
 
@@ -4238,7 +4238,7 @@ Private Function getReplacerPost(stichwort As String) As Replacer
 
 End Function
 
-```
+`
 
 </details>
 
@@ -4286,9 +4286,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+- [`getReplacerPre2`](#getReplacerPre2) : <small>  [Zeile 445] : `    getReplacerPre2 = getReplacerPre1(stichwort)` </small>
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 723] : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 723] : `                    oReplacer = getReplacerPre1(stichwort)` </small>
 
 
 
@@ -4320,13 +4320,13 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+- [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-- [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+- [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -4358,7 +4358,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Private Function getReplacerPre1(stichwort As String) As Replacer
     ' Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
 
@@ -4420,7 +4420,7 @@ Private Function getReplacerPre1(stichwort As String) As Replacer
 
 End Function
 
-```
+`
 
 </details>
 
@@ -4468,7 +4468,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 725] : `                    oReplacer = getReplacerPre2(stichwort)` </small>
 
 
 
@@ -4500,16 +4500,16 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+- [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 445] : `    getReplacerPre2 = getReplacerPre1(stichwort)` </small>
 
 
-  - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+  - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-  - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+  - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -4545,7 +4545,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Private Function getReplacerPre2(stichwort As String) As Replacer
     ' Prueft das Stichwort fuer diese spezielle Spalte/ das Attribut und gibt darauf basierend eine ZEichenkette als Replacer zurueck. Diese Zeichenkette entspricht entweder dem Stichwort (Text uebernehmen) oder dem Dateipfad zu einem Bilddatei.
 
@@ -4554,7 +4554,7 @@ Private Function getReplacerPre2(stichwort As String) As Replacer
 
 End Function
 
-```
+`
 
 </details>
 
@@ -4604,7 +4604,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 757] : `    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)` </small>
 
 
 
@@ -4662,7 +4662,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Function getTypeOfFollowingSeperatorLine(lastRowNumber As Integer, oSeite As Seitenformat) As Integer
 ' returns 0 falls kein eLinie folgt
 ' returns 1 falls durchgezogene Linie folgt
@@ -4693,7 +4693,7 @@ Private Function getTypeOfFollowingSeperatorLine(lastRowNumber As Integer, oSeit
 
 End Function
 
-```
+`
 
 </details>
 
@@ -4742,7 +4742,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```addSeitenformat```](#addSeitenformat) : <small>  [Zeile 980] : ```    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)``` </small>
+- [`addSeitenformat`](#addSeitenformat) : <small>  [Zeile 980] : `    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)` </small>
 
 
 
@@ -4774,13 +4774,13 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```newSeitenformat```](#newSeitenformat) : <small>  [Zeile 876] : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
+- [`newSeitenformat`](#newSeitenformat) : <small>  [Zeile 876] : `    tempObj = newSeitenformat(readParameters:=False)` </small>
 
 
 
   - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-- [```areaEmpty```](#areaEmpty) : <small>  [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
+- [`areaEmpty`](#areaEmpty) : <small>  [Zeile 882] : `        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then` </small>
 
 
 
@@ -4813,7 +4813,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Private Function identifyLastRow(startzeile As Integer, maxZeilen As Integer) As Integer
     ' Liesst die STB ausgehend ab startzeile aus bis dass die Anzahl maxZeilen abgearbeitet wurde. Pro Zeile wird sich die Zeilennummer gemerkt, sofern Inhalt vorhanden ist.
     ' Ziel davon ist, dass man so erkennt, wenn die letzten n zeilen nur freizeilen sind (um manuell einen seitenumbruch zu generieren), oder ob nur etwas abstand dadurch generiert werden sollte...
@@ -4839,7 +4839,7 @@ Private Function identifyLastRow(startzeile As Integer, maxZeilen As Integer) As
 
 End Function
 
-```
+`
 
 </details>
 
@@ -4892,7 +4892,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```erstelleKonvertierteSeite```](#erstelleKonvertierteSeite) : <small>  [Zeile 677] : ```            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then``` </small>
+- [`erstelleKonvertierteSeite`](#erstelleKonvertierteSeite) : <small>  [Zeile 677] : `            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then` </small>
 
 
 
@@ -4924,16 +4924,16 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 723] : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
+- [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 723] : `                    oReplacer = getReplacerPre1(stichwort)` </small>
 
 
-    - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+    - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
       - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-    - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+    - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -4943,19 +4943,19 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
+- [`getReplacerPre2`](#getReplacerPre2) : <small>  [Zeile 725] : `                    oReplacer = getReplacerPre2(stichwort)` </small>
 
 
-    - [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+    - [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 445] : `    getReplacerPre2 = getReplacerPre1(stichwort)` </small>
 
 
-      - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+      - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
         - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-      - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+      - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -4969,38 +4969,38 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```getReplacerNote```](#getReplacerNote) : <small>  [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
+- [`getReplacerNote`](#getReplacerNote) : <small>  [Zeile 727] : `                    oReplacer = getReplacerNote(stichwort)` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```getReplacerCount```](#getReplacerCount) : <small>  [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
+- [`getReplacerCount`](#getReplacerCount) : <small>  [Zeile 729] : `                    oReplacer = getReplacerCount(stichwort)` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```getReplacerPost```](#getReplacerPost) : <small>  [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
+- [`getReplacerPost`](#getReplacerPost) : <small>  [Zeile 731] : `                    oReplacer = getReplacerPost(stichwort)` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```getReplacerEmpty```](#getReplacerEmpty) : <small>  [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
+- [`getReplacerEmpty`](#getReplacerEmpty) : <small>  [Zeile 733] : `                    oReplacer = getReplacerEmpty()` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```getFilePath```](#getFilePath) : <small>  [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
+- [`getFilePath`](#getFilePath) : <small>  [Zeile 742] : `                pathImage = getFilePath(oReplacer.value)` </small>
 
 
-    - [```getFilePath```](#getFilePath) : <small>  [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+    - [`getFilePath`](#getFilePath) : <small>  [Zeile 366] : `    getFilePath = getFilePath(ERROR_FILENAME)` </small>
 
 
       - <small> *... recursivly calls itself under certain conditions ...* </small> 
@@ -5010,25 +5010,25 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
 
-- [```InsertImageFromFileToCell```](#InsertImageFromFileToCell) : <small>  [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
+- [`InsertImageFromFileToCell`](#InsertImageFromFileToCell) : <small>  [Zeile 744] : `                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-- [```getTypeOfFollowingSeperatorLine```](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
+- [`getTypeOfFollowingSeperatorLine`](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : `    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-- [```insertFrameLineBelow```](#insertFrameLineBelow) : <small>  [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
+- [`insertFrameLineBelow`](#insertFrameLineBelow) : <small>  [Zeile 762] : `        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))` </small>
 
 
 
     - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
 
-- [```SeitenformatNextPosition```](#SeitenformatNextPosition) : <small>  [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
+- [`SeitenformatNextPosition`](#SeitenformatNextPosition) : <small>  [Zeile 767] : `    Call SeitenformatNextPosition(oSeite)` </small>
 
 
 
@@ -5060,7 +5060,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 ---
 
-```
+`
 Private Function konvertiereZeile(zeileSteuertabelle As Integer, oSeite As Seitenformat) As Boolean
     ' # TODOC: ALT:
     ' Konvertiert eine Zeile des Todo-Tabellenblattes in eine Zeile des Ergebnis-Tabellenblattes.
@@ -5138,7 +5138,7 @@ Private Function konvertiereZeile(zeileSteuertabelle As Integer, oSeite As Seite
 
 End Function
 
-```
+`
 
 </details>
 
@@ -5189,9 +5189,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```identifyLastRow```](#identifyLastRow) : <small>  [Zeile 876] : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
+- [`identifyLastRow`](#identifyLastRow) : <small>  [Zeile 876] : `    tempObj = newSeitenformat(readParameters:=False)` </small>
 
-- [```addSeitenformat```](#addSeitenformat) : <small>  [Zeile 970] : ```    oFormat = newSeitenformat()``` </small>
+- [`addSeitenformat`](#addSeitenformat) : <small>  [Zeile 970] : `    oFormat = newSeitenformat()` </small>
 
 
 
@@ -5249,7 +5249,7 @@ Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
 
 ---
 
-```
+`
 Private Function newSeitenformat(Optional readParameters As Boolean = True) As Seitenformat
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ' Standard-Parameter aus TODO-Steuertabelle auslesen und Standardwerte parametrisieren.
@@ -5313,7 +5313,7 @@ Private Function newSeitenformat(Optional readParameters As Boolean = True) As S
 
 End Function
 
-```
+`
 
 </details>
 

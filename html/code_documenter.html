@@ -787,7 +787,7 @@ class Procedure():
             # TODO: Vorgehen wenn es KEINE instanz gibt???! - sollte kein Problem sein, dadurch dass nach jedem Einfügen immer wieder der Ausgangszustand bzgl. des Platzhalters wiederhergestellt wird un dieser am Ende gelöscht wird??!
 
             # Aufbau des Markdown.-Codes fuer diesen TOC-Eintrag:
-            new_entry = &#34;* [```{temp_prozedur_name}```](#{temp_prozedur_name}) &lt;small&gt;(Zeile {temp_prozedur_zeile})&lt;/small&gt;&#34;.format(temp_prozedur_name=prozedur_name, temp_prozedur_zeile=prozedur_initialisierungszeile)
+            new_entry = &#34;* [`{temp_prozedur_name}`](#{temp_prozedur_name}) &lt;small&gt;(Zeile {temp_prozedur_zeile})&lt;/small&gt;&#34;.format(temp_prozedur_name=prozedur_name, temp_prozedur_zeile=prozedur_initialisierungszeile)
 
             # Append the placeholder to have this flag for insert further entries:
             new_entry = new_entry + &#34;\n  &#34; + platzhalter
@@ -1174,8 +1174,8 @@ class Procedure():
 
 
 
-                replacer_placeholder_reference = f&#34;&lt;small&gt;  Zeile {line_no_reference} &lt;/small&gt; : ```{line_code}``` ODER: {target_procedure_name}&#34;
-                # replacer_placeholder_reference = f&#34;* [```{code}```](#{target_procedure}) : &lt;small&gt;  Zeile {line_no_reference} : ```{line_code}``` &lt;/small&gt;&#34;
+                replacer_placeholder_reference = f&#34;&lt;small&gt;  Zeile {line_no_reference} &lt;/small&gt; : `{line_code}` ODER: {target_procedure_name}&#34;
+                # replacer_placeholder_reference = f&#34;* [`{code}`](#{target_procedure}) : &lt;small&gt;  Zeile {line_no_reference} : `{line_code}` &lt;/small&gt;&#34;
 
                 replacer_placeholder_reference = replacer_placeholder_reference  + f&#34;\n{_PLACEHOLDER_REFERENCE}&#34;
                     
@@ -1240,11 +1240,11 @@ class Procedure():
                 # Um MArkdown nicht zu zerschiessen muss der letzte Zeilenumbruch des line_codes entfernt werrden:
                 line_code:str = line_code.rstrip(&#34;\n&#34;)
 
-                replacer_placeholder_reference = f&#34;* [```{calling_procedure_name}```](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : ```{line_code}``` &lt;/small&gt;&#34;
+                replacer_placeholder_reference = f&#34;* [`{calling_procedure_name}`](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : `{line_code}` &lt;/small&gt;&#34;
 
 
                 # # AUSBLICK: weitere collapse details : funktioniert technisch, allerdings steht das collapsable immer in neuer Zeile und daher wird es groß - vielleicht später in schön machen...
-                # __replacer_placeholder_reference = f&#34;*   [```{calling_procedure_name}```](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; ```{line_code}``` &lt;/details&gt;&#34;
+                # __replacer_placeholder_reference = f&#34;*   [`{calling_procedure_name}`](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; `{line_code}` &lt;/details&gt;&#34;
 
 
 
@@ -1370,11 +1370,11 @@ class Procedure():
                             # Um MArkdown nicht zu zerschiessen muss der letzte Zeilenumbruch des line_codes entfernt werrden:
                             line_code:str = line_code.rstrip(&#34;\n&#34;)
 
-                            replacer_placeholder_reference = f&#34;* [```{calling_procedure_name}```](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : ```{line_code}``` &lt;/small&gt;&#34;
+                            replacer_placeholder_reference = f&#34;* [`{calling_procedure_name}`](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : `{line_code}` &lt;/small&gt;&#34;
 
 
                             # # AUSBLICK: weitere collapse details : funktioniert technisch, allerdings steht das collapsable immer in neuer Zeile und daher wird es groß - vielleicht später in schön machen...
-                            # __replacer_placeholder_reference = f&#34;*   [```{calling_procedure_name}```](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; ```{line_code}``` &lt;/details&gt;&#34;
+                            # __replacer_placeholder_reference = f&#34;*   [`{calling_procedure_name}`](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; `{line_code}` &lt;/details&gt;&#34;
 
 
 
@@ -3336,7 +3336,7 @@ Prozedur gehoeren.</dd>
             # TODO: Vorgehen wenn es KEINE instanz gibt???! - sollte kein Problem sein, dadurch dass nach jedem Einfügen immer wieder der Ausgangszustand bzgl. des Platzhalters wiederhergestellt wird un dieser am Ende gelöscht wird??!
 
             # Aufbau des Markdown.-Codes fuer diesen TOC-Eintrag:
-            new_entry = &#34;* [```{temp_prozedur_name}```](#{temp_prozedur_name}) &lt;small&gt;(Zeile {temp_prozedur_zeile})&lt;/small&gt;&#34;.format(temp_prozedur_name=prozedur_name, temp_prozedur_zeile=prozedur_initialisierungszeile)
+            new_entry = &#34;* [`{temp_prozedur_name}`](#{temp_prozedur_name}) &lt;small&gt;(Zeile {temp_prozedur_zeile})&lt;/small&gt;&#34;.format(temp_prozedur_name=prozedur_name, temp_prozedur_zeile=prozedur_initialisierungszeile)
 
             # Append the placeholder to have this flag for insert further entries:
             new_entry = new_entry + &#34;\n  &#34; + platzhalter
@@ -3723,8 +3723,8 @@ Prozedur gehoeren.</dd>
 
 
 
-                replacer_placeholder_reference = f&#34;&lt;small&gt;  Zeile {line_no_reference} &lt;/small&gt; : ```{line_code}``` ODER: {target_procedure_name}&#34;
-                # replacer_placeholder_reference = f&#34;* [```{code}```](#{target_procedure}) : &lt;small&gt;  Zeile {line_no_reference} : ```{line_code}``` &lt;/small&gt;&#34;
+                replacer_placeholder_reference = f&#34;&lt;small&gt;  Zeile {line_no_reference} &lt;/small&gt; : `{line_code}` ODER: {target_procedure_name}&#34;
+                # replacer_placeholder_reference = f&#34;* [`{code}`](#{target_procedure}) : &lt;small&gt;  Zeile {line_no_reference} : `{line_code}` &lt;/small&gt;&#34;
 
                 replacer_placeholder_reference = replacer_placeholder_reference  + f&#34;\n{_PLACEHOLDER_REFERENCE}&#34;
                     
@@ -3789,11 +3789,11 @@ Prozedur gehoeren.</dd>
                 # Um MArkdown nicht zu zerschiessen muss der letzte Zeilenumbruch des line_codes entfernt werrden:
                 line_code:str = line_code.rstrip(&#34;\n&#34;)
 
-                replacer_placeholder_reference = f&#34;* [```{calling_procedure_name}```](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : ```{line_code}``` &lt;/small&gt;&#34;
+                replacer_placeholder_reference = f&#34;* [`{calling_procedure_name}`](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : `{line_code}` &lt;/small&gt;&#34;
 
 
                 # # AUSBLICK: weitere collapse details : funktioniert technisch, allerdings steht das collapsable immer in neuer Zeile und daher wird es groß - vielleicht später in schön machen...
-                # __replacer_placeholder_reference = f&#34;*   [```{calling_procedure_name}```](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; ```{line_code}``` &lt;/details&gt;&#34;
+                # __replacer_placeholder_reference = f&#34;*   [`{calling_procedure_name}`](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; `{line_code}` &lt;/details&gt;&#34;
 
 
 
@@ -3919,11 +3919,11 @@ Prozedur gehoeren.</dd>
                             # Um MArkdown nicht zu zerschiessen muss der letzte Zeilenumbruch des line_codes entfernt werrden:
                             line_code:str = line_code.rstrip(&#34;\n&#34;)
 
-                            replacer_placeholder_reference = f&#34;* [```{calling_procedure_name}```](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : ```{line_code}``` &lt;/small&gt;&#34;
+                            replacer_placeholder_reference = f&#34;* [`{calling_procedure_name}`](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : `{line_code}` &lt;/small&gt;&#34;
 
 
                             # # AUSBLICK: weitere collapse details : funktioniert technisch, allerdings steht das collapsable immer in neuer Zeile und daher wird es groß - vielleicht später in schön machen...
-                            # __replacer_placeholder_reference = f&#34;*   [```{calling_procedure_name}```](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; ```{line_code}``` &lt;/details&gt;&#34;
+                            # __replacer_placeholder_reference = f&#34;*   [`{calling_procedure_name}`](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; `{line_code}` &lt;/details&gt;&#34;
 
 
 
@@ -4778,7 +4778,7 @@ def generate_toc_entries(cls, subklasse):
         # TODO: Vorgehen wenn es KEINE instanz gibt???! - sollte kein Problem sein, dadurch dass nach jedem Einfügen immer wieder der Ausgangszustand bzgl. des Platzhalters wiederhergestellt wird un dieser am Ende gelöscht wird??!
 
         # Aufbau des Markdown.-Codes fuer diesen TOC-Eintrag:
-        new_entry = &#34;* [```{temp_prozedur_name}```](#{temp_prozedur_name}) &lt;small&gt;(Zeile {temp_prozedur_zeile})&lt;/small&gt;&#34;.format(temp_prozedur_name=prozedur_name, temp_prozedur_zeile=prozedur_initialisierungszeile)
+        new_entry = &#34;* [`{temp_prozedur_name}`](#{temp_prozedur_name}) &lt;small&gt;(Zeile {temp_prozedur_zeile})&lt;/small&gt;&#34;.format(temp_prozedur_name=prozedur_name, temp_prozedur_zeile=prozedur_initialisierungszeile)
 
         # Append the placeholder to have this flag for insert further entries:
         new_entry = new_entry + &#34;\n  &#34; + platzhalter
@@ -5240,11 +5240,11 @@ def write_to_file(cls, output_file_path:str):
                         # Um MArkdown nicht zu zerschiessen muss der letzte Zeilenumbruch des line_codes entfernt werrden:
                         line_code:str = line_code.rstrip(&#34;\n&#34;)
 
-                        replacer_placeholder_reference = f&#34;* [```{calling_procedure_name}```](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : ```{line_code}``` &lt;/small&gt;&#34;
+                        replacer_placeholder_reference = f&#34;* [`{calling_procedure_name}`](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : `{line_code}` &lt;/small&gt;&#34;
 
 
                         # # AUSBLICK: weitere collapse details : funktioniert technisch, allerdings steht das collapsable immer in neuer Zeile und daher wird es groß - vielleicht später in schön machen...
-                        # __replacer_placeholder_reference = f&#34;*   [```{calling_procedure_name}```](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; ```{line_code}``` &lt;/details&gt;&#34;
+                        # __replacer_placeholder_reference = f&#34;*   [`{calling_procedure_name}`](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; `{line_code}` &lt;/details&gt;&#34;
 
 
 
@@ -5638,8 +5638,8 @@ Speichert das Ergebnis in der bereits existierenden Objektvariable procedure_obj
 
 
 
-            replacer_placeholder_reference = f&#34;&lt;small&gt;  Zeile {line_no_reference} &lt;/small&gt; : ```{line_code}``` ODER: {target_procedure_name}&#34;
-            # replacer_placeholder_reference = f&#34;* [```{code}```](#{target_procedure}) : &lt;small&gt;  Zeile {line_no_reference} : ```{line_code}``` &lt;/small&gt;&#34;
+            replacer_placeholder_reference = f&#34;&lt;small&gt;  Zeile {line_no_reference} &lt;/small&gt; : `{line_code}` ODER: {target_procedure_name}&#34;
+            # replacer_placeholder_reference = f&#34;* [`{code}`](#{target_procedure}) : &lt;small&gt;  Zeile {line_no_reference} : `{line_code}` &lt;/small&gt;&#34;
 
             replacer_placeholder_reference = replacer_placeholder_reference  + f&#34;\n{_PLACEHOLDER_REFERENCE}&#34;
                 
@@ -5744,11 +5744,11 @@ Speichert das Ergebnis in der bereits existierenden Objektvariable procedure_obj
             # Um MArkdown nicht zu zerschiessen muss der letzte Zeilenumbruch des line_codes entfernt werrden:
             line_code:str = line_code.rstrip(&#34;\n&#34;)
 
-            replacer_placeholder_reference = f&#34;* [```{calling_procedure_name}```](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : ```{line_code}``` &lt;/small&gt;&#34;
+            replacer_placeholder_reference = f&#34;* [`{calling_procedure_name}`](#{calling_procedure_name}) : &lt;small&gt;  Zeile {line_no} : `{line_code}` &lt;/small&gt;&#34;
 
 
             # # AUSBLICK: weitere collapse details : funktioniert technisch, allerdings steht das collapsable immer in neuer Zeile und daher wird es groß - vielleicht später in schön machen...
-            # __replacer_placeholder_reference = f&#34;*   [```{calling_procedure_name}```](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; ```{line_code}``` &lt;/details&gt;&#34;
+            # __replacer_placeholder_reference = f&#34;*   [`{calling_procedure_name}`](#{calling_procedure_name})  &lt;details&gt; &lt;summary&gt;: &lt;small&gt;Zeile {line_no}&lt;/small&gt; &lt;/summary&gt; `{line_code}` &lt;/details&gt;&#34;
 
 
 

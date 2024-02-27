@@ -5,7 +5,7 @@
 **Letzte Änderung** der Quelldatei 'current_test.bas' vor der Generierung dieser automatischen Dokumentation: **2024-02-09 16:42**
 
 
-Generierungsdatum dieser Dokumentation: **2024-02-27 23:47:46**
+Generierungsdatum dieser Dokumentation: **2024-02-28 00:16:43**
 
 
 
@@ -6970,4 +6970,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-02-27 23:47:46 durch das  automatisierte Code-Dokumentationstool von Matthes-Kdr (Commit vom 2024-02-27 23:19:51: 'd913e1b1a64b3c03167217f1f2323cca32b7dee4')</small> 
+<small>Dokumentation generiert am 2024-02-28 00:16:43 durch das  automatisierte Code-Dokumentationstool von Matthes-Kdr (Commit vom 2024-02-27 23:50:49: 'a219beda5878d8b0e53860322df301a74d4c16d8')</small> 

@@ -201,13 +201,13 @@ def inspect_get_current_line_number():
     stack = inspect.stack()
     
     # get the information for the current function/frame
-    aktueller_frame = stack[1]
+    current_frame = stack[1]
     
     # extract line number:
-    zeilennummer = aktueller_frame[2]
+    line_number = current_frame[2]
     
 
-    return zeilennummer
+    return line_number
 
 
 
@@ -399,9 +399,9 @@ class MetaData():
                     cls.extract_date_of_change()
                     return
                 
-        neuer_input = input("!!! ERROR !!! The specified file is not a .bas file! Please enter a valid path to the corresponding file (forward slashes! without quotation marks)\n> Your input: ")
+        new_input = input("!!! ERROR !!! The specified file is not a .bas file! Please enter a valid path to the corresponding file (forward slashes! without quotation marks)\n> Your input: ")
 
-        cls.set_input_path(neuer_input)
+        cls.set_input_path(new_input)
 
 
     @classmethod
@@ -422,9 +422,9 @@ class MetaData():
             if os.path.isdir(output_dir):
                 cls.__output_dir = output_dir
                 return
-        neuer_input = input("!!! ERROR !!! The specified path is not a valid directory. Please enter a valid path for the export of the output files (forward slashes! without quotation marks)\n> your input: ")
+        new_output_dir = input("!!! ERROR !!! The specified path is not a valid directory. Please enter a valid path for the export of the output files (forward slashes! without quotation marks)\n> your input: ")
 
-        cls.set_output_dir(neuer_input)
+        cls.set_output_dir(new_output_dir)
 
 
 
@@ -573,11 +573,11 @@ class Procedure():
     regex_end_pattern = SyntaxClass.get_pattern_end_of_procedure()
 
 
-    __regex_ausschlus_kommentar_pattern = SyntaxClass.get_pattern_single_line_comment()
+    __regex_excluded_comment_pattern = SyntaxClass.get_pattern_single_line_comment()
 
 
     # No further concretization by subclasses is required here, therefore compiled directly:
-    regex_ausschluss_kommentar = re.compile(__regex_ausschlus_kommentar_pattern, re.VERBOSE | re.IGNORECASE)
+    regex_excluded_comment = re.compile(__regex_excluded_comment_pattern, re.VERBOSE | re.IGNORECASE)
 
     @classmethod
     def set_print_final_calling_sequence_message(cls, value:bool):
@@ -778,7 +778,7 @@ class Procedure():
         """
 
         if cls.regex_begin.match(text):
-            if not cls.regex_ausschluss_kommentar.match(text):
+            if not cls.regex_excluded_comment.match(text):
 
                 # TEST: consider multiline-comments:
                 if line_no not in cls.multiline_comment_line_numbers:
@@ -813,7 +813,7 @@ class Procedure():
         # BUG: The regex also finds something like End sub although it is about end function! Therefore, the program flow in the main was adapted to ensure that the correct class termination is always searched for... If you're bored: See why later...
 
         if cls.regex_end.match(text):
-            if not cls.regex_ausschluss_kommentar.match(text):
+            if not cls.regex_excluded_comment.match(text):
                 # Dann aufnehmen in die Liste der MAtches!
                 cls.matches_line_ixs[-1][-1] = line_no
 
@@ -897,28 +897,28 @@ class Procedure():
         toc = cls.toc # shortcut
 
         keyword_type = subklasse.KEYWORD_TYPE.upper()
-        platzhalter = f"@PLACEHOLDER_ENTRIES_{keyword_type}S@"
+        placeholder = f"@PLACEHOLDER_ENTRIES_{keyword_type}S@"
         
 
-        for (prozedur_obj, prozedur_name, prozedur_initialisierungszeile) in subklasse.all_procedures_final:
+        for (procedure_obj, procedure_name, procedure_line_of_declaration) in subklasse.all_procedures_final:
 
             # Iterate over each instance:
 
             # TODO: What to do if there is NO instance???! - should not be a problem, because the initial state of the placeholder is always restored after each insertion and it is deleted at the end??!
 
             # Structure of the Markdown code for this TOC entry:
-            new_entry = cls.get_markdown_for_code_line_of_call_entry(prozedur_name, prozedur_initialisierungszeile, line_text="")
+            new_entry = cls.get_markdown_for_code_line_of_call_entry(procedure_name, procedure_line_of_declaration, line_text="")
 
             # Fügen Sie den Platzhalter ein, um dieses Kennzeichen für weitere Einträge zu haben:
-            new_entry = new_entry + "\n  " + platzhalter
+            new_entry = new_entry + "\n  " + placeholder
             # Insert the placeholder to have this indicator for further entries:
 
 
-            toc = toc.replace(platzhalter, new_entry)
+            toc = toc.replace(placeholder, new_entry)
 
 
         # After all procedures of 1 type: Delete the leaving placeholder in the toc for this type of procedures.
-        toc = toc.replace(platzhalter, "")
+        toc = toc.replace(placeholder, "")
 
         # store into class-variable:
         cls.toc = toc
@@ -959,17 +959,17 @@ class Procedure():
         cls.all_procedures_final = sorted(all_procedures, key=lambda stored_tuple: stored_tuple[2])
 
 
-        for (prozedur_obj, prozedur_name, prozedur_initialisierungszeile) in cls.all_procedures_final:
+        for (procedure_obj, procedure_name, procedure_line_of_declaration) in cls.all_procedures_final:
 
             # Create an object variable: List of all references still to be found:
-            prozedur_obj.references = []
+            procedure_obj.references = []
             
        
-            regex_including_patterns = SyntaxClass.get_pattern_references(prozedur_name)
+            regex_including_patterns = SyntaxClass.get_pattern_references(procedure_name)
 
 
             regex_excluding_patterns = [
-                cls.regex_ausschluss_kommentar,
+                cls.regex_excluded_comment,
             ]
             
 
@@ -979,7 +979,7 @@ class Procedure():
             for line_no, line_text in enumerate(cls.raw_source_code, 1):
 
 
-                if line_no == prozedur_initialisierungszeile:
+                if line_no == procedure_line_of_declaration:
                     # Then this is the declaration line of the function for which the calls are to be found - so ignore it!
                     continue
 
@@ -1009,13 +1009,13 @@ class Procedure():
 
 
                 # TODO: Backreference to the group with the sub-name (no backref necessary, as it is only searches for this!) necessary for call sequence
-                ziel_prozedur_name = prozedur_name
+                target_procedure_name = procedure_name
 
                 # At this point, match is ALWAYS != None:
 
                 # Check wheather there is a comment-symbol before the procedure name:
-                __prozedur_name_start_pos = match.span()[0]
-                if (cls.regex_ausschluss_kommentar.search(line_text[0:__prozedur_name_start_pos])):
+                __procedure_name_start_pos = match.span()[0]
+                if (cls.regex_excluded_comment.search(line_text[0:__procedure_name_start_pos])):
                     # then: it is a comment
                     continue
 
@@ -1025,21 +1025,21 @@ class Procedure():
                 
 
                 # only for me privat (learning... ;-) )
-                # ACHTUNG:  WICHTIG:  Der folgende Schritt / die Logik und Anwendung war mir neu  -  nochmal recherchieren! sowohl mit dem filtern / nach eigenem Key, als auch, dass das Ergebnis nicht DIE EINZELNE ZAHL  ist, sondern tatsächlich direkt das TUPLE, IN DEM DIESE EINZELNE ZAHL GESPEICHERT IST!  Extrem praktich!!!!
+                # NOTE: IMPORTANT: The following step / the logic and usage (python syntax) was new to me - research again! both with the filtering / by own key, as well as that the result is not THE SINGLE NUMBER, but actually directly the TUPLE IN WHICH THIS SINGLE NUMBER IS STORED!  Extremely practical!!!!
 
                 
                 # Logic for finding the calling procedure: 
                 # # The declaration line number must be < line_no. 
                 # # The next one is the line number of the declaration line
-                aufrufende_prozedur_tuple_relevant = [tpl for tpl in cls.all_procedures_final if tpl[2] < line_no]
+                calling_procedure_tuple_relevant = [tpl for tpl in cls.all_procedures_final if tpl[2] < line_no]
 
                 # The relevant tuple of the list cls.all_procedures_final is stored in the same form in the following variable:
-                aufrufende_prozedur_tuple = min(aufrufende_prozedur_tuple_relevant, key=lambda x_tuple: abs(x_tuple[2] - line_no))
+                calling_procedure = min(calling_procedure_tuple_relevant, key=lambda x_tuple: abs(x_tuple[2] - line_no))
 
 
                 # Adding the name of procedure which is called:
-                prozedur_obj.references.append(
-                    (line_no, aufrufende_prozedur_tuple[1], line_text, ziel_prozedur_name)
+                procedure_obj.references.append(
+                    (line_no, calling_procedure[1], line_text, target_procedure_name)
                 )
 
 
@@ -1127,7 +1127,7 @@ class Procedure():
 
 
     @classmethod
-    def get_procedure_obj_by_name(cls, procedure_name:str) -> 'Procedure':
+    def get_procedure_obj_by_name(cls, procedure_name_to_get:str) -> 'Procedure':
         """
         Returns the procedure object with the transferred name
         The object is from the subclass Sub or Function.
@@ -1136,9 +1136,9 @@ class Procedure():
             procedure_name (str): Name of the procedure searched for
         """
 
-        for (prozedur_obj, prozedur_name, prozedur_initialisierungszeile) in Procedure.all_procedures_final:
-            if prozedur_name == procedure_name:
-                return prozedur_obj
+        for (procedure_obj, procedure_name, procedure_line_of_declaration) in Procedure.all_procedures_final:
+            if procedure_name == procedure_name_to_get:
+                return procedure_obj
 
         db("not found!")     # only for debugging
 
@@ -1295,15 +1295,15 @@ class Procedure():
         level = level + 1
 
 
-        abschlusstext = "\n- <small>*No further calls to other procedures that are documented here.*</small>"
+        ending_note = "\n- <small>*No further calls to other procedures that are documented here.*</small>"
         if Procedure.__print_final_calling_sequence_message == False:
-            abschlusstext = ""
+            ending_note = ""
         
         # NOTE: do not insert  any indentions, as this will be done at the very end before writing
-        abschlusstext = self.indent_str(abschlusstext, 0)
+        ending_note = self.indent_str(ending_note, 0)
 
 
-        self.calling_sequences_doc = self.calling_sequences_doc + abschlusstext
+        self.calling_sequences_doc = self.calling_sequences_doc + ending_note
 
         self.calling_sequences_state = True
         text_to_return = self.calling_sequences_doc
@@ -1348,13 +1348,13 @@ class Procedure():
         """
 
 
-        for prozedur in cls.all_procedures_final:
-            prozedur_obj:Procedure = prozedur[0]
-            db(prozedur_obj.name)
+        for procedure in cls.all_procedures_final:
+            procedure_obj:Procedure = procedure[0]
+            db(procedure_obj.name)
 
-            prozedur_obj.prepare_single_call_sequence_docs(level=0)
+            procedure_obj.prepare_single_call_sequence_docs(level=0)
 
-            db(len(prozedur_obj.calling_sequences), prozedur_obj.calling_sequences)
+            db(len(procedure_obj.calling_sequences), procedure_obj.calling_sequences)
 
             db("next procedure...")
             
@@ -1395,16 +1395,16 @@ class Procedure():
         cls.all_procedures_final
 
         # Use the existing object method for each procedure:
-        for prozedur in cls.all_procedures_final:
+        for procedure in cls.all_procedures_final:
 
-            prozedur_obj:Procedure = prozedur[0]
+            procedure_obj:Procedure = procedure[0]
 
-            prozedur_obj.analyse_calling_sequences_in_one_proc()
+            procedure_obj.analyse_calling_sequences_in_one_proc()
 
 
 
             # Sortiere generierte Liste aufsteigend nach den Aufrufzeilen:
-            prozedur_obj.calling_sequences = sorted(prozedur_obj.calling_sequences, key=lambda stored_tuple: stored_tuple[0])
+            procedure_obj.calling_sequences = sorted(procedure_obj.calling_sequences, key=lambda stored_tuple: stored_tuple[0])
 
 
         db("All procedures analyzed, not yet documented!")
@@ -1435,16 +1435,16 @@ class Procedure():
         self.calling_sequences = []
 
         # Suche für alle vorhandenen Prozeduren jeweils ihre Referenzen heraus, und prüfe, ob eine Referenz zu der jetzt gerade untersuchten Prozedur (self.name) führt. Wenn ja, ist dies ein Aufruf, der der calling_sequences liste angehangen werden soll.
-        for (procedure_obj, prozedur_name, procedure_declaration_line_no) in Procedure.all_procedures_final:
+        for (procedure_obj, procedure_name, procedure_declaration_line_no) in Procedure.all_procedures_final:
             
             # Filter the list so that parent_sub == name
-            db("Search call sequence for procedure >> {}\nCurrently: check, wheather the following procedure is be called: >> {}".format(self.name, prozedur_name)) # is ALWAYS EQUAL in a single call!
+            db("Search call sequence for procedure >> {}\nCurrently: check, wheather the following procedure is be called: >> {}".format(self.name, procedure_name)) # is ALWAYS EQUAL in a single call!
 
             
-            relevante_references = [_ for _ in procedure_obj.references if _[1] == self.name]
+            relevant_references = [_ for _ in procedure_obj.references if _[1] == self.name]
             
             
-            db("----> Anzahl Relevanter Referenzierungen: {}".format(len(relevante_references)))
+            db("----> Anzahl Relevanter Referenzierungen: {}".format(len(relevant_references)))
 
 
 
@@ -1452,7 +1452,7 @@ class Procedure():
             ### # Add the relevant references as calls within the procedure to be analyzed: ####
             # =============================================================================
             
-            for reference in relevante_references:
+            for reference in relevant_references:
                 self.calling_sequences.append(reference)
 
 
@@ -1614,15 +1614,15 @@ class Procedure():
 
                     if procedure_obj.calling_sequences:
 
-                        einleitungssatz = "The following subordinate procedures are called within the procedure:"
+                        introduction_note = "The following subordinate procedures are called within the procedure:"
 
                     else:
 
-                        einleitungssatz = "No further calls found for procedures documented here." # default
+                        introduction_note = "No further calls found for procedures documented here." # default
 
 
                     # Insert introduction sentence: 
-                    procedure_obj.documentation = procedure_obj.documentation.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", einleitungssatz)
+                    procedure_obj.documentation = procedure_obj.documentation.replace("@PLACEHOLDER_PROCEDURE_ABRUFFOLGE_INTRODUCTION@", introduction_note)
 
 
                     # Set the overview count of calls:
@@ -1802,7 +1802,7 @@ class Procedure():
 
         # Remove the string up to the name:
         pos_name = match.string.find(self.name + "(")
-        potentieller_modifier = match.string[0:pos_name]
+        potential_modifier = match.string[0:pos_name]
 
         # Identify the modifier from this:
         
@@ -1813,7 +1813,7 @@ class Procedure():
         
         
         regex_modifier = re.compile(r"((?:Private|Public|Friend)?)")
-        match = regex_modifier.match(potentieller_modifier)
+        match = regex_modifier.match(potential_modifier)
         modifier = match.group(1)
 
 

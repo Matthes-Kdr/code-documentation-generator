@@ -12,9 +12,9 @@ from tkinter import filedialog, simpledialog
 
 
 
-def benutzerdefinierte_texte_on_buttons():
+def user_defined_labels_on_buttons():
     """
-    # TODO: Ansoatz  https://stackoverflow.com/questions/16242782/change-words-on-tkinter-messagebox-buttons
+    # TODO: approach, see  https://stackoverflow.com/questions/16242782/change-words-on-tkinter-messagebox-buttons
     """
 
     '''
@@ -36,7 +36,7 @@ def benutzerdefinierte_texte_on_buttons():
 
 class DocumenterGui:
     """
-    ### OUTLOOK: There should still be a text field for the application i Code-Documenter, in which any free text can be passed - or an input box (extra win with all visible area, so not just one line...). This free text should also be included somewhere in the DCode documentation above...)
+    ### Forecast: There should still be a text field for the application i Code-Documenter, in which any free text can be passed - or an input box (extra win with all visible area, so not just one line...). This free text should also be included somewhere in the DCode documentation above...)
 
 
     ### TODOC : ...

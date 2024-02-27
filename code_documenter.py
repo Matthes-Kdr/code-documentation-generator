@@ -1973,29 +1973,29 @@ class Procedure():
 
 
 
-
+    
 
     def __init__(self, text_lines:tuple[str]) -> None:
         """
-        Erstellt ein Prozedur-Objekt, wodurch die einzelnen Komponenten des Codes gesucht und gespeichert werden.
-        Uebergeben muss ein beliebig grosses Tuple, wobei jedes Element davon den String einre einzelnen Zeile dieser Prozedur enthaelt.
+        Creates a procedure object, whereby the individual components of the code are searched for and saved.
+        An arbitrarily large tuple must be passed, each element of which contains the string of a single line of this procedure.
 
         Args:
-            text_lines (tuple[str]): Tuple mit den einzelnen Textzeilen, die zu der relevaten  Prozedur gehoeren.
+            text_lines (tuple[str]): Tuple with the individual lines of text belonging to the relevant procedure.
         """
 
         # TODO: Ist  dies notwendig???! Eigentlich nicht! Dies ist schon die superklasse!
         super().__init__()
 
-        # Merken der instanc zum späteren Iterieren: Klassenzuweisung dynamisch!
+        # Remember the instanc for later iteration: Class assignment dynamic!
         type(self).instances.append(self)
         
-        # Speichern aller Textzeilen:
+        # Save all text lines:
         self.lines = text_lines
 
 
         # =============================================================================
-        #### # HErausfiltern einzelner KOmponenten: ####
+        #### # Filter out individual components: ####
         # =============================================================================
         
         self.extract_line_numbers()
@@ -2008,13 +2008,10 @@ class Procedure():
 
 
         # =============================================================================
-        #### Zusammenfassen und Schreiben der Dokumentation: ####
+        #### Summarizing and writing the documentation: ####
         # =============================================================================
-        # TODOC: -... was passiert darin?
         self.calling_sequences_doc = None
         self.calling_sequences_state = False
-        # self.doc_of_calling_sequences = (calling_sequences_doc, calling_sequences_state)
-
 
 
         self.generate_documentation()
@@ -2040,17 +2037,17 @@ class Procedure():
 
 class Sub(Procedure):
     """
-    Subklasse für eine VBA-Sub-Prozedur.
-    U.a. wird hier auch der von der Superklasse vor-initialisierte Regex-Ausdruck konkretisiert und kompiliert, der im VBA-Syntax für den Beginn und das Ende der Prozedurart erforderlich ist.
+    Subclass for a VBA sub-procedure.
+    Among other things, the regex expression pre-initialized by the superclass, which is required in VBA syntax for the start and end of the procedure type, is also specified and compiled here.
 
-    Die meisten Methoden sind in der übergeordneten Superklasse gelagert, da sie vom Ablauf fuer VBA-Subs und VBA-Methoden identisch sind.
+    Most of the methods are stored in the superordinate superclass, as they are identical for VBA subs and VBA methods.
 
     """
 
     matches_line_ixs = []
     instances = []
 
-    all_procedures_final = [] # Liste wird erst nach Identifizierung aller Prozeduren erstellt. Sie dient der Sortierung  der Instanzen basierend auf der alphabetischen Reihenfolge ihrer Prozedur-Bezeichnungen
+    all_procedures_final = [] # List is only created after all procedures have been identified. It is used to sort the instances based on the alphabetical order of their procedure names
 
     
     KEYWORD_TYPE = "Sub" 
@@ -2058,7 +2055,7 @@ class Sub(Procedure):
     TEMPLATE_SECTION_HEAD = "templates/sec_subs.md"
     
 
-    # Konkretisierung und Kompilierung der Regex-Ausdrücke:
+    # Concretization and compilation of the regex expressions:
 
     regex_begin = re.compile(Procedure.regex_begin_pattern.replace("PLACEHOLDER_PROCEDURE_TYPE", KEYWORD_TYPE), re.VERBOSE | re.IGNORECASE)
 
@@ -2081,24 +2078,24 @@ class Sub(Procedure):
 
 class Function(Procedure):
     """
-    Subklasse für eine VBA-Sub-Prozedur.
-    U.a. wird hier auch der von der Superklasse vor-initialisierte Regex-Ausdruck konkretisiert und kompiliert, der im VBA-Syntax für den Beginn und das Ende der Prozedurart erforderlich ist.
+    Subclass for a VBA sub-procedure.
+    Among other things, the regex expression pre-initialized by the superclass, which is required in VBA syntax for the start and end of the procedure type, is also specified and compiled here.
 
-    Die meisten Methoden sind in der übergeordneten Superklasse gelagert, da sie vom Ablauf fuer VBA-Subs und VBA-Methoden identisch sind.
+    Most of the methods are stored in the superordinate superclass, as they are identical for VBA subs and VBA methods.
 
     """
 
     matches_line_ixs = []
     instances = []
     
-    all_procedures_final = [] # Liste wird erst nach Identifizierung aller Prozeduren erstellt. Sie dient der Sortierung  der Instanzen basierend auf der alphabetischen Reihenfolge ihrer Prozedur-Bezeichnungen
+    all_procedures_final = [] # List is only created after all procedures have been identified. It is used to sort the instances based on the alphabetical order of their procedure names
     
     KEYWORD_TYPE = "Function" 
     
     TEMPLATE_SECTION_HEAD = "templates/sec_functions.md"
     
     
-    # Konkretisierung und Kompilierung der Regex-Ausdrücke:
+    # Concretization and compilation of the regex expressions:
 
     regex_begin = re.compile(Procedure.regex_begin_pattern.replace("PLACEHOLDER_PROCEDURE_TYPE", KEYWORD_TYPE), re.VERBOSE | re.IGNORECASE)
 
@@ -2124,10 +2121,10 @@ class Function(Procedure):
 
 def load_parameter(documenter_gui_obj:DocumenterGui):
     """
-    Lädt alle relevanten Attribute (eingestellten Parameter) der GUI in die Klasse MetaData (bzw. Procedure) und initialisiert anschließend die Klasse MetaData.
+    Loads all relevant attributes (set parameters) of the GUI into the MetaData (or Procedure) class and then initializes the MetaData class.
 
     Args:
-        documenter_gui_obj (DocumenterGui): Objekt mit Parametern fuer die zu erstellende Dokumentation.
+        documenter_gui_obj (DocumenterGui): Object with parameters for the documentation to be created.
     """
     
     MetaData.set_output_dir(documenter_gui_obj.output_dir)
@@ -2138,8 +2135,8 @@ def load_parameter(documenter_gui_obj:DocumenterGui):
     Procedure.set_print_final_calling_sequence_message(documenter_gui_obj.show_message)
 
 
-    # Expliziter Aufurf  der Initialisierungsmethode der MetaData.
-    # Die Klassenattribute werden vorher bereits durch die Aufruf einzelner Setter mit den Daten aus der GUI belegt.
+    # Explicit call of the initialization method of the MetaData.
+    # The class attributes are already filled with the data from the GUI by calling individual setters.
     MetaData.initialize_class()
 
 
@@ -2147,9 +2144,9 @@ def load_parameter(documenter_gui_obj:DocumenterGui):
 
 def convert_markdown_to_html():
     """
-    Wandelt die generierte .md Markdown-Datei in eine HTML-Datei um.
-    Die Formatierung ist durch die verwendete Bibliothek allerdings bei weitem nicht so sinnvoll und uebersichtlich,
-    wie wenn die .md Datei im Anschluss manuell durch VSCode umgewandelt wird (Extension Markdown all in one)
+    Converts the generated .md Markdown file into an HTML file.
+    However, the formatting is not nearly as useful and clear due to the library used,
+    as when the .md file is subsequently converted manually using VSCode (Markdown all in one extension)
     """
 
     if MetaData.get_convert_to_html():
@@ -2159,7 +2156,7 @@ def convert_markdown_to_html():
             encoding="utf8"
         )
 
-        print("HTML-Datei wurde aus MD-Datei generiert: {}".format(MetaData.get_output_path(".html")))
+        print("HTML file was generated from MD file: {}".format(MetaData.get_output_path(".html")))
         
 
 
@@ -2202,8 +2199,8 @@ def evaluate_debug_mode():
 # =============================================================================
 def main():
     """
-    Hauptprogramm. Steuert den Gesamt-Ablauf des Scripts. 
-    Die meisten Methoden sind innerhalb der Superklasse Procedure definiert.
+    Main program. Controls the overall flow of the script. 
+    Most methods are defined within the Procedure superclass.
     """
 
     evaluate_debug_mode()
@@ -2215,13 +2212,13 @@ def main():
     gui = DocumenterGui()
     
     if not gui.get_is_ready():
-        db("KEIN Start! -> Abbruch")
+        db("NO start! -> Abort")
         return
 
-    db("Dann starte Dokumentation von aussen mit den Parametern durch Zugriff auf die Objektvariablen")
+    db("Then start documentation from outside with the parameters by accessing the object variables")
 
 
-    # PArameter des GUI-Objektes in MetaData-Class speichern und Initialisieren der MetaDate-Klasse
+    # Save PArameter of the GUI object in MetaData class and initialize the MetaDate class
     load_parameter(gui)
 
 
@@ -2229,11 +2226,11 @@ def main():
     Procedure.initialize_input_code(MetaData.get_input_path())
 
 
-    #  Identifizieren und Speichern der Deklarationszeilen von Prozeduren:
+    # Identify and save the declaration lines of procedures:
     Procedure.identify_procedures()
 
 
-    # Detail-Analyse und Speicherung einzelner Bestandteile in Objekten:
+    # Detailed analysis and storage of individual components in objects:
     Procedure.detail_analyse_procedures()
 
 
@@ -2259,12 +2256,8 @@ def main():
 
 if __name__ == '__main__':
 
-    print("START....")
-
-
-
-    # DocumenterGui.DEBUG = DEBUG
+    print("START OF MAIN....")
 
     main()
 
-    print(".... ENDE.")
+    print(".... END OF MAIN.")

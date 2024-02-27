@@ -49,9 +49,12 @@ def read_content(path:str) -> list:
 
 
 
-def call_script(path:str):
+def call_script(path:str, extra_param:str=None):
 # Use subprocess to call the script
-    subprocess.call(['python', path])
+    if extra_param:
+        subprocess.call(['python', path, extra_param])
+    else:
+        subprocess.call(['python', path])
 
 
 
@@ -63,7 +66,13 @@ def call_script(path:str):
 # =============================================================================
 def main():
 
-    call_script('code_documenter.py')
+
+
+
+
+
+    # call_script('code_documenter.py')
+    call_script('code_documenter.py', extra_param="--debug")
 
     output_path_new = "output_data/current_test.bas - Dokumentation.md"
     output_path_old = "output_data/current_test.bas - Dokumentation_REFERENCE.md"

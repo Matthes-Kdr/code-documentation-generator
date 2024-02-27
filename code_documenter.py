@@ -150,6 +150,7 @@ from programming_languages import SyntaxVba
 
 
 
+from sys import argv
 
 
 
@@ -158,10 +159,10 @@ from programming_languages import SyntaxVba
 #### GLOBALS: ####
 # =============================================================================
 
-DEBUG = 0
+DEBUG = 0 # Can be changed by passing another argument while starting script from terminal.
 
 
-DocumenterGui.set_debug_mode(DEBUG)
+# DocumenterGui.set_debug_mode(DEBUG)
 
 # HACK: only Vba by now:
 SyntaxClass = SyntaxVba
@@ -2198,8 +2199,24 @@ def convert_markdown_to_html():
 
 
 
+def evaluate_debug_mode():
+    """
+    Checks wheather a parameter has been passed to start the script.
+    If so, check wheather it is the flag for turning on the DEBUG-Mode
+    """
+    # Set debug mode if starting from terminal with arg:
+    if len(argv) < 2:
+        return
+    
+    if (argv[1] == '-d' or argv[1] == '--debug'):
+        
+        # Set the module constant DEBUG to true:
+        print("set DEBUG MODE!")
+        global DEBUG
+        DEBUG = 1
 
-
+    else:
+        raise Exception("Invalid argument while starting script: '{}'\nPermitted is only the param '-d' or '--debug' to set the DEBUG mode.".format(argv[1]))
 
 
 
@@ -2217,6 +2234,12 @@ def main():
     Hauptprogramm. Steuert den Gesamt-Ablauf des Scripts. 
     Die meisten Methoden sind innerhalb der Superklasse Procedure definiert.
     """
+
+    evaluate_debug_mode()
+
+
+
+    DocumenterGui.set_debug_mode(DEBUG)
 
     gui = DocumenterGui()
     
@@ -2266,6 +2289,7 @@ def main():
 if __name__ == '__main__':
 
     print("START....")
+
 
 
     # DocumenterGui.DEBUG = DEBUG

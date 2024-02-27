@@ -2,10 +2,10 @@
 
 
 
-**Letzte Änderung** der Quelldatei 'current_test.bas' vor der Generierung dieser automatischen Dokumentation: **2023-11-17 00:52**
+**Letzte Änderung** der Quelldatei 'current_test.bas' vor der Generierung dieser automatischen Dokumentation: **2024-02-09 16:42**
 
 
-Generierungsdatum dieser Dokumentation: **2024-02-09 08:10:25**
+Generierungsdatum dieser Dokumentation: **2024-02-27 22:49:17**
 
 
 
@@ -254,14 +254,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -437,14 +437,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -608,14 +608,14 @@ Kein Aufruf gefunden.
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -767,7 +767,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -777,11 +777,11 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -953,7 +953,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -966,26 +966,26 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
   - [```mergeCells```](#mergeCells) : <small>  [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
   - [```mergeCells```](#mergeCells) : <small>  [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -1152,7 +1152,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -1162,23 +1162,23 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 - [```mergeCells```](#mergeCells) : <small>  [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 - [```mergeCells```](#mergeCells) : <small>  [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -1393,7 +1393,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -1406,10 +1406,10 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 677] : ```            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then``` </small>
@@ -1422,16 +1422,16 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
       - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
   - [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
@@ -1444,48 +1444,48 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-          - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+          - <small>*No further calls to other procedures that are documented here.*</small>
 
         - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
 
 
 
-          - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+          - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
   - [```getReplacerNote```](#getReplacerNote) : <small>  [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
   - [```getReplacerCount```](#getReplacerCount) : <small>  [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
   - [```getReplacerPost```](#getReplacerPost) : <small>  [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
   - [```getReplacerEmpty```](#getReplacerEmpty) : <small>  [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
   - [```getFilePath```](#getFilePath) : <small>  [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
@@ -1498,38 +1498,38 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
   - [```InsertImageFromFileToCell```](#InsertImageFromFileToCell) : <small>  [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
   - [```getTypeOfFollowingSeperatorLine```](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
   - [```insertFrameLineBelow```](#insertFrameLineBelow) : <small>  [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
   - [```SeitenformatNextPosition```](#SeitenformatNextPosition) : <small>  [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -1713,14 +1713,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -1882,14 +1882,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -2063,7 +2063,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -2073,10 +2073,10 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -2248,14 +2248,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -2418,14 +2418,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -2614,14 +2614,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -2806,7 +2806,7 @@ Kein Aufruf gefunden.
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -2816,7 +2816,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```addSeitenformat```](#addSeitenformat) : <small>  [Zeile 1183] : ```        oSeite = addSeitenformat(startzeileSteuertabelle)``` </small>
@@ -2826,7 +2826,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
   - [```identifyLastRow```](#identifyLastRow) : <small>  [Zeile 980] : ```    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)``` </small>
@@ -2836,21 +2836,21 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
     - [```areaEmpty```](#areaEmpty) : <small>  [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```erstelleKonvertierteSeite```](#erstelleKonvertierteSeite) : <small>  [Zeile 1191] : ```        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)``` </small>
@@ -2863,10 +2863,10 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
   - [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 677] : ```            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then``` </small>
@@ -2879,16 +2879,16 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-          - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+          - <small>*No further calls to other procedures that are documented here.*</small>
 
         - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
 
 
 
-          - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+          - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
     - [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
@@ -2901,48 +2901,48 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-            - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+            - <small>*No further calls to other procedures that are documented here.*</small>
 
           - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
 
 
 
-            - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+            - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-          - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+          - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
     - [```getReplacerNote```](#getReplacerNote) : <small>  [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
     - [```getReplacerCount```](#getReplacerCount) : <small>  [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
     - [```getReplacerPost```](#getReplacerPost) : <small>  [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
     - [```getReplacerEmpty```](#getReplacerEmpty) : <small>  [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
     - [```getFilePath```](#getFilePath) : <small>  [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
@@ -2955,38 +2955,38 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
     - [```InsertImageFromFileToCell```](#InsertImageFromFileToCell) : <small>  [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
     - [```getTypeOfFollowingSeperatorLine```](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
     - [```insertFrameLineBelow```](#insertFrameLineBelow) : <small>  [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
     - [```SeitenformatNextPosition```](#SeitenformatNextPosition) : <small>  [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```applyLayoutPrintArea```](#applyLayoutPrintArea) : <small>  [Zeile 1192] : ```        Call applyLayoutPrintArea(oSeite)``` </small>
@@ -2996,11 +2996,11 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```applyLayoutToAllPages```](#applyLayoutToAllPages) : <small>  [Zeile 1201] : ```    Call applyLayoutToAllPages(oSeite)``` </small>
@@ -3013,37 +3013,37 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
     - [```mergeCells```](#mergeCells) : <small>  [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
     - [```mergeCells```](#mergeCells) : <small>  [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```printLastSheetsAsPdf```](#printLastSheetsAsPdf) : <small>  [Zeile 1210] : ```        Call printLastSheetsAsPdf(pageNum)``` </small>
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -3240,14 +3240,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -3468,7 +3468,7 @@ Kein Aufruf gefunden.
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -3478,11 +3478,11 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -3668,7 +3668,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -3678,7 +3678,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```identifyLastRow```](#identifyLastRow) : <small>  [Zeile 980] : ```    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)``` </small>
@@ -3688,21 +3688,21 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
   - [```areaEmpty```](#areaEmpty) : <small>  [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -3894,14 +3894,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -4076,14 +4076,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -4250,14 +4250,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -4415,7 +4415,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -4428,7 +4428,7 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -4606,14 +4606,14 @@ Kein Aufruf gefunden.
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -4787,14 +4787,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -4947,14 +4947,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -5117,14 +5117,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -5284,14 +5284,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -5467,14 +5467,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -5637,7 +5637,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -5647,16 +5647,16 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -5864,7 +5864,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -5877,20 +5877,20 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
   - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -6047,14 +6047,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -6232,7 +6232,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -6242,17 +6242,17 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 - [```areaEmpty```](#areaEmpty) : <small>  [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
 
 
 
-  - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+  - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -6429,7 +6429,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufen:
+The following subordinate procedures are called within the procedure:
 
 
 
@@ -6442,16 +6442,16 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
     - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
 
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
@@ -6464,48 +6464,48 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
       - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
 
 
 
-        - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+        - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-      - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+      - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```getReplacerNote```](#getReplacerNote) : <small>  [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```getReplacerCount```](#getReplacerCount) : <small>  [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```getReplacerPost```](#getReplacerPost) : <small>  [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```getReplacerEmpty```](#getReplacerEmpty) : <small>  [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```getFilePath```](#getFilePath) : <small>  [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
@@ -6518,35 +6518,35 @@ Innehalb der Prozedur werden die folgenden, untergeordneten Prozeduren aufgerufe
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
 - [```InsertImageFromFileToCell```](#InsertImageFromFileToCell) : <small>  [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 - [```getTypeOfFollowingSeperatorLine```](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 - [```insertFrameLineBelow```](#insertFrameLineBelow) : <small>  [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 - [```SeitenformatNextPosition```](#SeitenformatNextPosition) : <small>  [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
 
 
 
-    - <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+    - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -6775,14 +6775,14 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 ---
 
 
-Keine weiteren Aufrufe zu hier dokumentierten Prozeduren gefunden.
+No further calls found for procedures documented here.
 
 
 
 
 
 
-- <small>*Keine weiteren Aufrufe zu anderen, hier dokumentierten Prozeduren.*</small>
+- <small>*No further calls to other procedures that are documented here.*</small>
 
 
 
@@ -6954,7 +6954,7 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 <summary> Modulinformationen anzeigen/verbergen.
 </summary>
 
-  <br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>Für generelles Ziel und Ablauf des Scriptes siehe MArkdown im Verzeichnis ../Tests/Programmablauf.html<br><br>Wichtige Details siehe am Ende dieses docstrings.<br><br><br><br><br>### Fertig implementiert:<br><br>- Inhaltsverzeichnis / Index<br><br>- Gesamtlayout inkl. Titel, Zwischenüberschriften für einzelne Sections<br><br>- Aufführen  des modulweiten Programmkopf-Docstring in der generierten Dokumentation<br><br>- Aufführen der References-Durchsuchungen (Wo wird die Prozedur aufgerufen?) in der generierten Dokumentation<br><br>- Sofortiger Export der MD-Datei in eine  HTML-Datei<br><br>- Aufführen der organisatorischer Daten bzgl. des zu dokumentierenden Codes und des verwendeten Skripts zum Dokumentieren in der generierten Dokumentation<br><br>- Aufführen der Calling Sequence (Aufrufabfolge / Aufrufebenen) innerhalb jeder Prozedur in der generierten Dokumentation: Aufzählung der Aufrufe anderer, in dieser Dokumentation behandelten Prozeduren. Inklusive rekursive geschachtelte Liste, welche Aufrufe jeweils in den aufgerufenen Prozeduren erfolgen.<br><br><br>- Bereitstellung einer einfachen GUI / HMI, um Input- und Output Pfade zu parametrisieren<br><br><br><br><br><br><br><br>### TODOS:<br><br><br>- Chore: Aufräumen des Quellcodes<br><br>- Refactor: ggfs. modifizieren von write_content<br><br>- BUGFIX: Modul 1 aufrufe<br><br>- "Help... " Button in GUI, in dem Erklärungen stehen! --> BESSER, universeller, einfacher und weniger duplizierend: ERstelle eine README.md im Repository, und beim Klick auf "help-btn" wird diese Datei in eine HTML umgewandelt und im Browser angezeigt...<br><br><br><br><br>### AUSBLICK für später und in schön:<br><br><br>- Zusatzmöglichkeit in GUI einen benutzerdefinierten Text einzugeben (Prio sehr gering!!). Dieser würde dann in einre eigenen Section angezeigt werden.<br><br>- Index an der Seite wie eine NavBar zum einzelnd scrollen<br><br>- Ermöglichung von Berücksichtigung weiterer Module innerhalb der Dokumentation<br>    <br>    - z. B. 2 VBA-Module innerhalb eines Projektes, wobei Prozeduren von Modul1  andere Prozeduren aus Modul2 aufrufen.<br><br>        - Erstmal nur als Verweis  (Mögl. Ansatz included = "Modul1.*" ohne rekursive Auflistung derer Aufrufe... oder eben mit... bestenfalls auch das parametrisierbar)<br><br>- Dokumentation von weiteren PRogrammiersprachen<br><br>    - OK --> VBA<br>    - Nächste Prio: C++ / Arduino<br>    - Letzte Prio: Python (v.a. für den Ablaufsequence sehr hilfreich, für den rest gibt es pdoc...)<br><br><br><br><br><br><br><br><br># =============================================================================<br>#### Wichtige Aufrufreihenfolge der Methode innerhalb dieses Python-Scriptes zur Erstellung der Dokumentation der Aufrufreihenfolge der zu dokumentierenden VBA-Prozeduren: ####<br># =============================================================================<br><br>Es werden zunächst alle Prozeduren komplett analysiert, erst danach werden wiederum alle Prozeduren komplett dokumentiert. Für beide Vorgänge erfolgt dies in einer Methode auf Objektebene, wobei diese jeweilige MEthode in beiden Fällen aus einer Klassenmethode aufgerufen wird, in der über die einzelnen Prozedur-Objekte innerhalb dieser Klasse iteriert wird:<br><br>- analyse_call_sequence(cls)<br>    - analyse_calling_sequence_in_one_proc(self)<br>- prepare_all_call_sequences_docs(cls)<br>    - prepare_single_call_sequence_docs(cls)<br><br>(hierfür wäre das entwickelte Tool  übrigens eine tolle Anwendung gewesen, sofern sie später auch mal Python-Syntax dokumentieren könnte :-) )<br><br><br><br><br><br># =============================================================================<br>#### Hinweise zur Anwendung und Benutzung: ####<br># =============================================================================<br><br>- To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line. Empty lines that are to be included must also be labelled as comments.<br><br>- Durch das Script wird eine MD-Datei (Markdown) erzeugt, die anschließend über die Library markdown sofort in eine HTML umgewandelt wird, sodass nach Abschluss des Scriptes 2 Dateien erstellt wurden. Durch unterschiedliche Interpretationen im Rahmen der Konvertierung unterscheidet sich die Darstellung der so generierten HTML-Datei allerdings, wenn sie über VSCode Extension gesondert konvertiert wird. Die über VSCode generierte Datei ist übersichtlicher und schöner. Das sollte also am Ende nochmals gesondert erfolgen.<br><br><br><br><br><br><br><br># =============================================================================<br>#### Unwichtige Nebensächlichkeiten: Code-Analyse Zusammenfassung: ####<br># =============================================================================<br><br>In der Version vom 2024-01-11 - 00:18:43:<br>    Angaben jeweils: [Zeilen @ code_documenter.py] + [Zeilen @ gui] = [Summe]<br>    - Gesamtanzahl der Zeilen: 408 (100%)+2201 (100%)=2609 (100%)<br>    - davon Leerzeilen: 168 (41,1764705882353%)+1071 (48,6597001363017%)=1239 (47,489459563051%)<br>    - davon Einzelkommentarzeilen: 20 (4,90196078431373%)+244 (11,0858700590641%)=264 (10,1188194710617%)<br>    - davon Blockkommentarzeilen: 85 (20,8333333333333%)+374 (16,9922762380736%)=459 (17,5929474894596%)<br><br>    ==> Summe aller Kommentarzeilen: 105 (25,7352941176471%)+618 (28,0781462971377%)=723 (27,7117669605213%)<br>    ==> Code-relevante Zeilen: 135 (33,0882352941176%)+512 (23,2621535665607%)=647 (24,7987734764277%)<br><br>-----------------------------------------------    <br><br>In der Version vom 2024-01-07 - 23:37:04:<br>    - Gesamtanzahl der Zeilen: 2164 (100%)<br>    - davon Leerzeilen: 1091 (50%)<br>    - davon Einzelkommentarzeilen: 226 (10%)<br>    - davon Blockkommentarzeilen: 364 (17%)<br><br>    ==> Summe aller Kommentarzeilen 590 (27%)<br>    ==> Code-relevante Zeilen: 483 (22%)<br><br>-----------------------------------------------<br><br>In der Version vom 2024-01-07 - 15:26:03:<br>    - Gesamtanzahl der Zeilen: 2771 (100%)<br>    - davon Leerzeilen: 1408 (51%)<br>    - davon Einzelkommentarzeilen: 278 (10%)<br>    - davon Blockkommentarzeilen: 550 (20%)<br><br>    ==> Summe aller Kommentarzeilen 828 (30%)<br>    ==> Code-relevante Zeilen: 535 (19%)<br><br>-----------------------------------------------<br><br><br><br>
+  <br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>> For further information, see README.md<br>----------------------------------------<br>>  Tool to automatically generate a documentation of the source code - mainly used for function-based flows (currently only supporting single VBA-moduls, support for Python and C++ shall follow).<br><br>> **Unlinke many other generic documentation tools this project focus on the documentation of code with a functional-programming approach rather than a class-based approach.** Aim is to **show the program schedule (flow / calls of other procedures)** within the procedures.<br><br>**<span style='color:red'>&#9888; As this project was not meant to become a public one in the first place, I did not chore and tidy the code by now! Also I began in German, but I will fix those both issues step by step and while choring I will translate everything in the code :-)</span>**<br><br>> **NOTE:** As I started this project privatly and was not very forward-looking a lot of the text (readme + code comments) is written in **German**. Step by step I will change this and translate everything to have a continuous language - sorry for that.<br><br>> **<span style='color:red'>&#9888; If there is anything unclear or poor translated - feel free to correct it or to ask (e.g. via a new issue?) for the meaning...</span>**<br><br><br><br># =============================================================================<br>#### Notes on application and use: ####<br># =============================================================================<br><br>- To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line. Empty lines that are to be included must also be labelled as comments.<br><br>- The script generates an MD file (Markdown), which is then immediately converted to HTML using the markdown library, so that 2 files are created after the script is completed. However, due to different interpretations during the conversion, the display of the HTML file generated in this way differs if it is converted separately via VSCode Extension ("Markdown all in one"). The file generated via VSCode is clearer and more attractive. This should therefore be done separately at the end.<br><br><br><br><br><br>### Implemented ready:<br><br>- Generating Table of contents / index<br>- Overall layout incl. title, subheadings for individual sections<br>- Listing the module-wide program header docstring in the generated documentation<br>- Listing the reference searches (Where is the procedure called?) in the generated documentation<br>- Function to immediate export of the MD file to an HTML file within this script<br>- Listing the organizational data regarding the code to be documented and the script used for documentation in the generated documentation<br>- Listing of the calling sequence (calling sequence / calling levels) within each procedure in the generated documentation: Enumeration of the calls of other procedures covered in this documentation. Including recursive nested list of which calls are made in each of the called procedures.<br>- Providing of a simple GUI / HMI to parameterize input and output paths<br><br><br>> For the latest list of issues / TODOS see Github Issues at https://github.com/Matthes-Kdr/code-documentation-generator/issues<br><br><br><br><br><br><br><br><br># =============================================================================<br>#### Important call sequence of the method within this Python script <br>for creating the documentation of the call sequence of the VBA procedures to be documented:<br># =============================================================================<br><br>First, all procedures will be completely analyzed, and only after then all procedures will be completely documented. For both procedures, this takes place in a method at object level, whereby this respective method is called in both cases from a class method in which iteration takes place via the individual procedure objects within this class:<br><br>- analyse_call_sequence(cls)<br>    - analyse_calling_sequence_in_one_proc(self)<br>- prepare_all_call_sequences_docs(cls)<br>    - prepare_single_call_sequence_docs(cls)<br><br>(Side-note: by the way, the developed tool would have been of great usage to document this in 'nice', if it already had the ability to document Python syntax :-) )<br><br><br><br><br><br><br><br><br><br><br><br><br># =============================================================================<br>#### Unimportant trivialities: Code analysis summary just for fun and for myself: ####<br># =============================================================================<br><br>version from 2024-01-11 - 00:18:43:<br>    Details in each case: [count of lines @ code_documenter.py] + [count of lines @ gui] = [Summe]<br>    - Total of lines: 408 (100%)+2201 (100%)=2609 (100%)<br>    - thereof empty lines: 168 (41,1764705882353%)+1071 (48,6597001363017%)=1239 (47,489459563051%)<br>    - thereof single line comments: 20 (4,90196078431373%)+244 (11,0858700590641%)=264 (10,1188194710617%)<br>    - thereof multiline-comments: 85 (20,8333333333333%)+374 (16,9922762380736%)=459 (17,5929474894596%)<br><br>    ==> sum of all comment-lines:: 105 (25,7352941176471%)+618 (28,0781462971377%)=723 (27,7117669605213%)<br>    ==> actual relevant lines with Code commands: 135 (33,0882352941176%)+512 (23,2621535665607%)=647 (24,7987734764277%)<br><br>-----------------------------------------------    <br><br>version from 2024-01-07 - 23:37:04:<br>    - Total of lines: 2164 (100%)<br>    - thereof empty lines: 1091 (50%)<br>    - thereof single line comments: 226 (10%)<br>    - thereof multiline-comments: 364 (17%)<br><br>    ==> sum of all comment-lines: 590 (27%)<br>    ==> actual relevant lines with Code commands: 483 (22%)<br><br>-----------------------------------------------<br><br>version from 2024-01-07 - 15:26:03:<br>    - Total of lines: 2771 (100%)<br>    - thereof empty lines: 1408 (51%)<br>    - thereof single line comments: 278 (10%)<br>    - thereof multiline-comments: 550 (20%)<br><br>    ==> sum of all comment-lines: 828 (30%)<br>    ==> actual relevant lines with Code commands: 535 (19%)<br><br>-----------------------------------------------<br><br><br><br>
 
 </details>
 
@@ -6970,4 +6970,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-02-09 08:10:25 durch das  automatisierte Code-Dokumentationstool von Matthias Kader (Commit vom 2024-02-08 22:13:14: '862425c31fdc302b9bc8cd1bd0c26fc6933dc872')</small> 
+<small>Dokumentation generiert am 2024-02-27 22:49:17 durch das  automatisierte Code-Dokumentationstool von Matthes-Kdr (Commit vom 2024-02-27 22:24:29: 'cdd3fdd4d2153805886a732213f182ca25f8dd21')</small> 

@@ -1661,8 +1661,8 @@ class Procedure():
     @classmethod
     def sort_procedures_by_names(cls):
         """
-        Füllen der Klassenvariable der **SUBKLASSE** cls.all_procedures_final mit einem Tupel pro Prozedur, in dem sowohl das einzelne Objekt, als auch seine Bezeichnung und die Zeilennummer der Deklaratrion enthalten ist in der Form [(object:Procedure, object.name:str, object.line_begin)]. 
-        Diese Liste wird nach Fertigstellung sortiert basierend auf den alphabetischen Bezeichnern, sodass der Zusammenhang zwischen den Objekten und den Namen weiterhin gegeben ist, gleichzeitig aber die Objekte in der alphabetischen Reihenfolge ihrer Namen dokumentiert werden können.
+        Filling the class variable of the **SUBCLASS** cls.all_procedures_final with one tuple per procedure, which contains the individual object as well as its name and the line number of the declaration in the form [(object:Procedure, object.name:str, object.line_begin)]. 
+        This list is sorted after completion based on the alphabetical identifiers, so that the connection between the objects and the names is still given, but at the same time the objects can be documented in the alphabetical order of their names.
 
         """
 
@@ -1675,7 +1675,7 @@ class Procedure():
 
 
 
-        # Nach dem Füllen: Sortieren basierend auf den Bezeichner-Namen:
+        # After filling: Sort based on the identifier names:
         cls.all_procedures_final = sorted(all_procedures, key=lambda stored_tuple: stored_tuple[1])
 
 
@@ -1698,13 +1698,13 @@ class Procedure():
     @staticmethod
     def __read_template(template_file_path) -> str:
         """
-        Ließt die uebergebene Template-MArkdown Datei ein und gibt den Inhalt als String zurück.
+        Reads the passed Template-MArkdown file and returns the content as a string.
         
         Args:
-            template (str) : Dateipfad zur Template
+            template (str) : File path to the template
 
         Return:
-            str : Textinhalt der Template
+            str : Text content of the template
         """
         with open(template_file_path, "r") as file:
             content = file.read()
@@ -1716,29 +1716,29 @@ class Procedure():
 
     def read_template(self, template="einzelprozedur") -> str:
         """
-        Ließt die relevante Template-MArkdown Datei ein und gibt den Inhalt als String zurück. 
-        Sofern es sich um die Default-Template für eine beliebige Prozedur handelt
-        wird außerdem auch das Attribut self.documentation mit diesem Text initialisiert.
+        Reads the relevant Template-MArkdown file and returns the content as a string. 
+        If this is the default template for any procedure, the self.documentation
+        the self.documentation attribute is also initialized with this text.
 
         Args:
-            template (str) : Dateipfad zur Template - Ausnahme: Falls die in der Klasse gespeicherte 
-                            Standardtemplate self.TEMPLATE fuer eine Prozedur verwendet werden soll, 
-                            dann muss das Stichwort "einzelprozedur" übergeben werden. 
-                            Dies ist default der Fall --> keine Angabe erforderlich.
+            template (str) : File path to the template - Exception: If the default template stored in the class 
+                            default template self.TEMPLATE stored in the class is to be used for a procedure, 
+                            then the keyword "single procedure" must be passed. 
+                            This is the default case --> no specification required.
 
         Return:
-            str : Inhalt der Template
+            str : Content of the template
         """
 
 
         if template == "einzelprozedur":
         
-            # Auslesen und Speichern in Objektvariable
+            # Read out and save in object variable
             self.documentation = self.__read_template(self.TEMPLATE)
             return self.documentation
 
 
-        # Bei NICHT-Standard-Prozedur-Template: Auslesen dieser Template und Rückgabe des Textinhaltes:
+        # For non-standard procedure template: Read out this template and return the text content:
         content = self.__read_template(template)
         return content
 
@@ -1748,7 +1748,7 @@ class Procedure():
 
     def generate_documentation(self):
         """
-        Dokumentiert die gefundenen Parameter unter Nutzung einer Template-Markdown-Textdatei und speichert den zu schreibenden Text im Attribut self.documentation
+        Documents the parameters found using a template markdown text file and saves the text to be written in the self.documentation attribute
         """
 
         self.read_template()
@@ -1760,10 +1760,6 @@ class Procedure():
             "@PLACEHOLDER_PROCEDURE_LINE_BEGIN@" : self.line_begin,
             "@PLACEHOLDER_PROCEDURE_DOCSTRING@" : self.docstring,
             "@PLACEHOLDER_PROCEDURE_SOURCE_CODE@" : self.source_code,
-
-            # # TODO:  Kommen die References extra??! Wahrscheinlich schon stand jetzt (Version> 0.1.3)
-            # "@PLACEHOLDER_PROCEDURE_REFERENCES@" : self.references,
-            # "@PLACEHOLDER_PROCEDURE_COUNT_OF_REFERENCES@" : self.count_of_references,
         }
 
 
@@ -1784,7 +1780,7 @@ class Procedure():
 
     def extract_source_code(self):
         """
-        Ließt den source_code aus und speichert diesen im Attribut self.source_code
+        Reads the source_code and saves it in the self.source_code attribute
         """
 
         source_code = ""
@@ -1799,19 +1795,19 @@ class Procedure():
 
     def extract_modifier(self):
         """
-        Ließt den Modifier aus und speichert diesen im Attribut self.modifier
+        Reads the modifier and saves it in the self.modifier attribute
         """
-        # Wiederverwendung der Deklarationszeilen-Regex:
+        # Reuse the declaration line regex:
         match = self.regex_begin.match(self.lines[0])
 
-        # Entnehme den String bis vor den NAmen:
+        # Remove the string up to the name:
         pos_name = match.string.find(self.name + "(")
         potentieller_modifier = match.string[0:pos_name]
 
-        # Identifiziere hieraus den modifier:
+        # Identify the modifier from this:
         
-        # # Eigentlich sollte es schon auf Grundlage der eigentlichen regex gehen, funktioniert aber nicht! Es wird immer was leres zurückgegeben, daher, neue regex! (Bei Zeit mal schauen warum!)
-        # # Extraktion der Gruppe mit dem Name: (eigentlicher Ansatz)
+        # # Actually, it should already work on the basis of the actual regex, but it doesn't work! It always returns something else, therefore, new regex! (If there is time, see why!)
+        # # Extraction of the group with the name: (actual approach)
         # db(match.groups())
         # modifier = match.group(1)
         
@@ -1824,8 +1820,6 @@ class Procedure():
         if modifier == "":
             modifier = "Public"
 
-        # db(modifier)
-
         self.modifier = modifier
 
 
@@ -1833,28 +1827,23 @@ class Procedure():
 
     def extract_name(self):
         """
-        Ließt den Bezeichnungsnamen aus und speichert diesen im Attribut self.name
+        Reads out the identifier name and saves it in the self.name attribute
         """
-        # Wiederverwendung der Deklarationszeilen-Regex:
+        # Reuse the declaration line regex:
         
         
         match = self.regex_begin.match(self.lines[0])
 
-        # db(match.groups())
-        # Extraktion der Gruppe mit dem Name:
-        name = match.group(1)
-
-        # db(name)
-
-        self.name = name
+        # Extraction of the group with the name:
+        self.name = match.group(1)
 
 
 
     def extract_line_numbers(self):
         """
-        Ließt die relevanten Start- und End-Zeilennummern aus und speichert diesen im Attribut self.line_begin und self.line_end
+        Reads out the relevant start and end line numbers and saves them in the self.line_begin and self.line_end attributes
         """
-        # Hole Index der Instanzenliste, dieser ist gleich dem Index der matches_line_ixs Liste:
+        # Get index of the instance list, this is equal to the index of the matches_line_ixs list:
         ix = self.instances.index(self) 
 
         match_lines_ix = self.matches_line_ixs[ix]
@@ -1868,34 +1857,34 @@ class Procedure():
     @staticmethod
     def identify_docstring(text_lines:tuple[str], trim_empty_rows=False, return_alternativ_text=False) -> str:
         """
-        ### ACHTUNG: Entstanden aus der Methode extract_docstring(self), die auf Objektebene anzuwenden ist. 
-        Um die gleiche Logik aber auch fuer den modulweiten Docstring nutzen zu koennen, wird dieses Konstrukt eingefuehrt.
+        ### NOTE: Developed from the method extract_docstring(self), which is to be used at object level. 
+        To be able to use the same logic for the module-wide docstring, this construct is introduced.
 
 
-        Ließt den ersten Block-KOmmentar / docstring aus und gibt ihn zurueck.
-        Als Docstring wird jede Kommentarzeile gewertet, die DIREKT UND OHNE VORHERIGE LEERZEEILE UNTERHALB DER ERSTEN UEBERGEBENEN ZEILE steht. 
-        Sobald eine Leerzeile folgt, wird der Docstring als beendet angesehen.
+        Reads the first block comment / docstring and returns it.
+        Every comment line that is DIRECTLY AND WITHOUT PREVIOUS EMPTY LINES BELOW THE FIRST LINE SENT is counted as a docstring. 
+        As soon as an empty line follows, the docstring is considered to have ended.
 
-        Beispiel:
-                ' Dies ist ein Kommentar direkt unter der Deklarationszeile. Somit wird es als Docstring gewertet.
-                ' Dies auch
+        Example:
+                ' This is a comment directly below the declaration line. It is therefore considered a docstring.
+                ' This also
                 '
-                ' Da die vorherige Zeile AUCH einen Kommentar (einen leeren) enthält, ist dies hier immer noch Bestandteil des Docstrings.
+                ' As the previous line ALSO contains a comment (an empty one), this is still part of the docstring.
 
-                ' Vor dieser Zeile war ein NICHT-Kommentar, daher gehört das hier nicht mehr zum Docstring
-                MsgBox("Das gehört zum Programm")
+                ' There was a NOT comment before this line, so this is no longer part of the docstring
+                MsgBox("This belongs to the program")
             End Sub
 
             
         Args:
-            text_lines (tuple[str]): Tuple mit den einzelnen Textzeilen, die zu der relevaten  Prozedur gehoeren.
-            trim_empty_rows (bool) : False, sofern der Algorithmus direkt bei einer Leerzeile abgebrochen werden soll ( = DEFAULT), 
-                                        oder True, falls der Algorithmus bei vorangehenden Leerzeilen solange weiterlaufen soll, bis dass KEINE Leerzeile mehr vorliegt oder eine andere Abbruchsbedingung erreicht ist.
-            return_alternativ_text (bool | str) : Default = False. Dann wird beim Nicht-Finden ein leerer String zurückgegeben. 
-                                                    Bei True wird in solchen Fällen der in der MEthode definierte Alternativ-ERsatztext zurückgegeben. 
-                                                    Bei Übergabe eines Strings wird in diesen Fällen dieser String zurückgegeben.
+            text_lines (tuple[str]): Tuple with the individual text lines belonging to the relevant procedure.
+            trim_empty_rows (bool) : False, if the algorithm is to be aborted directly at an empty line ( = DEFAULT), 
+                                        or True, if the algorithm should continue to run with preceding empty lines until there is NO more empty line or another termination condition is reached.
+            return_alternativ_text (bool | str) : Default = False. An empty string is then returned if it is not found. 
+                                                    If True, the alternative record text defined in the MEthode is returned in such cases. 
+                                                    If a string is passed, this string is returned in these cases.
         Returns:
-            str : Docstring / Blockkommentar
+            str : Docstring / block comment
         """
 
 
@@ -1907,38 +1896,38 @@ class Procedure():
             content = line.lstrip(" ")
 
             if(content[0]) == "'":
-               # gehört zum Docstring
+               # belongs to Docstring
                 docstring = docstring + content.lstrip("'")
-                continue # nächste Zeile
+                continue # next line
 
 
             if trim_empty_rows == False:
 
                 break
 
-            # ELSE: Dann trimme die leere Reihe
+            # ELSE: Then trim the empty row
             if docstring != "":
-                # Dann gibt es bereits einen Docstring -> Abbruch
+                # Then there is already a docstring -> Cancel
                 break
 
 
             if re.match(r"^\s*\n?$", content):
-                # Dann besteht die Zeile nur aus Whitespaces --> Trimmen!
-                # Rekursiver Aufruf dieser Methode mit jeweils einer vordersten Zeile weniger!
+                # Then the line consists only of whitespaces --> Trim!
+                # Recursive call of this method with one frontmost line less!
                 docstring = Procedure.identify_docstring(text_lines[1:], trim_empty_rows=True, return_alternativ_text=False) 
-                # TODO: Fehlervermeidung / Grenzfall:  IndexOutOfRange (Ende angekommen, --> docstring vorhanden --> Wird Error geben!
+                # TODO: Error avoidance / borderline case: IndexOutOfRange (end arrived, --> docstring exists --> will raises error!
                 break
 
 
 
         # =============================================================================
-        #### #  Alternativtext bei leeren Docstrings: ####
+        #### # Alternative text for empty docstrings: ####
         # =============================================================================
         
         if return_alternativ_text == True:
 
             if docstring == "":
-                docstring = "*No information availible. For more information expand source code.*" #  Die Sternchen bewirken im MArkdown ein Kursivdruck
+                docstring = "*No information availible. For more information expand source code.*" #  The asterisks cause an italic print in MArkdown
 
         elif isinstance(return_alternativ_text, str):
             if docstring == "":
@@ -1953,55 +1942,37 @@ class Procedure():
 
     def extract_docstring(self):
         """
-        # CHANGELOG: 2023-12-30 - 03:17:04 Bis V. 0.0.5 war diese Funktion 'alleinherschend'. 
-        Erst danach  wurde die Durchschleusung zur static method identify_docstring eingeführt,
-        um damit auch modulweite Docstrings finden zu koennen.
+        # CHANGELOG: 2023-12-30 - 03:17:04 Until V. 0.0.5, this function was 'sole authoritative'. 
+        Only then was the pass-through to the static method identify_docstring introduced,
+        in order to be able to find module-wide docstrings.
 
 
-        Ließt den docstring aus und speichert diesen im Attribut self.docstring
-        Sofern kein Docstring im Code identifiziert wurde, wird eine entsprechende Info in den Text geschrieben.
+        Reads the docstring and saves it in the self.docstring attribute
+        If no docstring has been identified in the code, a corresponding info is written in the text.
 
-        Als Docstring wird jede Kommentarzeile gewertet, die DIREKT UND OHNE VORHERIGE LEERZEEILE UNTERHALB DER DEKLARIERUNGSZEILE der Prozedur steht. Sobald eine Leerzeile folgt, wird der Docstring als beendet angesehen.
+        Every comment line that is DIRECTLY AND WITHOUT PREVIOUS SPACE LINE BELOW THE DECLARATION LINE of the procedure is considered a docstring. As soon as an empty line follows, the docstring is regarded as terminated.
 
-        Beispiel:
-            Private Sub beispielProgramm() ' Deklarationszeile
-                ' Dies ist ein Kommentar direkt unter der Deklarationszeile. Somit wird es als Docstring gewertet.
-                ' Dies auch
+        Example:
+            Private Sub exampleProgram() ' Declaration line
+                ' This is a comment directly below the declaration line. It is therefore evaluated as a docstring.
+                ' This also
                 '
-                ' Da die vorherige Zeile AUCH einen Kommentar (einen leeren) enthält, ist dies hier immer noch Bestandteil des Docstrings.
+                ' Since the previous line ALSO contains a comment (an empty one), this is still part of the docstring.
 
-                ' Vor dieser Zeile war ein NICHT-Kommentar, daher gehört das hier nicht mehr zum Docstring
-                MsgBox("Das gehört zum Programm")
+                ' There was a NOT comment before this line, so this is no longer part of the docstring
+                MsgBox("This belongs to the program")
             End Sub
         """
 
 
-        # Docstring ueber generalisierte Methode herausfiltern:
+        # Filter out docstring via generalized method:
         docstring = self.identify_docstring(self.lines[1:], return_alternativ_text=True)
 
-        # Speichern im Objekt:
+        # Save in object:
         self.docstring = docstring
 
 
 
-
-
-    '''
-
-    def extract_references(self):
-        """
-        ### TODO: Wird aktuell (Version > 0.1.2) ganz wo anders erledigt, ist dort noch nicht optimal - aber um Redundanzen und Verewchslungen vorzubeugen, wird diese Methode erst mal platt gemacht und nicht mehr aufgerufen!
-
-        Später wäre es shcön...
-        
-        ### ALT: 
-        Durchsucht den gesamten Quelltext nach Referenzierungen (Aufrufen) dieser Prozedur und speichert diese im Attribut self.references
-        # TODO ALLES
-        """
-        # self.references = " # TODO ... self.references"
-        # self.count_of_references = " # TODO ... self.count_of_references"
-        pass
-    '''
 
 
     def __init__(self, text_lines:tuple[str]) -> None:

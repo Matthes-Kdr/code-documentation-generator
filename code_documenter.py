@@ -2248,7 +2248,10 @@ def main():
 
     convert_markdown_to_html()
 
-    gui.show_closing_window()
+    if DEBUG:
+        print("\n\nExecution finished.")
+    else:
+        gui.show_closing_window()
 
 
 

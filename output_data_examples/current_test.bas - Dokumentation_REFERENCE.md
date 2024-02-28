@@ -5,7 +5,7 @@
 **Last change** of the source file 'current_test.bas' before generating this documentation automatically: **2024-02-09 16:42**
 
 
-Date of creating this documentation: **2024-02-28 02:48:54**
+Date of creating this documentation: **2024-02-28 05:18:17**
 
 
 
@@ -6820,4 +6820,4 @@ The module information of the Python Script used to generate this documentation 
 
 ---
 
-<small>Documentation was generated on 2024-02-28 02:48:54 by the generic code documentation tool von Matthes-Kdr (Commit vom 2024-02-28 02:48:17: 'c73b3cfc6779ac48a8e126c0b2c6fa9786076802')</small> 
+<small>Documentation was generated on 2024-02-28 05:18:17 by the generic code documentation tool von Matthes-Kdr (Commit vom 2024-02-28 05:12:34: '1f953e653d4826c1a7456a01fd6fd3139f2d688d')</small> 

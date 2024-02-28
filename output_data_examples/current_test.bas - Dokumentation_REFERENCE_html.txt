@@ -138,7 +138,7 @@
         <body class="vscode-body vscode-light">
             <h1 id="code-dokumentation-modul-current_testbas">Code-Dokumentation: Modul 'current_test.bas'</h1>
 <p><strong>Last change</strong> of the source file 'current_test.bas' before generating this documentation automatically: <strong>2024-02-09 16:42</strong></p>
-<p>Date of creating this documentation: <strong>2024-02-28 02:48:54</strong></p>
+<p>Date of creating this documentation: <strong>2024-02-28 05:18:17</strong></p>
 <p></p>
 <!-- --------------------------------------------------------------- -->
 <!-- Index / TOC -->
@@ -3706,7 +3706,7 @@ End Function
 <p><em>To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.</em></p>
 </small> 
 <hr>
-<p><small>Documentation was generated on 2024-02-28 02:48:54 by the generic code documentation tool von Matthes-Kdr (Commit vom 2024-02-28 02:48:17: 'c73b3cfc6779ac48a8e126c0b2c6fa9786076802')</small></p>
+<p><small>Documentation was generated on 2024-02-28 05:18:17 by the generic code documentation tool von Matthes-Kdr (Commit vom 2024-02-28 05:12:34: '1f953e653d4826c1a7456a01fd6fd3139f2d688d')</small></p>
 
             
             

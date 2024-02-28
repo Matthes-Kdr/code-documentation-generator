@@ -139,16 +139,16 @@ class DocumenterGui:
         """
         
         # Just a few paths to examples - you could use any .bas file with vba code.
-        self.input_file = "input_data/beispiel_modul_rekursiv.bas"
-        self.input_file = "input_data/beispiel_modul_bauer+liebherr.bas"
-        self.input_file = "input_data/beispiel_modul2.bas"
-        self.input_file = "input_data/beispiel_modul1.bas"
-        self.input_file = "input_data/beispiel_modul.bas"
+        self.input_file = "input_data_examples/beispiel_modul_rekursiv.bas"
+        self.input_file = "input_data_examples/beispiel_modul_bauer+liebherr.bas"
+        self.input_file = "input_data_examples/beispiel_modul2.bas"
+        self.input_file = "input_data_examples/beispiel_modul1.bas"
+        self.input_file = "input_data_examples/beispiel_modul.bas"
 
-        self.input_file = "input_data/current_test.bas"
+        self.input_file = "input_data_examples/current_test.bas"
 
 
-        self.output_dir = "output_data"
+        self.output_dir = "output_data_examples"
         
         self.show_message = True
         self.convert_checked = True

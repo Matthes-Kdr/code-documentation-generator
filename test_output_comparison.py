@@ -74,8 +74,8 @@ def main():
     # call_script('code_documenter.py')
     call_script('code_documenter.py', extra_param="--debug")
 
-    output_path_new = "output_data/current_test.bas - Dokumentation.md"
-    output_path_old = "output_data/current_test.bas - Dokumentation_REFERENCE.md"
+    output_path_new = "output_data_examples/current_test.bas - Dokumentation.md"
+    output_path_old = "output_data_examples/current_test.bas - Dokumentation_REFERENCE.md"
 
     new_output = read_content(output_path_new)
 

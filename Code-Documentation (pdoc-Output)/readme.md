@@ -1,11 +1,10 @@
-﻿# Code Documentation
+﻿# Code Documentation - Note
 
-In the file `code_documenter.html.txt` is stored a forme result of the execution of pdoc to analyze the script (`code_documenter.py`).
+> This file was not developed manually, so there is no need to correct it in this place!
 
-The extension has been modified manually to `txt` instead of html so that GitHub does not recognize and count it for the percentage of the programming language of this repository, as it is only a helper.
 
-If you need the file, you can change the extension back to ``html.``
+In the file `code_documenter.html` is stored a forme result of the execution of pdoc to analyze the script (`code_documenter.py`).
 
-**NOTE: **
+**NOTE:**
 This file is not up to date necessarily, so please make sure, to run pdoc again, if you need it.
 

@@ -1497,7 +1497,7 @@ class Procedure():
 
         if count_of_references > 0:
 
-            einleitungssatz = "Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:"
+            einleitungssatz = "The procedure is called in the following higher-level procedures:"
 
             
             # Iterate over each referencing to document it:

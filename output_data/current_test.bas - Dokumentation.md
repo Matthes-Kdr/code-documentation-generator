@@ -5,7 +5,7 @@
 **Last change** of the source file 'current_test.bas' before generating this documentation automatically: **2024-02-09 16:42**
 
 
-Date of creating this documentation: **2024-02-28 02:16:26**
+Date of creating this documentation: **2024-02-28 02:48:54**
 
 
 
@@ -219,7 +219,7 @@ Alphabetische and clickable list of all subs and functions used in this module:
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -398,7 +398,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -720,7 +720,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -902,7 +902,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -1097,7 +1097,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -1334,7 +1334,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -1650,7 +1650,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -1815,7 +1815,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -1992,7 +1992,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -2171,7 +2171,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -2339,7 +2339,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -2531,7 +2531,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -3149,7 +3149,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -3569,7 +3569,7 @@ End Sub
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -3791,7 +3791,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -3969,7 +3969,7 @@ Private Function areaEmpty(ws As Worksheet, lineFrom As Integer, columnFrom As I
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -4137,7 +4137,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -4298,7 +4298,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -4664,7 +4664,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -4820,7 +4820,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -4986,7 +4986,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -5149,7 +5149,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -5328,7 +5328,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -5492,7 +5492,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -5717,7 +5717,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -5896,7 +5896,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -6077,7 +6077,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -6270,7 +6270,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -6610,7 +6610,7 @@ End Function
 
 
 
-Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
+The procedure is called in the following higher-level procedures:
 
 
 
@@ -6820,4 +6820,4 @@ The module information of the Python Script used to generate this documentation 
 
 ---
 
-<small>Documentation was generated on 2024-02-28 02:16:26 by the generic code documentation tool von Matthes-Kdr (Commit vom 2024-02-28 01:35:40: 'f2814b727ec72fd8592ff1a6e03841a3892cb015')</small> 
+<small>Documentation was generated on 2024-02-28 02:48:54 by the generic code documentation tool von Matthes-Kdr (Commit vom 2024-02-28 02:48:17: 'c73b3cfc6779ac48a8e126c0b2c6fa9786076802')</small> 

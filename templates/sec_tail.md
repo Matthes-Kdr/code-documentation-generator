@@ -7,39 +7,20 @@
 
 <a name="sec_tail"></a>
 
-## Schlussbemerkungen
-
-
-
-<!-- 
-**Notice:**
-
-*To generate a docstring from the VBA-Source, make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.*
-
-
-
- **TODO:** Erstellt am (Datum) durch das  automatisierte Code-Dokumentationstool von .... in der Version ....
+## Concluding Remarks
 
 
 
 
 
+> This documentation was generated automatically by a tool for generic code documentation. In individual cases, especially if the VBA code to be documented deviates from certain conventions, discrepancies may occur. In case of doubt, the original code should be consulted.
 
 
----
-
-
-
-**ODER:** -->
-
-> Diese Dokumentation wurde automatisiert durch ein entsprechendes Programm generiert. Im Einzelfall, insbesondere wenn im zu dokumentierenden VBA-Code von  bestimmten Konventionen abgewichen wird, können Unstimmigkeiten auftreten. Im Zweifel ist der Originalcode heranzuziehen.
-
-
-Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.
+The module information of the Python Script used to generate this documentation is printed below.
 
 <details>
 
-<summary> Modulinformationen anzeigen/verbergen.
+<summary> Show/hide modul information
 </summary>
 
   @PLACEHOLDER_DOC_PYTHON@
@@ -50,7 +31,7 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 <small>
 
-**Notice, Convnentions:**
+**Notice, Conventions:**
 
 *To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.*
 
@@ -58,4 +39,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am @PLACEHOLDER_TIMESTAMP_NOW@ durch das  automatisierte Code-Dokumentationstool von @PLACEHOLDER_DOCUMENTER_VERSION__AUTHOR@ (Commit vom @PLACEHOLDER_DOCUMENTER_VERSION__DATE@: '@PLACEHOLDER_DOCUMENTER_VERSION__COMMIT@')</small> 
+<small>Documentation was generated on @PLACEHOLDER_TIMESTAMP_NOW@ by the generic code documentation tool von @PLACEHOLDER_DOCUMENTER_VERSION__AUTHOR@ (Commit vom @PLACEHOLDER_DOCUMENTER_VERSION__DATE@: '@PLACEHOLDER_DOCUMENTER_VERSION__COMMIT@')</small> 

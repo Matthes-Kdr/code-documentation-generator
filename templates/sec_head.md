@@ -2,10 +2,10 @@
 
 
 
-**Letzte Änderung** der Quelldatei '@PLACEHOLDER_INPUT_FILE@' vor der Generierung dieser automatischen Dokumentation: **@PLACEHOLDER_TIMESTAMP_SOURCEFILE@**
+**Last change** of the source file '@PLACEHOLDER_INPUT_FILE@' before generating this documentation automatically: **@PLACEHOLDER_TIMESTAMP_SOURCEFILE@**
 
 
-Generierungsdatum dieser Dokumentation: **@PLACEHOLDER_TIMESTAMP_NOW@**
+Date of creating this documentation: **@PLACEHOLDER_TIMESTAMP_NOW@**
 
 
 

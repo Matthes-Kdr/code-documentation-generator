@@ -7,11 +7,11 @@
 
 ## Index / Table Of Content
 
-**TODO:** Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem Modul verwendet werden:
+**TODO:** Alphabetische and clickable list of all subs and functions used in this module:
 
-* [**Modulinformationen / Modulkopf**](#sec_modulinfos)
+* [**Description of the modul**](#sec_modulinfos)
   
-  <!-- Die einzelnen Subs und die einzelnen Funcs werden in separaten Templates eingefügt -->
+  <!-- The individual subs and the individual funcs will be inserted in separate templates -->
 
 
 

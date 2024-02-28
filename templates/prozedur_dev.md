@@ -5,30 +5,23 @@
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="@PLACEHOLDER_PROCEDURE_NAME@"></a>
-<span style="background-color: lightgrey; padding: 2px;">```@PLACEHOLDER_PROCEDURE_MODIFIER@ @PLACEHOLDER_PROCEDURE_TYPE@ @PLACEHOLDER_PROCEDURE_NAME@```</span><small>(Zeile @PLACEHOLDER_PROCEDURE_LINE_BEGIN@)</small>
+<span style="background-color: lightgrey; padding: 2px;">`@PLACEHOLDER_PROCEDURE_MODIFIER@ @PLACEHOLDER_PROCEDURE_TYPE@ @PLACEHOLDER_PROCEDURE_NAME@`</span><small>(Zeile @PLACEHOLDER_PROCEDURE_LINE_BEGIN@)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -38,12 +31,13 @@
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (@PLACEHOLDER_PROCEDURE_COUNT_OF_REFERENCES@)</summary>
+<summary> References of this procedure (@PLACEHOLDER_PROCEDURE_COUNT_OF_REFERENCES@)</summary>
 
 <div style="padding-left:1em;">
 
@@ -67,12 +61,13 @@
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
+    <summary>      Internal Calling Sequences (@PLACEHOLDER_PROCEDURE_COUNT_OF_ABRUFFOLGE@)</summary>
 
 ---
 
@@ -97,13 +92,14 @@
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 

@@ -1203,15 +1203,15 @@ class Procedure():
         # proc_name:str, line_no:str, line_text:str
     
 
-        # replacer_placeholder_reference = "\n" * 3 + f"- [```{target_procedure_name}```](#{target_procedure_name}) <small> : [Zeile {line_no_reference}] : ```{line_code}``` </small>".replace(line_code, line_code.rstrip("\n")) + "\n"
+        # replacer_placeholder_reference = "\n" * 3 + f"- [`{target_procedure_name}`](#{target_procedure_name}) <small> : [Zeile {line_no_reference}] : `{line_code}` </small>".replace(line_code, line_code.rstrip("\n")) + "\n"
         
         if line_text == "":
             __optional_code_line = ""
         else:
-            __optional_code_line = f": ```{line_text}```"
+            __optional_code_line = f": `{line_text}`"
 
 
-        markdown_entry = f"- [```{proc_name}```](#{proc_name}) : <small>  [Zeile {line_no}] {__optional_code_line} </small>"
+        markdown_entry = f"- [`{proc_name}`](#{proc_name}) : <small>  [Zeile {line_no}] {__optional_code_line} </small>"
 
         markdown_entry = markdown_entry.replace(line_text, line_text.rstrip("\n")) 
         
@@ -1444,7 +1444,7 @@ class Procedure():
             relevant_references = [_ for _ in procedure_obj.references if _[1] == self.name]
             
             
-            db("----> Anzahl Relevanter Referenzierungen: {}".format(len(relevant_references)))
+            db("----> Number of relevant references: {}".format(len(relevant_references)))
 
 
 
@@ -1507,7 +1507,7 @@ class Procedure():
                 
                 # In order not to break MArkdown, the last line break of the line_code must be removed:
                 
-                # replacer_placeholder_reference = f"* [```{calling_procedure_name}```](#{calling_procedure_name}) : <small>  [Zeile {line_no}] : ```{line_code}``` </small>"
+                # replacer_placeholder_reference = f"* [`{calling_procedure_name}`](#{calling_procedure_name}) : <small>  [Zeile {line_no}] : `{line_code}` </small>"
 
 
                 replacer_placeholder_reference = self.get_markdown_for_code_line_of_call_entry(calling_procedure_name, line_no, line_code)
@@ -1516,7 +1516,7 @@ class Procedure():
 
                 # # FORECAST: more collapse details : works technically, but the collapsable is always in a new line and therefore it will be big - maybe make it nice later...
 
-                # __replacer_placeholder_reference = f"*   [```{calling_procedure_name}```](#{calling_procedure_name})  <details> <summary>: <small>Zeile {line_no}</small> </summary> ```{line_code}``` </details>"
+                # __replacer_placeholder_reference = f"*   [`{calling_procedure_name}`](#{calling_procedure_name})  <details> <summary>: <small>Zeile {line_no}</small> </summary> `{line_code}` </details>"
 
 
 

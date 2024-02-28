@@ -7,9 +7,9 @@
 
 ## Index / Table Of Content
 
-Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem Modul verwendet werden:
+Alphabetische and clickable list of all subs and functions used in this module:
 
-* [**Modulinformationen / Modulkopf**](#sec_modulinfos)
+* [**Description of the modul**](#sec_modulinfos)
   
 
   
@@ -36,7 +36,7 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
   <!-- ---------- TAIL: --------------- -->
 
 
-* [**Schlussbemerkungen** (inkl. Angaben zum Entwicklungszustand des Code-Dokumenter-Tools)](#sec_tail)
+* [**Concluding Remarks** (including information on the development status of the Code Documenter tool)](#sec_tail)
 
 
 

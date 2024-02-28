@@ -3,6 +3,7 @@
 
 <a name="sec_modulinfos"></a>
 
-## Modulbeschreibung
-
+## Description of the modul
+```
 @PLACEHOLDER_MODUL_DOCSTRING@
+```

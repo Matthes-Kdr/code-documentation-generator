@@ -2,10 +2,10 @@
 
 
 
-**Letzte Änderung** der Quelldatei 'current_test.bas' vor der Generierung dieser automatischen Dokumentation: **2024-02-09 16:42**
+**Last change** of the source file 'current_test.bas' before generating this documentation automatically: **2024-02-09 16:42**
 
 
-Generierungsdatum dieser Dokumentation: **2024-02-28 00:16:43**
+Date of creating this documentation: **2024-02-28 02:16:26**
 
 
 
@@ -20,9 +20,9 @@ Generierungsdatum dieser Dokumentation: **2024-02-28 00:16:43**
 
 ## Index / Table Of Content
 
-Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem Modul verwendet werden:
+Alphabetische and clickable list of all subs and functions used in this module:
 
-* [**Modulinformationen / Modulkopf**](#sec_modulinfos)
+* [**Description of the modul**](#sec_modulinfos)
   
 
   
@@ -30,52 +30,52 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 * [**Subs**](#sec_subs) (16)
   
-  - [```InsertImageFromFileToCell```](#InsertImageFromFileToCell) : <small>  [Zeile 833]  </small>
+  - [`InsertImageFromFileToCell`](#InsertImageFromFileToCell) : <small>  [Zeile 833]  </small>
 
 
-  - [```SeitenformatNextPosition```](#SeitenformatNextPosition) : <small>  [Zeile 775]  </small>
+  - [`SeitenformatNextPosition`](#SeitenformatNextPosition) : <small>  [Zeile 775]  </small>
 
 
-  - [```THIS_VERSION__1_17```](#THIS_VERSION__1_17) : <small>  [Zeile 1220]  </small>
+  - [`THIS_VERSION__1_17`](#THIS_VERSION__1_17) : <small>  [Zeile 1220]  </small>
 
 
-  - [```applyLayoutPrintArea```](#applyLayoutPrintArea) : <small>  [Zeile 247]  </small>
+  - [`applyLayoutPrintArea`](#applyLayoutPrintArea) : <small>  [Zeile 247]  </small>
 
 
-  - [```applyLayoutToAllPages```](#applyLayoutToAllPages) : <small>  [Zeile 136]  </small>
+  - [`applyLayoutToAllPages`](#applyLayoutToAllPages) : <small>  [Zeile 136]  </small>
 
 
-  - [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  [Zeile 161]  </small>
+  - [`applyLayoutToSinglePage`](#applyLayoutToSinglePage) : <small>  [Zeile 161]  </small>
 
 
-  - [```erstelleKonvertierteSeite```](#erstelleKonvertierteSeite) : <small>  [Zeile 655]  </small>
+  - [`erstelleKonvertierteSeite`](#erstelleKonvertierteSeite) : <small>  [Zeile 655]  </small>
 
 
-  - [```init```](#init) : <small>  [Zeile 119]  </small>
+  - [`init`](#init) : <small>  [Zeile 119]  </small>
 
 
-  - [```insertFrameLineBelow```](#insertFrameLineBelow) : <small>  [Zeile 1011]  </small>
+  - [`insertFrameLineBelow`](#insertFrameLineBelow) : <small>  [Zeile 1011]  </small>
 
 
-  - [```insertSheet```](#insertSheet) : <small>  [Zeile 274]  </small>
+  - [`insertSheet`](#insertSheet) : <small>  [Zeile 274]  </small>
 
 
-  - [```mergeCells```](#mergeCells) : <small>  [Zeile 320]  </small>
+  - [`mergeCells`](#mergeCells) : <small>  [Zeile 320]  </small>
 
 
-  - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 535]  </small>
+  - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 535]  </small>
 
 
-  - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 578]  </small>
+  - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 578]  </small>
 
 
-  - [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1169]  </small>
+  - [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1169]  </small>
 
 
-  - [```printLastSheetsAsPdf```](#printLastSheetsAsPdf) : <small>  [Zeile 1081]  </small>
+  - [`printLastSheetsAsPdf`](#printLastSheetsAsPdf) : <small>  [Zeile 1081]  </small>
 
 
-  - [```resetWorkbook```](#resetWorkbook) : <small>  [Zeile 87]  </small>
+  - [`resetWorkbook`](#resetWorkbook) : <small>  [Zeile 87]  </small>
 
 
   
@@ -89,55 +89,55 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 * [**Functions**](#sec_functions) (17)
   
   
-  - [```addSeitenformat```](#addSeitenformat) : <small>  [Zeile 964]  </small>
+  - [`addSeitenformat`](#addSeitenformat) : <small>  [Zeile 964]  </small>
 
 
-  - [```areaEmpty```](#areaEmpty) : <small>  [Zeile 800]  </small>
+  - [`areaEmpty`](#areaEmpty) : <small>  [Zeile 800]  </small>
 
 
-  - [```existsSheetname```](#existsSheetname) : <small>  [Zeile 300]  </small>
+  - [`existsSheetname`](#existsSheetname) : <small>  [Zeile 300]  </small>
 
 
-  - [```getCountsOfColumnsToPrint```](#getCountsOfColumnsToPrint) : <small>  [Zeile 235]  </small>
+  - [`getCountsOfColumnsToPrint`](#getCountsOfColumnsToPrint) : <small>  [Zeile 235]  </small>
 
 
-  - [```getFilePath```](#getFilePath) : <small>  [Zeile 338]  </small>
+  - [`getFilePath`](#getFilePath) : <small>  [Zeile 338]  </small>
 
 
-  - [```getModifiedKeyIfTaktwechsel```](#getModifiedKeyIfTaktwechsel) : <small>  [Zeile 622]  </small>
+  - [`getModifiedKeyIfTaktwechsel`](#getModifiedKeyIfTaktwechsel) : <small>  [Zeile 622]  </small>
 
 
-  - [```getProjectTitle```](#getProjectTitle) : <small>  [Zeile 79]  </small>
+  - [`getProjectTitle`](#getProjectTitle) : <small>  [Zeile 79]  </small>
 
 
-  - [```getReplacerCount```](#getReplacerCount) : <small>  [Zeile 482]  </small>
+  - [`getReplacerCount`](#getReplacerCount) : <small>  [Zeile 482]  </small>
 
 
-  - [```getReplacerEmpty```](#getReplacerEmpty) : <small>  [Zeile 516]  </small>
+  - [`getReplacerEmpty`](#getReplacerEmpty) : <small>  [Zeile 516]  </small>
 
 
-  - [```getReplacerNote```](#getReplacerNote) : <small>  [Zeile 451]  </small>
+  - [`getReplacerNote`](#getReplacerNote) : <small>  [Zeile 451]  </small>
 
 
-  - [```getReplacerPost```](#getReplacerPost) : <small>  [Zeile 500]  </small>
+  - [`getReplacerPost`](#getReplacerPost) : <small>  [Zeile 500]  </small>
 
 
-  - [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 378]  </small>
+  - [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 378]  </small>
 
 
-  - [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 441]  </small>
+  - [`getReplacerPre2`](#getReplacerPre2) : <small>  [Zeile 441]  </small>
 
 
-  - [```getTypeOfFollowingSeperatorLine```](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 1044]  </small>
+  - [`getTypeOfFollowingSeperatorLine`](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 1044]  </small>
 
 
-  - [```identifyLastRow```](#identifyLastRow) : <small>  [Zeile 867]  </small>
+  - [`identifyLastRow`](#identifyLastRow) : <small>  [Zeile 867]  </small>
 
 
-  - [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 696]  </small>
+  - [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 696]  </small>
 
 
-  - [```newSeitenformat```](#newSeitenformat) : <small>  [Zeile 896]  </small>
+  - [`newSeitenformat`](#newSeitenformat) : <small>  [Zeile 896]  </small>
 
 
   
@@ -148,7 +148,7 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
   <!-- ---------- TAIL: --------------- -->
 
 
-* [**Schlussbemerkungen** (inkl. Angaben zum Entwicklungszustand des Code-Dokumenter-Tools)](#sec_tail)
+* [**Concluding Remarks** (including information on the development status of the Code Documenter tool)](#sec_tail)
 
 
 
@@ -158,10 +158,11 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 <a name="sec_modulinfos"></a>
 
-## Modulbeschreibung
-
+## Description of the modul
+```
  @author: Matthias Kader
 
+```
 ﻿
 <!-- -------------------------------------------------- -->
 <!-- SECTION-START : SUBS -->
@@ -179,30 +180,23 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="InsertImageFromFileToCell"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub InsertImageFromFileToCell```</span><small>(Zeile 833)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub InsertImageFromFileToCell`</span><small>(Zeile 833)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -213,12 +207,13 @@ Alphabetische und verlinkte Auflistung aller Subs und Functions, die in diesem M
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -228,7 +223,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 744] : `                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)` </small>
 
 
 
@@ -244,12 +239,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -276,13 +272,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -362,30 +359,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="SeitenformatNextPosition"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub SeitenformatNextPosition```</span><small>(Zeile 775)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub SeitenformatNextPosition`</span><small>(Zeile 775)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -396,12 +386,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -411,7 +402,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 767] : `    Call SeitenformatNextPosition(oSeite)` </small>
 
 
 
@@ -427,12 +418,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -459,13 +451,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -535,30 +528,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="THIS_VERSION__1_17"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub THIS_VERSION__1_17```</span><small>(Zeile 1220)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub THIS_VERSION__1_17`</span><small>(Zeile 1220)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -569,12 +555,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (0)</summary>
+<summary> References of this procedure (0)</summary>
 
 <div style="padding-left:1em;">
 
@@ -598,12 +585,13 @@ Kein Aufruf gefunden.
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -630,13 +618,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -692,30 +681,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="applyLayoutPrintArea"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub applyLayoutPrintArea```</span><small>(Zeile 247)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub applyLayoutPrintArea`</span><small>(Zeile 247)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -726,12 +708,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -741,7 +724,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1192] : ```        Call applyLayoutPrintArea(oSeite)``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1192] : `        Call applyLayoutPrintArea(oSeite)` </small>
 
 
 
@@ -757,12 +740,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (1)</summary>
+    <summary>      Internal Calling Sequences (1)</summary>
 
 ---
 
@@ -773,7 +757,7 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```getCountsOfColumnsToPrint```](#getCountsOfColumnsToPrint) : <small>  [Zeile 254] : ```    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)``` </small>
+- [`getCountsOfColumnsToPrint`](#getCountsOfColumnsToPrint) : <small>  [Zeile 254] : `    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
@@ -796,13 +780,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -877,30 +862,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="applyLayoutToAllPages"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub applyLayoutToAllPages```</span><small>(Zeile 136)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub applyLayoutToAllPages`</span><small>(Zeile 136)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -912,12 +890,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -927,7 +906,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1201] : ```    Call applyLayoutToAllPages(oSeite)``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1201] : `    Call applyLayoutToAllPages(oSeite)` </small>
 
 
 
@@ -943,12 +922,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (1)</summary>
+    <summary>      Internal Calling Sequences (1)</summary>
 
 ---
 
@@ -959,22 +939,22 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  [Zeile 150] : ```        Call applyLayoutToSinglePage(ws, page, oSeite)``` </small>
+- [`applyLayoutToSinglePage`](#applyLayoutToSinglePage) : <small>  [Zeile 150] : `        Call applyLayoutToSinglePage(ws, page, oSeite)` </small>
 
 
-  - [```getCountsOfColumnsToPrint```](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
-
-
-
-      - <small>*No further calls to other procedures that are documented here.*</small>
-
-  - [```mergeCells```](#mergeCells) : <small>  [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
+  - [`getCountsOfColumnsToPrint`](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : `    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
       - <small>*No further calls to other procedures that are documented here.*</small>
 
-  - [```mergeCells```](#mergeCells) : <small>  [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
+  - [`mergeCells`](#mergeCells) : <small>  [Zeile 195] : `    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)` </small>
+
+
+
+      - <small>*No further calls to other procedures that are documented here.*</small>
+
+  - [`mergeCells`](#mergeCells) : <small>  [Zeile 211] : `    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)` </small>
 
 
 
@@ -1000,13 +980,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -1077,30 +1058,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="applyLayoutToSinglePage"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub applyLayoutToSinglePage```</span><small>(Zeile 161)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub applyLayoutToSinglePage`</span><small>(Zeile 161)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -1111,12 +1085,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -1126,7 +1101,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```applyLayoutToAllPages```](#applyLayoutToAllPages) : <small>  [Zeile 150] : ```        Call applyLayoutToSinglePage(ws, page, oSeite)``` </small>
+- [`applyLayoutToAllPages`](#applyLayoutToAllPages) : <small>  [Zeile 150] : `        Call applyLayoutToSinglePage(ws, page, oSeite)` </small>
 
 
 
@@ -1142,12 +1117,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (3)</summary>
+    <summary>      Internal Calling Sequences (3)</summary>
 
 ---
 
@@ -1158,19 +1134,19 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```getCountsOfColumnsToPrint```](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
+- [`getCountsOfColumnsToPrint`](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : `    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
-- [```mergeCells```](#mergeCells) : <small>  [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
+- [`mergeCells`](#mergeCells) : <small>  [Zeile 195] : `    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
-- [```mergeCells```](#mergeCells) : <small>  [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
+- [`mergeCells`](#mergeCells) : <small>  [Zeile 211] : `    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)` </small>
 
 
 
@@ -1193,13 +1169,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -1318,30 +1295,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="erstelleKonvertierteSeite"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub erstelleKonvertierteSeite```</span><small>(Zeile 655)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub erstelleKonvertierteSeite`</span><small>(Zeile 655)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -1352,12 +1322,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -1367,7 +1338,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1191] : ```        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1191] : `        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)` </small>
 
 
 
@@ -1383,12 +1354,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (2)</summary>
+    <summary>      Internal Calling Sequences (2)</summary>
 
 ---
 
@@ -1399,10 +1371,10 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```insertSheet```](#insertSheet) : <small>  [Zeile 662] : ```        Call insertSheet(oSeite.blattname & pageNum)``` </small>
+- [`insertSheet`](#insertSheet) : <small>  [Zeile 662] : `        Call insertSheet(oSeite.blattname & pageNum)` </small>
 
 
-  - [```existsSheetname```](#existsSheetname) : <small>  [Zeile 283] : ```        If existsSheetname(sheetname) = False Then``` </small>
+  - [`existsSheetname`](#existsSheetname) : <small>  [Zeile 283] : `        If existsSheetname(sheetname) = False Then` </small>
 
 
 
@@ -1412,19 +1384,19 @@ The following subordinate procedures are called within the procedure:
   - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 677] : ```            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 677] : `            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then` </small>
 
 
-  - [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 723] : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
+  - [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 723] : `                    oReplacer = getReplacerPre1(stichwort)` </small>
 
 
-      - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+      - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
         - <small>*No further calls to other procedures that are documented here.*</small>
 
-      - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+      - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -1434,19 +1406,19 @@ The following subordinate procedures are called within the procedure:
       - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
+  - [`getReplacerPre2`](#getReplacerPre2) : <small>  [Zeile 725] : `                    oReplacer = getReplacerPre2(stichwort)` </small>
 
 
-      - [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+      - [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 445] : `    getReplacerPre2 = getReplacerPre1(stichwort)` </small>
 
 
-        - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+        - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
           - <small>*No further calls to other procedures that are documented here.*</small>
 
-        - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+        - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -1460,38 +1432,38 @@ The following subordinate procedures are called within the procedure:
       - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - [```getReplacerNote```](#getReplacerNote) : <small>  [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
+  - [`getReplacerNote`](#getReplacerNote) : <small>  [Zeile 727] : `                    oReplacer = getReplacerNote(stichwort)` </small>
 
 
 
       - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - [```getReplacerCount```](#getReplacerCount) : <small>  [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
+  - [`getReplacerCount`](#getReplacerCount) : <small>  [Zeile 729] : `                    oReplacer = getReplacerCount(stichwort)` </small>
 
 
 
       - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - [```getReplacerPost```](#getReplacerPost) : <small>  [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
+  - [`getReplacerPost`](#getReplacerPost) : <small>  [Zeile 731] : `                    oReplacer = getReplacerPost(stichwort)` </small>
 
 
 
       - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - [```getReplacerEmpty```](#getReplacerEmpty) : <small>  [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
+  - [`getReplacerEmpty`](#getReplacerEmpty) : <small>  [Zeile 733] : `                    oReplacer = getReplacerEmpty()` </small>
 
 
 
       - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - [```getFilePath```](#getFilePath) : <small>  [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
+  - [`getFilePath`](#getFilePath) : <small>  [Zeile 742] : `                pathImage = getFilePath(oReplacer.value)` </small>
 
 
-      - [```getFilePath```](#getFilePath) : <small>  [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+      - [`getFilePath`](#getFilePath) : <small>  [Zeile 366] : `    getFilePath = getFilePath(ERROR_FILENAME)` </small>
 
 
         - <small> *... recursivly calls itself under certain conditions ...* </small> 
@@ -1501,25 +1473,25 @@ The following subordinate procedures are called within the procedure:
       - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - [```InsertImageFromFileToCell```](#InsertImageFromFileToCell) : <small>  [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
+  - [`InsertImageFromFileToCell`](#InsertImageFromFileToCell) : <small>  [Zeile 744] : `                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)` </small>
 
 
 
       - <small>*No further calls to other procedures that are documented here.*</small>
 
-  - [```getTypeOfFollowingSeperatorLine```](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
+  - [`getTypeOfFollowingSeperatorLine`](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : `    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)` </small>
 
 
 
       - <small>*No further calls to other procedures that are documented here.*</small>
 
-  - [```insertFrameLineBelow```](#insertFrameLineBelow) : <small>  [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
+  - [`insertFrameLineBelow`](#insertFrameLineBelow) : <small>  [Zeile 762] : `        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))` </small>
 
 
 
       - <small>*No further calls to other procedures that are documented here.*</small>
 
-  - [```SeitenformatNextPosition```](#SeitenformatNextPosition) : <small>  [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
+  - [`SeitenformatNextPosition`](#SeitenformatNextPosition) : <small>  [Zeile 767] : `    Call SeitenformatNextPosition(oSeite)` </small>
 
 
 
@@ -1544,13 +1516,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -1638,30 +1611,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="init"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub init```</span><small>(Zeile 119)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub init`</span><small>(Zeile 119)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -1672,12 +1638,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -1687,7 +1654,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1172] : ```    Call init``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1172] : `    Call init` </small>
 
 
 
@@ -1703,12 +1670,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -1735,13 +1703,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -1807,30 +1776,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="insertFrameLineBelow"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub insertFrameLineBelow```</span><small>(Zeile 1011)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub insertFrameLineBelow`</span><small>(Zeile 1011)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -1841,12 +1803,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -1856,7 +1819,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 762] : `        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))` </small>
 
 
 
@@ -1872,12 +1835,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -1904,13 +1868,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -1988,30 +1953,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="insertSheet"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub insertSheet```</span><small>(Zeile 274)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub insertSheet`</span><small>(Zeile 274)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -2022,12 +1980,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -2037,7 +1996,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```erstelleKonvertierteSeite```](#erstelleKonvertierteSeite) : <small>  [Zeile 662] : ```        Call insertSheet(oSeite.blattname & pageNum)``` </small>
+- [`erstelleKonvertierteSeite`](#erstelleKonvertierteSeite) : <small>  [Zeile 662] : `        Call insertSheet(oSeite.blattname & pageNum)` </small>
 
 
 
@@ -2053,12 +2012,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (1)</summary>
+    <summary>      Internal Calling Sequences (1)</summary>
 
 ---
 
@@ -2069,7 +2029,7 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```existsSheetname```](#existsSheetname) : <small>  [Zeile 283] : ```        If existsSheetname(sheetname) = False Then``` </small>
+- [`existsSheetname`](#existsSheetname) : <small>  [Zeile 283] : `        If existsSheetname(sheetname) = False Then` </small>
 
 
 
@@ -2091,13 +2051,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -2171,30 +2132,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="mergeCells"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub mergeCells```</span><small>(Zeile 320)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub mergeCells`</span><small>(Zeile 320)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -2205,12 +2159,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (2)</summary>
+<summary> References of this procedure (2)</summary>
 
 <div style="padding-left:1em;">
 
@@ -2220,9 +2175,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
+- [`applyLayoutToSinglePage`](#applyLayoutToSinglePage) : <small>  [Zeile 195] : `    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)` </small>
 
-- [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
+- [`applyLayoutToSinglePage`](#applyLayoutToSinglePage) : <small>  [Zeile 211] : `    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)` </small>
 
 
 
@@ -2238,12 +2193,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -2270,13 +2226,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -2341,30 +2298,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="modifyReplacerIfSonderzeichen"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub modifyReplacerIfSonderzeichen```</span><small>(Zeile 535)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub modifyReplacerIfSonderzeichen`</span><small>(Zeile 535)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -2377,12 +2327,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -2392,7 +2343,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+- [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
@@ -2408,12 +2359,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -2440,13 +2392,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -2537,30 +2490,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="modifyReplacerIfTaktwechsel"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Sub modifyReplacerIfTaktwechsel```</span><small>(Zeile 578)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Sub modifyReplacerIfTaktwechsel`</span><small>(Zeile 578)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -2573,12 +2519,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -2588,7 +2535,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+- [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -2604,12 +2551,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -2636,13 +2584,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -2734,30 +2683,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="notengriffeErzeugen"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub notengriffeErzeugen```</span><small>(Zeile 1169)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Public Sub notengriffeErzeugen`</span><small>(Zeile 1169)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -2767,12 +2709,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (0)</summary>
+<summary> References of this procedure (0)</summary>
 
 <div style="padding-left:1em;">
 
@@ -2796,12 +2739,13 @@ Kein Aufruf gefunden.
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (6)</summary>
+    <summary>      Internal Calling Sequences (6)</summary>
 
 ---
 
@@ -2812,33 +2756,33 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```init```](#init) : <small>  [Zeile 1172] : ```    Call init``` </small>
+- [`init`](#init) : <small>  [Zeile 1172] : `    Call init` </small>
 
 
 
   - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```addSeitenformat```](#addSeitenformat) : <small>  [Zeile 1183] : ```        oSeite = addSeitenformat(startzeileSteuertabelle)``` </small>
+- [`addSeitenformat`](#addSeitenformat) : <small>  [Zeile 1183] : `        oSeite = addSeitenformat(startzeileSteuertabelle)` </small>
 
 
-  - [```newSeitenformat```](#newSeitenformat) : <small>  [Zeile 970] : ```    oFormat = newSeitenformat()``` </small>
+  - [`newSeitenformat`](#newSeitenformat) : <small>  [Zeile 970] : `    oFormat = newSeitenformat()` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - [```identifyLastRow```](#identifyLastRow) : <small>  [Zeile 980] : ```    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)``` </small>
+  - [`identifyLastRow`](#identifyLastRow) : <small>  [Zeile 980] : `    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)` </small>
 
 
-    - [```newSeitenformat```](#newSeitenformat) : <small>  [Zeile 876] : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
+    - [`newSeitenformat`](#newSeitenformat) : <small>  [Zeile 876] : `    tempObj = newSeitenformat(readParameters:=False)` </small>
 
 
 
       - <small>*No further calls to other procedures that are documented here.*</small>
 
-    - [```areaEmpty```](#areaEmpty) : <small>  [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
+    - [`areaEmpty`](#areaEmpty) : <small>  [Zeile 882] : `        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then` </small>
 
 
 
@@ -2853,13 +2797,13 @@ The following subordinate procedures are called within the procedure:
   - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```erstelleKonvertierteSeite```](#erstelleKonvertierteSeite) : <small>  [Zeile 1191] : ```        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)``` </small>
+- [`erstelleKonvertierteSeite`](#erstelleKonvertierteSeite) : <small>  [Zeile 1191] : `        Call erstelleKonvertierteSeite(startzeileSteuertabelle, oSeite)` </small>
 
 
-  - [```insertSheet```](#insertSheet) : <small>  [Zeile 662] : ```        Call insertSheet(oSeite.blattname & pageNum)``` </small>
+  - [`insertSheet`](#insertSheet) : <small>  [Zeile 662] : `        Call insertSheet(oSeite.blattname & pageNum)` </small>
 
 
-    - [```existsSheetname```](#existsSheetname) : <small>  [Zeile 283] : ```        If existsSheetname(sheetname) = False Then``` </small>
+    - [`existsSheetname`](#existsSheetname) : <small>  [Zeile 283] : `        If existsSheetname(sheetname) = False Then` </small>
 
 
 
@@ -2869,19 +2813,19 @@ The following subordinate procedures are called within the procedure:
     - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-  - [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 677] : ```            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then``` </small>
+  - [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 677] : `            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then` </small>
 
 
-    - [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 723] : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
+    - [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 723] : `                    oReplacer = getReplacerPre1(stichwort)` </small>
 
 
-        - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+        - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
           - <small>*No further calls to other procedures that are documented here.*</small>
 
-        - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+        - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -2891,19 +2835,19 @@ The following subordinate procedures are called within the procedure:
         - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-    - [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
+    - [`getReplacerPre2`](#getReplacerPre2) : <small>  [Zeile 725] : `                    oReplacer = getReplacerPre2(stichwort)` </small>
 
 
-        - [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+        - [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 445] : `    getReplacerPre2 = getReplacerPre1(stichwort)` </small>
 
 
-          - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+          - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
             - <small>*No further calls to other procedures that are documented here.*</small>
 
-          - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+          - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -2917,38 +2861,38 @@ The following subordinate procedures are called within the procedure:
         - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-    - [```getReplacerNote```](#getReplacerNote) : <small>  [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
+    - [`getReplacerNote`](#getReplacerNote) : <small>  [Zeile 727] : `                    oReplacer = getReplacerNote(stichwort)` </small>
 
 
 
         - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-    - [```getReplacerCount```](#getReplacerCount) : <small>  [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
+    - [`getReplacerCount`](#getReplacerCount) : <small>  [Zeile 729] : `                    oReplacer = getReplacerCount(stichwort)` </small>
 
 
 
         - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-    - [```getReplacerPost```](#getReplacerPost) : <small>  [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
+    - [`getReplacerPost`](#getReplacerPost) : <small>  [Zeile 731] : `                    oReplacer = getReplacerPost(stichwort)` </small>
 
 
 
         - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-    - [```getReplacerEmpty```](#getReplacerEmpty) : <small>  [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
+    - [`getReplacerEmpty`](#getReplacerEmpty) : <small>  [Zeile 733] : `                    oReplacer = getReplacerEmpty()` </small>
 
 
 
         - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-    - [```getFilePath```](#getFilePath) : <small>  [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
+    - [`getFilePath`](#getFilePath) : <small>  [Zeile 742] : `                pathImage = getFilePath(oReplacer.value)` </small>
 
 
-        - [```getFilePath```](#getFilePath) : <small>  [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+        - [`getFilePath`](#getFilePath) : <small>  [Zeile 366] : `    getFilePath = getFilePath(ERROR_FILENAME)` </small>
 
 
           - <small> *... recursivly calls itself under certain conditions ...* </small> 
@@ -2958,25 +2902,25 @@ The following subordinate procedures are called within the procedure:
         - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-    - [```InsertImageFromFileToCell```](#InsertImageFromFileToCell) : <small>  [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
+    - [`InsertImageFromFileToCell`](#InsertImageFromFileToCell) : <small>  [Zeile 744] : `                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)` </small>
 
 
 
         - <small>*No further calls to other procedures that are documented here.*</small>
 
-    - [```getTypeOfFollowingSeperatorLine```](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
+    - [`getTypeOfFollowingSeperatorLine`](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : `    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)` </small>
 
 
 
         - <small>*No further calls to other procedures that are documented here.*</small>
 
-    - [```insertFrameLineBelow```](#insertFrameLineBelow) : <small>  [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
+    - [`insertFrameLineBelow`](#insertFrameLineBelow) : <small>  [Zeile 762] : `        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))` </small>
 
 
 
         - <small>*No further calls to other procedures that are documented here.*</small>
 
-    - [```SeitenformatNextPosition```](#SeitenformatNextPosition) : <small>  [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
+    - [`SeitenformatNextPosition`](#SeitenformatNextPosition) : <small>  [Zeile 767] : `    Call SeitenformatNextPosition(oSeite)` </small>
 
 
 
@@ -2989,10 +2933,10 @@ The following subordinate procedures are called within the procedure:
   - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```applyLayoutPrintArea```](#applyLayoutPrintArea) : <small>  [Zeile 1192] : ```        Call applyLayoutPrintArea(oSeite)``` </small>
+- [`applyLayoutPrintArea`](#applyLayoutPrintArea) : <small>  [Zeile 1192] : `        Call applyLayoutPrintArea(oSeite)` </small>
 
 
-  - [```getCountsOfColumnsToPrint```](#getCountsOfColumnsToPrint) : <small>  [Zeile 254] : ```    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)``` </small>
+  - [`getCountsOfColumnsToPrint`](#getCountsOfColumnsToPrint) : <small>  [Zeile 254] : `    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
@@ -3003,25 +2947,25 @@ The following subordinate procedures are called within the procedure:
   - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```applyLayoutToAllPages```](#applyLayoutToAllPages) : <small>  [Zeile 1201] : ```    Call applyLayoutToAllPages(oSeite)``` </small>
+- [`applyLayoutToAllPages`](#applyLayoutToAllPages) : <small>  [Zeile 1201] : `    Call applyLayoutToAllPages(oSeite)` </small>
 
 
-  - [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  [Zeile 150] : ```        Call applyLayoutToSinglePage(ws, page, oSeite)``` </small>
+  - [`applyLayoutToSinglePage`](#applyLayoutToSinglePage) : <small>  [Zeile 150] : `        Call applyLayoutToSinglePage(ws, page, oSeite)` </small>
 
 
-    - [```getCountsOfColumnsToPrint```](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
-
-
-
-        - <small>*No further calls to other procedures that are documented here.*</small>
-
-    - [```mergeCells```](#mergeCells) : <small>  [Zeile 195] : ```    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)``` </small>
+    - [`getCountsOfColumnsToPrint`](#getCountsOfColumnsToPrint) : <small>  [Zeile 179] : `    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
         - <small>*No further calls to other procedures that are documented here.*</small>
 
-    - [```mergeCells```](#mergeCells) : <small>  [Zeile 211] : ```    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)``` </small>
+    - [`mergeCells`](#mergeCells) : <small>  [Zeile 195] : `    Call mergeCells(wsResult, titelZeile, titelSpalte, titelZeile, anzahlColumnsToMerge)` </small>
+
+
+
+        - <small>*No further calls to other procedures that are documented here.*</small>
+
+    - [`mergeCells`](#mergeCells) : <small>  [Zeile 211] : `    Call mergeCells(wsResult, seitenangabeZeile, seitenangabeSpalte, seitenangabeZeile, anzahlColumnsToMerge)` </small>
 
 
 
@@ -3035,7 +2979,7 @@ The following subordinate procedures are called within the procedure:
   - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```printLastSheetsAsPdf```](#printLastSheetsAsPdf) : <small>  [Zeile 1210] : ```        Call printLastSheetsAsPdf(pageNum)``` </small>
+- [`printLastSheetsAsPdf`](#printLastSheetsAsPdf) : <small>  [Zeile 1210] : `        Call printLastSheetsAsPdf(pageNum)` </small>
 
 
 
@@ -3058,13 +3002,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -3165,30 +3110,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="printLastSheetsAsPdf"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub printLastSheetsAsPdf```</span><small>(Zeile 1081)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Public Sub printLastSheetsAsPdf`</span><small>(Zeile 1081)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -3199,12 +3137,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -3214,7 +3153,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1210] : ```        Call printLastSheetsAsPdf(pageNum)``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1210] : `        Call printLastSheetsAsPdf(pageNum)` </small>
 
 
 
@@ -3230,12 +3169,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -3262,13 +3202,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -3396,30 +3337,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="resetWorkbook"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Sub resetWorkbook```</span><small>(Zeile 87)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Public Sub resetWorkbook`</span><small>(Zeile 87)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -3429,12 +3363,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (0)</summary>
+<summary> References of this procedure (0)</summary>
 
 <div style="padding-left:1em;">
 
@@ -3458,12 +3393,13 @@ Kein Aufruf gefunden.
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (1)</summary>
+    <summary>      Internal Calling Sequences (1)</summary>
 
 ---
 
@@ -3474,7 +3410,7 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```getProjectTitle```](#getProjectTitle) : <small>  [Zeile 111] : ```    MsgBox "Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--> falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)", vbOK, getProjectTitle()``` </small>
+- [`getProjectTitle`](#getProjectTitle) : <small>  [Zeile 111] : `    MsgBox "Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--> falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)", vbOK, getProjectTitle()` </small>
 
 
 
@@ -3497,13 +3433,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -3592,30 +3529,23 @@ End Sub
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="addSeitenformat"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function addSeitenformat```</span><small>(Zeile 964)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function addSeitenformat`</span><small>(Zeile 964)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -3627,12 +3557,13 @@ End Sub
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -3642,7 +3573,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```notengriffeErzeugen```](#notengriffeErzeugen) : <small>  [Zeile 1183] : ```        oSeite = addSeitenformat(startzeileSteuertabelle)``` </small>
+- [`notengriffeErzeugen`](#notengriffeErzeugen) : <small>  [Zeile 1183] : `        oSeite = addSeitenformat(startzeileSteuertabelle)` </small>
 
 
 
@@ -3658,12 +3589,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (2)</summary>
+    <summary>      Internal Calling Sequences (2)</summary>
 
 ---
 
@@ -3674,23 +3606,23 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```newSeitenformat```](#newSeitenformat) : <small>  [Zeile 970] : ```    oFormat = newSeitenformat()``` </small>
+- [`newSeitenformat`](#newSeitenformat) : <small>  [Zeile 970] : `    oFormat = newSeitenformat()` </small>
 
 
 
   - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```identifyLastRow```](#identifyLastRow) : <small>  [Zeile 980] : ```    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)``` </small>
+- [`identifyLastRow`](#identifyLastRow) : <small>  [Zeile 980] : `    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)` </small>
 
 
-  - [```newSeitenformat```](#newSeitenformat) : <small>  [Zeile 876] : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
+  - [`newSeitenformat`](#newSeitenformat) : <small>  [Zeile 876] : `    tempObj = newSeitenformat(readParameters:=False)` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
-  - [```areaEmpty```](#areaEmpty) : <small>  [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
+  - [`areaEmpty`](#areaEmpty) : <small>  [Zeile 882] : `        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then` </small>
 
 
 
@@ -3717,13 +3649,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -3816,30 +3749,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="areaEmpty"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function areaEmpty```</span><small>(Zeile 800)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function areaEmpty`</span><small>(Zeile 800)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -3853,12 +3779,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -3868,7 +3795,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```identifyLastRow```](#identifyLastRow) : <small>  [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
+- [`identifyLastRow`](#identifyLastRow) : <small>  [Zeile 882] : `        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then` </small>
 
 
 
@@ -3884,12 +3811,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -3916,13 +3844,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -4002,30 +3931,23 @@ Private Function areaEmpty(ws As Worksheet, lineFrom As Integer, columnFrom As I
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="existsSheetname"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function existsSheetname```</span><small>(Zeile 300)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function existsSheetname`</span><small>(Zeile 300)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -4035,12 +3957,13 @@ Private Function areaEmpty(ws As Worksheet, lineFrom As Integer, columnFrom As I
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -4050,7 +3973,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```insertSheet```](#insertSheet) : <small>  [Zeile 283] : ```        If existsSheetname(sheetname) = False Then``` </small>
+- [`insertSheet`](#insertSheet) : <small>  [Zeile 283] : `        If existsSheetname(sheetname) = False Then` </small>
 
 
 
@@ -4066,12 +3989,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -4098,13 +4022,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -4172,30 +4097,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="getCountsOfColumnsToPrint"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Function getCountsOfColumnsToPrint```</span><small>(Zeile 235)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Public Function getCountsOfColumnsToPrint`</span><small>(Zeile 235)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -4207,12 +4125,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (2)</summary>
+<summary> References of this procedure (2)</summary>
 
 <div style="padding-left:1em;">
 
@@ -4222,9 +4141,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```applyLayoutToSinglePage```](#applyLayoutToSinglePage) : <small>  [Zeile 179] : ```    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)``` </small>
+- [`applyLayoutToSinglePage`](#applyLayoutToSinglePage) : <small>  [Zeile 179] : `    anzahlColumnsToMerge = getCountsOfColumnsToPrint(oSeite)` </small>
 
-- [```applyLayoutPrintArea```](#applyLayoutPrintArea) : <small>  [Zeile 254] : ```    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)``` </small>
+- [`applyLayoutPrintArea`](#applyLayoutPrintArea) : <small>  [Zeile 254] : `    anzahlColumnsToPrint = getCountsOfColumnsToPrint(oSeite)` </small>
 
 
 
@@ -4240,12 +4159,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -4272,13 +4192,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -4337,30 +4258,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="getFilePath"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function getFilePath```</span><small>(Zeile 338)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function getFilePath`</span><small>(Zeile 338)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -4372,12 +4286,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (2)</summary>
+<summary> References of this procedure (2)</summary>
 
 <div style="padding-left:1em;">
 
@@ -4387,9 +4302,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```getFilePath```](#getFilePath) : <small>  [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+- [`getFilePath`](#getFilePath) : <small>  [Zeile 366] : `    getFilePath = getFilePath(ERROR_FILENAME)` </small>
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 742] : `                pathImage = getFilePath(oReplacer.value)` </small>
 
 
 
@@ -4405,12 +4320,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (1)</summary>
+    <summary>      Internal Calling Sequences (1)</summary>
 
 ---
 
@@ -4421,7 +4337,7 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```getFilePath```](#getFilePath) : <small>  [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+- [`getFilePath`](#getFilePath) : <small>  [Zeile 366] : `    getFilePath = getFilePath(ERROR_FILENAME)` </small>
 
 
   - <small> *... recursivly calls itself under certain conditions ...* </small> 
@@ -4443,13 +4359,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -4532,30 +4449,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="getModifiedKeyIfTaktwechsel"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function getModifiedKeyIfTaktwechsel```</span><small>(Zeile 622)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function getModifiedKeyIfTaktwechsel`</span><small>(Zeile 622)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -4567,12 +4477,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (0)</summary>
+<summary> References of this procedure (0)</summary>
 
 <div style="padding-left:1em;">
 
@@ -4596,12 +4507,13 @@ Kein Aufruf gefunden.
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -4628,13 +4540,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -4713,30 +4626,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="getProjectTitle"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Public Function getProjectTitle```</span><small>(Zeile 79)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Public Function getProjectTitle`</span><small>(Zeile 79)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -4746,12 +4652,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -4761,7 +4668,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```resetWorkbook```](#resetWorkbook) : <small>  [Zeile 111] : ```    MsgBox "Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--> falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)", vbOK, getProjectTitle()``` </small>
+- [`resetWorkbook`](#resetWorkbook) : <small>  [Zeile 111] : `    MsgBox "Alle generierten Tabellenblaetter wurden geloescht. Dieser Vorgang kann nicht rueckgaengig gemacht werden! (--> falls Falsch ginge ggf. schliessen ohne speichern, sofern alle relevanten Modifikationen vorab gespeichert wurden...)", vbOK, getProjectTitle()` </small>
 
 
 
@@ -4777,12 +4684,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -4809,13 +4717,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -4872,30 +4781,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="getReplacerCount"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function getReplacerCount```</span><small>(Zeile 482)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function getReplacerCount`</span><small>(Zeile 482)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -4906,12 +4808,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -4921,7 +4824,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 729] : `                    oReplacer = getReplacerCount(stichwort)` </small>
 
 
 
@@ -4937,12 +4840,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -4969,13 +4873,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -5042,30 +4947,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="getReplacerEmpty"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function getReplacerEmpty```</span><small>(Zeile 516)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function getReplacerEmpty`</span><small>(Zeile 516)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -5076,12 +4974,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -5091,7 +4990,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 733] : `                    oReplacer = getReplacerEmpty()` </small>
 
 
 
@@ -5107,12 +5006,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -5139,13 +5039,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -5209,30 +5110,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="getReplacerNote"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function getReplacerNote```</span><small>(Zeile 451)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function getReplacerNote`</span><small>(Zeile 451)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -5243,12 +5137,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -5258,7 +5153,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 727] : `                    oReplacer = getReplacerNote(stichwort)` </small>
 
 
 
@@ -5274,12 +5169,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -5306,13 +5202,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -5392,30 +5289,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="getReplacerPost"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function getReplacerPost```</span><small>(Zeile 500)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function getReplacerPost`</span><small>(Zeile 500)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -5426,12 +5316,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -5441,7 +5332,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 731] : `                    oReplacer = getReplacerPost(stichwort)` </small>
 
 
 
@@ -5457,12 +5348,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -5489,13 +5381,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -5560,30 +5453,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="getReplacerPre1"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function getReplacerPre1```</span><small>(Zeile 378)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function getReplacerPre1`</span><small>(Zeile 378)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -5594,12 +5480,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (2)</summary>
+<summary> References of this procedure (2)</summary>
 
 <div style="padding-left:1em;">
 
@@ -5609,9 +5496,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+- [`getReplacerPre2`](#getReplacerPre2) : <small>  [Zeile 445] : `    getReplacerPre2 = getReplacerPre1(stichwort)` </small>
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 723] : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 723] : `                    oReplacer = getReplacerPre1(stichwort)` </small>
 
 
 
@@ -5627,12 +5514,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (2)</summary>
+    <summary>      Internal Calling Sequences (2)</summary>
 
 ---
 
@@ -5643,13 +5531,13 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+- [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
   - <small>*No further calls to other procedures that are documented here.*</small>
 
-- [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+- [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -5671,13 +5559,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -5789,30 +5678,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="getReplacerPre2"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function getReplacerPre2```</span><small>(Zeile 441)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function getReplacerPre2`</span><small>(Zeile 441)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -5823,12 +5705,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -5838,7 +5721,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 725] : `                    oReplacer = getReplacerPre2(stichwort)` </small>
 
 
 
@@ -5854,12 +5737,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (1)</summary>
+    <summary>      Internal Calling Sequences (1)</summary>
 
 ---
 
@@ -5870,16 +5754,16 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+- [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 445] : `    getReplacerPre2 = getReplacerPre1(stichwort)` </small>
 
 
-  - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+  - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
-  - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+  - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -5905,13 +5789,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -5970,30 +5855,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="getTypeOfFollowingSeperatorLine"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function getTypeOfFollowingSeperatorLine```</span><small>(Zeile 1044)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function getTypeOfFollowingSeperatorLine`</span><small>(Zeile 1044)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -6006,12 +5884,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -6021,7 +5900,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```konvertiereZeile```](#konvertiereZeile) : <small>  [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
+- [`konvertiereZeile`](#konvertiereZeile) : <small>  [Zeile 757] : `    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)` </small>
 
 
 
@@ -6037,12 +5916,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -6069,13 +5949,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -6156,30 +6037,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="identifyLastRow"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function identifyLastRow```</span><small>(Zeile 867)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function identifyLastRow`</span><small>(Zeile 867)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -6191,12 +6065,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -6206,7 +6081,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```addSeitenformat```](#addSeitenformat) : <small>  [Zeile 980] : ```    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)``` </small>
+- [`addSeitenformat`](#addSeitenformat) : <small>  [Zeile 980] : `    letzteZeileSteuertabelle = identifyLastRow(startzeileSteuertabelle, oFormat.maxAnzahlEintraege)` </small>
 
 
 
@@ -6222,12 +6097,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (2)</summary>
+    <summary>      Internal Calling Sequences (2)</summary>
 
 ---
 
@@ -6238,13 +6114,13 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```newSeitenformat```](#newSeitenformat) : <small>  [Zeile 876] : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
+- [`newSeitenformat`](#newSeitenformat) : <small>  [Zeile 876] : `    tempObj = newSeitenformat(readParameters:=False)` </small>
 
 
 
   - <small>*No further calls to other procedures that are documented here.*</small>
 
-- [```areaEmpty```](#areaEmpty) : <small>  [Zeile 882] : ```        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then``` </small>
+- [`areaEmpty`](#areaEmpty) : <small>  [Zeile 882] : `        If Not areaEmpty(wsTodo, zeile, tempObj.excelStartSpaltenNr, zeile, tempObj.excelStartSpaltenNr + tempObj.anzahlSubSpaltenProSpalte - 1) Then` </small>
 
 
 
@@ -6267,13 +6143,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -6349,30 +6226,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="konvertiereZeile"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function konvertiereZeile```</span><small>(Zeile 696)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function konvertiereZeile`</span><small>(Zeile 696)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -6388,12 +6258,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (1)</summary>
+<summary> References of this procedure (1)</summary>
 
 <div style="padding-left:1em;">
 
@@ -6403,7 +6274,7 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```erstelleKonvertierteSeite```](#erstelleKonvertierteSeite) : <small>  [Zeile 677] : ```            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then``` </small>
+- [`erstelleKonvertierteSeite`](#erstelleKonvertierteSeite) : <small>  [Zeile 677] : `            If konvertiereZeile(zeileSteuertabelle, oSeite) = False Then` </small>
 
 
 
@@ -6419,12 +6290,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (11)</summary>
+    <summary>      Internal Calling Sequences (11)</summary>
 
 ---
 
@@ -6435,16 +6307,16 @@ The following subordinate procedures are called within the procedure:
 
 
 
-- [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 723] : ```                    oReplacer = getReplacerPre1(stichwort)``` </small>
+- [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 723] : `                    oReplacer = getReplacerPre1(stichwort)` </small>
 
 
-    - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+    - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
       - <small>*No further calls to other procedures that are documented here.*</small>
 
-    - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+    - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -6454,19 +6326,19 @@ The following subordinate procedures are called within the procedure:
     - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```getReplacerPre2```](#getReplacerPre2) : <small>  [Zeile 725] : ```                    oReplacer = getReplacerPre2(stichwort)``` </small>
+- [`getReplacerPre2`](#getReplacerPre2) : <small>  [Zeile 725] : `                    oReplacer = getReplacerPre2(stichwort)` </small>
 
 
-    - [```getReplacerPre1```](#getReplacerPre1) : <small>  [Zeile 445] : ```    getReplacerPre2 = getReplacerPre1(stichwort)``` </small>
+    - [`getReplacerPre1`](#getReplacerPre1) : <small>  [Zeile 445] : `    getReplacerPre2 = getReplacerPre1(stichwort)` </small>
 
 
-      - [```modifyReplacerIfSonderzeichen```](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : ```    Call modifyReplacerIfSonderzeichen(oErsatz)``` </small>
+      - [`modifyReplacerIfSonderzeichen`](#modifyReplacerIfSonderzeichen) : <small>  [Zeile 419] : `    Call modifyReplacerIfSonderzeichen(oErsatz)` </small>
 
 
 
         - <small>*No further calls to other procedures that are documented here.*</small>
 
-      - [```modifyReplacerIfTaktwechsel```](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : ```    Call modifyReplacerIfTaktwechsel(oErsatz)``` </small>
+      - [`modifyReplacerIfTaktwechsel`](#modifyReplacerIfTaktwechsel) : <small>  [Zeile 422] : `    Call modifyReplacerIfTaktwechsel(oErsatz)` </small>
 
 
 
@@ -6480,38 +6352,38 @@ The following subordinate procedures are called within the procedure:
     - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```getReplacerNote```](#getReplacerNote) : <small>  [Zeile 727] : ```                    oReplacer = getReplacerNote(stichwort)``` </small>
+- [`getReplacerNote`](#getReplacerNote) : <small>  [Zeile 727] : `                    oReplacer = getReplacerNote(stichwort)` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```getReplacerCount```](#getReplacerCount) : <small>  [Zeile 729] : ```                    oReplacer = getReplacerCount(stichwort)``` </small>
+- [`getReplacerCount`](#getReplacerCount) : <small>  [Zeile 729] : `                    oReplacer = getReplacerCount(stichwort)` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```getReplacerPost```](#getReplacerPost) : <small>  [Zeile 731] : ```                    oReplacer = getReplacerPost(stichwort)``` </small>
+- [`getReplacerPost`](#getReplacerPost) : <small>  [Zeile 731] : `                    oReplacer = getReplacerPost(stichwort)` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```getReplacerEmpty```](#getReplacerEmpty) : <small>  [Zeile 733] : ```                    oReplacer = getReplacerEmpty()``` </small>
+- [`getReplacerEmpty`](#getReplacerEmpty) : <small>  [Zeile 733] : `                    oReplacer = getReplacerEmpty()` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```getFilePath```](#getFilePath) : <small>  [Zeile 742] : ```                pathImage = getFilePath(oReplacer.value)``` </small>
+- [`getFilePath`](#getFilePath) : <small>  [Zeile 742] : `                pathImage = getFilePath(oReplacer.value)` </small>
 
 
-    - [```getFilePath```](#getFilePath) : <small>  [Zeile 366] : ```    getFilePath = getFilePath(ERROR_FILENAME)``` </small>
+    - [`getFilePath`](#getFilePath) : <small>  [Zeile 366] : `    getFilePath = getFilePath(ERROR_FILENAME)` </small>
 
 
       - <small> *... recursivly calls itself under certain conditions ...* </small> 
@@ -6521,25 +6393,25 @@ The following subordinate procedures are called within the procedure:
     - <small>*No further calls to other procedures that are documented here.*</small>
 
 
-- [```InsertImageFromFileToCell```](#InsertImageFromFileToCell) : <small>  [Zeile 744] : ```                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)``` </small>
+- [`InsertImageFromFileToCell`](#InsertImageFromFileToCell) : <small>  [Zeile 744] : `                Call InsertImageFromFileToCell(oSeite.excelZeilenNr, zielspalte, pathImage, oReplacer.cellFitTo)` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
-- [```getTypeOfFollowingSeperatorLine```](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : ```    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)``` </small>
+- [`getTypeOfFollowingSeperatorLine`](#getTypeOfFollowingSeperatorLine) : <small>  [Zeile 757] : `    followingLineStyle = getTypeOfFollowingSeperatorLine(zeileSteuertabelle, oSeite)` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
-- [```insertFrameLineBelow```](#insertFrameLineBelow) : <small>  [Zeile 762] : ```        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))``` </small>
+- [`insertFrameLineBelow`](#insertFrameLineBelow) : <small>  [Zeile 762] : `        Call insertFrameLineBelow(zeileSteuertabelle, oSeite, CBool(followingLineStyle - 1))` </small>
 
 
 
     - <small>*No further calls to other procedures that are documented here.*</small>
 
-- [```SeitenformatNextPosition```](#SeitenformatNextPosition) : <small>  [Zeile 767] : ```    Call SeitenformatNextPosition(oSeite)``` </small>
+- [`SeitenformatNextPosition`](#SeitenformatNextPosition) : <small>  [Zeile 767] : `    Call SeitenformatNextPosition(oSeite)` </small>
 
 
 
@@ -6561,13 +6433,14 @@ The following subordinate procedures are called within the procedure:
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -6695,30 +6568,23 @@ End Function
 
 
 <!-- --------------------------------------------------------------- -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
-<!-- NEUE PROZEDUR-DOKUMENTATION -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<!-- DOCUMENTATION OF ANOTHER PROCEDURE -->
+<!-- --------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------- -->
 <!-- --------------------------------------------------------------- -->
 
 
 
 
-<!-- PLACEHOLDER: Initialisierungszeile: -->
-
-
-
 <a name="newSeitenformat"></a>
-<span style="background-color: lightgrey; padding: 2px;">```Private Function newSeitenformat```</span><small>(Zeile 896)</small>
+<span style="background-color: lightgrey; padding: 2px;">`Private Function newSeitenformat`</span><small>(Zeile 896)</small>
 
 
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 <!--  DocString der Prozedur: -->
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 <div style="padding-left:2em;">
 
@@ -6732,12 +6598,13 @@ End Function
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  References der Procedure: -->
+<!-- --------------------------------------------------------------- -->
 
 <details>
 
-<summary> Referenzierungen dieser Prozedur (2)</summary>
+<summary> References of this procedure (2)</summary>
 
 <div style="padding-left:1em;">
 
@@ -6747,9 +6614,9 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-- [```identifyLastRow```](#identifyLastRow) : <small>  [Zeile 876] : ```    tempObj = newSeitenformat(readParameters:=False)``` </small>
+- [`identifyLastRow`](#identifyLastRow) : <small>  [Zeile 876] : `    tempObj = newSeitenformat(readParameters:=False)` </small>
 
-- [```addSeitenformat```](#addSeitenformat) : <small>  [Zeile 970] : ```    oFormat = newSeitenformat()``` </small>
+- [`addSeitenformat`](#addSeitenformat) : <small>  [Zeile 970] : `    oFormat = newSeitenformat()` </small>
 
 
 
@@ -6765,12 +6632,13 @@ Die Prozedur wird in den folgenden, uebergeordneten Prozeduren aufgerufen:
 
 
 
-
-<!--  CALL SEQUENCE Abruffolge: -->
+<!-- --------------------------------------------------------------- -->
+<!--  CALL SEQUENCE / CALLING SEQUENCES: -->
+<!-- --------------------------------------------------------------- -->
 
 
 <details>
-    <summary>      Interne Aufrufabfolge (0)</summary>
+    <summary>      Internal Calling Sequences (0)</summary>
 
 ---
 
@@ -6797,13 +6665,14 @@ No further calls found for procedures documented here.
 
 
 
-
+<!-- --------------------------------------------------------------- -->
 <!--  Source Code: -->
+<!-- --------------------------------------------------------------- -->
 
 
 
 <details>
-    <summary>      Source Code</summary>
+    <summary>      Source Code (Show/Hide)</summary>
 
 ---
 
@@ -6919,39 +6788,20 @@ End Function
 
 <a name="sec_tail"></a>
 
-## Schlussbemerkungen
-
-
-
-<!-- 
-**Notice:**
-
-*To generate a docstring from the VBA-Source, make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.*
-
-
-
- **TODO:** Erstellt am (Datum) durch das  automatisierte Code-Dokumentationstool von .... in der Version ....
+## Concluding Remarks
 
 
 
 
 
+> This documentation was generated automatically by a tool for generic code documentation. In individual cases, especially if the VBA code to be documented deviates from certain conventions, discrepancies may occur. In case of doubt, the original code should be consulted.
 
 
----
-
-
-
-**ODER:** -->
-
-> Diese Dokumentation wurde automatisiert durch ein entsprechendes Programm generiert. Im Einzelfall, insbesondere wenn im zu dokumentierenden VBA-Code von  bestimmten Konventionen abgewichen wird, können Unstimmigkeiten auftreten. Im Zweifel ist der Originalcode heranzuziehen.
-
-
-Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durch welches diese Dokumentation generiert wurde.
+The module information of the Python Script used to generate this documentation is printed below.
 
 <details>
 
-<summary> Modulinformationen anzeigen/verbergen.
+<summary> Show/hide modul information
 </summary>
 
   <br>Created on: Fri, 2023-12-29 (00:45:39)<br><br><br>@author: Matthias Kader<br><br><br>> For further information, see README.md<br>----------------------------------------<br>>  Tool to automatically generate a documentation of the source code - mainly used for function-based flows (currently only supporting single VBA-moduls, support for Python and C++ shall follow).<br><br>> **Unlinke many other generic documentation tools this project focus on the documentation of code with a functional-programming approach rather than a class-based approach.** Aim is to **show the program schedule (flow / calls of other procedures)** within the procedures.<br><br>**<span style='color:red'>&#9888; As this project was not meant to become a public one in the first place, I did not chore and tidy the code by now! Also I began in German, but I will fix those both issues step by step and while choring I will translate everything in the code :-)</span>**<br><br>> **NOTE:** As I started this project privatly and was not very forward-looking a lot of the text (readme + code comments) is written in **German**. Step by step I will change this and translate everything to have a continuous language - sorry for that.<br><br>> **<span style='color:red'>&#9888; If there is anything unclear or poor translated - feel free to correct it or to ask (e.g. via a new issue?) for the meaning...</span>**<br><br><br><br># =============================================================================<br>#### Notes on application and use: ####<br># =============================================================================<br><br>- To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line. Empty lines that are to be included must also be labelled as comments.<br><br>- The script generates an MD file (Markdown), which is then immediately converted to HTML using the markdown library, so that 2 files are created after the script is completed. However, due to different interpretations during the conversion, the display of the HTML file generated in this way differs if it is converted separately via VSCode Extension ("Markdown all in one"). The file generated via VSCode is clearer and more attractive. This should therefore be done separately at the end.<br><br><br><br><br><br>### Implemented ready:<br><br>- Generating Table of contents / index<br>- Overall layout incl. title, subheadings for individual sections<br>- Listing the module-wide program header docstring in the generated documentation<br>- Listing the reference searches (Where is the procedure called?) in the generated documentation<br>- Function to immediate export of the MD file to an HTML file within this script<br>- Listing the organizational data regarding the code to be documented and the script used for documentation in the generated documentation<br>- Listing of the calling sequence (calling sequence / calling levels) within each procedure in the generated documentation: Enumeration of the calls of other procedures covered in this documentation. Including recursive nested list of which calls are made in each of the called procedures.<br>- Providing of a simple GUI / HMI to parameterize input and output paths<br><br><br>> For the latest list of issues / TODOS see Github Issues at https://github.com/Matthes-Kdr/code-documentation-generator/issues<br><br><br><br><br><br><br><br><br># =============================================================================<br>#### Important call sequence of the method within this Python script <br>for creating the documentation of the call sequence of the VBA procedures to be documented:<br># =============================================================================<br><br>First, all procedures will be completely analyzed, and only after then all procedures will be completely documented. For both procedures, this takes place in a method at object level, whereby this respective method is called in both cases from a class method in which iteration takes place via the individual procedure objects within this class:<br><br>- analyse_call_sequence(cls)<br>    - analyse_calling_sequence_in_one_proc(self)<br>- prepare_all_call_sequences_docs(cls)<br>    - prepare_single_call_sequence_docs(cls)<br><br>(Side-note: by the way, the developed tool would have been of great usage to document this in 'nice', if it already had the ability to document Python syntax :-) )<br><br><br><br><br><br><br><br><br><br><br><br><br># =============================================================================<br>#### Unimportant trivialities: Code analysis summary just for fun and for myself: ####<br># =============================================================================<br><br>version from 2024-01-11 - 00:18:43:<br>    Details in each case: [count of lines @ code_documenter.py] + [count of lines @ gui] = [Summe]<br>    - Total of lines: 408 (100%)+2201 (100%)=2609 (100%)<br>    - thereof empty lines: 168 (41,1764705882353%)+1071 (48,6597001363017%)=1239 (47,489459563051%)<br>    - thereof single line comments: 20 (4,90196078431373%)+244 (11,0858700590641%)=264 (10,1188194710617%)<br>    - thereof multiline-comments: 85 (20,8333333333333%)+374 (16,9922762380736%)=459 (17,5929474894596%)<br><br>    ==> sum of all comment-lines:: 105 (25,7352941176471%)+618 (28,0781462971377%)=723 (27,7117669605213%)<br>    ==> actual relevant lines with Code commands: 135 (33,0882352941176%)+512 (23,2621535665607%)=647 (24,7987734764277%)<br><br>-----------------------------------------------    <br><br>version from 2024-01-07 - 23:37:04:<br>    - Total of lines: 2164 (100%)<br>    - thereof empty lines: 1091 (50%)<br>    - thereof single line comments: 226 (10%)<br>    - thereof multiline-comments: 364 (17%)<br><br>    ==> sum of all comment-lines: 590 (27%)<br>    ==> actual relevant lines with Code commands: 483 (22%)<br><br>-----------------------------------------------<br><br>version from 2024-01-07 - 15:26:03:<br>    - Total of lines: 2771 (100%)<br>    - thereof empty lines: 1408 (51%)<br>    - thereof single line comments: 278 (10%)<br>    - thereof multiline-comments: 550 (20%)<br><br>    ==> sum of all comment-lines: 828 (30%)<br>    ==> actual relevant lines with Code commands: 535 (19%)<br><br>-----------------------------------------------<br><br><br><br>
@@ -6962,7 +6812,7 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 <small>
 
-**Notice, Convnentions:**
+**Notice, Conventions:**
 
 *To generate a docstring from the VBA-Source make sure that the text to shown is located directly below the declaration line of the procedure. The text is considered completed with the first following line in the code which is not an entire comment line.  Empty lines that are to be included must also be labelled as comments.*
 
@@ -6970,4 +6820,4 @@ Im folgenden werden die Modulinformationen des PYTHON-SCRIPTES aufgeführt, durc
 
 ---
 
-<small>Dokumentation generiert am 2024-02-28 00:16:43 durch das  automatisierte Code-Dokumentationstool von Matthes-Kdr (Commit vom 2024-02-27 23:50:49: 'a219beda5878d8b0e53860322df301a74d4c16d8')</small> 
+<small>Documentation was generated on 2024-02-28 02:16:26 by the generic code documentation tool von Matthes-Kdr (Commit vom 2024-02-28 01:35:40: 'f2814b727ec72fd8592ff1a6e03841a3892cb015')</small> 
